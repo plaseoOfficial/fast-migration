@@ -110,7 +110,7 @@ export function GewerbeLadenGastro() {
               )}
               style={{ color: "rgb(23,33,33)", letterSpacing: "-4px", fontWeight: 500 }}
             >
-              Gastro möbel die magisch anziehen
+              Gastromöbel, die magisch anziehen
             </h2>
 
             <p
