@@ -1,0 +1,82 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRightIcon } from "@/components/icons";
+
+export function KontaktStandort() {
+  return (
+    <section
+      className="py-12 lg:py-[57px]"
+      style={{
+        backgroundColor: "rgba(203,191,181,0.59)",
+        fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
+      }}
+    >
+      <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+        {/* Eyebrow */}
+        <p
+          className="text-center text-[14px] font-medium uppercase text-black"
+          style={{ letterSpacing: "2px" }}
+        >
+          STANDORT
+        </p>
+
+        {/* H2 */}
+        <h2
+          className="mt-2 mb-10 text-center text-[44px] leading-[1.0] font-medium text-black sm:text-[72px] lg:text-[120px] lg:leading-[120px]"
+          style={{ letterSpacing: "-5px" }}
+        >
+          Wir freuen uns auf Sie!
+        </h2>
+
+        {/* Location block */}
+        <div className="relative">
+          {/* Image */}
+          <div className="relative h-[360px] w-full lg:h-[480px]">
+            <Image
+              src="/images/2025/11/IMG_9387-scaled.jpg"
+              alt="Maßgefertigte Küche"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Info card — stacked on mobile, absolutely overlaid at lg: */}
+          <div
+            className="
+              relative z-10 mt-0 w-full max-w-full px-8 py-8
+              lg:absolute lg:left-0 lg:top-12 lg:max-w-[360px] lg:px-10 lg:py-10
+            "
+            style={{ backgroundColor: "rgba(231,224,218,0.96)" }}
+          >
+            <h4
+              className="mb-4 text-[28px] leading-[1.1] font-medium text-black lg:text-[50px] lg:leading-[60px]"
+              style={{ letterSpacing: "-2px" }}
+            >
+              Unser Standort
+            </h4>
+
+            <address
+              className="not-italic text-[20px] leading-[32px] font-medium text-black"
+              style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
+            >
+              Alte Waldstraße 32,
+              <br />
+              32339 Espelkamp
+            </address>
+
+            <Link
+              href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47b0a7e010fcc05b:0x7383530031d88616?sa=X&ved=1t:8290&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block text-[20px] font-medium text-black underline"
+              style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
+            >
+              Zu Google Maps
+              <ArrowRightIcon className="ml-2 inline-block h-[1em] w-auto align-middle" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MnmHero } from "@/components/mnm/MnmHero";
-import { MnmIntroStats } from "@/components/mnm/MnmIntroStats";
-import { ExpandingImageCta } from "@/components/mnm/ExpandingImageCta";
-import { MnmProcess } from "@/components/mnm/MnmProcess";
-import { MnmWeitereLeistungen } from "@/components/mnm/MnmWeitereLeistungen";
-import { MnmTypische } from "@/components/mnm/MnmTypische";
-import { MnmWarum } from "@/components/mnm/MnmWarum";
-import { MnmGeschichte } from "@/components/mnm/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/mnm/MnmMoebelplaner";
-import { MnmTestimonials } from "@/components/mnm/MnmTestimonials";
-import { MnmFaq } from "@/components/mnm/MnmFaq";
+import { MnmHero } from "@/components/sections/privat/MnmHero";
+import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
+import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { MnmProcess } from "@/components/sections/privat/MnmProcess";
+import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
+import { MnmTypische } from "@/components/sections/privat/MnmTypische";
+import { MnmWarum } from "@/components/sections/privat/MnmWarum";
+import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
+import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
+import { MnmTestimonials } from "@/components/sections/privat/MnmTestimonials";
+import { MnmFaq } from "@/components/sections/privat/MnmFaq";
 
 export const metadata: Metadata = {
   title: "Möbel nach Maß aus Espelkamp: Planung, Fertigung, Montage",
