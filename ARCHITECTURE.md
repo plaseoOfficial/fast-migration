@@ -71,13 +71,18 @@ registry type-safe with no `any`.
 
 | Route | Layout / chrome | Sections (top → bottom) | Content source |
 |---|---|---|---|
-| `/` | `Header` + `<main>` + `Footer` | HeroSection · DiscoverSection · QualitySection · ParallaxQuote · HandwerkSection · MoebelplanerSection · RaeumeSection · TestimonialsSection (home) · FaqSection (home) | `src/lib/content/home.ts` (re-exports `src/lib/content.ts`) |
+| `/` | `(site)` layout + `<main>` | HeroSection · DiscoverSection · QualitySection · ParallaxQuote · HandwerkSection · MoebelplanerSection · RaeumeSection · TestimonialsSection (home) · FaqSection (home) | `src/lib/content/home.ts` (re-exports `src/lib/content.ts`) |
 | `/leistungen/moebel-nach-mass` **(Privat template)** | `PrivatPageLayout` | MnmHero · MnmIntroStats · ExpandingImageCta · MnmProcess · MnmWeitereLeistungen · MnmTypische · MnmWarum · MnmGeschichte · MnmMoebelplaner · TestimonialsSection (shared) · ExpandingImageCta · FaqSection (shared) | `src/lib/content/moebel-nach-mass.ts` |
-| `/leistungen/gewerbeeinrichtung` | `Header` + `<main>` + `Footer` | ServiceHero · GewerbeIntroStats · ExpandingImageCta · GewerbeLadenGastro · MnmWeitereLeistungen · GewerbeLeistungen · GewerbeWarum · MnmMoebelplaner · TestimonialsSection (shared) · ExpandingImageCta · FaqSection (shared) | inline in `page.tsx` |
-| `/leistungen/moebelplaner` | `Header` + `<main>` + `Footer` | ServiceHero · MpSchritte · MpIntro · TestimonialsSection (shared) · ExpandingImageCta · MpProzess · FaqSection (shared) | inline in `page.tsx` |
-| `/kontakt` | `Header` + `<main>` + `Footer` | ServiceHero · KontaktPanel · PartnerCarousel · KontaktStandort | inline in `page.tsx` |
+| `/leistungen/gewerbeeinrichtung` | `(site)` layout + `<main>` | ServiceHero · GewerbeIntroStats · ExpandingImageCta · GewerbeLadenGastro · MnmWeitereLeistungen · GewerbeLeistungen · GewerbeWarum · MnmMoebelplaner · TestimonialsSection (shared) · ExpandingImageCta · FaqSection (shared) | inline in `page.tsx` |
+| `/leistungen/moebelplaner` | `(site)` layout + `<main>` | ServiceHero · MpSchritte · MpIntro · TestimonialsSection (shared) · ExpandingImageCta · MpProzess · FaqSection (shared) | inline in `page.tsx` |
+| `/kontakt` | `(site)` layout + `<main>` | ServiceHero · KontaktPanel · PartnerCarousel · KontaktStandort | inline in `page.tsx` |
 | `/library` | none (bare) | every section, for internal preview (`noindex`) | sample props from the registry |
 
+**Site chrome is centralized.** `Header` and `Footer` are rendered once by the
+**`src/app/(site)/layout.tsx`** route-group layout, so every route inside the
+`(site)` group gets the identical nav + footer automatically — including any new
+page, with no per-page wiring. Each page only supplies its own `<main>`.
+`/library` lives **outside** the group (`src/app/library/`) and stays chrome-free.
 `Header`, `Footer`, `icons.tsx`, and `ui/` primitives stay at `src/components/`
 (page chrome, not library sections).
 
@@ -89,9 +94,10 @@ registry type-safe with no `any`.
 template for every future Privat page. A page is marked Privat **verbally** — there
 is no audience flag in code. To build a new Privat page:
 
-1. Create `src/app/leistungen/<slug>/page.tsx`, wrap content in **`PrivatPageLayout`**
-   (Header + `<main className="flex flex-col">` + Footer). Keep `export const metadata`
-   in the route file.
+1. Create `src/app/(site)/<slug>/page.tsx` (inside the `(site)` group so it gets the
+   shared Header + Footer automatically), and wrap content in **`PrivatPageLayout`**
+   (just `<main className="flex flex-col">` — chrome comes from the `(site)` layout).
+   Keep `export const metadata` in the route file.
 2. Create a content module `src/lib/content/<slug>.ts` (copy the shape of
    `moebel-nach-mass.ts`).
 3. Compose the sections in the **Privat Page Recipe** order (see `CATALOG.md`),

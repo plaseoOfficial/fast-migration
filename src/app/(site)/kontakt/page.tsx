@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/sections/shared/ServiceHero";
 import { PartnerCarousel } from "@/components/sections/shared/PartnerCarousel";
 import { KontaktPanel } from "@/components/sections/kontakt/KontaktPanel";
@@ -22,22 +20,18 @@ export const metadata: Metadata = {
 
 export default function KontaktPage() {
   return (
-    <>
-      <Header />
-      <main className="flex flex-col">
-        <ServiceHero
-          title="Kommen Sie mit unseren Experten in Kontakt"
-          breadcrumb={[
-            { label: "fast.side-boost.com", href: "/" },
-            { label: "Kontakt" },
-          ]}
-          bgImage="/images/2025/11/DSC06206-scaled.jpg"
-        />
-        <KontaktPanel />
-        <PartnerCarousel />
-        <KontaktStandort />
-      </main>
-      <Footer />
-    </>
+    <main className="flex flex-col">
+      <ServiceHero
+        title="Kommen Sie mit unseren Experten in Kontakt"
+        breadcrumb={[
+          { label: "fast.side-boost.com", href: "/" },
+          { label: "Kontakt" },
+        ]}
+        bgImage="/images/2025/11/DSC06206-scaled.jpg"
+      />
+      <KontaktPanel />
+      <PartnerCarousel />
+      <KontaktStandort />
+    </main>
   );
 }
