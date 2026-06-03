@@ -24,7 +24,7 @@
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `services-grid` | `shared` | no | `/leistungen/moebel-nach-mass` · `/leistungen/gewerbeeinrichtung` |
+| `services-grid` | `shared` | no | `/moebel-nach-mass` · `/gewerbe` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -40,7 +40,7 @@
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `planner-cta` | `shared` | no | `/leistungen/moebel-nach-mass` · `/leistungen/gewerbeeinrichtung` |
+| `planner-cta` | `shared` | no | `/moebel-nach-mass` · `/gewerbe` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -56,7 +56,7 @@
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `hero` | `shared` | no | `/leistungen/gewerbeeinrichtung` · `/leistungen/moebelplaner` · `/kontakt` |
+| `hero` | `shared` | no | `/gewerbe` · `/moebelplaner` · `/kontakt` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -74,7 +74,7 @@
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `faq` | `shared` | yes | `/leistungen/moebel-nach-mass` · `/leistungen/gewerbeeinrichtung` · `/leistungen/moebelplaner` |
+| `faq` | `shared` | yes | `/moebel-nach-mass` · `/gewerbe` · `/moebelplaner` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -90,7 +90,7 @@
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `testimonials` | `shared` | no | `/leistungen/moebel-nach-mass` · `/leistungen/gewerbeeinrichtung` · `/leistungen/moebelplaner` |
+| `testimonials` | `shared` | no | `/moebel-nach-mass` · `/gewerbe` · `/moebelplaner` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -117,7 +117,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `image-cta` | `shared` | no | `/leistungen/moebel-nach-mass` · `/leistungen/gewerbeeinrichtung` · `/leistungen/moebelplaner` |
+| `image-cta` | `shared` | no | `/moebel-nach-mass` · `/gewerbe` · `/moebelplaner` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -294,7 +294,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `hero` | `privat` | no | `/leistungen/moebel-nach-mass` |
+| `hero` | `privat` | no | `/moebel-nach-mass` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -311,7 +311,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `intro-stats` | `privat` | yes | `/leistungen/moebel-nach-mass` |
+| `intro-stats` | `privat` | yes | `/moebel-nach-mass` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -327,7 +327,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `process` | `privat` | no | `/leistungen/moebel-nach-mass` |
+| `process` | `privat` | no | `/moebel-nach-mass` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -343,7 +343,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `categories-list` | `privat` | no | `/leistungen/moebel-nach-mass` |
+| `categories-list` | `privat` | no | `/moebel-nach-mass` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -359,7 +359,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `gallery-masonry` | `privat` | no | `/leistungen/moebel-nach-mass` |
+| `gallery-masonry` | `privat` | no | `/moebel-nach-mass` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -374,7 +374,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `story` | `privat` | no | `/leistungen/moebel-nach-mass` |
+| `story` | `privat` | no | `/moebel-nach-mass` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
@@ -392,7 +392,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `intro-stats` | `gewerbe` | no | `/leistungen/gewerbeeinrichtung` |
+| `intro-stats` | `gewerbe` | no | `/gewerbe` |
 
 _Prop-less (page-specific content)._
 
@@ -404,7 +404,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `feature-text` | `gewerbe` | no | `/leistungen/gewerbeeinrichtung` |
+| `feature-text` | `gewerbe` | no | `/gewerbe` |
 
 _Prop-less (page-specific content)._
 
@@ -416,7 +416,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `categories-list` | `gewerbe` | no | `/leistungen/gewerbeeinrichtung` |
+| `categories-list` | `gewerbe` | no | `/gewerbe` |
 
 _Prop-less (page-specific content)._
 
@@ -428,7 +428,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `story` | `gewerbe` | no | `/leistungen/gewerbeeinrichtung` |
+| `story` | `gewerbe` | no | `/gewerbe` |
 
 _Prop-less (page-specific content)._
 
@@ -442,7 +442,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `steps` | `moebelplaner` | no | `/leistungen/moebelplaner` |
+| `steps` | `moebelplaner` | no | `/moebelplaner` |
 
 _Prop-less (page-specific content)._
 
@@ -454,7 +454,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `feature-text` | `moebelplaner` | no | `/leistungen/moebelplaner` |
+| `feature-text` | `moebelplaner` | no | `/moebelplaner` |
 
 _Prop-less (page-specific content)._
 
@@ -466,7 +466,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `process` | `moebelplaner` | no | `/leistungen/moebelplaner` |
+| `process` | `moebelplaner` | no | `/moebelplaner` |
 
 _Prop-less (page-specific content)._
 

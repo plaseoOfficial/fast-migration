@@ -60,7 +60,6 @@ export default function GewerbeeinrichtungPage() {
           title="Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt"
           breadcrumb={[
             { label: "fast.side-boost.com", href: "/" },
-            { label: "Leistungen", href: "/leistungen" },
             { label: "Gewerbeeinrichtung" },
           ]}
           bgImage="/images/2025/11/DSC_0001.jpg"

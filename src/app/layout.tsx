@@ -24,6 +24,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fast.side-boost.com"),
   title: "Fast Systemmöbel Espelkamp: Möbel nach Maß seit 1996",
   description:
     "Maßmöbel vom Meisterbetrieb in Espelkamp. Planung, Fertigung und Montage aus einer Hand. Kostenlos online planen oder direkt beraten lassen.",

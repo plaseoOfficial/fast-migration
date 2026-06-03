@@ -57,7 +57,6 @@ export default function MoebelplanerPage() {
           title="Möbelplaner online – Maßmöbel planen und fertigen lassen in OWL"
           breadcrumb={[
             { label: "fast.side-boost.com", href: "/" },
-            { label: "Leistungen", href: "/leistungen" },
             { label: "Möbelplaner" },
           ]}
           bgImage="/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg"

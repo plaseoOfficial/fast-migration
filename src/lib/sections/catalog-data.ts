@@ -165,7 +165,7 @@ export const SECTION_META = [
       { name: "intro", type: "string", required: true },
       { name: "breadcrumb", type: "BreadcrumbItem[]", required: true },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass"],
+    usedOn: ["/moebel-nach-mass"],
     screenshot: `${REF}/moebel-nach-mass/01-hero.jpg`,
   },
   {
@@ -179,7 +179,7 @@ export const SECTION_META = [
       { name: "counterTarget / counterDuration", type: "number", required: true },
       { name: "links (col1/col3)", type: "string", required: true },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass"],
+    usedOn: ["/moebel-nach-mass"],
     screenshot: `${REF}/moebel-nach-mass/02a-intro-stats.jpg`,
     isClient: true,
   },
@@ -194,7 +194,7 @@ export const SECTION_META = [
       { name: "paragraph / paragraphStrong", type: "string", required: true },
       { name: "image / imageAlt", type: "string", required: true },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass"],
+    usedOn: ["/moebel-nach-mass"],
     screenshot: `${REF}/moebel-nach-mass/03-process.jpg`,
   },
   {
@@ -208,7 +208,7 @@ export const SECTION_META = [
       { name: "cards", type: "ServiceCard[]", required: false },
       { name: "ampersandText / moreLabel", type: "string", required: false },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass", "/leistungen/gewerbeeinrichtung"],
+    usedOn: ["/moebel-nach-mass", "/gewerbe"],
     screenshot: `${REF}/moebel-nach-mass/04-weitere-leistungen.jpg`,
   },
   {
@@ -222,7 +222,7 @@ export const SECTION_META = [
       { name: "image1/2 + alt", type: "string", required: true },
       { name: "row1 / row2", type: "CategoryItem[]", required: true },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass"],
+    usedOn: ["/moebel-nach-mass"],
     screenshot: `${REF}/moebel-nach-mass/05-typische.jpg`,
   },
   {
@@ -235,7 +235,7 @@ export const SECTION_META = [
       { name: "heading / paragraph", type: "string", required: true },
       { name: "images", type: "WarumImage[]", required: true },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass"],
+    usedOn: ["/moebel-nach-mass"],
     screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
   },
   {
@@ -249,7 +249,7 @@ export const SECTION_META = [
       { name: "gallery", type: "GalleryItem[]", required: true },
       { name: "paragraphs / factLines", type: "string[]", required: true },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass"],
+    usedOn: ["/moebel-nach-mass"],
     screenshot: `${REF}/moebel-nach-mass/07-geschichte.jpg`,
   },
   {
@@ -263,7 +263,7 @@ export const SECTION_META = [
       { name: "ctaLabel / ctaHref", type: "string", required: false },
       { name: "image / imageAlt", type: "string", required: false },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass", "/leistungen/gewerbeeinrichtung"],
+    usedOn: ["/moebel-nach-mass", "/gewerbe"],
     screenshot: `${REF}/moebel-nach-mass/08-moebelplaner-cta.jpg`,
   },
 
@@ -281,7 +281,7 @@ export const SECTION_META = [
       { name: "intro", type: "string", required: false },
       { name: "cta", type: "{ label; href }", required: false },
     ],
-    usedOn: ["/leistungen/gewerbeeinrichtung", "/leistungen/moebelplaner", "/kontakt"],
+    usedOn: ["/gewerbe", "/moebelplaner", "/kontakt"],
     screenshot: `${REF}/gewerbeeinrichtung/band-0.jpg`,
   },
   {
@@ -295,7 +295,7 @@ export const SECTION_META = [
       { name: "items", type: "{ question; answer }[]", required: true },
       { name: "eyebrow / ctaHref / ctaLabel", type: "string", required: false },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass", "/leistungen/gewerbeeinrichtung", "/leistungen/moebelplaner"],
+    usedOn: ["/moebel-nach-mass", "/gewerbe", "/moebelplaner"],
     screenshot: `${REF}/moebel-nach-mass/10a-faq.jpeg`,
     isClient: true,
   },
@@ -309,7 +309,7 @@ export const SECTION_META = [
       { name: "heading", type: "string", required: true },
       { name: "eyebrow", type: "string", required: false },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass", "/leistungen/gewerbeeinrichtung", "/leistungen/moebelplaner"],
+    usedOn: ["/moebel-nach-mass", "/gewerbe", "/moebelplaner"],
     screenshot: `${REF}/moebel-nach-mass/09-testimonials.jpg`,
   },
   {
@@ -335,7 +335,7 @@ export const SECTION_META = [
       { name: "href", type: "string", required: true },
       { name: "className", type: "string", required: false },
     ],
-    usedOn: ["/leistungen/moebel-nach-mass", "/leistungen/gewerbeeinrichtung", "/leistungen/moebelplaner"],
+    usedOn: ["/moebel-nach-mass", "/gewerbe", "/moebelplaner"],
     screenshot: `${REF}/moebel-nach-mass/02b-massmoebel.jpg`,
   },
 
@@ -347,7 +347,7 @@ export const SECTION_META = [
     category: "gewerbe",
     description: "Commercial-page intro/stats band with a scroll count-up.",
     propsSummary: [],
-    usedOn: ["/leistungen/gewerbeeinrichtung"],
+    usedOn: ["/gewerbe"],
     screenshot: `${REF}/gewerbeeinrichtung/band-1.jpg`,
   },
   {
@@ -357,7 +357,7 @@ export const SECTION_META = [
     category: "gewerbe",
     description: "Retail/gastronomy feature: text intro + image strip showcasing shop and gastro fit-outs.",
     propsSummary: [],
-    usedOn: ["/leistungen/gewerbeeinrichtung"],
+    usedOn: ["/gewerbe"],
     screenshot: `${REF}/gewerbeeinrichtung/band-3.jpg`,
   },
   {
@@ -367,7 +367,7 @@ export const SECTION_META = [
     category: "gewerbe",
     description: "Grid of commercial service categories (Praxis, Büro, Ladenbau, Hotel & Gastro, …).",
     propsSummary: [],
-    usedOn: ["/leistungen/gewerbeeinrichtung"],
+    usedOn: ["/gewerbe"],
     screenshot: `${REF}/gewerbeeinrichtung/band-6.jpg`,
   },
   {
@@ -377,7 +377,7 @@ export const SECTION_META = [
     category: "gewerbe",
     description: "Trust section with masonry gallery and a credentials block.",
     propsSummary: [],
-    usedOn: ["/leistungen/gewerbeeinrichtung"],
+    usedOn: ["/gewerbe"],
     screenshot: `${REF}/gewerbeeinrichtung/band-7.jpg`,
   },
 
@@ -389,7 +389,7 @@ export const SECTION_META = [
     category: "moebelplaner",
     description: "Numbered step sequence explaining how the online planner works.",
     propsSummary: [],
-    usedOn: ["/leistungen/moebelplaner"],
+    usedOn: ["/moebelplaner"],
     screenshot: `${REF}/moebelplaner/band-1.jpg`,
   },
   {
@@ -399,7 +399,7 @@ export const SECTION_META = [
     category: "moebelplaner",
     description: "Intro feature block for the planner page.",
     propsSummary: [],
-    usedOn: ["/leistungen/moebelplaner"],
+    usedOn: ["/moebelplaner"],
     screenshot: `${REF}/moebelplaner/band-2.jpg`,
   },
   {
@@ -409,7 +409,7 @@ export const SECTION_META = [
     category: "moebelplaner",
     description: "Process explanation from planning to finished custom furniture.",
     propsSummary: [],
-    usedOn: ["/leistungen/moebelplaner"],
+    usedOn: ["/moebelplaner"],
     screenshot: `${REF}/moebelplaner/band-3.jpg`,
   },
 
