@@ -1,5 +1,11 @@
 import type { NavLink, Blurb, TabPanel, CounterStat, PartnerLogo, FaqItem, Testimonial, GalleryCard } from "@/types";
 
+/**
+ * Canonical production origin (no trailing slash). Single source for canonical
+ * URLs, OpenGraph, sitemap, robots and JSON-LD.
+ */
+export const SITE_URL = "https://www.fast-systemmoebel.de";
+
 export const NAV_LINKS: Array<NavLink & { hasDropdown?: boolean }> = [
   { label: "Home", href: "#" },
   { label: "Leistungen", href: "#leistungen", hasDropdown: true },
