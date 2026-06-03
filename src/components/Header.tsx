@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { NAV_LINKS, CTA, LOGO_SRC } from "@/lib/content";
+import { NAV_LINKS, CTA, LOGO_SRC, LOGO_ON_DARK_SRC } from "@/lib/content";
 import { MenuIcon, CloseIcon, InstagramIcon, LinkedinIcon, ChevronDownIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
@@ -29,12 +29,12 @@ export function Header() {
         {/* Logo (left) */}
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image
-            src={LOGO_SRC}
+            src={scrolled ? LOGO_ON_DARK_SRC : LOGO_SRC}
             alt="Fast Systemmöbel"
             width={150}
             height={52}
             priority
-            className={cn("h-12 w-auto transition-all", scrolled && "brightness-0 invert")}
+            className="h-12 w-auto"
           />
         </Link>
 
