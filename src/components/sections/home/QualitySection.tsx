@@ -1,7 +1,13 @@
 import Image from "next/image";
-import { QUALITY_IMAGES } from "@/lib/content";
+import { Fragment } from "react";
 
-export function QualitySection() {
+interface QualitySectionProps {
+  headingLines: string[];
+  paragraphs: string[];
+  images: string[];
+}
+
+export function QualitySection({ headingLines, paragraphs, images }: QualitySectionProps) {
   return (
     <section
       className="fast-section w-full"
@@ -19,27 +25,24 @@ export function QualitySection() {
               color: "rgb(61,61,61)",
             }}
           >
-            Wahre Qualität passt sich
-            <br />
-            dem Menschen an. Nicht
-            <br />
-            umgekehrt.
+            {headingLines.map((line, i) => (
+              <Fragment key={i}>
+                {i > 0 && <br />}
+                {line}
+              </Fragment>
+            ))}
           </h2>
           <div className="lg:col-span-4 flex flex-col gap-4 self-end">
-            <p className="fast-body" style={{ fontSize: 18, lineHeight: "23.8px" }}>
-              Ein Tisch, der zu groß oder zu klein ist, ein Regal, das nie ganz passt – kommt
-              Ihnen das bekannt vor? Genau das vermeiden wir. Fast steht für Systemmöbel, die
-              sich an Ihr Leben anpassen – nicht umgekehrt.
-            </p>
-            <p className="fast-body" style={{ fontSize: 18, lineHeight: "23.8px" }}>
-              Unsere Designer planen mit Ihnen jedes Detail: vom ersten Entwurf bis zur letzten
-              Schraube.
-            </p>
+            {paragraphs.map((paragraph, i) => (
+              <p key={i} className="fast-body" style={{ fontSize: 18, lineHeight: "23.8px" }}>
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {QUALITY_IMAGES.map((src) => (
+          {images.map((src) => (
             <div
               key={src}
               className="relative aspect-[3/4] w-full overflow-hidden rounded-md group"

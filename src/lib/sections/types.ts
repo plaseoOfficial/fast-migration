@@ -1,7 +1,13 @@
-import { createElement, type ComponentType, type ReactElement } from "react";
+import type { ReactElement } from "react";
 
 /** Audience / origin a section belongs to. */
-export type SectionCategory = "home" | "privat" | "gewerbe" | "shared";
+export type SectionCategory =
+  | "home"
+  | "privat"
+  | "gewerbe"
+  | "moebelplaner"
+  | "kontakt"
+  | "shared";
 
 /**
  * The job a section does on a page. Sections that share a use case (e.g. the
@@ -23,7 +29,13 @@ export type UseCase =
   | "planner-embed"
   | "testimonials"
   | "faq"
-  | "image-cta";
+  | "image-cta"
+  | "rooms-showcase"
+  | "logo-carousel"
+  | "feature-text"
+  | "steps"
+  | "contact-form"
+  | "location";
 
 export interface PropSummary {
   name: string;
@@ -60,17 +72,4 @@ export interface SectionMeta {
  */
 export interface SectionEntry extends SectionMeta {
   preview: () => ReactElement;
-}
-
-/**
- * Build a registry entry. The generic `P` ties `sampleProps` to the component's
- * props at the call site (so a mismatch is a type error), then erases to a
- * non-generic `SectionEntry` for storage in the registry array.
- */
-export function defineSection<P>(
-  meta: SectionMeta,
-  component: ComponentType<P>,
-  sampleProps: P,
-): SectionEntry {
-  return { ...meta, preview: () => createElement(component, sampleProps) };
 }

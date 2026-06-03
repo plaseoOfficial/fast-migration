@@ -1,15 +1,18 @@
-import { HERO_INTRO, HERO_BODY } from "@/lib/content";
+interface HeroSectionProps {
+  bgImage: string;
+  title: string;
+  intro: string;
+  body: string;
+}
 
-const HERO_BG = "/images/2026/05/variante_1778229165731_5-scaled.jpg";
-
-export function HeroSection() {
+export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
   return (
     <section
       className="relative w-full overflow-hidden"
       style={{
         height: "min(805px, 100vh)",
         minHeight: 640,
-        backgroundImage: `linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%), url(${HERO_BG})`,
+        backgroundImage: `linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%), url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -27,7 +30,7 @@ export function HeroSection() {
           color: "rgb(243,243,243)",
         }}
       >
-        Fast Systemmöbel
+        {title}
       </h1>
 
       {/* Bottom-left white paragraphs — Poppins 18px 500 lh 28.8 */}
@@ -43,7 +46,7 @@ export function HeroSection() {
                 lineHeight: "28.8px",
               }}
             >
-              {HERO_INTRO}
+              {intro}
             </p>
             <p
               className="text-white"
@@ -54,7 +57,7 @@ export function HeroSection() {
                 lineHeight: "28.8px",
               }}
             >
-              {HERO_BODY}
+              {body}
             </p>
           </div>
         </div>

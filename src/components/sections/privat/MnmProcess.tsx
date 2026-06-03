@@ -1,7 +1,15 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export function MnmProcess() {
+interface MnmProcessProps {
+  heading: string;
+  paragraph: string;
+  paragraphStrong: string;
+  image: string;
+  imageAlt: string;
+}
+
+export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAlt }: MnmProcessProps) {
   return (
     <section
       className="py-12 lg:py-[46px] lg:pb-14"
@@ -26,7 +34,7 @@ export function MnmProcess() {
                 fontWeight: 500,
               }}
             >
-              Planung, Fertigung und Montage für Maßmöbel aus einer Hand
+              {heading}
             </h2>
 
             {/* Paragraph */}
@@ -34,13 +42,8 @@ export function MnmProcess() {
               className="mt-5 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              Unsere Maßmöbel entstehen in einem strukturierten Prozess: digitales Planen,
-              professionelles Aufmaß, Fertigung auf Homag-Technologie und saubere Montage durch
-              unser eigenes Team. Dabei kombinieren wir hochwertige Materialien, moderne Dekore
-              und robuste Konstruktionen für maximale Funktionalität. Ob Schrank nach Maß, Regal,
-              Sideboard, Kommode oder Lösungen für Nischen und Dachschrägen – wir entwickeln
-              Möbel, die perfekt in den Raum passen und langfristig zuverlässig funktionieren.{" "}
-              <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>Made in Germany.</strong>
+              {paragraph}{" "}
+              <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>{paragraphStrong}</strong>
             </p>
 
             {/* Decorative dots */}
@@ -63,8 +66,8 @@ export function MnmProcess() {
           {/* Right column — image */}
           <div className="w-full">
             <Image
-              src="/images/2025/11/20161103_150622294_iOS-scaled.jpg"
-              alt="Maßgefertigter Einbauschrank in Anthrazit"
+              src={image}
+              alt={imageAlt}
               width={560}
               height={420}
               className="w-full h-auto object-cover"

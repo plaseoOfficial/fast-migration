@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { MnmProcess } from "@/components/sections/privat/MnmProcess";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
-import { MnmTestimonials } from "@/components/sections/privat/MnmTestimonials";
-import { MnmFaq } from "@/components/sections/privat/MnmFaq";
+import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
+import { FaqSection } from "@/components/sections/shared/FaqSection";
+import {
+  mnmHero,
+  mnmIntroStats,
+  mnmProcess,
+  mnmTypische,
+  mnmWarum,
+  mnmGeschichte,
+  mnmCtas,
+  mnmTestimonialsHeading,
+  mnmFaq,
+} from "@/lib/content/moebel-nach-mass";
 
 export const metadata: Metadata = {
   title: "Möbel nach Maß aus Espelkamp: Planung, Fertigung, Montage",
@@ -31,47 +41,33 @@ const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 export default function MoebelNachMassPage() {
   return (
-    <>
-      <Header />
-      <main className="flex flex-col">
-        <MnmHero />
-        <MnmIntroStats />
+    <PrivatPageLayout>
+      <MnmHero {...mnmHero} />
+      <MnmIntroStats {...mnmIntroStats} />
 
-        {/* Maßmöbel expanding CTA — bottom of the intro/stats section (beige) */}
-        <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-          <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-            <ExpandingImageCta
-              image="/images/2025/11/IMG_6123-scaled.jpg"
-              heading="Maßmöbel nach Ihren Vorstellungen"
-              linkText="Sprechen Sie mit uns über Ihr Projekt"
-              href="/kontakt"
-            />
-          </div>
-        </section>
+      {/* Maßmöbel expanding CTA — bottom of the intro/stats section (beige) */}
+      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
+        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+          <ExpandingImageCta {...mnmCtas.intro} />
+        </div>
+      </section>
 
-        <MnmProcess />
-        <MnmWeitereLeistungen />
-        <MnmTypische />
-        <MnmWarum />
-        <MnmGeschichte />
-        <MnmMoebelplaner />
-        <MnmTestimonials />
+      <MnmProcess {...mnmProcess} />
+      <MnmWeitereLeistungen />
+      <MnmTypische {...mnmTypische} />
+      <MnmWarum {...mnmWarum} />
+      <MnmGeschichte {...mnmGeschichte} />
+      <MnmMoebelplaner />
+      <TestimonialsSection heading={mnmTestimonialsHeading} />
 
-        {/* Final CTA — bottom of the testimonials section (beige) */}
-        <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-          <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-            <ExpandingImageCta
-              image="/images/2025/11/DSC_9938.jpg"
-              heading="Ihr Raum verdient mehr als Standard."
-              linkText="Sprechen Sie mit uns über Ihr Projekt."
-              href="/kontakt"
-            />
-          </div>
-        </section>
+      {/* Final CTA — bottom of the testimonials section (beige) */}
+      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
+        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+          <ExpandingImageCta {...mnmCtas.final} />
+        </div>
+      </section>
 
-        <MnmFaq />
-      </main>
-      <Footer />
-    </>
+      <FaqSection heading={mnmFaq.heading} items={mnmFaq.items} />
+    </PrivatPageLayout>
   );
 }

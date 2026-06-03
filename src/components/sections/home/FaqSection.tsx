@@ -2,17 +2,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FAQS } from "@/lib/content";
+import type { FaqItem } from "@/types";
 import { PlusIcon, MinusIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
-export function FaqSection() {
+interface FaqSectionProps {
+  eyebrow: string;
+  heading: string;
+  items: FaqItem[];
+  ctaLabel: string;
+  ctaHref: string;
+}
+
+export function FaqSection({ eyebrow, heading, items, ctaLabel, ctaHref }: FaqSectionProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section id="faq" className="fast-section w-full bg-white">
       <div className="mx-auto max-w-[920px] px-6">
-        <p className="fast-eyebrow mb-3 text-center">Häufige Fragen</p>
+        <p className="fast-eyebrow mb-3 text-center">{eyebrow}</p>
         <h2
           className="mb-10 text-center"
           style={{
@@ -23,11 +31,11 @@ export function FaqSection() {
             color: "rgb(61,61,61)",
           }}
         >
-          FAQ
+          {heading}
         </h2>
 
         <div className="flex flex-col gap-3">
-          {FAQS.map((item, i) => {
+          {items.map((item, i) => {
             const expanded = open === i;
             return (
               <div
@@ -75,8 +83,8 @@ export function FaqSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link href="#" className="fast-btn-pill">
-            Alle Fragen und Antworten
+          <Link href={ctaHref} className="fast-btn-pill">
+            {ctaLabel}
           </Link>
         </div>
       </div>

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ServiceHero } from "@/components/fast/ServiceHero";
-import { TestimonialsSection } from "@/components/fast/TestimonialsSection";
-import { FaqSection } from "@/components/fast/FaqSection";
-import { ExpandingImageCta } from "@/components/mnm/ExpandingImageCta";
-import { MpSchritte } from "@/components/moebelplaner/MpSchritte";
-import { MpIntro } from "@/components/moebelplaner/MpIntro";
-import { MpProzess } from "@/components/moebelplaner/MpProzess";
+import { ServiceHero } from "@/components/sections/shared/ServiceHero";
+import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
+import { FaqSection } from "@/components/sections/shared/FaqSection";
+import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { MpSchritte } from "@/components/sections/moebelplaner/MpSchritte";
+import { MpIntro } from "@/components/sections/moebelplaner/MpIntro";
+import { MpProzess } from "@/components/sections/moebelplaner/MpProzess";
 
 export const metadata: Metadata = {
   title: "Möbelplaner online: Maßmöbel kostenlos konfigurieren",

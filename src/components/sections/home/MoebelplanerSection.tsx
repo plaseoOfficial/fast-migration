@@ -1,9 +1,20 @@
 import Link from "next/link";
-import { CTA } from "@/lib/content";
 
-const PLANNER_URL = "https://moebelplaner.fast-systemmoebel.de/";
+interface MoebelplanerSectionProps {
+  eyebrow: string;
+  heading: string;
+  plannerUrl: string;
+  ctaLabel: string;
+  ctaHref: string;
+}
 
-export function MoebelplanerSection() {
+export function MoebelplanerSection({
+  eyebrow,
+  heading,
+  plannerUrl,
+  ctaLabel,
+  ctaHref,
+}: MoebelplanerSectionProps) {
   return (
     <section
       id="leistungen"
@@ -12,8 +23,7 @@ export function MoebelplanerSection() {
     >
       <div className="mx-auto max-w-[1280px] px-6">
         <p className="fast-eyebrow mb-4 text-center">
-          Einfach ausprobieren und visualisieren: Machen Sie sich schon heute ein Bild von Ihrer
-          neuen Einrichtung.
+          {eyebrow}
         </p>
         <h2
           className="mb-12 text-center"
@@ -25,12 +35,12 @@ export function MoebelplanerSection() {
             color: "rgb(61,61,61)",
           }}
         >
-          Möbel online planen
+          {heading}
         </h2>
 
         <div className="relative w-full overflow-hidden rounded-md bg-white shadow-md">
           <iframe
-            src={PLANNER_URL}
+            src={plannerUrl}
             title="Fast Möbelplaner"
             loading="lazy"
             allow="fullscreen; clipboard-write"
@@ -40,12 +50,12 @@ export function MoebelplanerSection() {
 
         <div className="mt-10 text-center">
           <Link
-            href={CTA.href}
+            href={ctaHref}
             target="_blank"
             rel="noreferrer"
             className="fast-btn-pill"
           >
-            {CTA.label} in neuem Tab öffnen
+            {ctaLabel}
           </Link>
         </div>
       </div>

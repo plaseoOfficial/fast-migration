@@ -1,48 +1,18 @@
 import Image from "next/image";
+import type { CategoryItem } from "@/types/mnm";
 import { cn } from "@/lib/utils";
 
-interface ListItem {
-  title: string;
-  description: string;
+interface MnmTypischeProps {
+  heading: string;
+  image1: string;
+  image1Alt: string;
+  image2: string;
+  image2Alt: string;
+  row1: CategoryItem[];
+  row2: CategoryItem[];
 }
 
-const row1Items: ListItem[] = [
-  {
-    title: "Küchen",
-    description:
-      "Klare Linien, funktionale Wege, perfekt integrierte Stauraumlösungen für jeden Küchenraum.",
-  },
-  {
-    title: "Bad",
-    description:
-      "Präzise Planung für kleine und große Bäder: Stauraum, Lichtführung und harmonische Materialien.",
-  },
-  {
-    title: "Garderoben",
-    description:
-      "Durchdachte Garderoben mit optimaler Aufteilung für Alltag, Familie und saisonale Ordnung.",
-  },
-];
-
-const row2Items: ListItem[] = [
-  {
-    title: "Wohnbereiche",
-    description:
-      "Wohnräume, die Struktur geben: Möbel, Akzente und Proportionen mit klarer Wirkung.",
-  },
-  {
-    title: "Homeoffice",
-    description:
-      "Arbeitsbereiche, die Ruhe, Ergonomie und Stauraum verbinden – auch auf kleinsten Flächen.",
-  },
-  {
-    title: "Stauraum",
-    description:
-      "Individuelle Lösungen, die jeden Zentimeter nutzen – für Nischen, Dachschrägen und Sonderbereiche.",
-  },
-];
-
-function ItemList({ items }: { items: ListItem[] }) {
+function ItemList({ items }: { items: CategoryItem[] }) {
   return (
     <div className="flex flex-col">
       {items.map((item, index) => (
@@ -79,7 +49,7 @@ function ItemList({ items }: { items: ListItem[] }) {
   );
 }
 
-export function MnmTypische() {
+export function MnmTypische({ heading, image1, image1Alt, image2, image2Alt, row1, row2 }: MnmTypischeProps) {
   return (
     <section
       className="py-12 lg:py-[57px]"
@@ -100,7 +70,7 @@ export function MnmTypische() {
             maxWidth: "880px",
           }}
         >
-          Typische Maßanfertigungen – passgenaue Möbel für Ihr Zuhause
+          {heading}
         </h2>
 
         {/* Row 1: image left, list right */}
@@ -108,8 +78,8 @@ export function MnmTypische() {
           {/* Left: image */}
           <div className="relative h-[260px] lg:h-[360px] overflow-hidden">
             <Image
-              src="/images/2025/11/IMG_9120-scaled.jpg"
-              alt="Maßgefertigtes Möbeldetail"
+              src={image1}
+              alt={image1Alt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -118,7 +88,7 @@ export function MnmTypische() {
 
           {/* Right: list */}
           <div>
-            <ItemList items={row1Items} />
+            <ItemList items={row1} />
           </div>
         </div>
 
@@ -126,14 +96,14 @@ export function MnmTypische() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: list (on mobile, image first then list — via order) */}
           <div className="order-2 lg:order-1">
-            <ItemList items={row2Items} />
+            <ItemList items={row2} />
           </div>
 
           {/* Right: image (on mobile, rendered first via order) */}
           <div className="relative h-[260px] lg:h-[360px] overflow-hidden order-1 lg:order-2">
             <Image
-              src="/images/2025/11/IMG_2249.jpg"
-              alt="Maßgefertigte Garderobe mit Stauraum"
+              src={image2}
+              alt={image2Alt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

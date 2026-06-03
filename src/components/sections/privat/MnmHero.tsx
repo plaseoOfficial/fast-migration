@@ -1,9 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { ChevronRightIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
-export function MnmHero() {
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface MnmHeroProps {
+  bgImage: string;
+  imageAlt: string;
+  title: string;
+  intro: string;
+  breadcrumb: BreadcrumbItem[];
+}
+
+export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb }: MnmHeroProps) {
   return (
     <section
       className={cn(
@@ -16,8 +30,8 @@ export function MnmHero() {
     >
       {/* Background image */}
       <Image
-        src="/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg"
-        alt="Einbauschrank nach Maß – Fast Systemmöbel"
+        src={bgImage}
+        alt={imageAlt}
         fill
         priority
         className="object-cover object-[50%_50%] z-0"
@@ -42,7 +56,7 @@ export function MnmHero() {
               className="text-white font-medium text-[36px] leading-[1.1] sm:text-[48px] lg:text-[70px] lg:leading-[84px]"
               style={{ letterSpacing: "-3px" }}
             >
-              Möbel nach Maß aus Espelkamp – millimetergenau geplant
+              {title}
             </h1>
 
             {/* Breadcrumb */}
@@ -50,25 +64,28 @@ export function MnmHero() {
               aria-label="Breadcrumb"
               className="mt-4 flex flex-wrap items-center gap-1"
             >
-              <Link
-                href="/"
-                className="text-[15px] leading-[26px] text-white/70 hover:text-white transition-colors"
-              >
-                fast.side-boost.com
-              </Link>
-              <ChevronRightIcon className="h-3 w-auto opacity-60 text-white/70" />
-              <Link
-                href="/leistungen"
-                className="text-[15px] leading-[26px] text-white/70 hover:text-white transition-colors"
-              >
-                Leistungen
-              </Link>
-              <ChevronRightIcon className="h-3 w-auto opacity-60 text-white/70" />
-              <span
-                className="text-[15px] leading-[26px] font-bold text-white"
-              >
-                Möbel nach Maß
-              </span>
+              {breadcrumb.map((item, index) => {
+                const isLast = index === breadcrumb.length - 1;
+                return (
+                  <Fragment key={index}>
+                    {index > 0 && (
+                      <ChevronRightIcon className="h-3 w-auto opacity-60 text-white/70" />
+                    )}
+                    {isLast || !item.href ? (
+                      <span className="text-[15px] leading-[26px] font-bold text-white">
+                        {item.label}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-[15px] leading-[26px] text-white/70 hover:text-white transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </Fragment>
+                );
+              })}
             </nav>
           </div>
 
@@ -78,10 +95,7 @@ export function MnmHero() {
               className="font-medium text-white/70"
               style={{ fontSize: "15px", lineHeight: "23.8px" }}
             >
-              Standardlösungen finden Sie in jedem Möbelhaus. Wir bei Fast
-              Systemmöbel gehen einen Schritt weiter: Wir planen und fertigen
-              hochwertige Möbel nach Maß, die sich millimetergenau in Ihre Räume
-              einfügen und Ihre Persönlichkeit perfekt unterstreichen.
+              {intro}
             </p>
           </div>
         </div>

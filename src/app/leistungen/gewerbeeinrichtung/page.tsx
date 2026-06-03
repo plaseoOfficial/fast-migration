@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ServiceHero } from "@/components/fast/ServiceHero";
-import { TestimonialsSection } from "@/components/fast/TestimonialsSection";
-import { FaqSection } from "@/components/fast/FaqSection";
-import { ExpandingImageCta } from "@/components/mnm/ExpandingImageCta";
-import { MnmWeitereLeistungen } from "@/components/mnm/MnmWeitereLeistungen";
-import { MnmMoebelplaner } from "@/components/mnm/MnmMoebelplaner";
-import { GewerbeIntroStats } from "@/components/gewerbe/GewerbeIntroStats";
-import { GewerbeLadenGastro } from "@/components/gewerbe/GewerbeLadenGastro";
-import { GewerbeLeistungen } from "@/components/gewerbe/GewerbeLeistungen";
-import { GewerbeWarum } from "@/components/gewerbe/GewerbeWarum";
+import { ServiceHero } from "@/components/sections/shared/ServiceHero";
+import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
+import { FaqSection } from "@/components/sections/shared/FaqSection";
+import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
+import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
+import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroStats";
+import { GewerbeLadenGastro } from "@/components/sections/gewerbe/GewerbeLadenGastro";
+import { GewerbeLeistungen } from "@/components/sections/gewerbe/GewerbeLeistungen";
+import { GewerbeWarum } from "@/components/sections/gewerbe/GewerbeWarum";
 
 export const metadata: Metadata = {
   title: "Gewerbeeinrichtung nach Maß: Büro, Praxis & Ladenbau",

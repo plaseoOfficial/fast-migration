@@ -2,11 +2,39 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, ArrowUpRightIcon, StarIcon } from "@/components/icons";
 
-const STORY_IMG = "/images/2025/11/DSC06206-scaled.jpg";
-const KITCHEN_IMG = "/images/2025/11/ThabarSebastian_kueche2.jpeg";
-const BATH_IMG = "/images/2025/11/20230829_030744000_iOS.jpg";
+interface RaeumeSectionProps {
+  heading: string;
+  subheading: string;
+  body: string;
+  topCtaLabel: string;
+  topCtaHref: string;
+  storyImage: string;
+  storyHref: string;
+  storyTitle: string;
+  storyCtaLabel: string;
+  kitchenImage: string;
+  kitchenCaption: string;
+  bathImage: string;
+  bathCaption: string;
+  badge: string;
+}
 
-export function RaeumeSection() {
+export function RaeumeSection({
+  heading,
+  subheading,
+  body,
+  topCtaLabel,
+  topCtaHref,
+  storyImage,
+  storyHref,
+  storyTitle,
+  storyCtaLabel,
+  kitchenImage,
+  kitchenCaption,
+  bathImage,
+  bathCaption,
+  badge,
+}: RaeumeSectionProps) {
   return (
     <section
       id="kontakt"
@@ -25,7 +53,7 @@ export function RaeumeSection() {
               color: "rgb(61,61,61)",
             }}
           >
-            Räume, die Geschichten erzählen
+            {heading}
           </h2>
           <p
             className="mt-6"
@@ -37,18 +65,16 @@ export function RaeumeSection() {
               color: "rgb(61,61,61)",
             }}
           >
-            Starten Sie Ihr Projekt
+            {subheading}
           </p>
           <p
             className="fast-body mt-4"
             style={{ fontSize: 14, lineHeight: "23.8px" }}
           >
-            Wir gestalten Möbel, die sich einfügen, ohne sich zu verstecken. Die den Raum
-            tragen, nicht überladen. Und die selbst in 10 Jahren noch wirken, als wären sie
-            gerade eingebaut.
+            {body}
           </p>
           <Link
-            href="#kontakt"
+            href={topCtaHref}
             className="mt-6 inline-flex items-center gap-2 transition-colors hover:text-[rgb(237,168,33)]"
             style={{
               fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
@@ -57,7 +83,7 @@ export function RaeumeSection() {
               color: "rgb(61,61,61)",
             }}
           >
-            Kontakt
+            {topCtaLabel}
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </div>
@@ -65,11 +91,11 @@ export function RaeumeSection() {
         {/* 3-column showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           <Link
-            href="#ueber-uns"
+            href={storyHref}
             className="lg:col-span-4 group relative aspect-[3/4] overflow-hidden rounded-md bg-[rgb(61,61,61)] block"
           >
             <Image
-              src={STORY_IMG}
+              src={storyImage}
               alt="Fast Werkstatt"
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"
@@ -87,7 +113,7 @@ export function RaeumeSection() {
                   lineHeight: "28.6px",
                 }}
               >
-                Unsere Geschichte
+                {storyTitle}
               </h4>
               <span
                 className="inline-flex items-center gap-1 text-white/90"
@@ -97,7 +123,7 @@ export function RaeumeSection() {
                   fontWeight: 500,
                 }}
               >
-                Über uns
+                {storyCtaLabel}
                 <ArrowRightIcon className="h-3 w-3" />
               </span>
             </div>
@@ -122,7 +148,7 @@ export function RaeumeSection() {
             </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md mt-auto">
               <Image
-                src={KITCHEN_IMG}
+                src={kitchenImage}
                 alt="Fast Küche"
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"
@@ -138,7 +164,7 @@ export function RaeumeSection() {
                     lineHeight: "23.4px",
                   }}
                 >
-                  Rückzugsort
+                  {kitchenCaption}
                 </h4>
               </div>
             </div>
@@ -146,7 +172,7 @@ export function RaeumeSection() {
 
           <div className="lg:col-span-4 relative aspect-[3/4] lg:aspect-auto overflow-hidden rounded-md">
             <Image
-              src={BATH_IMG}
+              src={bathImage}
               alt="Fast Badmöbel"
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"
@@ -162,7 +188,7 @@ export function RaeumeSection() {
                 lineHeight: "23.4px",
               }}
             >
-              Wohnumgebung die Wohlfühlen verspricht
+              {bathCaption}
             </h4>
           </div>
         </div>
@@ -183,7 +209,7 @@ export function RaeumeSection() {
               color: "rgb(61,61,61)",
             }}
           >
-            Über 4 Tausend Kunden vertrauen Fast Systemmöbel
+            {badge}
           </h4>
         </div>
       </div>

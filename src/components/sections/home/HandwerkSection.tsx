@@ -1,13 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Image from "next/image";
-import { HANDWERK_TABS, HANDWERK_STATS } from "@/lib/content";
+import type { CounterStat, TabPanel } from "@/types";
 import { cn } from "@/lib/utils";
 
-export function HandwerkSection() {
+interface HandwerkSectionProps {
+  eyebrow: string;
+  headingLines: string[];
+  stats: CounterStat[];
+  tabs: TabPanel[];
+}
+
+export function HandwerkSection({ eyebrow, headingLines, stats, tabs }: HandwerkSectionProps) {
   const [active, setActive] = useState(0);
-  const panel = HANDWERK_TABS[active];
+  const panel = tabs[active];
 
   return (
     <section
@@ -18,7 +25,7 @@ export function HandwerkSection() {
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-14 items-end">
           <div>
-            <p className="fast-eyebrow mb-3">Über uns</p>
+            <p className="fast-eyebrow mb-3">{eyebrow}</p>
             <h2
               style={{
                 fontSize: "clamp(28px, 2.8vw, 37px)",
@@ -28,13 +35,16 @@ export function HandwerkSection() {
                 color: "rgb(61,61,61)",
               }}
             >
-              Handwerk mit System,
-              <br />
-              Design mit Seele
+              {headingLines.map((line, i) => (
+                <Fragment key={i}>
+                  {i > 0 && <br />}
+                  {line}
+                </Fragment>
+              ))}
             </h2>
           </div>
           <div className="grid grid-cols-3 gap-6 lg:gap-10">
-            {HANDWERK_STATS.map((s) => (
+            {stats.map((s) => (
               <div key={s.label}>
                 <div
                   style={{
@@ -59,7 +69,7 @@ export function HandwerkSection() {
 
         {/* Tab triggers */}
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
-          {HANDWERK_TABS.map((t, i) => (
+          {tabs.map((t, i) => (
             <button
               key={t.title}
               type="button"

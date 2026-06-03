@@ -1,10 +1,16 @@
 import Image from "next/image";
-import { TESTIMONIAL, PARTNER_LOGOS } from "@/lib/content";
+import type { PartnerLogo, Testimonial } from "@/types";
 import { StarIcon } from "@/components/icons";
 
-export function TestimonialsSection() {
-  const stars = Array.from({ length: TESTIMONIAL.rating });
-  const looped = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
+interface TestimonialsSectionProps {
+  heading: string;
+  testimonial: Testimonial;
+  logos: PartnerLogo[];
+}
+
+export function TestimonialsSection({ heading, testimonial, logos }: TestimonialsSectionProps) {
+  const stars = Array.from({ length: testimonial.rating });
+  const looped = [...logos, ...logos];
 
   return (
     <section
@@ -22,15 +28,15 @@ export function TestimonialsSection() {
             color: "rgb(61,61,61)",
           }}
         >
-          Was Kunden sagen
+          {heading}
         </h2>
 
         <div className="mx-auto max-w-[820px] bg-white rounded-md shadow-sm p-8 lg:p-12 mb-16">
           <div className="flex items-start gap-6">
             <div className="relative flex-shrink-0 w-16 h-16 lg:w-20 lg:h-20">
               <Image
-                src={TESTIMONIAL.logo}
-                alt={TESTIMONIAL.org}
+                src={testimonial.logo}
+                alt={testimonial.org}
                 fill
                 sizes="80px"
                 className="object-contain"
@@ -48,14 +54,14 @@ export function TestimonialsSection() {
                   className="ml-2 fast-body-sm"
                   style={{ fontSize: 12, color: "rgb(102,102,102)" }}
                 >
-                  ({TESTIMONIAL.rating}/5)
+                  ({testimonial.rating}/5)
                 </span>
               </div>
               <p
                 className="mb-4 fast-body-sm"
                 style={{ fontSize: 16, lineHeight: "27.2px", color: "rgb(61,61,61)" }}
               >
-                &ldquo;{TESTIMONIAL.quote}&rdquo;
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
               <div>
                 <h4
@@ -67,9 +73,9 @@ export function TestimonialsSection() {
                     color: "rgb(61,61,61)",
                   }}
                 >
-                  {TESTIMONIAL.org}
+                  {testimonial.org}
                 </h4>
-                <p className="fast-body-sm mt-1">{TESTIMONIAL.name}</p>
+                <p className="fast-body-sm mt-1">{testimonial.name}</p>
               </div>
             </div>
           </div>

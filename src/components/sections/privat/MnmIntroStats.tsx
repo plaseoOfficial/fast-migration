@@ -6,6 +6,29 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@/components/icons";
 
+interface MnmIntroStatsProps {
+  since: string;
+  sinceSub: string;
+  heading: string;
+  introBefore: string;
+  introBold: string;
+  introAfter: string;
+  bandImage: string;
+  bandAlt: string;
+  col1Title: string;
+  col1Body: string;
+  col1CtaLabel: string;
+  col1CtaHref: string;
+  col2Body: string;
+  counterTarget: number;
+  counterDuration: number;
+  counterSuffix: string;
+  col3Title: string;
+  col3Body: string;
+  col3CtaLabel: string;
+  col3CtaHref: string;
+}
+
 function useCountUp(target: number, duration: number) {
   const [value, setValue] = useState(0);
   const [started, setStarted] = useState(false);
@@ -39,9 +62,30 @@ function useCountUp(target: number, duration: number) {
   return { value, start };
 }
 
-export function MnmIntroStats() {
+export function MnmIntroStats({
+  since,
+  sinceSub,
+  heading,
+  introBefore,
+  introBold,
+  introAfter,
+  bandImage,
+  bandAlt,
+  col1Title,
+  col1Body,
+  col1CtaLabel,
+  col1CtaHref,
+  col2Body,
+  counterTarget,
+  counterDuration,
+  counterSuffix,
+  col3Title,
+  col3Body,
+  col3CtaLabel,
+  col3CtaHref,
+}: MnmIntroStatsProps) {
   const counterRef = useRef<HTMLDivElement>(null);
-  const { value, start } = useCountUp(72, 2000);
+  const { value, start } = useCountUp(counterTarget, counterDuration);
 
   useEffect(() => {
     const el = counterRef.current;
@@ -85,7 +129,7 @@ export function MnmIntroStats() {
                 margin: 0,
               }}
             >
-              seit 1996
+              {since}
             </h4>
             <p
               style={{
@@ -95,7 +139,7 @@ export function MnmIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Geben wir unser Bestes.
+              {sinceSub}
             </p>
           </div>
 
@@ -109,7 +153,7 @@ export function MnmIntroStats() {
               margin: 0,
             }}
           >
-            Individuelle Möbel nach Maß für jeden Raum präzise planen
+            {heading}
           </h2>
 
           {/* Col 3: asterisk + intro paragraph */}
@@ -135,13 +179,11 @@ export function MnmIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Fast Systemmöbel aus Espelkamp begleitet Sie genau in dieser
-              entscheidenden{" "}
+              {introBefore}{" "}
               <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
-                Bauphase
+                {introBold}
               </strong>
-              . Mit präziser Planung, ehrlicher Beratung und handwerklicher
-              Umsetzung, die jeden Quadratmeter nutzt.
+              {introAfter}
             </p>
           </div>
         </div>
@@ -149,8 +191,8 @@ export function MnmIntroStats() {
         {/* Row B — full-width image band */}
         <div className="mt-9 h-[260px] lg:h-[430px] w-full overflow-hidden">
           <Image
-            src="/images/2025/11/IMG_2772-scaled.jpg"
-            alt="Maßgefertigte Einbauschränke im Flur"
+            src={bandImage}
+            alt={bandAlt}
             width={1224}
             height={430}
             className="h-full w-full object-cover"
@@ -172,7 +214,7 @@ export function MnmIntroStats() {
                 margin: 0,
               }}
             >
-              Maßarbeit planen
+              {col1Title}
             </h3>
             <p
               style={{
@@ -184,13 +226,10 @@ export function MnmIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Wir fertigen Möbel nach Maß, die millimetergenau zu Ihrem Raum
-              passen und jede Nische optimal nutzen. Jede Maßanfertigung entsteht
-              individuell nach Ihren Anforderungen. Mit hochwertigen Dekoren,
-              stabilen Konstruktionen und präzisem Aufmaß-Service.
+              {col1Body}
             </p>
             <Link
-              href="/kontakt"
+              href={col1CtaHref}
               className={cn("inline-flex items-center underline")}
               style={{
                 display: "inline-flex",
@@ -202,7 +241,7 @@ export function MnmIntroStats() {
                 marginTop: "24px",
               }}
             >
-              Jetzt individuelle Anfrage stellen
+              {col1CtaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
             </Link>
           </div>
@@ -218,11 +257,7 @@ export function MnmIntroStats() {
                 margin: 0,
               }}
             >
-              Dabei planen wir jedes Möbelstück so, dass Funktionalität, Stauraum
-              und Alltagstauglichkeit perfekt zusammenspielen. Ob Schrank, Regal,
-              Sideboard oder Kommode: Sie erhalten maßgeschneiderte Möbel, die
-              langlebig gebaut, modern gestaltet und sauber integriert werden –
-              exakt nach Ihren Vorstellungen.
+              {col2Body}
             </p>
           </div>
 
@@ -236,7 +271,7 @@ export function MnmIntroStats() {
                 color: "rgb(0,0,0)",
               }}
             >
-              <span>{value}</span>K+
+              <span>{value}</span>{counterSuffix}
             </div>
             <h3
               style={{
@@ -249,7 +284,7 @@ export function MnmIntroStats() {
                 marginBottom: 0,
               }}
             >
-              gefertigte Einzelteile
+              {col3Title}
             </h3>
             <p
               style={{
@@ -261,12 +296,10 @@ export function MnmIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Unsere Fertigung kombiniert neueste CNC-Technik mit handwerklicher
-              Perfektion. So entstehen Systemmöbel, die langlebig, funktional und
-              ästhetisch überzeugen – in jedem Projekt, jedem Detail.
+              {col3Body}
             </p>
             <Link
-              href="/project/mixmarkt/"
+              href={col3CtaHref}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -277,7 +310,7 @@ export function MnmIntroStats() {
                 marginTop: "24px",
               }}
             >
-              Entdecken Sie das Gefühl von Qualität
+              {col3CtaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
             </Link>
           </div>

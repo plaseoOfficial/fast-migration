@@ -1,11 +1,16 @@
-import { PARALLAX_BG } from "@/lib/content";
+interface ParallaxQuoteProps {
+  bgImage: string;
+  heading: string;
+  body: string;
+  quote: string;
+}
 
-export function ParallaxQuote() {
+export function ParallaxQuote({ bgImage, heading, body, quote }: ParallaxQuoteProps) {
   return (
     <section
       className="relative w-full fast-parallax-bg"
       style={{
-        backgroundImage: `radial-gradient(circle, rgba(23,33,33,0.46) 0%, rgba(33,33,33,0.66) 57%), url(${PARALLAX_BG})`,
+        backgroundImage: `radial-gradient(circle, rgba(23,33,33,0.46) 0%, rgba(33,33,33,0.66) 57%), url(${bgImage})`,
       }}
     >
       <div className="mx-auto max-w-[1100px] px-6 py-28 lg:py-36 text-center">
@@ -18,7 +23,7 @@ export function ParallaxQuote() {
             fontWeight: 500,
           }}
         >
-          Qualität, die man nicht erklären muss
+          {heading}
         </h2>
         <p
           className="mb-10 mx-auto max-w-[820px] text-white/90"
@@ -29,9 +34,7 @@ export function ParallaxQuote() {
             lineHeight: "22.5px",
           }}
         >
-          Echtholz, Furnier oder lackierte Front – das Material entscheidet nicht nur über den
-          Look, sondern über die Lebensdauer. Wir setzen auf langlebige Materialien, hochwertige
-          Beschläge und eine Verarbeitung, die man spürt, sobald man eine Schublade öffnet.
+          {body}
         </p>
         <h4
           className="italic text-white/95 mx-auto max-w-[820px]"
@@ -42,8 +45,7 @@ export function ParallaxQuote() {
             lineHeight: "28.6px",
           }}
         >
-          Viele unserer Kunden kommen Jahre später wieder – nicht, um zu reklamieren. Sondern
-          weil sie sagen: „Das waren die besten Möbel, die wir je hatten.&ldquo;
+          {quote}
         </h4>
       </div>
     </section>

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ServiceHero } from "@/components/fast/ServiceHero";
-import { PartnerCarousel } from "@/components/fast/PartnerCarousel";
-import { KontaktPanel } from "@/components/kontakt/KontaktPanel";
-import { KontaktStandort } from "@/components/kontakt/KontaktStandort";
+import { ServiceHero } from "@/components/sections/shared/ServiceHero";
+import { PartnerCarousel } from "@/components/sections/shared/PartnerCarousel";
+import { KontaktPanel } from "@/components/sections/kontakt/KontaktPanel";
+import { KontaktStandort } from "@/components/sections/kontakt/KontaktStandort";
 
 export const metadata: Metadata = {
   title: "Kontakt: Fast Systemmöbel Espelkamp | Beratung anfragen",

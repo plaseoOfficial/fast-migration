@@ -1,10 +1,37 @@
 import Image from "next/image";
-import { DISCOVER_BLURBS, HOTSPOTS } from "@/lib/content";
+import type { Blurb } from "@/types";
 import { HotspotLightbulbIcon, HotspotBoxIcon, HotspotLayersIcon } from "@/components/icons";
+
+interface Hotspot {
+  x: number;
+  y: number;
+  title: string;
+  body: string;
+}
+
+interface DiscoverSectionProps {
+  eyebrow: string;
+  heading: string;
+  kitchenImage: string;
+  hotspots: Hotspot[];
+  teamImage: string;
+  teamHeading: string;
+  teamBody: string;
+  blurbs: Blurb[];
+}
 
 const HOTSPOT_ICONS = [HotspotBoxIcon, HotspotLightbulbIcon, HotspotLayersIcon];
 
-export function DiscoverSection() {
+export function DiscoverSection({
+  eyebrow,
+  heading,
+  kitchenImage,
+  hotspots,
+  teamImage,
+  teamHeading,
+  teamBody,
+  blurbs,
+}: DiscoverSectionProps) {
   return (
     <section
       className="fast-section w-full"
@@ -12,7 +39,7 @@ export function DiscoverSection() {
     >
       <div className="mx-auto max-w-[1280px] px-6">
         <p className="fast-eyebrow mb-4 text-center">
-          Für Privatkunden, Planer und Gewerbe
+          {eyebrow}
         </p>
         <h2
           className="mb-14 text-center"
@@ -24,7 +51,7 @@ export function DiscoverSection() {
             color: "rgb(61,61,61)",
           }}
         >
-          Entdecke Fast Systemmöbel
+          {heading}
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -32,13 +59,13 @@ export function DiscoverSection() {
           <div className="lg:col-span-7">
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-md">
               <Image
-                src="/images/2026/05/variante_1778229163946_1-scaled.jpg"
+                src={kitchenImage}
                 alt="Moderne Küche mit hellen Holzfronten"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover"
               />
-              {HOTSPOTS.map((h, i) => {
+              {hotspots.map((h, i) => {
                 const Icon = HOTSPOT_ICONS[i % HOTSPOT_ICONS.length];
                 return (
                   <button
@@ -74,7 +101,7 @@ export function DiscoverSection() {
           <div className="lg:col-span-5 flex flex-col gap-8">
             <div className="relative h-44 lg:h-56 w-full overflow-hidden rounded-md">
               <Image
-                src="/images/2025/11/DSC06340-scaled.jpg"
+                src={teamImage}
                 alt="Fast Team"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -92,15 +119,13 @@ export function DiscoverSection() {
                   color: "rgb(61,61,61)",
                 }}
               >
-                Fast verbindet Handwerk und Design zu ganzheitlichen Möbelkonzepten.
+                {teamHeading}
               </h4>
               <p
                 className="fast-body"
                 style={{ fontSize: 14, lineHeight: "23.8px" }}
               >
-                Wir realisieren maßgefertigte Einrichtungen für Wohnräume, Büros, Praxen und
-                Gewerbeflächen, die präzise und langlebig sind. Passgenau auf Ihren Raum
-                abgestimmt.
+                {teamBody}
               </p>
             </div>
           </div>
@@ -108,7 +133,7 @@ export function DiscoverSection() {
 
         {/* 4 blurb cards row — Urbanist h4 18px 500 */}
         <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {DISCOVER_BLURBS.map((b) => (
+          {blurbs.map((b) => (
             <div key={b.title}>
               <Image
                 src={b.icon}

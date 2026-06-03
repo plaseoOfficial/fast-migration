@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ServiceCard } from "@/types/mnm";
 
-interface DarkCardData {
-  icon: string;
-  title: string;
-  description: string;
-  href: string;
-}
-
-const DARK_CARDS: DarkCardData[] = [
+const DEFAULT_CARDS: ServiceCard[] = [
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
     title: "Möbel nach Maß",
@@ -46,7 +40,25 @@ const DARK_CARDS: DarkCardData[] = [
   },
 ];
 
-export function MnmWeitereLeistungen() {
+const DEFAULT_AMPERSAND_TEXT =
+  "Jedes Projekt entsteht bei uns aus Erfahrung, Planungssicherheit und moderner Fertigung. Ob Einzelstück oder kompletter Innenausbau – Sie profitieren von Lösungen, die langfristig tragen und handwerklich sauber umgesetzt sind.";
+
+interface MnmWeitereLeistungenProps {
+  eyebrow?: string;
+  heading?: string;
+  /** Defaults to the canonical Fast service cards (also used by the gewerbe page). */
+  cards?: ServiceCard[];
+  ampersandText?: string;
+  moreLabel?: string;
+}
+
+export function MnmWeitereLeistungen({
+  eyebrow = "LEISTEN? IMMER 100% – WIR FERTIGEN SIE ABER AUCH",
+  heading = "Weitere Leistungen von Fast Systemmöbel",
+  cards = DEFAULT_CARDS,
+  ampersandText = DEFAULT_AMPERSAND_TEXT,
+  moreLabel = "Mehr Infos hier",
+}: MnmWeitereLeistungenProps) {
   return (
     <section
       className="py-16 lg:py-[72px]"
@@ -68,7 +80,7 @@ export function MnmWeitereLeistungen() {
               color: "rgb(61,61,61)",
             }}
           >
-            LEISTEN? IMMER 100% – WIR FERTIGEN SIE ABER AUCH
+            {eyebrow}
           </p>
           <h2
             className="mx-auto mt-4 text-[38px] leading-[1.05] lg:text-[80px] lg:leading-[80px]"
@@ -79,14 +91,14 @@ export function MnmWeitereLeistungen() {
               maxWidth: "900px",
             }}
           >
-            Weitere Leistungen von Fast Systemmöbel
+            {heading}
           </h2>
         </div>
 
         {/* Cards grid */}
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {/* Dark cards */}
-          {DARK_CARDS.map((card) => (
+          {cards.map((card) => (
             <div
               key={card.title}
               className="flex flex-col"
@@ -148,7 +160,7 @@ export function MnmWeitereLeistungen() {
                   color: "rgb(243,243,243)",
                 }}
               >
-                Mehr Infos hier
+                {moreLabel}
               </Link>
             </div>
           ))}
@@ -184,10 +196,7 @@ export function MnmWeitereLeistungen() {
                 color: "rgb(23,33,33)",
               }}
             >
-              Jedes Projekt entsteht bei uns aus Erfahrung, Planungssicherheit
-              und moderner Fertigung. Ob Einzelstück oder kompletter Innenausbau
-              – Sie profitieren von Lösungen, die langfristig tragen und
-              handwerklich sauber umgesetzt sind.
+              {ampersandText}
             </p>
           </div>
         </div>

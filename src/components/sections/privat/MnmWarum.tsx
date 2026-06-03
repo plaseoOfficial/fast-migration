@@ -1,46 +1,20 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const IMAGES = [
-  {
-    src: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
-    alt: "Moderne Küche in Grau und Weiß",
-    width: 600,
-    height: 450,
-  },
-  {
-    src: "/images/2025/11/DSC_0001.jpg",
-    alt: "Moderner Schreibtisch",
-    width: 600,
-    height: 400,
-  },
-  {
-    src: "/images/2025/11/DSC_9814.jpg",
-    alt: "Modernes, dunkelgraues Möbel",
-    width: 600,
-    height: 420,
-  },
-  {
-    src: "/images/2025/11/IMG_4797-scaled.jpg",
-    alt: "Moderne Küche mit weißen Schränken",
-    width: 600,
-    height: 800,
-  },
-  {
-    src: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg",
-    alt: "Moderne Küche mit hellen Schränken",
-    width: 600,
-    height: 380,
-  },
-  {
-    src: "/images/2025/11/20181220_075204314_iOS-scaled.jpg",
-    alt: "Moderne Sitzbank mit Holzsitz",
-    width: 600,
-    height: 450,
-  },
-] as const;
+interface WarumImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
 
-export function MnmWarum() {
+interface MnmWarumProps {
+  heading: string;
+  paragraph: string;
+  images: WarumImage[];
+}
+
+export function MnmWarum({ heading, paragraph, images }: MnmWarumProps) {
   return (
     <section
       className="py-12 lg:py-[46px]"
@@ -56,7 +30,7 @@ export function MnmWarum() {
             className="[column-count:2] lg:[column-count:3] gap-2 [&>*]:mb-2 [&>*]:break-inside-avoid"
             style={{ columnGap: "8px" }}
           >
-            {IMAGES.map((img) => (
+            {images.map((img) => (
               <div key={img.src} className="break-inside-avoid mb-2">
                 <Image
                   src={img.src}
@@ -76,20 +50,14 @@ export function MnmWarum() {
               className="text-[34px] leading-[1.05] lg:text-[64px] lg:leading-[64px] font-medium tracking-[-4px] text-left"
               style={{ color: "rgb(23,33,33)", letterSpacing: "-4px" }}
             >
-              Warum Maßmöbel aus eigener Fertigung überzeugen
+              {heading}
             </h2>
 
             <p
               className="mt-5 text-[16px] leading-[28px] font-medium"
               style={{ color: "rgb(102,102,102)" }}
             >
-              Unsere Möbel nach Maß werden vollständig in Espelkamp gefertigt. Präzision bis ins
-              Detail und stabile Konstruktionen sorgen dafür, dass Ihr Möbelstück und der Raum eine
-              perfekte Einheit bilden. Ob Kleiderschrank, Kommode, Regal oder maßgefertigtes
-              Sideboard – jede Maßanfertigung wird auf Ihre Bedürfnisse zugeschnitten und
-              massgeschneidert aufgebaut. Wir setzen auf langlebige Materialien, saubere
-              Verarbeitung und eine Montage, die funktional und modern wirkt. Lieferung und Montage
-              erfolgen durch unser eigenes Team.
+              {paragraph}
             </p>
 
             {/* Decorative dots */}
