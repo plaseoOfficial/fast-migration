@@ -231,7 +231,7 @@ export function GewerbeIntroStats() {
                 color: "rgb(0,0,0)",
               }}
             >
-              <span>{value}</span>K+
+              <span>{value}</span>K<span style={{ color: "rgb(237,168,33)" }}>+</span>
             </div>
             <h3
               style={{

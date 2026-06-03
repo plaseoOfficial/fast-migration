@@ -81,7 +81,7 @@ export default function GewerbeeinrichtungPage() {
       <GewerbeLeistungen />
       <GewerbeWarum />
       <MnmMoebelplaner />
-      <TestimonialsSection heading="Was unseren Kunden dazu sagen" />
+      <TestimonialsSection heading="Was unsere Kunden dazu sagen" />
 
       {/* Final CTA (beige) */}
       <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
@@ -95,7 +95,7 @@ export default function GewerbeeinrichtungPage() {
         </div>
       </section>
 
-      <FaqSection heading="Häufige Fragen zu unseren Raumkonzepten" items={FAQ_ITEMS} />
+      <FaqSection heading="Häufige Fragen zur Gewerbeeinrichtung" items={FAQ_ITEMS} />
     </main>
   );
 }

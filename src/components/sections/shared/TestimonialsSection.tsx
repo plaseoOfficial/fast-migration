@@ -135,7 +135,7 @@ export function TestimonialsSection({
                     marginTop: "4px",
                   }}
                 >
-                  Read More
+                  Mehr lesen
                 </a>
               )}
 

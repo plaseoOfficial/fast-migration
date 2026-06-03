@@ -5,7 +5,7 @@ const GALLERY_ITEMS = [
   {
     src: "/images/2025/11/IMG_9120-scaled.jpg",
     alt: "Moderner Badschrank",
-    caption: "IMG_9120",
+    caption: "Maßgefertigter Schrank",
     width: 600,
     height: 600,
   },
@@ -19,21 +19,21 @@ const GALLERY_ITEMS = [
   {
     src: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
     alt: "Zwei Personen blättern",
-    caption: "DSC07129 Kopie",
+    caption: "Persönliche Beratung",
     width: 600,
     height: 900,
   },
   {
     src: "/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg",
     alt: "Moderner Ankleidebereich",
-    caption: "WhatsApp Bild 2025-04-01",
+    caption: "Ankleide nach Maß",
     width: 600,
     height: 900,
   },
   {
     src: "/images/2025/11/20231220_131839984_iOS-scaled.jpg",
     alt: "Modernes Büro mit Holzlamellenwand",
-    caption: "20231220_131839984_iOS",
+    caption: "Büro mit Holzlamellen",
     width: 600,
     height: 900,
   },
