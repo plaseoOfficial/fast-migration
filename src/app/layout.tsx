@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Urbanist, Open_Sans } from "next/font/google";
+import { SITE_URL } from "@/lib/content";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -24,7 +25,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fast.side-boost.com"),
+  metadataBase: new URL(SITE_URL),
   title: "Fast Systemmöbel Espelkamp: Möbel nach Maß seit 1996",
   description:
     "Maßmöbel vom Meisterbetrieb in Espelkamp. Planung, Fertigung und Montage aus einer Hand. Kostenlos online planen oder direkt beraten lassen.",
