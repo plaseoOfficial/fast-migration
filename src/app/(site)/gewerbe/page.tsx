@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/sections/shared/ServiceHero";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -53,55 +51,51 @@ const FAQ_ITEMS = [
 
 export default function GewerbeeinrichtungPage() {
   return (
-    <>
-      <Header />
-      <main className="flex flex-col">
-        <ServiceHero
-          title="Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt"
-          breadcrumb={[
-            { label: "fast.side-boost.com", href: "/" },
-            { label: "Gewerbeeinrichtung" },
-          ]}
-          bgImage="/images/2025/11/DSC_0001.jpg"
-          intro="Wir entwickeln Gewerbeeinrichtungen, die exakt zu Ihren Abläufen passen. Präzise geplant, in Espelkamp gefertigt und vor Ort montiert. Für Räume, die funktionieren, Mitarbeiter entlasten und täglich zuverlässig arbeiten."
-        />
+    <main className="flex flex-col">
+      <ServiceHero
+        title="Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt"
+        breadcrumb={[
+          { label: "fast.side-boost.com", href: "/" },
+          { label: "Gewerbeeinrichtung" },
+        ]}
+        bgImage="/images/2025/11/DSC_0001.jpg"
+        intro="Wir entwickeln Gewerbeeinrichtungen, die exakt zu Ihren Abläufen passen. Präzise geplant, in Espelkamp gefertigt und vor Ort montiert. Für Räume, die funktionieren, Mitarbeiter entlasten und täglich zuverlässig arbeiten."
+      />
 
-        <GewerbeIntroStats />
+      <GewerbeIntroStats />
 
-        {/* Gewerbemöbel expanding CTA — bottom of intro/stats (beige) */}
-        <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-          <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-            <ExpandingImageCta
-              image="/images/2025/11/DSC_9965.jpg"
-              heading="Gewerbemöbel nach Ihren Vorstellungen"
-              linkText="Sprechen Sie mit uns über Ihr Projekt"
-              href="/kontakt"
-            />
-          </div>
-        </section>
+      {/* Gewerbemöbel expanding CTA — bottom of intro/stats (beige) */}
+      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
+        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+          <ExpandingImageCta
+            image="/images/2025/11/DSC_9965.jpg"
+            heading="Gewerbemöbel nach Ihren Vorstellungen"
+            linkText="Sprechen Sie mit uns über Ihr Projekt"
+            href="/kontakt"
+          />
+        </div>
+      </section>
 
-        <GewerbeLadenGastro />
-        <MnmWeitereLeistungen />
-        <GewerbeLeistungen />
-        <GewerbeWarum />
-        <MnmMoebelplaner />
-        <TestimonialsSection heading="Was unsere Kunden dazu sagen" />
+      <GewerbeLadenGastro />
+      <MnmWeitereLeistungen />
+      <GewerbeLeistungen />
+      <GewerbeWarum />
+      <MnmMoebelplaner />
+      <TestimonialsSection heading="Was unsere Kunden dazu sagen" />
 
-        {/* Final CTA (beige) */}
-        <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-          <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-            <ExpandingImageCta
-              image="/images/2025/11/DSC_9938.jpg"
-              heading="Ihr Raum verdient mehr als Standard."
-              linkText="Sprechen Sie mit uns über Ihr Projekt."
-              href="/kontakt"
-            />
-          </div>
-        </section>
+      {/* Final CTA (beige) */}
+      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
+        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+          <ExpandingImageCta
+            image="/images/2025/11/DSC_9938.jpg"
+            heading="Ihr Raum verdient mehr als Standard."
+            linkText="Sprechen Sie mit uns über Ihr Projekt."
+            href="/kontakt"
+          />
+        </div>
+      </section>
 
-        <FaqSection heading="Häufige Fragen zur Gewerbeeinrichtung" items={FAQ_ITEMS} />
-      </main>
-      <Footer />
-    </>
+      <FaqSection heading="Häufige Fragen zur Gewerbeeinrichtung" items={FAQ_ITEMS} />
+    </main>
   );
 }

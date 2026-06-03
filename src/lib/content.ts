@@ -216,4 +216,6 @@ export const FOOTER_LINKS = {
 };
 
 export const LOGO_SRC = "/images/2025/11/logo_fast-systemmoebel.svg";
+/** White wordmark with yellow accents, for dark backgrounds (scrolled header, footer). */
+export const LOGO_ON_DARK_SRC = "/images/2026/04/logo_fast_angepasst-1.svg";
 export const FOOTER_LOGO_SRC = "/images/2026/04/logo_fast_angepasst-1.svg";
