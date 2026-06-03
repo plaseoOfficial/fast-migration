@@ -8,14 +8,14 @@ const DEFAULT_CARDS: ServiceCard[] = [
     title: "Möbel nach Maß",
     description:
       "Jedes Stück ein Unikat. Ob Küche, Bad oder Wohnraum: Wir fertigen passgenaue Möbel, die sich exakt nach Ihrem Stil, Ihrem Alltag und Ihrem Raum richten.",
-    href: "/leistungen/moebel-nach-mass/",
+    href: "/moebel-nach-mass/",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Raumkonzepte",
     description:
       "Wir denken Räume ganzheitlich. Durchdachte Konzepte verbinden Architektur, Licht, Materialien und Möbel zu einer harmonischen Einheit – vom ersten Entwurf bis zur Montage.",
-    href: "/leistungen/raumkonzepte/",
+    href: "#",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
@@ -29,7 +29,7 @@ const DEFAULT_CARDS: ServiceCard[] = [
     title: "Objekt- & Gewerbeeinrichtung",
     description:
       "Für Hotels, Büros oder Ladengeschäfte entwickeln wir langlebige Möbelkonzepte, die Design und Funktion vereinen. Robust, zeitlos und auf das Nutzungskonzept abgestimmt.",
-    href: "/leistungen/gewerbeeinrichtung/",
+    href: "/gewerbe/",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-09.svg",

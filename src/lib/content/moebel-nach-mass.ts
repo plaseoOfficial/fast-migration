@@ -1,9 +1,10 @@
 /**
- * Content for the `/leistungen/moebel-nach-mass/` page — the canonical "Privat"
+ * Content for the `/moebel-nach-mass/` page — the canonical "Privat"
  * service page. New Privat pages copy this module's shape, swap the copy, and
  * feed it into the same library sections (see docs/sections/CATALOG.md → the
  * "Privat Page Recipe").
  */
+import type { ServiceCard } from "@/types/mnm";
 
 export const mnmHero = {
   bgImage: "/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg",
@@ -13,7 +14,6 @@ export const mnmHero = {
     "Standardlösungen finden Sie in jedem Möbelhaus. Wir bei Fast Systemmöbel gehen einen Schritt weiter: Wir planen und fertigen hochwertige Möbel nach Maß, die sich millimetergenau in Ihre Räume einfügen und Ihre Persönlichkeit perfekt unterstreichen.",
   breadcrumb: [
     { label: "fast.side-boost.com", href: "/" },
-    { label: "Leistungen", href: "/leistungen" },
     { label: "Möbel nach Maß" },
   ],
 };
@@ -183,3 +183,46 @@ export const mnmFaq = {
     },
   ],
 };
+
+/**
+ * "Weitere Leistungen" cards for the möbel-nach-mass HUB. Per the internal-
+ * linking silo model the hub links down to its cluster pillars — here the
+ * "Küchen nach Maß" cluster. See docs/seo/internal-linking.md.
+ */
+export const mnmWeitereCards: ServiceCard[] = [
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Küchen nach Maß",
+    description:
+      "Zentimetergenaue Küchen vom Meisterbetrieb. Geplant, gefertigt und montiert aus einer Hand, passgenau auf Ihren Raum.",
+    href: "/kuechen-nach-mass/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Raumkonzepte",
+    description:
+      "Wir planen den ganzen Raum: Architektur, Licht, Materialien und Möbel als Einheit. Vom Entwurf bis zur Montage.",
+    href: "#",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-07.svg",
+    title: "Fertigung",
+    description:
+      "Moderne Homag-Technik, präzise CNC-Verarbeitung und handwerkliche Qualitätskontrolle. Von Einzelmöbeln bis zu kompletten Objekten.",
+    href: "#",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-08.svg",
+    title: "Objekt- & Gewerbeeinrichtung",
+    description:
+      "Für Hotels, Büros oder Ladengeschäfte entwickeln wir langlebige Möbelkonzepte, die Design und Funktion vereinen.",
+    href: "/gewerbe/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-09.svg",
+    title: "Montage",
+    description:
+      "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt.",
+    href: "#",
+  },
+];

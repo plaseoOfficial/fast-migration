@@ -31,6 +31,9 @@ Core rules (full detail in `ARCHITECTURE.md`):
   Privat Page Recipe in `CATALOG.md`, content in `src/lib/content/<slug>.ts`.
 - **New section** → add the component + register it in `registry.ts` + `catalog-data.ts`,
   then run `npm run gen:catalog`.
+- **New page added?** Consult **[`docs/seo/internal-linking.md`](docs/seo/internal-linking.md)** (the
+  silo-model link backlog) and wire every internal link whose target now exists, in both directions.
+  We launch *clean* — no dead links; flat URLs (`/moebel-nach-mass/` → `/kuechen-nach-mass/`, …).
 
 # Website Reverse-Engineer Template
 

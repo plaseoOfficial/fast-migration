@@ -21,6 +21,7 @@ import {
   mnmCtas,
   mnmTestimonialsHeading,
   mnmFaq,
+  mnmWeitereCards,
 } from "@/lib/content/moebel-nach-mass";
 
 export const metadata: Metadata = {
@@ -53,7 +54,7 @@ export default function MoebelNachMassPage() {
       </section>
 
       <MnmProcess {...mnmProcess} />
-      <MnmWeitereLeistungen />
+      <MnmWeitereLeistungen cards={mnmWeitereCards} />
       <MnmTypische {...mnmTypische} />
       <MnmWarum {...mnmWarum} />
       <MnmGeschichte {...mnmGeschichte} />
