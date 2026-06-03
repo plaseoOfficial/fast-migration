@@ -197,10 +197,9 @@ export const FOOTER_LINKS = {
     { label: "Kontakt", href: "#kontakt" },
   ],
   leistungen: [
-    { label: "Gewerbeeinrichtung", href: "#" },
-    { label: "Möbel nach Maß", href: "#" },
-    { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
-    { label: "Raumkonzepte", href: "#" },
+    { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
+    { label: "Gewerbe", href: "/gewerbe/" },
+    { label: "Möbelplaner", href: "/moebelplaner/" },
   ],
   einsatzgebiete: [
     { label: "Bielefeld", href: "#" },

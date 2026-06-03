@@ -1,4 +1,4 @@
-// Content types for the /leistungen/moebel-nach-mass/ page.
+// Content types for the /moebel-nach-mass/ page.
 
 export interface ServiceCard {
   title: string;
