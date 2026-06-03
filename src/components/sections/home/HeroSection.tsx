@@ -12,12 +12,24 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
       style={{
         height: "min(805px, 100vh)",
         minHeight: 640,
-        backgroundImage: `linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%), url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
+      {/* Background image lives on an absolutely-positioned child layer, not on
+          the <section> itself. A position:fixed element (the header) sitting
+          over a section that carries its own background-image triggers a Chrome
+          compositing bug where the header's background stops repainting on
+          scroll (the bar shows up see-through). Painting the image on a child
+          avoids that while rendering identically. */}
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%), url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
       {/* Centered massive title — Poppins 144px 500 −10px */}
       <h1
         className="absolute left-0 right-0 select-none text-center whitespace-nowrap"
