@@ -8,6 +8,10 @@ A reusable template for reverse-engineering any website into a clean, modern Nex
 
 Point it at a URL, run `/clone-website`, and your AI agent will inspect the site, extract design tokens and assets, write component specs, and dispatch parallel builders to reconstruct every section.
 
+---
+
+> **Working on this repository?** This repo is a **Fast Systemmöbel** clone built on the template below. Read **[`ARCHITECTURE.md`](ARCHITECTURE.md)** first — it explains how every page is assembled from the shared section library. The live section reference is **[`docs/sections/CATALOG.md`](docs/sections/CATALOG.md)** and the in-app **`/library`** route.
+
 ## Demo
 
 [![Watch the demo](docs/design-references/comparison.png)](https://youtu.be/O669pVZ_qr0)

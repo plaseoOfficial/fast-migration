@@ -11,6 +11,27 @@ alwaysApply: true
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+# Project: Fast Systemmöbel — modular section library
+
+This repo is a **pixel-perfect clone of Fast Systemmöbel**, built as **one modular
+section library** shared by every page. **Before building or changing any page,
+read [`ARCHITECTURE.md`](ARCHITECTURE.md) and
+[`docs/sections/CATALOG.md`](docs/sections/CATALOG.md), and browse the `/library` route.**
+
+Core rules (full detail in `ARCHITECTURE.md`):
+- **Pixel-perfect.** When refactoring existing sections, keep the rendered markup/CSS
+  byte-identical — change only content (via props), never classes/styles/spacing/colors.
+  Verify with `npm run check` + a visual diff vs `docs/design-references/`.
+- **Sections live in** `src/components/sections/{home,privat,shared,gewerbe,moebelplaner,kontakt}`
+  plus `_shared/` primitives. Reusable sections (home/privat/shared) are **props-driven**;
+  their copy lives in content modules under `src/lib/content/`.
+- **Reuse before creating.** Every section is registered in `src/lib/sections/registry.ts`
+  with a `useCase` + `category`. Check `/library` / `CATALOG.md` first; match by use case.
+- **New "Privat" (residential service) page** = wrap in `PrivatPageLayout`, follow the
+  Privat Page Recipe in `CATALOG.md`, content in `src/lib/content/<slug>.ts`.
+- **New section** → add the component + register it in `registry.ts` + `catalog-data.ts`,
+  then run `npm run gen:catalog`.
+
 # Website Reverse-Engineer Template
 
 ## What This Is
