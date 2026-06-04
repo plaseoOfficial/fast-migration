@@ -18,11 +18,19 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 │   └─ /kuechen-nach-mass/   Cluster-Pillar ✓ built
 │       └─ (product / ratgeber / cluster-article pages — planned)
 ├─ /gewerbe/              Pillar-Hub (Gewerbe)
+│   ├─ /gewerbe/ladenbau/         Cluster-Pillar ✓ built
+│   ├─ /bueroeinrichtung/         Cluster-Pillar ✓ built (flat URL)
+│   ├─ /gastronomieeinrichtung/   Cluster-Pillar ✓ built (flat URL)
+│   ├─ /serienmoebel/             Cluster-Pillar ✓ built (flat URL)
+│   └─ /praxiseinrichtung/        Cluster-Pillar ✓ built (flat URL)
 ├─ /moebelplaner/         Conversion landing page
 └─ /kontakt/              Conversion
 ```
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/moebelplaner/`, `/kontakt/`.
+> Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
+> matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
+
+**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/gewerbe/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`.
 
 ## Rules (condensed)
 
@@ -48,10 +56,16 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 | `/` (Homepage) | flat hub links `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/`, `/kontakt/` (MUSS) + SOLL `/kuechen-nach-mass/`, `/referenzen/`, `/ablauf-massanfertigung/` | MUSS/SOLL | homepage nav/links still use `#`-anchors → update during homepage relaunch pass |
 | Header nav "Leistungen" dropdown | hub + cluster links | nav | dropdown not yet populated |
 | `/moebelplaner/`, `/kontakt/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | MUSS | pages built |
+| Gewerbe clusters (`/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`) | their product / ratgeber spokes (e.g. Konferenztisch, Empfangstresen, …) | MUSS (cluster→product) | spoke pages built |
+| Gewerbe clusters (FaqSection "Zum FAQ", currently `#`) | `/faq/` | SOLL | `/faq/` built |
+| Gewerbe clusters | `/referenzen/`, `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | City pages (`/einsatzgebiete/*` or flat city×service) | relevant clusters | new silo | city pages migrated/built |
 
 ## Done (wired)
 
+- **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/gewerbe/ladenbau/`, `/serienmoebel/`. *(hub → clusters, silo distribution)*
+- **Each Gewerbe cluster → `/gewerbe/`** (breadcrumb "Gewerbe" up-link, Ebene 1→0 within silo).
+- **Each Gewerbe cluster → `/moebelplaner/`** (IntroStats col3 CTA + MnmMoebelplaner CTA) **and `/kontakt/`** (IntroStats col1, both ExpandingImageCtas, FaqSection) — conversion targets.
 - `/kuechen-nach-mass/` → `/moebel-nach-mass/` (breadcrumb + MnmWeitereLeistungen card "Möbel nach Maß").
 - `/kuechen-nach-mass/` → `/moebelplaner/` (MnmMoebelplaner CTA + IntroStats col3 contextual).
 - `/kuechen-nach-mass/` → `/kontakt/` (IntroStats col1, both ExpandingImageCtas, FaqSection CTA).

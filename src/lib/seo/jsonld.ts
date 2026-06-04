@@ -46,7 +46,16 @@ export interface LadenbauJsonLdOptions {
   description: string;
   breadcrumb: BreadcrumbCrumb[];
   faq: FaqEntry[];
+  /**
+   * Schema.org `Service.serviceType`. Defaults to "Ladenbau nach Maß" so the
+   * original `/gewerbe/ladenbau` page stays byte-identical; the Gewerbe-cluster
+   * pages (Büro, Gastro, Serie, Praxis) pass their own type.
+   */
+  serviceType?: string;
 }
+
+/** Alias: the builder is generic across all Gewerbe service-cluster pages. */
+export type ServicePageJsonLdOptions = LadenbauJsonLdOptions;
 
 /** Resolve a site-relative path to an absolute URL; pass-through for absolutes. */
 function abs(pathOrUrl: string): string {
@@ -59,6 +68,7 @@ export function buildLadenbauJsonLd({
   description,
   breadcrumb,
   faq,
+  serviceType = "Ladenbau nach Maß",
 }: LadenbauJsonLdOptions) {
   const localBusiness = {
     "@type": "LocalBusiness",
@@ -86,7 +96,7 @@ export function buildLadenbauJsonLd({
   const service = {
     "@type": "Service",
     "@id": `${pageUrl}#service`,
-    serviceType: "Ladenbau nach Maß",
+    serviceType,
     name,
     description,
     provider: { "@id": ORG_ID },
@@ -120,3 +130,9 @@ export function buildLadenbauJsonLd({
     "@graph": [localBusiness, service, breadcrumbList, faqPage],
   };
 }
+
+/**
+ * Preferred name for new Gewerbe service-cluster pages (Büro, Gastro, Serie,
+ * Praxis). Same builder as {@link buildLadenbauJsonLd}; pass `serviceType`.
+ */
+export const buildServicePageJsonLd = buildLadenbauJsonLd;

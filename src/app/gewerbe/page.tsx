@@ -28,6 +28,50 @@ export const metadata: Metadata = {
 
 const BEIGE = "rgba(203, 191, 181, 0.59)";
 
+/**
+ * Hub -> cluster down-links: the "Weitere Leistungen" cards on the Gewerbe hub
+ * point to the Gewerbe service clusters (silo distribution). Same mechanism as
+ * the Privat hub linking down to /kuechen-nach-mass/. Props-only, no markup
+ * change. Icons reuse the existing interior-design icon set.
+ */
+const GEWERBE_CLUSTER_CARDS = [
+  {
+    icon: "/images/2024/03/interior-design-white-icons-08.svg",
+    title: "Büroeinrichtung nach Maß",
+    description:
+      "Arbeitsplätze, Stauraum, Konferenz- und Empfangsbereiche. Geplant, gefertigt und montiert für Büros, die zu Ihren Abläufen passen.",
+    href: "/bueroeinrichtung/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Praxiseinrichtung nach Maß",
+    description:
+      "Empfangstresen, Behandlungs- und Wartebereiche für Ärzte, Therapeuten und Kanzleien. Hygienisch, repräsentativ und zentimetergenau gebaut.",
+    href: "/praxiseinrichtung/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Gastronomieeinrichtung nach Maß",
+    description:
+      "Theken, Tresen und Mobiliar für Restaurant, Café, Bar und Hotel. Strapazierfähig gebaut für den Dauereinsatz, bundesweit geliefert.",
+    href: "/gastronomieeinrichtung/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-09.svg",
+    title: "Ladenbau nach Maß",
+    description:
+      "Verkaufstheken, Warenträger und komplette Shopkonzepte. Vom einzelnen Tresen bis zur fertigen Verkaufsfläche aus einer Hand.",
+    href: "/gewerbe/ladenbau/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-07.svg",
+    title: "Serienmöbel & Serienfertigung",
+    description:
+      "Identische Möbel in Serie, zentimetergenau nach Zeichnung. Seriengleiche Qualität für Filialen, Hotellerie und Pflegeeinrichtungen.",
+    href: "/serienmoebel/",
+  },
+];
+
 const FAQ_ITEMS = [
   {
     question: "Arbeiten Sie nur in Espelkamp?",
@@ -81,7 +125,7 @@ export default function GewerbeeinrichtungPage() {
         </section>
 
         <GewerbeLadenGastro />
-        <MnmWeitereLeistungen />
+        <MnmWeitereLeistungen cards={GEWERBE_CLUSTER_CARDS} />
         <GewerbeLeistungen />
         <GewerbeWarum />
         <MnmMoebelplaner />
