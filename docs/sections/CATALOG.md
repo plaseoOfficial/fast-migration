@@ -500,7 +500,7 @@ _Prop-less (page-specific content)._
 
 ## Privat Page Recipe
 
-When a page is marked **Privat**, build it from this canonical section order (derived from `/leistungen/moebel-nach-mass`). Wrap everything in `PrivatPageLayout` (Header + `<main className="flex flex-col">` + Footer) and keep page `metadata` in the route file. The two CTA blocks are `ExpandingImageCta` wrapped in a beige `<section>` with the noted padding.
+When a page is marked **Privat**, build it from this canonical section order (derived from `/moebel-nach-mass`). Create the route inside the `(site)` group (`src/app/(site)/<slug>/page.tsx`) so it inherits the shared Header + Footer, wrap the sections in `PrivatPageLayout` (now just `<main className="flex flex-col">`), and keep page `metadata` in the route file. The two CTA blocks are `ExpandingImageCta` wrapped in a beige `<section>` with the noted padding.
 
 | # | Section | Library id |
 | --- | --- | --- |

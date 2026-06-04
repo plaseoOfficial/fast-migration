@@ -20,8 +20,14 @@ Core rules (full detail in `ARCHITECTURE.md`):
   their copy lives in content modules under `src/lib/content/`.
 - **Reuse before creating.** Every section is registered in `src/lib/sections/registry.ts`
   with a `useCase` + `category`. Check `/library` / `CATALOG.md` first; match by use case.
-- **New "Privat" (residential service) page** = wrap in `PrivatPageLayout`, follow the
-  Privat Page Recipe in `CATALOG.md`, content in `src/lib/content/<slug>.ts`.
+- **Site chrome (nav + footer) is centralized.** Create every public page inside the
+  `(site)` route group (`src/app/(site)/<slug>/page.tsx`); `src/app/(site)/layout.tsx`
+  renders the shared `Header` + `Footer` automatically, so new pages get identical
+  chrome with no wiring. Pages only return their own `<main>`. The internal `/library`
+  showcase stays **outside** the group and chrome-free.
+- **New "Privat" (residential service) page** = create under `(site)`, wrap sections in
+  `PrivatPageLayout` (now just `<main>`), follow the Privat Page Recipe in `CATALOG.md`,
+  content in `src/lib/content/<slug>.ts`.
 - **New section** → add the component + register it in `registry.ts` + `catalog-data.ts`,
   then run `npm run gen:catalog`.
 - **New page added?** Consult **[`docs/seo/internal-linking.md`](docs/seo/internal-linking.md)** (the
