@@ -70,7 +70,7 @@ export const NAV_ITEMS: NavItem[] = [
       heading: "Möbel nach Maß",
       text: "Vom Meisterbetrieb in Espelkamp – individuell geplant und gefertigt.",
       href: "/moebel-nach-mass",
-      cta: { label: "Jetzt planen", href: "/moebelplaner" },
+      cta: { label: "Jetzt planen", href: "https://moebelplaner.fast-systemmoebel.de/" },
     },
   },
   {
@@ -88,7 +88,7 @@ export const NAV_ITEMS: NavItem[] = [
       {
         title: "Büro",
         items: [
-          { label: "Büroeinrichtung" },
+          { label: "Büroeinrichtung", href: "/bueroeinrichtung" },
           { label: "Empfangstheke" },
           { label: "Konferenzräume" },
         ],
@@ -96,7 +96,7 @@ export const NAV_ITEMS: NavItem[] = [
       {
         title: "Gastronomie",
         items: [
-          { label: "Gastronomieeinrichtung" },
+          { label: "Gastronomieeinrichtung", href: "/gastronomieeinrichtung" },
           { label: "Theken & Bars" },
           { label: "Hotelmöbel" },
         ],
@@ -104,8 +104,8 @@ export const NAV_ITEMS: NavItem[] = [
       {
         title: "Serienmöbel & Praxis",
         items: [
-          { label: "Serienmöbel" },
-          { label: "Praxiseinrichtung" },
+          { label: "Serienmöbel", href: "/serienmoebel" },
+          { label: "Praxiseinrichtung", href: "/praxiseinrichtung" },
           { label: "Objekteinrichtung" },
         ],
       },
@@ -144,10 +144,10 @@ export const NAV_ITEMS: NavItem[] = [
       heading: "Persönliche Beratung",
       text: "Sie wissen nicht weiter? Wir beraten Sie kostenlos und unverbindlich.",
       href: "/kontakt",
-      cta: { label: "Zum Möbelplaner", href: "/moebelplaner" },
+      cta: { label: "Zum Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
     },
   },
-  { label: "Möbelplaner", kind: "link", href: "/moebelplaner", highlight: true },
+  { label: "Möbelplaner", kind: "link", href: "https://moebelplaner.fast-systemmoebel.de/", highlight: true },
   {
     label: "Über uns",
     kind: "dropdown",
