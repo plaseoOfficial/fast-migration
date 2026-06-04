@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { PartnerCarousel } from "@/components/sections/shared/PartnerCarousel";
 import { KontaktFormularHero } from "@/components/sections/kontakt/KontaktFormularHero";
 import { KontaktStandort } from "@/components/sections/kontakt/KontaktStandort";
@@ -21,21 +19,17 @@ export const metadata: Metadata = {
 
 export default function KontaktPage() {
   return (
-    <>
-      <Header />
-      <main className="flex flex-col">
-        <KontaktFormularHero
-          title="Kommen Sie mit unseren Experten in Kontakt"
-          breadcrumb={[
-            { label: "fast.side-boost.com", href: "/" },
-            { label: "Kontakt" },
-          ]}
-          bgImage="/images/2025/11/DSC06206-scaled.jpg"
-        />
-        <PartnerCarousel />
-        <KontaktStandort />
-      </main>
-      <Footer />
-    </>
+    <main className="flex flex-col">
+      <KontaktFormularHero
+        title="Kommen Sie mit unseren Experten in Kontakt"
+        breadcrumb={[
+          { label: "fast.side-boost.com", href: "/" },
+          { label: "Kontakt" },
+        ]}
+        bgImage="/images/2025/11/DSC06206-scaled.jpg"
+      />
+      <PartnerCarousel />
+      <KontaktStandort />
+    </main>
   );
 }

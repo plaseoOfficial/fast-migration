@@ -22,13 +22,24 @@ Core rules (full detail in `ARCHITECTURE.md`):
 - **Pixel-perfect.** When refactoring existing sections, keep the rendered markup/CSS
   byte-identical — change only content (via props), never classes/styles/spacing/colors.
   Verify with `npm run check` + a visual diff vs `docs/design-references/`.
+- **Design system & QC.** The token contract (colors, type, spacing, radii, shadows,
+  component specs) lives in **[`docs/design-system/TOKENS.md`](docs/design-system/TOKENS.md)**.
+  After building or changing UI (`src/components/**`, `src/app/globals.css`), run the
+  read-only **`design-qc`** agent (`.claude/agents/design-qc.md`) — it flags every
+  deviation from the design system with `file:line` + a concrete fix.
 - **Sections live in** `src/components/sections/{home,privat,shared,gewerbe,moebelplaner,kontakt}`
   plus `_shared/` primitives. Reusable sections (home/privat/shared) are **props-driven**;
   their copy lives in content modules under `src/lib/content/`.
 - **Reuse before creating.** Every section is registered in `src/lib/sections/registry.ts`
   with a `useCase` + `category`. Check `/library` / `CATALOG.md` first; match by use case.
-- **New "Privat" (residential service) page** = wrap in `PrivatPageLayout`, follow the
-  Privat Page Recipe in `CATALOG.md`, content in `src/lib/content/<slug>.ts`.
+- **Site chrome (nav + footer) is centralized.** Create every public page inside the
+  `(site)` route group (`src/app/(site)/<slug>/page.tsx`); `src/app/(site)/layout.tsx`
+  renders the shared `Header` + `Footer` automatically, so new pages get identical
+  chrome with no wiring. Pages only return their own `<main>`. The internal `/library`
+  showcase stays **outside** the group and chrome-free.
+- **New "Privat" (residential service) page** = create under `(site)`, wrap sections in
+  `PrivatPageLayout` (now just `<main>`), follow the Privat Page Recipe in `CATALOG.md`,
+  content in `src/lib/content/<slug>.ts`.
 - **New section** → add the component + register it in `registry.ts` + `catalog-data.ts`,
   then run `npm run gen:catalog`.
 - **New page added?** Consult **[`docs/seo/internal-linking.md`](docs/seo/internal-linking.md)** (the

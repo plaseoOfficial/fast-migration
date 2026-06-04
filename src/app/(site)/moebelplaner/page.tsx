@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/sections/shared/ServiceHero";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -50,40 +48,36 @@ const FAQ_ITEMS = [
 
 export default function MoebelplanerPage() {
   return (
-    <>
-      <Header />
-      <main className="flex flex-col">
-        <ServiceHero
-          title="Möbelplaner online – Maßmöbel planen und fertigen lassen in OWL"
-          breadcrumb={[
-            { label: "fast.side-boost.com", href: "/" },
-            { label: "Möbelplaner" },
-          ]}
-          bgImage="/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg"
-          intro="Standardlösungen passen selten wirklich. Nicht an die Decke, nicht in die Nische, nicht zu Ihrem Alltag. Ob Schränke, Regale oder maßgefertigte Einbauten – jedes Möbelstück entsteht nach Ihren Maßen."
-          cta={{ label: "Zum Möbelplaner", href: "#moebelplaner" }}
-        />
+    <main className="flex flex-col">
+      <ServiceHero
+        title="Möbelplaner online – Maßmöbel planen und fertigen lassen in OWL"
+        breadcrumb={[
+          { label: "fast.side-boost.com", href: "/" },
+          { label: "Möbelplaner" },
+        ]}
+        bgImage="/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg"
+        intro="Standardlösungen passen selten wirklich. Nicht an die Decke, nicht in die Nische, nicht zu Ihrem Alltag. Ob Schränke, Regale oder maßgefertigte Einbauten – jedes Möbelstück entsteht nach Ihren Maßen."
+        cta={{ label: "Zum Möbelplaner", href: "#moebelplaner" }}
+      />
 
-        <MpSchritte />
-        <MpIntro />
-        <TestimonialsSection heading="Meisterbetrieb aus Espelkamp seit 1996" />
+      <MpSchritte />
+      <MpIntro />
+      <TestimonialsSection heading="Meisterbetrieb aus Espelkamp seit 1996" />
 
-        {/* Final CTA (beige) */}
-        <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-          <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-            <ExpandingImageCta
-              image="/images/2025/11/DSC_9938.jpg"
-              heading="Ihr Raum verdient mehr als Standard."
-              linkText="Sprechen Sie mit uns über Ihr Projekt."
-              href="/kontakt"
-            />
-          </div>
-        </section>
+      {/* Final CTA (beige) */}
+      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
+        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+          <ExpandingImageCta
+            image="/images/2025/11/DSC_9938.jpg"
+            heading="Ihr Raum verdient mehr als Standard."
+            linkText="Sprechen Sie mit uns über Ihr Projekt."
+            href="/kontakt"
+          />
+        </div>
+      </section>
 
-        <MpProzess />
-        <FaqSection heading="Häufige Fragen zum Möbelplaner" items={FAQ_ITEMS} />
-      </main>
-      <Footer />
-    </>
+      <MpProzess />
+      <FaqSection heading="Häufige Fragen zum Möbelplaner" items={FAQ_ITEMS} />
+    </main>
   );
 }

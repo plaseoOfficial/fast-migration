@@ -1,5 +1,11 @@
 import type { NavLink, Blurb, TabPanel, CounterStat, PartnerLogo, FaqItem, Testimonial, GalleryCard } from "@/types";
 
+/**
+ * Canonical production origin (no trailing slash). Single source for canonical
+ * URLs, OpenGraph, sitemap, robots and JSON-LD.
+ */
+export const SITE_URL = "https://www.fast-systemmoebel.de";
+
 export const NAV_LINKS: Array<NavLink & { hasDropdown?: boolean }> = [
   { label: "Home", href: "#" },
   { label: "Leistungen", href: "#leistungen", hasDropdown: true },
@@ -193,7 +199,7 @@ export const FOOTER_LINKS = {
   leistungen: [
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
     { label: "Gewerbe", href: "/gewerbe/" },
-    { label: "Möbelplaner", href: "/moebelplaner/" },
+    { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
   ],
   einsatzgebiete: [
     { label: "Bielefeld", href: "#" },
@@ -202,12 +208,14 @@ export const FOOTER_LINKS = {
     { label: "Minden", href: "#" },
   ],
   rechtliches: [
-    { label: "Impressum", href: "#" },
-    { label: "Datenschutz", href: "#" },
-    { label: "AGBS", href: "#" },
+    { label: "Impressum", href: "/impressum/" },
+    { label: "Datenschutz", href: "/datenschutz/" },
+    { label: "AGBS", href: "/agb/" },
     { label: "Cookie-Richtlinie (EU)", href: "#" },
   ],
 };
 
 export const LOGO_SRC = "/images/2025/11/logo_fast-systemmoebel.svg";
+/** White wordmark with yellow accents, for dark backgrounds (scrolled header, footer). */
+export const LOGO_ON_DARK_SRC = "/images/2026/04/logo_fast_angepasst-1.svg";
 export const FOOTER_LOGO_SRC = "/images/2026/04/logo_fast_angepasst-1.svg";

@@ -1,4 +1,3 @@
-import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/home/HeroSection";
 import { DiscoverSection } from "@/components/sections/home/DiscoverSection";
 import { QualitySection } from "@/components/sections/home/QualitySection";
@@ -8,7 +7,6 @@ import { MoebelplanerSection } from "@/components/sections/home/MoebelplanerSect
 import { RaeumeSection } from "@/components/sections/home/RaeumeSection";
 import { TestimonialsSection } from "@/components/sections/home/TestimonialsSection";
 import { FaqSection } from "@/components/sections/home/FaqSection";
-import { Footer } from "@/components/Footer";
 import {
   homeHero,
   homeDiscover,
@@ -23,20 +21,16 @@ import {
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main className="flex flex-col">
-        <HeroSection {...homeHero} />
-        <DiscoverSection {...homeDiscover} />
-        <QualitySection {...homeQuality} />
-        <ParallaxQuote {...homeParallax} />
-        <HandwerkSection {...homeHandwerk} />
-        <MoebelplanerSection {...homeMoebelplaner} />
-        <RaeumeSection {...homeRaeume} />
-        <TestimonialsSection {...homeTestimonials} />
-        <FaqSection {...homeFaq} />
-      </main>
-      <Footer />
-    </>
+    <main className="flex flex-col">
+      <HeroSection {...homeHero} />
+      <DiscoverSection {...homeDiscover} />
+      <QualitySection {...homeQuality} />
+      <ParallaxQuote {...homeParallax} />
+      <HandwerkSection {...homeHandwerk} />
+      <MoebelplanerSection {...homeMoebelplaner} />
+      <RaeumeSection {...homeRaeume} />
+      <TestimonialsSection {...homeTestimonials} />
+      <FaqSection {...homeFaq} />
+    </main>
   );
 }
