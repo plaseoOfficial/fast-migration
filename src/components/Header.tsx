@@ -76,14 +76,14 @@ export function Header() {
       ref={headerRef}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled || openMenu ? "bg-[rgb(61,61,61)] shadow-md" : "bg-transparent"
+        scrolled ? "bg-[rgb(61,61,61)] shadow-md" : "bg-transparent"
       )}
     >
       <div className="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-6 lg:px-[60px]">
         {/* Logo */}
         <Link href="/" className="flex flex-shrink-0 items-center" onClick={closeAll}>
           <Image
-            src={scrolled || openMenu ? LOGO_ON_DARK_SRC : LOGO_SRC}
+            src={scrolled ? LOGO_ON_DARK_SRC : LOGO_SRC}
             alt="Fast Systemmöbel"
             width={150}
             height={52}
@@ -157,7 +157,7 @@ export function Header() {
               aria-label="Instagram"
               className={cn(
                 "inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors",
-                scrolled || openMenu
+                scrolled
                   ? "border-white/40 text-white hover:bg-white hover:text-[rgb(61,61,61)]"
                   : "border-[rgb(61,61,61)]/30 text-[rgb(61,61,61)] hover:bg-[rgb(61,61,61)] hover:text-white"
               )}
@@ -171,7 +171,7 @@ export function Header() {
               aria-label="LinkedIn"
               className={cn(
                 "inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors",
-                scrolled || openMenu
+                scrolled
                   ? "border-white/40 text-white hover:bg-white hover:text-[rgb(61,61,61)]"
                   : "border-[rgb(61,61,61)]/30 text-[rgb(61,61,61)] hover:bg-[rgb(61,61,61)] hover:text-white"
               )}
