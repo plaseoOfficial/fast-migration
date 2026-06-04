@@ -28,5 +28,14 @@ export const sharedTestimonialsSample = {
 
 export const expandingCtaSample = mnmCtas.final;
 
+export const kontaktFormularHeroSample = {
+  title: "Kommen Sie mit unseren Experten in Kontakt",
+  breadcrumb: [
+    { label: "fast.side-boost.com", href: "/" },
+    { label: "Kontakt" },
+  ],
+  bgImage: "/images/2025/11/DSC06206-scaled.jpg",
+};
+
 /** Empty props for the prop-less, page-specific sections. */
 export const noProps = {} as Record<string, never>;
