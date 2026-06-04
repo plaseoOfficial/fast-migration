@@ -1,0 +1,32 @@
+# Original file tree of the Claude Design handoff bundle (captured before the
+# share link expired). The raw files are not vendored; TOKENS.md distills them.
+
+fast-systemm-bel-design-system/
+  README.md                      # coding-agent handoff instructions
+  chats/chat1.md                 # design conversation (intent)
+  project/
+    README.md
+    SKILL.md
+    colors_and_type.css          # canonical color + type tokens
+    preview/                      # design-system documentation site
+      colors-accent.html  colors-neutral.html
+      type-families.html  type-headings.html  type-body.html  type-display.html
+      spacing-layout.html  spacing-radii.html  spacing-shadows.html
+      components-buttons.html  components-blurb.html  components-stats.html
+      components-tabs.html  components-testimonial.html  components-faq.html
+      brand-logo.html  brand-icons.html  brand-ui-icons.html
+      brand-imagery.html  brand-partners.html
+    ui_kits/website/             # React prototypes (visual reference)
+      Header.jsx  HeroSection.jsx  DiscoverSection.jsx  QualitySection.jsx
+      HandwerkSection.jsx  ParallaxQuote.jsx  RaeumeSection.jsx
+      TestimonialsSection.jsx  FaqSection.jsx  Footer.jsx  Icons.jsx
+      content.js  index.html  index-print.html  README.md
+    assets/
+      logo-fast.svg  logo-fast-footer.svg  logo-fast-grey-yellow.svg
+      icons/icon-{01,03,06,07,08,09,10,12,13,14,15,17,18,20,21,22,23,26}.svg
+      images/{hero-kitchen,kitchen-hotspots,kitchen-warm,kitchen-retreat,
+              furniture-detail,detail-2,colors-panel,lighting,wardrobe,
+              workshop,technology,team,parallax-room}.jpg
+      partners/{arminia,das-mauerwerk,enderweit,lcm,polipol}.svg
+      partners/{aufbaugemeinschaft,elithera,monolith,partner-logo}.png
+    interior-design-black-icons-{01,03,06,07,08,09,10,12,13,14,15,17,18,20,21,22,23,26}.svg

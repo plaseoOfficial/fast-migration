@@ -22,6 +22,11 @@ Core rules (full detail in `ARCHITECTURE.md`):
 - **Pixel-perfect.** When refactoring existing sections, keep the rendered markup/CSS
   byte-identical — change only content (via props), never classes/styles/spacing/colors.
   Verify with `npm run check` + a visual diff vs `docs/design-references/`.
+- **Design system & QC.** The token contract (colors, type, spacing, radii, shadows,
+  component specs) lives in **[`docs/design-system/TOKENS.md`](docs/design-system/TOKENS.md)**.
+  After building or changing UI (`src/components/**`, `src/app/globals.css`), run the
+  read-only **`design-qc`** agent (`.claude/agents/design-qc.md`) — it flags every
+  deviation from the design system with `file:line` + a concrete fix.
 - **Sections live in** `src/components/sections/{home,privat,shared,gewerbe,moebelplaner,kontakt}`
   plus `_shared/` primitives. Reusable sections (home/privat/shared) are **props-driven**;
   their copy lives in content modules under `src/lib/content/`.
