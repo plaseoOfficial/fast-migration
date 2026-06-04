@@ -208,9 +208,9 @@ export const FOOTER_LINKS = {
     { label: "Minden", href: "#" },
   ],
   rechtliches: [
-    { label: "Impressum", href: "#" },
-    { label: "Datenschutz", href: "#" },
-    { label: "AGBS", href: "#" },
+    { label: "Impressum", href: "/impressum/" },
+    { label: "Datenschutz", href: "/datenschutz/" },
+    { label: "AGBS", href: "/agb/" },
     { label: "Cookie-Richtlinie (EU)", href: "#" },
   ],
 };
