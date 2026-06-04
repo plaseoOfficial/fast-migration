@@ -45,6 +45,15 @@ import { MpProzess } from "@/components/sections/moebelplaner/MpProzess";
 import { KontaktPanel } from "@/components/sections/kontakt/KontaktPanel";
 import { KontaktStandort } from "@/components/sections/kontakt/KontaktStandort";
 
+// Über uns sections
+import { UeberHero } from "@/components/sections/ueber/UeberHero";
+import { UeberTimeline } from "@/components/sections/ueber/UeberTimeline";
+import { UeberWofuer } from "@/components/sections/ueber/UeberWofuer";
+import { UeberLogos } from "@/components/sections/ueber/UeberLogos";
+import { UeberValues } from "@/components/sections/ueber/UeberValues";
+import { UeberNavCards } from "@/components/sections/ueber/UeberNavCards";
+import { UeberFallbeispiel } from "@/components/sections/ueber/UeberFallbeispiel";
+
 // Content / sample props
 import {
   homeHero,
@@ -72,6 +81,15 @@ import {
   expandingCtaSample,
   noProps,
 } from "./samples";
+import {
+  ueberHero,
+  ueberTimeline,
+  ueberWofuer,
+  ueberLogos,
+  ueberValues,
+  ueberNavCards,
+  ueberFallbeispiel,
+} from "@/lib/content/ueber-uns";
 
 function meta(id: string): SectionMeta {
   const found = SECTION_META.find((entry) => entry.id === id);
@@ -126,4 +144,13 @@ export const sectionRegistry: SectionEntry[] = [
   // Kontakt
   defineSection(meta("kontakt-panel"), KontaktPanel, noProps),
   defineSection(meta("kontakt-standort"), KontaktStandort, noProps),
+
+  // Über uns
+  defineSection(meta("ueber-hero"), UeberHero, ueberHero),
+  defineSection(meta("ueber-timeline"), UeberTimeline, ueberTimeline),
+  defineSection(meta("ueber-wofuer"), UeberWofuer, ueberWofuer),
+  defineSection(meta("ueber-logos"), UeberLogos, { logos: ueberLogos }),
+  defineSection(meta("ueber-values"), UeberValues, ueberValues),
+  defineSection(meta("ueber-nav-cards"), UeberNavCards, { cards: ueberNavCards }),
+  defineSection(meta("ueber-fallbeispiel"), UeberFallbeispiel, ueberFallbeispiel),
 ];

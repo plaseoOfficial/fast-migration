@@ -16,7 +16,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const OUT = resolve(ROOT, "docs/sections/CATALOG.md");
 
-const CATEGORY_ORDER = ["shared", "home", "privat", "gewerbe", "moebelplaner", "kontakt"];
+const CATEGORY_ORDER = ["shared", "home", "privat", "gewerbe", "moebelplaner", "kontakt", "ueber"];
 const CATEGORY_LABELS = {
   shared: "Shared (cross-page, reusable)",
   home: "Home",
@@ -24,6 +24,7 @@ const CATEGORY_LABELS = {
   gewerbe: "Gewerbe",
   moebelplaner: "Möbelplaner",
   kontakt: "Kontakt",
+  ueber: "Über uns",
 };
 
 // The canonical "Privat" service-page section order (the möbel-nach-mass recipe).
