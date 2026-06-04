@@ -3,7 +3,7 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**31 sections** across 6 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**32 sections** across 6 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
@@ -12,7 +12,7 @@
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
 - **Möbelplaner** — [Möbelplaner — Schritte](#mp-schritte), [Möbelplaner — Intro](#mp-intro), [Möbelplaner — Prozess](#mp-prozess)
-- **Kontakt** — [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
+- **Kontakt** — [Kontakt — Formular-Hero](#kontakt-formular-hero), [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
 
 ## Sections
 
@@ -474,13 +474,29 @@ _Prop-less (page-specific content)._
 
 ### Kontakt
 
-#### Kontakt — Panel
+#### Kontakt — Formular-Hero
 
-`#kontakt-panel` — Contact panel: form, opening hours and phone.
+`#kontakt-formular-hero` — Viewport-high contact hero: heading + breadcrumb + quick contact on the left, the contact form card on the right — form reachable without scrolling.
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
 | `contact-form` | `kontakt` | no | `/kontakt` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `title` | `string` | yes |
+| `breadcrumb` | `BreadcrumbItem[]` | yes |
+| `bgImage` | `string` | yes |
+
+![Kontakt — Formular-Hero](../design-references/kontakt/band-0.jpg)
+
+#### Kontakt — Panel
+
+`#kontakt-panel` — Contact panel: form, opening hours and phone (stacked under a hero).
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `contact-form` | `kontakt` | no |  |
 
 _Prop-less (page-specific content)._
 
