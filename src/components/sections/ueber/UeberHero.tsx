@@ -1,0 +1,105 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Fragment } from "react";
+import { ChevronRightIcon } from "@/components/icons";
+import { cn } from "@/lib/utils";
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface UeberHeroProps {
+  bgImage: string;
+  imageAlt: string;
+  title: string;
+  intro: string;
+  breadcrumb: BreadcrumbItem[];
+}
+
+export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb }: UeberHeroProps) {
+  return (
+    <section
+      className={cn(
+        "relative isolate w-full overflow-hidden",
+        "min-h-[560px] lg:min-h-[720px]",
+        "flex items-center",
+        "pt-[150px] lg:pt-[200px] pb-16 lg:pb-24"
+      )}
+      style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
+    >
+      {/* Background image */}
+      <Image
+        src={bgImage}
+        alt={imageAlt}
+        fill
+        priority
+        className="object-cover object-[50%_50%] z-0"
+      />
+
+      {/* Radial vignette overlay (matches the original dark-center wash) */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background:
+            "radial-gradient(circle at center, rgba(23,33,33,0.51) 0%, rgba(63,72,72,0.57) 14%, rgba(255,255,255,0) 98%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-10">
+          {/* Left column: h1 + breadcrumb (~62%) */}
+          <div className="lg:w-[62%]">
+            <h1
+              className="text-white font-medium text-[34px] leading-[1.1] sm:text-[46px] lg:text-[60px] lg:leading-[66px]"
+              style={{ letterSpacing: "-3px" }}
+            >
+              {title}
+            </h1>
+
+            {/* Breadcrumb */}
+            <nav
+              aria-label="Breadcrumb"
+              className="mt-5 flex flex-wrap items-center gap-1"
+            >
+              {breadcrumb.map((item, index) => {
+                const isLast = index === breadcrumb.length - 1;
+                return (
+                  <Fragment key={index}>
+                    {index > 0 && (
+                      <ChevronRightIcon className="h-3 w-auto opacity-60 text-white/70" />
+                    )}
+                    {isLast || !item.href ? (
+                      <span className="text-[15px] leading-[26px] font-bold text-white">
+                        {item.label}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-[15px] leading-[26px] text-white/70 hover:text-white transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </Fragment>
+                );
+              })}
+            </nav>
+          </div>
+
+          {/* Right column: intro paragraph (~32%) */}
+          <div className="mt-7 lg:mt-0 lg:w-[32%] lg:flex-shrink-0">
+            <p
+              className="font-medium text-white/80"
+              style={{ fontSize: "15px", lineHeight: "23.8px" }}
+            >
+              {intro}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

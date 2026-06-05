@@ -3,7 +3,7 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**32 sections** across 6 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**38 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
@@ -12,7 +12,8 @@
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
 - **Möbelplaner** — [Möbelplaner — Schritte](#mp-schritte), [Möbelplaner — Intro](#mp-intro), [Möbelplaner — Prozess](#mp-prozess)
-- **Kontakt** — [Kontakt — Formular-Hero](#kontakt-formular-hero), [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
+- **Kontakt** — [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
+- **Über uns** — [Über uns — Hero](#ueber-hero), [Über uns — Timeline](#ueber-timeline), [Über uns — Wofür wir stehen](#ueber-wofuer), [Über uns — Logo Strip](#ueber-logos), [Über uns — Werte](#ueber-values), [Über uns — Nav Cards](#ueber-nav-cards), [Über uns — Fallbeispiel](#ueber-fallbeispiel)
 
 ## Sections
 
@@ -514,9 +515,121 @@ _Prop-less (page-specific content)._
 
 ![Kontakt — Standort](../design-references/kontakt/band-3.jpg)
 
+### Über uns
+
+#### Über uns — Hero
+
+`#ueber-hero` — About-page hero: oversized title + breadcrumb on a photo with a dark radial vignette, intro paragraph on the right.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `hero` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `bgImage` | `string` | yes |
+| `imageAlt` | `string` | yes |
+| `title` | `string` | yes |
+| `intro` | `string` | yes |
+| `breadcrumb` | `BreadcrumbItem[]` | yes |
+
+![Über uns — Hero](../design-references/ueber-uns/full-desktop.jpeg)
+
+#### Über uns — Timeline
+
+`#ueber-timeline` — Interactive company timeline: accent heading + intro, a clickable year selector with a gold progress line, and a card showing the active year's title, body and image.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `timeline` | `ueber` | yes | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `headingBefore / headingAccent / headingAfter` | `string` | yes |
+| `intro` | `string` | yes |
+| `years` | `TimelineYear[]` | yes |
+
+![Über uns — Timeline](../design-references/ueber-uns/02-timeline.jpeg)
+
+#### Über uns — Wofür wir stehen
+
+`#ueber-wofuer` — Heading + arrow CTA, then an image and two value/feature text columns.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `feature-text` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `heading / ctaLabel / ctaHref` | `string` | yes |
+| `image / imageAlt` | `string` | yes |
+| `columns` | `WofuerColumn[]` | yes |
+
+![Über uns — Wofür wir stehen](../design-references/ueber-uns/03-wofuer.jpeg)
+
+#### Über uns — Logo Strip
+
+`#ueber-logos` — Static centered row of partner / client logos.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `logo-carousel` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `logos` | `LogoItem[]` | yes |
+
+![Über uns — Logo Strip](../design-references/ueber-uns/03-wofuer.jpeg)
+
+#### Über uns — Werte
+
+`#ueber-values` — Three values (Innovation/Tradition/Leidenschaft) around a centered cut-out figure, plus a mission heading and an arrow CTA.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `values` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `figure / figureAlt` | `string` | yes |
+| `missionHeading / ctaLabel / ctaHref` | `string` | yes |
+| `values` | `ValueBlock[]` | yes |
+
+![Über uns — Werte](../design-references/ueber-uns/05-values.jpeg)
+
+#### Über uns — Nav Cards
+
+`#ueber-nav-cards` — Full-bleed row of three image cards (Leistungen/FAQ/Kontakt), each with a heading, corner arrow and a 'Mehr erfahren' link.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `nav-cards` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `cards` | `NavCard[]` | yes |
+
+![Über uns — Nav Cards](../design-references/ueber-uns/06-threecards.jpeg)
+
+#### Über uns — Fallbeispiel
+
+`#ueber-fallbeispiel` — Case study: eyebrow + oversized heading, image on the left and a quote box on the right.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `case-study` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `eyebrow / heading` | `string` | yes |
+| `image / imageAlt` | `string` | yes |
+| `quote` | `string` | yes |
+
+![Über uns — Fallbeispiel](../design-references/ueber-uns/07-fallbeispiel.jpeg)
+
 ## Privat Page Recipe
 
-When a page is marked **Privat**, build it from this canonical section order (derived from `/moebel-nach-mass`). Create the route inside the `(site)` group (`src/app/(site)/<slug>/page.tsx`) so it inherits the shared Header + Footer, wrap the sections in `PrivatPageLayout` (now just `<main className="flex flex-col">`), and keep page `metadata` in the route file. The two CTA blocks are `ExpandingImageCta` wrapped in a beige `<section>` with the noted padding.
+When a page is marked **Privat**, build it from this canonical section order (derived from `/leistungen/moebel-nach-mass`). Wrap everything in `PrivatPageLayout` (Header + `<main className="flex flex-col">` + Footer) and keep page `metadata` in the route file. The two CTA blocks are `ExpandingImageCta` wrapped in a beige `<section>` with the noted padding.
 
 | # | Section | Library id |
 | --- | --- | --- |
