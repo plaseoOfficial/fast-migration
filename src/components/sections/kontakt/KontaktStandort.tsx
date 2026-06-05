@@ -74,6 +74,24 @@ export function KontaktStandort() {
               Zu Google Maps
               <ArrowRightIcon className="ml-2 inline-block h-[1em] w-auto align-middle" />
             </Link>
+
+            {/* Öffnungszeiten */}
+            <div className="mt-6 border-t border-black/15 pt-5">
+              <p
+                className="mb-2 text-[14px] font-medium uppercase text-black/60"
+                style={{ letterSpacing: "2px" }}
+              >
+                Öffnungszeiten
+              </p>
+              <div className="flex justify-between text-[18px] leading-[30px] font-medium text-black">
+                <span>Mo&ndash;Fr</span>
+                <span>6:00 &ndash; 17:00 Uhr</span>
+              </div>
+              <div className="flex justify-between text-[18px] leading-[30px] font-medium text-black/60">
+                <span>Sa&ndash;So</span>
+                <span>Geschlossen</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

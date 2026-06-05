@@ -42,6 +42,7 @@ import { MpIntro } from "@/components/sections/moebelplaner/MpIntro";
 import { MpProzess } from "@/components/sections/moebelplaner/MpProzess";
 
 // Kontakt sections
+import { KontaktFormularHero } from "@/components/sections/kontakt/KontaktFormularHero";
 import { KontaktPanel } from "@/components/sections/kontakt/KontaktPanel";
 import { KontaktStandort } from "@/components/sections/kontakt/KontaktStandort";
 
@@ -79,6 +80,7 @@ import {
   sharedFaqSample,
   sharedTestimonialsSample,
   expandingCtaSample,
+  kontaktFormularHeroSample,
   noProps,
 } from "./samples";
 import {
@@ -142,6 +144,7 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("mp-prozess"), MpProzess, noProps),
 
   // Kontakt
+  defineSection(meta("kontakt-formular-hero"), KontaktFormularHero, kontaktFormularHeroSample),
   defineSection(meta("kontakt-panel"), KontaktPanel, noProps),
   defineSection(meta("kontakt-standort"), KontaktStandort, noProps),
 

@@ -475,13 +475,29 @@ _Prop-less (page-specific content)._
 
 ### Kontakt
 
-#### Kontakt — Panel
+#### Kontakt — Formular-Hero
 
-`#kontakt-panel` — Contact panel: form, opening hours and phone.
+`#kontakt-formular-hero` — Viewport-high contact hero: heading + breadcrumb + quick contact on the left, the contact form card on the right — form reachable without scrolling.
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
 | `contact-form` | `kontakt` | no | `/kontakt` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `title` | `string` | yes |
+| `breadcrumb` | `BreadcrumbItem[]` | yes |
+| `bgImage` | `string` | yes |
+
+![Kontakt — Formular-Hero](../design-references/kontakt/band-0.jpg)
+
+#### Kontakt — Panel
+
+`#kontakt-panel` — Contact panel: form, opening hours and phone (stacked under a hero).
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `contact-form` | `kontakt` | no |  |
 
 _Prop-less (page-specific content)._
 

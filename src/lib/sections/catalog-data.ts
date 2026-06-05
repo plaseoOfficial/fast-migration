@@ -415,13 +415,28 @@ export const SECTION_META = [
 
   // ── Kontakt page ──────────────────────────────────────────────────────────
   {
+    id: "kontakt-formular-hero",
+    displayName: "Kontakt — Formular-Hero",
+    useCase: "contact-form",
+    category: "kontakt",
+    description:
+      "Viewport-high contact hero: heading + breadcrumb + quick contact on the left, the contact form card on the right — form reachable without scrolling.",
+    propsSummary: [
+      { name: "title", type: "string", required: true },
+      { name: "breadcrumb", type: "BreadcrumbItem[]", required: true },
+      { name: "bgImage", type: "string", required: true },
+    ],
+    usedOn: ["/kontakt"],
+    screenshot: `${REF}/kontakt/band-0.jpg`,
+  },
+  {
     id: "kontakt-panel",
     displayName: "Kontakt — Panel",
     useCase: "contact-form",
     category: "kontakt",
-    description: "Contact panel: form, opening hours and phone.",
+    description: "Contact panel: form, opening hours and phone (stacked under a hero).",
     propsSummary: [],
-    usedOn: ["/kontakt"],
+    usedOn: [],
     screenshot: `${REF}/kontakt/band-0.jpg`,
   },
   {
