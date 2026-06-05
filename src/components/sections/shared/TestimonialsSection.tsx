@@ -83,10 +83,9 @@ export function TestimonialsSection({
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col items-center text-center"
+              className="flex flex-col items-center text-center p-8 md:p-[50px] md:px-10"
               style={{
                 backgroundColor: "rgb(250,250,250)",
-                padding: "50px 40px",
               }}
             >
               {/* Avatar */}

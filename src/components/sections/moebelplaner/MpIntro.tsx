@@ -44,7 +44,8 @@ export function MpIntro() {
               letterSpacing: "-3px",
               fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
             }}
-            className="text-[34px] leading-[1.05] lg:text-[66px] lg:leading-[66px]"
+            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[66px] lg:leading-[66px] max-lg:break-words max-lg:hyphens-auto"
+            lang="de"
           >
             Möbelplanung online – mit Fertigung aus Espelkamp
           </h2>

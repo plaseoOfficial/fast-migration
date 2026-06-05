@@ -58,7 +58,8 @@ export function FaqSection({
 
             {/* H2 */}
             <h2
-              className="mt-3 text-[36px] leading-[1.05] lg:text-[56px] lg:leading-[1.0]"
+              className="mt-3 text-[28px] leading-[1.1] sm:text-[36px] sm:leading-[1.05] lg:text-[56px] lg:leading-[1.0] max-lg:break-words max-lg:hyphens-auto"
+              lang="de"
               style={{
                 fontWeight: 500,
                 color: "rgb(0,0,0)",
@@ -96,13 +97,12 @@ export function FaqSection({
                   <button
                     type="button"
                     onClick={() => toggle(index)}
-                    className="flex w-full items-center justify-between text-left"
-                    style={{ padding: "30px 50px 30px 30px" }}
+                    className="flex w-full items-center justify-between text-left p-5 sm:p-[30px] sm:pr-[50px]"
                     aria-expanded={isOpen}
                   >
                     <span
+                      className="text-[16px] sm:text-[18px] lg:text-[20px]"
                       style={{
-                        fontSize: "20px",
                         fontWeight: 500,
                         color: "rgb(0,0,0)",
                         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -120,7 +120,7 @@ export function FaqSection({
                   </button>
 
                   {isOpen && (
-                    <div style={{ padding: "0 30px 30px 30px" }}>
+                    <div className="px-5 pb-5 sm:px-[30px] sm:pb-[30px]">
                       <p
                         style={{
                           fontSize: "16px",

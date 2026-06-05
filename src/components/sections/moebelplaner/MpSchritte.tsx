@@ -46,7 +46,7 @@ export function MpSchritte() {
               In drei Schritten zu Ihren Möbeln nach Maß
             </h2>
 
-            <div className="relative mt-8 h-[300px] w-full lg:h-[420px]">
+            <div className="relative mt-8 h-[240px] sm:h-[280px] md:h-[340px] w-full lg:h-[420px]">
               <Image
                 src="/images/2025/11/IMG_9120-scaled.jpg"
                 alt="Maßgefertigtes Möbeldetail"

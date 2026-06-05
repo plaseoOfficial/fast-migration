@@ -50,7 +50,7 @@ export function MnmMoebelplaner({
           {/* Left — text column */}
           <div className="pb-12 lg:pb-12">
             <h2
-              className="text-white font-medium text-[34px] leading-[1.05] lg:text-[64px] lg:leading-[64px]"
+              className="text-white font-medium text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[64px] lg:leading-[64px]"
               style={{ letterSpacing: "-4px" }}
             >
               {heading}
@@ -79,7 +79,7 @@ export function MnmMoebelplaner({
             </div>
 
             {/* Main image — touches section bottom */}
-            <div className="relative w-full h-[320px] lg:h-[460px] rounded-tl-[40px] overflow-hidden">
+            <div className="relative w-full h-[240px] sm:h-[280px] lg:h-[460px] rounded-tl-[20px] lg:rounded-tl-[40px] overflow-hidden">
               <Image
                 src={image}
                 alt={imageAlt}

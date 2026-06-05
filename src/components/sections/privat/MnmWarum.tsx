@@ -47,7 +47,7 @@ export function MnmWarum({ heading, paragraph, images }: MnmWarumProps) {
           {/* Right — heading + paragraph + dots */}
           <div className="flex flex-col">
             <h2
-              className="text-[34px] leading-[1.05] lg:text-[64px] lg:leading-[64px] font-medium tracking-[-4px] text-left"
+              className="text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[64px] lg:leading-[64px] font-medium tracking-[-4px] text-left"
               style={{ color: "rgb(23,33,33)", letterSpacing: "-4px" }}
             >
               {heading}

@@ -39,6 +39,11 @@
     background: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Stop iOS from auto-zooming the huge display headings (e.g. .fast-display
+       with letter-spacing:-10px) on orientation change / focus. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: clip;
   }
   body {
     font-family: var(--font-open-sans), Arial, sans-serif;
@@ -47,6 +52,11 @@
     line-height: 1.7;
     color: rgb(102, 102, 102);
     background: #ffffff;
+    /* Safety net against accidental horizontal scroll on phones (long German
+       compound words, oversized decorative type). `clip` — unlike `hidden` —
+       creates no scroll container and does not clip the fixed header, which is
+       positioned against the viewport, not the body. */
+    overflow-x: clip;
   }
   /* Headings default to Poppins to match the original.
      Components apply Urbanist explicitly where needed (hotspot labels,
@@ -185,6 +195,12 @@
   font-size: 16px;
   line-height: 1.8;
   color: rgb(102, 102, 102);
+  /* Long German legal compound words (e.g. "Verbraucherstreitbeilegung/
+     Universalschlichtungsstelle") must break on narrow phones instead of
+     forcing horizontal scroll. Only takes effect when a word would overflow,
+     so desktop (max-w-900) renders unchanged. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .fast-legal > :first-child { margin-top: 0; }
 .fast-legal h2 {

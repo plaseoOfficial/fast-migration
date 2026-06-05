@@ -83,13 +83,12 @@ export function KontaktPanel() {
                       type="text"
                       placeholder="Vorname"
                       className={cn(
-                        "w-full border-0 outline-none text-[18px] font-normal",
+                        "w-full border-0 outline-none text-[16px] lg:text-[18px] p-3 lg:py-5 lg:px-4 font-normal",
                         "focus:ring-0 focus:outline-none"
                       )}
                       style={{
                         backgroundColor: "rgb(247,244,240)",
                         color: "rgb(61,61,61)",
-                        padding: "20px 16px",
                         borderRadius: 0,
                         ...URBANIST,
                       }}
@@ -109,11 +108,10 @@ export function KontaktPanel() {
                       id="nachname"
                       type="text"
                       placeholder="Nachname"
-                      className="w-full border-0 outline-none text-[18px] focus:ring-0 focus:outline-none"
+                      className="w-full border-0 outline-none text-[16px] lg:text-[18px] p-3 lg:py-5 lg:px-4 focus:ring-0 focus:outline-none"
                       style={{
                         backgroundColor: "rgb(247,244,240)",
                         color: "rgb(61,61,61)",
-                        padding: "20px 16px",
                         borderRadius: 0,
                         ...URBANIST,
                       }}
@@ -134,11 +132,10 @@ export function KontaktPanel() {
                         id="email"
                         type="email"
                         placeholder="Email Adresse"
-                        className="w-full border-0 outline-none text-[18px] focus:ring-0 focus:outline-none"
+                        className="w-full border-0 outline-none text-[16px] lg:text-[18px] p-3 lg:py-5 lg:px-4 focus:ring-0 focus:outline-none"
                         style={{
                           backgroundColor: "rgb(247,244,240)",
                           color: "rgb(61,61,61)",
-                          padding: "20px 16px",
                           borderRadius: 0,
                           ...URBANIST,
                         }}
@@ -156,11 +153,10 @@ export function KontaktPanel() {
                         id="telefon"
                         type="tel"
                         placeholder="Telefonnummer"
-                        className="w-full border-0 outline-none text-[18px] focus:ring-0 focus:outline-none"
+                        className="w-full border-0 outline-none text-[16px] lg:text-[18px] p-3 lg:py-5 lg:px-4 focus:ring-0 focus:outline-none"
                         style={{
                           backgroundColor: "rgb(247,244,240)",
                           color: "rgb(61,61,61)",
-                          padding: "20px 16px",
                           borderRadius: 0,
                           ...URBANIST,
                         }}
@@ -181,11 +177,10 @@ export function KontaktPanel() {
                       id="nachricht"
                       placeholder="Nachricht"
                       rows={5}
-                      className="w-full border-0 outline-none text-[18px] resize-none focus:ring-0 focus:outline-none"
+                      className="w-full border-0 outline-none text-[16px] lg:text-[18px] p-3 lg:py-5 lg:px-4 resize-none focus:ring-0 focus:outline-none"
                       style={{
                         backgroundColor: "rgb(247,244,240)",
                         color: "rgb(61,61,61)",
-                        padding: "20px 16px",
                         borderRadius: 0,
                         ...URBANIST,
                       }}
@@ -224,7 +219,7 @@ export function KontaktPanel() {
             </div>
 
             {/* Right — info panel over image */}
-            <div className="relative min-h-[420px] isolate">
+            <div className="relative min-h-[280px] lg:min-h-[420px] isolate">
               <Image
                 src="/images/2025/11/DSC07156-scaled.jpg"
                 alt="Beratungsgespräch"

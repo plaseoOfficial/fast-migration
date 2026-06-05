@@ -100,7 +100,8 @@ export function GewerbeIntroStats() {
 
           {/* Col 2: big H2 */}
           <h2
-            className="text-[34px] leading-[1.05] lg:text-[66px] lg:leading-[66px]"
+            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[66px] lg:leading-[66px] max-lg:break-words max-lg:hyphens-auto"
+            lang="de"
             style={{
               fontWeight: 500,
               letterSpacing: "-3px",
@@ -224,9 +225,8 @@ export function GewerbeIntroStats() {
           {/* Col 3: count-up counter + gefertigte Einzelteile */}
           <div ref={counterRef}>
             <div
+              className="text-[40px] leading-[40px] lg:text-[70px] lg:leading-[70px]"
               style={{
-                fontSize: "70px",
-                lineHeight: "70px",
                 fontWeight: 500,
                 color: "rgb(0,0,0)",
               }}

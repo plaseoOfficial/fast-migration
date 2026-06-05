@@ -74,7 +74,7 @@ export function GewerbeLadenGastro() {
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:mt-[40px] lg:grid-cols-2 lg:gap-16">
 
           {/* Left: three-column image mosaic */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <div className="relative h-[160px] w-full lg:h-[200px]">
               <Image
                 src="/images/2025/11/20230829_030744000_iOS.jpg"

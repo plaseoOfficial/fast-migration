@@ -76,7 +76,7 @@ export function GewerbeWarum() {
         <div
           className={cn(
             "mt-10",
-            "columns-2 md:columns-3 lg:columns-5 gap-3",
+            "columns-1 sm:columns-2 md:columns-3 lg:columns-5 gap-3",
             "[&>figure]:mb-3 [&>figure]:break-inside-avoid"
           )}
         >

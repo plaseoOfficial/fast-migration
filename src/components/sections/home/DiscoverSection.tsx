@@ -132,7 +132,7 @@ export function DiscoverSection({
         </div>
 
         {/* 4 blurb cards row — Urbanist h4 18px 500 */}
-        <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {blurbs.map((b) => (
             <div key={b.title}>
               <Image
