@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface TimelineYear {
   year: string;
@@ -30,9 +30,51 @@ export function UeberTimeline({
   years,
 }: UeberTimelineProps) {
   const [active, setActive] = useState(0);
-  const last = years.length - 1;
-  const current = years[active];
-  const progress = last > 0 ? (active / last) * 100 : 0;
+  const [fillHeight, setFillHeight] = useState(0);
+
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const markerRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+  // Track which milestone is centered in the viewport as the user scrolls.
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let topMost: { index: number; top: number } | null = null;
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const index = Number(entry.target.getAttribute("data-index"));
+          const top = entry.boundingClientRect.top;
+          if (topMost === null || top < topMost.top) {
+            topMost = { index, top };
+          }
+        }
+        if (topMost) setActive(topMost.index);
+      },
+      // A thin band across the vertical middle of the viewport decides "active".
+      { rootMargin: "-48% 0px -48% 0px", threshold: 0 }
+    );
+
+    const nodes = itemRefs.current.filter((node): node is HTMLLIElement => node !== null);
+    nodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, []);
+
+  // Grow the progress line down to the center of the active marker.
+  useEffect(() => {
+    const recompute = () => {
+      const track = trackRef.current;
+      const marker = markerRefs.current[active];
+      if (!track || !marker) return;
+      const trackTop = track.getBoundingClientRect().top;
+      const markerRect = marker.getBoundingClientRect();
+      setFillHeight(markerRect.top + markerRect.height / 2 - trackTop);
+    };
+
+    recompute();
+    window.addEventListener("resize", recompute);
+    return () => window.removeEventListener("resize", recompute);
+  }, [active]);
 
   return (
     <section
@@ -66,98 +108,141 @@ export function UeberTimeline({
           {intro}
         </p>
 
-        {/* Year selector with progress line */}
-        <div className="relative mt-14 lg:mt-[72px]">
-          {/* Base track */}
+        {/* Vertical timeline */}
+        <div ref={trackRef} className="relative mt-14 lg:mt-[72px]">
+          {/* Base rail */}
           <div
-            className="absolute left-0 right-0 top-[26px] h-[7px] rounded-full"
+            className="absolute top-0 bottom-0 w-[3px] rounded-full left-[20px] -translate-x-1/2 lg:left-[160px]"
             style={{ backgroundColor: "rgb(243,243,243)" }}
             aria-hidden="true"
           />
           {/* Filled progress */}
           <div
-            className="absolute left-0 top-[26px] h-[7px] rounded-full transition-[width] duration-300 ease-out"
+            className="absolute top-0 w-[3px] rounded-full left-[20px] -translate-x-1/2 transition-[height] duration-500 ease-out lg:left-[160px]"
             style={{
-              width: `${progress}%`,
-              background: "linear-gradient(90deg, rgb(237,168,33) 0%, rgb(245,196,90) 100%)",
+              height: `${fillHeight}px`,
+              background: "linear-gradient(180deg, rgb(237,168,33) 0%, rgb(245,196,90) 100%)",
             }}
             aria-hidden="true"
           />
 
-          <div className="relative flex items-start justify-between">
+          <ol className="flex flex-col gap-16 lg:gap-24">
             {years.map((y, i) => {
               const isActive = i === active;
+              const isPast = i <= active;
               return (
-                <button
+                <li
                   key={y.year}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  aria-pressed={isActive}
-                  aria-label={`Jahr ${y.year} anzeigen`}
-                  className="group flex flex-col items-center focus:outline-none"
+                  data-index={i}
+                  ref={(node) => {
+                    itemRefs.current[i] = node;
+                  }}
+                  className="relative grid grid-cols-[40px_1fr] items-start gap-6 lg:grid-cols-[160px_1fr] lg:items-stretch lg:gap-12"
                 >
-                  <span
-                    className="mb-2 text-[12px] font-medium tabular-nums transition-colors sm:text-[14px]"
-                    style={{ color: isActive ? "rgb(61,61,61)" : "rgb(102,102,102)" }}
-                  >
-                    {y.year}
-                  </span>
-                  {/* Marker on the track */}
-                  {isActive ? (
+                  {/* Rail column: year label + marker */}
+                  <div className="relative flex items-start lg:items-center lg:justify-end lg:pr-12">
+                    {/* Year (desktop, left of rail) */}
                     <span
-                      className="flex h-[22px] w-[22px] items-center justify-center rounded-full"
-                      style={{ border: `3px solid ${YELLOW}`, backgroundColor: CARD_BG }}
+                      className="hidden text-right font-medium tabular-nums transition-colors lg:block"
+                      style={{
+                        fontSize: "clamp(28px, 2.6vw, 40px)",
+                        lineHeight: "1",
+                        letterSpacing: "-1.5px",
+                        color: isActive ? "rgb(23,33,33)" : "rgb(150,150,150)",
+                      }}
                     >
-                      <span
-                        className="h-[6px] w-[6px] rounded-full"
-                        style={{ backgroundColor: YELLOW }}
-                      />
+                      {y.year}
                     </span>
-                  ) : (
+                    {/* Marker on the rail */}
                     <span
-                      className="mt-[5px] h-[12px] w-[2px] transition-colors group-hover:bg-[rgb(237,168,33)]"
-                      style={{ backgroundColor: "rgb(170,170,170)" }}
-                    />
-                  )}
-                </button>
+                      ref={(node) => {
+                        markerRefs.current[i] = node;
+                      }}
+                      className="absolute top-[6px] flex items-center justify-center rounded-full transition-all duration-300 left-[20px] -translate-x-1/2 lg:top-1/2 lg:left-[160px] lg:-translate-y-1/2"
+                      style={
+                        isActive
+                          ? {
+                              height: "22px",
+                              width: "22px",
+                              border: `3px solid ${YELLOW}`,
+                              backgroundColor: CARD_BG,
+                            }
+                          : {
+                              height: "14px",
+                              width: "14px",
+                              backgroundColor: isPast ? YELLOW : "rgb(170,170,170)",
+                            }
+                      }
+                    >
+                      {isActive && (
+                        <span
+                          className="h-[6px] w-[6px] rounded-full"
+                          style={{ backgroundColor: YELLOW }}
+                        />
+                      )}
+                    </span>
+                  </div>
+
+                  {/* Content card */}
+                  <div
+                    className="border p-7 transition-opacity duration-300 lg:p-10"
+                    style={{
+                      backgroundColor: CARD_BG,
+                      borderColor: "rgba(61,61,61,0.25)",
+                      opacity: isActive ? 1 : 0.62,
+                    }}
+                  >
+                    {/* Year (mobile, inside card) */}
+                    <span
+                      className="mb-2 block font-medium tabular-nums lg:hidden"
+                      style={{
+                        fontSize: "22px",
+                        lineHeight: "1",
+                        letterSpacing: "-1px",
+                        color: YELLOW,
+                      }}
+                    >
+                      {y.year}
+                    </span>
+                    <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10">
+                      <div>
+                        <h3
+                          className="font-medium"
+                          style={{
+                            fontSize: "clamp(22px, 2.4vw, 32px)",
+                            lineHeight: "1.2",
+                            letterSpacing: "-1px",
+                            color: "rgb(23,33,33)",
+                          }}
+                        >
+                          {y.title}
+                        </h3>
+                        <p
+                          className="mt-4 max-w-[460px]"
+                          style={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            color: "rgb(61,61,61)",
+                          }}
+                        >
+                          {y.body}
+                        </p>
+                      </div>
+                      <div className="relative aspect-[3/2] w-full overflow-hidden">
+                        <Image
+                          src={y.image}
+                          alt={y.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 500px"
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
               );
             })}
-          </div>
-        </div>
-
-        {/* Active year card */}
-        <div
-          className="mt-12 grid grid-cols-1 items-stretch gap-8 border p-8 lg:mt-[60px] lg:grid-cols-2 lg:gap-12 lg:p-12"
-          style={{ backgroundColor: CARD_BG, borderColor: "rgba(61,61,61,0.25)" }}
-        >
-          <div className="flex flex-col justify-center">
-            <h3
-              className="font-medium"
-              style={{
-                fontSize: "clamp(28px, 3.2vw, 40px)",
-                lineHeight: "1.2",
-                letterSpacing: "-1.5px",
-                color: "rgb(23,33,33)",
-              }}
-            >
-              {current.title}
-            </h3>
-            <p
-              className="mt-5 max-w-[460px]"
-              style={{ fontSize: "16px", lineHeight: "26px", color: "rgb(61,61,61)" }}
-            >
-              {current.body}
-            </p>
-          </div>
-          <div className="relative aspect-[3/2] w-full overflow-hidden">
-            <Image
-              src={current.image}
-              alt={current.title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 600px"
-              className="object-cover"
-            />
-          </div>
+          </ol>
         </div>
       </div>
     </section>
