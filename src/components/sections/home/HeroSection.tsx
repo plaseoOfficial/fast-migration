@@ -32,12 +32,15 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
       />
       {/* Centered massive title — Poppins 144px 500 −10px */}
       <h1
-        className="absolute left-0 right-0 select-none text-center whitespace-nowrap"
+        className="absolute left-0 right-0 select-none text-center"
         style={{
           top: "38%",
-          fontSize: "clamp(56px, 11vw, 144px)",
+          // Floor lowered (56→36px) and nowrap dropped so the title wraps instead of
+          // clipping on phones. Slope (11vw) and 144px max are unchanged, so desktop
+          // (≥~1309px viewport, where the 144px cap already applies) renders identically.
+          fontSize: "clamp(36px, 11vw, 144px)",
           lineHeight: 1,
-          letterSpacing: "clamp(-3px, -0.7vw, -10px)",
+          letterSpacing: "clamp(-2px, -0.7vw, -10px)",
           fontWeight: 500,
           color: "rgb(243,243,243)",
         }}

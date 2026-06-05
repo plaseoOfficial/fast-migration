@@ -48,12 +48,12 @@ function ItemList({ items }: { items: ListItem[] }) {
       {items.map((item, index) => (
         <div
           key={item.title}
-          className={cn("py-5", index !== 0 && "border-t border-black/10")}
+          className={cn("py-3 lg:py-5", index !== 0 && "border-t border-black/10")}
         >
           <h3
+            className="text-[16px] lg:text-[20px]"
             style={{
               fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
-              fontSize: "20px",
               lineHeight: 1,
               fontWeight: 500,
               color: "rgb(0,0,0)",

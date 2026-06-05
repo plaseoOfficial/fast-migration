@@ -52,7 +52,8 @@ export function ServiceHero({ title, breadcrumb, bgImage, intro, cta }: ServiceH
           {/* Left column: h1 + optional CTA pill + breadcrumb (~66%) */}
           <div className="lg:w-[66%]">
             <h1
-              className="text-white font-medium text-[34px] leading-[1.1] sm:text-[44px] lg:text-[70px] lg:leading-[84px]"
+              className="text-white font-medium text-[28px] leading-[1.15] sm:text-[44px] sm:leading-[1.1] lg:text-[70px] lg:leading-[84px] max-lg:break-words max-lg:hyphens-auto"
+              lang="de"
               style={{ letterSpacing: "-3px" }}
             >
               {title}

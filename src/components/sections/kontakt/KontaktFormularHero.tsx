@@ -46,7 +46,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage }: KontaktFormu
       className={cn(
         "relative isolate w-full overflow-hidden",
         "min-h-[100svh] flex items-center",
-        "pt-[120px] lg:pt-[140px] pb-12 lg:pb-16"
+        "pt-[100px] sm:pt-[120px] lg:pt-[140px] pb-12 lg:pb-16"
       )}
       style={URBANIST}
     >

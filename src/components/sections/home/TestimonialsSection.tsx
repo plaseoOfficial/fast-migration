@@ -19,11 +19,11 @@ export function TestimonialsSection({ heading, testimonial, logos }: Testimonial
     >
       <div className="mx-auto max-w-[1280px] px-6">
         <h2
-          className="mb-12 text-center"
+          className="mb-12 text-center tracking-[-2px] lg:tracking-[-5px]"
           style={{
-            fontSize: "clamp(56px, 9vw, 120px)",
+            // Floor lowered (56→32px); slope (9vw) + 120px max unchanged → desktop identical.
+            fontSize: "clamp(32px, 9vw, 120px)",
             lineHeight: 1,
-            letterSpacing: "-5px",
             fontWeight: 500,
             color: "rgb(61,61,61)",
           }}
