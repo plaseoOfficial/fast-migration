@@ -339,6 +339,41 @@ export const SECTION_META = [
     screenshot: `${REF}/moebel-nach-mass/02b-massmoebel.jpg`,
   },
 
+  {
+    id: "shared-referenzen-hero",
+    displayName: "Shared — Referenzen Hero (Collage)",
+    useCase: "hero",
+    category: "shared",
+    description:
+      "Reference-hub hero in ServiceHero typography, but with a collage of project photos as the background (mobile 2×2, desktop strip, thin dark seam) instead of a single image. Layered scrim keeps the white title/breadcrumb legible. Falls back to a full-bleed image when one is passed.",
+    propsSummary: [
+      { name: "title", type: "string", required: true },
+      { name: "breadcrumb", type: "BreadcrumbItem[]", required: true },
+      { name: "images", type: "ReferenzHeroImage[]", required: true },
+      { name: "intro", type: "string", required: false },
+    ],
+    usedOn: ["/referenzen"],
+    screenshot: `${REF}/gewerbeeinrichtung/band-0.jpg`,
+  },
+  {
+    id: "shared-referenzen-grid",
+    displayName: "Shared — Referenzen Grid (Aggregator)",
+    useCase: "reference-grid",
+    category: "shared",
+    description:
+      "Reference hub aggregator: eyebrow + heading + editorial lead, a centred category filter bar, and a dense image mosaic. Each tile is a full-bleed photo that reveals a dark overlay (category + title + 'Projekt entdecken') on hover/focus and links to the matching cluster or detail page. Reusable as a project teaser block on cluster pages.",
+    propsSummary: [
+      { name: "heading", type: "string", required: true },
+      { name: "leadParagraphs", type: "string[]", required: true },
+      { name: "categories", type: "ReferenzCategory[]", required: true },
+      { name: "projects", type: "ReferenzProject[]", required: true },
+      { name: "eyebrow", type: "string", required: false },
+    ],
+    usedOn: ["/referenzen"],
+    screenshot: `${REF}/sec7-raeume.png`,
+    isClient: true,
+  },
+
   // ── Gewerbe (commercial page) ─────────────────────────────────────────────
   {
     id: "gewerbe-intro-stats",

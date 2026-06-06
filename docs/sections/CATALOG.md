@@ -3,16 +3,16 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**38 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**41 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
-- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta)
+- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid)
 - **Home** — [Home — Hero](#home-hero), [Home — Discover](#home-discover), [Home — Quality](#home-quality), [Home — Parallax Quote](#home-parallax), [Home — Handwerk Tabs](#home-handwerk), [Home — Planner Embed](#home-planner), [Home — Räume Showcase](#home-raeume), [Home — Testimonials + Logos](#home-testimonials), [Home — FAQ](#home-faq)
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
 - **Möbelplaner** — [Möbelplaner — Schritte](#mp-schritte), [Möbelplaner — Intro](#mp-intro), [Möbelplaner — Prozess](#mp-prozess)
-- **Kontakt** — [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
+- **Kontakt** — [Kontakt — Formular-Hero](#kontakt-formular-hero), [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
 - **Über uns** — [Über uns — Hero](#ueber-hero), [Über uns — Timeline](#ueber-timeline), [Über uns — Wofür wir stehen](#ueber-wofuer), [Über uns — Logo Strip](#ueber-logos), [Über uns — Werte](#ueber-values), [Über uns — Nav Cards](#ueber-nav-cards), [Über uns — Fallbeispiel](#ueber-fallbeispiel)
 
 ## Sections
@@ -129,6 +129,41 @@ _Prop-less (page-specific content)._
 | `className` | `string` | no |
 
 ![Shared — Expanding Image CTA](../design-references/moebel-nach-mass/02b-massmoebel.jpg)
+
+#### Shared — Referenzen Hero (Collage)
+
+`#shared-referenzen-hero` — Reference-hub hero in ServiceHero typography, but with a collage of project photos as the background (mobile 2×2, desktop strip, thin dark seam) instead of a single image. Layered scrim keeps the white title/breadcrumb legible. Falls back to a full-bleed image when one is passed.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `hero` | `shared` | no | `/referenzen` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `title` | `string` | yes |
+| `breadcrumb` | `BreadcrumbItem[]` | yes |
+| `images` | `ReferenzHeroImage[]` | yes |
+| `intro` | `string` | no |
+
+![Shared — Referenzen Hero (Collage)](../design-references/gewerbeeinrichtung/band-0.jpg)
+
+#### Shared — Referenzen Grid (Aggregator)
+
+`#shared-referenzen-grid` — Reference hub aggregator: eyebrow + heading + editorial lead, a centred category filter bar, and a dense image mosaic. Each tile is a full-bleed photo that reveals a dark overlay (category + title + 'Projekt entdecken') on hover/focus and links to the matching cluster or detail page. Reusable as a project teaser block on cluster pages.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `reference-grid` | `shared` | yes | `/referenzen` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `heading` | `string` | yes |
+| `leadParagraphs` | `string[]` | yes |
+| `categories` | `ReferenzCategory[]` | yes |
+| `projects` | `ReferenzProject[]` | yes |
+| `eyebrow` | `string` | no |
+
+![Shared — Referenzen Grid (Aggregator)](../design-references/sec7-raeume.png)
 
 ### Home
 
@@ -629,7 +664,7 @@ _Prop-less (page-specific content)._
 
 ## Privat Page Recipe
 
-When a page is marked **Privat**, build it from this canonical section order (derived from `/leistungen/moebel-nach-mass`). Wrap everything in `PrivatPageLayout` (Header + `<main className="flex flex-col">` + Footer) and keep page `metadata` in the route file. The two CTA blocks are `ExpandingImageCta` wrapped in a beige `<section>` with the noted padding.
+When a page is marked **Privat**, build it from this canonical section order (derived from `/moebel-nach-mass`). Create the route inside the `(site)` group (`src/app/(site)/<slug>/page.tsx`) so it inherits the shared Header + Footer, wrap the sections in `PrivatPageLayout` (now just `<main className="flex flex-col">`), and keep page `metadata` in the route file. The two CTA blocks are `ExpandingImageCta` wrapped in a beige `<section>` with the noted padding.
 
 | # | Section | Library id |
 | --- | --- | --- |

@@ -77,7 +77,7 @@ export const PAGES: PageNode[] = [
   { slug: "/ueber-uns/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "ueber-uns" },
 
   // Planned neutral trust/info pages (backlog targets)
-  { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
+  { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "referenzen" },
   { slug: "/ablauf-massanfertigung/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/liefergebiet-montage/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/faq/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },

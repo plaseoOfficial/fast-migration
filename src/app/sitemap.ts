@@ -17,6 +17,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/serienmoebel/", priority: 0.8 },
   { path: "/praxiseinrichtung/", priority: 0.8 },
   { path: "/ueber-uns/", priority: 0.6 },
+  { path: "/referenzen/", priority: 0.7 },
   { path: "/moebelplaner/", priority: 0.7 },
   { path: "/kontakt/", priority: 0.6 },
   { path: "/impressum/", priority: 0.3 },

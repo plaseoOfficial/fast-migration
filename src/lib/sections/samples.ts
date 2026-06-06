@@ -4,6 +4,7 @@
  * "shared" sections get representative samples here.
  */
 import { mnmCtas, mnmFaq } from "@/lib/content/moebel-nach-mass";
+import { referenzenGrid, referenzenHero } from "@/lib/content/referenzen";
 
 export const serviceHeroSample = {
   title: "Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt",
@@ -27,6 +28,21 @@ export const sharedTestimonialsSample = {
 };
 
 export const expandingCtaSample = mnmCtas.final;
+
+export const referenzenHeroSample = {
+  title: referenzenHero.title,
+  breadcrumb: referenzenHero.breadcrumb,
+  images: referenzenHero.images,
+  intro: referenzenHero.intro,
+};
+
+export const referenzenGridSample = {
+  eyebrow: referenzenGrid.eyebrow,
+  heading: referenzenGrid.heading,
+  leadParagraphs: referenzenGrid.leadParagraphs,
+  categories: referenzenGrid.categories,
+  projects: referenzenGrid.projects,
+};
 
 export const kontaktFormularHeroSample = {
   title: "Kommen Sie mit unseren Experten in Kontakt",

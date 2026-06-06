@@ -136,3 +136,100 @@ export function buildLadenbauJsonLd({
  * Praxis). Same builder as {@link buildLadenbauJsonLd}; pass `serviceType`.
  */
 export const buildServicePageJsonLd = buildLadenbauJsonLd;
+
+// ---------------------------------------------------------------------------
+// Reference hub (`/referenzen/`) — CollectionPage + ItemList + ImageObject
+// ---------------------------------------------------------------------------
+
+export interface ReferenzItem {
+  /** Project title (ImageObject.name / ListItem name). */
+  name: string;
+  /** Site-relative or absolute image URL. */
+  image: string;
+  description: string;
+  /** Page the project links to (cluster today, detail page later). */
+  href: string;
+}
+
+export interface ReferenzenJsonLdOptions {
+  /** Absolute URL of the page (e.g. `${SITE_URL}/referenzen/`). */
+  pageUrl: string;
+  /** Page subject / CollectionPage name. */
+  name: string;
+  description: string;
+  breadcrumb: BreadcrumbCrumb[];
+  projects: ReferenzItem[];
+  faq: FaqEntry[];
+}
+
+/**
+ * Structured data for the reference aggregator: a CollectionPage whose
+ * mainEntity is an ItemList of the projects (each an ImageObject), plus a
+ * BreadcrumbList and a FAQPage. Mirrors the spec schema set
+ * (CollectionPage | ItemList | ImageObject | BreadcrumbList).
+ */
+export function buildReferenzenJsonLd({
+  pageUrl,
+  name,
+  description,
+  breadcrumb,
+  projects,
+  faq,
+}: ReferenzenJsonLdOptions) {
+  const itemList = {
+    "@type": "ItemList",
+    "@id": `${pageUrl}#projects`,
+    name,
+    numberOfItems: projects.length,
+    itemListElement: projects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: abs(project.href),
+      item: {
+        "@type": "ImageObject",
+        name: project.name,
+        description: project.description,
+        contentUrl: abs(project.image),
+        url: abs(project.href),
+        representativeOfPage: false,
+      },
+    })),
+  };
+
+  const collectionPage = {
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name,
+    description,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    publisher: { "@id": ORG_ID },
+    mainEntity: { "@id": `${pageUrl}#projects` },
+  };
+
+  const breadcrumbList = {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: breadcrumb.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.label,
+      item: crumb.href ? abs(crumb.href) : pageUrl,
+    })),
+  };
+
+  const faqPage = {
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: faq.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: { "@type": "Answer", text: entry.answer },
+    })),
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [collectionPage, itemList, breadcrumbList, faqPage],
+  };
+}

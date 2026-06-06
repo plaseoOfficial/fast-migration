@@ -23,6 +23,7 @@ export type UseCase =
   | "handwerk-tabs"
   | "process"
   | "services-grid"
+  | "reference-grid"
   | "categories-list"
   | "gallery-masonry"
   | "story"
