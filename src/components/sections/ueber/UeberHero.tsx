@@ -15,9 +15,17 @@ interface UeberHeroProps {
   title: string;
   intro: string;
   breadcrumb: BreadcrumbItem[];
+  /**
+   * Top-to-bottom scrim behind the transparent header, for white-on-photo
+   * readability. Override per page via a full CSS `background` value.
+   */
+  headerScrim?: string;
 }
 
-export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb }: UeberHeroProps) {
+const DEFAULT_HEADER_SCRIM =
+  "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)";
+
+export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScrim }: UeberHeroProps) {
   return (
     <section
       className={cn(
@@ -44,6 +52,14 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb }: Ueber
           background:
             "radial-gradient(circle at center, rgba(23,33,33,0.51) 0%, rgba(63,72,72,0.57) 14%, rgba(255,255,255,0) 98%)",
         }}
+        aria-hidden="true"
+      />
+
+      {/* Top scrim — keeps the transparent header (white logo + nav) readable
+          over the photo. Tunable per page via the headerScrim prop. */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-[200px] lg:h-[280px]"
+        style={{ background: headerScrim ?? DEFAULT_HEADER_SCRIM }}
         aria-hidden="true"
       />
 

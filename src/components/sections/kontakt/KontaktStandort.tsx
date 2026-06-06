@@ -27,24 +27,23 @@ export function KontaktStandort() {
           Wir freuen uns auf Sie!
         </h2>
 
-        {/* Location block */}
-        <div className="relative">
-          {/* Image */}
-          <div className="relative h-[360px] w-full lg:h-[480px]">
+        {/* Location block — info card + full team photo, two columns at lg
+            so the whole team stays visible (no crop, nothing overlaid). */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[360px_1fr] lg:items-start lg:gap-10">
+          {/* Image — full 3:2 team photo, uncropped */}
+          <div className="relative aspect-[3/2] w-full lg:order-2">
             <Image
-              src="/images/2025/11/IMG_9387-scaled.jpg"
-              alt="Maßgefertigte Küche"
+              src="/images/2025/11/DSC06206-scaled.jpg"
+              alt="Team von Fast Systemmöbel"
               fill
+              sizes="(max-width: 1024px) 100vw, 800px"
               className="object-cover"
             />
           </div>
 
-          {/* Info card — stacked on mobile, absolutely overlaid at lg: */}
+          {/* Info card — left column at lg, below the photo on mobile */}
           <div
-            className="
-              relative z-10 mt-0 w-full max-w-full px-8 py-8
-              lg:absolute lg:left-0 lg:top-12 lg:max-w-[360px] lg:px-10 lg:py-10
-            "
+            className="w-full px-8 py-8 lg:order-1 lg:px-10 lg:py-10"
             style={{ backgroundColor: "rgba(231,224,218,0.96)" }}
           >
             <h4
