@@ -21,7 +21,7 @@ export function ExpandingImageCta({
   return (
     <div
       className={cn(
-        "relative overflow-hidden min-h-[360px] lg:min-h-[578px] flex flex-col justify-end items-start p-10 lg:p-[60px]",
+        "relative overflow-hidden min-h-[360px] lg:min-h-[578px] flex flex-col justify-end items-start p-6 sm:p-8 lg:p-[60px]",
         className
       )}
       style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
@@ -49,8 +49,7 @@ export function ExpandingImageCta({
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start">
         <h2
-          className="text-white font-medium text-[34px] leading-[1.1] lg:text-[65px] lg:leading-[71.5px] max-w-full lg:max-w-[60%]"
-          style={{ letterSpacing: "-2px" }}
+          className="text-white font-medium text-[28px] sm:text-[40px] leading-[1.1] lg:text-[65px] lg:leading-[71.5px] max-w-full lg:max-w-[60%] tracking-[-1px] sm:tracking-[-2px]"
         >
           {heading}
         </h2>

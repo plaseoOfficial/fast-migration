@@ -61,11 +61,10 @@ export function MnmTypische({ heading, image1, image1Alt, image2, image2Alt, row
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* Heading */}
         <h2
-          className="text-[32px] leading-[1.05] lg:text-[64px] lg:leading-[64px] mb-10"
+          className="text-[32px] leading-[1.05] lg:text-[64px] lg:leading-[64px] mb-10 tracking-[-1.5px] lg:tracking-[-3px]"
           style={{
             fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
             fontWeight: 500,
-            letterSpacing: "-3px",
             color: "rgb(23,33,33)",
             maxWidth: "880px",
           }}

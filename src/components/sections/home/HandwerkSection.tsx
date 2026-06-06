@@ -43,7 +43,7 @@ export function HandwerkSection({ eyebrow, headingLines, stats, tabs }: Handwerk
               ))}
             </h2>
           </div>
-          <div className="grid grid-cols-3 gap-6 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-10">
             {stats.map((s) => (
               <div key={s.label}>
                 <div
@@ -116,7 +116,7 @@ export function HandwerkSection({ eyebrow, headingLines, stats, tabs }: Handwerk
             </h3>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5">
             {panel.cards.map((card) => (
               <div
                 key={card.title}

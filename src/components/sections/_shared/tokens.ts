@@ -41,8 +41,8 @@ export const fastFonts = {
 
 /** Centered content-wrapper widths. `home` = 1280px, `mnm` (privat) = 1224px. */
 export const fastContainer = {
-  home: "mx-auto max-w-[1280px] px-6",
-  mnm: "mx-auto w-full max-w-[1224px] px-6 lg:px-8",
+  home: "mx-auto max-w-[1280px] px-5 sm:px-6",
+  mnm: "mx-auto w-full max-w-[1224px] px-5 sm:px-6 lg:px-8",
 } as const;
 
 export type FastColor = keyof typeof fastColors;

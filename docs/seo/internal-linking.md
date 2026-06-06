@@ -7,6 +7,12 @@
 > new page's still-missing targets.
 >
 > Source of the full model: `~/Downloads/Fast Systemmöbel - Website Planung - 07 Interne Verlinkung.csv`.
+>
+> **Machine-readable + automated:** the model is encoded in
+> [`src/lib/seo/linking-rules.ts`](../../src/lib/seo/linking-rules.ts) (page graph, MUSS/SOLL/DARF-NICHT,
+> anchor sets, budgets). Run **`npm run audit:links`** to audit the real link graph against it, or use the
+> **`intern-verlinkung`** agent to control, insert and monitor links + find anchors. When a page ships,
+> flip its node to `built: true` in `linking-rules.ts` so the audit auto-resolves newly unblocked links.
 
 ## URL architecture (flat silos)
 
@@ -24,13 +30,14 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 │   ├─ /serienmoebel/             Cluster-Pillar ✓ built (flat URL)
 │   └─ /praxiseinrichtung/        Cluster-Pillar ✓ built (flat URL)
 ├─ /moebelplaner/         Conversion landing page
-└─ /kontakt/              Conversion
+├─ /kontakt/              Conversion
+└─ /ueber-uns/            Brand/authority page (E-E-A-T; links out to both hubs)
 ```
 
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/gewerbe/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`.
+**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/gewerbe/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`.
 
 ## Rules (condensed)
 
@@ -56,10 +63,23 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 | `/` (Homepage) | flat hub links `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/`, `/kontakt/` (MUSS) + SOLL `/kuechen-nach-mass/`, `/referenzen/`, `/ablauf-massanfertigung/` | MUSS/SOLL | homepage nav/links still use `#`-anchors → update during homepage relaunch pass |
 | Header nav "Leistungen" dropdown | hub + cluster links | nav | dropdown not yet populated |
 | `/moebelplaner/`, `/kontakt/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | MUSS | pages built |
+| `/ueber-uns/` (UeberNavCards "FAQ" card, currently `#`) | `/faq/` | SOLL | `/faq/` built |
+| `/ueber-uns/` (UeberValues "Beispielprojekte", currently `/gewerbe/`) | `/referenzen/` | fix | `/referenzen/` built |
 | Gewerbe clusters (`/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`) | their product / ratgeber spokes (e.g. Konferenztisch, Empfangstresen, …) | MUSS (cluster→product) | spoke pages built |
 | Gewerbe clusters (FaqSection "Zum FAQ", currently `#`) | `/faq/` | SOLL | `/faq/` built |
 | Gewerbe clusters | `/referenzen/`, `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | City pages (`/einsatzgebiete/*` or flat city×service) | relevant clusters | new silo | city pages migrated/built |
+
+### ⚠️ Interim retargets — REVERT when the real target page ships
+
+These links point at a *built but not ideal* page to avoid dead `#` links at launch.
+When the proper target page is built, repoint them (and drop this row):
+
+| Where (file · field) | Currently (interim) | Repoint to when built |
+|---|---|---|
+| `moebel-nach-mass.ts` · `mnmWeitereCards` "Raumkonzepte" | `/moebelplaner/` | a `/raumkonzepte/` (or room-concept) page |
+| `moebel-nach-mass.ts` · `mnmWeitereCards` "Fertigung" | `/ueber-uns/` | `/ablauf-massanfertigung/` |
+| `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
 
@@ -71,3 +91,24 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 - `/kuechen-nach-mass/` → `/kontakt/` (IntroStats col1, both ExpandingImageCtas, FaqSection CTA).
 - `/moebel-nach-mass/` → `/kuechen-nach-mass/` (MnmWeitereLeistungen card "Küchen nach Maß"). *(hub → cluster)*
 - Footer (all pages) → Pillar-Hubs `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/` only.
+- **Header "Über uns" dropdown → `/ueber-uns/`** (nav leaf now live).
+- `/ueber-uns/` → `/moebel-nach-mass/` (UeberWofuer "Unsere Leistungen" + UeberNavCards "Leistungen" card). *(authority → Privat hub)*
+- `/ueber-uns/` → `/gewerbe/` (UeberValues "Beispielprojekte" — interim target until `/referenzen/` ships). *(authority → Gewerbe hub)*
+- `/ueber-uns/` → `/kontakt/` (UeberNavCards "Kontakt" card) — conversion target.
+
+### Wired in the `audit:links` pass (2026-06)
+
+- **Homepage** `homeRaeume`: `#kontakt` → `/kontakt/`, `#ueber-uns` → `/ueber-uns/` (dead placeholders removed).
+- **Footer Menü** (`FOOTER_LINKS.links`): Home → `/`, Leistungen → `/moebel-nach-mass/`, Über uns → `/ueber-uns/`, Kontakt → `/kontakt/`. *(Ratgeber/FAQ stay `#` until those pages ship.)*
+- **`/gewerbe/ladenbau/`** breadcrumb up-link fixed: retired `/leistungen/gewerbeeinrichtung` → `/gewerbe/` (canonical, no redirect hop; satisfies the cluster→hub MUSS).
+- **Dead `/project/mixmarkt/`** repointed in-silo: `/moebel-nach-mass/` IntroStats col3 → `/kuechen-nach-mass/`; `/gewerbe/` IntroStats col3 → `/gewerbe/ladenbau/`.
+- **`/moebelplaner/`** hero CTA `#moebelplaner` → external planner URL.
+- **`/ueber-uns/` added to `sitemap.ts`** (was built but unlisted).
+- Removed unused legacy `NAV_LINKS` (phantom `#` placeholders).
+- Canonical trailing-slash fixes for `/kontakt`, `/moebel-nach-mass` in touched modules.
+
+> Still open (need a render slot / target page, surfaced by `npm run audit:links`):
+> Homepage body MUSS-links to the two hubs + `/moebelplaner/` (header nav covers them site-wide; a
+> contextual in-body link still to be placed); strong pages link to the **external** planner, not the
+> internal `/moebelplaner/` page (judgment call); legal pages → `/`; the remaining `#` are genuinely
+> backlog-blocked (`/faq/`, `/ratgeber/`, city pages, cookie policy); broader canonical sweep of `nav.ts`.

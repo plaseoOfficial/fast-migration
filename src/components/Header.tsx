@@ -3,11 +3,21 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LOGO_SRC, LOGO_ON_DARK_SRC } from "@/lib/content";
 import { NAV_ITEMS, type NavItem, type NavLeaf } from "@/lib/nav";
 import { MegaPanel, MiniDropdown } from "@/components/header/menus";
 import { MenuIcon, CloseIcon, InstagramIcon, LinkedinIcon, ChevronDownIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+
+/**
+ * Routes whose hero is light at the top, so the transparent header keeps its
+ * dark logo + dark nav text there. Every other page starts with a dark photo
+ * hero (MnmHero / ServiceHero / KontaktFormularHero), where the header switches
+ * to white chrome at the top — readability is then guaranteed by each hero's
+ * top-to-bottom scrim. Add a slug here if a new page gets a light hero.
+ */
+const LIGHT_HEADER_ROUTES = new Set<string>(["/"]);
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +25,12 @@ export function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pathname = usePathname();
+
+  // White chrome (logo + text + borders) when scrolled OR sitting over a dark
+  // photo hero at the top of the page. Only a light-hero page keeps dark chrome
+  // while unscrolled.
+  const whiteChrome = scrolled || !LIGHT_HEADER_ROUTES.has(pathname);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
@@ -60,7 +76,7 @@ export function Header() {
       "inline-flex items-center gap-1 text-[15px] font-medium font-[var(--font-urbanist)] transition-colors",
       active
         ? "text-[rgb(237,168,33)]"
-        : scrolled
+        : whiteChrome
           ? "text-white hover:text-[rgb(237,168,33)]"
           : "text-[rgb(61,61,61)] hover:text-[rgb(237,168,33)]"
     );
@@ -83,7 +99,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex flex-shrink-0 items-center" onClick={closeAll}>
           <Image
-            src={scrolled ? LOGO_ON_DARK_SRC : LOGO_SRC}
+            src={whiteChrome ? LOGO_ON_DARK_SRC : LOGO_SRC}
             alt="Fast Systemmöbel"
             width={150}
             height={52}
@@ -157,7 +173,7 @@ export function Header() {
               aria-label="Instagram"
               className={cn(
                 "inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors",
-                scrolled
+                whiteChrome
                   ? "border-white/40 text-white hover:bg-white hover:text-[rgb(61,61,61)]"
                   : "border-[rgb(61,61,61)]/30 text-[rgb(61,61,61)] hover:bg-[rgb(61,61,61)] hover:text-white"
               )}
@@ -171,7 +187,7 @@ export function Header() {
               aria-label="LinkedIn"
               className={cn(
                 "inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors",
-                scrolled
+                whiteChrome
                   ? "border-white/40 text-white hover:bg-white hover:text-[rgb(61,61,61)]"
                   : "border-[rgb(61,61,61)]/30 text-[rgb(61,61,61)] hover:bg-[rgb(61,61,61)] hover:text-white"
               )}
@@ -193,7 +209,7 @@ export function Header() {
           aria-label="Menü"
           className={cn(
             "p-2 transition-colors lg:hidden",
-            scrolled ? "text-white" : "text-[rgb(61,61,61)]"
+            whiteChrome ? "text-white" : "text-[rgb(61,61,61)]"
           )}
           onClick={() => setMobileOpen(true)}
         >

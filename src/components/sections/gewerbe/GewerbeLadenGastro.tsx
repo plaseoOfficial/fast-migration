@@ -29,10 +29,10 @@ export function GewerbeLadenGastro() {
           <div>
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium",
-                "lg:text-[59px] lg:leading-[59px]"
+                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-4px]"
               )}
-              style={{ color: "rgb(23,33,33)", letterSpacing: "-4px", fontWeight: 500 }}
+              style={{ color: "rgb(23,33,33)", fontWeight: 500 }}
             >
               Ladeneinrichtung, die zu Ihrem Objekt passt
             </h2>
@@ -74,7 +74,7 @@ export function GewerbeLadenGastro() {
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:mt-[40px] lg:grid-cols-2 lg:gap-16">
 
           {/* Left: three-column image mosaic */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <div className="relative h-[160px] w-full lg:h-[200px]">
               <Image
                 src="/images/2025/11/20230829_030744000_iOS.jpg"
@@ -105,10 +105,10 @@ export function GewerbeLadenGastro() {
           <div>
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium",
-                "lg:text-[64px] lg:leading-[64px]"
+                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[64px] lg:leading-[64px] lg:tracking-[-4px]"
               )}
-              style={{ color: "rgb(23,33,33)", letterSpacing: "-4px", fontWeight: 500 }}
+              style={{ color: "rgb(23,33,33)", fontWeight: 500 }}
             >
               Gastromöbel, die magisch anziehen
             </h2>

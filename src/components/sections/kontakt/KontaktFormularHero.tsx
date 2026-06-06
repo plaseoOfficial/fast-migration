@@ -19,7 +19,15 @@ interface KontaktFormularHeroProps {
   title: string;
   breadcrumb: BreadcrumbItem[];
   bgImage: string;
+  /**
+   * Top-to-bottom scrim behind the transparent header, for white-on-photo
+   * readability. Override via a full CSS `background` value.
+   */
+  headerScrim?: string;
 }
+
+const DEFAULT_HEADER_SCRIM =
+  "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)";
 
 const INPUT_STYLE: React.CSSProperties = {
   backgroundColor: "rgb(247,244,240)",
@@ -33,7 +41,7 @@ const LABEL_CLASS = "block text-[13px] font-medium mb-1.5";
 const INPUT_CLASS =
   "w-full border-0 outline-none text-[16px] font-normal focus:ring-0 focus:outline-none";
 
-export function KontaktFormularHero({ title, breadcrumb, bgImage }: KontaktFormularHeroProps) {
+export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }: KontaktFormularHeroProps) {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -46,7 +54,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage }: KontaktFormu
       className={cn(
         "relative isolate w-full overflow-hidden",
         "min-h-[100svh] flex items-center",
-        "pt-[120px] lg:pt-[140px] pb-12 lg:pb-16"
+        "pt-[100px] sm:pt-[120px] lg:pt-[140px] pb-12 lg:pb-16"
       )}
       style={URBANIST}
     >
@@ -66,6 +74,14 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage }: KontaktFormu
           background:
             "linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.32) 45%, rgba(0,0,0,0.08) 75%)",
         }}
+        aria-hidden="true"
+      />
+
+      {/* Top scrim — keeps the transparent header (white logo + nav) readable
+          over the photo. Tunable via the headerScrim prop. */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-[200px] lg:h-[280px]"
+        style={{ background: headerScrim ?? DEFAULT_HEADER_SCRIM }}
         aria-hidden="true"
       />
 

@@ -33,7 +33,7 @@ export const mnmIntroStats = {
   col1Body:
     "Wir fertigen Möbel nach Maß, die millimetergenau zu Ihrem Raum passen und jede Nische optimal nutzen. Jede Maßanfertigung entsteht individuell nach Ihren Anforderungen. Mit hochwertigen Dekoren, stabilen Konstruktionen und präzisem Aufmaß-Service.",
   col1CtaLabel: "Jetzt individuelle Anfrage stellen",
-  col1CtaHref: "/kontakt",
+  col1CtaHref: "/kontakt/",
   col2Body:
     "Dabei planen wir jedes Möbelstück so, dass Funktionalität, Stauraum und Alltagstauglichkeit perfekt zusammenspielen. Ob Schrank, Regal, Sideboard oder Kommode: Sie erhalten maßgeschneiderte Möbel, die langlebig gebaut, modern gestaltet und sauber integriert werden – exakt nach Ihren Vorstellungen.",
   counterTarget: 72,
@@ -42,8 +42,8 @@ export const mnmIntroStats = {
   col3Title: "gefertigte Einzelteile",
   col3Body:
     "Unsere Fertigung kombiniert neueste CNC-Technik mit handwerklicher Perfektion. So entstehen Systemmöbel, die langlebig, funktional und ästhetisch überzeugen – in jedem Projekt, jedem Detail.",
-  col3CtaLabel: "Entdecken Sie das Gefühl von Qualität",
-  col3CtaHref: "/project/mixmarkt/",
+  col3CtaLabel: "Küchen nach Maß entdecken",
+  col3CtaHref: "/kuechen-nach-mass/",
 };
 
 export const mnmProcess = {
@@ -142,13 +142,13 @@ export const mnmCtas = {
     image: "/images/2025/11/IMG_6123-scaled.jpg",
     heading: "Maßmöbel nach Ihren Vorstellungen",
     linkText: "Sprechen Sie mit uns über Ihr Projekt",
-    href: "/kontakt",
+    href: "/kontakt/",
   },
   final: {
     image: "/images/2025/11/DSC_9938.jpg",
     heading: "Ihr Raum verdient mehr als Standard.",
-    linkText: "Sprechen Sie mit uns über Ihr Projekt.",
-    href: "/kontakt",
+    linkText: "Kostenlose Beratung anfragen",
+    href: "/kontakt/",
   },
 };
 
@@ -202,14 +202,14 @@ export const mnmWeitereCards: ServiceCard[] = [
     title: "Raumkonzepte",
     description:
       "Wir planen den ganzen Raum: Architektur, Licht, Materialien und Möbel als Einheit. Vom Entwurf bis zur Montage.",
-    href: "#",
+    href: "/moebelplaner/",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
     title: "Fertigung",
     description:
       "Moderne Homag-Technik, präzise CNC-Verarbeitung und handwerkliche Qualitätskontrolle. Von Einzelmöbeln bis zu kompletten Objekten.",
-    href: "#",
+    href: "/ueber-uns/",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
@@ -223,6 +223,6 @@ export const mnmWeitereCards: ServiceCard[] = [
     title: "Montage",
     description:
       "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt.",
-    href: "#",
+    href: "/kontakt/",
   },
 ];

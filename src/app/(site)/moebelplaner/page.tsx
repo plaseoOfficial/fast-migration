@@ -57,7 +57,7 @@ export default function MoebelplanerPage() {
         ]}
         bgImage="/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg"
         intro="Standardlösungen passen selten wirklich. Nicht an die Decke, nicht in die Nische, nicht zu Ihrem Alltag. Ob Schränke, Regale oder maßgefertigte Einbauten – jedes Möbelstück entsteht nach Ihren Maßen."
-        cta={{ label: "Zum Möbelplaner", href: "#moebelplaner" }}
+        cta={{ label: "Zum Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" }}
       />
 
       <MpSchritte />

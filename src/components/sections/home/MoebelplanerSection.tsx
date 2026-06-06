@@ -44,7 +44,7 @@ export function MoebelplanerSection({
             title="Fast Möbelplaner"
             loading="lazy"
             allow="fullscreen; clipboard-write"
-            className="block w-full h-[78vh] min-h-[600px] border-0"
+            className="block w-full h-[60vh] sm:h-[70vh] md:h-[78vh] min-h-[300px] sm:min-h-[400px] md:min-h-[600px] border-0"
           />
         </div>
 

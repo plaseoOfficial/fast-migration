@@ -83,10 +83,9 @@ export function MnmWeitereLeistungen({
             {eyebrow}
           </p>
           <h2
-            className="mx-auto mt-4 text-[38px] leading-[1.05] lg:text-[80px] lg:leading-[80px]"
+            className="mx-auto mt-4 text-[28px] leading-[1.15] sm:text-[38px] sm:leading-[1.05] lg:text-[80px] lg:leading-[80px] tracking-[-1px] sm:tracking-[-2px] max-lg:break-words max-lg:hyphens-auto"
             style={{
               fontWeight: 500,
-              letterSpacing: "-2px",
               color: "rgb(61,61,61)",
               maxWidth: "900px",
             }}
@@ -101,11 +100,10 @@ export function MnmWeitereLeistungen({
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex flex-col"
+              className="flex flex-col lg:min-h-[430px]"
               style={{
                 backgroundColor: "rgb(45,45,45)",
                 padding: "40px",
-                minHeight: "430px",
               }}
             >
               {/* Icon */}
@@ -120,7 +118,8 @@ export function MnmWeitereLeistungen({
 
               {/* Title */}
               <h3
-                className="mt-6"
+                className="mt-6 max-lg:break-words max-lg:hyphens-auto"
+                lang="de"
                 style={{
                   fontSize: "25px",
                   lineHeight: "25px",
@@ -167,16 +166,15 @@ export function MnmWeitereLeistungen({
 
           {/* White "&" card (cell 6) */}
           <div
-            className="flex flex-col"
+            className="flex flex-col lg:min-h-[430px]"
             style={{
               backgroundColor: "rgb(255,255,255)",
               padding: "40px",
-              minHeight: "430px",
             }}
           >
             {/* Big ampersand */}
             <div
-              className="flex-shrink-0 text-[120px] leading-[0.9] lg:text-[200px]"
+              className="flex-shrink-0 text-[60px] sm:text-[120px] leading-[0.9] lg:text-[200px]"
               style={{
                 fontWeight: 500,
                 color: "rgb(0,0,0)",

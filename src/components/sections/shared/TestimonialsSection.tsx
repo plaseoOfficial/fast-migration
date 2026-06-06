@@ -66,10 +66,9 @@ export function TestimonialsSection({
             {eyebrow}
           </p>
           <h2
-            className="mt-3 text-[34px] leading-[1.05] lg:text-[65px] lg:leading-[65px]"
+            className="mt-3 text-[34px] leading-[1.05] lg:text-[65px] lg:leading-[65px] tracking-[-1.5px] lg:tracking-[-2px]"
             style={{
               fontWeight: 500,
-              letterSpacing: "-2px",
               color: "rgb(0,0,0)",
               marginBottom: "48px",
             }}
@@ -83,10 +82,9 @@ export function TestimonialsSection({
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col items-center text-center"
+              className="flex flex-col items-center text-center p-8 md:p-[50px] md:px-10"
               style={{
                 backgroundColor: "rgb(250,250,250)",
-                padding: "50px 40px",
               }}
             >
               {/* Avatar */}

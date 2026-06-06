@@ -34,19 +34,18 @@ export function MpSchritte() {
           <div>
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium",
-                "lg:text-[59px] lg:leading-[59px]"
+                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-3px]"
               )}
               style={{
                 color: "rgb(23,33,33)",
-                letterSpacing: "-3px",
                 fontWeight: 500,
               }}
             >
               In drei Schritten zu Ihren Möbeln nach Maß
             </h2>
 
-            <div className="relative mt-8 h-[300px] w-full lg:h-[420px]">
+            <div className="relative mt-8 h-[240px] sm:h-[280px] md:h-[340px] w-full lg:h-[420px]">
               <Image
                 src="/images/2025/11/IMG_9120-scaled.jpg"
                 alt="Maßgefertigtes Möbeldetail"

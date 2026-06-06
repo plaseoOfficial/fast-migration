@@ -48,12 +48,12 @@ function ItemList({ items }: { items: ListItem[] }) {
       {items.map((item, index) => (
         <div
           key={item.title}
-          className={cn("py-5", index !== 0 && "border-t border-black/10")}
+          className={cn("py-3 lg:py-5", index !== 0 && "border-t border-black/10")}
         >
           <h3
+            className="text-[16px] lg:text-[20px]"
             style={{
               fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
-              fontSize: "20px",
               lineHeight: 1,
               fontWeight: 500,
               color: "rgb(0,0,0)",
@@ -91,11 +91,10 @@ export function GewerbeLeistungen() {
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* Heading */}
         <h2
-          className="text-[32px] leading-[1.05] lg:text-[64px] lg:leading-[64px] mb-10"
+          className="text-[32px] leading-[1.05] lg:text-[64px] lg:leading-[64px] mb-10 tracking-[-1.5px] lg:tracking-[-3px]"
           style={{
             fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
             fontWeight: 500,
-            letterSpacing: "-3px",
             color: "rgb(23,33,33)",
             maxWidth: "820px",
           }}

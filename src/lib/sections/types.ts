@@ -7,6 +7,7 @@ export type SectionCategory =
   | "gewerbe"
   | "moebelplaner"
   | "kontakt"
+  | "ueber"
   | "shared";
 
 /**
@@ -34,6 +35,10 @@ export type UseCase =
   | "logo-carousel"
   | "feature-text"
   | "steps"
+  | "timeline"
+  | "values"
+  | "nav-cards"
+  | "case-study"
   | "contact-form"
   | "location";
 

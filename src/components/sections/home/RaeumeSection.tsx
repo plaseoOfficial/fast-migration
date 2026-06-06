@@ -92,7 +92,7 @@ export function RaeumeSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           <Link
             href={storyHref}
-            className="lg:col-span-4 group relative aspect-[3/4] overflow-hidden rounded-md bg-[rgb(61,61,61)] block"
+            className="lg:col-span-4 group relative aspect-[16/9] lg:aspect-[3/4] overflow-hidden rounded-md bg-[rgb(61,61,61)] block"
           >
             <Image
               src={storyImage}
@@ -135,11 +135,12 @@ export function RaeumeSection({
               <span className="fast-eyebrow">Projekte</span>
             </div>
             <div
-              className="select-none leading-none"
+              className="select-none leading-none max-w-full overflow-hidden"
               style={{
                 fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                fontSize: "clamp(120px, 16vw, 220px)",
-                letterSpacing: "clamp(-6px, -1vw, -14px)",
+                // Floor lowered (120→48px); 16vw slope + 220px max unchanged → desktop identical.
+                fontSize: "clamp(48px, 16vw, 220px)",
+                letterSpacing: "clamp(-3px, -1vw, -14px)",
                 fontWeight: 500,
                 color: "rgb(61,61,61)",
               }}

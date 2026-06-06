@@ -18,7 +18,7 @@ export const ladenHero = {
     "Ihre Verkaufsfläche entscheidet über den ersten Eindruck. Wir planen und fertigen Ihre Ladeneinrichtung nach Maß – von der einzelnen Theke bis zur kompletten Shopkonzeption. Handwerklich gebaut im eigenen Meisterbetrieb in Espelkamp und vor Ort in Ihrem Geschäft montiert.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
-    { label: "Gewerbe", href: "/leistungen/gewerbeeinrichtung" },
+    { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Ladenbau" },
   ],
 };
@@ -147,13 +147,13 @@ export const ladenCtas = {
     image: "/images/2025/11/DSC_9814.jpg",
     heading: "Ihr Geschäft verdient mehr als Möbel von der Stange.",
     linkText: "Sprechen Sie mit uns über Ihr Ladenbau-Projekt",
-    href: "/kontakt",
+    href: "/kontakt/",
   },
   final: {
     image: "/images/2025/11/DSC_9938.jpg",
     heading: "Vom Tresen bis zur Shopfläche – wir bauen es nach Maß.",
     linkText: "Sprechen Sie mit uns über Ihr Ladenbau-Projekt.",
-    href: "/kontakt",
+    href: "/kontakt/",
   },
 };
 

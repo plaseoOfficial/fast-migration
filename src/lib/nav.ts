@@ -152,7 +152,7 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Über uns",
     kind: "dropdown",
     items: [
-      { label: "Über uns" },
+      { label: "Über uns", href: "/ueber-uns" },
       { label: "Team" },
       { label: "Referenzen" },
       { label: "Ablauf der Maßanfertigung" },

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Urbanist, Open_Sans } from "next/font/google";
 import { SITE_URL } from "@/lib/content";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -49,7 +51,9 @@ export default function RootLayout({
       lang="de"
       className={`${poppins.variable} ${urbanist.variable} ${openSans.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }

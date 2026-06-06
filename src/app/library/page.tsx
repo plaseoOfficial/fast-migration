@@ -17,6 +17,7 @@ const CATEGORY_LABELS: Record<SectionCategory, string> = {
   gewerbe: "Gewerbe",
   moebelplaner: "Möbelplaner",
   kontakt: "Kontakt",
+  ueber: "Über uns",
 };
 
 const CATEGORY_ORDER: SectionCategory[] = [
@@ -26,6 +27,7 @@ const CATEGORY_ORDER: SectionCategory[] = [
   "gewerbe",
   "moebelplaner",
   "kontakt",
+  "ueber",
 ];
 
 export default function LibraryPage() {
