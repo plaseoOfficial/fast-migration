@@ -70,7 +70,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
           {/* Left column: h1 + breadcrumb (~66%) */}
           <div className="lg:w-[66%]">
             <h1
-              className="text-white font-medium text-[26px] leading-[1.15] sm:text-[48px] sm:leading-[1.1] lg:text-[70px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
+              className="text-white font-medium text-[22px] leading-[1.15] sm:text-[45px] sm:leading-[1.1] lg:text-[84px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
               lang="de"
             >
               {title}
@@ -89,7 +89,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
                       <ChevronRightIcon className="h-3 w-auto opacity-60 text-white/70" />
                     )}
                     {isLast || !item.href ? (
-                      <span className="text-[15px] leading-[26px] font-bold text-white">
+                      <span className="text-[15px] leading-[26px] font-medium text-white">
                         {item.label}
                       </span>
                     ) : (
@@ -110,7 +110,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
           <div className="mt-6 lg:mt-0 lg:w-[30%] lg:flex-shrink-0">
             <p
               className="font-medium text-white"
-              style={{ fontSize: "15px", lineHeight: "23.8px" }}
+              style={{ fontSize: "15px", lineHeight: "1.7" }}
             >
               {intro}
             </p>

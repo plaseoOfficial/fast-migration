@@ -38,7 +38,7 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
 
             {/* Paragraph */}
             <p
-              className="mt-5 text-[16px] leading-[28px]"
+              className="mt-5 text-[16px] leading-[1.7]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
               {paragraph}{" "}

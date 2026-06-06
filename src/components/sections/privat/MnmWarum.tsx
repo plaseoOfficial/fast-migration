@@ -59,7 +59,7 @@ export function MnmWarum({ heading, paragraph, images, reverse = false, imageCol
       </h2>
 
       <p
-        className="mt-5 text-[16px] leading-[28px] font-medium"
+        className="mt-5 text-[16px] leading-[1.7] font-medium"
         style={{ color: "rgb(102,102,102)" }}
       >
         {paragraph}

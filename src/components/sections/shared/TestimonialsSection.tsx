@@ -82,7 +82,7 @@ export function TestimonialsSection({
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col items-center text-center p-8 md:p-[50px] md:px-10"
+              className="flex flex-col items-center text-center p-8 md:p-10"
               style={{
                 backgroundColor: "rgb(243,243,243)",
               }}
@@ -113,7 +113,7 @@ export function TestimonialsSection({
               <p
                 style={{
                   fontSize: "16px",
-                  lineHeight: "23.8px",
+                  lineHeight: "1.7",
                   fontWeight: 500,
                   color: "rgb(102,102,102)",
                   marginTop: "16px",

@@ -68,7 +68,7 @@ export function MnmGeschichte({
         {/* Stats strip */}
         <div
           className="grid grid-cols-2 lg:grid-cols-4 py-8 lg:py-10 gap-y-8 border-b"
-          style={{ borderColor: "rgba(61,61,61,0.15)" }}
+          style={{ borderColor: "rgba(0,0,0,0.10)" }}
         >
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col">
@@ -94,7 +94,7 @@ export function MnmGeschichte({
             {paragraphs.filter((_, i) => i % 2 === 0).map((para) => (
               <p
                 key={para.slice(0, 30)}
-                className="text-[16px] leading-[28px] font-medium"
+                className="text-[16px] leading-[1.7] font-medium"
                 style={{ color: "rgb(102,102,102)" }}
               >
                 {para}
@@ -105,7 +105,7 @@ export function MnmGeschichte({
             {paragraphs.filter((_, i) => i % 2 === 1).map((para) => (
               <p
                 key={para.slice(0, 30)}
-                className="text-[16px] leading-[28px] font-medium"
+                className="text-[16px] leading-[1.7] font-medium"
                 style={{ color: "rgb(102,102,102)" }}
               >
                 {para}

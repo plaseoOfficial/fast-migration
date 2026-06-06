@@ -74,7 +74,7 @@ export function FaqSection({
               href={ctaHref}
               className="mt-8 inline-flex items-center underline"
               style={{
-                fontSize: "20px",
+                fontSize: "22px",
                 fontWeight: 500,
                 color: "rgb(61,61,61)",
               }}
@@ -92,16 +92,20 @@ export function FaqSection({
                 <div
                   key={index}
                   className="mb-[15px]"
-                  style={{ backgroundColor: "rgb(243,243,243)" }}
+                  style={{
+                    backgroundColor: "#ffffff",
+                    border: "1px solid rgba(0,0,0,0.10)",
+                    borderRadius: "6px",
+                  }}
                 >
                   <button
                     type="button"
                     onClick={() => toggle(index)}
-                    className="flex w-full items-center justify-between text-left p-5 sm:p-[30px] sm:pr-[50px]"
+                    className="flex w-full items-center justify-between text-left py-[26px] px-[32px]"
                     aria-expanded={isOpen}
                   >
                     <span
-                      className="text-[16px] sm:text-[18px] lg:text-[20px]"
+                      className="text-[16px] sm:text-[18px] lg:text-[22px]"
                       style={{
                         fontWeight: 500,
                         color: "rgb(61,61,61)",
@@ -110,17 +114,22 @@ export function FaqSection({
                     >
                       {item.question}
                     </span>
-                    <ArrowRightIcon
-                      className={cn(
-                        "h-5 w-5 flex-shrink-0 ml-4 transition-transform duration-300",
-                        isOpen ? "rotate-90" : "rotate-0"
-                      )}
-                      style={{ color: "rgb(61,61,61)" }}
-                    />
+                    <span
+                      className="h-6 w-6 rounded-full flex items-center justify-center flex-shrink-0 ml-4 transition-colors duration-300"
+                      style={{ backgroundColor: isOpen ? "rgb(61,61,61)" : "rgb(237,168,33)" }}
+                      aria-hidden="true"
+                    >
+                      <ArrowRightIcon
+                        className={cn(
+                          "h-3 w-3 transition-transform duration-300",
+                          isOpen ? "rotate-90 text-white" : "rotate-0 text-[rgb(61,61,61)]"
+                        )}
+                      />
+                    </span>
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 sm:px-[30px] sm:pb-[30px]">
+                    <div className="px-[32px] pb-[26px]">
                       <p
                         style={{
                           fontSize: "16px",

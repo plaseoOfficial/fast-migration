@@ -38,8 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 export default function MoebelNachMassPage() {
   return (
     <PrivatPageLayout>
@@ -47,7 +45,7 @@ export default function MoebelNachMassPage() {
       <MnmIntroStats {...mnmIntroStats} />
 
       {/* Maßmöbel expanding CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
+      <section style={{ backgroundColor: "rgba(203,191,181,0.59)" }} className="pb-12 lg:pb-16">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
           <ExpandingImageCta {...mnmCtas.intro} />
         </div>
@@ -62,7 +60,7 @@ export default function MoebelNachMassPage() {
       <TestimonialsSection heading={mnmTestimonialsHeading} />
 
       {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
+      <section style={{ backgroundColor: "rgba(203,191,181,0.59)" }} className="pb-14 lg:pb-[64px]">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
           <ExpandingImageCta {...mnmCtas.final} />
         </div>

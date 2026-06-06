@@ -159,9 +159,10 @@ export function MnmIntroStats({
           {/* Col 3: asterisk + intro paragraph */}
           <div>
             <span
+              aria-hidden="true"
               style={{
                 display: "block",
-                fontSize: "60px",
+                fontSize: "65px",
                 lineHeight: 1,
                 color: "rgb(61,61,61)",
                 fontWeight: 500,
@@ -172,7 +173,7 @@ export function MnmIntroStats({
             <p
               style={{
                 fontSize: "18px",
-                lineHeight: "28.8px",
+                lineHeight: "1.7",
                 fontWeight: 500,
                 color: "rgb(102,102,102)",
                 marginTop: "12px",
@@ -207,8 +208,8 @@ export function MnmIntroStats({
           <div>
             <h3
               style={{
-                fontSize: "20px",
-                lineHeight: "20px",
+                fontSize: "22px",
+                lineHeight: "22px",
                 fontWeight: 500,
                 color: "rgb(61,61,61)",
                 margin: 0,
@@ -219,7 +220,7 @@ export function MnmIntroStats({
             <p
               style={{
                 fontSize: "18px",
-                lineHeight: "31.5px",
+                lineHeight: "1.7",
                 fontWeight: 500,
                 color: "rgb(102,102,102)",
                 marginTop: "16px",
@@ -234,7 +235,7 @@ export function MnmIntroStats({
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                fontSize: "20px",
+                fontSize: "22px",
                 fontWeight: 500,
                 color: "rgb(61,61,61)",
                 textDecoration: "underline",
@@ -251,7 +252,7 @@ export function MnmIntroStats({
             <p
               style={{
                 fontSize: "18px",
-                lineHeight: "31.5px",
+                lineHeight: "1.7",
                 fontWeight: 500,
                 color: "rgb(102,102,102)",
                 margin: 0,
@@ -264,7 +265,7 @@ export function MnmIntroStats({
           {/* Col 3: counter + gefertigte Einzelteile */}
           <div ref={counterRef}>
             <div
-              className="text-[42px] leading-[42px] lg:text-[70px] lg:leading-[70px]"
+              className="text-[45px] leading-[45px] lg:text-[65px] lg:leading-[65px]"
               style={{
                 fontWeight: 500,
                 color: "rgb(61,61,61)",
@@ -288,7 +289,7 @@ export function MnmIntroStats({
             <p
               style={{
                 fontSize: "18px",
-                lineHeight: "31.5px",
+                lineHeight: "1.7",
                 fontWeight: 500,
                 color: "rgb(102,102,102)",
                 marginTop: "16px",
@@ -302,7 +303,7 @@ export function MnmIntroStats({
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                fontSize: "20px",
+                fontSize: "22px",
                 fontWeight: 500,
                 color: "rgb(61,61,61)",
                 textDecoration: "underline",

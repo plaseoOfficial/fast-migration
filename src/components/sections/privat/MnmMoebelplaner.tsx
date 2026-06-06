@@ -41,7 +41,7 @@ export function MnmMoebelplaner({
 }: MnmMoebelplanerProps) {
   return (
     <section
-      className="bg-[rgb(61,61,61)] pt-12 lg:pt-[46px] pb-0 overflow-hidden"
+      className="bg-[rgb(61,61,61)] pt-12 lg:pt-[84px] pb-0 overflow-hidden"
       style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
@@ -56,14 +56,14 @@ export function MnmMoebelplaner({
             </h2>
 
             <p
-              className="mt-5 text-white text-[16px] leading-[28px] font-medium"
+              className="mt-5 text-white text-[16px] leading-[1.7] font-medium"
             >
               {body}
             </p>
 
             <Link
               href={ctaHref}
-              className="mt-6 inline-flex items-center text-white text-[20px] font-medium underline underline-offset-4 hover:text-[rgb(237,168,33)] transition-colors"
+              className="mt-6 inline-flex items-center text-white text-[22px] font-medium underline underline-offset-4 hover:text-[rgb(237,168,33)] transition-colors"
             >
               {ctaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
@@ -78,7 +78,7 @@ export function MnmMoebelplaner({
             </div>
 
             {/* Main image — touches section bottom */}
-            <div className="relative w-full h-[240px] sm:h-[280px] lg:h-[460px] rounded-tl-[8px] lg:rounded-tl-[8px] overflow-hidden">
+            <div className="relative w-full h-[240px] sm:h-[280px] lg:h-[460px] rounded-tl overflow-hidden">
               <Image
                 src={image}
                 alt={imageAlt}
