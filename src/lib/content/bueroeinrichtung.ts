@@ -18,7 +18,7 @@
 export const bueroHero = {
   bgImage: "/images/2025/11/DSC_9747.jpg",
   imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel aus Espelkamp",
-  title: "Büroeinrichtung nach Maß: vom Schreibtisch bis zur Objekteinrichtung",
+  title: "Büroeinrichtung nach Maß, die jeden Meter nutzt",
   intro:
     "Büroeinrichtung nach Maß heißt bei uns: Wir planen, fertigen und montieren Büromöbel, die genau auf Ihre Räume, Ihre Abläufe und Ihren Auftritt passen. Das reicht vom einzelnen Aktenschrank über Schreibtische und Konferenztische bis zur kompletten Objekteinrichtung. Gebaut wird im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team bei Ihnen vor Ort. Sie bekommen keine festen Rastermaße aus dem Katalog, sondern individuelle Büromöbel, die jeden Meter Wand nutzen und dem Betrieb über Jahre standhalten.",
   breadcrumb: [
@@ -31,12 +31,12 @@ export const bueroHero = {
 export const bueroIntroStats = {
   since: "seit 1996",
   sinceSub: "Fertigen wir Möbel nach Maß.",
-  heading: "Büromöbel nach Maß, die zu Ihren Räumen und Abläufen passen",
+  heading: "Büromöbel, die zu Ihren Abläufen passen",
   introBefore:
     "Ob Verwaltung, Kanzlei, Praxis oder Architekturbüro: Wir begleiten Ihr Projekt von der ersten",
   introBold: "Planung",
   introAfter:
-    " bis zur fertigen Montage. Kalkuliert nach Grundriss, gefertigt im eigenen Werk, aufgebaut mit festem Ansprechpartner. So entsteht Ihre Büroeinrichtung nach Maß, ohne Reibungsverluste zwischen Händler, Hersteller und Monteur. Wer hier alles aus einer Hand bekommt, spart sich das Abstimmen zwischen drei Gewerken, und am Ende passt jedes Möbel ins selbe Gesamtbild.",
+    " bis zur fertigen Montage. Kalkuliert nach Grundriss, gefertigt im eigenen Werk, aufgebaut mit festem Ansprechpartner. Alles aus einer Hand, statt Abstimmen zwischen Händler, Hersteller und Monteur.",
   bandImage: "/images/2025/11/IMG_2673-scaled.jpg",
   bandAlt: "Maßgefertigte Büroeinrichtung mit Arbeitsplätzen und Stauraum",
   col1Title: "Büro planen",
@@ -57,16 +57,16 @@ export const bueroIntroStats = {
 };
 
 export const bueroProcess = {
-  heading: "So läuft Ihre Büroeinrichtung ab: Beratung, Aufmaß, 3D-Planung, Fertigung, Montage",
+  heading: "In fünf Schritten zum fertigen Büro",
   paragraph:
-    "Ihre Büroeinrichtung entsteht in fünf klaren Schritten. Erstens die Beratung, im Büro oder bei Ihnen vor Ort, in der wir Bedarf, Stil und Budgetrahmen klären. Zweitens das kostenlose Aufmaß vor Ort. Jeder Millimeter zählt, wenn Schränke wandbündig sitzen und Schreibtische ins Raster Ihrer Arbeitsplätze passen sollen. Drittens die 3D-Planung: Sie sehen Ihre künftigen Räume, bevor das erste Brett geschnitten wird. Viertens die Fertigung im eigenen Werk in Espelkamp, alle Teile in Eigenregie. Und fünftens die Montage durch unser eigenes Team, auf Wunsch außerhalb der Geschäftszeiten oder in Etappen, damit Ihr Bürobetrieb so wenig wie möglich gestört wird. Sie haben durchgehend einen festen Ansprechpartner, vom ersten Gespräch bis zur Abnahme, und müssen nichts selbst aufbauen. Ob einzelner Aktenschrank oder komplette Objekteinrichtung, wir liefern robuste Büromöbel nach Maß, die der täglichen Beanspruchung standhalten.",
+    "Beratung, kostenloses Aufmaß vor Ort, 3D-Planung, Fertigung im eigenen Werk in Espelkamp, Montage durch unser Team: fünf klare Schritte, ein fester Ansprechpartner. Auf Wunsch montieren wir außerhalb der Geschäftszeiten oder in Etappen, damit Ihr Betrieb weiterläuft. Aufbauen müssen Sie nichts selbst.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/IMG_2249.jpg",
   imageAlt: "Maßgefertigter Empfangs- und Arbeitsbereich im Büro",
 };
 
 export const bueroTypische = {
-  heading: "Büromöbel nach Maß: Schreibtische, Aktenschränke, Konferenztische, Empfang und mehr",
+  heading: "Alles fürs Büro, aus einer Werkstatt",
   image1: "/images/2025/11/IMG_2772-scaled.jpg",
   image1Alt: "Maßgefertigte Arbeitsplätze im Büro",
   image2: "/images/2025/11/DSC06206-scaled.jpg",
@@ -108,9 +108,9 @@ export const bueroTypische = {
 };
 
 export const bueroWarum = {
-  heading: "Tischler oder Büromöbelhandel? Der Unterschied im Überblick",
+  heading: "Tischler oder Möbelhandel? Der Unterschied",
   paragraph:
-    "Kataloganbieter und Büromöbel-Discounter liefern feste Rastermaße. Wo Ihre Wand 2,87 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir bauen Ihre Büroeinrichtung selbst, komplett in unserem Meisterbetrieb in Espelkamp. Jeder Schreibtisch, jeder Aktenschrank und jeder Konferenztisch wird millimetergenau auf Ihre Räume, Ihre Abläufe und Ihren Auftritt zugeschnitten. Damit Sie die drei üblichen Wege schnell gegeneinander stellen können, hier der direkte Vergleich. Maßanfertigung beim Tischler: Wir planen den ganzen Raum statt einzelner Stücke, fertigen wand-zu-wand ohne Passleisten, beraten persönlich und montieren mit eigenem Team, die Möbel halten der täglichen Beanspruchung über Jahre stand. Büromöbelhandel und Möbelhaus: feste Rastermaße, schnelle Verfügbarkeit von der Stange, an Nischen, Dachschrägen oder krummen Wänden bleiben Lücken, Beratung und Aufbau meist getrennt, der Raum wird nicht als Ganzes geplant. Online-Konfigurator: bequem von zu Hause zusammengeklickt, aber ohne Aufmaß vor Ort, ohne persönliche Planung des Gesamtraums und in der Regel mit Selbstmontage. Heißt für Sie: keine Kompromisse bei Maßen, Materialien und Belastbarkeit, sondern Büromöbel nach Maß, die zu Ihrem Arbeitsalltag passen. Ein Detail, das im Alltag den Unterschied macht, ist unsere PU-Kantenverleimung. Sie verschließt die Kanten fugenlos und nahezu wasserfest. Eine Musterkante haben wir 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Für den Büroalltag bedeutet das: Die Teeküche verträgt Spritzwasser, Schreibtischkanten überstehen Jahre der Beanspruchung, und nichts platzt an den Rändern ab. Planung, Fertigung, Lieferung und Montage kommen aus einer Hand, mit festen Ansprechpartnern und ohne Subunternehmer.",
+    "Katalogmöbel kommen in festen Rastermaßen. Wo Ihre Wand 2,87 Meter misst, bleibt eine Lücke oder eine Passleiste. Wir bauen wand-zu-wand im eigenen Meisterbetrieb in Espelkamp, planen den ganzen Raum statt einzelner Stücke und montieren mit eigenem Team. Ein Detail, das den Unterschied macht: unsere PU-Kantenverleimung verschließt die Kanten fugenlos. Eine Musterkante lag 24 Stunden unter Wasser, ohne aufzuquellen. So überstehen Teeküche und Schreibtischkanten Jahre der Beanspruchung. Planung, Fertigung, Lieferung und Montage kommen aus einer Hand, ohne Subunternehmer.",
   images: [
     { src: "/images/2025/11/DSC_9747.jpg", alt: "Moderne Büroeinrichtung nach Maß", width: 600, height: 450 },
     { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Arbeitsplätze mit integriertem Stauraum", width: 600, height: 400 },
@@ -159,7 +159,7 @@ export const bueroCtas = {
   },
   final: {
     image: "/images/2025/11/DSC_9747.jpg",
-    heading: "Vom Aktenschrank bis zur Objekteinrichtung: wir bauen es nach Maß.",
+    heading: "Vom Einzelstück bis zur Objekteinrichtung.",
     linkText: "Büroprojekt jetzt unverbindlich anfragen",
     href: "/kontakt",
   },

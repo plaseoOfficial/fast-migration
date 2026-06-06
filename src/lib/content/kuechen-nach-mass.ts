@@ -11,7 +11,7 @@ const PATH = "/kuechen-nach-mass/";
 export const kuechenHero = {
   bgImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
   imageAlt: "Moderne Küche nach Maß mit grifflosen Fronten und Kochinsel",
-  title: "Küchen nach Maß aus Espelkamp: zentimetergenau vom Meisterbetrieb",
+  title: "Küchen nach Maß, zentimetergenau aus Espelkamp",
   intro:
     "Wir planen und bauen Ihre Küche nach Maß — zentimetergenau auf Ihren Raum zugeschnitten. Vom Aufmaß bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp.",
   breadcrumb: [
@@ -24,7 +24,7 @@ export const kuechenHero = {
 export const kuechenIntroStats = {
   since: "seit 1996",
   sinceSub: "Bauen wir Küchen nach Maß.",
-  heading: "Ihre Küche nach Maß: präzise geplant, sauber gebaut",
+  heading: "Ihre Küche: präzise geplant, sauber gebaut",
   introBefore:
     "Fast Systemmöbel aus Espelkamp plant Ihre Küche von der ersten Skizze bis zur Montage. Wir nehmen uns Zeit für ein kostenloses Aufmaß vor Ort und nutzen jeden",
   introBold: "Zentimeter",
@@ -34,7 +34,7 @@ export const kuechenIntroStats = {
   bandAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte",
   col1Title: "Küche planen",
   col1Body:
-    "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, und genau darauf richten wir die Küche aus. Markengeräte planen wir passgenau ein, vom Backofen über das Kochfeld bis zur Dunstabzugshaube. Die Geräte wählen Sie frei. Wir setzen alle gängigen Hersteller ein und bauen die Küche darum herum.",
+    "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, danach richten wir die Küche aus. Markengeräte aller gängigen Hersteller planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube. Die Geräte wählen Sie frei.",
   col1CtaLabel: "Jetzt Küche anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
@@ -71,9 +71,9 @@ export const kuechenCtas = {
 };
 
 export const kuechenProcess = {
-  heading: "Planung, Fertigung und Montage für Ihre Küche aus einer Hand",
+  heading: "Ihre Küche, alles aus einer Hand",
   paragraph:
-    "Ihre Küche entsteht in klaren Schritten. Zuerst beraten wir Sie und nehmen vor Ort kostenlos genau Maß. Dann planen wir in 3D, mit Geräten, Anschlüssen und Laufwegen, und Sie sehen Ihre Küche, bevor das erste Bauteil entsteht. Haben Sie freigegeben, fertigen wir auf Homag-Technik in Espelkamp. Zum Schluss montiert unser eigenes Team Ihre Küche, sauber und zum verbindlichen Termin, den wir nach Aufmaß und Freigabe mit Ihnen festlegen. Ein Ansprechpartner von der Beratung bis zur Abnahme, klare Absprachen, eine Hand.",
+    "Erst beraten wir und nehmen vor Ort kostenlos Maß. Dann planen wir in 3D, mit Geräten, Anschlüssen und Laufwegen, und Sie sehen Ihre Küche, bevor das erste Bauteil entsteht. Nach Ihrer Freigabe fertigen wir auf Homag-Technik in Espelkamp, montiert wird zum verbindlichen Termin von unserem eigenen Team. Ein Ansprechpartner von der Beratung bis zur Abnahme.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
   imageAlt: "Maßgefertigte Küche in Grau mit Kochinsel",
@@ -123,7 +123,7 @@ export const kuechenTypische = {
 };
 
 export const kuechenWarum = {
-  heading: "Warum eine Küche vom Tischler mehr kann als von der Stange",
+  heading: "Warum die Küche vom Tischler mehr kann",
   paragraph:
     "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Wir bauen Ihre Küche in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen.",
   images: [
@@ -135,7 +135,7 @@ export const kuechenWarum = {
 };
 
 export const kuechenWarum2 = {
-  heading: "Handwerkliche Umsetzung aus einer Hand — bis vor Ihre Tür",
+  heading: "Aus einer Hand, bis vor Ihre Tür",
   paragraph:
     "Was andere Küchenstudios als unmöglich abtun, gehört zur Kernkompetenz einer Schreinerküche vom Meisterbetrieb: Wir planen es durch und setzen es um. Unser eigenes Montageteam kommt im Umkreis von rund 200 km um Espelkamp zu Ihnen. Ein Ansprechpartner von der Beratung bis zur Abnahme, ein individuelles Angebot — eine Küche, die Wand zu Wand passt.",
   images: [
@@ -146,7 +146,7 @@ export const kuechenWarum2 = {
 
 export const kuechenGeschichte = {
   heading: "Küchenhandwerk aus fast drei Jahrzehnten",
-  subheading: "Vom Garagenbetrieb zum Meisterbetrieb für Küchen nach Maß",
+  subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
   anchorImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
   anchorImageAlt: "Grifflose Inselküche nach Maß mit Holzdecke — Fast Systemmöbel Espelkamp",
   stats: [

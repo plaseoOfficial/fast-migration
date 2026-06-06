@@ -70,8 +70,7 @@ export const homeHandwerk = {
 };
 
 export const homeMoebelplaner = {
-  eyebrow:
-    "Einfach ausprobieren und visualisieren: Machen Sie sich schon heute ein Bild von Ihrer neuen Einrichtung.",
+  eyebrow: "Einfach ausprobieren und visualisieren",
   heading: "Möbel online planen",
   plannerUrl: "https://moebelplaner.fast-systemmoebel.de/",
   ctaLabel: `${CTA.label} in neuem Tab öffnen`,
