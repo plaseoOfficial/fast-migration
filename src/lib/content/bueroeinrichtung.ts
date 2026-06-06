@@ -197,8 +197,8 @@ export const bueroMoebelplaner = {
     "Stellen Sie Schränke und Büromöbel im 3D-Konfigurator online zusammen — Maße, Oberflächen und Einlegeböden direkt sichtbar. Den Rest übernehmen wir: Aufmaß, Fertigung, Montage. Oder direkt anrufen: 05771 9138312.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
-  image: "/images/2025/11/DSC06206-scaled.jpg",
-  imageAlt: "Aktenschrank nach Maß für das Büro",
+  image: "/images/2025/11/IMG_2772-scaled.jpg",
+  imageAlt: "Maßgefertigte Arbeitsplätze im Büro",
 };
 
 /** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */

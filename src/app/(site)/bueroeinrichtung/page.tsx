@@ -5,9 +5,9 @@ import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { BueroProcessSteps } from "@/components/sections/gewerbe/BueroProcessSteps";
 import { BueroVergleich } from "@/components/sections/gewerbe/BueroVergleich";
+import { BueroMoebelplanerCta } from "@/components/sections/gewerbe/BueroMoebelplanerCta";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -79,7 +79,7 @@ export default function BueroeinrichtungPage() {
       <MnmTypische {...bueroTypische} />
       <BueroVergleich {...bueroVergleich} />
       <MnmGeschichte {...bueroGeschichte} />
-      <MnmMoebelplaner {...bueroMoebelplaner} />
+      <BueroMoebelplanerCta {...bueroMoebelplaner} />
       <TestimonialsSection heading={bueroTestimonialsHeading} />
 
       {/* Final CTA — compact banner */}
