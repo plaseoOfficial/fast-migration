@@ -122,26 +122,19 @@ export const serienWarum = {
 
 export const serienGeschichte = {
   heading: "Ein Meisterbetrieb, der Serien liefert",
-  subheading: "VOM GARAGENBETRIEB ZUM PARTNER FÜR SERIENFERTIGUNG.",
-  gallery: [
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", caption: "Fertigung Espelkamp", width: 600, height: 600 },
-    { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Korpusserie auf CNC-Technik", caption: "Korpusserie", width: 800, height: 400 },
-    { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Serienteile mit Homag-Technik", caption: "Homag-Technik", width: 600, height: 900 },
-    { src: "/images/2026/01/3838_1702_1_m.jpg", alt: "Modulares Möbelsystem in Serie", caption: "Möbelsystem", width: 600, height: 900 },
-    { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Serienmöbel in der Fertigung", caption: "Serie nach Maß", width: 600, height: 900 },
+  subheading: "Vom Garagenbetrieb zum Partner für Serienfertigung",
+  anchorImage: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
+  anchorImageAlt: "Serienfertigung mit Homag-Technologie — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "2013", label: "Meisterbetrieb" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team.",
     "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, in Liefertreue und in konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben.",
     "Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
-    "– Homag- und CNC-Technologie",
-    "– Montage bis 200 km",
-    "– Eigenes Montageteam",
   ],
 };
 

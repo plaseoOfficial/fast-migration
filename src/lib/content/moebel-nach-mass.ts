@@ -113,26 +113,19 @@ export const mnmWarum = {
 
 export const mnmGeschichte = {
   heading: "Unsere Geschichte – Qualität aus fast drei Jahrzehnten",
-  subheading: "VOM GARAGENBETRIEB ZUM MODERNEN MÖBELHERSTELLER.",
-  gallery: [
-    { src: "/images/2025/11/IMG_9120-scaled.jpg", alt: "Moderner Badschrank", caption: "IMG_9120", width: 600, height: 600 },
-    { src: "/images/2024/03/test-img-83485.jpg", alt: "Modernes Wohnzimmer", caption: "Luxor Collection", width: 800, height: 400 },
-    { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Zwei Personen blättern", caption: "DSC07129 Kopie", width: 600, height: 900 },
-    { src: "/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg", alt: "Moderner Ankleidebereich", caption: "WhatsApp Bild 2025-04-01", width: 600, height: 900 },
-    { src: "/images/2025/11/20231220_131839984_iOS-scaled.jpg", alt: "Modernes Büro mit Holzlamellenwand", caption: "20231220_131839984_iOS", width: 600, height: 900 },
+  subheading: "Vom Garagenbetrieb zum modernen Möbelhersteller",
+  anchorImage: "/images/2024/03/test-img-83485.jpg",
+  anchorImageAlt: "Maßmöbel aus eigener Fertigung — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "2013", label: "Meisterbetrieb" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp.",
     "Aus ersten Küchen entstand ein Meisterbetrieb mit über 1.000 m² Fertigungsfläche, modernen Homag-Maschinen und einem eingespielten Team. Heute fertigen wir Maßmöbel, die millimetergenau geplant, hochwertig verarbeitet und zuverlässig montiert werden.",
     "Jede Maßanfertigung verbindet Funktionalität und Design – vom Einbauschrank bis zum Sideboard. Unsere Möbel werden in Espelkamp gefertigt, im Umkreis von 200 km montiert und deutschlandweit geliefert.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
-    "– Homag-Technologie",
-    "– Aufbau bis 200 km",
-    "– Lieferung bundesweit",
   ],
 };
 

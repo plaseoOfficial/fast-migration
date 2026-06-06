@@ -120,26 +120,19 @@ export const bueroWarum = {
 
 export const bueroGeschichte = {
   heading: "Ein Meisterbetrieb, der Arbeitsräume versteht",
-  subheading: "VOM GARAGENBETRIEB ZUM PARTNER FÜR BÜROEINRICHTUNG.",
-  gallery: [
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", caption: "Werkstatt Espelkamp", width: 600, height: 600 },
-    { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Arbeitsplätze nach Maß", caption: "Arbeitsplätze", width: 800, height: 400 },
-    { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Aktenschränke nach Maß", caption: "Stauraum", width: 600, height: 900 },
-    { src: "/images/2025/11/IMG_2249.jpg", alt: "Empfangsbereich nach Maß", caption: "Empfang", width: 600, height: 900 },
-    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Büroeinrichtung nach Maß", caption: "Büro nach Maß", width: 600, height: 900 },
+  subheading: "Vom Garagenbetrieb zum Partner für Büroeinrichtung",
+  anchorImage: "/images/2025/11/IMG_2673-scaled.jpg",
+  anchorImageAlt: "Arbeitsplätze nach Maß — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "2013", label: "Meisterbetrieb" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team.",
     "Was im Möbelbau für Privatkunden entstand, kommt im Gewerbe doppelt zum Tragen: Wir kennen die Anforderungen an Belastbarkeit, Termintreue und Funktion, die eine Büroeinrichtung mitbringt, und planen entsprechend praxisnah.",
     "Vom einzelnen Aktenschrank bis zur kompletten Objekteinrichtung fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
-    "– Homag-Technologie",
-    "– Montage bis 200 km",
-    "– Eigenes Montageteam",
   ],
 };
 
