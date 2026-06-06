@@ -1,137 +1,119 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
-interface GalleryItem {
-  src: string;
-  alt: string;
-  caption: string;
-  width: number;
-  height: number;
+interface Stat {
+  value: string;
+  label: string;
 }
 
 interface MnmGeschichteProps {
   heading: string;
   subheading: string;
-  gallery: GalleryItem[];
+  anchorImage: string;
+  anchorImageAlt: string;
+  stats: Stat[];
   paragraphs: string[];
-  factLines: string[];
 }
 
-export function MnmGeschichte({ heading, subheading, gallery, paragraphs, factLines }: MnmGeschichteProps) {
+export function MnmGeschichte({
+  heading,
+  subheading,
+  anchorImage,
+  anchorImageAlt,
+  stats,
+  paragraphs,
+}: MnmGeschichteProps) {
   return (
     <section
-      className="py-12 lg:py-[57px]"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
       }}
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col items-center text-center">
-          <h2
-            className="text-[28px] leading-[1.15] sm:text-[36px] sm:leading-[1.05] lg:text-[84px] lg:leading-[84px] font-medium text-black mx-auto tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-3px]"
-            style={{
-              maxWidth: "1000px",
-            }}
-          >
-            {heading}
-          </h2>
+
+        {/* Eyebrow + Heading */}
+        <div className="mb-8 lg:mb-10">
           <p
-            className="mt-4 text-[18px] font-medium text-center uppercase"
+            className="uppercase"
             style={{
-              lineHeight: "23.8px",
-              letterSpacing: "4px",
+              fontSize: "14px",
+              fontWeight: 500,
+              letterSpacing: "2px",
               color: "rgb(61,61,61)",
             }}
           >
             {subheading}
           </p>
+          <h2
+            className="mt-3 text-[28px] leading-[1.15] sm:text-[38px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] font-medium tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] max-lg:break-words max-lg:hyphens-auto"
+            lang="de"
+            style={{ color: "rgb(61,61,61)" }}
+          >
+            {heading}
+          </h2>
         </div>
 
-        {/* Masonry Gallery */}
+        {/* Anchor photo — full container width */}
+        <div className="relative w-full h-[240px] sm:h-[360px] lg:h-[480px] overflow-hidden">
+          <Image
+            src={anchorImage}
+            alt={anchorImageAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 1280px) 100vw, 1224px"
+          />
+        </div>
+
+        {/* Stats strip */}
         <div
-          className={cn(
-            "mt-10",
-            "columns-1 md:columns-2 lg:columns-3 xl:columns-5 gap-3",
-            "[&>figure]:mb-3 [&>figure]:break-inside-avoid"
-          )}
+          className="grid grid-cols-2 lg:grid-cols-4 py-8 lg:py-10 gap-y-8 border-b"
+          style={{ borderColor: "rgba(61,61,61,0.15)" }}
         >
-          {gallery.map((item) => (
-            <figure key={item.src} className="relative group m-0">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={item.width}
-                height={item.height}
-                className="object-cover w-full"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-              />
-              {/* Hover caption overlay */}
-              <figcaption
-                className={cn(
-                  "absolute inset-0 flex items-center justify-center",
-                  "bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                )}
+          {stats.map((stat) => (
+            <div key={stat.label} className="flex flex-col">
+              <span
+                className="text-[37px] lg:text-[45px] leading-none font-medium tracking-[-1px]"
+                style={{ color: "rgb(61,61,61)" }}
               >
-                <h4
-                  className="text-white font-medium text-center px-2"
-                  style={{
-                    fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
-                    fontSize: "24px",
-                    lineHeight: "1.2",
-                  }}
-                >
-                  {item.caption}
-                </h4>
-              </figcaption>
-            </figure>
+                {stat.value}
+              </span>
+              <span
+                className="mt-2 uppercase text-[12px] font-medium"
+                style={{ letterSpacing: "2px", color: "rgb(102,102,102)" }}
+              >
+                {stat.label}
+              </span>
+            </div>
           ))}
         </div>
 
-        {/* Lower 2-col block */}
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* Left: text paragraphs */}
-          <div className="flex flex-col gap-4">
-            {paragraphs.map((para) => (
+        {/* Story text — 2 columns, odd paragraphs left, even right */}
+        <div className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+          <div className="flex flex-col gap-5">
+            {paragraphs.filter((_, i) => i % 2 === 0).map((para) => (
               <p
                 key={para.slice(0, 30)}
-                className="font-medium"
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "28px",
-                  fontWeight: 500,
-                  color: "rgb(23,33,33)",
-                }}
+                className="text-[16px] leading-[28px] font-medium"
+                style={{ color: "rgb(102,102,102)" }}
               >
                 {para}
               </p>
             ))}
           </div>
-
-          {/* Right: dark fact box */}
-          <div
-            className="p-10 lg:p-12"
-            style={{ backgroundColor: "rgb(45,45,45)" }}
-          >
-            <ul className="flex flex-col">
-              {factLines.map((line) => (
-                <li
-                  key={line}
-                  className="font-medium"
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: "32px",
-                    fontWeight: 500,
-                    color: "rgb(255,255,255)",
-                  }}
-                >
-                  {line}
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col gap-5">
+            {paragraphs.filter((_, i) => i % 2 === 1).map((para) => (
+              <p
+                key={para.slice(0, 30)}
+                className="text-[16px] leading-[28px] font-medium"
+                style={{ color: "rgb(102,102,102)" }}
+              >
+                {para}
+              </p>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );

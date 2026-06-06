@@ -123,7 +123,7 @@ export const ueberValues = {
   figureAlt: "Andreas Fast, Tischlermeister bei Fast Systemmöbel",
   missionHeading: "Die Mission startet aus Espelkamp",
   ctaLabel: "Beispielprojekte",
-  ctaHref: "/gewerbe",
+  ctaHref: "/referenzen/",
   values: [
     {
       title: "Innovation",

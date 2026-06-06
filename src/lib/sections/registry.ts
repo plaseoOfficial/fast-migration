@@ -29,6 +29,8 @@ import { FaqSection as SharedFaqSection } from "@/components/sections/shared/Faq
 import { TestimonialsSection as SharedTestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { PartnerCarousel } from "@/components/sections/shared/PartnerCarousel";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { ReferenzenHero } from "@/components/sections/shared/ReferenzenHero";
+import { ReferenzenGrid } from "@/components/sections/shared/ReferenzenGrid";
 
 // Gewerbe sections
 import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroStats";
@@ -80,6 +82,8 @@ import {
   sharedFaqSample,
   sharedTestimonialsSample,
   expandingCtaSample,
+  referenzenHeroSample,
+  referenzenGridSample,
   kontaktFormularHeroSample,
   noProps,
 } from "./samples";
@@ -131,6 +135,8 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-testimonials"), SharedTestimonialsSection, sharedTestimonialsSample),
   defineSection(meta("shared-partner-carousel"), PartnerCarousel, noProps),
   defineSection(meta("shared-image-cta"), ExpandingImageCta, expandingCtaSample),
+  defineSection(meta("shared-referenzen-hero"), ReferenzenHero, referenzenHeroSample),
+  defineSection(meta("shared-referenzen-grid"), ReferenzenGrid, referenzenGridSample),
 
   // Gewerbe
   defineSection(meta("gewerbe-intro-stats"), GewerbeIntroStats, noProps),

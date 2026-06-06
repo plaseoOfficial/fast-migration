@@ -121,26 +121,19 @@ export const gastroWarum = {
 
 export const gastroGeschichte = {
   heading: "Ein Meisterbetrieb, der den Gastraum versteht",
-  subheading: "VOM GARAGENBETRIEB ZUM PARTNER FÜR GASTRONOMIEEINRICHTUNG.",
-  gallery: [
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", caption: "Werkstatt Espelkamp", width: 600, height: 600 },
-    { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Restauranttheke nach Maß", caption: "Restauranttheke", width: 800, height: 400 },
-    { src: "/images/2025/11/DSC_9938.jpg", alt: "Bar mit Rückbuffet", caption: "Bar nach Maß", width: 600, height: 900 },
-    { src: "/images/2025/11/IMG_6123-scaled.jpg", alt: "Hotellobby mit Empfangstresen", caption: "Hotel-Lobby", width: 600, height: 900 },
-    { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Feste Bestuhlung im Gastraum", caption: "Bestuhlung", width: 600, height: 900 },
+  subheading: "Vom Garagenbetrieb zum Partner für Gastronomieeinrichtung",
+  anchorImage: "/images/2025/11/IMG_6123-scaled.jpg",
+  anchorImageAlt: "Hotellobby mit Empfangstresen nach Maß — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "2013", label: "Meisterbetrieb" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team.",
     "Was im Möbelbau entstand, kommt in der Gastronomie doppelt zum Tragen. Wir kennen die Anforderungen an Belastbarkeit, Hygiene und Termintreue, die ein Gastraum mitbringt. Und wir planen so, dass der Service später reibungslos läuft.",
     "Vom einzelnen Tresen bis zur kompletten Hoteleinrichtung fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern bundesweit.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
-    "– Homag- und CNC-Technik",
-    "– Montage bis 200 km",
-    "– Lieferung bundesweit",
   ],
 };
 

@@ -18,6 +18,7 @@ import {
   kuechenProcess,
   kuechenTypische,
   kuechenWarum,
+  kuechenWarum2,
   kuechenGeschichte,
   kuechenMoebelplaner,
   kuechenCtas,
@@ -103,7 +104,8 @@ export default function KuechenNachMassPage() {
       <MnmProcess {...kuechenProcess} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
       <MnmTypische {...kuechenTypische} />
-      <MnmWarum {...kuechenWarum} />
+      <MnmWarum {...kuechenWarum} imageColumns={2} />
+      <MnmWarum {...kuechenWarum2} reverse imageColumns={1} />
       <MnmGeschichte {...kuechenGeschichte} />
       <MnmMoebelplaner {...kuechenMoebelplaner} />
       <TestimonialsSection heading={kuechenTestimonialsHeading} />

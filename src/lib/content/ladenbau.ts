@@ -118,26 +118,19 @@ export const ladenWarum = {
 
 export const ladenGeschichte = {
   heading: "Ein Meisterbetrieb, der Geschäftsräume versteht",
-  subheading: "VOM GARAGENBETRIEB ZUM PARTNER FÜR LADENBAU.",
-  gallery: [
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", caption: "Werkstatt Espelkamp", width: 600, height: 600 },
-    { src: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg", alt: "Ladeneinrichtung im Einzelhandel", caption: "Einzelhandel", width: 800, height: 400 },
-    { src: "/images/2025/11/DSC_9965.jpg", alt: "Moderne Shopfläche", caption: "Shopfläche", width: 600, height: 900 },
-    { src: "/images/2025/11/DSC_9814.jpg", alt: "Verkaufstresen nach Maß", caption: "Theke nach Maß", width: 600, height: 900 },
-    { src: "/images/2025/11/20231220_131839984_iOS-scaled.jpg", alt: "Empfangsbereich mit Holzlamellenwand", caption: "Empfang", width: 600, height: 900 },
+  subheading: "Vom Garagenbetrieb zum Partner für Ladenbau",
+  anchorImage: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
+  anchorImageAlt: "Ladeneinrichtung im Einzelhandel nach Maß — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "2013", label: "Meisterbetrieb" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp – heute fertigen wir auf über 1.000 m² mit moderner Homag-Technologie und einem eingespielten Team.",
     "Was im Möbelbau für Privatkunden entstand, kommt im Gewerbe doppelt zum Tragen: Wir kennen die Anforderungen an Belastbarkeit, Termintreue und Funktion, die ein Ladenbau-Projekt mitbringt – und planen entsprechend praxisnah.",
     "Vom einzelnen Tresen bis zur kompletten Shopkonzeption fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
-    "– Homag-Technologie",
-    "– Montage bis 200 km",
-    "– Eigenes Montageteam",
   ],
 };
 

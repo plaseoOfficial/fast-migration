@@ -51,7 +51,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0) 70%)",
+            "linear-gradient(90deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0) 80%)",
         }}
         aria-hidden="true"
       />
@@ -109,7 +109,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
           {/* Right column: intro paragraph (~30%), bottom-aligned */}
           <div className="mt-6 lg:mt-0 lg:w-[30%] lg:flex-shrink-0">
             <p
-              className="font-medium text-white/70"
+              className="font-medium text-white"
               style={{ fontSize: "15px", lineHeight: "23.8px" }}
             >
               {intro}

@@ -107,7 +107,7 @@ export function MnmIntroStats({
 
   return (
     <section
-      className="pt-12 lg:pt-[57px] pb-8"
+      className="pt-12 lg:pt-[84px] pb-12 lg:pb-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -122,10 +122,10 @@ export function MnmIntroStats({
           <div>
             <h4
               style={{
-                fontSize: "30px",
-                lineHeight: "30px",
+                fontSize: "22px",
+                lineHeight: "22px",
                 fontWeight: 500,
-                color: "rgba(117,117,117,0.5)",
+                color: "rgb(102,102,102)",
                 margin: 0,
               }}
             >
@@ -134,7 +134,7 @@ export function MnmIntroStats({
             <p
               style={{
                 fontSize: "16px",
-                color: "rgba(117,117,117,0.5)",
+                color: "rgb(102,102,102)",
                 marginTop: "6px",
                 marginBottom: 0,
               }}
@@ -145,11 +145,11 @@ export function MnmIntroStats({
 
           {/* Col 2: big H2 */}
           <h2
-            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[66px] lg:leading-[66px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
+            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
             lang="de"
             style={{
               fontWeight: 500,
-              color: "rgb(0,0,0)",
+              color: "rgb(61,61,61)",
               margin: 0,
             }}
           >
@@ -163,7 +163,7 @@ export function MnmIntroStats({
                 display: "block",
                 fontSize: "60px",
                 lineHeight: 1,
-                color: "rgb(23,33,33)",
+                color: "rgb(61,61,61)",
                 fontWeight: 500,
               }}
             >
@@ -180,7 +180,7 @@ export function MnmIntroStats({
               }}
             >
               {introBefore}{" "}
-              <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
+              <strong style={{ color: "rgb(61,61,61)", fontWeight: 700 }}>
                 {introBold}
               </strong>
               {introAfter}
@@ -210,7 +210,7 @@ export function MnmIntroStats({
                 fontSize: "20px",
                 lineHeight: "20px",
                 fontWeight: 500,
-                color: "rgb(51,51,51)",
+                color: "rgb(61,61,61)",
                 margin: 0,
               }}
             >
@@ -236,7 +236,7 @@ export function MnmIntroStats({
                 alignItems: "center",
                 fontSize: "20px",
                 fontWeight: 500,
-                color: "rgb(0,0,0)",
+                color: "rgb(61,61,61)",
                 textDecoration: "underline",
                 marginTop: "24px",
               }}
@@ -267,18 +267,18 @@ export function MnmIntroStats({
               className="text-[42px] leading-[42px] lg:text-[70px] lg:leading-[70px]"
               style={{
                 fontWeight: 500,
-                color: "rgb(0,0,0)",
+                color: "rgb(61,61,61)",
               }}
             >
               <span>{value}</span>{counterSuffix}
             </div>
             <h3
               style={{
-                fontSize: "31px",
-                lineHeight: "31px",
-                fontWeight: 600,
+                fontSize: "22px",
+                lineHeight: "22px",
+                fontWeight: 500,
                 letterSpacing: "-1px",
-                color: "rgb(51,51,51)",
+                color: "rgb(61,61,61)",
                 marginTop: "8px",
                 marginBottom: 0,
               }}
@@ -304,7 +304,7 @@ export function MnmIntroStats({
                 alignItems: "center",
                 fontSize: "20px",
                 fontWeight: 500,
-                color: "rgb(0,0,0)",
+                color: "rgb(61,61,61)",
                 textDecoration: "underline",
                 marginTop: "24px",
               }}

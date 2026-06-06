@@ -12,7 +12,7 @@ interface MnmProcessProps {
 export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAlt }: MnmProcessProps) {
   return (
     <section
-      className="py-12 lg:py-[46px] lg:pb-14"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -26,10 +26,10 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
             <h2
               className={cn(
                 "text-[34px] leading-[1.05] font-medium tracking-[-1.5px]",
-                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-4px]"
+                "lg:text-[65px] lg:leading-[65px] lg:tracking-[-2px]"
               )}
               style={{
-                color: "rgb(23,33,33)",
+                color: "rgb(61,61,61)",
                 fontWeight: 500,
               }}
             >
@@ -42,7 +42,7 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
               {paragraph}{" "}
-              <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>{paragraphStrong}</strong>
+              <strong style={{ color: "rgb(61,61,61)", fontWeight: 700 }}>{paragraphStrong}</strong>
             </p>
 
             {/* Decorative dots */}

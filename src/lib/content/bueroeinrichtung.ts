@@ -122,27 +122,20 @@ export const bueroWarum = {
 };
 
 export const bueroGeschichte = {
-  heading: "Ein Meisterbetrieb aus OWL, der Arbeitsräume versteht",
-  subheading: "VOM GARAGENBETRIEB ZUM PARTNER FÜR BÜROEINRICHTUNG.",
-  gallery: [
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", caption: "Werkstatt Espelkamp", width: 600, height: 600 },
-    { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Arbeitsplätze nach Maß", caption: "Arbeitsplätze", width: 800, height: 400 },
-    { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Aktenschränke nach Maß", caption: "Stauraum", width: 600, height: 900 },
-    { src: "/images/2025/11/IMG_2249.jpg", alt: "Empfangsbereich nach Maß", caption: "Empfang", width: 600, height: 900 },
-    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Büroeinrichtung nach Maß", caption: "Büro nach Maß", width: 600, height: 900 },
+  heading: "Ein Meisterbetrieb, der Arbeitsräume versteht",
+  subheading: "Vom Garagenbetrieb zum Partner für Büroeinrichtung",
+  anchorImage: "/images/2025/11/IMG_2673-scaled.jpg",
+  anchorImageAlt: "Arbeitsplätze nach Maß — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
     "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten. Geführt wird der Betrieb von der Familie Fast: Gründer Johann Fast und seine Söhne Andreas und Peter, die seit 2010 mit an Bord sind und schrittweise in die Geschäftsführung hineinwachsen.",
     "Wir wissen, was eine Büroeinrichtung aushalten muss: Belastbarkeit, Termintreue und Funktion über Jahre. Inzwischen haben wir zahlreiche komplette Büros in Ostwestfalen-Lippe eingerichtet, von einzelnen Arbeitsplätzen bis zu Empfang, Schrankwand und Konferenzraum. Diese Erfahrung steckt in jeder neuen Planung, praxisnah und nah am täglichen Betrieb. Wir kennen die Fragen, die bei einem Büroprojekt aufkommen, weil wir sie schon oft beantwortet haben.",
     "Vom einzelnen Aktenschrank bis zur kompletten Objekteinrichtung fertigen wir in Espelkamp, montieren mit eigenem Team im Umkreis von rund 200 km und liefern darüber hinaus deutschlandweit. Ein Betrieb, ein Ansprechpartner, ein Stil über alle Möbel hinweg.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb",
-    "– Homag-Technologie",
-    "– Montage bis 200 km",
-    "– Eigenes Montageteam",
   ],
 };
 

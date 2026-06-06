@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/gewerbe/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`.
+**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/gewerbe/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
 
 ## Rules (condensed)
 
@@ -55,16 +55,14 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 | `/kuechen-nach-mass/` | `/kuechen-nach-mass/kueche-nach-mass-kosten/` | MUSS (cost ratgeber) | Kosten-Ratgeber built |
 | `/kuechen-nach-mass/` | Product pages (Küchenzeile / L-Küche / Kochinsel nach Maß) | MUSS (spokes) | Product pages built |
 | `/kuechen-nach-mass/` | `/kuechen-nach-mass/kueche-planen/`, `/kuechen-nach-mass/tischlerkueche-vs-kuechenstudio/` | SOLL (cluster articles) | Articles built |
-| `/kuechen-nach-mass/` | `/referenzen/`, `/ablauf-massanfertigung/` | SOLL (trust) | Pages built |
+| `/kuechen-nach-mass/` | `/ablauf-massanfertigung/` | SOLL (trust) | Page built |
 | `/kuechen-nach-mass/` (MnmWeitereLeistungen) | privat-only cards (drop cross-silo `/gewerbe/` discovery card) | cleanup | sibling privat clusters built |
 | `/kuechen-nach-mass/` (FaqSection) + `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/` | `/faq/` ("Zum FAQ", currently `#`) | SOLL | `/faq/` built |
 | `/moebel-nach-mass/` | sibling cluster pillars (Einbauschränke / Badmöbel / Wohnmöbel nach Maß) | MUSS (hub→clusters) | clusters built |
-| `/moebel-nach-mass/` (MnmIntroStats col3) | `/referenzen/` (currently `/project/mixmarkt/`, dead in clone) | fix | `/referenzen/` built |
 | `/` (Homepage) | flat hub links `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/`, `/kontakt/` (MUSS) + SOLL `/kuechen-nach-mass/`, `/referenzen/`, `/ablauf-massanfertigung/` | MUSS/SOLL | homepage nav/links still use `#`-anchors → update during homepage relaunch pass |
 | Header nav "Leistungen" dropdown | hub + cluster links | nav | dropdown not yet populated |
 | `/moebelplaner/`, `/kontakt/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | MUSS | pages built |
 | `/ueber-uns/` (UeberNavCards "FAQ" card, currently `#`) | `/faq/` | SOLL | `/faq/` built |
-| `/ueber-uns/` (UeberValues "Beispielprojekte", currently `/gewerbe/`) | `/referenzen/` | fix | `/referenzen/` built |
 | Gewerbe clusters (`/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`) | their product / ratgeber spokes (e.g. Konferenztisch, Empfangstresen, …) | MUSS (cluster→product) | spoke pages built |
 | Gewerbe clusters (FaqSection "Zum FAQ", currently `#`) | `/faq/` | SOLL | `/faq/` built |
 | Gewerbe clusters | `/referenzen/`, `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
@@ -93,8 +91,31 @@ When the proper target page is built, repoint them (and drop this row):
 - Footer (all pages) → Pillar-Hubs `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/` only.
 - **Header "Über uns" dropdown → `/ueber-uns/`** (nav leaf now live).
 - `/ueber-uns/` → `/moebel-nach-mass/` (UeberWofuer "Unsere Leistungen" + UeberNavCards "Leistungen" card). *(authority → Privat hub)*
-- `/ueber-uns/` → `/gewerbe/` (UeberValues "Beispielprojekte" — interim target until `/referenzen/` ships). *(authority → Gewerbe hub)*
+- `/ueber-uns/` → `/referenzen/` (UeberValues "Beispielprojekte" — repointed from the interim `/gewerbe/` now that `/referenzen/` ships). *(authority → trust hub)*
 - `/ueber-uns/` → `/kontakt/` (UeberNavCards "Kontakt" card) — conversion target.
+
+### `/referenzen/` launch (2026-06)
+
+- **`/referenzen/` shipped** as the neutral trust **Referenz-Hub (Aggregator)**: a CollectionPage/ItemList
+  bundling realised projects from **both** pillars. Type `brand`, silo-neutral → may link into Privat *and*
+  Gewerbe (no silo violation). `built: true` + `contentModule: "referenzen"` in `linking-rules.ts`; added to
+  `sitemap.ts` (prio 0.7). New reusable `ReferenzenGrid` section (category `shared`, useCase `reference-grid`).
+- **Outbound (forward) links wired** on `/referenzen/`: breadcrumb → `/`; pillar links → `/moebel-nach-mass/`
+  + `/gewerbe/`; project cards → `/kuechen-nach-mass/`, `/moebel-nach-mass/`, `/gewerbe/ladenbau/`,
+  `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/praxiseinrichtung/`; CTAs → `/kontakt/` + `/moebelplaner/`.
+  (9 distinct targets, within the brand body-link budget of 10.)
+- **`/ueber-uns/` "Beispielprojekte" → `/referenzen/`** (repointed from interim `/gewerbe/`).
+- **Mixmarkt project card → `/gewerbe/ladenbau/`** (in-silo cluster). Repoint to a future
+  `/gewerbe/ladenbau/referenzen/mixmarkt/` detail page when that ships (and embed the project as a teaser on
+  the Ladenbau cluster page) — the aggregator's intended hub→detail wiring.
+
+> **Still open — reverse SOLL trust-links → `/referenzen/` (need a render slot):** now that `/referenzen/`
+> exists, `audit:links` reports it as a recommended SOLL link from `/`, `/moebel-nach-mass/`,
+> `/kuechen-nach-mass/`, `/gewerbe/`, all Gewerbe clusters, `/moebelplaner/` and `/kontakt/`. These are
+> *empfohlen* (Hinweise, not errors) and have **no existing link slot** in the current pixel-perfect sections,
+> so they're queued for a dedicated reverse-linking pass rather than shoehorned into existing markup.
+> `/moebel-nach-mass/` IntroStats col3 stays on `/kuechen-nach-mass/` (its "Küchen nach Maß entdecken" anchor
+> fits that target; not repointed to `/referenzen/`).
 
 ### Wired in the `audit:links` pass (2026-06)
 

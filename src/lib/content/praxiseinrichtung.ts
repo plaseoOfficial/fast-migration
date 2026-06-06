@@ -120,26 +120,19 @@ export const praxisWarum = {
 
 export const praxisGeschichte = {
   heading: "Ein Meisterbetrieb, der Praxen und Kanzleien versteht",
-  subheading: "VOM GARAGENBETRIEB ZUM PARTNER FÜR PRAXISEINRICHTUNG.",
-  gallery: [
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", caption: "Werkstatt Espelkamp", width: 600, height: 600 },
-    { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Empfangstresen in einer Praxis", caption: "Empfangstresen", width: 800, height: 400 },
-    { src: "/images/2026/01/csm_Kabine_6550b3ca43.jpg", alt: "Funktionsraum mit Einbaumöbeln", caption: "Funktionsraum", width: 600, height: 900 },
-    { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Anmeldetresen nach Maß", caption: "Anmeldetresen", width: 600, height: 900 },
-    { src: "/images/2025/11/IMG_6123-scaled.jpg", alt: "Beratungsraum mit Aktenschrank", caption: "Beratungsraum", width: 600, height: 900 },
+  subheading: "Vom Garagenbetrieb zum Partner für Praxiseinrichtung",
+  anchorImage: "/images/2025/11/DSC07156-scaled.jpg",
+  anchorImageAlt: "Empfangstresen nach Maß für eine Arztpraxis — Fast Systemmöbel Espelkamp",
+  stats: [
+    { value: "1996", label: "Gegründet" },
+    { value: "1.000 m²", label: "Eigene Fertigung" },
+    { value: "200 km", label: "Montage-Radius" },
+    { value: "2013", label: "Meisterbetrieb" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag-Technologie und einem eingespielten Team.",
     "Was im Möbelbau für Privatkunden entstand, kommt in der Praxiseinrichtung doppelt zum Tragen: Wir kennen die Anforderungen an Hygiene, Reinigbarkeit, Termintreue und Diskretion, die ein Praxisprojekt mitbringt, und planen entsprechend praxisnah.",
     "Vom einzelnen Anmeldetresen bis zur kompletten Praxis fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
-  ],
-  factLines: [
-    "– Made in Germany",
-    "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
-    "– Homag-Technologie",
-    "– Montage bis 200 km",
-    "– Eigenes Montageteam",
   ],
 };
 
