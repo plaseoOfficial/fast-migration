@@ -3,10 +3,12 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - '**'
   pull_request:
-    branches:
-      - master
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   quality:
@@ -34,3 +36,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      # Nicht-blockierend (informativ), bis die offenen Link-Fehler sauber sind.
+      # Sobald `npm run audit:links` lokal grün ist: continue-on-error entfernen → harter Gate.
+      - name: Audit internal links (informativ)
+        run: npm run audit:links
+        continue-on-error: true

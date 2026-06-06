@@ -24,7 +24,7 @@ oder Struktur zu verändern. Macht den Text menschlich und im O-Ton Fast.
 ## Verbote
 - Keine Fakten/Zahlen ändern oder erfinden (gegen `FACTS.md` prüfen).
 - Keine Keywords/Entitäten, WDF*IDF-Terme oder interne Links entfernen.
-- Keine em-dashes, wenn `BRAND_VOICE.md` sie ausschließt.
+- Keine em-dashes („—") — `BRAND_VOICE.md` schließt sie aus (v1, final). Doppelpunkt/Komma/Punkt nutzen.
 - Länge/Wortzahl-Korridor des Briefs halten.
 
 ## Selbstcheck (vor Rückgabe)
