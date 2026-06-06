@@ -7,11 +7,11 @@
 export const ueberHero = {
   bgImage: "/images/2025/11/IMG_9120-scaled.jpg",
   imageAlt: "Maßgefertigtes Möbelstück von Fast Systemmöbel",
-  title: "Fast Systemmöbel – Möbel, die Ihr Zuhause verändern",
+  title: "Möbel, die Ihr Zuhause verändern",
   intro:
     "Fast Systemmöbel steht für klare Planung, ehrliche Handwerksarbeit und Möbel, die exakt zu Ihrem Alltag passen. Kein Zufall. Kein Standard. Sondern präzise gefertigte Lösungen für Räume in Espelkamp und Umgebung.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Über uns" },
   ],
 };

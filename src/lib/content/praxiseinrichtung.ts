@@ -15,7 +15,7 @@
 export const praxisHero = {
   bgImage: "/images/2025/11/DSC07156-scaled.jpg",
   imageAlt: "Praxiseinrichtung nach Maß – Empfangstresen und Wartebereich von Fast Systemmöbel",
-  title: "Praxiseinrichtung nach Maß aus Espelkamp – für Ärzte, Therapeuten und Kanzleien",
+  title: "Praxiseinrichtung nach Maß aus Espelkamp",
   intro:
     "Ihre Praxis und Ihre Kanzlei brauchen mehr als Möbel von der Stange. Wir planen und fertigen Empfangstresen, Behandlungsmöbel, Wartebereiche und Büromöbel zentimetergenau nach Maß. Gebaut im eigenen Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team direkt in Ihren Räumen.",
   breadcrumb: [
@@ -28,7 +28,7 @@ export const praxisHero = {
 export const praxisIntroStats = {
   since: "seit 1996",
   sinceSub: "Richten wir Praxen und Kanzleien ein.",
-  heading: "Praxiseinrichtung, die zu Ihren Abläufen und Ihrem Anspruch passt",
+  heading: "Praxiseinrichtung, die zu Ihnen passt",
   introBefore:
     "Ob Arztpraxis, Therapiezentrum, Anwalts- oder Steuerkanzlei. Wir begleiten Ihr Projekt von der ersten",
   introBold: "Planung",
@@ -54,16 +54,16 @@ export const praxisIntroStats = {
 };
 
 export const praxisProcess = {
-  heading: "Planung, Fertigung und Montage – Praxiseinrichtung aus einer Hand",
+  heading: "Praxiseinrichtung aus einer Hand",
   paragraph:
-    "Ihre Praxiseinrichtung entsteht in einem klaren Prozess: Aufmaß und Beratung vor Ort, digitale 3D-Planung Ihrer Räume, Fertigung auf Homag-Technologie und saubere Montage durch unser eigenes Team, auf Wunsch außerhalb der Sprechzeiten. Anmeldetresen, Behandlungsmöbel, Wartezimmer, Beratungsräume oder Hygiene- und Materialschränke: Wir liefern reinigbare, belastbare Einrichtungen, die dem täglichen Praxisbetrieb standhalten.",
+    "Aufmaß und Beratung vor Ort, digitale 3D-Planung, Fertigung auf Homag-Technik und saubere Montage durch unser eigenes Team, auf Wunsch außerhalb der Sprechzeiten. Anmeldetresen, Behandlungsmöbel, Wartezimmer oder Hygieneschränke: Wir liefern reinigbare, belastbare Einrichtungen, die dem täglichen Praxisbetrieb standhalten.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/DSC_0001.jpg",
   imageAlt: "Maßgefertigter Anmelde- und Empfangsbereich für eine Praxis",
 };
 
 export const praxisTypische = {
-  heading: "Typische Projekte – für Arztpraxen, Therapie und Kanzleien",
+  heading: "Was wir für Praxen bauen",
   image1: "/images/2025/11/DSC07156-scaled.jpg",
   image1Alt: "Maßgefertigter Empfangstresen mit Hygieneoberfläche",
   image2: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
@@ -105,9 +105,9 @@ export const praxisTypische = {
 };
 
 export const praxisWarum = {
-  heading: "Warum Praxiseinrichtung nach Maß statt Möbel von der Stange",
+  heading: "Warum Praxiseinrichtung vom Tischler",
   paragraph:
-    "Möbelhändler liefern Kataloglösungen in festen Rastermaßen. Wir bauen Ihre Einrichtung selbst, vollständig in unserem Meisterbetrieb in Espelkamp. Jeder Tresen, jeder Behandlungsschrank und jedes Aktenmöbel wird millimetergenau auf Ihren Grundriss, Ihre Hygieneanforderungen und Ihren Auftritt zugeschnitten. Das heißt: reinigbare Oberflächen, fugenarme Verarbeitung, abschließbarer Stauraum und ruhige Abläufe statt Kompromisse. Planung, Fertigung, Lieferung und Montage kommen aus einer Hand, mit festen Ansprechpartnern und ohne Subunternehmer.",
+    "Möbelhändler liefern Kataloglösungen in festen Rastermaßen. Wir bauen Ihre Einrichtung selbst, vollständig im Meisterbetrieb in Espelkamp. Jeder Tresen, jeder Behandlungsschrank, jedes Aktenmöbel wird millimetergenau auf Grundriss, Hygieneanforderungen und Auftritt zugeschnitten: reinigbare Oberflächen, fugenarme Verarbeitung, abschließbarer Stauraum. Planung, Fertigung, Lieferung und Montage aus einer Hand, ohne Subunternehmer.",
   images: [
     { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Empfangstresen in einer Praxis", width: 600, height: 450 },
     { src: "/images/2026/01/csm_Kabine_6550b3ca43.jpg", alt: "Funktionsraum mit Einbaumöbeln", width: 600, height: 800 },
@@ -119,8 +119,8 @@ export const praxisWarum = {
 };
 
 export const praxisGeschichte = {
-  heading: "Ein Meisterbetrieb, der Praxen und Kanzleien versteht",
-  subheading: "Vom Garagenbetrieb zum Partner für Praxiseinrichtung",
+  heading: "Ein Meisterbetrieb für Praxen und Kanzleien",
+  subheading: "Vom Garagenbetrieb zum Partner für Praxen",
   anchorImage: "/images/2025/11/DSC07156-scaled.jpg",
   anchorImageAlt: "Empfangstresen nach Maß für eine Arztpraxis — Fast Systemmöbel Espelkamp",
   stats: [
@@ -138,7 +138,7 @@ export const praxisGeschichte = {
 
 /** Online configurator block (shared MnmMoebelplaner), leads into /moebelplaner/. */
 export const praxisMoebelplaner = {
-  heading: "Ihre Praxiseinrichtung online planen und konfigurieren",
+  heading: "Praxiseinrichtung online planen",
   body:
     "Mit unserem Möbelplaner stellen Sie Tresen, Schränke und Wartebereich online zusammen. Maße, Fronten, Oberflächen und Stauraum sehen Sie direkt im 3D-Konfigurator. So bekommen Sie sofort ein Bild Ihrer Einrichtung. Danach übernehmen wir den Rest: Aufmaß vor Ort, Beratung, Fertigung und Montage. Aus Ihrer Online-Planung wird eine Praxiseinrichtung nach Maß.",
   ctaLabel: "Zum Möbelplaner",
@@ -151,13 +151,13 @@ export const praxisMoebelplaner = {
 export const praxisCtas = {
   intro: {
     image: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
-    heading: "Ihre Praxis verdient mehr als Möbel von der Stange.",
+    heading: "Ihre Praxis verdient mehr als Standardmöbel.",
     linkText: "Sprechen Sie mit uns über Ihr Praxisprojekt",
     href: "/kontakt",
   },
   final: {
     image: "/images/2025/11/IMG_6123-scaled.jpg",
-    heading: "Vom Anmeldetresen bis zum Funktionsraum – wir bauen es nach Maß.",
+    heading: "Vom Anmeldetresen bis zum Funktionsraum.",
     linkText: "Sprechen Sie mit uns über Ihre Praxiseinrichtung.",
     href: "/kontakt",
   },

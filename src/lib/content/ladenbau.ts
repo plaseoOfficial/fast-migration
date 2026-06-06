@@ -13,7 +13,7 @@
 export const ladenHero = {
   bgImage: "/images/2025/11/DSC_9965.jpg",
   imageAlt: "Ladenbau nach Maß – individuelle Ladeneinrichtung von Fast Systemmöbel",
-  title: "Ladenbau nach Maß aus Espelkamp – vom Tresen bis zur Shopfläche",
+  title: "Ladenbau nach Maß aus Espelkamp",
   intro:
     "Ihre Verkaufsfläche entscheidet über den ersten Eindruck. Wir planen und fertigen Ihre Ladeneinrichtung nach Maß – von der einzelnen Theke bis zur kompletten Shopkonzeption. Handwerklich gebaut im eigenen Meisterbetrieb in Espelkamp und vor Ort in Ihrem Geschäft montiert.",
   breadcrumb: [
@@ -26,7 +26,7 @@ export const ladenHero = {
 export const ladenIntroStats = {
   since: "seit 1996",
   sinceSub: "Statten wir Geschäfte aus.",
-  heading: "Ladenbau, der zu Ihrer Marke und Ihren Abläufen passt",
+  heading: "Ladenbau, der zu Ihrer Marke passt",
   introBefore:
     "Ob Einzelhandel, Gastronomie oder Dienstleistung – wir begleiten Ihr Projekt von der ersten",
   introBold: "Planung",
@@ -52,7 +52,7 @@ export const ladenIntroStats = {
 };
 
 export const ladenProcess = {
-  heading: "Planung, Fertigung und Montage – Ladenbau aus einer Hand",
+  heading: "Ladenbau, alles aus einer Hand",
   paragraph:
     "Ihr Ladenbau entsteht in einem klaren Prozess: Aufmaß und Beratung vor Ort, digitale 3D-Planung Ihrer Verkaufsfläche, Fertigung auf Homag-Technologie und saubere Montage durch unser eigenes Team – auf Wunsch außerhalb Ihrer Öffnungszeiten. Theken, Regalsysteme, Empfangstresen, Shop-in-Shop-Flächen oder die komplette Geschäftsausstattung: Wir liefern robuste Einrichtungen, die dem täglichen Kundenverkehr standhalten.",
   paragraphStrong: "Made in Germany.",
@@ -61,7 +61,7 @@ export const ladenProcess = {
 };
 
 export const ladenTypische = {
-  heading: "Typische Ladenbau-Projekte – für Einzelhandel, Gastronomie und Dienstleistung",
+  heading: "Was wir im Ladenbau umsetzen",
   image1: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
   image1Alt: "Maßgefertigte Ladeneinrichtung im Einzelhandel",
   image2: "/images/2025/11/20181220_075204314_iOS-scaled.jpg",
@@ -103,9 +103,9 @@ export const ladenTypische = {
 };
 
 export const ladenWarum = {
-  heading: "Warum handwerklicher Ladenbau nach Maß statt Möbel von der Stange",
+  heading: "Warum Ladenbau vom Tischler",
   paragraph:
-    "Systemmöbel-Händler liefern Kataloglösungen. Wir bauen Ihre Einrichtung selbst – vollständig in unserem Meisterbetrieb in Espelkamp. Jede Theke, jedes Regal und jeder Tresen wird millimetergenau auf Ihre Fläche, Ihr Sortiment und Ihre Marke zugeschnitten. Das heißt: keine Kompromisse bei Maßen, Materialien und Belastbarkeit, sondern Einrichtungen, die zu Ihren Abläufen passen und über Jahre standhalten. Planung, Fertigung, Lieferung und Montage kommen aus einer Hand – mit festen Ansprechpartnern und ohne Subunternehmer.",
+    "Systemmöbel-Händler liefern Kataloglösungen. Wir bauen Ihre Einrichtung selbst, vollständig im Meisterbetrieb in Espelkamp. Jede Theke, jedes Regal, jeder Tresen wird millimetergenau auf Ihre Fläche, Ihr Sortiment und Ihre Marke zugeschnitten, robust für Jahre im Kundenverkehr. Planung, Fertigung, Lieferung und Montage kommen aus einer Hand, ohne Subunternehmer.",
   images: [
     { src: "/images/2025/11/DSC_9965.jpg", alt: "Moderne Ladeneinrichtung", width: 600, height: 450 },
     { src: "/images/2025/11/DSC_9814.jpg", alt: "Maßgefertigter Verkaufstresen", width: 600, height: 400 },
@@ -138,13 +138,13 @@ export const ladenGeschichte = {
 export const ladenCtas = {
   intro: {
     image: "/images/2025/11/DSC_9814.jpg",
-    heading: "Ihr Geschäft verdient mehr als Möbel von der Stange.",
+    heading: "Ihr Geschäft verdient mehr als Standardmöbel.",
     linkText: "Sprechen Sie mit uns über Ihr Ladenbau-Projekt",
     href: "/kontakt/",
   },
   final: {
     image: "/images/2025/11/DSC_9938.jpg",
-    heading: "Vom Tresen bis zur Shopfläche – wir bauen es nach Maß.",
+    heading: "Vom Tresen bis zur Shopfläche.",
     linkText: "Sprechen Sie mit uns über Ihr Ladenbau-Projekt.",
     href: "/kontakt/",
   },

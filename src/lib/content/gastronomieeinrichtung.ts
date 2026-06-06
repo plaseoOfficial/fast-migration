@@ -16,7 +16,7 @@ export const gastroHero = {
   bgImage: "/images/2025/11/DSC_9938.jpg",
   imageAlt:
     "Gastronomieeinrichtung nach Maß: massive Holztheke für ein Restaurant von Fast Systemmöbel",
-  title: "Gastronomieeinrichtung nach Maß aus Espelkamp: Theke, Bar und Hotel",
+  title: "Gastronomieeinrichtung nach Maß aus Espelkamp",
   intro:
     "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß. Theken, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team. Im Einzugsgebiet und bundesweit.",
   breadcrumb: [
@@ -55,16 +55,16 @@ export const gastroIntroStats = {
 };
 
 export const gastroProcess = {
-  heading: "Planung, Fertigung und Montage: Gastronomieeinrichtung aus einer Hand",
+  heading: "Gastronomieeinrichtung aus einer Hand",
   paragraph:
-    "Ihre Einrichtung entsteht in klaren Schritten. Zuerst beraten wir Sie und nehmen vor Ort genau Maß. Dann planen wir digital, inklusive Technik, Spülen und Anschlüssen. Wir fertigen auf Homag- und CNC-Technik in Espelkamp. Zum Schluss montiert unser eigenes Team. Auf Wunsch nachts oder am Ruhetag, damit Ihr Betrieb so wenig wie möglich schließt. Theken, Rückbuffets, Sitzbänke, Hotelmöbel oder die komplette Objekteinrichtung. Wir bauen Möbel, die dem Dauereinsatz im Gastraum standhalten.",
+    "Erst beraten wir und nehmen vor Ort genau Maß. Dann planen wir digital, mit Technik und Anschlüssen, und fertigen auf Homag- und CNC-Technik in Espelkamp. Montiert wird von unserem eigenen Team, auf Wunsch nachts oder am Ruhetag, damit Ihr Betrieb kaum schließt. Theken, Rückbuffets, Sitzbänke oder Hotelmöbel: gebaut für den Dauereinsatz im Gastraum.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/IMG_2772-scaled.jpg",
   imageAlt: "Maßgefertigte Bar mit Rückbuffet und integrierter Technik",
 };
 
 export const gastroTypische = {
-  heading: "Typische Gastro-Projekte: für Restaurant, Café, Bar, Hotel und Kantine",
+  heading: "Was wir für die Gastronomie bauen",
   image1: "/images/2025/11/IMG_2673-scaled.jpg",
   image1Alt: "Maßgefertigte Theke in einem Restaurant",
   image2: "/images/2025/11/DSC_9938.jpg",
@@ -106,9 +106,9 @@ export const gastroTypische = {
 };
 
 export const gastroWarum = {
-  heading: "Warum Gastronomieeinrichtung vom Tischler statt vom Großhändler",
+  heading: "Warum Gastro-Einrichtung vom Tischler",
   paragraph:
-    "Beim Gastro-Großhändler kaufen Sie Standardmöbel aus dem Katalog, in festen Maßen und mit begrenzten Materialien. Wir bauen Ihre Einrichtung selbst, vollständig in unserem Meisterbetrieb in Espelkamp. Jede Theke, jedes Rückbuffet und jede Sitzbank wird millimetergenau auf Ihren Gastraum, Ihren Serviceweg und Ihr Konzept zugeschnitten. Wir setzen auf strapazierfähige Oberflächen, hygienische Verarbeitung und Beschläge, die dem Dauereinsatz standhalten. Planung, Fertigung, Lieferung und Montage kommen aus einer Hand. Mit festen Ansprechpartnern, eigenem Montageteam und ohne Subunternehmer.",
+    "Beim Großhändler kaufen Sie Standardmöbel aus dem Katalog, in festen Maßen. Wir bauen Ihre Einrichtung selbst, vollständig im Meisterbetrieb in Espelkamp. Jede Theke, jedes Rückbuffet, jede Sitzbank wird millimetergenau auf Gastraum, Serviceweg und Konzept zugeschnitten, mit strapazierfähigen Oberflächen und Beschlägen für den Dauereinsatz. Planung, Fertigung, Lieferung und Montage aus einer Hand, ohne Subunternehmer.",
   images: [
     { src: "/images/2025/11/DSC_9938.jpg", alt: "Bar mit Rückbuffet nach Maß", width: 600, height: 450 },
     { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Maßgefertigte Service-Station mit integrierter Technik", width: 600, height: 800 },
@@ -121,7 +121,7 @@ export const gastroWarum = {
 
 export const gastroGeschichte = {
   heading: "Ein Meisterbetrieb, der den Gastraum versteht",
-  subheading: "Vom Garagenbetrieb zum Partner für Gastronomieeinrichtung",
+  subheading: "Vom Garagenbetrieb zum Partner für Gastronomie",
   anchorImage: "/images/2025/11/IMG_6123-scaled.jpg",
   anchorImageAlt: "Hotellobby mit Empfangstresen nach Maß — Fast Systemmöbel Espelkamp",
   stats: [
@@ -150,13 +150,13 @@ export const gastroMoebelplaner = {
 export const gastroCtas = {
   intro: {
     image: "/images/2025/11/IMG_2673-scaled.jpg",
-    heading: "Ihr Gastraum verdient mehr als Möbel von der Stange.",
+    heading: "Ihr Gastraum verdient mehr als Standardmöbel.",
     linkText: "Sprechen Sie mit uns über Ihr Gastro-Projekt",
     href: "/kontakt",
   },
   final: {
     image: "/images/2025/11/DSC_9938.jpg",
-    heading: "Von der Theke bis zur Hoteleinrichtung: wir bauen es nach Maß.",
+    heading: "Von der Theke bis zur Hoteleinrichtung.",
     linkText: "Sprechen Sie mit uns über Ihr Gastro-Projekt.",
     href: "/kontakt",
   },
