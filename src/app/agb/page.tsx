@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Allgemeine Geschäftsbedingungen der Fast Systemmöbel.",
     locale: "de_DE",
     type: "website",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 

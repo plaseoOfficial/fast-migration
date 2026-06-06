@@ -17,7 +17,7 @@ export const ladenHero = {
   intro:
     "Ihre Verkaufsfläche entscheidet über den ersten Eindruck. Wir planen und fertigen Ihre Ladeneinrichtung nach Maß – von der einzelnen Theke bis zur kompletten Shopkonzeption. Handwerklich gebaut im eigenen Meisterbetrieb in Espelkamp und vor Ort in Ihrem Geschäft montiert.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Ladenbau" },
   ],

@@ -1,11 +1,11 @@
 /**
- * Content for the `/kuechen-nach-mass/` page — the "Küchen nach Maß" cluster
+ * Content for the `/kuechen-nach-mass/` page: the "Küchen nach Maß" cluster
  * pillar under the `/moebel-nach-mass/` hub. Built from the Privat library
- * sections. Copy follows the plaseo brand voice (direct, concrete, local,
- * active, short sentences, no em-dashes). See ARCHITECTURE.md → Privat recipe.
+ * sections. Copy follows the Fast Systemmöbel brand voice (Sie-Anrede,
+ * handwerklich, konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md.
  */
 
-const SITE = "https://fast.side-boost.com";
+const SITE = "https://www.fast-systemmoebel.de";
 const PATH = "/kuechen-nach-mass/";
 
 export const kuechenHero = {
@@ -13,9 +13,9 @@ export const kuechenHero = {
   imageAlt: "Moderne Küche nach Maß mit grifflosen Fronten und Kochinsel",
   title: "Küchen nach Maß aus Espelkamp: zentimetergenau vom Meisterbetrieb",
   intro:
-    "Eine Küche von der Stange passt selten genau. Wir planen und bauen Ihre Küche nach Maß. Zentimetergenau auf Ihren Raum, Ihren Alltag und Ihre Geräte. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team.",
+    "Eine Küche von der Stange passt selten wirklich. Wir planen und bauen Ihre Küche nach Maß, auf den Millimeter auf Ihren Raum, Ihren Alltag und Ihre Geräte zugeschnitten. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert vom eigenen Team. Wand zu Wand, ohne Passleisten. Ob gerade Küchenzeile, Kochinsel oder schwierige Dachschräge: Sie sagen uns, wie Sie sich Ihre Maßküche vorstellen, ruhig auch die ungewöhnlichen Ideen. Den Rest setzen wir um.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
     { label: "Küchen nach Maß" },
   ],
@@ -26,25 +26,25 @@ export const kuechenIntroStats = {
   sinceSub: "Bauen wir Küchen nach Maß.",
   heading: "Ihre Küche nach Maß: präzise geplant, sauber gebaut",
   introBefore:
-    "Fast Systemmöbel aus Espelkamp plant Ihre Küche von der ersten Skizze bis zur Montage. Wir nehmen uns Zeit für ein genaues Aufmaß und nutzen jeden",
+    "Fast Systemmöbel aus Espelkamp plant Ihre Küche von der ersten Skizze bis zur Montage. Wir nehmen uns Zeit für ein kostenloses Aufmaß vor Ort und nutzen jeden",
   introBold: "Zentimeter",
   introAfter:
-    ". So entsteht eine Küche, die exakt in Ihren Raum passt und jahrelang hält.",
+    ". So entsteht eine Küche, die genau in Ihren Raum passt, sich an Ihren Alltag anpasst und über Jahre hält.",
   bandImage: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg",
   bandAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte",
   col1Title: "Küche planen",
   col1Body:
-    "Wir planen Ihre Küche nach Maß: Grundriss, Wege, Stauraum, Geräte. Sie sagen uns, wie Sie kochen und leben. Wir bauen die Küche darum herum. Markengeräte planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube.",
+    "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, und genau darauf richten wir die Küche aus. Markengeräte planen wir passgenau ein, vom Backofen über das Kochfeld bis zur Dunstabzugshaube. Die Geräte wählen Sie frei. Wir setzen alle gängigen Hersteller ein und bauen die Küche darum herum.",
   col1CtaLabel: "Jetzt Küche anfragen",
-  col1CtaHref: "/kontakt",
+  col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Front, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp. Kein Zwischenhändler, kein Standardmaß. Sie haben einen Ansprechpartner von der Planung bis zur Montage.",
+    "Jede Front, jeder Korpus, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das macht sie nahezu wasserfest. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
   col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Unsere CNC- und Homag-Technik fertigt jedes Bauteil millimetergenau. Die handwerkliche Kontrolle sorgt dafür, dass am Ende alles sitzt. So sieht Ihre Küche auch nach Jahren noch gut aus.",
+    "Über 72.000 gefertigte Einzelteile aus unserer Werkstatt. Unsere Homag-Technik fertigt jedes Bauteil millimetergenau, und die handwerkliche Kontrolle sorgt dafür, dass am Ende alles sitzt. So sieht Ihre Küche auch nach Jahren noch aus wie am ersten Tag.",
   col3CtaLabel: "Küche online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -52,22 +52,28 @@ export const kuechenIntroStats = {
 export const kuechenCtas = {
   intro: {
     image: "/images/2025/11/IMG_9387-scaled.jpg",
-    heading: "Ihre Traumküche nach Maß",
+    heading: "Ihre Küche nach Maß beginnt mit einem Gespräch",
     linkText: "Sprechen Sie mit uns über Ihre Küche",
-    href: "/kontakt",
+    href: "/kontakt/",
   },
   final: {
     image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
     heading: "Ihre Küche verdient mehr als Standardmaße.",
     linkText: "Jetzt kostenlose Küchenberatung anfragen",
-    href: "/kontakt",
+    href: "/kontakt/",
+  },
+  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
+  phone: {
+    label: "Lieber direkt sprechen? Rufen Sie uns an:",
+    number: "05771 9138312",
+    href: "tel:+4957719138312",
   },
 };
 
 export const kuechenProcess = {
   heading: "Planung, Fertigung und Montage für Ihre Küche aus einer Hand",
   paragraph:
-    "Ihre Küche entsteht in klaren Schritten. Zuerst beraten wir Sie und nehmen vor Ort genau Maß. Dann planen wir digital, inklusive Geräte und Anschlüsse. Wir fertigen auf Homag-Technik in Espelkamp. Zum Schluss montiert unser eigenes Team Ihre Küche sauber und termingerecht. Ein Ansprechpartner, klare Termine, kein Subunternehmer.",
+    "Ihre Küche entsteht in klaren Schritten. Zuerst beraten wir Sie und nehmen vor Ort kostenlos genau Maß. Dann planen wir in 3D, mit Geräten, Anschlüssen und Laufwegen, und Sie sehen Ihre Küche, bevor das erste Bauteil entsteht. Haben Sie freigegeben, fertigen wir auf Homag-Technik in Espelkamp. Zum Schluss montiert unser eigenes Team Ihre Küche, sauber und zum verbindlichen Termin, den wir nach Aufmaß und Freigabe mit Ihnen festlegen. Ein Ansprechpartner von der Beratung bis zur Abnahme, klare Absprachen, eine Hand.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
   imageAlt: "Maßgefertigte Küche in Grau mit Kochinsel",
@@ -84,34 +90,34 @@ export const kuechenTypische = {
     {
       title: "Küchenzeilen",
       description:
-        "Klare, gerade Küchenzeilen, die jeden Meter Wand nutzen. Ideal für offene Wohnküchen und schmale Grundrisse.",
+        "Klare, gerade Küchenzeilen, die jeden Meter Wand ausnutzen. Wir bauen Wand zu Wand, ohne Passleisten und ohne Lücken. Ideal für offene Wohnküchen und schmale Grundrisse.",
     },
     {
       title: "L- und U-Küchen",
       description:
-        "Über Eck geplant für kurze Wege und viel Arbeitsfläche. Wir passen jede Ecke zentimetergenau an.",
+        "Über Eck geplant, für kurze Wege und viel Arbeitsfläche. Jede Ecke passen wir zentimetergenau an, auch dort, wo Wände nicht im rechten Winkel stehen.",
     },
     {
       title: "Kochinseln",
       description:
-        "Die Insel als Mittelpunkt: zum Kochen, Arbeiten und Zusammensitzen. Mit integriertem Kochfeld, Stauraum und Sitzplatz.",
+        "Die Insel als Mittelpunkt: zum Kochen, Arbeiten und Zusammensitzen. Mit integriertem Kochfeld, Stauraum und Sitzplatz, abgestimmt auf Ihre Geräte.",
     },
   ],
   row2: [
     {
       title: "Grifflose Küchen",
       description:
-        "Reduziertes Design ohne sichtbare Griffe. Glatte Fronten, ruhige Optik, leicht zu reinigen.",
+        "Reduziertes Design ohne sichtbare Griffe. Glatte Fronten, ruhige Optik, leicht zu reinigen. Auf Wunsch kombiniert mit Holz oder ungewöhnlichen Materialien.",
     },
     {
       title: "Landhaus und Klassik",
       description:
-        "Warme, zeitlose Küchen mit Rahmenfronten und natürlichen Materialien. Modern interpretiert, handwerklich gebaut.",
+        "Warme, zeitlose Küchen mit Rahmenfronten und natürlichen Materialien wie Massivholz. Modern interpretiert und von Hand gebaut.",
     },
     {
       title: "Stauraum nach Maß",
       description:
-        "Apothekerauszüge, Eckschränke, Vorratsschränke bis zur Decke. Jeder Zentimeter wird nutzbar.",
+        "Apothekerauszüge, Eckschränke und Vorratsschränke bis unter die Decke. Auch unter Dachschrägen und in Nischen wird jeder Zentimeter nutzbar.",
     },
   ],
 };
@@ -119,7 +125,7 @@ export const kuechenTypische = {
 export const kuechenWarum = {
   heading: "Warum eine Küche vom Tischler mehr kann als von der Stange",
   paragraph:
-    "Im Küchenstudio kaufen Sie eine Markenküche in festen Rastermaßen. In der Möbelkette bekommen Sie Standard. Wir bauen Ihre Küche selbst, in Espelkamp, zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken oder Nischen sind für uns kein Problem, sondern Alltag. Sie wählen Fronten, Materialien und Geräte frei. Wir liefern die handwerkliche Umsetzung und montieren im Umkreis von 200 km mit eigenem Team. Ein Ansprechpartner, klare Preise, eine Küche, die exakt passt.",
+    "Im Küchenstudio kaufen Sie eine Markenküche in festen Rastermaßen, im Möbelhaus Standard von der Stange. Wir bauen Ihre Küche selbst, in Espelkamp, zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen: für uns kein Sonderfall, sondern Alltag. Wir bauen Wand zu Wand, ohne Passleisten, sodass nichts gestückelt wirkt. Fronten, Materialien und Geräte wählen Sie frei, und auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen sind möglich. Was andere Küchenstudios als unmöglich abtun, gehört zur Kernkompetenz einer Schreinerküche vom Meisterbetrieb: Wir planen es durch und setzen es um. Wir liefern die handwerkliche Umsetzung und montieren im Umkreis von rund 200 km um Espelkamp mit eigenem Team. Den Weg dorthin können Sie übrigens in unserem Möbelplaner schon einmal selbst durchspielen. Ein Ansprechpartner, ein klares und individuelles Angebot, eine Küche, die genau passt.",
   images: [
     { src: "/images/2026/05/variante_1778229163946_1-scaled.jpg", alt: "Graue Küche nach Maß mit Holzdecke und Insel", width: 600, height: 400 },
     { src: "/images/2025/11/IMG_9387-scaled.jpg", alt: "Küche nach Maß mit grifflosen Fronten und Holzrückwand", width: 600, height: 800 },
@@ -141,14 +147,14 @@ export const kuechenGeschichte = {
     { src: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg", alt: "U-Küche mit Stein-Insel", caption: "U-Küche mit Stein", width: 600, height: 500 },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp.",
-    "Aus den ersten Küchen wurde ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Heute planen, fertigen und montieren wir Küchen nach Maß, die zentimetergenau sitzen.",
-    "Jede Küche entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von 200 km, geliefert deutschlandweit.",
+    "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, und aus dem Gründungsbetrieb von Johann Fast wurde ein Familienunternehmen.",
+    "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Wir planen, fertigen und montieren Küchen nach Maß, die auf den Millimeter sitzen.",
+    "Jede Küche entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, geliefert deutschlandweit.",
   ],
   factLines: [
     "– Made in Germany",
     "– 1.000 m² Fertigung",
-    "– Meisterbetrieb seit 2013",
+    "– Meisterbetrieb",
     "– Homag-Technologie",
     "– Montage bis 200 km",
     "– Lieferung bundesweit",
@@ -158,7 +164,7 @@ export const kuechenGeschichte = {
 export const kuechenMoebelplaner = {
   heading: "Ihre Küche online planen und konfigurieren",
   body:
-    "Mit unserem Möbelplaner stellen Sie Ihre Küche online zusammen. Maße, Fronten, Auszüge und Geräte sehen Sie direkt im 3D-Konfigurator. So bekommen Sie sofort ein Bild von Ihrer Küche. Danach übernehmen wir den Rest: Aufmaß vor Ort, Beratung, Fertigung und Montage. Aus Ihrer Online-Planung wird eine Küche nach Maß.",
+    "Mit unserem Möbelplaner stellen Sie Ihre Küche online zusammen. Maße, Fronten, Auszüge und Geräte sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrer Küche vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird eine Küche nach Maß.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/IMG_9387-scaled.jpg",
@@ -171,34 +177,64 @@ export const kuechenFaq = {
   heading: "Häufige Fragen zu Küchen nach Maß",
   items: [
     {
-      question: "Was kostet eine Küche nach Maß?",
+      question: "Was kostet eine Küche nach Maß vom Schreiner?",
       answer:
-        "Das hängt von Größe, Material und Geräten ab. Eine Küche nach Maß ist oft günstiger als gedacht, weil Sie nur das bezahlen, was Sie wirklich brauchen. Wir erstellen ein klares Angebot ohne versteckte Kosten. Am genauesten geht das nach einem kurzen Gespräch und dem Aufmaß.",
+        "Der Preis ist immer individuell. Er ergibt sich aus der Größe der Küche, den Fronten, der Arbeitsplatte, den gewählten Geräten und der Ausstattung wie Auszügen und Beschlägen. Einen Pauschalpreis gibt es bei einer Maßanfertigung nicht. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erstellen wir Ihnen ein klares, individuelles Angebot, ohne versteckte Kosten.",
+    },
+    {
+      question: "Was ist der Unterschied zwischen einer Küche nach Maß und einer Serienküche?",
+      answer:
+        "Eine Serienküche kommt in festen Rastermaßen und wird mit Passleisten an die Wand angeglichen. Eine Maßküche bauen wir zentimetergenau, Wand zu Wand und ohne Passleisten. Fronten, Materialien und Geräte wählen Sie frei. So nutzen Sie jeden Zentimeter und zahlen nur für das, was Sie wirklich brauchen.",
+    },
+    {
+      question: "Lohnt sich eine Küche nach Maß gegenüber einer Serienküche?",
+      answer:
+        "Wenn Ihr Raum, Ihr Grundriss oder Ihre Ansprüche vom Standardraster abweichen, lohnt sie sich. Sie nutzen jeden Zentimeter, vermeiden Lücken und Passleisten und bekommen genau die Ausstattung, die zu Ihnen passt. Gerade bei verwinkelten oder kleinen Räumen holen Sie aus einer Maßküche oft mehr Stauraum und Arbeitsfläche heraus als aus einer Standardküche.",
+    },
+    {
+      question: "Tischler oder Küchenstudio: Was passt für mich?",
+      answer:
+        "Im Küchenstudio kaufen Sie eine Markenküche in festen Rastermaßen. Beim Tischler bekommen Sie eine echte Tischlerküche in Sondermaßen, aus eigener Fertigung, maßgenau auf Ihren Raum gebaut. Ist Ihr Grundriss schwierig oder haben Sie ungewöhnliche Ideen, dann ist der Tischler die passende Adresse. Beides hat seine Berechtigung, und wir ordnen das im Gespräch ehrlich für Sie ein.",
+    },
+    {
+      question: "Warum ist eine Küche nach Maß oft teurer als eine von der Stange?",
+      answer:
+        "Wir fertigen jede Küche einzeln statt in großer Serie. Dafür bekommen Sie exakte Passung Wand zu Wand, freie Material- und Gerätewahl und eine Verarbeitung, die lange hält, unter anderem durch unsere nahezu wasserfeste PU-Kantenverleimung. Sie zahlen für Wert und Langlebigkeit, nicht für einen Stückpreis.",
     },
     {
       question: "Wie lange dauert es von der Planung bis zur fertigen Küche?",
       answer:
-        "In der Regel einige Wochen. Nach Beratung und Aufmaß planen wir die Küche, Sie geben sie frei, dann fertigen wir. Den genauen Termin nennen wir Ihnen verbindlich vor Produktionsstart.",
+        "Nach Beratung und kostenlosem Aufmaß planen wir Ihre Küche, Sie geben sie frei, dann fertigen wir in Espelkamp. Den verbindlichen Termin für Lieferung und Montage legen wir nach dem Aufmaß und Ihrer Freigabe gemeinsam fest, noch bevor die Produktion startet. So wissen Sie früh, wann Ihre Küche steht.",
+    },
+    {
+      question: "Welche Materialien und Arbeitsplatten sind möglich?",
+      answer:
+        "Wir arbeiten mit Massivholz und branchenüblichen Materialien. Fronten und Arbeitsplatte wählen Sie frei, auch ungewöhnliche Kombinationen sind möglich. Sagen Sie uns, welche Optik und welche Eigenschaften Ihnen wichtig sind, dann beraten wir Sie zu den passenden Materialien.",
     },
     {
       question: "Kann ich meine eigenen Markengeräte einbauen lassen?",
       answer:
-        "Ja. Wir planen Geräte aller gängigen Marken passgenau ein, vom Backofen über das Kochfeld bis zur Spüle. Sie bringen Ihre Wunschgeräte mit oder wir beraten Sie dazu.",
+        "Ja. Die Geräte wählen Sie frei, wir planen alle gängigen Hersteller passgenau ein, vom Backofen über das Kochfeld und die Dunstabzugshaube bis zur Spüle. Sie bringen Ihre Wunschgeräte mit, oder wir beraten Sie dazu.",
     },
     {
-      question: "Passt eine Küche nach Maß auch in einen schwierigen Grundriss?",
+      question: "Passt eine Küche nach Maß auch in einen schwierigen Grundriss oder unter eine Dachschräge?",
       answer:
-        "Genau dafür ist sie da. Schräge Wände, Dachschrägen, Nischen oder niedrige Decken nutzen wir gezielt aus. Wir bauen zentimetergenau, wo Standardküchen aufhören.",
+        "Genau dafür ist sie da. Schräge Wände, Dachschrägen, Nischen und niedrige Decken nutzen wir gezielt aus. Wir bauen Wand zu Wand dort, wo Standardküchen aufhören, und setzen auch ungewöhnliche Vorstellungen um.",
     },
     {
-      question: "Montieren Sie die Küche auch bei mir vor Ort?",
+      question: "Montieren Sie die Küche bei mir vor Ort, und wie weit liefern Sie?",
       answer:
-        "Ja, mit eigenem Team. Wir liefern und montieren im Umkreis von rund 200 km um Espelkamp. Deutschlandweite Lieferung ist auf Anfrage möglich.",
+        "Die Montage übernimmt immer unser eigenes Team, im Umkreis von rund 200 km um Espelkamp, zum Beispiel in Minden, Lübbecke, Osnabrück und Bielefeld. Außerhalb dieses Radius liefern wir bundesweit in ganz Deutschland. Wichtig zu wissen: Die Lieferung ist deutschlandweit möglich, die Montage ist an das Gebiet um Espelkamp gebunden.",
     },
     {
-      question: "Gibt es eine Garantie auf die Küche?",
+      question: "Gibt es eine Finanzierung für meine Küche?",
       answer:
-        "Ja. Auf unsere Küchen nach Maß geben wir bis zu 5 Jahre Garantie. Hochwertige Beschläge und saubere Verarbeitung sorgen dafür, dass die Küche lange hält.",
+        "Ja, eine Finanzierung ist auf Wunsch möglich. Sprechen Sie uns einfach im Beratungsgespräch darauf an, dann klären wir die Möglichkeiten gemeinsam.",
+    },
+    {
+      question: "Wie langlebig ist eine Küche nach Maß, und wie pflege ich sie?",
+      answer:
+        "Eine Küche von uns ist auf lange Haltbarkeit gebaut. Dafür sorgen saubere Verarbeitung, hochwertige Beschläge und unsere PU-Kantenverleimung, die die Kanten nahezu wasserfest macht. Zum Beweis tauchen wir eine Musterkante 24 Stunden unter Wasser. Im Alltag genügen milde Reiniger und ein weiches Tuch. Es gilt die gesetzliche Gewährleistung.",
     },
   ],
 };
@@ -222,18 +258,24 @@ export const kuechenJsonLd: Record<string, unknown>[] = [
       "@type": "Organization",
       name: "Fast Systemmöbel",
       url: `${SITE}/`,
+      telephone: "+4957719138312",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Alte Waldstraße 32",
+        postalCode: "32339",
         addressLocality: "Espelkamp",
         addressRegion: "Nordrhein-Westfalen",
         addressCountry: "DE",
       },
     },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-      geoRadius: "200000",
-    },
+    areaServed: [
+      {
+        "@type": "GeoCircle",
+        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
+        geoRadius: "200000",
+      },
+      { "@type": "Country", name: "DE" },
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Küchen nach Maß",
@@ -247,7 +289,7 @@ export const kuechenJsonLd: Record<string, unknown>[] = [
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Startseite", item: `${SITE}/` },
+      { "@type": "ListItem", position: 1, name: "Fast Systemmöbel", item: `${SITE}/` },
       { "@type": "ListItem", position: 2, name: "Möbel nach Maß", item: `${SITE}/moebel-nach-mass/` },
       { "@type": "ListItem", position: 3, name: "Küchen nach Maß", item: `${SITE}${PATH}` },
     ],
