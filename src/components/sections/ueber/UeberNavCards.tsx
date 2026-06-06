@@ -36,7 +36,7 @@ export function UeberNavCards({ cards }: UeberNavCardsProps) {
             />
             <div
               className="absolute inset-0 z-[1]"
-              style={{ backgroundColor: "rgba(20,20,20,0.45)" }}
+              style={{ backgroundColor: "rgba(61,61,61,0.45)" }}
               aria-hidden="true"
             />
 
@@ -44,7 +44,7 @@ export function UeberNavCards({ cards }: UeberNavCardsProps) {
             <div className="relative z-10 flex items-start justify-between">
               <h3
                 className="font-medium text-white"
-                style={{ fontSize: "clamp(26px, 3vw, 34px)", lineHeight: "1.1", letterSpacing: "-1px" }}
+                style={{ fontSize: "clamp(22px, 3vw, 37px)", lineHeight: "1.1", letterSpacing: "-1px" }}
               >
                 {card.heading}
               </h3>

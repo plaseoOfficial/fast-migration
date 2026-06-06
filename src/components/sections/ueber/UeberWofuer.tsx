@@ -34,15 +34,15 @@ export function UeberWofuer({
         fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
       }}
     >
-      <div className="mx-auto w-full max-w-[1350px] px-6 py-16 lg:px-10 lg:py-20">
+      <div className="mx-auto w-full max-w-[1280px] px-6 py-[48px] lg:px-8 lg:py-[84px]">
         {/* Heading + CTA row */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2
             className="font-medium"
             style={{
-              fontSize: "clamp(34px, 5vw, 60px)",
+              fontSize: "clamp(45px, 5vw, 65px)",
               lineHeight: "1.1",
-              letterSpacing: "-3px",
+              letterSpacing: "0",
               color: "rgb(61,61,61)",
             }}
           >
@@ -72,14 +72,14 @@ export function UeberWofuer({
           {columns.map((col) => (
             <div key={col.title}>
               <h3
-                className="font-semibold"
-                style={{ fontSize: "18px", lineHeight: "26px", color: "rgb(61,61,61)" }}
+                className="font-medium"
+                style={{ fontSize: "18px", lineHeight: "1.3", color: "rgb(61,61,61)" }}
               >
                 {col.title}
               </h3>
               <p
                 className="mt-3"
-                style={{ fontSize: "15px", lineHeight: "24px", color: "rgb(102,102,102)" }}
+                style={{ fontSize: "16px", lineHeight: "1.7", color: "rgb(102,102,102)" }}
               >
                 {col.body}
               </p>
