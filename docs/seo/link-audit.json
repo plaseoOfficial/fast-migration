@@ -2,14 +2,14 @@
   "summary": {
     "pagesBuilt": 16,
     "pagesPlanned": 10,
-    "linksFound": 132,
+    "linksFound": 138,
     "partialExtraction": [
       "/"
     ],
     "counts": {
-      "Fehler": 20,
+      "Fehler": 23,
       "Warnung": 1,
-      "Hinweis": 54
+      "Hinweis": 51
     }
   },
   "findings": [
@@ -74,6 +74,30 @@
       "message": "Platzhalter-Link `#` (kein Ziel).",
       "file": "src/lib/content.ts",
       "line": 206,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/app/(site)/kuechen-nach-mass/page.tsx",
+      "line": 68,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/app/(site)/kuechen-nach-mass/page.tsx",
+      "line": 75,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/app/(site)/kuechen-nach-mass/page.tsx",
+      "line": 82,
       "href": "#"
     },
     {
@@ -245,27 +269,6 @@
       "severity": "Hinweis",
       "check": "canonical",
       "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/kuechen-nach-mass.ts",
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/kuechen-nach-mass.ts",
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/kuechen-nach-mass.ts",
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/content/ladenbau.ts",
       "href": "/kontakt"
     },
@@ -370,33 +373,33 @@
     {
       "severity": "Hinweis",
       "check": "canonical",
-      "message": "`/kuechen-nach-mass` → kanonisch `/kuechen-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/nav.ts",
-      "line": 36,
-      "href": "/kuechen-nach-mass"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
       "message": "`/moebel-nach-mass` → kanonisch `/moebel-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 72,
+      "line": 33,
       "href": "/moebel-nach-mass"
     },
     {
       "severity": "Hinweis",
       "check": "canonical",
-      "message": "`/gewerbe/ladenbau` → kanonisch `/gewerbe/ladenbau/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "message": "`/kuechen-nach-mass` → kanonisch `/kuechen-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 83,
-      "href": "/gewerbe/ladenbau"
+      "line": 34,
+      "href": "/kuechen-nach-mass"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/gewerbe` → kanonisch `/gewerbe/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 44,
+      "href": "/gewerbe"
     },
     {
       "severity": "Hinweis",
       "check": "canonical",
       "message": "`/bueroeinrichtung` → kanonisch `/bueroeinrichtung/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 91,
+      "line": 45,
       "href": "/bueroeinrichtung"
     },
     {
@@ -404,15 +407,23 @@
       "check": "canonical",
       "message": "`/gastronomieeinrichtung` → kanonisch `/gastronomieeinrichtung/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 99,
+      "line": 46,
       "href": "/gastronomieeinrichtung"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/gewerbe/ladenbau` → kanonisch `/gewerbe/ladenbau/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 52,
+      "href": "/gewerbe/ladenbau"
     },
     {
       "severity": "Hinweis",
       "check": "canonical",
       "message": "`/serienmoebel` → kanonisch `/serienmoebel/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 107,
+      "line": 53,
       "href": "/serienmoebel"
     },
     {
@@ -420,7 +431,7 @@
       "check": "canonical",
       "message": "`/praxiseinrichtung` → kanonisch `/praxiseinrichtung/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 108,
+      "line": 54,
       "href": "/praxiseinrichtung"
     },
     {
@@ -428,7 +439,7 @@
       "check": "canonical",
       "message": "`/gewerbe` → kanonisch `/gewerbe/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 117,
+      "line": 62,
       "href": "/gewerbe"
     },
     {
@@ -436,15 +447,7 @@
       "check": "canonical",
       "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 118,
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/nav.ts",
-      "line": 146,
+      "line": 63,
       "href": "/kontakt"
     },
     {
@@ -452,15 +455,23 @@
       "check": "canonical",
       "message": "`/ueber-uns` → kanonisch `/ueber-uns/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 155,
+      "line": 71,
       "href": "/ueber-uns"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/referenzen` → kanonisch `/referenzen/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 72,
+      "href": "/referenzen"
     },
     {
       "severity": "Hinweis",
       "check": "canonical",
       "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 163,
+      "line": 75,
       "href": "/kontakt"
     },
     {
@@ -477,14 +488,6 @@
       "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/app/(site)/gewerbe/page.tsx",
       "line": 137,
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/app/(site)/moebelplaner/page.tsx",
-      "line": 74,
       "href": "/kontakt"
     },
     {
@@ -575,12 +578,6 @@
     },
     {
       "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/moebelplaner/: empfohlener SOLL-Link fehlt → `/referenzen/`. Last-Minute-Vertrauen",
-      "page": "/moebelplaner/"
-    },
-    {
-      "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/kontakt/"
@@ -596,6 +593,12 @@
       "check": "missing-soll",
       "message": "/ueber-uns/: empfohlener SOLL-Link fehlt → `/gewerbe/`. Authority → Gewerbe-Hub",
       "page": "/ueber-uns/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/referenzen/: empfohlener SOLL-Link fehlt → `/gewerbe/`. Authority → Gewerbe-Hub",
+      "page": "/referenzen/"
     },
     {
       "severity": "Hinweis",
@@ -616,7 +619,7 @@
     {
       "severity": "Hinweis",
       "check": "backlog",
-      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/`, `/referenzen/`, `/gewerbe/`, `/moebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`."
+      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/`, `/gewerbe/`, `/moebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`, `/referenzen/`, `/ueber-uns/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`."
     }
   ]
 }

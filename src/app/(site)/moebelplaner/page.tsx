@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ServiceHero } from "@/components/sections/shared/ServiceHero";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
@@ -65,14 +66,31 @@ export default function MoebelplanerPage() {
       <TestimonialsSection heading="Meisterbetrieb aus Espelkamp seit 1996" />
 
       {/* Final CTA (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
+      <section style={{ backgroundColor: BEIGE }} className="py-12 lg:py-[84px]">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
           <ExpandingImageCta
             image="/images/2025/11/DSC_9938.jpg"
             heading="Ihr Raum verdient mehr als Standard."
             linkText="Sprechen Sie mit uns über Ihr Projekt."
-            href="/kontakt"
+            href="/kontakt/"
           />
+          <p
+            className="mt-6 text-center text-[14px]"
+            style={{
+              color: "rgb(102,102,102)",
+              fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
+              fontWeight: 500,
+            }}
+          >
+            Überzeugen Sie sich in unseren{" "}
+            <Link
+              href="/referenzen/"
+              style={{ color: "rgb(61,61,61)", textDecoration: "underline" }}
+            >
+              Referenzen
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

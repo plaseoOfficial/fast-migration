@@ -7,7 +7,7 @@ export function MpIntro() {
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
       }}
-      className="pt-12 lg:pt-[57px] pb-8"
+      className="py-12 lg:py-[84px]"
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* 3-col header */}
@@ -16,9 +16,9 @@ export function MpIntro() {
           <div>
             <h4
               style={{
-                color: "rgba(117,117,117,0.5)",
-                fontSize: "30px",
-                lineHeight: "30px",
+                color: "rgb(102,102,102)",
+                fontSize: "22px",
+                lineHeight: "22px",
                 fontWeight: 500,
               }}
             >
@@ -26,7 +26,7 @@ export function MpIntro() {
             </h4>
             <p
               style={{
-                color: "rgba(117,117,117,0.5)",
+                color: "rgb(102,102,102)",
                 fontSize: "16px",
                 fontWeight: 500,
                 marginTop: "6px",
@@ -39,11 +39,11 @@ export function MpIntro() {
           {/* Col 2: H2 */}
           <h2
             style={{
-              color: "rgb(0,0,0)",
+              color: "rgb(61,61,61)",
               fontWeight: 500,
               fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
             }}
-            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[66px] lg:leading-[66px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
+            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] max-lg:break-words max-lg:hyphens-auto"
             lang="de"
           >
             Möbelplanung online – mit Fertigung aus Espelkamp
@@ -54,7 +54,7 @@ export function MpIntro() {
             style={{
               color: "rgb(102,102,102)",
               fontSize: "18px",
-              lineHeight: "28.8px",
+              lineHeight: "1.7",
               fontWeight: 500,
             }}
           >

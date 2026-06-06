@@ -1,10 +1,11 @@
+import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export function MpProzess() {
   return (
     <section
-      className="py-12 lg:py-[46px]"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -17,11 +18,11 @@ export function MpProzess() {
             {/* Heading */}
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
-                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-4px]"
+                "text-[37px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[65px] lg:leading-[65px] lg:tracking-[-2px]"
               )}
               style={{
-                color: "rgb(23,33,33)",
+                color: "rgb(61,61,61)",
                 fontWeight: 500,
               }}
             >
@@ -30,14 +31,21 @@ export function MpProzess() {
 
             {/* Paragraph */}
             <p
-              className="mt-5 text-[16px] leading-[28px]"
+              className="mt-5 text-[16px] leading-[1.7]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
               Zu allererst planen Sie kostenlos und unverbindlich direkt auf
               unserer Seite. Im zweiten Schritt melden wir uns bei Ihnen, gehen
               Ihre Planung gemeinsam durch und klären offene Fragen zu Maßen,
               Materialien und Konfiguration. Den letzten Schritt übernehmen wir:
-              Fertigung in Espelkamp und Montage durch unser eigenes Team.
+              Fertigung in Espelkamp und Montage durch unser eigenes Team.{" "}
+              <Link
+                href="/referenzen/"
+                style={{ color: "rgb(61,61,61)", textDecoration: "underline" }}
+              >
+                Unsere Referenzen
+              </Link>{" "}
+              zeigen, was dabei entsteht.
             </p>
 
             {/* Decorative dots */}

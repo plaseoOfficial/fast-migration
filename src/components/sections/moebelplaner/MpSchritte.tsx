@@ -22,7 +22,7 @@ const STEPS = [
 export function MpSchritte() {
   return (
     <section
-      className="py-12 lg:py-[57px]"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -34,11 +34,11 @@ export function MpSchritte() {
           <div>
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
-                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-3px]"
+                "text-[37px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[65px] lg:leading-[65px] lg:tracking-[-2px]"
               )}
               style={{
-                color: "rgb(23,33,33)",
+                color: "rgb(61,61,61)",
                 fontWeight: 500,
               }}
             >
@@ -68,7 +68,7 @@ export function MpSchritte() {
               >
                 <h3
                   className="text-[20px] leading-[1] font-medium"
-                  style={{ color: "rgb(0,0,0)", fontWeight: 500 }}
+                  style={{ color: "rgb(61,61,61)", fontWeight: 500 }}
                 >
                   {step.title}
                 </h3>
