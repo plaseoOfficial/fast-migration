@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { MnmProcess } from "@/components/sections/privat/MnmProcess";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
+import { BueroProcessSteps } from "@/components/sections/gewerbe/BueroProcessSteps";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -16,7 +16,7 @@ import { buildServicePageJsonLd } from "@/lib/seo/jsonld";
 import {
   bueroHero,
   bueroIntroStats,
-  bueroProcess,
+  bueroProcessSteps,
   bueroTypische,
   bueroWarum,
   bueroGeschichte,
@@ -66,26 +66,28 @@ export default function BueroeinrichtungPage() {
 
       <MnmHero {...bueroHero} />
       <MnmIntroStats {...bueroIntroStats} />
+      <BueroProcessSteps {...bueroProcessSteps} />
 
-      {/* Intro CTA. Bottom of the intro/stats section (beige) */}
+      {/* CTA after process steps */}
       <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
           <ExpandingImageCta {...bueroCtas.intro} />
         </div>
       </section>
 
-      <MnmProcess {...bueroProcess} />
       <MnmWeitereLeistungen />
       <MnmTypische {...bueroTypische} />
-      <MnmWarum {...bueroWarum} />
+      <MnmWarum {...bueroWarum} reverse imageColumns={2} />
       <MnmGeschichte {...bueroGeschichte} />
       <MnmMoebelplaner {...bueroMoebelplaner} />
       <TestimonialsSection heading={bueroTestimonialsHeading} />
 
-      {/* Final CTA. Bottom of the testimonials section (beige) */}
+      {/* Final CTA — compact banner */}
       <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...bueroCtas.final} />
+          <div style={{ maxHeight: "260px", overflow: "hidden" }}>
+            <ExpandingImageCta {...bueroCtas.final} />
+          </div>
         </div>
       </section>
 
