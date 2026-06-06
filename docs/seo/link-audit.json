@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 15,
-    "pagesPlanned": 11,
-    "linksFound": 121,
+    "pagesBuilt": 16,
+    "pagesPlanned": 10,
+    "linksFound": 132,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 20,
       "Warnung": 1,
-      "Hinweis": 43
+      "Hinweis": 54
     }
   },
   "findings": [
@@ -105,7 +105,7 @@
       "check": "dead-link",
       "message": "Platzhalter-Link `#` (kein Ziel).",
       "file": "src/components/sections/shared/TestimonialsSection.tsx",
-      "line": 130,
+      "line": 128,
       "href": "#"
     },
     {
@@ -363,13 +363,6 @@
     {
       "severity": "Hinweis",
       "check": "canonical",
-      "message": "`/gewerbe` → kanonisch `/gewerbe/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/ueber-uns.ts",
-      "href": "/gewerbe"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
       "message": "`/moebel-nach-mass` → kanonisch `/moebel-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/content/ueber-uns.ts",
       "href": "/moebel-nach-mass"
@@ -510,6 +503,18 @@
     },
     {
       "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/moebel-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/moebel-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-cluster-spokes` noch blockiert (Ziel ungebaut). Vollständige Spoke-Abdeckung (Produktseiten)",
       "page": "/kuechen-nach-mass/"
@@ -522,8 +527,56 @@
     },
     {
       "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/kuechen-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/kuechen-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/gewerbe/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/gewerbe/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/gewerbe/ladenbau/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/gewerbe/ladenbau/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/bueroeinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/bueroeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/gastronomieeinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/gastronomieeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/serienmoebel/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/serienmoebel/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/praxiseinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/praxiseinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/moebelplaner/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
+      "page": "/moebelplaner/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/moebelplaner/: empfohlener SOLL-Link fehlt → `/referenzen/`. Last-Minute-Vertrauen",
       "page": "/moebelplaner/"
     },
     {
@@ -531,6 +584,18 @@
       "check": "muss-backlog",
       "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/kontakt/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/kontakt/: empfohlener SOLL-Link fehlt → `/referenzen/`. Last-Minute-Vertrauen",
+      "page": "/kontakt/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/ueber-uns/: empfohlener SOLL-Link fehlt → `/gewerbe/`. Authority → Gewerbe-Hub",
+      "page": "/ueber-uns/"
     },
     {
       "severity": "Hinweis",
@@ -551,7 +616,7 @@
     {
       "severity": "Hinweis",
       "check": "backlog",
-      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/`, `/gewerbe/`, `/moebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`."
+      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/`, `/referenzen/`, `/gewerbe/`, `/moebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`."
     }
   ]
 }

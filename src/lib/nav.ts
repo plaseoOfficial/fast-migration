@@ -154,7 +154,7 @@ export const NAV_ITEMS: NavItem[] = [
     items: [
       { label: "Über uns", href: "/ueber-uns" },
       { label: "Team" },
-      { label: "Referenzen" },
+      { label: "Referenzen", href: "/referenzen" },
       { label: "Ablauf der Maßanfertigung" },
       { label: "Liefergebiet & Montage" },
       { label: "FAQ" },
