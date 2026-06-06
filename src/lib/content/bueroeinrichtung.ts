@@ -18,9 +18,9 @@
 export const bueroHero = {
   bgImage: "/images/2025/11/DSC_9747.jpg",
   imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel aus Espelkamp",
-  title: "Büroeinrichtung nach Maß: vom Schreibtisch bis zur Objekteinrichtung",
+  title: "Büroeinrichtung nach Maß",
   intro:
-    "Wir planen, fertigen und montieren Büromöbel genau nach Ihren Räumen und Abläufen — vom einzelnen Schreibtisch bis zur kompletten Objekteinrichtung. Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team.",
+    "Vom Schreibtisch bis zur Objekteinrichtung — geplant, gefertigt und montiert im eigenen Meisterbetrieb in Espelkamp.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
