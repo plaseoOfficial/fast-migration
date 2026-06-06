@@ -129,7 +129,7 @@ export function RaeumeSection({
             </div>
           </Link>
 
-          <div className="lg:col-span-4 flex flex-col gap-4">
+          <div className="lg:col-span-4 flex flex-col gap-4 overflow-hidden">
             <div className="flex items-center gap-2">
               <span className="inline-block h-3 w-3 rounded-full border-2 border-[rgb(61,61,61)]" />
               <span className="fast-eyebrow">Projekte</span>
@@ -138,7 +138,6 @@ export function RaeumeSection({
               className="select-none leading-none max-w-full overflow-hidden"
               style={{
                 fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                // Floor lowered (120→48px); 16vw slope + 220px max unchanged → desktop identical.
                 fontSize: "clamp(48px, 16vw, 220px)",
                 letterSpacing: "clamp(-3px, -1vw, -14px)",
                 fontWeight: 500,
@@ -147,7 +146,7 @@ export function RaeumeSection({
             >
               Fast
             </div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md mt-auto">
+            <div className="relative flex-1 min-h-[200px] w-full overflow-hidden rounded-md">
               <Image
                 src={kitchenImage}
                 alt="Fast Küche"
@@ -171,7 +170,7 @@ export function RaeumeSection({
             </div>
           </div>
 
-          <div className="lg:col-span-4 relative aspect-[3/4] lg:aspect-auto overflow-hidden rounded-md">
+          <div className="lg:col-span-4 relative min-h-[400px] lg:min-h-0 overflow-hidden rounded-md">
             <Image
               src={bathImage}
               alt="Fast Badmöbel"
