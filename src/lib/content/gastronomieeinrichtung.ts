@@ -20,7 +20,7 @@ export const gastroHero = {
   intro:
     "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß. Theken, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team. Im Einzugsgebiet und bundesweit.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Gastronomieeinrichtung" },
   ],

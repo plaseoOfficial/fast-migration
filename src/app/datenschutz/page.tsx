@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
     locale: "de_DE",
     type: "website",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 

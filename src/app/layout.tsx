@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Maßmöbel vom Meisterbetrieb in Espelkamp. Planung, Fertigung und Montage aus einer Hand.",
     locale: "de_DE",
     type: "website",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 

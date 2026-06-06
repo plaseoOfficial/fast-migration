@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Sprechen Sie mit unseren Experten für Möbel nach Maß. Kostenlose Beratung.",
     locale: "de_DE",
     type: "website",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 
@@ -23,7 +23,7 @@ export default function KontaktPage() {
       <KontaktFormularHero
         title="Kommen Sie mit unseren Experten in Kontakt"
         breadcrumb={[
-          { label: "fast.side-boost.com", href: "/" },
+          { label: "Fast Systemmöbel", href: "/" },
           { label: "Kontakt" },
         ]}
         bgImage="/images/2025/11/IMG_9387-scaled.jpg"

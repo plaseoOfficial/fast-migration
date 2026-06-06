@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Angaben gemäß § 5 TMG, Kontakt und Hinweise zur Streitschlichtung.",
     locale: "de_DE",
     type: "website",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 

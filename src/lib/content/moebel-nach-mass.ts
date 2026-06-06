@@ -13,7 +13,7 @@ export const mnmHero = {
   intro:
     "Standardlösungen finden Sie in jedem Möbelhaus. Wir bei Fast Systemmöbel gehen einen Schritt weiter: Wir planen und fertigen hochwertige Möbel nach Maß, die sich millimetergenau in Ihre Räume einfügen und Ihre Persönlichkeit perfekt unterstreichen.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß" },
   ],
 };
