@@ -26,7 +26,7 @@ export const PAGE_PATH = "/referenzen/";
 export const referenzenHero = {
   title: "Unsere Projekte – privat und gewerblich",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Referenzen" },
   ],
   intro:
