@@ -28,85 +28,30 @@ export type NavItem =
 export const NAV_ITEMS: NavItem[] = [
   {
     label: "Privat",
-    kind: "mega",
-    columns: [
-      {
-        title: "Küchen",
-        items: [
-          { label: "Küchen nach Maß", href: "/kuechen-nach-mass" },
-          { label: "Küchenzeile nach Maß" },
-          { label: "L-Küche nach Maß" },
-          { label: "Kochinsel nach Maß" },
-        ],
-      },
-      {
-        title: "Einbauschränke",
-        items: [
-          { label: "Einbauschränke nach Maß" },
-          { label: "Kleiderschrank nach Maß" },
-          { label: "Begehbarer Kleiderschrank" },
-          { label: "Garderobe nach Maß" },
-        ],
-      },
-      {
-        title: "Bad & Wohnen",
-        items: [
-          { label: "Badmöbel nach Maß" },
-          { label: "Wohnmöbel nach Maß" },
-          { label: "Sideboard nach Maß" },
-          { label: "TV-Möbel nach Maß" },
-        ],
-      },
-      {
-        title: "Hauswirtschaftsraum",
-        items: [
-          { label: "Hauswirtschaftsraum nach Maß" },
-          { label: "Vorratsschrank nach Maß" },
-        ],
-      },
+    kind: "dropdown",
+    items: [
+      { label: "Möbel nach Maß", href: "/moebel-nach-mass" },
+      { label: "Küchen nach Maß", href: "/kuechen-nach-mass" },
     ],
-    teaser: {
-      image: "/images/2025/11/ThabarSebastian_kueche2.jpeg",
-      heading: "Möbel nach Maß",
-      text: "Vom Meisterbetrieb in Espelkamp – individuell geplant und gefertigt.",
-      href: "/moebel-nach-mass",
-      cta: { label: "Jetzt planen", href: "https://moebelplaner.fast-systemmoebel.de/" },
-    },
   },
   {
     label: "Gewerbe",
     kind: "mega",
     columns: [
       {
-        title: "Ladenbau",
+        title: "Einrichtung",
+        items: [
+          { label: "Gewerbeeinrichtung", href: "/gewerbe" },
+          { label: "Büroeinrichtung", href: "/bueroeinrichtung" },
+          { label: "Gastronomieeinrichtung", href: "/gastronomieeinrichtung" },
+        ],
+      },
+      {
+        title: "Speziallösungen",
         items: [
           { label: "Ladenbau nach Maß", href: "/gewerbe/ladenbau" },
-          { label: "Verkaufstheke nach Maß" },
-          { label: "Shopkonzept" },
-        ],
-      },
-      {
-        title: "Büro",
-        items: [
-          { label: "Büroeinrichtung", href: "/bueroeinrichtung" },
-          { label: "Empfangstheke" },
-          { label: "Konferenzräume" },
-        ],
-      },
-      {
-        title: "Gastronomie",
-        items: [
-          { label: "Gastronomieeinrichtung", href: "/gastronomieeinrichtung" },
-          { label: "Theken & Bars" },
-          { label: "Hotelmöbel" },
-        ],
-      },
-      {
-        title: "Serienmöbel & Praxis",
-        items: [
           { label: "Serienmöbel", href: "/serienmoebel" },
           { label: "Praxiseinrichtung", href: "/praxiseinrichtung" },
-          { label: "Objekteinrichtung" },
         ],
       },
     ],
@@ -118,46 +63,13 @@ export const NAV_ITEMS: NavItem[] = [
       cta: { label: "Projekt anfragen", href: "/kontakt" },
     },
   },
-  {
-    label: "Ratgeber",
-    kind: "mega",
-    columns: [
-      {
-        title: "Planung & Kosten",
-        items: [
-          { label: "Küche planen" },
-          { label: "Kosten & Preise" },
-          { label: "Ablauf der Maßanfertigung" },
-        ],
-      },
-      {
-        title: "Material & Pflege",
-        items: [
-          { label: "Holzarten im Vergleich" },
-          { label: "Oberflächen & Dekore" },
-          { label: "Pflege & Reinigung" },
-        ],
-      },
-    ],
-    teaser: {
-      image: "/images/2025/11/DSC_9965.jpg",
-      heading: "Persönliche Beratung",
-      text: "Sie wissen nicht weiter? Wir beraten Sie kostenlos und unverbindlich.",
-      href: "/kontakt",
-      cta: { label: "Zum Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
-    },
-  },
   { label: "Möbelplaner", kind: "link", href: "https://moebelplaner.fast-systemmoebel.de/", highlight: true },
   {
     label: "Über uns",
     kind: "dropdown",
     items: [
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Team" },
       { label: "Referenzen", href: "/referenzen" },
-      { label: "Ablauf der Maßanfertigung" },
-      { label: "Liefergebiet & Montage" },
-      { label: "FAQ" },
     ],
   },
   { label: "Kontakt", kind: "cta", href: "/kontakt" },
