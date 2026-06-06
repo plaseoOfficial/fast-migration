@@ -21,12 +21,12 @@ export const ueberTimeline = {
   headingAccent: "begann",
   headingAfter: " – und warum es heute anders ist",
   intro:
-    "1996 startete Johann Fast in einer kleinen Garage in Espelkamp. Damals ging es nur um Küchen, heute geht es um echte Raumlösungen. Viele Kunden erzählen, dass sie erst durch unsere Möbel verstanden haben, wie viel Platz in ihren Räumen steckt. Genau das treibt uns an.",
+    "1996 startete Johann Fast in einer kleinen Garage in Rahden-Tonnenheide. Damals ging es nur um Küchen, heute geht es um echte Raumlösungen. Viele Kunden erzählen, dass sie erst durch unsere Möbel verstanden haben, wie viel Platz in ihren Räumen steckt. Genau das treibt uns an.",
   years: [
     {
       year: "1996",
       title: "1996 – Der Start in der Garage",
-      body: "Alles begann in einer kleinen Garage in Espelkamp. Johann Fast baut Küchen, kauft Teile zu und arbeitet mit drei Holzarten. Mehr Wille als Fläche – aber die Richtung stimmt.",
+      body: "Alles begann in einer kleinen Garage in Rahden-Tonnenheide. Johann Fast baut Küchen, kauft Teile zu und arbeitet mit drei Holzarten. Mehr Wille als Fläche – aber die Richtung stimmt.",
       image: "/images/2025/11/DSC06020-scaled.jpg",
     },
     {
@@ -54,9 +54,9 @@ export const ueberTimeline = {
       image: "/images/2025/11/DSC06340-scaled.jpg",
     },
     {
-      year: "2013",
-      title: "2013 – Meisterbetrieb mit Anspruch",
-      body: "Andreas wird Tischlermeister. Der Betrieb erhält offiziell Meisterstatus. Ab jetzt wird jeder Auftrag nach höchsten handwerklichen Standards geplant und gebaut.",
+      year: "2011",
+      title: "2011 – Ein Tischlermeister kommt ins Team",
+      body: "Das Team wächst, ein Tischlermeister kommt an Bord. Ab jetzt wird jeder Auftrag nach höchsten handwerklichen Standards geplant und gebaut.",
       image: "/images/2025/11/DSC05579-scaled.jpg",
     },
     {

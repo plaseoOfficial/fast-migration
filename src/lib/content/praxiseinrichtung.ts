@@ -8,7 +8,7 @@
  * online furniture configurator (/moebelplaner/).
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand"), not plaseo.
- * Facts are real: seit 1996, Meisterbetrieb seit 2013, 1.000 m² Fertigung,
+ * Facts are real: seit 1996, Meisterbetrieb (ohne Jahr), 1.000 m² Fertigung,
  * Homag-Technologie, ~200 km Montageradius, Made in Germany.
  */
 
@@ -127,10 +127,10 @@ export const praxisGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag-Technologie und einem eingespielten Team.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit moderner Homag-Technologie und einem eingespielten Team arbeiten.",
     "Was im Möbelbau für Privatkunden entstand, kommt in der Praxiseinrichtung doppelt zum Tragen: Wir kennen die Anforderungen an Hygiene, Reinigbarkeit, Termintreue und Diskretion, die ein Praxisprojekt mitbringt, und planen entsprechend praxisnah.",
     "Vom einzelnen Anmeldetresen bis zur kompletten Praxis fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
   ],

@@ -7,7 +7,7 @@
  * Eigenständiger Gewerbe-Ast, ergänzt das B2B-Pillar.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", Sie-Form),
- * not plaseo. Facts are real: seit 1996, Meisterbetrieb seit 2013, über
+ * not plaseo. Facts are real: seit 1996, Meisterbetrieb (ohne Jahr), über
  * 1.000 m² Fertigung, Homag-/CNC-Technologie, ~200 km Montageradius,
  * Lieferung bundesweit, Made in Germany, Inhaber Johann Fast.
  */
@@ -128,10 +128,10 @@ export const gastroGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
     "Was im Möbelbau entstand, kommt in der Gastronomie doppelt zum Tragen. Wir kennen die Anforderungen an Belastbarkeit, Hygiene und Termintreue, die ein Gastraum mitbringt. Und wir planen so, dass der Service später reibungslos läuft.",
     "Vom einzelnen Tresen bis zur kompletten Hoteleinrichtung fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern bundesweit.",
   ],

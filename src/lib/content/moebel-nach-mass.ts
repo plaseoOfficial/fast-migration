@@ -120,10 +120,10 @@ export const mnmGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp.",
     "Aus ersten Küchen entstand ein Meisterbetrieb mit über 1.000 m² Fertigungsfläche, modernen Homag-Maschinen und einem eingespielten Team. Heute fertigen wir Maßmöbel, die millimetergenau geplant, hochwertig verarbeitet und zuverlässig montiert werden.",
     "Jede Maßanfertigung verbindet Funktionalität und Design – vom Einbauschrank bis zum Sideboard. Unsere Möbel werden in Espelkamp gefertigt, im Umkreis von 200 km montiert und deutschlandweit geliefert.",
   ],

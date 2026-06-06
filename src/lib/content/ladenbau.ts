@@ -6,7 +6,7 @@
  * (retail, gastronomy, services) within the ~200 km radius around Espelkamp.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand"), not plaseo.
- * Facts are real: seit 1996, Meisterbetrieb seit 2013, 1.000 m² Fertigung,
+ * Facts are real: seit 1996, Meisterbetrieb (ohne Jahr), 1.000 m² Fertigung,
  * Homag-Technologie, ~200 km Montageradius, Made in Germany.
  */
 
@@ -125,10 +125,10 @@ export const ladenGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp – heute fertigen wir auf über 1.000 m² mit moderner Homag-Technologie und einem eingespielten Team.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide – 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit moderner Homag-Technologie und einem eingespielten Team arbeiten.",
     "Was im Möbelbau für Privatkunden entstand, kommt im Gewerbe doppelt zum Tragen: Wir kennen die Anforderungen an Belastbarkeit, Termintreue und Funktion, die ein Ladenbau-Projekt mitbringt – und planen entsprechend praxisnah.",
     "Vom einzelnen Tresen bis zur kompletten Shopkonzeption fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
   ],

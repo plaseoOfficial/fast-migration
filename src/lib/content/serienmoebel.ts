@@ -8,7 +8,7 @@
  * facilities that order identical furniture in medium and large quantities.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", B2B,
- * Sie-Form), not plaseo. Facts are real: seit 1996, Meisterbetrieb seit 2013,
+ * Sie-Form), not plaseo. Facts are real: seit 1996, Meisterbetrieb (ohne Jahr),
  * über 1.000 m² Fertigung, moderne Homag-/CNC-Technologie, eigenes Montageteam,
  * Montageradius rund 200 km um Espelkamp, Lieferung bundesweit, Made in Germany.
  * No invented numbers, awards or claims. Zero em-dashes.
@@ -129,10 +129,10 @@ export const serienGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
     "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, in Liefertreue und in konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben.",
     "Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
   ],
