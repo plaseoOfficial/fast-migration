@@ -1,0 +1,557 @@
+{
+  "summary": {
+    "pagesBuilt": 15,
+    "pagesPlanned": 11,
+    "linksFound": 121,
+    "partialExtraction": [
+      "/"
+    ],
+    "counts": {
+      "Fehler": 20,
+      "Warnung": 1,
+      "Hinweis": 43
+    }
+  },
+  "findings": [
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content/ueber-uns.ts",
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 186,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#faq` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 188,
+      "href": "#faq"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 197,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 198,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 199,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 200,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 206,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/components/sections/privat/MnmWeitereLeistungen.tsx",
+      "line": 18,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/components/sections/privat/MnmWeitereLeistungen.tsx",
+      "line": 25,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/components/sections/privat/MnmWeitereLeistungen.tsx",
+      "line": 39,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/components/sections/shared/TestimonialsSection.tsx",
+      "line": 130,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/: fehlender MUSS-Link → `/moebel-nach-mass/`. Primärer Privat-Hub",
+      "page": "/",
+      "suggestAnchors": [
+        {
+          "target": "/moebel-nach-mass/",
+          "options": [
+            "maßgefertigte Möbel",
+            "individuelle Möbel",
+            "Möbel nach Maß für Zuhause",
+            "zum Möbel-Bereich"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/: fehlender MUSS-Link → `/gewerbe/`. Primärer Gewerbe-Hub",
+      "page": "/",
+      "suggestAnchors": [
+        {
+          "target": "/gewerbe/",
+          "options": [
+            "gewerbliche Einrichtung",
+            "Objekteinrichtung",
+            "Gewerbliche Einrichtung & Ladenbau",
+            "zum Gewerbe-Bereich"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/: fehlender MUSS-Link → `/moebelplaner/`. Haupt-CTA / Conversion",
+      "page": "/",
+      "suggestAnchors": [
+        {
+          "target": "/moebelplaner/",
+          "options": [
+            "Möbel online planen",
+            "online konfigurieren",
+            "Jetzt Möbel online planen",
+            "Küche online konfigurieren"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/: fehlender MUSS-Link → `/kontakt/`. Conversion-Ziel",
+      "page": "/",
+      "suggestAnchors": [
+        {
+          "target": "/kontakt/",
+          "options": [
+            "Beratung anfragen",
+            "Angebot anfordern",
+            "Kostenlose Beratung anfragen",
+            "Beratungsgespräch vereinbaren"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/gewerbe/: fehlender MUSS-Link → `/moebelplaner/`. Conversion-CTA",
+      "page": "/gewerbe/",
+      "suggestAnchors": [
+        {
+          "target": "/moebelplaner/",
+          "options": [
+            "Möbel online planen",
+            "online konfigurieren",
+            "Jetzt Möbel online planen",
+            "Küche online konfigurieren"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/gewerbe/ladenbau/: fehlender MUSS-Link → `/moebelplaner/`. Conversion-CTA",
+      "page": "/gewerbe/ladenbau/",
+      "suggestAnchors": [
+        {
+          "target": "/moebelplaner/",
+          "options": [
+            "Möbel online planen",
+            "online konfigurieren",
+            "Jetzt Möbel online planen",
+            "Küche online konfigurieren"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/impressum/: fehlender MUSS-Link → `/`. Einziger erlaubter Ausgangslink",
+      "page": "/impressum/",
+      "suggestAnchors": [
+        {
+          "target": "/",
+          "options": []
+        }
+      ]
+    },
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/datenschutz/: fehlender MUSS-Link → `/`. Einziger erlaubter Ausgangslink",
+      "page": "/datenschutz/",
+      "suggestAnchors": [
+        {
+          "target": "/",
+          "options": []
+        }
+      ]
+    },
+    {
+      "severity": "Warnung",
+      "check": "breadcrumb-schema",
+      "message": "/kuechen-nach-mass/: kein BreadcrumbList-JSON-LD (Pflicht ab Ebene 2, Prinzip 7).",
+      "page": "/kuechen-nach-mass/",
+      "file": "src/app/(site)/kuechen-nach-mass/page.tsx"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/kuechen-nach-mass.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/kuechen-nach-mass.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/kuechen-nach-mass.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/ladenbau.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/ladenbau.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/bueroeinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/bueroeinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/bueroeinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/gastronomieeinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/gastronomieeinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/gastronomieeinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/serienmoebel.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/serienmoebel.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/serienmoebel.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/praxiseinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/praxiseinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/praxiseinrichtung.ts",
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/gewerbe` → kanonisch `/gewerbe/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/ueber-uns.ts",
+      "href": "/gewerbe"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/moebel-nach-mass` → kanonisch `/moebel-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/content/ueber-uns.ts",
+      "href": "/moebel-nach-mass"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kuechen-nach-mass` → kanonisch `/kuechen-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 36,
+      "href": "/kuechen-nach-mass"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/moebel-nach-mass` → kanonisch `/moebel-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 72,
+      "href": "/moebel-nach-mass"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/gewerbe/ladenbau` → kanonisch `/gewerbe/ladenbau/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 83,
+      "href": "/gewerbe/ladenbau"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/bueroeinrichtung` → kanonisch `/bueroeinrichtung/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 91,
+      "href": "/bueroeinrichtung"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/gastronomieeinrichtung` → kanonisch `/gastronomieeinrichtung/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 99,
+      "href": "/gastronomieeinrichtung"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/serienmoebel` → kanonisch `/serienmoebel/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 107,
+      "href": "/serienmoebel"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/praxiseinrichtung` → kanonisch `/praxiseinrichtung/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 108,
+      "href": "/praxiseinrichtung"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/gewerbe` → kanonisch `/gewerbe/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 117,
+      "href": "/gewerbe"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 118,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 146,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/ueber-uns` → kanonisch `/ueber-uns/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 155,
+      "href": "/ueber-uns"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 163,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/app/(site)/gewerbe/page.tsx",
+      "line": 118,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/app/(site)/gewerbe/page.tsx",
+      "line": 137,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/app/(site)/moebelplaner/page.tsx",
+      "line": 74,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/components/sections/gewerbe/GewerbeIntroStats.tsx",
+      "line": 178,
+      "href": "/kontakt"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/: empfohlener SOLL-Link fehlt → `/kuechen-nach-mass/`. Stärkstes P1-Cluster",
+      "page": "/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "muss-backlog",
+      "message": "/kuechen-nach-mass/: MUSS-Link `own-cluster-spokes` noch blockiert (Ziel ungebaut). Vollständige Spoke-Abdeckung (Produktseiten)",
+      "page": "/kuechen-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "muss-backlog",
+      "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
+      "page": "/kuechen-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "muss-backlog",
+      "message": "/moebelplaner/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
+      "page": "/moebelplaner/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "muss-backlog",
+      "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
+      "page": "/kontakt/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "footer",
+      "message": "Footer verlinkt `/` (Typ homepage) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).",
+      "file": "src/lib/content.ts",
+      "line": 183,
+      "href": "/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "footer",
+      "message": "Footer verlinkt `/ueber-uns/` (Typ brand) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).",
+      "file": "src/lib/content.ts",
+      "line": 185,
+      "href": "/ueber-uns/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "backlog",
+      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/`, `/gewerbe/`, `/moebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`."
+    }
+  ]
+}

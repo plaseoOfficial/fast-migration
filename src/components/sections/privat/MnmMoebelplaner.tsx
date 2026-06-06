@@ -34,8 +34,8 @@ interface MnmMoebelplanerProps {
 export function MnmMoebelplaner({
   heading = "Möbel nach Maß einfach online planen und konfigurieren",
   body = "Mit unserem Möbelkonfigurator können Sie Ihre Möbel nach Maß online planen – schnell, übersichtlich und millimetergenau. Ob Schrank nach Maß, Regal, Sideboard oder Kommode: Sie konfigurieren Maße, Dekore, Einlegeböden oder Schubladen bequem von zuhause. Der 3D-Konfigurator zeigt jede Anpassung sofort an und macht individuelle Möbel nach Maß für Sie direkt sichtbar. Nach der Konfiguration übernehmen wir den Feinschliff: Aufmaß, Beratung, Materialien und die fachgerechte Montage. So verbinden wir präzise Online-Planung mit echter handwerklicher Maßanfertigung.",
-  ctaLabel = "Jetzt individuelle Anfrage stellen",
-  ctaHref = "/kontakt",
+  ctaLabel = "Jetzt Möbel online planen",
+  ctaHref = "/moebelplaner/",
   image = "/images/2025/11/20150701_185458257_iOS-scaled.jpg",
   imageAlt = "Moderner Empfangsbereich",
 }: MnmMoebelplanerProps) {

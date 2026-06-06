@@ -7,6 +7,12 @@
 > new page's still-missing targets.
 >
 > Source of the full model: `~/Downloads/Fast Systemmöbel - Website Planung - 07 Interne Verlinkung.csv`.
+>
+> **Machine-readable + automated:** the model is encoded in
+> [`src/lib/seo/linking-rules.ts`](../../src/lib/seo/linking-rules.ts) (page graph, MUSS/SOLL/DARF-NICHT,
+> anchor sets, budgets). Run **`npm run audit:links`** to audit the real link graph against it, or use the
+> **`intern-verlinkung`** agent to control, insert and monitor links + find anchors. When a page ships,
+> flip its node to `built: true` in `linking-rules.ts` so the audit auto-resolves newly unblocked links.
 
 ## URL architecture (flat silos)
 
@@ -64,6 +70,17 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 | Gewerbe clusters | `/referenzen/`, `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | City pages (`/einsatzgebiete/*` or flat city×service) | relevant clusters | new silo | city pages migrated/built |
 
+### ⚠️ Interim retargets — REVERT when the real target page ships
+
+These links point at a *built but not ideal* page to avoid dead `#` links at launch.
+When the proper target page is built, repoint them (and drop this row):
+
+| Where (file · field) | Currently (interim) | Repoint to when built |
+|---|---|---|
+| `moebel-nach-mass.ts` · `mnmWeitereCards` "Raumkonzepte" | `/moebelplaner/` | a `/raumkonzepte/` (or room-concept) page |
+| `moebel-nach-mass.ts` · `mnmWeitereCards` "Fertigung" | `/ueber-uns/` | `/ablauf-massanfertigung/` |
+| `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
+
 ## Done (wired)
 
 - **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/gewerbe/ladenbau/`, `/serienmoebel/`. *(hub → clusters, silo distribution)*
@@ -78,3 +95,20 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 - `/ueber-uns/` → `/moebel-nach-mass/` (UeberWofuer "Unsere Leistungen" + UeberNavCards "Leistungen" card). *(authority → Privat hub)*
 - `/ueber-uns/` → `/gewerbe/` (UeberValues "Beispielprojekte" — interim target until `/referenzen/` ships). *(authority → Gewerbe hub)*
 - `/ueber-uns/` → `/kontakt/` (UeberNavCards "Kontakt" card) — conversion target.
+
+### Wired in the `audit:links` pass (2026-06)
+
+- **Homepage** `homeRaeume`: `#kontakt` → `/kontakt/`, `#ueber-uns` → `/ueber-uns/` (dead placeholders removed).
+- **Footer Menü** (`FOOTER_LINKS.links`): Home → `/`, Leistungen → `/moebel-nach-mass/`, Über uns → `/ueber-uns/`, Kontakt → `/kontakt/`. *(Ratgeber/FAQ stay `#` until those pages ship.)*
+- **`/gewerbe/ladenbau/`** breadcrumb up-link fixed: retired `/leistungen/gewerbeeinrichtung` → `/gewerbe/` (canonical, no redirect hop; satisfies the cluster→hub MUSS).
+- **Dead `/project/mixmarkt/`** repointed in-silo: `/moebel-nach-mass/` IntroStats col3 → `/kuechen-nach-mass/`; `/gewerbe/` IntroStats col3 → `/gewerbe/ladenbau/`.
+- **`/moebelplaner/`** hero CTA `#moebelplaner` → external planner URL.
+- **`/ueber-uns/` added to `sitemap.ts`** (was built but unlisted).
+- Removed unused legacy `NAV_LINKS` (phantom `#` placeholders).
+- Canonical trailing-slash fixes for `/kontakt`, `/moebel-nach-mass` in touched modules.
+
+> Still open (need a render slot / target page, surfaced by `npm run audit:links`):
+> Homepage body MUSS-links to the two hubs + `/moebelplaner/` (header nav covers them site-wide; a
+> contextual in-body link still to be placed); strong pages link to the **external** planner, not the
+> internal `/moebelplaner/` page (judgment call); legal pages → `/`; the remaining `#` are genuinely
+> backlog-blocked (`/faq/`, `/ratgeber/`, city pages, cookie policy); broader canonical sweep of `nav.ts`.

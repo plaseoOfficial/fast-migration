@@ -1,18 +1,10 @@
-import type { NavLink, Blurb, TabPanel, CounterStat, PartnerLogo, FaqItem, Testimonial, GalleryCard } from "@/types";
+import type { Blurb, TabPanel, CounterStat, PartnerLogo, FaqItem, Testimonial, GalleryCard } from "@/types";
 
 /**
  * Canonical production origin (no trailing slash). Single source for canonical
  * URLs, OpenGraph, sitemap, robots and JSON-LD.
  */
 export const SITE_URL = "https://www.fast-systemmoebel.de";
-
-export const NAV_LINKS: Array<NavLink & { hasDropdown?: boolean }> = [
-  { label: "Home", href: "#" },
-  { label: "Leistungen", href: "#leistungen", hasDropdown: true },
-  { label: "Über uns", href: "#ueber-uns" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Kontakt", href: "#kontakt" },
-];
 
 export const CTA = { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" };
 
@@ -188,13 +180,13 @@ export const FAQS: FaqItem[] = [
 
 export const FOOTER_LINKS = {
   links: [
-    { label: "Home", href: "#" },
-    { label: "Leistungen", href: "#leistungen" },
-    { label: "Über uns", href: "#ueber-uns" },
+    { label: "Home", href: "/" },
+    { label: "Leistungen", href: "/moebel-nach-mass/" },
+    { label: "Über uns", href: "/ueber-uns/" },
     { label: "Ratgeber", href: "#" },
     { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
     { label: "FAQ", href: "#faq" },
-    { label: "Kontakt", href: "#kontakt" },
+    { label: "Kontakt", href: "/kontakt/" },
   ],
   leistungen: [
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
