@@ -30,9 +30,8 @@ export function MnmGeschichte({ heading, subheading, gallery, paragraphs, factLi
         {/* Header */}
         <div className="flex flex-col items-center text-center">
           <h2
-            className="text-[28px] leading-[1.15] sm:text-[36px] sm:leading-[1.05] lg:text-[84px] lg:leading-[84px] font-medium text-black mx-auto"
+            className="text-[28px] leading-[1.15] sm:text-[36px] sm:leading-[1.05] lg:text-[84px] lg:leading-[84px] font-medium text-black mx-auto tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-3px]"
             style={{
-              letterSpacing: "-3px",
               maxWidth: "1000px",
             }}
           >

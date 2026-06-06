@@ -52,9 +52,8 @@ export function GewerbeWarum() {
         {/* Header — centered */}
         <div className="flex flex-col items-center text-center">
           <h2
-            className="text-[36px] leading-[1.05] lg:text-[84px] lg:leading-[84px] font-medium mx-auto"
+            className="text-[36px] leading-[1.05] lg:text-[84px] lg:leading-[84px] font-medium mx-auto tracking-[-1.5px] lg:tracking-[-3px]"
             style={{
-              letterSpacing: "-3px",
               maxWidth: "1000px",
               color: "rgb(0,0,0)",
             }}

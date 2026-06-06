@@ -41,10 +41,9 @@ export function MpIntro() {
             style={{
               color: "rgb(0,0,0)",
               fontWeight: 500,
-              letterSpacing: "-3px",
               fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
             }}
-            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[66px] lg:leading-[66px] max-lg:break-words max-lg:hyphens-auto"
+            className="text-[26px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[66px] lg:leading-[66px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
             lang="de"
           >
             Möbelplanung online – mit Fertigung aus Espelkamp

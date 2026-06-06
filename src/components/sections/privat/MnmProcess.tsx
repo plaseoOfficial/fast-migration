@@ -25,12 +25,11 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
             {/* Heading */}
             <h2
               className={cn(
-                "text-[34px] leading-[1.05] font-medium",
-                "lg:text-[59px] lg:leading-[59px]"
+                "text-[34px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-4px]"
               )}
               style={{
                 color: "rgb(23,33,33)",
-                letterSpacing: "-4px",
                 fontWeight: 500,
               }}
             >

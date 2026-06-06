@@ -26,7 +26,7 @@ export default function KontaktPage() {
           { label: "fast.side-boost.com", href: "/" },
           { label: "Kontakt" },
         ]}
-        bgImage="/images/2025/11/DSC06206-scaled.jpg"
+        bgImage="/images/2025/11/IMG_9387-scaled.jpg"
       />
       <PartnerCarousel />
       <KontaktStandort />

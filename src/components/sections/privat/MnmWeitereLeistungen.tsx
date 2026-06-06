@@ -83,10 +83,9 @@ export function MnmWeitereLeistungen({
             {eyebrow}
           </p>
           <h2
-            className="mx-auto mt-4 text-[28px] leading-[1.15] sm:text-[38px] sm:leading-[1.05] lg:text-[80px] lg:leading-[80px] max-lg:break-words max-lg:hyphens-auto"
+            className="mx-auto mt-4 text-[28px] leading-[1.15] sm:text-[38px] sm:leading-[1.05] lg:text-[80px] lg:leading-[80px] tracking-[-1px] sm:tracking-[-2px] max-lg:break-words max-lg:hyphens-auto"
             style={{
               fontWeight: 500,
-              letterSpacing: "-2px",
               color: "rgb(61,61,61)",
               maxWidth: "900px",
             }}

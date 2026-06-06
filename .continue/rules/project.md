@@ -11,6 +11,25 @@ alwaysApply: true
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+# Session start: sync the working branch with master
+
+**At the start of every new chat, before doing other work, bring the current
+working branch up to date with `master`:**
+
+```bash
+git fetch origin --quiet && git merge origin/master --no-edit
+```
+
+This branch (`page-finish` and friends) regularly falls behind `origin/master`,
+where finished pages get merged (e.g. the `/ueber-uns` page lived only on master
+and 404'd locally until merged in). Catching up first prevents "page is missing
+/ shows 404" confusion and avoids rebuilding work that already exists on master.
+
+- If the merge reports conflicts, **stop and ask the user** how to resolve them
+  rather than guessing.
+- **Skip this only if the user explicitly says so in their first message** of the
+  chat (e.g. "don't merge master", "kein merge"). Otherwise always do it.
+
 # Project: Fast Systemmöbel — modular section library
 
 This repo is a **pixel-perfect clone of Fast Systemmöbel**, built as **one modular
