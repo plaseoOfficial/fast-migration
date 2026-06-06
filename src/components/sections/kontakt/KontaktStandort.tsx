@@ -22,8 +22,7 @@ export function KontaktStandort() {
 
         {/* H2 */}
         <h2
-          className="mt-2 mb-10 text-center text-[44px] leading-[1.0] font-medium text-black sm:text-[72px] lg:text-[120px] lg:leading-[120px]"
-          style={{ letterSpacing: "-5px" }}
+          className="mt-2 mb-10 text-center text-[44px] leading-[1.0] font-medium text-black sm:text-[72px] lg:text-[120px] lg:leading-[120px] tracking-[-2px] sm:tracking-[-3px] lg:tracking-[-5px]"
         >
           Wir freuen uns auf Sie!
         </h2>
@@ -49,8 +48,7 @@ export function KontaktStandort() {
             style={{ backgroundColor: "rgba(231,224,218,0.96)" }}
           >
             <h4
-              className="mb-4 text-[28px] leading-[1.1] font-medium text-black lg:text-[50px] lg:leading-[60px]"
-              style={{ letterSpacing: "-2px" }}
+              className="mb-4 text-[28px] leading-[1.1] font-medium text-black lg:text-[50px] lg:leading-[60px] tracking-[-1px] lg:tracking-[-2px]"
             >
               Unser Standort
             </h4>

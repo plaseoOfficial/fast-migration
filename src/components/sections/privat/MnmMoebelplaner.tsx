@@ -50,8 +50,7 @@ export function MnmMoebelplaner({
           {/* Left — text column */}
           <div className="pb-12 lg:pb-12">
             <h2
-              className="text-white font-medium text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[64px] lg:leading-[64px]"
-              style={{ letterSpacing: "-4px" }}
+              className="text-white font-medium text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[64px] lg:leading-[64px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-4px]"
             >
               {heading}
             </h2>

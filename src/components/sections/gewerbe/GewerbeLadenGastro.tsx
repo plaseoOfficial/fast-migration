@@ -29,10 +29,10 @@ export function GewerbeLadenGastro() {
           <div>
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium",
-                "lg:text-[59px] lg:leading-[59px]"
+                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[59px] lg:leading-[59px] lg:tracking-[-4px]"
               )}
-              style={{ color: "rgb(23,33,33)", letterSpacing: "-4px", fontWeight: 500 }}
+              style={{ color: "rgb(23,33,33)", fontWeight: 500 }}
             >
               Ladeneinrichtung, die zu Ihrem Objekt passt
             </h2>
@@ -105,10 +105,10 @@ export function GewerbeLadenGastro() {
           <div>
             <h2
               className={cn(
-                "text-[32px] leading-[1.05] font-medium",
-                "lg:text-[64px] lg:leading-[64px]"
+                "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
+                "lg:text-[64px] lg:leading-[64px] lg:tracking-[-4px]"
               )}
-              style={{ color: "rgb(23,33,33)", letterSpacing: "-4px", fontWeight: 500 }}
+              style={{ color: "rgb(23,33,33)", fontWeight: 500 }}
             >
               Gastromöbel, die magisch anziehen
             </h2>
