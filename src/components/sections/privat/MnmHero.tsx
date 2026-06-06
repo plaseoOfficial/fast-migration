@@ -15,9 +15,18 @@ interface MnmHeroProps {
   title: string;
   intro: string;
   breadcrumb: BreadcrumbItem[];
+  /**
+   * Top-to-bottom scrim behind the transparent header, for white-on-photo
+   * readability. Override per page when the photo is unusually bright/dark at
+   * the top. Pass a full CSS `background` value.
+   */
+  headerScrim?: string;
 }
 
-export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb }: MnmHeroProps) {
+const DEFAULT_HEADER_SCRIM =
+  "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)";
+
+export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScrim }: MnmHeroProps) {
   return (
     <section
       className={cn(
@@ -44,6 +53,14 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb }: MnmHero
           background:
             "linear-gradient(90deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0) 70%)",
         }}
+        aria-hidden="true"
+      />
+
+      {/* Top scrim — keeps the transparent header (white logo + nav) readable
+          over the photo. Tunable per page via the headerScrim prop. */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-[200px] lg:h-[280px]"
+        style={{ background: headerScrim ?? DEFAULT_HEADER_SCRIM }}
         aria-hidden="true"
       />
 
