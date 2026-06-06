@@ -4,10 +4,10 @@ import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
-import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { BueroProcessSteps } from "@/components/sections/gewerbe/BueroProcessSteps";
+import { BueroVergleich } from "@/components/sections/gewerbe/BueroVergleich";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -18,7 +18,7 @@ import {
   bueroIntroStats,
   bueroProcessSteps,
   bueroTypische,
-  bueroWarum,
+  bueroVergleich,
   bueroGeschichte,
   bueroMoebelplaner,
   bueroCtas,
@@ -77,7 +77,7 @@ export default function BueroeinrichtungPage() {
 
       <MnmWeitereLeistungen />
       <MnmTypische {...bueroTypische} />
-      <MnmWarum {...bueroWarum} reverse imageColumns={2} />
+      <BueroVergleich {...bueroVergleich} />
       <MnmGeschichte {...bueroGeschichte} />
       <MnmMoebelplaner {...bueroMoebelplaner} />
       <TestimonialsSection heading={bueroTestimonialsHeading} />
