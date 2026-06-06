@@ -8,7 +8,7 @@ import { mnmCtas, mnmFaq } from "@/lib/content/moebel-nach-mass";
 export const serviceHeroSample = {
   title: "Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbeeinrichtung" },
   ],
   bgImage: "/images/2025/11/DSC_0001.jpg",
@@ -31,7 +31,7 @@ export const expandingCtaSample = mnmCtas.final;
 export const kontaktFormularHeroSample = {
   title: "Kommen Sie mit unseren Experten in Kontakt",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Kontakt" },
   ],
   bgImage: "/images/2025/11/DSC06206-scaled.jpg",

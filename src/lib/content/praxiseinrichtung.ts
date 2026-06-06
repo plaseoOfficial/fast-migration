@@ -19,7 +19,7 @@ export const praxisHero = {
   intro:
     "Ihre Praxis und Ihre Kanzlei brauchen mehr als Möbel von der Stange. Wir planen und fertigen Empfangstresen, Behandlungsmöbel, Wartebereiche und Büromöbel zentimetergenau nach Maß. Gebaut im eigenen Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team direkt in Ihren Räumen.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Praxiseinrichtung" },
   ],

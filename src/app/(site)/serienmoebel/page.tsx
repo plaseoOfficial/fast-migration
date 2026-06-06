@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: "/serienmoebel/",
     locale: "de_DE",
     type: "article",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 

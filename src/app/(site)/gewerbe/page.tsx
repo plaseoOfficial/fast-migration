@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Funktionale Gewerbeeinrichtung nach Maß für Büro, Praxis, Ladenbau und Gastro.",
     locale: "de_DE",
     type: "article",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 
@@ -99,7 +99,7 @@ export default function GewerbeeinrichtungPage() {
       <ServiceHero
         title="Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt"
         breadcrumb={[
-          { label: "fast.side-boost.com", href: "/" },
+          { label: "Fast Systemmöbel", href: "/" },
           { label: "Gewerbeeinrichtung" },
         ]}
         bgImage="/images/2025/11/DSC_0001.jpg"

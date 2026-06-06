@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Individuelle Maßmöbel für Küche, Bad, Wohnraum und Homeoffice. Millimetergenau geplant und gefertigt im Meisterbetrieb. Beratung kostenlos.",
     locale: "de_DE",
     type: "article",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 

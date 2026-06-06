@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Planen Sie Ihre Möbel nach Maß online – kostenlos und unverbindlich. Fertigung aus Espelkamp.",
     locale: "de_DE",
     type: "article",
-    siteName: "fast.side-boost.com",
+    siteName: "Fast Systemmöbel",
   },
 };
 
@@ -52,7 +52,7 @@ export default function MoebelplanerPage() {
       <ServiceHero
         title="Möbelplaner online – Maßmöbel planen und fertigen lassen in OWL"
         breadcrumb={[
-          { label: "fast.side-boost.com", href: "/" },
+          { label: "Fast Systemmöbel", href: "/" },
           { label: "Möbelplaner" },
         ]}
         bgImage="/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg"

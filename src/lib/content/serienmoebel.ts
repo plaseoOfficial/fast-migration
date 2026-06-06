@@ -21,7 +21,7 @@ export const serienHero = {
   intro:
     "Sie brauchen viele gleiche Möbel, nicht ein Einzelstück. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und in seriengleicher Qualität. Geplant, gefertigt und montiert aus einer Hand im eigenen Meisterbetrieb in Espelkamp. Geliefert wird bundesweit.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Serienmöbel" },
   ],

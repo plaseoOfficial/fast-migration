@@ -19,7 +19,7 @@ export const bueroHero = {
   intro:
     "Ihre Büroräume bestimmen, wie konzentriert Ihr Team arbeitet und wie Besucher Ihr Unternehmen wahrnehmen. Wir planen und fertigen Büromöbel nach Maß. Vom einzelnen Aktenschrank bis zur kompletten Objekteinrichtung. Gebaut im eigenen Meisterbetrieb in Espelkamp und vor Ort in Ihren Räumen montiert.",
   breadcrumb: [
-    { label: "fast.side-boost.com", href: "/" },
+    { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Büroeinrichtung" },
   ],
