@@ -56,9 +56,9 @@ export const bueroIntroStats = {
 };
 
 export const bueroProcess = {
-  heading: "So läuft Ihre Büroeinrichtung ab: Beratung, Aufmaß, 3D-Planung, Fertigung, Montage",
+  heading: "In fünf Schritten zum fertigen Büro",
   paragraph:
-    "Ihre Büroeinrichtung entsteht in fünf klaren Schritten. Erstens die Beratung, im Büro oder bei Ihnen vor Ort, in der wir Bedarf, Stil und Budgetrahmen klären. Zweitens das kostenlose Aufmaß vor Ort. Jeder Millimeter zählt, wenn Schränke wandbündig sitzen und Schreibtische ins Raster Ihrer Arbeitsplätze passen sollen. Drittens die 3D-Planung: Sie sehen Ihre künftigen Räume, bevor das erste Brett geschnitten wird. Viertens die Fertigung im eigenen Werk in Espelkamp, alle Teile in Eigenregie. Und fünftens die Montage durch unser eigenes Team, auf Wunsch außerhalb der Geschäftszeiten oder in Etappen, damit Ihr Bürobetrieb so wenig wie möglich gestört wird. Sie haben durchgehend einen festen Ansprechpartner, vom ersten Gespräch bis zur Abnahme, und müssen nichts selbst aufbauen. Ob einzelner Aktenschrank oder komplette Objekteinrichtung, wir liefern robuste Büromöbel nach Maß, die der täglichen Beanspruchung standhalten.",
+    "Beratung, kostenloses Aufmaß vor Ort, 3D-Planung, Fertigung im eigenen Werk in Espelkamp, Montage durch unser Team: fünf klare Schritte, ein fester Ansprechpartner. Auf Wunsch montieren wir außerhalb der Geschäftszeiten oder in Etappen, damit Ihr Betrieb weiterläuft. Aufbauen müssen Sie nichts selbst.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/IMG_2249.jpg",
   imageAlt: "Maßgefertigter Empfangs- und Arbeitsbereich im Büro",
@@ -102,7 +102,7 @@ export const bueroProcessSteps = {
 };
 
 export const bueroTypische = {
-  heading: "Büromöbel nach Maß: Schreibtische, Aktenschränke, Konferenztische, Empfang und mehr",
+  heading: "Alles fürs Büro, aus einer Werkstatt",
   image1: "/images/2025/11/IMG_2772-scaled.jpg",
   image1Alt: "Maßgefertigte Arbeitsplätze im Büro",
   image2: "/images/2025/11/DSC06206-scaled.jpg",
@@ -144,7 +144,7 @@ export const bueroTypische = {
 };
 
 export const bueroWarum = {
-  heading: "Tischler oder Büromöbelhandel? Der Unterschied im Überblick",
+  heading: "Tischler oder Möbelhandel? Der Unterschied",
   paragraph:
     "Kataloganbieter liefern feste Rastermaße. Wo Ihre Wand 2,87 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir fertigen Ihre Büroeinrichtung wand-zu-wand — millimetergenau auf Ihre Räume, Beratung, Fertigung und Montage aus einer Hand. Ein Detail, das im Alltag zählt: Unsere PU-Kantenverleimung verschließt Kanten fugenlos und nahezu wasserfest. Schreibtischkanten überstehen Jahre der Beanspruchung, die Teeküche verträgt Feuchtigkeit, nichts platzt an den Rändern ab.",
   images: [

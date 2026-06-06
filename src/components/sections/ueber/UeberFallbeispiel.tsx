@@ -9,11 +9,11 @@ interface UeberFallbeispielProps {
 }
 
 const BEIGE = "rgba(203,191,181,0.59)";
-const PANEL = "rgb(247,244,240)";
+const PANEL = "#ffffff";
 
 function QuoteMark() {
   return (
-    <svg width="44" height="36" viewBox="0 0 44 36" fill="rgb(23,33,33)" aria-hidden="true">
+    <svg width="44" height="36" viewBox="0 0 44 36" fill="rgb(61,61,61)" aria-hidden="true">
       <path d="M0 36V19.8C0 8.9 6.1 1.7 17.3 0L19.3 4.9C12.9 6.7 9.8 10.3 9.5 14.9H18V36H0Zm26 0V19.8C26 8.9 32.1 1.7 43.3 0L45.3 4.9C38.9 6.7 35.8 10.3 35.5 14.9H44V36H26Z" />
     </svg>
   );
@@ -34,10 +34,10 @@ export function UeberFallbeispiel({
         fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
       }}
     >
-      <div className="mx-auto w-full max-w-[1350px] px-6 py-16 lg:px-10 lg:py-20">
+      <div className="mx-auto w-full max-w-[1280px] px-6 py-[48px] lg:px-8 lg:py-[84px]">
         {/* Eyebrow */}
         <p
-          className="text-center font-bold uppercase"
+          className="text-center font-medium uppercase"
           style={{ fontSize: "14px", letterSpacing: "2px", color: "rgb(61,61,61)" }}
         >
           {eyebrow}
@@ -47,9 +47,9 @@ export function UeberFallbeispiel({
         <h2
           className="mx-auto mt-6 max-w-[1100px] text-center font-medium"
           style={{
-            fontSize: "clamp(40px, 7vw, 100px)",
+            fontSize: "clamp(45px, 7vw, 65px)",
             lineHeight: "1",
-            letterSpacing: "-5px",
+            letterSpacing: "0",
             color: "rgb(61,61,61)",
           }}
         >
@@ -75,7 +75,7 @@ export function UeberFallbeispiel({
             <QuoteMark />
             <p
               className="mt-8 font-medium"
-              style={{ fontSize: "clamp(20px, 2vw, 26px)", lineHeight: "1.4", color: "rgb(23,33,33)" }}
+              style={{ fontSize: "clamp(18px, 2vw, 22px)", lineHeight: "1.3", color: "rgb(61,61,61)" }}
             >
               {quote}
             </p>

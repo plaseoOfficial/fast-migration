@@ -8,7 +8,7 @@
  * facilities that order identical furniture in medium and large quantities.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", B2B,
- * Sie-Form), not plaseo. Facts are real: seit 1996, Meisterbetrieb seit 2013,
+ * Sie-Form), not plaseo. Facts are real: seit 1996, Meisterbetrieb (ohne Jahr),
  * über 1.000 m² Fertigung, moderne Homag-/CNC-Technologie, eigenes Montageteam,
  * Montageradius rund 200 km um Espelkamp, Lieferung bundesweit, Made in Germany.
  * No invented numbers, awards or claims. Zero em-dashes.
@@ -17,7 +17,7 @@
 export const serienHero = {
   bgImage: "/images/2025/11/DSC06206-scaled.jpg",
   imageAlt: "Möbel Serienfertigung nach Maß im Meisterbetrieb Fast Systemmöbel",
-  title: "Möbel Serienfertigung nach Maß: identische Qualität in Serie",
+  title: "Möbel-Serienfertigung nach Maß",
   intro:
     "Sie brauchen viele gleiche Möbel, nicht ein Einzelstück. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und in seriengleicher Qualität. Geplant, gefertigt und montiert aus einer Hand im eigenen Meisterbetrieb in Espelkamp. Geliefert wird bundesweit.",
   breadcrumb: [
@@ -56,16 +56,16 @@ export const serienIntroStats = {
 };
 
 export const serienProcess = {
-  heading: "Von der Zeichnung zur Serie: Planung, Fertigung und Montage aus einer Hand",
+  heading: "Von der Zeichnung zur fertigen Serie",
   paragraph:
-    "Ihre Serie entsteht in klaren Schritten. Zuerst klären wir Stückzahl, Maße und Materialien anhand Ihrer Zeichnung oder CAD-Daten. Auf Wunsch fertigen wir ein Mustermöbel zur Freigabe. Dann produzieren wir die volle Stückzahl auf Homag- und CNC-Technik, jedes Bauteil nach demselben Programm. Vor dem Versand prüft unser Team jede Charge. Wir liefern bundesweit und montieren im Umkreis von rund 200 km mit eigenem Team, ohne Subunternehmer. So bleibt die Qualität über die gesamte Serie konstant.",
+    "Zuerst klären wir Stückzahl, Maße und Materialien anhand Ihrer Zeichnung oder CAD-Daten. Auf Wunsch fertigen wir ein Mustermöbel zur Freigabe. Dann produzieren wir die volle Stückzahl auf Homag- und CNC-Technik, jedes Bauteil nach demselben Programm. Vor dem Versand prüft unser Team jede Charge. Geliefert wird bundesweit, montiert im Umkreis von 200 km mit eigenem Team.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/DSC07156-scaled.jpg",
   imageAlt: "Serienteile in der Fertigung mit Homag-Technik",
 };
 
 export const serienTypische = {
-  heading: "Typische Serienprojekte: für Handel, Hotellerie, Pflege und Industrie",
+  heading: "Was wir in Serie fertigen",
   image1: "/images/2025/11/DSC06340-scaled.jpg",
   image1Alt: "Filialserie aus identischen Möbeln nach Maß",
   image2: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
@@ -107,9 +107,9 @@ export const serienTypische = {
 };
 
 export const serienWarum = {
-  heading: "Warum Serienfertigung im Meisterbetrieb statt anonymer Massenware",
+  heading: "Warum Serienfertigung im Meisterbetrieb",
   paragraph:
-    "Die Industrie produziert in festen Rastermaßen und großen Mindestmengen. Wir fertigen Ihre Serie nach Ihrer Zeichnung, zentimetergenau und ab überschaubaren Stückzahlen. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die gesamte Serie gleich. Sie bekommen die Präzision moderner Homag-Technik und dazu die Sorgfalt eines Tischler-Meisterbetriebs. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle, Lieferung und Montage kommen aus einer Hand, mit festen Ansprechpartnern und eigenem Montageteam. So bleibt Ihre Serie liefertreu und reproduzierbar, auch bei Nachbestellungen.",
+    "Die Industrie produziert in festen Rastermaßen und großen Mindestmengen. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und ab überschaubaren Stückzahlen. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die ganze Serie gleich, mit der Präzision moderner Homag-Technik und der Sorgfalt eines Meisterbetriebs. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle, Lieferung und Montage aus einer Hand, auch bei Nachbestellungen reproduzierbar.",
   images: [
     { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Serienmöbel in der Fertigung", width: 600, height: 450 },
     { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Korpusserie auf CNC-Technik", width: 600, height: 800 },
@@ -129,10 +129,10 @@ export const serienGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp. Heute fertigen wir auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
     "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, in Liefertreue und in konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben.",
     "Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit.",
   ],

@@ -9,7 +9,7 @@ import type { ServiceCard } from "@/types/mnm";
 export const mnmHero = {
   bgImage: "/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg",
   imageAlt: "Einbauschrank nach Maß – Fast Systemmöbel",
-  title: "Möbel nach Maß aus Espelkamp – millimetergenau geplant",
+  title: "Möbel nach Maß, millimetergenau aus Espelkamp",
   intro:
     "Standardlösungen finden Sie in jedem Möbelhaus. Wir bei Fast Systemmöbel gehen einen Schritt weiter: Wir planen und fertigen hochwertige Möbel nach Maß, die sich millimetergenau in Ihre Räume einfügen und Ihre Persönlichkeit perfekt unterstreichen.",
   breadcrumb: [
@@ -21,7 +21,7 @@ export const mnmHero = {
 export const mnmIntroStats = {
   since: "seit 1996",
   sinceSub: "Geben wir unser Bestes.",
-  heading: "Individuelle Möbel nach Maß für jeden Raum präzise planen",
+  heading: "Möbel nach Maß für jeden Raum",
   introBefore:
     "Fast Systemmöbel aus Espelkamp begleitet Sie genau in dieser entscheidenden",
   introBold: "Bauphase",
@@ -47,16 +47,16 @@ export const mnmIntroStats = {
 };
 
 export const mnmProcess = {
-  heading: "Planung, Fertigung und Montage für Maßmöbel aus einer Hand",
+  heading: "Maßmöbel, alles aus einer Hand",
   paragraph:
-    "Unsere Maßmöbel entstehen in einem strukturierten Prozess: digitales Planen, professionelles Aufmaß, Fertigung auf Homag-Technologie und saubere Montage durch unser eigenes Team. Dabei kombinieren wir hochwertige Materialien, moderne Dekore und robuste Konstruktionen für maximale Funktionalität. Ob Schrank nach Maß, Regal, Sideboard, Kommode oder Lösungen für Nischen und Dachschrägen – wir entwickeln Möbel, die perfekt in den Raum passen und langfristig zuverlässig funktionieren.",
+    "Maßmöbel entstehen in klaren Schritten: digitales Planen, professionelles Aufmaß, Fertigung auf Homag-Technik und saubere Montage durch unser eigenes Team. Ob Schrank, Regal, Sideboard, Kommode oder Lösung für Nische und Dachschräge: Wir bauen Möbel, die passgenau sitzen und über Jahre zuverlässig funktionieren.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
   imageAlt: "Maßgefertigter Einbauschrank in Anthrazit",
 };
 
 export const mnmTypische = {
-  heading: "Typische Maßanfertigungen – passgenaue Möbel für Ihr Zuhause",
+  heading: "Möbel nach Maß für Ihr Zuhause",
   image1: "/images/2025/11/IMG_9120-scaled.jpg",
   image1Alt: "Maßgefertigtes Möbeldetail",
   image2: "/images/2025/11/IMG_2249.jpg",
@@ -100,7 +100,7 @@ export const mnmTypische = {
 export const mnmWarum = {
   heading: "Warum Maßmöbel aus eigener Fertigung überzeugen",
   paragraph:
-    "Unsere Möbel nach Maß werden vollständig in Espelkamp gefertigt. Präzision bis ins Detail und stabile Konstruktionen sorgen dafür, dass Ihr Möbelstück und der Raum eine perfekte Einheit bilden. Ob Kleiderschrank, Kommode, Regal oder maßgefertigtes Sideboard – jede Maßanfertigung wird auf Ihre Bedürfnisse zugeschnitten und massgeschneidert aufgebaut. Wir setzen auf langlebige Materialien, saubere Verarbeitung und eine Montage, die funktional und modern wirkt. Lieferung und Montage erfolgen durch unser eigenes Team.",
+    "Ihre Möbel nach Maß fertigen wir vollständig in Espelkamp. Stabile Konstruktionen und Präzision bis ins Detail sorgen dafür, dass Möbel und Raum eine Einheit bilden. Ob Kleiderschrank, Kommode, Regal oder Sideboard: Jedes Stück wird auf Ihre Bedürfnisse zugeschnitten, aus langlebigen Materialien sauber verarbeitet. Lieferung und Montage übernimmt unser eigenes Team.",
   images: [
     { src: "/images/2025/11/20231204_095459232_iOS-scaled.jpg", alt: "Moderne Küche in Grau und Weiß", width: 600, height: 450 },
     { src: "/images/2025/11/DSC_0001.jpg", alt: "Moderner Schreibtisch", width: 600, height: 400 },
@@ -112,7 +112,7 @@ export const mnmWarum = {
 };
 
 export const mnmGeschichte = {
-  heading: "Unsere Geschichte – Qualität aus fast drei Jahrzehnten",
+  heading: "Qualität aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum modernen Möbelhersteller",
   anchorImage: "/images/2024/03/test-img-83485.jpg",
   anchorImageAlt: "Maßmöbel aus eigener Fertigung — Fast Systemmöbel Espelkamp",
@@ -120,10 +120,10 @@ export const mnmGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
     { value: "200 km", label: "Montage-Radius" },
-    { value: "2013", label: "Meisterbetrieb" },
+    { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Espelkamp.",
+    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp.",
     "Aus ersten Küchen entstand ein Meisterbetrieb mit über 1.000 m² Fertigungsfläche, modernen Homag-Maschinen und einem eingespielten Team. Heute fertigen wir Maßmöbel, die millimetergenau geplant, hochwertig verarbeitet und zuverlässig montiert werden.",
     "Jede Maßanfertigung verbindet Funktionalität und Design – vom Einbauschrank bis zum Sideboard. Unsere Möbel werden in Espelkamp gefertigt, im Umkreis von 200 km montiert und deutschlandweit geliefert.",
   ],

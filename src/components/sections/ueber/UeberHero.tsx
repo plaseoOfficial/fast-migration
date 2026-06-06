@@ -34,7 +34,7 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
         "flex items-center",
         "pt-[150px] lg:pt-[200px] pb-16 lg:pb-24"
       )}
-      style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
+      style={{ fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif" }}
     >
       {/* Background image */}
       <Image
@@ -50,7 +50,7 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "radial-gradient(circle at center, rgba(23,33,33,0.51) 0%, rgba(63,72,72,0.57) 14%, rgba(255,255,255,0) 98%)",
+            "radial-gradient(circle at center, rgba(61,61,61,0.51) 0%, rgba(61,61,61,0.57) 14%, rgba(255,255,255,0) 98%)",
         }}
         aria-hidden="true"
       />
@@ -64,13 +64,15 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-10">
           {/* Left column: h1 + breadcrumb (~62%) */}
           <div className="lg:w-[62%]">
+            {/* Page h1, intentionally capped at the h2 step (65px) so it sets
+                the top of the heading hierarchy without overpowering the layout. */}
             <h1
-              className="text-white font-medium text-[34px] leading-[1.1] sm:text-[46px] lg:text-[60px] lg:leading-[66px]"
-              style={{ letterSpacing: "-3px" }}
+              className="text-white font-medium text-[45px] leading-[1.1] lg:text-[65px]"
+              style={{ letterSpacing: "-2px" }}
             >
               {title}
             </h1>
@@ -109,7 +111,7 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
           <div className="mt-7 lg:mt-0 lg:w-[32%] lg:flex-shrink-0">
             <p
               className="font-medium text-white/80"
-              style={{ fontSize: "15px", lineHeight: "23.8px" }}
+              style={{ fontSize: "16px", lineHeight: "1.7" }}
             >
               {intro}
             </p>
