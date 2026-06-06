@@ -260,7 +260,7 @@ export function GewerbeIntroStats() {
               und ästhetisch überzeugen – in jedem Projekt, jedem Detail.
             </p>
             <Link
-              href="/project/mixmarkt/"
+              href="/gewerbe/ladenbau/"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

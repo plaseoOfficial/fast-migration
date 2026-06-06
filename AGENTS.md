@@ -57,6 +57,11 @@ Core rules (full detail in `ARCHITECTURE.md`):
 - **New page added?** Consult **[`docs/seo/internal-linking.md`](docs/seo/internal-linking.md)** (the
   silo-model link backlog) and wire every internal link whose target now exists, in both directions.
   We launch *clean* — no dead links; flat URLs (`/moebel-nach-mass/` → `/kuechen-nach-mass/`, …).
+  The model is **machine-readable** in **[`src/lib/seo/linking-rules.ts`](src/lib/seo/linking-rules.ts)**
+  (page graph + MUSS/SOLL/DARF-NICHT + anchor sets); register the new page's node there
+  (`built: true`, `parent`, `type`). Run **`npm run audit:links`** to check the real link graph
+  (dead links, missing MUSS, cross-silo, budgets, anchor diversity), and use the **`intern-verlinkung`**
+  agent (`.claude/agents/intern-verlinkung.md`) to insert links + find anchors.
 
 # Website Reverse-Engineer Template
 

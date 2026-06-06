@@ -143,7 +143,7 @@ export const ueberValues = {
 export const ueberNavCards = [
   {
     heading: "Leistungen",
-    href: "/moebel-nach-mass",
+    href: "/moebel-nach-mass/",
     image: "/images/2025/11/DSC_9843.jpg",
     imageAlt: "Maßgefertigte Möbel von Fast Systemmöbel",
   },
@@ -155,7 +155,7 @@ export const ueberNavCards = [
   },
   {
     heading: "Kontakt",
-    href: "/kontakt",
+    href: "/kontakt/",
     image: "/images/2025/11/DSC_9965.jpg",
     imageAlt: "Werkstatt von Fast Systemmöbel",
   },
