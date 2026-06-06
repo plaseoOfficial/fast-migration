@@ -61,7 +61,7 @@ export function MnmWeitereLeistungen({
 }: MnmWeitereLeistungenProps) {
   return (
     <section
-      className="py-16 lg:py-[72px]"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -83,7 +83,7 @@ export function MnmWeitereLeistungen({
             {eyebrow}
           </p>
           <h2
-            className="mx-auto mt-4 text-[28px] leading-[1.15] sm:text-[38px] sm:leading-[1.05] lg:text-[80px] lg:leading-[80px] tracking-[-1px] sm:tracking-[-2px] max-lg:break-words max-lg:hyphens-auto"
+            className="mx-auto mt-4 text-[28px] leading-[1.15] sm:text-[38px] sm:leading-[1.05] lg:text-[84px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] max-lg:break-words max-lg:hyphens-auto"
             style={{
               fontWeight: 500,
               color: "rgb(61,61,61)",
@@ -102,7 +102,7 @@ export function MnmWeitereLeistungen({
               key={card.title}
               className="flex flex-col lg:min-h-[430px]"
               style={{
-                backgroundColor: "rgb(45,45,45)",
+                backgroundColor: "rgb(61,61,61)",
                 padding: "40px",
               }}
             >
@@ -121,8 +121,8 @@ export function MnmWeitereLeistungen({
                 className="mt-6 max-lg:break-words max-lg:hyphens-auto"
                 lang="de"
                 style={{
-                  fontSize: "25px",
-                  lineHeight: "25px",
+                  fontSize: "22px",
+                  lineHeight: "22px",
                   fontWeight: 500,
                   color: "rgb(255,255,255)",
                 }}
@@ -177,7 +177,7 @@ export function MnmWeitereLeistungen({
               className="flex-shrink-0 text-[60px] sm:text-[120px] leading-[0.9] lg:text-[200px]"
               style={{
                 fontWeight: 500,
-                color: "rgb(0,0,0)",
+                color: "rgb(61,61,61)",
                 fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
               }}
             >
@@ -191,7 +191,7 @@ export function MnmWeitereLeistungen({
                 fontSize: "18px",
                 lineHeight: "31.5px",
                 fontWeight: 500,
-                color: "rgb(23,33,33)",
+                color: "rgb(61,61,61)",
               }}
             >
               {ampersandText}

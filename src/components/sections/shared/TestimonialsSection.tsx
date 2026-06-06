@@ -45,7 +45,7 @@ export function TestimonialsSection({
 }: TestimonialsSectionProps) {
   return (
     <section
-      className="py-14 lg:py-[64px]"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -69,7 +69,7 @@ export function TestimonialsSection({
             className="mt-3 text-[34px] leading-[1.05] lg:text-[65px] lg:leading-[65px] tracking-[-1.5px] lg:tracking-[-2px]"
             style={{
               fontWeight: 500,
-              color: "rgb(0,0,0)",
+              color: "rgb(61,61,61)",
               marginBottom: "48px",
             }}
           >
@@ -84,7 +84,7 @@ export function TestimonialsSection({
               key={t.name}
               className="flex flex-col items-center text-center p-8 md:p-[50px] md:px-10"
               style={{
-                backgroundColor: "rgb(250,250,250)",
+                backgroundColor: "rgb(243,243,243)",
               }}
             >
               {/* Avatar */}
@@ -128,7 +128,7 @@ export function TestimonialsSection({
                   href="#"
                   style={{
                     fontSize: "16px",
-                    color: "rgb(117,117,117)",
+                    color: "rgb(102,102,102)",
                     textDecoration: "underline",
                     marginTop: "4px",
                   }}
@@ -142,7 +142,7 @@ export function TestimonialsSection({
                 style={{
                   fontSize: "20px",
                   fontWeight: 500,
-                  color: "rgb(0,0,0)",
+                  color: "rgb(61,61,61)",
                   marginTop: "16px",
                 }}
               >

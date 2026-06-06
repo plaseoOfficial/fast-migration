@@ -33,7 +33,7 @@ export function FaqSection({
 
   return (
     <section
-      className="py-14 lg:py-[64px]"
+      className="py-12 lg:py-[84px]"
       style={{
         backgroundColor: "rgba(203,191,181,0.59)",
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -58,11 +58,11 @@ export function FaqSection({
 
             {/* H2 */}
             <h2
-              className="mt-3 text-[28px] leading-[1.1] sm:text-[36px] sm:leading-[1.05] lg:text-[56px] lg:leading-[1.0] max-lg:break-words max-lg:hyphens-auto"
+              className="mt-3 text-[28px] leading-[1.1] sm:text-[36px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] max-lg:break-words max-lg:hyphens-auto"
               lang="de"
               style={{
                 fontWeight: 500,
-                color: "rgb(0,0,0)",
+                color: "rgb(61,61,61)",
                 letterSpacing: "-1px",
               }}
             >
@@ -76,7 +76,7 @@ export function FaqSection({
               style={{
                 fontSize: "20px",
                 fontWeight: 500,
-                color: "rgb(0,0,0)",
+                color: "rgb(61,61,61)",
               }}
             >
               {ctaLabel}
@@ -92,7 +92,7 @@ export function FaqSection({
                 <div
                   key={index}
                   className="mb-[15px]"
-                  style={{ backgroundColor: "rgb(250,250,250)" }}
+                  style={{ backgroundColor: "rgb(243,243,243)" }}
                 >
                   <button
                     type="button"
@@ -104,7 +104,7 @@ export function FaqSection({
                       className="text-[16px] sm:text-[18px] lg:text-[20px]"
                       style={{
                         fontWeight: 500,
-                        color: "rgb(0,0,0)",
+                        color: "rgb(61,61,61)",
                         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
                       }}
                     >
