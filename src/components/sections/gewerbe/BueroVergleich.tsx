@@ -29,7 +29,7 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
           </h2>
           <div className="flex flex-col justify-end">
             <p
-              className="text-[16px] leading-[28px] font-medium"
+              className="text-[16px] leading-[1.7] font-medium"
               style={{ color: "rgba(220,220,220,0.85)" }}
             >
               {intro}
@@ -40,7 +40,7 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
         {/* Row 2: 4 advantage columns */}
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t"
-          style={{ borderColor: "rgba(255,255,255,0.12)" }}
+          style={{ borderColor: "rgba(255,255,255,0.30)" }}
         >
           {items.map((item, i) => {
             const parts = item.split(" — ");
@@ -49,8 +49,8 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
             return (
               <div
                 key={i}
-                className="py-6 lg:py-8 pr-6 lg:pr-8 flex flex-col gap-3 border-b sm:border-b-0 lg:border-r"
-                style={{ borderColor: "rgba(255,255,255,0.12)" }}
+                className={`py-6 lg:py-8 pr-6 lg:pr-8 flex flex-col gap-3 border-b sm:border-b-0 lg:border-r${i > 0 ? " pl-6 lg:pl-8" : ""}`}
+                style={{ borderColor: "rgba(255,255,255,0.30)" }}
               >
                 <span
                   className="text-[22px] font-medium leading-[1]"
@@ -59,15 +59,15 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
                   0{i + 1}
                 </span>
                 <p
-                  className="text-[15px] leading-[24px] font-medium"
+                  className="text-[16px] leading-[1.7] font-medium"
                   style={{ color: "#ffffff" }}
                 >
                   {title}
                 </p>
                 {detail && (
                   <p
-                    className="text-[13px] leading-[20px] font-medium"
-                    style={{ color: "rgba(220,220,220,0.55)" }}
+                    className="text-[14px] leading-[1.7] font-medium"
+                    style={{ color: "rgba(220,220,220,0.85)" }}
                   >
                     {detail}
                   </p>
@@ -79,8 +79,8 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
 
         {/* Footnote: PU-Kante */}
         <p
-          className="mt-8 lg:mt-10 text-[13px] leading-[20px] font-medium max-w-[640px]"
-          style={{ color: "rgba(220,220,220,0.45)" }}
+          className="mt-8 lg:mt-10 text-[12px] leading-[1.7] font-medium max-w-[640px]"
+          style={{ color: "rgba(220,220,220,0.85)" }}
         >
           {kantenText}
         </p>
