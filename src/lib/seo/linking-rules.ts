@@ -44,6 +44,12 @@ export interface PageNode {
   built: boolean;
   /** Content module basename under src/lib/content/ that holds this page's links. */
   contentModule?: string;
+  /**
+   * MUSS-Targets, die für DIESE Seite bewusst NICHT gelten (Per-Seite-Ausnahme
+   * vom typweiten Pflicht-Link). Beispiel: B2B-Serienseiten konvertieren über
+   * persönlichen Kontakt (/kontakt/), nicht über den Privat-Möbelplaner.
+   */
+  mustExempt?: string[];
 }
 
 export const PAGES: PageNode[] = [
@@ -68,7 +74,7 @@ export const PAGES: PageNode[] = [
   { slug: "/gewerbe/ladenbau/", type: "cluster-pillar", silo: "ladenbau", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "ladenbau" },
   { slug: "/bueroeinrichtung/", type: "cluster-pillar", silo: "buero", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "bueroeinrichtung" },
   { slug: "/gastronomieeinrichtung/", type: "cluster-pillar", silo: "gastronomie", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "gastronomieeinrichtung" },
-  { slug: "/serienmoebel/", type: "cluster-pillar", silo: "serienmoebel", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "serienmoebel" },
+  { slug: "/serienmoebel/", type: "cluster-pillar", silo: "serienmoebel", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "serienmoebel", mustExempt: ["/moebelplaner/"] },
   { slug: "/praxiseinrichtung/", type: "cluster-pillar", silo: "praxis", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "praxiseinrichtung" },
 
   // Conversion + brand (neutral)

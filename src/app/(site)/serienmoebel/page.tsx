@@ -7,7 +7,6 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -20,7 +19,6 @@ import {
   serienTypische,
   serienWarum,
   serienGeschichte,
-  serienMoebelplaner,
   serienCtas,
   serienTestimonialsHeading,
   serienFaq,
@@ -79,7 +77,6 @@ export default function SerienmoebelPage() {
       <MnmTypische {...serienTypische} />
       <MnmWarum {...serienWarum} />
       <MnmGeschichte {...serienGeschichte} />
-      <MnmMoebelplaner {...serienMoebelplaner} />
       <TestimonialsSection heading={serienTestimonialsHeading} />
 
       {/* Final CTA — bottom of the testimonials section (beige) */}

@@ -297,6 +297,8 @@ async function main() {
 
     // CHECK 2: missing MUSS
     for (const t of rule.must) {
+      // Per-Seite-Ausnahme: dieser MUSS-Target gilt für diese Seite bewusst nicht.
+      if (node.mustExempt?.includes(t.target)) continue;
       const resolved = resolveTargets(t.target, node);
       if (!resolved.length) {
         if (targetIsBacklog(t.target, node)) {
