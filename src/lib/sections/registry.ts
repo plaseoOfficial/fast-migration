@@ -30,6 +30,9 @@ import { PartnerCarousel } from "@/components/sections/shared/PartnerCarousel";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { ReferenzenHero } from "@/components/sections/shared/ReferenzenHero";
 import { ReferenzenGrid } from "@/components/sections/shared/ReferenzenGrid";
+import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SegmentCards } from "@/components/sections/shared/SegmentCards";
+import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 
 // Gewerbe sections
 import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroStats";
@@ -95,6 +98,11 @@ import {
   ueberNavCards,
   ueberFallbeispiel,
 } from "@/lib/content/ueber-uns";
+import {
+  gastroProcess,
+  gastroSegments,
+  gastroUsp,
+} from "@/lib/content/gastronomieeinrichtung";
 
 function meta(id: string): SectionMeta {
   const found = SECTION_META.find((entry) => entry.id === id);
@@ -136,6 +144,9 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-image-cta"), ExpandingImageCta, expandingCtaSample),
   defineSection(meta("shared-referenzen-hero"), ReferenzenHero, referenzenHeroSample),
   defineSection(meta("shared-referenzen-grid"), ReferenzenGrid, referenzenGridSample),
+  defineSection(meta("shared-process-steps"), ProcessSteps, gastroProcess),
+  defineSection(meta("shared-segment-cards"), SegmentCards, gastroSegments),
+  defineSection(meta("shared-usp-highlight"), UspHighlight, gastroUsp),
 
   // Gewerbe
   defineSection(meta("gewerbe-intro-stats"), GewerbeIntroStats, noProps),

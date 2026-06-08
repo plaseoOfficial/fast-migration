@@ -373,6 +373,57 @@ export const SECTION_META = [
     screenshot: `${REF}/sec7-raeume.png`,
     isClient: true,
   },
+  {
+    id: "shared-process-steps",
+    displayName: "Shared — Process Steps",
+    useCase: "steps",
+    category: "shared",
+    description:
+      "Numbered process steps: eyebrow + heading + image on the left, a vertical list of numbered single-sentence steps on the right, plus an optional note. Breaks a dense 'how it works' paragraph into a scannable sequence.",
+    propsSummary: [
+      { name: "heading", type: "string", required: true },
+      { name: "image", type: "string", required: true },
+      { name: "imageAlt", type: "string", required: true },
+      { name: "steps", type: "ProcessStep[]", required: true },
+      { name: "eyebrow / note", type: "string", required: false },
+    ],
+    usedOn: ["/gastronomieeinrichtung"],
+    screenshot: `${REF}/moebel-nach-mass/03-process.jpg`,
+  },
+  {
+    id: "shared-segment-cards",
+    displayName: "Shared — Segment Cards",
+    useCase: "categories-list",
+    category: "shared",
+    description:
+      "Light card grid for audience/segment coverage (e.g. which businesses you serve). Each white card carries a title + one short sentence, turning a buried prose list into a scannable, SEO-friendly entity surface.",
+    propsSummary: [
+      { name: "heading", type: "string", required: true },
+      { name: "segments", type: "Segment[]", required: true },
+      { name: "eyebrow / intro", type: "string", required: false },
+    ],
+    usedOn: ["/gastronomieeinrichtung"],
+    screenshot: `${REF}/moebel-nach-mass/05-typische.jpg`,
+  },
+  {
+    id: "shared-usp-highlight",
+    displayName: "Shared — USP Highlight",
+    useCase: "feature-text",
+    category: "shared",
+    description:
+      "Single-USP proof block: one strong claim + a short proof paragraph + an optional stat badge, beside a supporting photo. Lifts one concrete, provable differentiator out of a dense paragraph into its own airy section.",
+    propsSummary: [
+      { name: "heading", type: "string", required: true },
+      { name: "body", type: "string", required: true },
+      { name: "image", type: "string", required: true },
+      { name: "imageAlt", type: "string", required: true },
+      { name: "eyebrow", type: "string", required: false },
+      { name: "stat", type: "{ value; label }", required: false },
+      { name: "imageLeft", type: "boolean", required: false },
+    ],
+    usedOn: ["/gastronomieeinrichtung"],
+    screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
+  },
 
   // ── Gewerbe (commercial page) ─────────────────────────────────────────────
   {
