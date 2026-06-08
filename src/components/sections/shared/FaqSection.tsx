@@ -34,7 +34,10 @@ export function FaqSection({
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="fast-section w-full bg-white">
+    <section
+      className="fast-section w-full"
+      style={{ backgroundColor: "rgba(203,191,181,0.59)" }}
+    >
       <div className="mx-auto max-w-[920px] px-6">
         <p className="fast-eyebrow mb-3 text-center">{eyebrow}</p>
         <h2
