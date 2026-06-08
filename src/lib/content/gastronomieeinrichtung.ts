@@ -244,54 +244,9 @@ export const gastroFaq = {
         "Einen Pauschalpreis gibt es bei Maßanfertigung nicht, weil jeder Gastraum anders zugeschnitten wird. Den Preis treiben vor allem die Fläche, der Möbelumfang, Sonderanfertigungen wie ein Bartresen, das gewählte Material und der Montageaufwand. Nach dem kostenlosen Aufmaß erhalten Sie ein individuelles Angebot mit klarer Kostenübersicht, das wir Position für Position kalkulieren, statt mit einer runden Hausnummer.",
     },
     {
-      question: "Wie läuft ein Gastro-Projekt bei Ihnen ab?",
-      answer:
-        "In fünf Schritten: Erstgespräch und kostenloses Aufmaß vor Ort, 3D-Planung mit Material- und Kostenübersicht, Fertigung in Espelkamp, Montage durch unser eigenes Team und gemeinsame Abnahme. Sie haben durchgehend einen festen Ansprechpartner und müssen nichts selbst aufbauen.",
-    },
-    {
-      question: "Was unterscheidet eine Tischlerei von einem Gastro-Online-Shop?",
-      answer:
-        "Der Online-Shop und das Möbelhaus liefern Katalogware in festen Maßen, oft ohne Aufmaß, Planung und Montage. An Nischen und schiefen Wänden bleiben Lücken. Wir sind ein Tischler-Meisterbetrieb mit eigener Fertigung, bauen millimetergenau von Wand zu Wand und liefern Beratung, Planung, Fertigung und Montage aus einer Hand.",
-    },
-    {
-      question: "Welche Möbel fertigen Sie für die Gastronomie?",
-      answer:
-        "Theke und Bartresen, Rückbuffet und Buffettheke, Sitzbank und feste Bestuhlung, Stühle und Barhocker, Wandverkleidung, Empfangstresen und Garderobe sowie Hotel- und Kantinenmöbel. Vom einzelnen Element bis zur kompletten Einrichtung über mehrere Räume.",
-    },
-    {
-      question: "Welche Materialien eignen sich für stark beanspruchte Gastronomiemöbel?",
-      answer:
-        "Wir arbeiten mit Massivholz und branchenüblichen Materialien und setzen auf strapazierfähige, hygienische Oberflächen. So halten Theke, Tische und Sitzbänke dem Stoßbetrieb stand, bleiben pflegeleicht und lassen sich leicht reinigen. Welches Material zu Ihrem Konzept und Ihrer Beanspruchung passt, legen wir in der Beratung fest.",
-    },
-    {
-      question: "Warum ist die PU-Kantenverleimung im Gastro-Alltag ein Vorteil?",
-      answer:
-        "Bei der PU-Kantenverleimung verbinden wir Kante und Korpus fugenlos und so dicht, dass keine Feuchtigkeit eindringt. Eine Musterkante haben wir 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Das macht die Möbel widerstandsfähig gegen tägliche Reinigung und verschüttete Getränke, und nichts platzt an den Rändern ab.",
-    },
-    {
-      question: "Für welche Betriebe planen Sie: Restaurant, Café, Bar, Hotel oder Kantine?",
-      answer:
-        "Für alle diese Betriebe. Restaurant, Café, Bar und Bistro, Hotel sowie Kantine und Betriebsgastronomie. Jeder Betrieb stellt eigene Anforderungen an Laufwege, Hygiene und Belastbarkeit, die wir in die Planung aufnehmen.",
-    },
-    {
       question: "Bauen Sie auch die Technik in die Theke ein?",
       answer:
         "Wir bauen den Tresen als Möbelstück und arbeiten Aussparungen und Maße für Ihre Technik präzise ein, etwa für Kühlung, Zapfanlage oder Spüle. Die Technik selbst installiert Ihr Fachbetrieb. So passen Möbel und Gerätetechnik am Ende genau zusammen.",
-    },
-    {
-      question: "Wie lange dauert die Fertigung einer Gastronomieeinrichtung?",
-      answer:
-        "Das hängt vom Umfang ab, eine pauschale Wochenzahl wäre unseriös. Einen verbindlichen Termin nennen wir Ihnen nach dem Aufmaß und der Freigabe der Planung. Dann steht der Liefer- und Montagetermin fest und wir halten ihn mit eigenem Team ein.",
-    },
-    {
-      question: "Bieten Sie auch Montage und schlüsselfertige Übergabe an?",
-      answer:
-        "Ja. Nach dem kostenlosen Aufmaß übernimmt unser eigenes Montageteam Lieferung und Aufbau bis zur fertigen Übergabe. Ohne Subunternehmer, mit Abnahme gemeinsam mit Ihnen.",
-    },
-    {
-      question: "In welchem Gebiet liefern und montieren Sie, auch außerhalb von OWL?",
-      answer:
-        "Komplette Projekte mit Möbeln und Montage realisieren wir im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Größere Objekte und Hoteleinrichtungen liefern wir bundesweit; an die Montage durch unser Team ist der 200-km-Radius gebunden. Die Logistik klären wir im Angebot.",
     },
     {
       question: "Können Sie im laufenden Betrieb oder außerhalb der Öffnungszeiten montieren?",
@@ -299,9 +254,9 @@ export const gastroFaq = {
         "Ja. Auf Wunsch montieren wir am Ruhetag, nachts oder in Etappen, damit Ihr Betrieb so kurz wie möglich schließen muss. Den Ablauf stimmen wir vorab mit Ihnen ab.",
     },
     {
-      question: "Fertigen Sie auch Außenmöbel für Terrasse und Biergarten?",
+      question: "In welchem Gebiet liefern und montieren Sie, auch außerhalb von OWL?",
       answer:
-        "Ja. Wir fertigen wetterfeste Außenmöbel und Außenbestuhlung für Terrasse und Biergarten. Welche Materialien sich für Ihren Außenbereich eignen, besprechen wir in der Beratung.",
+        "Komplette Projekte mit Möbeln und Montage realisieren wir im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Größere Objekte und Hoteleinrichtungen liefern wir bundesweit; an die Montage durch unser Team ist der 200-km-Radius gebunden. Die Logistik klären wir im Angebot.",
     },
   ],
 };
