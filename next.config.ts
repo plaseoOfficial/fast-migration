@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Live Google-review avatars are served from Google's user-content CDN.
+    remotePatterns: [{ protocol: "https", hostname: "*.googleusercontent.com" }],
   },
   // Flat-IA relaunch: the old /leistungen/* URLs are retired (308 permanent).
   async redirects() {

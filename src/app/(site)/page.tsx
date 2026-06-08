@@ -5,7 +5,7 @@ import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
 import { HandwerkSection } from "@/components/sections/home/HandwerkSection";
 import { MoebelplanerSection } from "@/components/sections/home/MoebelplanerSection";
 import { RaeumeSection } from "@/components/sections/home/RaeumeSection";
-import { TestimonialsSection } from "@/components/sections/home/TestimonialsSection";
+import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/home/FaqSection";
 import {
   homeHero,
@@ -29,7 +29,7 @@ export default function Home() {
       <HandwerkSection {...homeHandwerk} />
       <MoebelplanerSection {...homeMoebelplaner} />
       <RaeumeSection {...homeRaeume} />
-      <TestimonialsSection {...homeTestimonials} />
+      <TestimonialsSection heading={homeTestimonials.heading} />
       <FaqSection {...homeFaq} />
     </main>
   );
