@@ -71,7 +71,7 @@
 
 #### Shared — FAQ
 
-`#shared-faq` — Two-column FAQ: left intro + arrow link, right accordion (rotating arrow). Eyebrow/CTA default to the Fast wording.
+`#shared-faq` — Homepage FAQ design: white, centered single column, bordered accordion cards with a circular +/− toggle (gold when open), centered pill CTA. First item open by default. Eyebrow/CTA default to the Fast wording.
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |

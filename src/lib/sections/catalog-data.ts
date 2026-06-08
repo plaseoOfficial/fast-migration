@@ -289,7 +289,7 @@ export const SECTION_META = [
     displayName: "Shared — FAQ",
     useCase: "faq",
     category: "shared",
-    description: "Two-column FAQ: left intro + arrow link, right accordion (rotating arrow). Eyebrow/CTA default to the Fast wording.",
+    description: "Homepage FAQ design: white, centered single column, bordered accordion cards with a circular +/− toggle (gold when open), centered pill CTA. First item open by default. Eyebrow/CTA default to the Fast wording.",
     propsSummary: [
       { name: "heading", type: "string", required: true },
       { name: "items", type: "{ question; answer }[]", required: true },
