@@ -38,9 +38,57 @@ function useCountUp(target: number, duration: number) {
   return { value, start };
 }
 
-export function GewerbeIntroStats() {
+interface GewerbeIntroStatsProps {
+  since: string;
+  sinceSub: string;
+  heading: string;
+  introBefore: string;
+  introBold: string;
+  introAfter: string;
+  bandImage: string;
+  bandAlt: string;
+  col1Title: string;
+  col1Body: string;
+  col1CtaLabel: string;
+  col1CtaHref: string;
+  col2Title: string;
+  col2Body: string;
+  counterTarget: number;
+  counterDuration: number;
+  counterUnit: string;
+  counterPlus: string;
+  col3Title: string;
+  col3Body: string;
+  col3CtaLabel: string;
+  col3CtaHref: string;
+}
+
+export function GewerbeIntroStats({
+  since,
+  sinceSub,
+  heading,
+  introBefore,
+  introBold,
+  introAfter,
+  bandImage,
+  bandAlt,
+  col1Title,
+  col1Body,
+  col1CtaLabel,
+  col1CtaHref,
+  col2Title,
+  col2Body,
+  counterTarget,
+  counterDuration,
+  counterUnit,
+  counterPlus,
+  col3Title,
+  col3Body,
+  col3CtaLabel,
+  col3CtaHref,
+}: GewerbeIntroStatsProps) {
   const counterRef = useRef<HTMLDivElement>(null);
-  const { value, start } = useCountUp(72, 2000);
+  const { value, start } = useCountUp(counterTarget, counterDuration);
 
   useEffect(() => {
     const el = counterRef.current;
@@ -84,7 +132,7 @@ export function GewerbeIntroStats() {
                 margin: 0,
               }}
             >
-              seit 1996
+              {since}
             </h4>
             <p
               style={{
@@ -94,7 +142,7 @@ export function GewerbeIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Geben wir unser Bestes.
+              {sinceSub}
             </p>
           </div>
 
@@ -108,7 +156,7 @@ export function GewerbeIntroStats() {
               margin: 0,
             }}
           >
-            Individuelle Möbel für Gewerbe &amp; Objektbau
+            {heading}
           </h2>
 
           {/* Col 3: intro paragraph */}
@@ -121,21 +169,19 @@ export function GewerbeIntroStats() {
               margin: 0,
             }}
           >
-            Fast Systemmöbel aus Espelkamp begleitet Sie genau in dieser
-            entscheidenden{" "}
+            {introBefore}{" "}
             <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
-              Bauphase
+              {introBold}
             </strong>
-            {" "}– mit präziser Planung, ehrlicher Beratung und handwerklicher
-            Umsetzung, die jeden Quadratmeter nutzt.
+            {" "}{introAfter}
           </p>
         </div>
 
         {/* Row B — full-width image band */}
         <div className="mt-9 h-[260px] lg:h-[430px] w-full overflow-hidden">
           <Image
-            src="/images/2025/11/DSC_9934.jpg"
-            alt="Gewerbemöbel – Maßarbeit für Gewerbe und Objektbau"
+            src={bandImage}
+            alt={bandAlt}
             width={1224}
             height={430}
             className="h-full w-full object-cover"
@@ -157,7 +203,7 @@ export function GewerbeIntroStats() {
                 margin: 0,
               }}
             >
-              Warum Maßarbeit zählt
+              {col1Title}
             </h3>
             <p
               style={{
@@ -169,13 +215,10 @@ export function GewerbeIntroStats() {
                 marginBottom: 0,
               }}
             >
-              In Gewerberäumen entscheidet Qualität über Effizienz.
-              Standardlösungen funktionieren selten. Wir entwickeln Möbel, die
-              exakt zu Ihrem Ablauf, Ihrem Raum und Ihrem Design passen –
-              millimetergenau gefertigt und für den täglichen Einsatz optimiert.
+              {col1Body}
             </p>
             <Link
-              href="/kontakt"
+              href={col1CtaHref}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -186,7 +229,7 @@ export function GewerbeIntroStats() {
                 marginTop: "24px",
               }}
             >
-              Jetzt individuelle Anfrage stellen
+              {col1CtaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
             </Link>
           </div>
@@ -202,7 +245,7 @@ export function GewerbeIntroStats() {
                 margin: 0,
               }}
             >
-              Planung bis Montage
+              {col2Title}
             </h3>
             <p
               style={{
@@ -214,10 +257,7 @@ export function GewerbeIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Wir begleiten Sie vollständig: Analyse vor Ort, technische
-              Planung, Fertigung auf modernsten Homag-Systemen und saubere
-              Montage. Für Sie bedeutet das: Ein Ansprechpartner, klare
-              Prozesse, verlässliche Termine.
+              {col2Body}
             </p>
           </div>
 
@@ -230,7 +270,7 @@ export function GewerbeIntroStats() {
                 color: "rgb(0,0,0)",
               }}
             >
-              <span>{value}</span>K<span style={{ color: "rgb(237,168,33)" }}>+</span>
+              <span>{value}</span>{counterUnit}<span style={{ color: "rgb(237,168,33)" }}>{counterPlus}</span>
             </div>
             <h3
               style={{
@@ -243,7 +283,7 @@ export function GewerbeIntroStats() {
                 marginBottom: 0,
               }}
             >
-              gefertigte Einzelteile
+              {col3Title}
             </h3>
             <p
               style={{
@@ -255,12 +295,10 @@ export function GewerbeIntroStats() {
                 marginBottom: 0,
               }}
             >
-              Unsere Fertigung kombiniert neueste CNC-Technik mit handwerklicher
-              Perfektion. So entstehen Systemmöbel, die langlebig, funktional
-              und ästhetisch überzeugen – in jedem Projekt, jedem Detail.
+              {col3Body}
             </p>
             <Link
-              href="/gewerbe/ladenbau/"
+              href={col3CtaHref}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -271,7 +309,7 @@ export function GewerbeIntroStats() {
                 marginTop: "24px",
               }}
             >
-              Entdecken Sie das Gefühl von Qualität
+              {col3CtaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
             </Link>
           </div>

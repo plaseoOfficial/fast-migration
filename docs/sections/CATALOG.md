@@ -430,7 +430,13 @@ _Prop-less (page-specific content)._
 | --- | --- | --- | --- |
 | `intro-stats` | `gewerbe` | no | `/gewerbe` |
 
-_Prop-less (page-specific content)._
+| Prop | Type | Required |
+| --- | --- | --- |
+| `since / sinceSub / heading / intro*` | `string` | yes |
+| `bandImage / bandAlt` | `string` | yes |
+| `col1–3 copy + links` | `string` | yes |
+| `counterTarget / counterDuration` | `number` | yes |
+| `counterUnit / counterPlus` | `string` | yes |
 
 ![Gewerbe — Intro + Stats](../design-references/gewerbeeinrichtung/band-1.jpg)
 
@@ -442,7 +448,12 @@ _Prop-less (page-specific content)._
 | --- | --- | --- | --- |
 | `feature-text` | `gewerbe` | no | `/gewerbe` |
 
-_Prop-less (page-specific content)._
+| Prop | Type | Required |
+| --- | --- | --- |
+| `ladenHeading / ladenParagraphs[]` | `string` | yes |
+| `ladenImage / ladenImageAlt` | `string` | yes |
+| `mosaic: {src,alt}[]` | `object` | yes |
+| `gastroHeading / gastro* copy (before/bold/after splits)` | `string` | yes |
 
 ![Gewerbe — Laden & Gastro](../design-references/gewerbeeinrichtung/band-3.jpg)
 
@@ -454,7 +465,11 @@ _Prop-less (page-specific content)._
 | --- | --- | --- | --- |
 | `categories-list` | `gewerbe` | no | `/gewerbe` |
 
-_Prop-less (page-specific content)._
+| Prop | Type | Required |
+| --- | --- | --- |
+| `heading` | `string` | yes |
+| `image1 / image1Alt / image2 / image2Alt` | `string` | yes |
+| `row1 / row2: {title,description}[]` | `object` | yes |
 
 ![Gewerbe — Leistungen](../design-references/gewerbeeinrichtung/band-6.jpg)
 
@@ -466,7 +481,10 @@ _Prop-less (page-specific content)._
 | --- | --- | --- | --- |
 | `story` | `gewerbe` | no | `/gewerbe` |
 
-_Prop-less (page-specific content)._
+| Prop | Type | Required |
+| --- | --- | --- |
+| `heading / eyebrow / bodyParagraph / factBox` | `string` | yes |
+| `gallery: {src,alt,caption,width,height}[]` | `object` | yes |
 
 ![Gewerbe — Warum](../design-references/gewerbeeinrichtung/band-7.jpg)
 

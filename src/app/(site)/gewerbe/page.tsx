@@ -9,6 +9,18 @@ import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroSta
 import { GewerbeLadenGastro } from "@/components/sections/gewerbe/GewerbeLadenGastro";
 import { GewerbeLeistungen } from "@/components/sections/gewerbe/GewerbeLeistungen";
 import { GewerbeWarum } from "@/components/sections/gewerbe/GewerbeWarum";
+import {
+  gewerbeHero,
+  gewerbeIntroStats,
+  gewerbeLadenGastro,
+  gewerbeLeistungen,
+  gewerbeWarum,
+  gewerbeClusterCards,
+  gewerbeIntroCta,
+  gewerbeFinalCta,
+  gewerbeTestimonialsHeading,
+  gewerbeFaq,
+} from "@/lib/content/gewerbe";
 
 export const metadata: Metadata = {
   title: "Gewerbeeinrichtung nach Maß: Büro, Praxis & Ladenbau",
@@ -26,120 +38,35 @@ export const metadata: Metadata = {
 
 const BEIGE = "rgba(203, 191, 181, 0.59)";
 
-/**
- * Hub -> cluster down-links: the "Weitere Leistungen" cards on the Gewerbe hub
- * point to the Gewerbe service clusters (silo distribution). Same mechanism as
- * the Privat hub linking down to /kuechen-nach-mass/. Props-only, no markup
- * change. Icons reuse the existing interior-design icon set.
- */
-const GEWERBE_CLUSTER_CARDS = [
-  {
-    icon: "/images/2024/03/interior-design-white-icons-08.svg",
-    title: "Büroeinrichtung nach Maß",
-    description:
-      "Arbeitsplätze, Stauraum, Konferenz- und Empfangsbereiche. Geplant, gefertigt und montiert für Büros, die zu Ihren Abläufen passen.",
-    href: "/bueroeinrichtung/",
-  },
-  {
-    icon: "/images/2024/03/interior-design-white-icons-15.svg",
-    title: "Praxiseinrichtung nach Maß",
-    description:
-      "Empfangstresen, Behandlungs- und Wartebereiche für Ärzte, Therapeuten und Kanzleien. Hygienisch, repräsentativ und zentimetergenau gebaut.",
-    href: "/praxiseinrichtung/",
-  },
-  {
-    icon: "/images/2024/03/interior-design-white-icons-22.svg",
-    title: "Gastronomieeinrichtung nach Maß",
-    description:
-      "Theken, Tresen und Mobiliar für Restaurant, Café, Bar und Hotel. Strapazierfähig gebaut für den Dauereinsatz, bundesweit geliefert.",
-    href: "/gastronomieeinrichtung/",
-  },
-  {
-    icon: "/images/2024/03/interior-design-white-icons-09.svg",
-    title: "Ladenbau nach Maß",
-    description:
-      "Verkaufstheken, Warenträger und komplette Shopkonzepte. Vom einzelnen Tresen bis zur fertigen Verkaufsfläche aus einer Hand.",
-    href: "/gewerbe/ladenbau/",
-  },
-  {
-    icon: "/images/2024/03/interior-design-white-icons-07.svg",
-    title: "Serienmöbel & Serienfertigung",
-    description:
-      "Identische Möbel in Serie, zentimetergenau nach Zeichnung. Seriengleiche Qualität für Filialen, Hotellerie und Pflegeeinrichtungen.",
-    href: "/serienmoebel/",
-  },
-];
-
-const FAQ_ITEMS = [
-  {
-    question: "Arbeiten Sie nur in Espelkamp?",
-    answer:
-      "Wir fertigen in Espelkamp, montieren im Umkreis von ca. 200 km und liefern deutschlandweit.",
-  },
-  {
-    question: "Sind Maßmöbel pflegeleicht?",
-    answer:
-      "Ja. Unsere Dekore und Materialien sind robust und leicht zu reinigen.",
-  },
-  {
-    question: "Welche Möbel fertigen Sie?",
-    answer:
-      "Schränke und Regale, Sideboards, Kommoden, Dachschrägen-Lösungen, Kleiderschränke und mehr Stauraum.",
-  },
-  {
-    question: "Wie läuft die Planung ab?",
-    answer:
-      "Mit Aufmaß-Service, digitalem Planen und klarer Abstimmung bis zur fertigen Maßanfertigung.",
-  },
-];
-
 export default function GewerbeeinrichtungPage() {
   return (
     <main className="flex flex-col">
-      <ServiceHero
-        title="Gewerbeeinrichtung nach Maß – funktionale Lösungen für jedes Objekt"
-        breadcrumb={[
-          { label: "Fast Systemmöbel", href: "/" },
-          { label: "Gewerbeeinrichtung" },
-        ]}
-        bgImage="/images/2025/11/DSC_0001.jpg"
-        intro="Wir entwickeln Gewerbeeinrichtungen, die exakt zu Ihren Abläufen passen. Präzise geplant, in Espelkamp gefertigt und vor Ort montiert. Für Räume, die funktionieren, Mitarbeiter entlasten und täglich zuverlässig arbeiten."
-      />
+      <ServiceHero {...gewerbeHero} />
 
-      <GewerbeIntroStats />
+      <GewerbeIntroStats {...gewerbeIntroStats} />
 
       {/* Gewerbemöbel expanding CTA — bottom of intro/stats (beige) */}
       <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta
-            image="/images/2025/11/DSC_9965.jpg"
-            heading="Gewerbemöbel nach Ihren Vorstellungen"
-            linkText="Sprechen Sie mit uns über Ihr Projekt"
-            href="/kontakt"
-          />
+          <ExpandingImageCta {...gewerbeIntroCta} />
         </div>
       </section>
 
-      <GewerbeLadenGastro />
-      <MnmWeitereLeistungen cards={GEWERBE_CLUSTER_CARDS} />
-      <GewerbeLeistungen />
-      <GewerbeWarum />
+      <GewerbeLadenGastro {...gewerbeLadenGastro} />
+      <MnmWeitereLeistungen cards={gewerbeClusterCards} />
+      <GewerbeLeistungen {...gewerbeLeistungen} />
+      <GewerbeWarum {...gewerbeWarum} />
       <MnmMoebelplaner />
-      <TestimonialsSection heading="Was unsere Kunden dazu sagen" />
+      <TestimonialsSection heading={gewerbeTestimonialsHeading} />
 
       {/* Final CTA (beige) */}
       <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta
-            image="/images/2025/11/DSC_9938.jpg"
-            heading="Ihr Raum verdient mehr als Standard."
-            linkText="Sprechen Sie mit uns über Ihr Projekt."
-            href="/kontakt"
-          />
+          <ExpandingImageCta {...gewerbeFinalCta} />
         </div>
       </section>
 
-      <FaqSection heading="Häufige Fragen zur Gewerbeeinrichtung" items={FAQ_ITEMS} />
+      <FaqSection heading={gewerbeFaq.heading} items={gewerbeFaq.items} />
     </main>
   );
 }

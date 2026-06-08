@@ -6,41 +6,15 @@ interface ListItem {
   description: string;
 }
 
-const row1Items: ListItem[] = [
-  {
-    title: "Praxisräume",
-    description:
-      "Hygienische, funktionale Möbel für Behandlungs- und Funktionsräume.",
-  },
-  {
-    title: "Büros",
-    description:
-      "Ergonomische Arbeitsplätze, Stauraum und verkabelte Systeme nach Maß.",
-  },
-  {
-    title: "Ladenbau",
-    description:
-      "Individuelle Einrichtungen, die Marken sichtbar und Räume effizient machen.",
-  },
-];
-
-const row2Items: ListItem[] = [
-  {
-    title: "Hotel & Gastro",
-    description:
-      "Strapazierfähige Lösungen für Empfang, Zimmer, Bar- und Servicebereiche.",
-  },
-  {
-    title: "Empfangstheken",
-    description:
-      "Repräsentative Theken, abgestimmt auf Raumfluss und Kundenkontakt.",
-  },
-  {
-    title: "Sonderbau",
-    description:
-      "Individuelle Gewerbemöbel, die nicht in ein Schema passen.",
-  },
-];
+interface GewerbeLeistungenProps {
+  heading: string;
+  image1: string;
+  image1Alt: string;
+  image2: string;
+  image2Alt: string;
+  row1: ListItem[];
+  row2: ListItem[];
+}
 
 function ItemList({ items }: { items: ListItem[] }) {
   return (
@@ -79,7 +53,15 @@ function ItemList({ items }: { items: ListItem[] }) {
   );
 }
 
-export function GewerbeLeistungen() {
+export function GewerbeLeistungen({
+  heading,
+  image1,
+  image1Alt,
+  image2,
+  image2Alt,
+  row1,
+  row2,
+}: GewerbeLeistungenProps) {
   return (
     <section
       className="py-12 lg:py-[57px]"
@@ -99,7 +81,7 @@ export function GewerbeLeistungen() {
             maxWidth: "820px",
           }}
         >
-          Unsere Leistungen für Gewerbekunden
+          {heading}
         </h2>
 
         {/* Row 1: image left, list right */}
@@ -107,8 +89,8 @@ export function GewerbeLeistungen() {
           {/* Left: image */}
           <div className="relative h-[260px] lg:h-[360px] overflow-hidden">
             <Image
-              src="/images/2025/11/DSC_9814.jpg"
-              alt="Gewerbemöbel Detail"
+              src={image1}
+              alt={image1Alt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -117,7 +99,7 @@ export function GewerbeLeistungen() {
 
           {/* Right: list */}
           <div>
-            <ItemList items={row1Items} />
+            <ItemList items={row1} />
           </div>
         </div>
 
@@ -125,14 +107,14 @@ export function GewerbeLeistungen() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: list (on mobile, image renders first via order) */}
           <div className="order-2 lg:order-1">
-            <ItemList items={row2Items} />
+            <ItemList items={row2} />
           </div>
 
           {/* Right: image (on mobile, rendered first via order) */}
           <div className="relative h-[260px] lg:h-[360px] overflow-hidden order-1 lg:order-2">
             <Image
-              src="/images/2025/11/DSC_9747.jpg"
-              alt="Maßgefertigte Gewerbeeinrichtung"
+              src={image2}
+              alt={image2Alt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

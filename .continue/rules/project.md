@@ -51,6 +51,9 @@ Core rules (full detail in `ARCHITECTURE.md`):
   their copy lives in content modules under `src/lib/content/`.
 - **Reuse before creating.** Every section is registered in `src/lib/sections/registry.ts`
   with a `useCase` + `category`. Check `/library` / `CATALOG.md` first; match by use case.
+- **Don't cram — split.** Sections have a length budget; when copy overflows, build a new
+  section instead of stuffing text into an existing one. See the budget table + decision
+  tree in `ARCHITECTURE.md` → **§1.1 Section length budget & overflow decision**.
 - **Site chrome (nav + footer) is centralized.** Create every public page inside the
   `(site)` route group (`src/app/(site)/<slug>/page.tsx`); `src/app/(site)/layout.tsx`
   renders the shared `Header` + `Footer` automatically, so new pages get identical

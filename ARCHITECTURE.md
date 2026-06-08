@@ -22,6 +22,36 @@ rendered HTML/CSS must stay byte-identical — change only content (via props),
 never markup, classNames, inline styles, spacing, or colors. Verify with
 `npm run check` and a visual diff against `docs/design-references/`.
 
+### 1.1 Section length budget & overflow decision
+
+**Principle: design a new section before cramming text into an existing one.**
+Each section has a visual rhythm tied to the pixel-perfect references; overstuffing
+a column or list drifts line counts and band heights away from
+`docs/design-references/`. When content grows, split it out — don't squeeze it in.
+
+**Soft budgets** (for legibility + pixel stability — guidelines, not hard validators):
+
+| Section type (`useCase`) | Soft budget | Overflow → |
+| --- | --- | --- |
+| `hero` | H1 ≤ ~60 chars; intro ≤ ~320 chars (2–3 sentences) | push detail into `intro-stats` |
+| `intro-stats` | 3 columns × ≤ ~280 chars; one headline | a 4th theme = new section (the 3-col grid is fixed) |
+| `feature-text` (Laden/Gastro) | per block ≤ 3 short paragraphs (~600 chars) + heading | a 3rd branch = new `feature-text` section |
+| `categories-list` (Leistungen) | 2×3 items; title ≤ 30 chars, desc ≤ ~110 chars | grow only symmetrically (2×4); >8 items = new section |
+| `story` / `warum` | 1 paragraph (~400 chars) + fact box (≤ ~60 chars) | long-form narrative = a dedicated `story`/Geschichte section |
+| `faq` | hub: 5 items · cluster: ≤ 8 | branch-specific questions go on the cluster page's FAQ, never the hub |
+| `services-grid` | 5 cards + 1 ampersand card | more clusters = a second grid |
+
+**Decision tree** — when new copy needs a home, ask in order:
+1. Fits an existing field within budget and **without changing element structure**? → put it in the content module field. Done.
+2. A new item in a **symmetric** collection (one more FAQ / category) that stays in budget and keeps the grid symmetric? → add to the array; re-run `npm run check` to catch height drift.
+3. Breaks symmetry, blows the budget, needs a new element/wrapper, or mixes a new topic into a single-topic section? → **build a new section** (component in `src/components/sections/…` + content object + register in `registry.ts`/`catalog-data.ts` + `npm run gen:catalog` + run `design-qc`).
+4. Branch-specific (Büro/Praxis/Gastro only)? → it does **not** belong on a hub — put it in the cluster page's content module.
+
+> Content lives in `src/lib/content/*.ts`; sections stay props-driven and
+> byte-identical. The Gewerbe hub follows this — copy in
+> `src/lib/content/gewerbe.ts`, hub FAQ capped at 5 (branch questions live in the
+> cluster FAQs `bueroFaq`/`praxisFaq`/`gastroFaq`/`serienFaq`).
+
 ---
 
 ## 2. The section library
@@ -43,9 +73,11 @@ src/components/sections/
 - **Reusable sections** (`home/`, `privat/`, `shared/`) are **props-driven**:
   content is passed in, nothing is hardcoded. Their copy lives in content
   modules under `src/lib/content/`.
-- **Page-specific sections** (`gewerbe/`, `moebelplaner/`, `kontakt/`) currently
-  hardcode their own content (no props). That's acceptable for one-off page
-  content; prefer props + a content module when a section could be reused.
+- **Page-specific sections** (`moebelplaner/`, `kontakt/`) currently hardcode
+  their own content (no props). That's acceptable for one-off page content; prefer
+  props + a content module when a section could be reused.
+- **Gewerbe hub sections** (`gewerbe/Gewerbe*`) are now **props-driven**; their copy
+  lives in `src/lib/content/gewerbe.ts` (same pattern as the Privat/Büro modules).
 
 ### The registry (use case + category)
 **`src/lib/sections/registry.ts`** lists every section (31 today). Each entry has:
