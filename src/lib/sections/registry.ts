@@ -10,7 +10,6 @@ import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
 import { HandwerkSection } from "@/components/sections/home/HandwerkSection";
 import { MoebelplanerSection } from "@/components/sections/home/MoebelplanerSection";
 import { RaeumeSection } from "@/components/sections/home/RaeumeSection";
-import { TestimonialsSection as HomeTestimonialsSection } from "@/components/sections/home/TestimonialsSection";
 import { FaqSection as HomeFaqSection } from "@/components/sections/home/FaqSection";
 
 // Privat sections
@@ -31,6 +30,9 @@ import { PartnerCarousel } from "@/components/sections/shared/PartnerCarousel";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { ReferenzenHero } from "@/components/sections/shared/ReferenzenHero";
 import { ReferenzenGrid } from "@/components/sections/shared/ReferenzenGrid";
+import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SegmentCards } from "@/components/sections/shared/SegmentCards";
+import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 
 // Gewerbe sections
 import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroStats";
@@ -102,6 +104,11 @@ import {
   gewerbeLeistungen,
   gewerbeWarum,
 } from "@/lib/content/gewerbe";
+import {
+  gastroProcess,
+  gastroSegments,
+  gastroUsp,
+} from "@/lib/content/gastronomieeinrichtung";
 
 function meta(id: string): SectionMeta {
   const found = SECTION_META.find((entry) => entry.id === id);
@@ -122,7 +129,7 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("home-handwerk"), HandwerkSection, homeHandwerk),
   defineSection(meta("home-planner"), MoebelplanerSection, homeMoebelplaner),
   defineSection(meta("home-raeume"), RaeumeSection, homeRaeume),
-  defineSection(meta("home-testimonials"), HomeTestimonialsSection, homeTestimonials),
+  defineSection(meta("home-testimonials"), SharedTestimonialsSection, homeTestimonials),
   defineSection(meta("home-faq"), HomeFaqSection, homeFaq),
 
   // Privat (möbel-nach-mass template)
@@ -143,6 +150,9 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-image-cta"), ExpandingImageCta, expandingCtaSample),
   defineSection(meta("shared-referenzen-hero"), ReferenzenHero, referenzenHeroSample),
   defineSection(meta("shared-referenzen-grid"), ReferenzenGrid, referenzenGridSample),
+  defineSection(meta("shared-process-steps"), ProcessSteps, gastroProcess),
+  defineSection(meta("shared-segment-cards"), SegmentCards, gastroSegments),
+  defineSection(meta("shared-usp-highlight"), UspHighlight, gastroUsp),
 
   // Gewerbe
   defineSection(meta("gewerbe-intro-stats"), GewerbeIntroStats, gewerbeIntroStats),

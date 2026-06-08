@@ -115,6 +115,14 @@
   animation-play-state: paused;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .fast-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 /* Parallax fixed-attachment helper */
 .fast-parallax-bg {
   background-attachment: fixed;
