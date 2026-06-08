@@ -18,6 +18,7 @@ import {
   gewerbeClusterCards,
   gewerbeIntroCta,
   gewerbeFinalCta,
+  gewerbeMoebelplaner,
   gewerbeTestimonialsHeading,
   gewerbeFaq,
 } from "@/lib/content/gewerbe";
@@ -56,7 +57,7 @@ export default function GewerbeeinrichtungPage() {
       <MnmWeitereLeistungen cards={gewerbeClusterCards} />
       <GewerbeLeistungen {...gewerbeLeistungen} />
       <GewerbeWarum {...gewerbeWarum} />
-      <MnmMoebelplaner />
+      <MnmMoebelplaner {...gewerbeMoebelplaner} />
       <TestimonialsSection heading={gewerbeTestimonialsHeading} />
 
       {/* Final CTA (beige) */}

@@ -243,6 +243,12 @@ export const gewerbeFinalCta = {
   href: "/kontakt/",
 };
 
+// Planner-CTA (geteilte MnmMoebelplaner-Section) — nur kürzerer Body für den
+// Gewerbe-Hub; Heading/CTA/Bild nutzen die Komponenten-Defaults.
+export const gewerbeMoebelplaner = {
+  body: "Mit unserem 3D-Konfigurator planen Sie Ihre Möbel nach Maß online – millimetergenau und sofort sichtbar. Den Feinschliff übernehmen wir: Aufmaß, Beratung, Materialien und fachgerechte Montage vor Ort.",
+};
+
 export const gewerbeTestimonialsHeading = "Was unsere Kunden dazu sagen";
 
 export const gewerbeFaq = {
