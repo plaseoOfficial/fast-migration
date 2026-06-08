@@ -99,6 +99,12 @@ import {
   ueberFallbeispiel,
 } from "@/lib/content/ueber-uns";
 import {
+  gewerbeIntroStats,
+  gewerbeLadenGastro,
+  gewerbeLeistungen,
+  gewerbeWarum,
+} from "@/lib/content/gewerbe";
+import {
   gastroProcess,
   gastroSegments,
   gastroUsp,
@@ -149,10 +155,10 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-usp-highlight"), UspHighlight, gastroUsp),
 
   // Gewerbe
-  defineSection(meta("gewerbe-intro-stats"), GewerbeIntroStats, noProps),
-  defineSection(meta("gewerbe-laden-gastro"), GewerbeLadenGastro, noProps),
-  defineSection(meta("gewerbe-leistungen"), GewerbeLeistungen, noProps),
-  defineSection(meta("gewerbe-warum"), GewerbeWarum, noProps),
+  defineSection(meta("gewerbe-intro-stats"), GewerbeIntroStats, gewerbeIntroStats),
+  defineSection(meta("gewerbe-laden-gastro"), GewerbeLadenGastro, gewerbeLadenGastro),
+  defineSection(meta("gewerbe-leistungen"), GewerbeLeistungen, gewerbeLeistungen),
+  defineSection(meta("gewerbe-warum"), GewerbeWarum, gewerbeWarum),
 
   // Möbelplaner
   defineSection(meta("mp-schritte"), MpSchritte, noProps),

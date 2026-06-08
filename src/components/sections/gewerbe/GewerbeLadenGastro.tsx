@@ -11,7 +11,37 @@ function YellowDots() {
   );
 }
 
-export function GewerbeLadenGastro() {
+interface GewerbeLadenGastroProps {
+  ladenHeading: string;
+  ladenParagraphs: string[];
+  ladenImage: string;
+  ladenImageAlt: string;
+  mosaic: { src: string; alt: string }[];
+  gastroHeading: string;
+  gastroIntroLead: string;
+  gastroIntroBold1: string;
+  gastroIntroMid: string;
+  gastroBody2Before: string;
+  gastroBody2Bold: string;
+  gastroBody2After: string;
+  gastroBody3: string;
+}
+
+export function GewerbeLadenGastro({
+  ladenHeading,
+  ladenParagraphs,
+  ladenImage,
+  ladenImageAlt,
+  mosaic,
+  gastroHeading,
+  gastroIntroLead,
+  gastroIntroBold1,
+  gastroIntroMid,
+  gastroBody2Before,
+  gastroBody2Bold,
+  gastroBody2After,
+  gastroBody3,
+}: GewerbeLadenGastroProps) {
   return (
     <section
       className="py-10 lg:py-[46px]"
@@ -34,27 +64,18 @@ export function GewerbeLadenGastro() {
               )}
               style={{ color: "rgb(23,33,33)", fontWeight: 500 }}
             >
-              Ladeneinrichtung, die zu Ihrem Objekt passt
+              {ladenHeading}
             </h2>
 
-            <p
-              className="mt-5 text-[16px] leading-[28px]"
-              style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
-            >
-              Wir wissen, dass jede Ladeneinrichtung einzigartig ist und eine einzigartige
-              Erscheinung benötigt, um Kunden anzuwerben, Wohlbefinden auszustrahlen und zum
-              Kauf anzuregen.
-            </p>
-
-            <p
-              className="mt-5 text-[16px] leading-[28px]"
-              style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
-            >
-              Wir fertigen Möbel, die diese Anforderungen perfekt abbilden. Von robusten
-              Oberflächen über intelligenten Stauraum bis zu wunderschönen Auslegetischen. Alles
-              entsteht in unserer Produktion in Espelkamp und wird exakt nach Ihren Wünschen
-              abgestimmt.
-            </p>
+            {ladenParagraphs.map((text, index) => (
+              <p
+                key={index}
+                className="mt-5 text-[16px] leading-[28px]"
+                style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
+              >
+                {text}
+              </p>
+            ))}
 
             <YellowDots />
           </div>
@@ -62,8 +83,8 @@ export function GewerbeLadenGastro() {
           {/* Right: big image */}
           <div className="relative h-[260px] w-full lg:h-[330px]">
             <Image
-              src="/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg"
-              alt="Ladeneinrichtung – OBST & GEMÜSE Markt"
+              src={ladenImage}
+              alt={ladenImageAlt}
               fill
               className="object-cover"
             />
@@ -75,30 +96,16 @@ export function GewerbeLadenGastro() {
 
           {/* Left: three-column image mosaic */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            <div className="relative h-[160px] w-full lg:h-[200px]">
-              <Image
-                src="/images/2025/11/20230829_030744000_iOS.jpg"
-                alt="Modernes Bad mit Holzwaschtisch"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-[160px] w-full lg:h-[200px]">
-              <Image
-                src="/images/2025/11/DSC07129-Kopie-scaled.jpg"
-                alt="Zwei Personen blättern"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-[160px] w-full lg:h-[200px]">
-              <Image
-                src="/images/2025/11/20181220_075204314_iOS-scaled.jpg"
-                alt="Moderne Sitzbank mit Holzsitz"
-                fill
-                className="object-cover"
-              />
-            </div>
+            {mosaic.map((img, index) => (
+              <div key={index} className="relative h-[160px] w-full lg:h-[200px]">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
 
           {/* Right: Gastro heading, paragraphs, dots */}
@@ -110,41 +117,36 @@ export function GewerbeLadenGastro() {
               )}
               style={{ color: "rgb(23,33,33)", fontWeight: 500 }}
             >
-              Gastromöbel, die magisch anziehen
+              {gastroHeading}
             </h2>
 
             <p
               className="mt-4 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              Ob Restaurant, Café, Hotel oder gastronomischer Betrieb – wir planen und fertigen{" "}
+              {gastroIntroLead}{" "}
               <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
-                Gastro Möbel nach Maß
+                {gastroIntroBold1}
               </strong>
-              , die exakt zu Ihrem Konzept, Ihren Abläufen und Ihrem Raum passen. Von der ersten
-              Idee bis zur Umsetzung erhalten Sie bei uns alles aus einer Hand.
+              {gastroIntroMid}
             </p>
 
             <p
               className="mt-4 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              Unsere{" "}
+              {gastroBody2Before}{" "}
               <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
-                individuellen Gastro Möbel
+                {gastroBody2Bold}
               </strong>{" "}
-              sind funktional, robust und auf den täglichen Einsatz ausgelegt. Langlebige
-              Materialien, durchdachte Details und eine klare Gestaltung sorgen dafür, dass Design
-              und Belastbarkeit kein Widerspruch sind.
+              {gastroBody2After}
             </p>
 
             <p
               className="mt-4 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              Wir beraten Sie ganzheitlich und nehmen uns bewusst Zeit, Ihre Anforderungen im
-              Detail zu verstehen. Die Planung erfolgt praxisnah, damit die Einrichtung nicht nur
-              gut aussieht, sondern auch funktioniert.
+              {gastroBody3}
             </p>
 
             <YellowDots />

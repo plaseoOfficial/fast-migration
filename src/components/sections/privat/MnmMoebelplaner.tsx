@@ -45,10 +45,10 @@ export function MnmMoebelplaner({
       style={{ fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif" }}
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-          {/* Left — text column */}
-          <div className="pb-12 lg:pb-12">
+          {/* Left — text column (vertically centered against the image on desktop) */}
+          <div className="pb-12 lg:pb-0">
             <h2
               className="text-white font-medium text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px]"
             >

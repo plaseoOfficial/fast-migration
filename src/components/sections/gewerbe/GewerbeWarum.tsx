@@ -1,45 +1,29 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const GALLERY_ITEMS = [
-  {
-    src: "/images/2025/11/IMG_9120-scaled.jpg",
-    alt: "Moderner Badschrank",
-    caption: "Maßgefertigter Schrank",
-    width: 600,
-    height: 600,
-  },
-  {
-    src: "/images/2024/03/test-img-83485.jpg",
-    alt: "Modernes Wohnzimmer",
-    caption: "Luxor Collection",
-    width: 800,
-    height: 400,
-  },
-  {
-    src: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
-    alt: "Zwei Personen blättern",
-    caption: "Persönliche Beratung",
-    width: 600,
-    height: 900,
-  },
-  {
-    src: "/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg",
-    alt: "Moderner Ankleidebereich",
-    caption: "Ankleide nach Maß",
-    width: 600,
-    height: 900,
-  },
-  {
-    src: "/images/2025/11/20231220_131839984_iOS-scaled.jpg",
-    alt: "Modernes Büro mit Holzlamellenwand",
-    caption: "Büro mit Holzlamellen",
-    width: 600,
-    height: 900,
-  },
-] as const;
+interface GalleryItem {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}
 
-export function GewerbeWarum() {
+interface GewerbeWarumProps {
+  heading: string;
+  eyebrow: string;
+  gallery: GalleryItem[];
+  bodyParagraph: string;
+  factBox: string;
+}
+
+export function GewerbeWarum({
+  heading,
+  eyebrow,
+  gallery,
+  bodyParagraph,
+  factBox,
+}: GewerbeWarumProps) {
   return (
     <section
       className="py-12 lg:py-[57px]"
@@ -58,7 +42,7 @@ export function GewerbeWarum() {
               color: "rgb(0,0,0)",
             }}
           >
-            Warum Unternehmen uns vertrauen
+            {heading}
           </h2>
           <p
             className="mt-3 text-[18px] font-medium uppercase tracking-[4px]"
@@ -67,7 +51,7 @@ export function GewerbeWarum() {
               color: "rgb(61,61,61)",
             }}
           >
-            HANDWERK, TECHNIK UND KLARE PROZESSE.
+            {eyebrow}
           </p>
         </div>
 
@@ -79,7 +63,7 @@ export function GewerbeWarum() {
             "[&>figure]:mb-3 [&>figure]:break-inside-avoid"
           )}
         >
-          {GALLERY_ITEMS.map((item) => (
+          {gallery.map((item) => (
             <figure key={item.src} className="relative group m-0">
               <Image
                 src={item.src}
@@ -123,11 +107,7 @@ export function GewerbeWarum() {
               color: "rgb(23,33,33)",
             }}
           >
-            Gewerbeprojekte brauchen Verlässlichkeit. Termine müssen halten,
-            Qualität muss stimmen, Kommunikation muss klar sein. Als
-            Meisterbetrieb mit eigenem Maschinenpark setzen wir jedes Detail
-            kontrolliert um – von der Planung bis zur Montage. Für Architekten,
-            Arztpraxen, Unternehmen und Gastronomen ist das entscheidend.
+            {bodyParagraph}
           </p>
 
           {/* Right: dark fact box — single centered H3, no bullet list */}
@@ -145,7 +125,7 @@ export function GewerbeWarum() {
                 color: "rgb(255,255,255)",
               }}
             >
-              100&nbsp;% Maßfertigung aus Espelkamp
+              {factBox}
             </h3>
           </div>
         </div>
