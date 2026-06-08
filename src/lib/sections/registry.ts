@@ -10,7 +10,6 @@ import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
 import { HandwerkSection } from "@/components/sections/home/HandwerkSection";
 import { MoebelplanerSection } from "@/components/sections/home/MoebelplanerSection";
 import { RaeumeSection } from "@/components/sections/home/RaeumeSection";
-import { TestimonialsSection as HomeTestimonialsSection } from "@/components/sections/home/TestimonialsSection";
 import { FaqSection as HomeFaqSection } from "@/components/sections/home/FaqSection";
 
 // Privat sections
@@ -116,7 +115,7 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("home-handwerk"), HandwerkSection, homeHandwerk),
   defineSection(meta("home-planner"), MoebelplanerSection, homeMoebelplaner),
   defineSection(meta("home-raeume"), RaeumeSection, homeRaeume),
-  defineSection(meta("home-testimonials"), HomeTestimonialsSection, homeTestimonials),
+  defineSection(meta("home-testimonials"), SharedTestimonialsSection, homeTestimonials),
   defineSection(meta("home-faq"), HomeFaqSection, homeFaq),
 
   // Privat (möbel-nach-mass template)

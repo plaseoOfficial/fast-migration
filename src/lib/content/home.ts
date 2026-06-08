@@ -15,8 +15,6 @@ import {
   PARALLAX_BG,
   HANDWERK_STATS,
   HANDWERK_TABS,
-  TESTIMONIAL,
-  PARTNER_LOGOS,
   FAQS,
   CTA,
 } from "@/lib/content";
@@ -96,8 +94,6 @@ export const homeRaeume = {
 
 export const homeTestimonials = {
   heading: "Was Kunden sagen",
-  testimonial: TESTIMONIAL,
-  logos: PARTNER_LOGOS,
 };
 
 export const homeFaq = {
