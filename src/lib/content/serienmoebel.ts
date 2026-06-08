@@ -60,15 +60,15 @@ export const serienIntroStats = {
   counterSuffix: " km",
   col3Title: "Montage-Umkreis um Espelkamp",
   col3Body:
-    "Geliefert wird bundesweit in ganz Deutschland. Im Umkreis von rund 200 km um Espelkamp montieren wir auf Wunsch mit eigenem Team, etwa in Ostwestfalen-Lippe, Minden, Bielefeld, Hannover und Osnabrück. Ihre Serie planen Sie vorab im Möbelplaner.",
-  col3CtaLabel: "Serie online planen",
-  col3CtaHref: "/moebelplaner/",
+    "Geliefert wird bundesweit in ganz Deutschland. Im Umkreis von rund 200 km um Espelkamp montieren wir auf Wunsch mit eigenem Team, etwa in Ostwestfalen-Lippe, Minden, Bielefeld, Hannover und Osnabrück. Was Sie genau brauchen, besprechen wir vorab in Ruhe mit Ihnen.",
+  col3CtaLabel: "Serie persönlich besprechen",
+  col3CtaHref: "/kontakt/",
 };
 
 export const serienProcess = {
   heading: "Von der Zeichnung zur fertigen Serie",
   paragraph:
-    "Zuerst klären wir Stückzahl, Maße, Materialien und Oberflächen anhand Ihrer Zeichnung oder CAD-Daten. Wir prüfen die Fertigbarkeit und bauen ein Mustermöbel zur Freigabe. Erst nach Ihrer Freigabe startet die volle Stückzahl, jedes Bauteil auf Homag- und CNC-Technik nach demselben Programm. Vor dem Versand prüft unser Team jede Charge auf Maß und Oberfläche. Geliefert wird bundesweit, auf Wunsch in Etappen, etwa Filiale für Filiale oder Etage für Etage.",
+    "Am Anfang setzen wir uns mit Ihrer Zeichnung oder Ihren CAD-Daten zusammen und gehen Stückzahl, Maße, Materialien und Oberflächen in Ruhe mit Ihnen durch. Sobald die Fertigbarkeit steht, bauen wir Ihnen ein Mustermöbel, das Sie in die Hand nehmen und freigeben. Erst wenn Sie zufrieden sind, geht die volle Stückzahl in Produktion, jedes Bauteil auf derselben Homag- und CNC-Technik nach demselben Programm. Bevor etwas das Haus verlässt, sieht sich unser Team jede Charge noch einmal auf Maß und Oberfläche an. Geliefert wird bundesweit, auf Wunsch Schritt für Schritt, etwa Filiale für Filiale oder Etage für Etage.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/DSC07156-scaled.jpg",
   imageAlt: "Serienteile in der Fertigung mit Homag-Technik",
@@ -119,7 +119,7 @@ export const serienTypische = {
 export const serienWarum = {
   heading: "Warum Serienfertigung im Meisterbetrieb",
   paragraph:
-    "Die Industrie produziert anonym in festen Rastermaßen und großen Mindestmengen. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und ohne starre Mindestmenge, von der kleinen Auflage bis zur großen Stückzahl. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die ganze Serie gleich, mit der Präzision moderner Homag-Technik und der Sorgfalt eines Meisterbetriebs. Unsere PU-Kantenverleimung macht die Kanten nahezu wasserfest, geprüft im 24-Stunden-Wassertest. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung bleiben in einer Hand, auch bei Nachbestellungen reproduzierbar.",
+    "Eine Serie im Meisterbetrieb verbindet zwei Dinge, die selten zusammenkommen: die Wiederholgenauigkeit der Maschine und die Sorgfalt von Menschen, die ihr Handwerk verstehen. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und ohne starre Mindestmenge, von der kleinen Auflage bis zur großen Stückzahl. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die ganze Serie gleich, mit der Präzision moderner Homag-Technik. Unsere PU-Kantenverleimung macht die Kanten nahezu wasserfest, geprüft im 24-Stunden-Wassertest. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung bleiben bei uns in einer Hand und lassen sich auch bei Nachbestellungen sauber wiederholen.",
   images: [
     { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Serienmöbel in der Fertigung", width: 600, height: 450 },
     { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Korpusserie auf CNC-Technik", width: 600, height: 800 },
@@ -142,16 +142,16 @@ export const serienGeschichte = {
     { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
-    "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf rund 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
+    "Angefangen haben wir 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog unsere Fertigung nach Espelkamp, wo wir heute auf rund 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
     "Heute steht mit Andreas und Peter Fast die zweite Generation im Betrieb. Über 4.000 Projekte und mehr als 72.000 gefertigte Einzelteile stecken in unserer Erfahrung mit Maß und Stückzahl.",
     "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, Liefertreue und konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben. Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp und liefern bundesweit.",
   ],
 };
 
 export const serienMoebelplaner = {
-  heading: "Ihre Serie online planen und konfigurieren",
+  heading: "Vorab ein Bild machen, die Serie besprechen wir persönlich",
   body:
-    "Mit unserem Möbelplaner stimmen Sie Ihre Serie vorab ab. Maße, Materialien, Fronten und Module sehen Sie direkt im 3D-Konfigurator. So klären Sie das Mustermöbel, bevor die Stückzahl in die Fertigung geht. Danach übernehmen wir den Rest: Fertigbarkeitsprüfung, Arbeitsvorbereitung, Serienproduktion, Qualitätskontrolle und Lieferung. Aus Ihrer Online-Planung wird eine reproduzierbare Serie nach Maß.",
+    "Wenn Sie einzelne Möbel schon vorab sehen möchten, bekommen Sie mit unserem Möbelplaner ein erstes Gefühl für Maße, Materialien und Fronten im 3D-Konfigurator. Ihre Serie selbst stimmen wir danach persönlich mit Ihnen ab, denn Stückzahlen, Mustermöbel und Termine klären sich am besten im direkten Gespräch. Den Rest übernehmen wir für Sie: Fertigbarkeitsprüfung, Arbeitsvorbereitung, Serienproduktion, Qualitätskontrolle und Lieferung.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: "/images/2026/01/3838_1702_1_m.jpg",
