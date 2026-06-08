@@ -148,16 +148,6 @@ export const serienGeschichte = {
   ],
 };
 
-export const serienMoebelplaner = {
-  heading: "Vorab ein Bild machen, die Serie besprechen wir persönlich",
-  body:
-    "Wenn Sie einzelne Möbel schon vorab sehen möchten, bekommen Sie mit unserem Möbelplaner ein erstes Gefühl für Maße, Materialien und Fronten im 3D-Konfigurator. Ihre Serie selbst stimmen wir danach persönlich mit Ihnen ab, denn Stückzahlen, Mustermöbel und Termine klären sich am besten im direkten Gespräch. Den Rest übernehmen wir für Sie: Fertigbarkeitsprüfung, Arbeitsvorbereitung, Serienproduktion, Qualitätskontrolle und Lieferung.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/2026/01/3838_1702_1_m.jpg",
-  imageAlt: "Modulares Möbelsystem für die Serienfertigung",
-};
-
 export const serienCtas = {
   intro: {
     image: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
