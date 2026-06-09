@@ -33,6 +33,7 @@ import { ReferenzenGrid } from "@/components/sections/shared/ReferenzenGrid";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
+import { ContrastCols } from "@/components/sections/shared/ContrastCols";
 
 // Gewerbe sections
 import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroStats";
@@ -109,6 +110,7 @@ import {
   gastroSegments,
   gastroUsp,
 } from "@/lib/content/gastronomieeinrichtung";
+import { praxisVergleich } from "@/lib/content/praxiseinrichtung";
 
 function meta(id: string): SectionMeta {
   const found = SECTION_META.find((entry) => entry.id === id);
@@ -153,6 +155,7 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-process-steps"), ProcessSteps, gastroProcess),
   defineSection(meta("shared-segment-cards"), SegmentCards, gastroSegments),
   defineSection(meta("shared-usp-highlight"), UspHighlight, gastroUsp),
+  defineSection(meta("shared-contrast-cols"), ContrastCols, praxisVergleich),
 
   // Gewerbe
   defineSection(meta("gewerbe-intro-stats"), GewerbeIntroStats, gewerbeIntroStats),
