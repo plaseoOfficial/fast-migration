@@ -3,12 +3,12 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**46 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**47 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
 - **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight), [Shared — Spec / Comparison Table](#shared-spec-table), [Shared — Contrast Cols](#shared-contrast-cols)
-- **Home** — [Home — Hero](#home-hero), [Home — Discover](#home-discover), [Home — Quality](#home-quality), [Home — Parallax Quote](#home-parallax), [Home — Handwerk Tabs](#home-handwerk), [Home — Planner Embed](#home-planner), [Home — Räume Showcase](#home-raeume), [Home — Testimonials + Logos](#home-testimonials), [Home — FAQ](#home-faq)
+- **Home** — [Home — Hero](#home-hero), [Home — Discover](#home-discover), [Home — Bereiche (Zwei Welten)](#home-bereiche), [Home — Quality](#home-quality), [Home — Parallax Quote](#home-parallax), [Home — Handwerk Tabs](#home-handwerk), [Home — Planner Embed](#home-planner), [Home — Räume Showcase](#home-raeume), [Home — Testimonials + Logos](#home-testimonials), [Home — FAQ](#home-faq)
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
 - **Möbelplaner** — [Möbelplaner — Schritte](#mp-schritte), [Möbelplaner — Intro](#mp-intro), [Möbelplaner — Prozess](#mp-prozess)
@@ -294,6 +294,22 @@ _Prop-less (page-specific content)._
 | `blurbs` | `Blurb[]` | yes |
 
 ![Home — Discover](../design-references/sec2-discover.png)
+
+#### Home — Bereiche (Zwei Welten)
+
+`#home-bereiche` — Dual-audience overview: two labeled worlds (Privat / Gewerbe), each a row of photographic cards routing into the silo (hub + clusters), plus a closing Möbelplaner/Kontakt CTA band.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `categories-list` | `home` | no | `/` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `eyebrow` | `string` | yes |
+| `heading` | `string` | yes |
+| `intro` | `string` | yes |
+| `groups` | `Bereich[]` | yes |
+| `footnote` | `BereicheFootnote` | yes |
 
 #### Home — Quality
 

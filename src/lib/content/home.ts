@@ -39,6 +39,85 @@ export const homeDiscover = {
   blurbs: DISCOVER_BLURBS,
 };
 
+export const homeBereiche = {
+  eyebrow: "Privat & Gewerbe",
+  heading: "Zwei Welten, ein Anspruch: Maßarbeit",
+  intro:
+    "Vom Zuhause bis zum Unternehmen – Fast plant, fertigt und montiert Einrichtungen, die exakt zu Ihrem Raum passen. Wählen Sie Ihren Bereich und entdecken Sie, was möglich ist.",
+  groups: [
+    {
+      label: "Für Zuhause",
+      title: "Möbel nach Maß für Privatkunden",
+      body: "Küche, Schrank, Bad und Wohnbereich – durchgängig geplant, in einer Werkstatt gefertigt und vom eigenen Team montiert.",
+      cta: { label: "Alle Möbel nach Maß", href: "/moebel-nach-mass/" },
+      cards: [
+        {
+          title: "Küchen nach Maß",
+          image: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
+          alt: "Küche nach Maß in Grau mit Holzarbeitsplatte",
+          href: "/kuechen-nach-mass/",
+        },
+        {
+          title: "Einbauschränke & Ankleiden",
+          image: "/images/2025/11/IMG_2772-scaled.jpg",
+          alt: "Weißer Einbauschrank entlang eines Flurs",
+          href: "/moebel-nach-mass/",
+        },
+        {
+          title: "Badmöbel nach Maß",
+          image: "/images/2025/11/IMG_9120-scaled.jpg",
+          alt: "Badmöbel nach Maß mit Holz-Waschtisch und Aufsatzbecken",
+          href: "/moebel-nach-mass/",
+        },
+        {
+          title: "Wohnen & Sideboards",
+          image: "/images/2025/11/DSC_9814.jpg",
+          alt: "Maßgefertigtes Sideboard in Betonoptik",
+          href: "/moebel-nach-mass/",
+        },
+      ],
+    },
+    {
+      label: "Für Unternehmen",
+      title: "Gewerbe- & Objekteinrichtung",
+      body: "Büro, Laden, Gastronomie oder Praxis – funktional geplant, robust gebaut und termintreu umgesetzt, auch in Serie.",
+      cta: { label: "Zum Gewerbe-Bereich", href: "/gewerbe/" },
+      cards: [
+        {
+          title: "Büroeinrichtung",
+          image: "/images/2025/11/DSC_9747.jpg",
+          alt: "Konferenzraum mit Büroeinrichtung nach Maß",
+          href: "/bueroeinrichtung/",
+        },
+        {
+          title: "Ladenbau",
+          image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
+          alt: "Ladenbau mit Verkaufsregalen im Lebensmittelmarkt",
+          href: "/gewerbe/ladenbau/",
+        },
+        {
+          title: "Gastronomie",
+          image: "/images/2025/11/DSC_9938.jpg",
+          alt: "Gastronomieeinrichtung – Regaldetail mit indirekter Beleuchtung",
+          href: "/gastronomieeinrichtung/",
+        },
+        {
+          title: "Praxiseinrichtung",
+          image: "/images/2025/11/DSC07156-scaled.jpg",
+          alt: "Materialberatung für eine Praxiseinrichtung",
+          href: "/praxiseinrichtung/",
+        },
+      ],
+    },
+  ],
+  footnote: {
+    text: "Noch unsicher, wo Ihr Projekt am besten aufgehoben ist?",
+    primary: { label: "Online im Möbelplaner starten", href: "/moebelplaner/" },
+    secondary: { label: "Kontakt aufnehmen", href: "/kontakt/" },
+    trust: { label: "Referenzen ansehen", href: "/referenzen/" },
+  },
+};
+
 export const homeQuality = {
   headingLines: [
     "Wahre Qualität passt sich",

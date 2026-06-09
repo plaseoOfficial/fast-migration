@@ -5,6 +5,7 @@ import type { SectionEntry, SectionMeta } from "./types";
 // Home sections
 import { HeroSection } from "@/components/sections/home/HeroSection";
 import { DiscoverSection } from "@/components/sections/home/DiscoverSection";
+import { BereicheSection } from "@/components/sections/home/BereicheSection";
 import { QualitySection } from "@/components/sections/home/QualitySection";
 import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
 import { HandwerkSection } from "@/components/sections/home/HandwerkSection";
@@ -65,6 +66,7 @@ import { UeberFallbeispiel } from "@/components/sections/ueber/UeberFallbeispiel
 import {
   homeHero,
   homeDiscover,
+  homeBereiche,
   homeQuality,
   homeParallax,
   homeHandwerk,
@@ -128,6 +130,7 @@ export const sectionRegistry: SectionEntry[] = [
   // Home
   defineSection(meta("home-hero"), HeroSection, homeHero),
   defineSection(meta("home-discover"), DiscoverSection, homeDiscover),
+  defineSection(meta("home-bereiche"), BereicheSection, homeBereiche),
   defineSection(meta("home-quality"), QualitySection, homeQuality),
   defineSection(meta("home-parallax"), ParallaxQuote, homeParallax),
   defineSection(meta("home-handwerk"), HandwerkSection, homeHandwerk),
