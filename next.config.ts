@@ -9,8 +9,12 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    // Live Google-review avatars are served from Google's user-content CDN.
-    remotePatterns: [{ protocol: "https", hostname: "*.googleusercontent.com" }],
+    remotePatterns: [
+      // Live Google-review avatars are served from Google's user-content CDN.
+      { protocol: "https", hostname: "*.googleusercontent.com" },
+      // WordPress media library, mirrored into a public GCS bucket (media-images/<year>/<month>/…).
+      { protocol: "https", hostname: "storage.googleapis.com", pathname: "/fast_wp_bucket/**" },
+    ],
   },
   // Flat-IA relaunch: the old /leistungen/* URLs are retired (308 permanent).
   async redirects() {

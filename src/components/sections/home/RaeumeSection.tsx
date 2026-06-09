@@ -35,6 +35,8 @@ export function RaeumeSection({
   bathCaption,
   badge,
 }: RaeumeSectionProps) {
+  const poppins = "var(--font-poppins), Helvetica, Arial, sans-serif";
+
   return (
     <section
       id="kontakt"
@@ -42,86 +44,77 @@ export function RaeumeSection({
       style={{ backgroundColor: "rgba(203, 191, 181, 0.59)" }}
     >
       <div className="mx-auto max-w-[1280px] px-6">
-        {/* Centered top */}
-        <div className="mx-auto max-w-[820px] text-center mb-16">
+        {/* Header — big bold heading + supporting text (left-aligned) */}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <h2
+            className="max-w-[820px]"
             style={{
-              fontSize: "clamp(26px, 2.6vw, 35px)",
-              lineHeight: "1.3",
-              letterSpacing: "-1px",
+              fontSize: "clamp(36px, 5vw, 65px)",
+              lineHeight: 1,
+              letterSpacing: "-2px",
               fontWeight: 500,
               color: "rgb(61,61,61)",
             }}
           >
             {heading}
           </h2>
-          <p
-            className="mt-6"
-            style={{
-              fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-              fontSize: 16,
-              fontWeight: 500,
-              lineHeight: "23.8px",
-              color: "rgb(61,61,61)",
-            }}
-          >
-            {subheading}
-          </p>
-          <p
-            className="fast-body mt-4"
-            style={{ fontSize: 14, lineHeight: "23.8px" }}
-          >
-            {body}
-          </p>
-          <Link
-            href={topCtaHref}
-            className="mt-6 inline-flex items-center gap-2 transition-colors hover:text-[rgb(237,168,33)]"
-            style={{
-              fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-              fontSize: 15,
-              fontWeight: 500,
-              color: "rgb(61,61,61)",
-            }}
-          >
-            {topCtaLabel}
-            <ArrowRightIcon className="h-4 w-4" />
-          </Link>
+          <div className="max-w-[440px] shrink-0">
+            <p
+              style={{
+                fontFamily: poppins,
+                fontSize: 16,
+                fontWeight: 500,
+                lineHeight: "23.8px",
+                color: "rgb(61,61,61)",
+              }}
+            >
+              {subheading}
+            </p>
+            <p className="fast-body mt-3" style={{ fontSize: 14, lineHeight: "1.7" }}>
+              {body}
+            </p>
+            <Link
+              href={topCtaHref}
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-[rgb(61,61,61)] px-6 py-[11px] transition-colors hover:bg-[rgb(61,61,61)] hover:text-white"
+              style={{
+                fontFamily: poppins,
+                fontSize: 15,
+                fontWeight: 500,
+                color: "rgb(61,61,61)",
+              }}
+            >
+              {topCtaLabel}
+              <ArrowRightIcon className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
 
-        {/* 3-column showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        {/* Staggered gallery — photo + caption only */}
+        <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:items-start lg:gap-10">
+          {/* Unsere Geschichte → Über uns */}
           <Link
             href={storyHref}
-            className="lg:col-span-4 group relative aspect-[16/9] lg:aspect-[3/4] overflow-hidden rounded-md bg-[rgb(61,61,61)] block"
+            className="group relative block aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)] sm:col-span-2 lg:col-span-1"
           >
             <Image
               src={storyImage}
-              alt="Fast Werkstatt"
+              alt={storyTitle}
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
+              className="object-cover opacity-95 transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
-            <ArrowUpRightIcon className="absolute top-6 left-6 h-9 w-9 text-white" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <h4
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+            <ArrowUpRightIcon className="absolute top-5 right-5 h-7 w-7 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute bottom-7 left-7 right-7">
+              <h3
                 className="mb-2 text-white"
-                style={{
-                  fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                  fontSize: 22,
-                  fontWeight: 500,
-                  lineHeight: "28.6px",
-                }}
+                style={{ fontFamily: poppins, fontSize: 23, fontWeight: 500, lineHeight: "29px" }}
               >
                 {storyTitle}
-              </h4>
+              </h3>
               <span
-                className="inline-flex items-center gap-1 text-white/90"
-                style={{
-                  fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                  fontSize: 15,
-                  fontWeight: 500,
-                }}
+                className="inline-flex items-center gap-1 text-white/90 transition-colors group-hover:text-[rgb(237,168,33)]"
+                style={{ fontFamily: poppins, fontSize: 15, fontWeight: 500 }}
               >
                 {storyCtaLabel}
                 <ArrowRightIcon className="h-3 w-3" />
@@ -129,88 +122,56 @@ export function RaeumeSection({
             </div>
           </Link>
 
-          <div className="lg:col-span-4 flex flex-col gap-4 overflow-hidden">
-            <div className="flex items-center gap-2">
-              <span className="inline-block h-3 w-3 rounded-full border-2 border-[rgb(61,61,61)]" />
-              <span className="fast-eyebrow">Projekte</span>
-            </div>
-            <div
-              className="select-none leading-none max-w-full overflow-hidden"
-              style={{
-                fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                fontSize: "clamp(48px, 16vw, 220px)",
-                letterSpacing: "clamp(-3px, -1vw, -14px)",
-                fontWeight: 500,
-                color: "rgb(61,61,61)",
-              }}
-            >
-              Fast
-            </div>
-            <div className="relative flex-1 min-h-[200px] w-full overflow-hidden rounded-md">
-              <Image
-                src={kitchenImage}
-                alt="Fast Küche"
-                fill
-                sizes="(max-width: 1024px) 100vw, 33vw"
-                className="object-cover"
-              />
-              <div className="absolute bottom-4 left-4 right-4">
-                <h4
-                  className="text-white"
-                  style={{
-                    fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                    fontSize: 18,
-                    fontWeight: 500,
-                    lineHeight: "23.4px",
-                  }}
-                >
-                  {kitchenCaption}
-                </h4>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-4 relative min-h-[400px] lg:min-h-0 overflow-hidden rounded-md">
+          {/* Rückzugsort (offset down for rhythm) */}
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)] lg:mt-20">
             <Image
-              src={bathImage}
-              alt="Fast Badmöbel"
+              src={kitchenImage}
+              alt={kitchenCaption}
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <h4
-              className="absolute bottom-6 left-6 right-6 text-white"
-              style={{
-                fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-                fontSize: 18,
-                fontWeight: 500,
-                lineHeight: "23.4px",
-              }}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+            <h3
+              className="absolute bottom-7 left-7 right-7 text-white"
+              style={{ fontFamily: poppins, fontSize: 19, fontWeight: 500, lineHeight: "25px" }}
+            >
+              {kitchenCaption}
+            </h3>
+          </div>
+
+          {/* Wohnumgebung (offset down) */}
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)] lg:mt-10">
+            <Image
+              src={bathImage}
+              alt={bathCaption}
+              fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+            <h3
+              className="absolute bottom-7 left-7 right-7 text-white"
+              style={{ fontFamily: poppins, fontSize: 19, fontWeight: 500, lineHeight: "25px" }}
             >
               {bathCaption}
-            </h4>
+            </h3>
           </div>
         </div>
 
-        {/* Bottom: 5 stars + Über 4 Tausend badge */}
-        <div className="mt-10 flex flex-col items-start gap-2">
-          <div className="flex items-center gap-1" style={{ color: "rgb(61,61,61)" }}>
+        {/* Trust — understated, left-aligned */}
+        <div className="mt-16 flex items-center gap-3">
+          <div className="flex items-center gap-1" style={{ color: "rgba(61,61,61,0.55)" }}>
             {Array.from({ length: 5 }).map((_, i) => (
-              <StarIcon key={i} className="h-5 w-5" />
+              <StarIcon key={i} className="h-3.5 w-3.5" />
             ))}
           </div>
-          <h4
-            style={{
-              fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
-              fontSize: 15,
-              fontWeight: 500,
-              lineHeight: 1,
-              color: "rgb(61,61,61)",
-            }}
+          <span
+            className="fast-body"
+            style={{ fontSize: 14, lineHeight: 1.4 }}
           >
             {badge}
-          </h4>
+          </span>
         </div>
       </div>
     </section>

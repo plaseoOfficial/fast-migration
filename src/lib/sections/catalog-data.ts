@@ -47,6 +47,22 @@ export const SECTION_META = [
     screenshot: `${REF}/sec2-discover.png`,
   },
   {
+    id: "home-bereiche",
+    displayName: "Home — Bereiche (Zwei Welten)",
+    useCase: "categories-list",
+    category: "home",
+    description:
+      "Dual-audience overview: two labeled worlds (Privat / Gewerbe), each a row of photographic cards routing into the silo (hub + clusters), plus a closing Möbelplaner/Kontakt CTA band.",
+    propsSummary: [
+      { name: "eyebrow", type: "string", required: true },
+      { name: "heading", type: "string", required: true },
+      { name: "intro", type: "string", required: true },
+      { name: "groups", type: "Bereich[]", required: true },
+      { name: "footnote", type: "BereicheFootnote", required: true },
+    ],
+    usedOn: ["/"],
+  },
+  {
     id: "home-quality",
     displayName: "Home — Quality",
     useCase: "quality",
