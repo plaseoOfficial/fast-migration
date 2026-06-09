@@ -49,9 +49,9 @@ export const QUALITY_IMAGES = [
 export const PARALLAX_BG = "/images/2025/11/IMG_2673-scaled.jpg";
 
 export const HANDWERK_STATS: CounterStat[] = [
-  { value: "25", suffix: "+", label: "Erfahrung in Maßanfertigung und Möbelbau" },
+  { value: "30", suffix: "+", label: "Jahre Maßanfertigung – im Meisterbetrieb seit 1996" },
   { value: "4000", suffix: "+", label: "realisierte Wohn- und Geschäftsräume in OWL" },
-  { value: "12", suffix: "+", label: "Designer, Tischler und Planer mit Leidenschaft" },
+  { value: "72.000", suffix: "+", label: "gefertigte Einzelteile aus eigener Werkstatt" },
 ];
 
 export const HANDWERK_TABS: TabPanel[] = [
@@ -174,7 +174,15 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "Wie läuft das Projekt von der ersten Idee bis zur Montage ab?",
-    a: "Strukturiert, transparent und persönlich. Nach einem Erstgespräch vor Ort oder im Showroom erstellen wir eine detaillierte Planung mit Materialvorschlägen und Visualisierung. Nach Ihrer Freigabe übernimmt unser Meisterteam die Fertigung. Lieferung und Montage erfolgen durch unsere eigenen Monteure – ohne Subunternehmer, ohne Überraschungen.",
+    a: "Strukturiert, transparent und persönlich. Nach einem Erstgespräch vor Ort oder im Büro nehmen wir kostenlos Maß und erstellen eine technische 3D-Planung mit Materialvorschlägen und Visualisierung. Nach Ihrer Freigabe übernimmt unser Meisterteam die Fertigung. Lieferung und Montage erfolgen durch unsere eigenen Monteure – ohne Subunternehmer, ohne Überraschungen.",
+  },
+  {
+    q: "Liefert Fast Systemmöbel bundesweit – und wer übernimmt die Montage?",
+    a: "Geliefert wird bundesweit in ganz Deutschland. Im Umkreis von rund 200 km um Espelkamp montieren wir mit unserem eigenen Team – etwa in Minden, Bielefeld, Osnabrück und Hannover, in ganz Ostwestfalen-Lippe. Ohne Subunternehmer, von der ersten Schraube bis zur Abnahme. Außerhalb dieses Umkreises stimmen wir die Montage individuell mit Ihnen ab.",
+  },
+  {
+    q: "Fertigt Fast auch komplette Einrichtungen für Gewerbe und Praxen?",
+    a: "Ja. Neben Küchen, Bädern und Einbauschränken für Privatkunden richten wir Büros, Ladengeschäfte, Gastronomie und Praxen ein und fertigen Möbel in Serie. Vom einzelnen Empfangstresen bis zur kompletten Objekteinrichtung – geplant, gefertigt und montiert aus einer Hand in unserem Meisterbetrieb in Espelkamp.",
   },
 ];
 
