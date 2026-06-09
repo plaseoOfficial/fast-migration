@@ -24,6 +24,7 @@ import {
   bueroCtas,
   bueroTestimonialsHeading,
   bueroFaq,
+  bueroWeitereCards,
 } from "@/lib/content/bueroeinrichtung";
 
 const PAGE_PATH = "/bueroeinrichtung";
@@ -75,7 +76,7 @@ export default function BueroeinrichtungPage() {
         </div>
       </section>
 
-      <MnmWeitereLeistungen />
+      <MnmWeitereLeistungen cards={bueroWeitereCards} />
       <MnmTypische {...bueroTypische} />
       <BueroVergleich {...bueroVergleich} />
       <MnmGeschichte {...bueroGeschichte} />

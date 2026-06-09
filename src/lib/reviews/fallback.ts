@@ -40,7 +40,7 @@ export const FALLBACK_REVIEWS: ReviewsData = {
     },
     {
       id: "fallback-arminia",
-      name: "Christian Vennhaus",
+      name: "Christian Venghaus",
       photo: "",
       rating: 5,
       text: "Fast hat unsere Kabineneinrichtung so umgesetzt, als hätten sie unsere Gedanken gelesen. Funktional, schön, ehrlich.",

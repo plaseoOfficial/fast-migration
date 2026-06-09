@@ -2,14 +2,14 @@
   "summary": {
     "pagesBuilt": 16,
     "pagesPlanned": 10,
-    "linksFound": 140,
+    "linksFound": 139,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 16,
       "Warnung": 1,
-      "Hinweis": 35
+      "Hinweis": 32
     }
   },
   "findings": [
@@ -298,8 +298,14 @@
     {
       "severity": "Hinweis",
       "check": "missing-soll",
-      "message": "/moebel-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
-      "page": "/moebel-nach-mass/"
+      "message": "/: empfohlener SOLL-Link fehlt → `/kuechen-nach-mass/`. Stärkstes P1-Cluster",
+      "page": "/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/"
     },
     {
       "severity": "Hinweis",
@@ -312,36 +318,6 @@
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
       "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/kuechen-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/bueroeinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/bueroeinrichtung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/gastronomieeinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/gastronomieeinrichtung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/serienmoebel/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/serienmoebel/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/praxiseinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/praxiseinrichtung/"
     },
     {
       "severity": "Hinweis",
@@ -377,6 +353,12 @@
       "severity": "Hinweis",
       "check": "missing-soll",
       "message": "/referenzen/: empfohlener SOLL-Link fehlt → `/gewerbe/`. Authority → Gewerbe-Hub",
+      "page": "/referenzen/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/referenzen/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
       "page": "/referenzen/"
     },
     {

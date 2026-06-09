@@ -30,7 +30,7 @@ Jeder Baustein leitet sich direkt aus einem Micro-Intent oben ab. **(AEO)** = Sn
 - **Marken-Headline + 2–3 Satz-Essenz** (Micro-Intent 1) **(AEO** — beantwortet „Wer ist Fast Systemmöbel?" in ≤320 Zeichen, definitionsartig).
 - **Gründungs-/Timeline-Block** (1996 Garage Rahden-Tonnenheide → 2001 Espelkamp/Familienbetrieb → 2011 Tischlermeister → 2015 Alte Waldstraße 32). Datumsbasiert, scanbar. **(AEO)**
 - **Familie-Fast-Story** (Micro-Intent 1/6): Johann Fast = Gründer; Andreas & Peter Fast = 2. Generation, seit 2011, rücken in Geschäftsführung. **Das ist das E-E-A-T-Gold** — prominent, nicht versteckt.
-- **Können/Fertigungs-Block** (Micro-Intent 2): Meisterbetrieb, eigene Werkstatt Espelkamp, 1.000 m², Eigenfertigung, **PU-Kantenverleimung als echtes USP** (Musterkante 24 h unter Wasser).
+- **Können/Fertigungs-Block** (Micro-Intent 2): Meisterbetrieb, eigene Werkstatt Espelkamp, 1.000 m², Eigenfertigung, **PU-Kantenverleimung als echtes USP** (fugenlos/feuchtigkeitsbeständig).
 - **Zahlen-/Fakten-Leiste** (Micro-Intent 4) **(AEO** — Entitäten + Werte als kompakte Liste/Tabelle): seit 1996 · 1.000 m² · 4.000+ Projekte · 72K+ Einzelteile.
 - **Werte-/Haltungs-Block** (Micro-Intent 5): Qualität, Präzision, Verlässlichkeit, Langlebigkeit — **jeweils mit Beleg** (Material/Prozess), nie als Adjektiv-Liste.
 - **Nachhaltigkeits-Absatz** (Micro-Intent 5): umweltzertifiziertes Holz, Holzabfall→Energie, Photovoltaik, elektrifizierter Fuhrpark — nur belegte Claims.

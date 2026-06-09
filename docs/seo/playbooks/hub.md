@@ -80,7 +80,7 @@ Regel: **Korridor = max(SERP-Median bei gleichem Intent, Seitentyp-Untergrenze) 
 Konkrete Belege für Fast (nur ✅/🟢 aus FACTS.md):
 - **Breite des Leistungsspektrums** — Küchen, Einbauschränke, Badmöbel, Wohnmöbel, HWR (Privat) bzw. Ladenbau, Büro, Gastro, Serie, Praxis (Gewerbe): belegt die Themen-Autorität.
 - **Meisterbetrieb seit 1996** (Gründung Rahden-Tonnenheide, heute Fertigung Espelkamp — **nicht** „1996 in Espelkamp"!), **Familienbetrieb Fast** (Johann Fast; Andreas & Peter Fast als 2. Generation seit 2011) → Authoritativeness + Trust.
-- **PU-Kantenverleimung** (Musterkante 24 h unter Wasser) als ein konkreter Qualitätsbeweis statt Adjektiv-Marketing (Experience).
+- **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig) als ein konkreter Qualitätsbeweis statt Adjektiv-Marketing (Experience).
 - **NAP + Schema + klare Conversion-Wege ohne Druck** (Trust).
 
 Bewusst **knapp** dosieren: Der Hub *zeigt* Autorität durch Vollständigkeit + 3–4 harte Belege; die ausführliche Experience-/Trust-Story trägt **Referenz/Über-uns**. **Keine** erfundenen Zahlen/Awards (sofort disqualifizierend, QC-Gate 6).

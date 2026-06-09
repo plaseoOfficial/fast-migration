@@ -5,7 +5,7 @@ interface UspHighlightProps {
   eyebrow?: string;
   heading: string;
   body: string;
-  /** Optional proof figure, e.g. { value: "24 h", label: "unter Wasser …" }. */
+  /** Optional proof figure, e.g. { value: "4.000+", label: "realisierte Projekte" }. */
   stat?: { value: string; label: string };
   image: string;
   imageAlt: string;

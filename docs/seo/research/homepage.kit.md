@@ -51,7 +51,7 @@
 - **~1.000 m²**, Homag/CNC · **4.000+ Projekte** · **72.000+ Einzelteile**.
 - **Eigenes Montageteam**, **kostenloses Aufmaß**, **3D-Planung**.
 - **Lieferung bundesweit**; **Montage ~200 km um Espelkamp** (Minden, Bielefeld, Osnabrück, Hannover, ganz OWL).
-- **PU-Kantenverleimung** „nahezu wasserfest" (24-h-Wassertest) — starkes USP.
+- **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig) — starkes USP.
 - Trust: Google ~4,2★/~14 (live prüfen) · Presse Bürgermeister-Besuch 2023 · Partner-Logos.
 
 ## Verbotene Claims (nicht schreiben)

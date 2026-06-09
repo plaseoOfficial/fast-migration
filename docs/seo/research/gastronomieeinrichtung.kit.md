@@ -11,20 +11,20 @@ Micro-Intents (jeder MUSS auf der Seite beantwortet werden):
 2. **„Was kostet das ungefähr?"** → wichtigster Micro-Intent; OWL-weiter Markt-Gap (s. §6). Fast nennt keine Zahlen → über Kostenfaktoren + individuelles Angebot lösen.
 3. **„Wie läuft das ab?"** → Prozess Beratung → Aufmaß → 3D-Planung → Fertigung → Montage.
 4. **„Warum Tischlerei statt Systemanbieter/Shop?"** → USP + Vergleich, Eigenfertigung, PU-Kante.
-5. **„Aus welchem Material, wie robust/hygienisch/pflegeleicht?"** → Massivholz, PU-Kantenverleimung („nahezu wasserfest"), Objektmöbel-Belastbarkeit im Gastro-Alltag.
+5. **„Aus welchem Material, wie robust/hygienisch/pflegeleicht?"** → Massivholz, PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig), Objektmöbel-Belastbarkeit im Gastro-Alltag.
 6. **„Können die das, haben die so was gebaut?"** → Region OWL/Espelkamp, Familienbetrieb seit 1996, eigenes Montageteam, ein konkretes Projektdetail.
 7. **„Wie nehme ich unverbindlich Kontakt auf?"** → mehrfacher CTA (Möbelplaner + Kontakt + Telefon).
 
 ## 3 · Pflicht-Module (intent-abgeleitet, was ALLE Top-Treffer haben) + Tiefe-Blaupause
 **Pflicht-Bausteine (Leistung-Playbook §2, alle vorhanden = Gate 5 grün):**
 1. **Intro/Hero** — H1 „Gastronomieeinrichtung nach Maß" + regionaler Bezug OWL/NRW; Direktantwort „Was ist X?" in den ersten 100 W; Primär-CTA Beratung.
-2. **USP-Block (3–5, je mit Beleg)** — Meisterbetrieb (KEIN Jahr), Eigenfertigung „alle Teile in Eigenregie", **PU-Kantenverleimung „nahezu wasserfest"** (Gastro-Hygiene/Reinigung), Familienbetrieb, eigenes Montageteam.
+2. **USP-Block (3–5, je mit Beleg)** — Meisterbetrieb (KEIN Jahr), Eigenfertigung „alle Teile in Eigenregie", **PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig)** (Gastro-Hygiene/Reinigung), Familienbetrieb, eigenes Montageteam.
 3. **Produktkategorien-Grid** — Theke/Bartresen, Sitzbank, Tische (Massivholz-Tischplatten), Stühle/Barhocker, Wandverkleidung, Empfangstresen/Garderobe, Buffettheke (je Bild + Kurztext).
 4. **Branchenübersicht** — Restaurant · Café · Bar/Bistro · Hotel · Kantine/Betriebsgastronomie (je 2–3 Sätze spezifische Anforderungen). Differenziert Fast von reinen Shop-Treffern.
 5. **Prozess-Block, 5 Schritte (nummeriert)** — Beratung → kostenloses Aufmaß vor Ort → 3D-Planung → Fertigung (Eigenwerkstatt) → Montage (eigenes Team). HowTo-tauglich, aber KEIN HowTo-Schema (Intent-Konflikt).
 6. **Vergleichstabelle (Pflicht, ≥1 Tabelle)** — „Tischlerei/Maßanfertigung vs. Gastro-Online-Shop vs. Möbelhaus/Serie" — Kriterien: Passgenauigkeit (Wand-zu-Wand), Material/Belastbarkeit, Beratung, Planung, Langlebigkeit, Montage aus einer Hand.
 7. **Kosten-/Preismodul (PFLICHT — fehlt es, Gate 5 rot)** — Preisfaktoren erklären (Fläche, Möbelumfang, Theke/Sonderanfertigung, Material, Montageaufwand), „warum keine Pauschale", Versprechen Kostentransparenz nach Aufmaß. **KEINE erfundenen Euro-Zahlen.**
-8. **Material-/Qualitätsmodul** — Massivholz + branchenübliche Materialien, PU-Kantenverleimung (24-h-Wasserprobe), Objektmöbel-Belastbarkeit, pflegeleicht/hygienisch.
+8. **Material-/Qualitätsmodul** — Massivholz + branchenübliche Materialien, PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig), Objektmöbel-Belastbarkeit, pflegeleicht/hygienisch.
 9. **Trust-/Referenz-Anriss (kurz)** — Region OWL/Espelkamp, Familie Fast, eigenes Montageteam; ein konkretes Projektdetail. Tiefe gehört auf /referenzen/.
 10. **FAQ-Block: 10–15 echte Fragen** (s. §5) — Haupt-Tiefenträger + AEO + FAQPage-Schema.
 11. **Starker CTA-Block** — ≥3 Anker verteilt: Möbelplaner + Kontakt + sichtbares Telefon.
@@ -84,7 +84,7 @@ Micro-Intents (jeder MUSS auf der Seite beantwortet werden):
 3. **Was ist der Unterschied zwischen einer Tischlerei und einem Gastro-Online-Shop/Systemanbieter?**
 4. **Welche Möbel fertigt ihr für die Gastronomie?** (Theke, Sitzbank, Tische, Stühle/Barhocker, Wandverkleidung, Empfangstresen, Buffettheke)
 5. **Welche Materialien eignen sich für stark beanspruchte Gastronomiemöbel?** (Massivholz, PU-Kante, Objektmöbel-Belastbarkeit, hygienisch/pflegeleicht)
-6. **Warum ist die PU-Kantenverleimung im Gastro-Alltag ein Vorteil?** (nahezu wasserfest, reinigungsbeständig)
+6. **Warum ist die PU-Kantenverleimung im Gastro-Alltag ein Vorteil?** (feuchtigkeitsbeständig, reinigungsbeständig)
 7. **Für welche Betriebe arbeitet ihr — Restaurant, Café, Bar, Hotel, Kantine?**
 8. **Wie lange dauert die Fertigung einer Gastronomieeinrichtung?** (verbindlicher Termin NACH Aufmaß/Freigabe — KEINE erfundene Wochenzahl)
 9. **Bietet ihr auch Montage und schlüsselfertige Übergabe an?** (ja, eigenes Montageteam, kostenloses Aufmaß)
@@ -103,7 +103,7 @@ Micro-Intents (jeder MUSS auf der Seite beantwortet werden):
 - **Umbau im laufenden Betrieb / Stufenplanung:** im Markt unterrepräsentiert → eigener FAQ/Absatz.
 - **Kantine/Betriebsgastronomie als eigenes Unterkapitel:** unterrepräsentiert, Spoke /gastronomieeinrichtung/kantine-einrichtung/ geplant.
 
-**Unser Winkel (USP-Belege):** Meisterbetrieb in Espelkamp/OWL mit regionaler Montagepräsenz (überregionale Wettbewerber können das nicht) · Eigenfertigung end-to-end, kein Zwischenhändler · PU-Kante „nahezu wasserfest" · Familienunternehmen seit 1996, persönliche Ansprechpartner · eigener Möbelplaner · Komplettleistung aus einer Hand (Beratung→Montage, kein Gewerke-Koordinationsaufwand).
+**Unser Winkel (USP-Belege):** Meisterbetrieb in Espelkamp/OWL mit regionaler Montagepräsenz (überregionale Wettbewerber können das nicht) · Eigenfertigung end-to-end, kein Zwischenhändler · PU-Kante (fugenlos, feuchtigkeitsbeständig) · Familienunternehmen seit 1996, persönliche Ansprechpartner · eigener Möbelplaner · Komplettleistung aus einer Hand (Beratung→Montage, kein Gewerke-Koordinationsaufwand).
 
 **Negativ-Abgrenzung (Playbook §11 — was diese Seite NICHT tut):**
 - **vs. Hub (/gewerbe/):** kein reiner Karten-Verteiler — eigener kommerzieller Langtext, Kostenmodul, FAQ, starker CTA.
@@ -134,8 +134,8 @@ Micro-Intents (jeder MUSS auf der Seite beantwortet werden):
 - ❌ **„25+ Jahre" / „12+ Mitarbeiter"** (real ~5–10) / „seit 1996 in Espelkamp" (war Rahden-Tonnenheide; Espelkamp ab 2001).
 - ❌ **Exotische/konkrete Holzarten als Alleinstellung** (Eiche/Buche/Nussbaum nur generisch nennen, nicht „nur wir") · **FSC/PEFC namentlich** · „regionale Holzherkunft".
 - ❌ **Arminia-Bielefeld** auf dieser Seite NICHT als Gastro-Referenz (war die Kabine, gehört auf Ladenbau/Über-uns).
-- ❌ **Materialkonkreta wie „150.000 Belastungszyklen"** o. ä. (Wettbewerber-Zahl, nicht Fast) — nur eigener Beleg: PU-Musterkante 24 h unter Wasser.
-- ✅ **Nutzbar (belegt):** Meisterbetrieb · Eigenfertigung „alle Teile in Eigenregie" · PU-Kantenverleimung „nahezu wasserfest" · Familienbetrieb seit 1996 (Gründung Rahden-Tonnenheide) · Andreas & Peter Fast 2. Generation (seit 2010) · eigenes Montageteam · kostenloses Aufmaß vor Ort · 3D-Planung · Montage ~200 km um Espelkamp / Lieferung bundesweit · 1.000 m² Fertigung / Homag / 4.000+ Projekte / 72K+ Einzelteile · NAP: Alte Waldstraße 32, 32339 Espelkamp · 05771 9138312.
+- ❌ **Materialkonkreta wie „150.000 Belastungszyklen"** o. ä. (Wettbewerber-Zahl, nicht Fast) — nur eigener Beleg: PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig).
+- ✅ **Nutzbar (belegt):** Meisterbetrieb · Eigenfertigung „alle Teile in Eigenregie" · PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig) · Familienbetrieb seit 1996 (Gründung Rahden-Tonnenheide) · Andreas & Peter Fast 2. Generation (seit 2010) · eigenes Montageteam · kostenloses Aufmaß vor Ort · 3D-Planung · Montage ~200 km um Espelkamp / Lieferung bundesweit · 1.000 m² Fertigung / Homag / 4.000+ Projekte / 72K+ Einzelteile · NAP: Alte Waldstraße 32, 32339 Espelkamp · 05771 9138312.
 
 ## 9 · 🔴 Discovery-Fragen an den Kunden (PFLICHT vor dem Schreiben)
 1. **🌍 Geo-Reichweite (IMMER):** Gastronomieeinrichtung — **bundesweit oder montage-gebunden?** Komplettprojekte (Möbel + Montage) nur im ~200-km-Montagegebiet um Espelkamp, oder werden Gastromöbel auch bundesweit nur geliefert (ohne Montage)? Welche Beispielorte/Einzugsgebiet für Gastro nennen (Minden, Bielefeld, Osnabrück, OWL …)?

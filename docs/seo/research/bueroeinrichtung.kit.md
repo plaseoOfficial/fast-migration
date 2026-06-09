@@ -24,7 +24,7 @@
 | # | Modul | aus Micro-Intent | Snippet/AEO |
 |---|---|---|---|
 | 1 | **Hero + Kategorie-Definition** — H1 „Büroeinrichtung nach Maß", Primär-KW + Positionierung (Meisterbetrieb, Eigenfertigung OWL) in ersten 100 W; Direktantwort „Was ist Büroeinrichtung nach Maß?" | 1 | ✅ Direktantwort |
-| 2 | **USP-Block** (3–5 belegte Stärken: Meisterbetrieb, Eigenfertigung Espelkamp, PU-Kantenverleimung „nahezu wasserfest", eigenes Montageteam, Familienbetrieb) | 4, 5 | teilw. |
+| 2 | **USP-Block** (3–5 belegte Stärken: Meisterbetrieb, Eigenfertigung Espelkamp, PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig), eigenes Montageteam, Familienbetrieb) | 4, 5 | teilw. |
 | 3 | **Produktkategorien-Grid** — Schreibtisch, Büro-/Aktenschrank, Einbauschrank Büro, Konferenz-/Besprechungstisch, Empfangstresen, Teeküche/Büroküche, Regalwand, Rollcontainer; je Bild + (künftiger) Spoke-Link | 6 | nein |
 | 4 | **Prozess-Block — 5 Schritte:** Beratung → kostenloses Aufmaß vor Ort → 3D-Planung → Fertigung → Montage (eigenes Team), nummeriert, je 2–4 Sätze | 3 | ✅ Listen-tauglich |
 | 5 | **Vergleichstabelle** „Maßanfertigung Tischler vs. Büromöbelhandel/Möbelhaus vs. Online-Konfigurator" (Kriterien: Passgenauigkeit Nische/Dachschräge, Material, Beratung, Gesamtraum-Planung, Montage, Langlebigkeit) | 4 | ✅ Tabelle |
@@ -92,7 +92,7 @@
 7. **Werden die Büromöbel auch montiert oder muss ich selbst aufbauen?** → Montage durch eigenes Team (bestätigt), kein Selbstbau-Bausatz.
 8. **Welche Holzarten und Oberflächen eignen sich für Büromöbel?** → Massivholz, Echtholzfurnier, Dekore, Lackfronten, RAL — ohne exotische Holzart als Alleinstellung, kein FSC/PEFC namentlich.
 9. **Eignen sich Maßmöbel auch fürs Homeoffice / Arbeitszimmer?** → ja, Nischen/Dachschräge, wohnzimmertaugliches Design, Schreibtisch im Schrank.
-10. **Was ist eine PU-Kantenverleimung und warum ist sie bei Büromöbeln wichtig?** → fugenlose, nahezu wasserfeste Kante (Beleg: Musterkante 24 h unter Wasser); robust gegen Feuchtigkeit (Teeküche) und mechanische Beanspruchung.
+10. **Was ist eine PU-Kantenverleimung und warum ist sie bei Büromöbeln wichtig?** → fugenlose, feuchtigkeitsbeständige Kante; robust gegen Feuchtigkeit (Teeküche) und mechanische Beanspruchung.
 11. **Machen Sie auch Empfangstresen, Konferenztische und Teeküchen fürs Gewerbe?** → ja, Komplettlösung aus einer Hand, ein Stil/ein Ansprechpartner.
 12. **Können Büromöbel ergonomische Anforderungen wie Steharbeitsplätze erfüllen?** → ja, Maßanpassung an Tisch-/Arbeitshöhe, Kabelmanagement.
 13. **In welchem Gebiet liefern und montieren Sie Büroeinrichtungen?** → Montage ~200 km um Espelkamp (OWL/NRW), Lieferung darüber hinaus bundesweit. **(Geo-Antwort — nach Discovery bestätigen.)**
@@ -144,7 +144,7 @@
 - ❌ **FSC/PEFC namentlich**, „regionale Holzherkunft", **exotische Holzarten als Alleinstellung** (Eiche/Nussbaum als belegte Spezialität nicht behaupten).
 - ❌ **Awards/Zertifikate** (DISQ, Trusted Shops etc.) — das sind Wettbewerber-Signale, Fast hat keine belegten.
 - ❌ **Keine verbindliche Steuerberatung** (Betriebsausgaben-FAQ nur allgemein + Verweis auf Steuerberater).
-- ⚠️ **Nutzbar (belegt 2026-06):** „Meisterbetrieb", „Eigenfertigung/alle Teile in Eigenregie", „PU-Kantenverleimung nahezu wasserfest (Musterkante 24 h unter Wasser)", „kostenloses Aufmaß vor Ort", „eigenes Montageteam", „Montage ~200 km um Espelkamp / Lieferung bundesweit", „Familie Fast / 2. Generation seit 2010", „3D-Planung", „1.000 m² / Homag / 4.000 Projekte / 72K Einzelteile" (bestätigt). NAP: Alte Waldstraße 32, 32339 Espelkamp · 05771 9138312.
+- ⚠️ **Nutzbar (belegt 2026-06):** „Meisterbetrieb", „Eigenfertigung/alle Teile in Eigenregie", „PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig)", „kostenloses Aufmaß vor Ort", „eigenes Montageteam", „Montage ~200 km um Espelkamp / Lieferung bundesweit", „Familie Fast / 2. Generation seit 2010", „3D-Planung", „1.000 m² / Homag / 4.000 Projekte / 72K Einzelteile" (bestätigt). NAP: Alte Waldstraße 32, 32339 Espelkamp · 05771 9138312.
 
 ## 9 · 🔴 Discovery-Fragen an den Kunden (PFLICHT vor dem Schreiben — nur was NUR der Kunde weiß)
 1. 🔴 **Geo-Reichweite Büroeinrichtung: bundesweit oder montage-gebunden?** Gilt für Büromöbel dasselbe wie für Küchen (Montage ~200 km um Espelkamp, Lieferung bundesweit) — oder versendet/montiert Fast Büromöbel auch außerhalb des 200-km-Radius? *(Verbindlich, bevor Geo-Aussagen/areaServed-Schema gesetzt werden.)*

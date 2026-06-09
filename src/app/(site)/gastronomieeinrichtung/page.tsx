@@ -28,6 +28,7 @@ import {
   gastroCtas,
   gastroTestimonialsHeading,
   gastroFaq,
+  gastroWeitereCards,
 } from "@/lib/content/gastronomieeinrichtung";
 
 const PAGE_PATH = "/gastronomieeinrichtung";
@@ -80,7 +81,7 @@ export default function GastronomieeinrichtungPage() {
 
       <ProcessSteps {...gastroProcess} />
       <SegmentCards {...gastroSegments} />
-      <MnmWeitereLeistungen />
+      <MnmWeitereLeistungen cards={gastroWeitereCards} />
       <MnmTypische {...gastroTypische} />
       <UspHighlight {...gastroUsp} />
       <MnmWarum {...gastroWarum} />

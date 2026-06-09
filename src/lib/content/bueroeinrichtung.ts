@@ -146,7 +146,7 @@ export const bueroTypische = {
 export const bueroWarum = {
   heading: "Tischler oder Möbelhandel? Der Unterschied",
   paragraph:
-    "Kataloganbieter liefern feste Rastermaße. Wo Ihre Wand 2,87 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir fertigen Ihre Büroeinrichtung wand-zu-wand — millimetergenau auf Ihre Räume, Beratung, Fertigung und Montage aus einer Hand. Ein Detail, das im Alltag zählt: Unsere PU-Kantenverleimung verschließt Kanten fugenlos und nahezu wasserfest. Schreibtischkanten überstehen Jahre der Beanspruchung, die Teeküche verträgt Feuchtigkeit, nichts platzt an den Rändern ab.",
+    "Kataloganbieter liefern feste Rastermaße. Wo Ihre Wand 2,87 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir fertigen Ihre Büroeinrichtung wand-zu-wand — millimetergenau auf Ihre Räume, Beratung, Fertigung und Montage aus einer Hand. Ein Detail, das im Alltag zählt: Unsere PU-Kantenverleimung verschließt Kanten fugenlos und feuchtigkeitsbeständig. Schreibtischkanten überstehen Jahre der Beanspruchung, die Teeküche verträgt Feuchtigkeit, nichts platzt an den Rändern ab.",
   images: [
     { src: "/images/2025/11/DSC_9747.jpg", alt: "Moderne Büroeinrichtung nach Maß", width: 600, height: 450 },
     { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Arbeitsplätze mit integriertem Stauraum", width: 600, height: 400 },
@@ -171,7 +171,7 @@ export const bueroVergleich = {
   image: "/images/2025/11/DSC_9747.jpg",
   imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel Espelkamp",
   kantenText:
-    "Ein Detail, das im Alltag den Unterschied macht: Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und nahezu wasserfest. Eine Musterkante haben wir 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Für den Büroalltag bedeutet das: Die Teeküche verträgt Spritzwasser, Schreibtischkanten überstehen Jahre der Beanspruchung, und nichts platzt an den Rändern ab.",
+    "Ein Detail, das im Alltag den Unterschied macht: Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Für den Büroalltag bedeutet das: Die Teeküche verträgt Spritzwasser, Schreibtischkanten überstehen Jahre der Beanspruchung, und nichts platzt an den Rändern ab.",
 };
 
 export const bueroGeschichte = {
@@ -216,6 +216,50 @@ export const bueroCtas = {
     href: "/kontakt",
   },
 };
+
+/**
+ * "Weitere Leistungen"-Karten für /bueroeinrichtung/. Silo-konform: verlinkt
+ * auf /gewerbe/ (Hub-Up-Link) und /referenzen/ (SOLL-Trust), NICHT auf den
+ * Privat-Silo /moebel-nach-mass/. Übergabe an MnmWeitereLeistungen via cards-Prop.
+ */
+import type { ServiceCard } from "@/types/mnm";
+
+export const bueroWeitereCards: ServiceCard[] = [
+  {
+    icon: "/images/2024/03/interior-design-white-icons-08.svg",
+    title: "Gewerbeeinrichtung",
+    description:
+      "Büroeinrichtung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Schreibtisch bis zur kompletten Objekteinrichtung für Büro, Ladenbau und Gastronomie.",
+    href: "/gewerbe/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-07.svg",
+    title: "Planung & 3D-Visualisierung",
+    description:
+      "Kostenloses Aufmaß, technische 3D-Planung und Materialberatung. Sie sehen Ihr Büro, bevor wir mit der Fertigung beginnen.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-09.svg",
+    title: "Fertigung & Montage",
+    description:
+      "Alle Teile entstehen im eigenen Werk in Espelkamp auf Homag-Technologie, Montage durch unser eigenes Team im Umkreis von rund 200 km.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Referenzprojekte",
+    description:
+      "Realisierte Büro- und Gewerbeprojekte aus unserer Werkstatt: Schreibtische, Schrankwände und Empfangsbereiche nach Maß, fertig eingebaut.",
+    href: "/referenzen/",
+    moreLabel: "Projekte ansehen",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Möbelplaner",
+    description:
+      "Einzelne Büromöbel wie Schränke und Regale online konfigurieren: Maße, Oberflächen und Einlegeböden direkt im 3D-Konfigurator.",
+    href: "/moebelplaner/",
+  },
+];
 
 /** Testimonials + FAQ render via the shared service sections. */
 export const bueroTestimonialsHeading = "Was unsere Gewerbekunden sagen";

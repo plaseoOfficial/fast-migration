@@ -28,7 +28,7 @@ Jeder Baustein ist aus genau einem Micro-Intent (§1) abgeleitet. **AEO** = Snip
 2. **Varianten-/Ausführungs-Block** (→ MI 1): Bauformen, Fronten, Materialien, Beschläge — produktspezifisch, als Grid oder kurze Tabelle. **[AEO bei Tabelle]**
 3. **Maß-Block** (→ MI 2): **Pflicht** — Standard- & Sondermaße, Min/Max, Sondersituationen (Nische, Dachschräge, Raumhöhe). Als **Maß-Tabelle**. *Das ist das stärkste Anti-Duplikat-Asset.* **[AEO]**
 4. **Kosten-Orientierungs-Block** (→ MI 3): Preis**spanne** + 3–5 **Preistreiber** für *dieses* Produkt. Klar als Richtwert/„ab"-Orientierung, nie Festpreis. Als Mini-Tabelle (z. B. Ausführung → Rahmen). **[AEO]**
-5. **Technik-/Material-Specs** (→ MI 4): Korpus, Front, **PU-Kantenverleimung** (24-h-Wassertest), Beschläge, Pflege/Langlebigkeit. Spec-Liste. **[AEO bei Spec-Tabelle]**
+5. **Technik-/Material-Specs** (→ MI 4): Korpus, Front, **PU-Kantenverleimung** (fugenlos/feuchtigkeitsbeständig), Beschläge, Pflege/Langlebigkeit. Spec-Liste. **[AEO bei Spec-Tabelle]**
 6. **Warum nach Maß / Warum Fast** (→ MI 5): Maß vs. Standard, kurzer USP-Block (Eigenfertigung, Meisterbetrieb). Kein Pillar-USP-Roman — komprimiert.
 7. **Mini-Prozess** (→ MI 6): 3–4 Schritte (Beratung → 3D-Planung → Fertigung → Montage „auf Wunsch"). Knapp; Vollprozess liegt beim Cluster-Pillar.
 8. **FAQ-Block** (→ alle MI): **Pflicht ≥ 6 FAQ** für dieses eine Produkt (Maße/Kosten/Material/Ablauf/Sondersituation). Mehrere Produkte ⇒ **eigene** Fragen je Produkt, kein Copy-Paste. **[AEO]**
@@ -54,7 +54,7 @@ Jeder Baustein ist aus genau einem Micro-Intent (§1) abgeleitet. **AEO** = Snip
 
 ## 5 · E-E-A-T-Fokus (welche der 4 Säulen trägt am stärksten)
 **Tragende Säule: Expertise** — dicht gefolgt von **Trust**. Beim Produkt entscheidet **Fach-/Material-/Maß-Tiefe** den Eindruck „die können genau dieses Möbel bauen".
-- **Expertise (führend):** echte Maße, Korpus-/Frontaufbau, Beschlag-Optionen, **PU-Kantenverleimung** als technischer Beleg (24-h-Wassertest), 3D-Planung. Fachlich korrekt, produktspezifisch — kein Lehrbuch-Allgemeinplatz.
+- **Expertise (führend):** echte Maße, Korpus-/Frontaufbau, Beschlag-Optionen, **PU-Kantenverleimung** als technischer Beleg (fugenlos/feuchtigkeitsbeständig), 3D-Planung. Fachlich korrekt, produktspezifisch — kein Lehrbuch-Allgemeinplatz.
 - **Trust (eng dahinter):** **transparente Kosten-Orientierung** (Spanne + Treiber statt Festpreis-Lockvogel) ist hier der stärkste Trust-Hebel; konsistente NAP; ehrliche Lieferzeit-Einordnung; keine erfundenen Garantie-/Rating-Zahlen.
 - **Experience:** mind. 1 Praxis-Detail / Raumsituation (Dachschräge, Nische in OWL-Altbau, „in unserer Werkstatt in Espelkamp gefertigt").
 - **Authoritativeness:** Eigenfertigung („alle Teile in Eigenregie"), Meisterbetrieb, Familie Fast — komprimiert, nicht als Über-uns-Block.

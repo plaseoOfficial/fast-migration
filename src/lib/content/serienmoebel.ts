@@ -18,7 +18,7 @@
  * Sie-Form). Facts checked against docs/seo/brand/FACTS.md: seit 1996
  * (Rahden-Tonnenheide; Espelkamp ab 2001), Meisterbetrieb (ohne Jahr), rund
  * 1.000 m² Fertigung, Homag-/CNC-Technik, 4.000+ Projekte, 72.000+ Teile,
- * Familie 2. Gen. (Andreas & Peter Fast), PU-Kantenverleimung (24-h-Wassertest),
+ * Familie 2. Gen. (Andreas & Peter Fast), PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig),
  * eigenes Montageteam, ~200 km Montageradius, Lieferung bundesweit, Made in
  * Germany. No invented numbers, prices, lead times, awards or claims. Zero em-dashes.
  * Research-Kit: docs/seo/research/serienmoebel.kit.md (out of PR).
@@ -119,7 +119,7 @@ export const serienTypische = {
 export const serienWarum = {
   heading: "Warum Serienfertigung im Meisterbetrieb",
   paragraph:
-    "Eine Serie im Meisterbetrieb verbindet zwei Dinge, die selten zusammenkommen: die Wiederholgenauigkeit der Maschine und die Sorgfalt von Menschen, die ihr Handwerk verstehen. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und ohne starre Mindestmenge, von der kleinen Auflage bis zur großen Stückzahl. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die ganze Serie gleich, mit der Präzision moderner Homag-Technik. Unsere PU-Kantenverleimung macht die Kanten nahezu wasserfest, geprüft im 24-Stunden-Wassertest. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung bleiben bei uns in einer Hand und lassen sich auch bei Nachbestellungen sauber wiederholen.",
+    "Eine Serie im Meisterbetrieb verbindet zwei Dinge, die selten zusammenkommen: die Wiederholgenauigkeit der Maschine und die Sorgfalt von Menschen, die ihr Handwerk verstehen. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und ohne starre Mindestmenge, von der kleinen Auflage bis zur großen Stückzahl. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die ganze Serie gleich, mit der Präzision moderner Homag-Technik. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung bleiben bei uns in einer Hand und lassen sich auch bei Nachbestellungen sauber wiederholen.",
   images: [
     { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Serienmöbel in der Fertigung", width: 600, height: 450 },
     { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Korpusserie auf CNC-Technik", width: 600, height: 800 },
@@ -163,6 +163,49 @@ export const serienCtas = {
   },
 };
 
+/**
+ * "Weitere Leistungen"-Karten für /serienmoebel/. Silo-konform: verlinkt auf
+ * /gewerbe/ (Hub-Up-Link) und /referenzen/ (SOLL-Trust), NICHT auf /moebel-nach-mass/.
+ * Kein /moebelplaner/-Link: serienmoebel hat mustExempt: ["/moebelplaner/"] in PAGES.
+ */
+import type { ServiceCard } from "@/types/mnm";
+
+export const serienWeitereCards: ServiceCard[] = [
+  {
+    icon: "/images/2024/03/interior-design-white-icons-08.svg",
+    title: "Gewerbeeinrichtung",
+    description:
+      "Serienfertigung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Möbel bis zur kompletten Objektausstattung für Filialhandel, Hotellerie und Büro.",
+    href: "/gewerbe/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-07.svg",
+    title: "Mustermöbel & Freigabe",
+    description:
+      "Vor dem Start der vollen Stückzahl fertigen wir ein Erstmuster, das Sie freigeben. So sehen Sie das Ergebnis, bevor die Serie in Produktion geht.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-09.svg",
+    title: "Fertigung & Lieferung",
+    description:
+      "Jedes Teil auf demselben CNC-Programm, seriengleiche Qualität, Lieferung bundesweit. Montage durch unser eigenes Team im Umkreis von rund 200 km.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Referenzprojekte",
+    description:
+      "Realisierte Serien- und Gewerbeaufträge aus unserem Meisterbetrieb: Filialserien, Korpusse und Objektmöbel nach Zeichnung, seriengleich gefertigt.",
+    href: "/referenzen/",
+    moreLabel: "Projekte ansehen",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Lohnfertigung",
+    description:
+      "Wir fertigen auch für Tischlereien und Planungsbüros, die für eine Serie oder ein Objekt Kapazität brauchen. CAD-Daten oder Zeichnung genügt.",
+  },
+];
+
 /** Testimonials + FAQ render via the shared service sections. */
 export const serienTestimonialsHeading = "Was unsere Gewerbekunden sagen";
 
@@ -187,7 +230,7 @@ export const serienFaq = {
     {
       question: "Fertigen Sie nach unserer eigenen Zeichnung oder CAD-Datei?",
       answer:
-        "Ja. Sie senden uns Zeichnung oder CAD-Daten, wir prüfen die Fertigbarkeit und setzen die Serie eins zu eins um. Wir verarbeiten Span, MDF, Multiplex und Massivholz und verleimen die Kanten mit unserer PU-Kantenverleimung nahezu wasserfest, geprüft im 24-Stunden-Wassertest.",
+        "Ja. Sie senden uns Zeichnung oder CAD-Daten, wir prüfen die Fertigbarkeit und setzen die Serie eins zu eins um. Wir verarbeiten Span, MDF, Multiplex und Massivholz und verleimen die Kanten mit unserer PU-Kantenverleimung fugenlos und feuchtigkeitsbeständig.",
     },
     {
       question: "Arbeiten Sie mit Architekten, Innenarchitekten und Planern zusammen?",

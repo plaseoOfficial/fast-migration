@@ -72,13 +72,6 @@ export default function ReferenzenPage() {
         projects={referenzenGrid.projects}
       />
 
-      {/* Intro CTA — to contact (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...referenzenCtas.intro} />
-        </div>
-      </section>
-
       <TestimonialsSection heading={referenzenTestimonialsHeading} />
 
       {/* Final CTA — to planner (beige) */}
