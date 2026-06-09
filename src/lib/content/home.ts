@@ -35,7 +35,7 @@ export const homeDiscover = {
   teamHeading:
     "Fast verbindet Handwerk und Design zu ganzheitlichen Möbelkonzepten.",
   teamBody:
-    "Wir realisieren maßgefertigte Einrichtungen für Wohnräume, Büros, Praxen und Gewerbeflächen, die präzise und langlebig sind. Passgenau auf Ihren Raum abgestimmt.",
+    "Als Familienbetrieb in zweiter Generation fertigen wir seit 1996 maßgefertigte Einrichtungen – für Wohnräume, Büros, Praxen, Ladengeschäfte und Gastronomie. Präzise, langlebig und passgenau auf Ihren Raum abgestimmt, geplant und gebaut in unserem Meisterbetrieb in Espelkamp und geliefert bundesweit.",
   blurbs: DISCOVER_BLURBS,
 };
 
@@ -47,7 +47,7 @@ export const homeQuality = {
   ],
   paragraphs: [
     "Ein Tisch, der zu groß oder zu klein ist, ein Regal, das nie ganz passt – kommt Ihnen das bekannt vor? Genau das vermeiden wir. Fast steht für Systemmöbel, die sich an Ihr Leben anpassen – nicht umgekehrt.",
-    "Unsere Designer planen mit Ihnen jedes Detail: vom ersten Entwurf bis zur letzten Schraube.",
+    "Nach einem kostenlosen Aufmaß planen unsere Designer mit Ihnen jedes Detail in 3D – vom ersten Entwurf bis zur letzten Schraube. Gefertigt und montiert wird in einer Hand, von unserem eigenen Team.",
   ],
   images: QUALITY_IMAGES,
 };
@@ -55,7 +55,7 @@ export const homeQuality = {
 export const homeParallax = {
   bgImage: PARALLAX_BG,
   heading: "Qualität, die man nicht erklären muss",
-  body: "Echtholz, Furnier oder lackierte Front – das Material entscheidet nicht nur über den Look, sondern über die Lebensdauer. Wir setzen auf langlebige Materialien, hochwertige Beschläge und eine Verarbeitung, die man spürt, sobald man eine Schublade öffnet.",
+  body: "Echtholz, Furnier oder lackierte Front – das Material entscheidet nicht nur über den Look, sondern über die Lebensdauer. Wir setzen auf langlebige Materialien, hochwertige Beschläge und eine Verarbeitung, die man spürt, sobald man eine Schublade öffnet. Alles entsteht in unserer eigenen Werkstatt in Espelkamp.",
   quote:
     "Viele unserer Kunden kommen Jahre später wieder – nicht, um zu reklamieren. Sondern weil sie sagen: „Das waren die besten Möbel, die wir je hatten.“",
 };
@@ -78,7 +78,7 @@ export const homeMoebelplaner = {
 export const homeRaeume = {
   heading: "Räume, die Geschichten erzählen",
   subheading: "Starten Sie Ihr Projekt",
-  body: "Wir gestalten Möbel, die sich einfügen, ohne sich zu verstecken. Die den Raum tragen, nicht überladen. Und die selbst in 10 Jahren noch wirken, als wären sie gerade eingebaut.",
+  body: "Wir gestalten Möbel, die sich einfügen, ohne sich zu verstecken. Die den Raum tragen, nicht überladen. Und die selbst in 10 Jahren noch wirken, als wären sie gerade eingebaut. Geliefert wird bundesweit – im Umkreis von rund 200 km um Espelkamp montiert unser eigenes Team, von Minden über Bielefeld bis Osnabrück und Hannover.",
   topCtaLabel: "Kontakt",
   topCtaHref: "/kontakt/",
   storyImage: "/images/2025/11/DSC06206-scaled.jpg",
