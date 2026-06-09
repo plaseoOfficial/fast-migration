@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { MnmProcess } from "@/components/sections/privat/MnmProcess";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
+import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SegmentCards } from "@/components/sections/shared/SegmentCards";
+import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -17,6 +19,8 @@ import {
   praxisHero,
   praxisIntroStats,
   praxisProcess,
+  praxisSegments,
+  praxisUsp,
   praxisTypische,
   praxisWarum,
   praxisGeschichte,
@@ -74,9 +78,11 @@ export default function PraxiseinrichtungPage() {
         </div>
       </section>
 
-      <MnmProcess {...praxisProcess} />
+      <ProcessSteps {...praxisProcess} />
+      <SegmentCards {...praxisSegments} />
       <MnmWeitereLeistungen />
       <MnmTypische {...praxisTypische} />
+      <UspHighlight {...praxisUsp} />
       <MnmWarum {...praxisWarum} />
       <MnmGeschichte {...praxisGeschichte} />
       <MnmMoebelplaner {...praxisMoebelplaner} />
