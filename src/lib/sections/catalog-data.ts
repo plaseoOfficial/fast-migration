@@ -443,6 +443,23 @@ export const SECTION_META = [
     screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
   },
 
+  {
+    id: "shared-contrast-cols",
+    displayName: "Shared — Contrast Cols",
+    useCase: "comparison",
+    category: "shared",
+    description:
+      "Two-column contrast block: a gray 'what you get elsewhere' card (cross bullets) beside a gold-accented 'what you get from us' card (check bullets), each a short bulleted list. Turns a dense vs-paragraph (catalogue furniture vs custom joinery) into a scannable comparison.",
+    propsSummary: [
+      { name: "heading", type: "string", required: true },
+      { name: "negative", type: "ContrastColumn", required: true },
+      { name: "positive", type: "ContrastColumn", required: true },
+      { name: "eyebrow / intro", type: "string", required: false },
+    ],
+    usedOn: ["/praxiseinrichtung"],
+    screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
+  },
+
   // ── Gewerbe (commercial page) ─────────────────────────────────────────────
   {
     id: "gewerbe-intro-stats",
