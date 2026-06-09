@@ -157,7 +157,7 @@ export const ladenTypische = {
     {
       title: "Verkaufstheke & Kassenzone",
       description:
-        "Die Verkaufstheke ist der Mittelpunkt jeder Fläche und am Point of Sale am stärksten beansprucht. Wir bauen Ladentheken mit durchdachtem Stauraum, robusten Oberflächen und integrierter Kassen- und Wäge-Technik, an den Stoßkanten mit nahezu wasserfester PU-Kantenverleimung. So hat hinter der Theke jeder Handgriff seinen Platz, von der Kasse bis zur Verpackung.",
+        "Die Verkaufstheke ist der Mittelpunkt jeder Fläche und am Point of Sale am stärksten beansprucht. Wir bauen Ladentheken mit durchdachtem Stauraum, robusten Oberflächen und integrierter Kassen- und Wäge-Technik, an den Stoßkanten mit fugenloser, feuchtigkeitsbeständiger PU-Kantenverleimung. So hat hinter der Theke jeder Handgriff seinen Platz, von der Kasse bis zur Verpackung.",
     },
     {
       title: "Ladenregale & Wandsysteme",
@@ -230,15 +230,14 @@ export const ladenSegments = {
 
 /**
  * USP-Beweis-Block (shared UspHighlight). Hebt den stärksten, belegbaren
- * Differenzierer (PU-Kantenverleimung + 24-h-Wassertest) aus dem Warum-Absatz
+ * Differenzierer (PU-Kantenverleimung, fugenlos/feuchtigkeitsbeständig) aus dem Warum-Absatz
  * in eine eigene luftige Sektion. Material-Pflichtbaustein lt. Research-Kit §3/§4.
  */
 export const ladenUsp = {
   eyebrow: "Gebaut für den Kundenverkehr",
-  heading: "Eine Kante, die kein Wasser durchlässt",
+  heading: "Eine Kante ohne Fuge, gebaut für harten Alltag",
   body:
-    "An Theken, Regalen und Tresen bekommen die Kanten täglich Stöße, Spritzwasser und Reinigung ab, genau dort entscheidet sich die Langlebigkeit. Die stark beanspruchten Stoßkanten verleimen wir im PU-Verfahren: Das verschließt sie fugenlos und nahezu wasserfest, statt sie nur aufzukleben. Eine Musterkante haben wir dafür 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Zusammen mit Massivholz und hochwertigen Trägermaterialien bleibt Ihre Ladeneinrichtung über Jahre formstabil, auch dort, wo am Point of Sale am meisten los ist.",
-  stat: { value: "24 h", label: "unter Wasser getaucht, ohne aufzuquellen" },
+    "An Theken, Regalen und Tresen bekommen die Kanten täglich Stöße, Spritzwasser und Reinigung ab, genau dort entscheidet sich die Langlebigkeit. Die stark beanspruchten Stoßkanten verleimen wir im PU-Verfahren: Das verschließt sie fugenlos und feuchtigkeitsbeständig, statt sie nur aufzukleben. Zusammen mit Massivholz und hochwertigen Trägermaterialien bleibt Ihre Ladeneinrichtung über Jahre formstabil, auch dort, wo am Point of Sale am meisten los ist.",
   image: "/images/2025/11/IMG_9120-scaled.jpg",
   imageAlt:
     "Saubere Massivholz-Kante mit dichter Kantenverleimung an einem maßgefertigten Möbel",
@@ -451,7 +450,7 @@ export const ladenFaq = {
     {
       question: "Welche Materialien verwenden Sie, und warum Massivholz und PU-Kantenverleimung?",
       answer:
-        "Wir arbeiten mit Massivholz und branchenüblichen, hochwertigen Materialien, die der hohen Beanspruchung im Kundenverkehr standhalten. An den stark belasteten Stoßkanten verleimen wir die Kanten im PU-Verfahren, das macht sie nahezu wasserfest. Eine Musterkante haben wir dafür 24 Stunden unter Wasser getaucht. Gerade an Theken und Regalen, die täglich Stöße abbekommen, zahlt sich das aus.",
+        "Wir arbeiten mit Massivholz und branchenüblichen, hochwertigen Materialien, die der hohen Beanspruchung im Kundenverkehr standhalten. An den stark belasteten Stoßkanten verleimen wir die Kanten im PU-Verfahren, das macht sie fugenlos und feuchtigkeitsbeständig. Gerade an Theken und Regalen, die täglich Stöße abbekommen, zahlt sich das aus.",
     },
     {
       question: "Übernehmen Sie auch die Planung und eine 3D-Visualisierung vor der Fertigung?",

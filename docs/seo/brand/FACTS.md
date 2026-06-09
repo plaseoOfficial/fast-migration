@@ -82,7 +82,8 @@
 - **„seit 2013"** ❌ (nicht belegt; Tischlermeister lt. Chronik 2011, kein „Meisterbetrieb seit"-Jahr) → ❓ Kunde.
 
 ## Fertigung, Material & Qualität (✅ /unser-standard/qualitaet-nachhaltigkeit.html)
-- **PU-Kantenverleimung** → „nahezu wasserfest"; Qualitätsbeweis: **Musterkante 24 h unter Wasser getaucht**. *(starkes, echtes USP — gerne nutzen)* ✅
+- **PU-Kantenverleimung** → Kanten werden fugenlos verschlossen, **feuchtigkeitsbeständig** (nicht „wasserfest"). ✅ *(Technik nutzbar.)*
+  - ❌ **GESPERRT (Andreas Faas, 2026-06-09):** Die Aussage **„Musterkante 24 h unter Wasser getaucht, ohne aufzuquellen"** (und Varianten wie „kein Wasser durchlässt"/„nahezu wasserfest") ist **schwierig/nicht belegbar** und wurde von der **gesamten Website entfernt**. Nicht wieder einbauen. „fugenlos" + „feuchtigkeitsbeständig" sind ok, „wasserfest"/Tauch-Beweis nicht.
 - **3D-Planung** im Prozess. ✅ /service-beratung.html
 - Eigenfertigung „alle Teile in Eigenregie". 🟢 wlw
 - **Geräte-Marken:** kundenseitig **frei wählbar** — alle gängigen Hersteller werden eingeplant (2026-06-06, Max). *(Bosch accent line / NEFF Collection nur als Verzeichnis-Beispiele, NICHT als ausschließliche/eigene Marken behaupten.)* 🟢 kuechen-atlas

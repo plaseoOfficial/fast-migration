@@ -35,7 +35,7 @@ Hier ist der fertige Brief:
 ## 3 · Konkurrenz & Content-Gaps
 - **Direkte Wettbewerber im SERP:** regionale Tischlereien/Schreinereien mit Küchen-nach-Maß-Seiten, Küchenstudio-Ketten, Möbelhäuser mit Maß-Angebot, einzelne Maßküchen-Portale.
 - **Was sie abdecken / was fehlt:** Sie tragen Prozess + grobe Kostenlogik + Formen. Es fehlt meist: **echte Sondermaße & Wand-zu-Wand ohne Passleisten** als belegter Unterschied, ehrliche Kostenfaktoren-Aufklärung statt Pseudo-Preise, ein **belegbares Qualitäts-USP** (PU-Kantenverleimung), und konsistente **Geo-Trennung** (Lieferung vs. Montage).
-- **Unser Winkel (womit Fast schlägt):** Meisterbetrieb · eigene Fertigung Espelkamp (~1.000 m², Homag-Technik, 72.000+ gefertigte Einzelteile, 4.000+ Projekte) · Aufmaß + Montage aus einer Hand mit eigenem Team · **alles individuell machbar** („die verrücktesten Vorstellungen"), echte Sondermaße, **Wand-zu-Wand ohne Passleisten**, ungewöhnliche Materialkombinationen · **PU-Kantenverleimung** (Musterkante 24 h unter Wasser → nahezu wasserfest) · Familie Fast seit 1996 · eigener Möbelplaner.
+- **Unser Winkel (womit Fast schlägt):** Meisterbetrieb · eigene Fertigung Espelkamp (~1.000 m², Homag-Technik, 72.000+ gefertigte Einzelteile, 4.000+ Projekte) · Aufmaß + Montage aus einer Hand mit eigenem Team · **alles individuell machbar** („die verrücktesten Vorstellungen"), echte Sondermaße, **Wand-zu-Wand ohne Passleisten**, ungewöhnliche Materialkombinationen · **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig) · Familie Fast seit 1996 · eigener Möbelplaner.
 
 ## 4 · Keyword-Set
 - **Primär:** `Küche nach Maß`
@@ -57,7 +57,7 @@ Hier ist der fertige Brief:
 | Beratung → Planung → Fertigung → Montage | hoch | ☐ |
 | Wand-zu-Wand ohne Passleisten | hoch | ☐ |
 | Massivholz / Materialvielfalt | mittel | ☐ |
-| PU-Kantenverleimung / nahezu wasserfest | mittel | ☐ |
+| PU-Kantenverleimung / feuchtigkeitsbeständig | mittel | ☐ |
 | Espelkamp / OWL / Montage ~200 km | mittel | ☐ |
 | Stauraum / Auszüge / Beschläge | mittel | ☐ |
 | Dachschräge / Nische / schwieriger Grundriss | mittel | ☐ |
@@ -67,7 +67,7 @@ Hier ist der fertige Brief:
 ## 6 · Content-Tiefe & Umfang
 - **Ziel-Wortzahl:** **content-only-Korridor 1.300–1.700 Wörter** (Decke der bestehenden Props). **⚠️ Diskrepanz zum SERP:** Das echte SERP-Ziel liegt bei 2.400–3.200 Wörtern (Playbook-Korridor Leistung). Mit den vorhandenen Props ist dieser Lauf bewusst auf 1.300–1.700 begrenzt; die fehlenden ~900–1.500 Wörter zum SERP-Ziel brauchen 3 neue Design-Sections (siehe STRUKTUR-BEDARF-Markierungen in §7 und §9 → separate Design-Spec).
 - **Pflicht-Unterthemen:** Definition + Nutzen Maß vs. Serie · Preis-/Kostenorientierung (Kostenfaktoren, keine Zahlen) · Prozess in 5 Schritten · Vergleich Tischler vs. Studio vs. Möbelhaus · Material/Arbeitsplatten/Fronten · Küchenformen · Markengeräte frei wählbar · Geo (Lieferung bundesweit / Montage ~200 km) · FAQ ≥10.
-- **Tiefe-Differenzierer (besser/tiefer als SERP):** echte Sondermaße & **Wand-zu-Wand ohne Passleisten** · **PU-Kantenverleimung** mit 24-h-Wasser-Beweis · Eigenfertigung Espelkamp mit belegten Zahlen · Familie Fast als 2.-Generation-Story · Markengeräte aller gängigen Hersteller frei wählbar · ehrliche Kostenaufklärung statt Pseudo-Preise.
+- **Tiefe-Differenzierer (besser/tiefer als SERP):** echte Sondermaße & **Wand-zu-Wand ohne Passleisten** · **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig) · Eigenfertigung Espelkamp mit belegten Zahlen · Familie Fast als 2.-Generation-Story · Markengeräte aller gängigen Hersteller frei wählbar · ehrliche Kostenaufklärung statt Pseudo-Preise.
 
 ## 7 · Struktur / Outline (→ mappt auf Section-Props)
 - **H1:** Küchen nach Maß aus Espelkamp: zentimetergenau vom Meisterbetrieb → **Prop:** `kuechenHero.title`
@@ -155,7 +155,7 @@ Hier ist der fertige Brief:
       9. **Passt eine Küche nach Maß in einen schwierigen Grundriss / unter eine Dachschräge?** → Genau dafür gemacht: schräge Wände, Nischen, niedrige Decken werden gezielt genutzt.
       10. **Montieren Sie die Küche bei mir vor Ort?** → Ja, immer durch **eigenes Team**. Montage im Umkreis von ~200 km um Espelkamp; **Lieferung bundesweit**. Klar trennen: Lieferung deutschlandweit, Montage montage-gebunden.
       11. **Gibt es eine Finanzierung?** → Auf Wunsch möglich. (Keine Partner-Namen.)
-      12. **Wie langlebig ist eine Küche nach Maß / gibt es Gewährleistung?** → Lange haltbar dank sauberer Verarbeitung und **PU-Kantenverleimung** (nahezu wasserfest; Musterkante 24 h unter Wasser getaucht). Es gilt die gesetzliche Gewährleistung. (KEINE Garantiezahl.)
+      12. **Wie langlebig ist eine Küche nach Maß / gibt es Gewährleistung?** → Lange haltbar dank sauberer Verarbeitung und **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig). Es gilt die gesetzliche Gewährleistung. (KEINE Garantiezahl.)
     - **Link im FAQ:** „Zum FAQ" zeigt aktuell auf `#` → bleibt pending bis `/faq/` gebaut (Backlog). FAQ-CTA-Link zu `/kontakt/` behalten.
 
 12. **ExpandingImageCta (Final-CTA)** — *Micro-Intent 7*
@@ -165,7 +165,7 @@ Hier ist der fertige Brief:
 
 ## 8 · E-E-A-T-Elemente (Pflicht)
 - **Experience:** „In unserer Werkstatt in Espelkamp …"; konkretes Detail Wand-zu-Wand ohne Passleisten; Region OWL (Espelkamp, Minden, Lübbecke, Osnabrück, Bielefeld); Realbilder mit beschreibenden alt-Texten (bereits in Props).
-- **Expertise:** Meisterbetrieb · vollständiger Prozess (Beratung → kostenloses Aufmaß → 3D-Planung → Fertigung → Montage) · **PU-Kantenverleimung** mit 24-h-Wasser-Beweis · Eigenfertigung ~1.000 m², Homag-Technik, 72.000+ Einzelteile, 4.000+ Projekte · Massivholz + branchenübliche Materialien.
+- **Expertise:** Meisterbetrieb · vollständiger Prozess (Beratung → kostenloses Aufmaß → 3D-Planung → Fertigung → Montage) · **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig) · Eigenfertigung ~1.000 m², Homag-Technik, 72.000+ Einzelteile, 4.000+ Projekte · Massivholz + branchenübliche Materialien.
 - **Trust:** NAP konsistent (Alte Waldstraße 32, 32339 Espelkamp · 05771 9138312) · klare Conversion-Wege ohne Druck · vollständiges Schema · **keine erfundene Garantie** (nur gesetzliche Gewährleistung) · kostenloses Aufmaß · eigenes Montageteam.
 - **Owner/Meister-Bezug:** Familie Fast (Johann Gründer; Andreas & Peter 2. Generation seit 2011) als Anriss; tiefe Story der Referenz-/Über-uns-Seite vorbehalten.
 - **Belegbare Zahlen NUR aus FACTS.md:** 1996 Gründung (Rahden-Tonnenheide), 2001 Espelkamp, ~1.000 m², Homag, 72.000+ Einzelteile, 4.000+ Projekte, ~200 km Montage, kostenloses Aufmaß, eigenes Montageteam. **Verboten:** „seit 2013", „5 Jahre Garantie", „25+ Jahre", „12+ Mitarbeiter", erfundene Preise, exotische Hölzer als Alleinstellung, FSC/PEFC namentlich, Wochen-Lieferzeit.

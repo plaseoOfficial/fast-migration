@@ -218,4 +218,12 @@ export const mnmWeitereCards: ServiceCard[] = [
       "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt.",
     href: "/kontakt/",
   },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Referenzprojekte",
+    description:
+      "Über 25 Jahre Maßanfertigung: realisierte Küchen, Einbauschränke und Wohnmöbel aus unserer Werkstatt in Espelkamp — nach Maß, für jede Nische.",
+    href: "/referenzen/",
+    moreLabel: "Projekte ansehen",
+  },
 ];

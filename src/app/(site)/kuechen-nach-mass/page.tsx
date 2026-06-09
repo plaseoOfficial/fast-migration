@@ -81,6 +81,14 @@ const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
       "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt – bis jedes Detail sitzt.",
     href: "#",
   },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Referenzprojekte",
+    description:
+      "Realisierte Küchen nach Maß aus unserer Werkstatt: grifflose Fronten, Kochinseln und Stauraum bis unter die Decke — zentimetergenau eingebaut.",
+    href: "/referenzen/",
+    moreLabel: "Küchenprojekte ansehen",
+  },
 ];
 
 export default function KuechenNachMassPage() {

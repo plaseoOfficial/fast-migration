@@ -2,14 +2,14 @@
   "summary": {
     "pagesBuilt": 16,
     "pagesPlanned": 10,
-    "linksFound": 127,
+    "linksFound": 139,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 20,
       "Warnung": 1,
-      "Hinweis": 40
+      "Hinweis": 32
     }
   },
   "findings": [
@@ -25,7 +25,7 @@
       "check": "dead-link",
       "message": "Platzhalter-Link `#` (kein Ziel).",
       "file": "src/lib/content.ts",
-      "line": 186,
+      "line": 194,
       "href": "#"
     },
     {
@@ -33,7 +33,7 @@
       "check": "dead-link",
       "message": "Platzhalter-Link `#faq` (kein Ziel).",
       "file": "src/lib/content.ts",
-      "line": 188,
+      "line": 196,
       "href": "#faq"
     },
     {
@@ -41,31 +41,7 @@
       "check": "dead-link",
       "message": "Platzhalter-Link `#` (kein Ziel).",
       "file": "src/lib/content.ts",
-      "line": 197,
-      "href": "#"
-    },
-    {
-      "severity": "Fehler",
-      "check": "dead-link",
-      "message": "Platzhalter-Link `#` (kein Ziel).",
-      "file": "src/lib/content.ts",
-      "line": 198,
-      "href": "#"
-    },
-    {
-      "severity": "Fehler",
-      "check": "dead-link",
-      "message": "Platzhalter-Link `#` (kein Ziel).",
-      "file": "src/lib/content.ts",
-      "line": 199,
-      "href": "#"
-    },
-    {
-      "severity": "Fehler",
-      "check": "dead-link",
-      "message": "Platzhalter-Link `#` (kein Ziel).",
-      "file": "src/lib/content.ts",
-      "line": 200,
+      "line": 205,
       "href": "#"
     },
     {
@@ -74,6 +50,30 @@
       "message": "Platzhalter-Link `#` (kein Ziel).",
       "file": "src/lib/content.ts",
       "line": 206,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 207,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 208,
+      "href": "#"
+    },
+    {
+      "severity": "Fehler",
+      "check": "dead-link",
+      "message": "Platzhalter-Link `#` (kein Ziel).",
+      "file": "src/lib/content.ts",
+      "line": 214,
       "href": "#"
     },
     {
@@ -247,27 +247,6 @@
     {
       "severity": "Hinweis",
       "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/praxiseinrichtung.ts",
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/praxiseinrichtung.ts",
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
-      "message": "`/kontakt` → kanonisch `/kontakt/` (Trailing-Slash, vermeidet Redirect-Hop).",
-      "file": "src/lib/content/praxiseinrichtung.ts",
-      "href": "/kontakt"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "canonical",
       "message": "`/moebel-nach-mass` → kanonisch `/moebel-nach-mass/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/content/ueber-uns.ts",
       "href": "/moebel-nach-mass"
@@ -398,12 +377,6 @@
     },
     {
       "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/moebel-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
-      "page": "/moebel-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-cluster-spokes` noch blockiert (Ziel ungebaut). Vollständige Spoke-Abdeckung (Produktseiten)",
       "page": "/kuechen-nach-mass/"
@@ -413,36 +386,6 @@
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
       "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/kuechen-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/bueroeinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/bueroeinrichtung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/gastronomieeinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/gastronomieeinrichtung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/serienmoebel/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/serienmoebel/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/praxiseinrichtung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
-      "page": "/praxiseinrichtung/"
     },
     {
       "severity": "Hinweis",
@@ -482,10 +425,16 @@
     },
     {
       "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/referenzen/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
+      "page": "/referenzen/"
+    },
+    {
+      "severity": "Hinweis",
       "check": "footer",
       "message": "Footer verlinkt `/` (Typ homepage) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).",
       "file": "src/lib/content.ts",
-      "line": 183,
+      "line": 191,
       "href": "/"
     },
     {
@@ -493,7 +442,7 @@
       "check": "footer",
       "message": "Footer verlinkt `/ueber-uns/` (Typ brand) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).",
       "file": "src/lib/content.ts",
-      "line": 185,
+      "line": 193,
       "href": "/ueber-uns/"
     },
     {

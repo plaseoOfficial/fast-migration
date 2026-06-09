@@ -30,6 +30,7 @@ import {
   praxisCtas,
   praxisTestimonialsHeading,
   praxisFaq,
+  praxisWeitereCards,
 } from "@/lib/content/praxiseinrichtung";
 
 const PAGE_PATH = "/praxiseinrichtung";
@@ -82,7 +83,7 @@ export default function PraxiseinrichtungPage() {
 
       <ProcessSteps {...praxisProcess} />
       <SegmentCards {...praxisSegments} />
-      <MnmWeitereLeistungen />
+      <MnmWeitereLeistungen cards={praxisWeitereCards} />
       <MnmTypische {...praxisTypische} />
       <UspHighlight {...praxisUsp} />
       <ContrastCols {...praxisVergleich} />

@@ -22,6 +22,7 @@ import {
   serienCtas,
   serienTestimonialsHeading,
   serienFaq,
+  serienWeitereCards,
 } from "@/lib/content/serienmoebel";
 
 const PAGE_PATH = "/serienmoebel";
@@ -73,7 +74,7 @@ export default function SerienmoebelPage() {
       </section>
 
       <MnmProcess {...serienProcess} />
-      <MnmWeitereLeistungen />
+      <MnmWeitereLeistungen cards={serienWeitereCards} />
       <MnmTypische {...serienTypische} />
       <MnmWarum {...serienWarum} />
       <MnmGeschichte {...serienGeschichte} />

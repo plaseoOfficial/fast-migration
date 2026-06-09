@@ -18,7 +18,7 @@ Der Küchen-Pillar trägt heute die visuellen Sections (Hero, Intro+Stats, Proze
 
 Diese 3 Module heben den Pillar vom content-only-Stand (Aufgabentext: ~35 W der reinen Modul-Lücke) in den **SERP-Korridor 2.400–3.200 W** (Playbook §3). Sie sind **silo-übergreifend wiederverwendbar** für alle Leistungsseiten (Einbauschränke, Badmöbel, Ladenbau, Büro, Gastro, Praxis).
 
-**Faktentreue-Hartstopp (FACTS.md):** keine Preiszahlen, keine Preisspannen (Preise immer individuell) · keine Garantiezahl (nur gesetzliche Gewährleistung) · keine „seit 2013" · ~200 km Montageradius / Lieferung bundesweit / kostenloses Aufmaß / eigenes Montageteam sind belegt und nutzbar · PU-Kantenverleimung (Musterkante 24 h unter Wasser) als echtes USP.
+**Faktentreue-Hartstopp (FACTS.md):** keine Preiszahlen, keine Preisspannen (Preise immer individuell) · keine Garantiezahl (nur gesetzliche Gewährleistung) · keine „seit 2013" · ~200 km Montageradius / Lieferung bundesweit / kostenloses Aufmaß / eigenes Montageteam sind belegt und nutzbar · PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig) als echtes USP · KEIN „24 h unter Wasser"-/Tauchtest-/„wasserfest"-Claim (gesperrt 2026-06-09).
 
 ---
 
@@ -57,7 +57,7 @@ export const kuechenVergleich = {
 - **Material & Geräte:** „frei wählbar, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen; alle gängigen Gerätehersteller" / „Markenprogramm in festem Rahmen" / „begrenztes Sortiment".
 - **Fertigung:** „Eigenfertigung in Espelkamp, ein Ansprechpartner" / „Bestellung beim Hersteller" / „Lager-/Serienware".
 - **Schwierige Grundrisse / Dachschräge:** „Kernkompetenz, planen wir durch" / „im Rahmen des Rasters" / „kaum möglich".
-- **Langlebigkeit / Verarbeitung:** „PU-Kantenverleimung, nahezu wasserfest; auf lange Haltbarkeit gebaut" / „herstellerabhängig" / „auf Preis optimiert".
+- **Langlebigkeit / Verarbeitung:** „PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig; auf lange Haltbarkeit gebaut" / „herstellerabhängig" / „auf Preis optimiert".
 - **Kosten/Preis-Zeile (FACTS-Hartstopp):** **keine Zahlen.** Formulierung als Logik: „individuell kalkuliert, Sie zahlen für Passung und Langlebigkeit, nicht für einen Stückpreis" / „Programmpreis im Studio" / „günstiger Einstiegspreis, Standard". → leitet textlich auf Section 2 über.
 - **Montage:** „eigenes Team, ~200 km um Espelkamp; Lieferung bundesweit" (belegt).
 
@@ -115,7 +115,7 @@ export const kuechenKosten = {
 
 **`whyNoFlatRate`:** „Jede Maßküche entsteht einzeln. Erst nach Beratung und kostenlosem Aufmaß vor Ort steht fest, was Ihre Küche braucht. Darum nennen wir keine Pauschale, sondern ein klares, individuelles Angebot ohne versteckte Kosten." (FACTS: kostenloses Aufmaß ✅, „individuelles Angebot" ✅).
 
-**`orientation` (Wert-Logik, keine Zahl):** „Sie zahlen für exakte Passung, freie Material- und Gerätewahl und eine Verarbeitung, die lange hält — unter anderem durch unsere nahezu wasserfeste PU-Kantenverleimung." 
+**`orientation` (Wert-Logik, keine Zahl):** „Sie zahlen für exakte Passung, freie Material- und Gerätewahl und eine Verarbeitung, die lange hält — unter anderem durch unsere fugenlose, feuchtigkeitsbeständige PU-Kantenverleimung." 
 
 **Verboten in dieser Section:** jede € / „ab"-Angabe / Quadratmeter- oder Laufmeterpreis / Preisspanne (FACTS-Hartstopp, Gate 6 = sofortiger Hard Stop).
 
@@ -158,7 +158,7 @@ export const kuechenFaq = {
 Die **12 bestehenden Items beibehalten** (faktentreu, gut) und auf **14–15 erhöhen**, thematisch in 4 Gruppen ordnen:
 - **Kosten & Angebot:** „Was kostet eine Küche nach Maß?" · „Warum oft teurer als von der Stange?" · „Gibt es eine Finanzierung?" (FACTS: Finanzierung ✅; keine Preiszahl).
 - **Ablauf & Montage:** „Wie lange dauert es von Planung bis fertige Küche?" (verbindlicher Termin nach Aufmaß/Freigabe — **keine** erfundene Wochenzahl, FACTS) · „Wie läuft das Aufmaß ab?" (NEU, kostenloses Aufmaß vor Ort) · „Montieren Sie vor Ort, wie weit liefern Sie?" (~200 km Montage / Lieferung bundesweit).
-- **Material & Qualität:** „Welche Materialien und Arbeitsplatten?" · „Eigene Markengeräte einbaubar?" · „Wie langlebig, wie pflege ich sie?" (PU-Kantenverleimung, Musterkante 24 h unter Wasser; **gesetzliche Gewährleistung, keine Garantiezahl**).
+- **Material & Qualität:** „Welche Materialien und Arbeitsplatten?" · „Eigene Markengeräte einbaubar?" · „Wie langlebig, wie pflege ich sie?" (PU-Kantenverleimung, fugenlos/feuchtigkeitsbeständig; **gesetzliche Gewährleistung, keine Garantiezahl**).
 - **Planung & Grundriss:** „Unterschied Maßküche vs. Serienküche?" · „Lohnt sich eine Maßküche?" · „Tischler oder Küchenstudio?" · „Passt sie unter eine Dachschräge / in schwierigen Grundriss?".
 - **2–3 NEUE Items** zum Aufstocken auf 14–15 (alle FACTS-belegt): „Kann ich vorab selbst planen?" (→ Möbelplaner, interner Link) · „Können Sie eine bestehende Küche erweitern/anpassen?" · „Bauen Sie auch ungewöhnliche Sonderwünsche?" (FACTS: „die verrücktesten Vorstellungen", echte Sondermaße).
 

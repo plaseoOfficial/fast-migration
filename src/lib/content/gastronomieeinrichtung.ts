@@ -125,10 +125,9 @@ export const gastroSegments = {
 
 export const gastroUsp = {
   eyebrow: "Gebaut für den Dauereinsatz",
-  heading: "Kanten, die kein Wasser durchlässt",
+  heading: "Fugenlose Kanten, die der täglichen Reinigung standhalten",
   body:
-    "Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und nahezu wasserfest. Eine Musterkante haben wir 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Verschüttete Getränke, tägliche Reinigung und Spritzwasser am Rückbuffet hinterlassen so keine aufgequollenen Ränder.",
-  stat: { value: "24 h", label: "unter Wasser getaucht, ohne aufzuquellen" },
+    "Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Verschüttete Getränke, tägliche Reinigung und Spritzwasser am Rückbuffet hinterlassen so keine aufgequollenen Ränder.",
   image: "/images/2025/11/DSC_9843.jpg",
   imageAlt: "Massivholz-Oberfläche eines maßgefertigten Thekenmöbels mit dichter PU-Kante",
 };
@@ -232,6 +231,49 @@ export const gastroCtas = {
     href: "/kontakt/",
   },
 };
+
+/**
+ * "Weitere Leistungen"-Karten für /gastronomieeinrichtung/. Silo-konform: verlinkt
+ * auf /gewerbe/ (Hub-Up-Link) und /referenzen/ (SOLL-Trust), NICHT auf /moebel-nach-mass/.
+ */
+import type { ServiceCard } from "@/types/mnm";
+
+export const gastroWeitereCards: ServiceCard[] = [
+  {
+    icon: "/images/2024/03/interior-design-white-icons-08.svg",
+    title: "Gewerbeeinrichtung",
+    description:
+      "Gastronomieeinrichtung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Bartresen bis zur kompletten Objekteinrichtung für Handel, Hotellerie und Gastronomie.",
+    href: "/gewerbe/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-07.svg",
+    title: "Planung & 3D-Visualisierung",
+    description:
+      "Kostenloses Aufmaß, technische 3D-Planung mit Aussparungen für Ihre Technik. Sie sehen Ihren Gastraum digital, bevor das erste Brett geschnitten ist.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-09.svg",
+    title: "Fertigung & Montage",
+    description:
+      "Alle Teile entstehen im eigenen Werk in Espelkamp. Montage durch unser eigenes Team im Umkreis von rund 200 km, auf Wunsch am Ruhetag oder nachts.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Referenzprojekte",
+    description:
+      "Realisierte Gastro- und Gewerbeprojekte aus unserer Werkstatt: Theken, Rückbuffets und Hoteleinrichtungen nach Maß, fertig eingebaut.",
+    href: "/referenzen/",
+    moreLabel: "Projekte ansehen",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Möbelplaner",
+    description:
+      "Einzelne Elemente wie Theken oder Schränke online konfigurieren: Maße, Oberflächen und Fronten direkt im 3D-Konfigurator sichtbar.",
+    href: "/moebelplaner/",
+  },
+];
 
 export const gastroTestimonialsHeading = "Was unsere Gastronomiekunden sagen";
 

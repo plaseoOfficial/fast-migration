@@ -80,14 +80,14 @@ export const referenzenGrid = {
     },
     {
       image: "/images/2025/11/DSC_9814.jpg",
-      imageAlt: "Schwebendes Sideboard nach Maß in Betonoptik",
-      category: "Möbel nach Maß",
-      categoryKey: "moebel",
+      imageAlt: "Schwebendes Sideboard nach Maß in Betonoptik in einem Büro",
+      category: "Büroeinrichtung",
+      categoryKey: "buero",
       title: "Sideboard in Betonoptik",
-      meta: "Privat · Wohnen",
+      meta: "Gewerbe · Büro",
       description:
-        "Ein schwebendes Sideboard in Betonoptik mit dunkler Stirnseite – als ruhiges, langes Möbelstück exakt auf die Wand und den Raum abgestimmt.",
-      href: "/moebel-nach-mass/",
+        "Ein schwebendes Sideboard in Betonoptik mit dunkler Stirnseite – als ruhiger Stauraum im Büro, exakt auf die Wand und den Raum abgestimmt.",
+      href: "/bueroeinrichtung/",
     },
     {
       image: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
@@ -123,37 +123,31 @@ export const referenzenGrid = {
       href: "/bueroeinrichtung/",
     },
     {
-      image: "/images/2025/11/20150701_185458257_iOS-scaled.jpg",
-      imageAlt: "Empfangs- und Verkaufstheke nach Maß mit beleuchteten Glasregalen",
+      image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
+      imageAlt: "Obst- und Gemüseabteilung im MixMarkt Espelkamp mit Holzlamellenwand",
       category: "Ladenbau",
       categoryKey: "ladenbau",
-      title: "Empfangs- und Verkaufstheke",
+      title: "Ladeneinrichtung MixMarkt Espelkamp",
       meta: "Gewerbe · Ladenbau",
       description:
-        "Eine winkelförmige Theke mit dunkler Abdeckung und hinterleuchteten Glasregalen – Empfang und Verkauf in einem, als Blickfang im Raum gebaut.",
+        "Komplette Ladeneinrichtung für den MixMarkt Espelkamp – von der Holzlamellenwand über die beleuchtete Obst- und Gemüseabteilung bis zu den Warenregalen, geplant und montiert aus einer Hand.",
       href: "/gewerbe/ladenbau/",
     },
     {
       image: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
-      imageAlt: "Umkleide-Kabinen in Serie mit Sitzbänken für einen Sportverein",
+      imageAlt: "Umkleidekabine für Arminia Bielefeld mit Sitzbänken und Ablagen",
       category: "Serienmöbel",
       categoryKey: "serie",
-      title: "Umkleide-Kabinen in Serie",
-      meta: "Objekt · Serienfertigung",
+      title: "Umkleidekabinen für Arminia Bielefeld",
+      meta: "Objekt · Arminia Bielefeld",
       description:
-        "Identische Kabinen mit Sitzbänken, Haken und Ablagen in Serie gefertigt – seriengleiche Qualität für eine Sport- und Vereinsanlage.",
+        "Für Arminia Bielefeld haben wir den kompletten Innenausbau der Spieler- und Umkleidekabinen übernommen – seriengleiche Kabinen mit Sitzbänken, Haken und Ablagen, gebaut für den täglichen Profibetrieb.",
       href: "/serienmoebel/",
     },
   ] satisfies ReferenzProject[],
 };
 
 export const referenzenCtas = {
-  intro: {
-    image: "/images/2025/11/DSC_9938.jpg",
-    heading: "Ihr Projekt könnte das nächste hier sein.",
-    linkText: "Sprechen Sie mit uns über Ihr Vorhaben",
-    href: "/kontakt/",
-  },
   final: {
     image: "/images/2025/11/DSC_9934.jpg",
     heading: "Erst planen, dann in der Werkstatt sehen.",

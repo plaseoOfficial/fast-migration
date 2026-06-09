@@ -130,7 +130,6 @@ export const praxisUsp = {
   heading: "Kanten ohne Fuge, in der sich Keime sammeln",
   body:
     "In der Praxis wird täglich wischdesinfiziert. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos, sodass keine Spalten bleiben, in denen sich Schmutz und Keime absetzen. Zusammen mit abwischbaren, robusten Oberflächen halten die Möbel der täglichen Reinigung über Jahre stand, ohne aufgequollene Ränder. Das ist kein Aufpreis-Extra, sondern unser Standard.",
-  stat: { value: "24 h", label: "unter Wasser getaucht, ohne aufzuquellen" },
   image: "/images/2025/11/IMG_9120-scaled.jpg",
   imageAlt:
     "Waschtisch-Unterschrank nach Maß mit reinigbaren, grifflosen Fronten",
@@ -266,6 +265,49 @@ export const praxisCtas = {
   },
 };
 
+/**
+ * "Weitere Leistungen"-Karten für /praxiseinrichtung/. Silo-konform: verlinkt
+ * auf /gewerbe/ (Hub-Up-Link) und /referenzen/ (SOLL-Trust), NICHT auf /moebel-nach-mass/.
+ */
+import type { ServiceCard } from "@/types/mnm";
+
+export const praxisWeitereCards: ServiceCard[] = [
+  {
+    icon: "/images/2024/03/interior-design-white-icons-08.svg",
+    title: "Gewerbeeinrichtung",
+    description:
+      "Praxiseinrichtung ist Teil unserer Gewerbeeinrichtung: Vom Anmeldetresen bis zur kompletten Einrichtung für Praxen, Kanzleien und Büros.",
+    href: "/gewerbe/",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-07.svg",
+    title: "Planung & 3D-Visualisierung",
+    description:
+      "Kostenloses Aufmaß, technische 3D-Planung mit Aussparungen für Geräte und Waschtische. Sie sehen Ihre Praxis digital, bevor das erste Brett geschnitten ist.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-09.svg",
+    title: "Fertigung & Montage",
+    description:
+      "Alle Teile entstehen im eigenen Werk in Espelkamp. Montage durch unser eigenes Team auf Wunsch außerhalb der Sprechzeiten, damit Ihre Praxis so kurz wie möglich schließt.",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Referenzprojekte",
+    description:
+      "Realisierte Praxis- und Gewerbeprojekte aus unserem Meisterbetrieb: Empfangstresen, Behandlungsräume und Kanzleimöbel nach Maß, fertig eingebaut.",
+    href: "/referenzen/",
+    moreLabel: "Projekte ansehen",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Möbelplaner",
+    description:
+      "Tresen, Schränke und Wartezimmermöbel online konfigurieren: Maße, Fronten und Oberflächen direkt im 3D-Konfigurator sichtbar.",
+    href: "/moebelplaner/",
+  },
+];
+
 /** Testimonials + FAQ render via the shared service sections. */
 export const praxisTestimonialsHeading = "Was unsere Praxis- und Kanzleikunden sagen";
 
@@ -280,7 +322,7 @@ export const praxisFaq = {
     {
       question: "Wie hygienisch sind die Möbel, und welche Materialien verwenden Sie?",
       answer:
-        "Praxismöbel werden täglich wischdesinfiziert. Wir bauen deshalb fugenarm und verschließen die Kanten mit fugenloser PU-Verleimung, sodass keine Spalten bleiben, in denen sich Schmutz und Keime sammeln. Dazu kommen robuste, abwischbare Oberflächen wie HPL. Eine Musterkante haben wir 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt.",
+        "Praxismöbel werden täglich wischdesinfiziert. Wir bauen deshalb fugenarm und verschließen die Kanten mit fugenloser PU-Verleimung, sodass keine Spalten bleiben, in denen sich Schmutz und Keime sammeln. Dazu kommen robuste, abwischbare Oberflächen wie HPL.",
     },
     {
       question: "Bauen Sie auch Geräte und Sanitärtechnik ein?",

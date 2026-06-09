@@ -26,7 +26,7 @@ Micro-Intents (jeder muss auf der Seite beantwortet werden):
 | # | Baustein | Quelle Intent | AEO |
 |---|---|---|---|
 | 1 | **Hero + Kategorie-Definition + Nutzenversprechen** — H1 „Ladenbau nach Maß", Primär-KW in ersten 100 W, Direktantwort „Was ist Ladenbau nach Maß?" | 1 | ✅ Direktantwort |
-| 2 | **USP-Block** (3–5 Stärken, jede belegt): Meisterbetrieb, Eigenfertigung mit eigenem Maschinenpark, PU-Kantenverleimung „nahezu wasserfest", Familienbetrieb, alles aus einer Hand inkl. Montage | 4, 5 | teilweise |
+| 2 | **USP-Block** (3–5 Stärken, jede belegt): Meisterbetrieb, Eigenfertigung mit eigenem Maschinenpark, PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig), Familienbetrieb, alles aus einer Hand inkl. Montage | 4, 5 | teilweise |
 | 3 | **Prozess-Block — 4–5 Schritte:** Beratung → kostenloses Aufmaß → Planung (3D-Visualisierung) → Fertigung → Montage (nummeriert, je 2–4 Sätze). Alle Top-Treffer (shopdirect, holzakzente, adora) führen einen nummerierten Prozess. | 3 | ✅ Listen-tauglich |
 | 4 | **Vergleichstabelle** „Maßanfertigung/Tischler vs. Systembausatz/Katalogregal vs. Möbelhaus" (Kriterien: Passgenauigkeit/Wand-zu-Wand, Material/Langlebigkeit, CI-Anpassung, Beratung, Montage). **Mind. 1 Tabelle Pflicht.** | 4 | ✅ Tabelle |
 | 5 | **Kosten-/Preismodul — PFLICHT** (Kostenfaktoren statt Pauschale; „warum keine €/m²-Pauschale bei Fast"). Wettbewerber zeigen €/m²-Stufen (aha360: 400–800 / 800–1.500 / ab 1.500); **Fast nennt KEINE Zahlen** → Differenzierung über Kostentreiber-Tabelle + „individuelles Angebot". | 2 | ✅ Tabelle/Direktantwort |
@@ -99,7 +99,7 @@ Micro-Intents (jeder muss auf der Seite beantwortet werden):
 3. **Welche Möbel können im Ladenbau nach Maß gefertigt werden?** → Verkaufstheke, Ladenregale, Mittelraummöbel, Vitrinen, Empfangstresen, Umkleidekabinen, Stauraum.
 4. **Wie lange dauert ein Ladenbau-Projekt von der Anfrage bis zur Eröffnung?** → ehrlich: Termin **verbindlich nach Aufmaß/Freigabe**; keine erfundene Wochenzahl.
 5. **Für welche Branchen ist Ladenbau nach Maß geeignet?** → Einzelhandel, Boutique/Mode, Gastronomie, Praxis, Büro.
-6. **Welche Materialien werden im Ladenbau verwendet — und warum Massivholz / PU-Kantenverleimung?** → Durability bei hoher Beanspruchung (Stoßkanten), nahezu wasserfest.
+6. **Welche Materialien werden im Ladenbau verwendet — und warum Massivholz / PU-Kantenverleimung?** → Durability bei hoher Beanspruchung (Stoßkanten), feuchtigkeitsbeständig.
 7. **Übernehmen Sie auch Planung und 3D-Visualisierung vor der Fertigung?** → ja, technische 3D-Planung im Prozess.
 8. **Kann ich meinen bestehenden Laden umbauen oder ergänzen lassen?** → Ergänzung/Umbau bestehender Einrichtung (PAA: „bestehende Ladeneinrichtung ergänzen").
 9. **Passt Ihr Ladenbau zu unserem Corporate Design / unserer Markenidentität?** → CI-konforme Farb-/Materialwahl, Logo-Integration am POS.
@@ -113,7 +113,7 @@ Micro-Intents (jeder muss auf der Seite beantwortet werden):
 
 **Gaps (Wettbewerber-Lücken) → unser Winkel:**
 - **Online-Möbelplaner/Konfigurator** — kein Ladenbau-Wettbewerber bietet einen. → Fast als einziger mit Self-Service-Planung (Lead-Generator, digitaler Vorreiter im Handwerk).
-- **PU-Kantenverleimung** — kein Wettbewerber kommuniziert sie. → echtes technisches USP, im Gewerbe besonders relevant (Stoßkanten), Beleg: Musterkante 24 h unter Wasser → „nahezu wasserfest".
+- **PU-Kantenverleimung** — kein Wettbewerber kommuniziert sie. → echtes technisches USP, im Gewerbe besonders relevant (Stoßkanten), fugenlos und feuchtigkeitsbeständig.
 - **Eigenfertigung mit eigenem Maschinenpark** (kein Subunternehmer) — kürzere Wege, eigene Qualitätskontrolle. Belegbar: 1.000 m² Fertigung, Homag-Maschinen (vom Kunden freigegeben).
 - **Regionaler OWL/Espelkamp-Anker** — kein Top-Treffer belegt NRW/Niedersachsen als Heimatgebiet für Ladenbau. → regionaler Vertrauensvorsprung.
 - **Familie Fast / 2. Generation** — kaum ein Wettbewerber nutzt die emotionale Generationen-Story.
@@ -159,7 +159,7 @@ Micro-Intents (jeder muss auf der Seite beantwortet werden):
 - ❌ **Arminia-Bielefeld nicht als Küchen-Referenz** — es war die **Spieler-/Umkleidekabine**; hier (Ladenbau/Gewerbe) freigegeben und passend, aber korrekt als Kabine/Innenausbau benennen, nicht als Ladeneinrichtung im engeren Sinn.
 - ❌ **2. Generation „seit 2011"** — korrekt: **seit 2010** (Andreas & Peter Fast).
 - ⚠️ **Finanzierung:** im Gewerbe/Büro **NICHT** angeboten (nur Privat, z. B. Küche) — also auf einer Gewerbe-Ladenbau-Seite **keine Finanzierung** bewerben.
-- ✅ Nutzbar (zur Klarstellung, kein ❌): Eigenfertigung, 1.000 m² Fertigung, Homag-Maschinen, 4.000+ Projekte, 72K+ Einzelteile, ~200 km Montageradius, eigenes Montageteam, kostenloses Aufmaß, PU-Kantenverleimung (Musterkante 24 h unter Wasser).
+- ✅ Nutzbar (zur Klarstellung, kein ❌): Eigenfertigung, 1.000 m² Fertigung, Homag-Maschinen, 4.000+ Projekte, 72K+ Einzelteile, ~200 km Montageradius, eigenes Montageteam, kostenloses Aufmaß, PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig).
 
 ## 9 · 🔴 Discovery-Fragen an den Kunden (PFLICHT vor dem Schreiben)
 

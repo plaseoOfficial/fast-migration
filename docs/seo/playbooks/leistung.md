@@ -33,7 +33,7 @@ Konkrete Micro-Intents (jeder muss auf der Seite eine Antwort finden):
 | # | Baustein | leitet ab aus Micro-Intent | AEO/Snippet-tauglich |
 |---|---|---|---|
 | 1 | **Intro/Hero mit Kategorie-Definition + Nutzenversprechen** (Primär-Keyword in H1 + ersten 100 Wörtern; Direktantwort „Was ist X nach Maß?") | 1 | ✅ Direktantwort |
-| 2 | **USP-Block** (3–5 konkrete Stärken, jede mit Beleg: Meisterbetrieb seit 1996, Eigenfertigung, PU-Kantenverleimung „nahezu wasserfest", Familienbetrieb) | 4, 5 | teilweise |
+| 2 | **USP-Block** (3–5 konkrete Stärken, jede mit Beleg: Meisterbetrieb seit 1996, Eigenfertigung, PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig), Familienbetrieb) | 4, 5 | teilweise |
 | 3 | **Prozess-Block — 5 Schritte: Beratung → Aufmaß → Planung (3D) → Fertigung → Montage** (nummeriert, je Schritt 2–4 Sätze) | 3 | ✅ Listen-/HowTo-tauglich |
 | 4 | **Vergleichstabelle** „Tischler/Maßanfertigung vs. Küchenstudio/Möbelhaus vs. Online/Serie" (Kriterien: Passgenauigkeit, Material, Beratung, Preis, Langlebigkeit) | 4 | ✅ Tabelle |
 | 5 | **Preis-/Kostenmodul — PFLICHT** (Kostenrahmen ehrlich gestaffelt, was den Preis treibt, „warum keine Pauschale"; verweist auf Kosten-Ratgeber der Cluster-Kinder) | 2 | ✅ Tabelle/Direktantwort |
@@ -71,7 +71,7 @@ Der konkrete Korridor jeder Einzelseite wird vom Brief (Phase 1, SERP-Analyse) g
 
 **Tragende Säulen: Expertise + Trust** (beide gleich stark; Experience flankiert).
 
-- **Expertise (Kern):** Meisterbetrieb + vollständiger Prozess (Beratung → Aufmaß → Planung 3D → Fertigung → Montage). Material-/Technik-Tiefe: **PU-Kantenverleimung** mit dem belegbaren Beweis (Musterkante 24 h unter Wasser → „nahezu wasserfest"), Massivholz + branchenübliche Materialien, Eigenfertigung „alle Teile in Eigenregie". Vollständige Beantwortung der Top-Nutzerfragen (FAQ).
+- **Expertise (Kern):** Meisterbetrieb + vollständiger Prozess (Beratung → Aufmaß → Planung 3D → Fertigung → Montage). Material-/Technik-Tiefe: **PU-Kantenverleimung** (fugenlos, feuchtigkeitsbeständig), Massivholz + branchenübliche Materialien, Eigenfertigung „alle Teile in Eigenregie". Vollständige Beantwortung der Top-Nutzerfragen (FAQ).
 - **Trust (gleich stark, conversion-entscheidend):** **NAP konsistent** (Alte Waldstraße 32, 32339 Espelkamp · 05771 9138312 · www.fast-systemmoebel.de), klare Conversion-Wege ohne Druck, vollständiges Schema, **keine erfundene Garantie** (es gibt KEINE freiwillige Garantie — Qualität/Langlebigkeit ohne Garantiezahl darstellen, AGB nennen nur gesetzliche Gewährleistung).
 - **Experience (flankierend):** mind. ein konkretes Praxis-Detail mit Region (OWL/Espelkamp), Erste-Hand-Ton („In unserer Werkstatt in Espelkamp …"), Realbilder mit beschreibenden `alt`-Texten.
 - **Authoritativeness (Anriss, nicht Schwerpunkt):** Familie Fast (Johann Fast Gründer; Andreas & Peter Fast 2. Generation seit 2011), seit 1996 (Gründung in Rahden-Tonnenheide, **nicht** Espelkamp — Fertigung heute Espelkamp). Tiefe Trust-Story bleibt der Referenz-Seite vorbehalten (§11).

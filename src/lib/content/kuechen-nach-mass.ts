@@ -38,7 +38,7 @@ export const kuechenIntroStats = {
   col1CtaLabel: "Jetzt Küche anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Front, jeder Korpus, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das macht sie nahezu wasserfest. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
+    "Jede Front, jeder Korpus, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",

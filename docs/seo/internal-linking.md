@@ -105,17 +105,31 @@ When the proper target page is built, repoint them (and drop this row):
   `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/praxiseinrichtung/`; CTAs → `/kontakt/` + `/moebelplaner/`.
   (9 distinct targets, within the brand body-link budget of 10.)
 - **`/ueber-uns/` "Beispielprojekte" → `/referenzen/`** (repointed from interim `/gewerbe/`).
+### Reverse SOLL trust-links → `/referenzen/` (2026-06-Pass)
+
+Wired via `MnmWeitereLeistungen cards`-Prop (neue silo-konforme Karten-Arrays je Content-Modul):
+
+- **`/kuechen-nach-mass/`** → `/referenzen/` Anker: „Küchenprojekte ansehen" (`WEITERE_LEISTUNGEN_CARDS`-Karte in `kuechen-nach-mass/page.tsx`)
+- **`/moebel-nach-mass/`** → `/referenzen/` Anker: „Projekte ansehen" (`mnmWeitereCards` in `moebel-nach-mass.ts`)
+- **`/bueroeinrichtung/`** → `/referenzen/` Anker: „Projekte ansehen" (`bueroWeitereCards` in `bueroeinrichtung.ts`)
+- **`/gastronomieeinrichtung/`** → `/referenzen/` Anker: „Projekte ansehen" (`gastroWeitereCards` in `gastronomieeinrichtung.ts`)
+- **`/serienmoebel/`** → `/referenzen/` Anker: „Projekte ansehen" (`serienWeitereCards` in `serienmoebel.ts`)
+- **`/praxiseinrichtung/`** → `/referenzen/` Anker: „Projekte ansehen" (`praxisWeitereCards` in `praxiseinrichtung.ts`)
+
+Gleichzeitig ersetzt die neue Karten-Array-Übergabe die Default-Cards (die fälschlicherweise auf `/moebel-nach-mass/` — Privat-Silo — zeigten) für alle Gewerbe-Cluster.
+
 - **Mixmarkt project card → `/gewerbe/ladenbau/`** (in-silo cluster). Repoint to a future
   `/gewerbe/ladenbau/referenzen/mixmarkt/` detail page when that ships (and embed the project as a teaser on
   the Ladenbau cluster page) — the aggregator's intended hub→detail wiring.
 
-> **Still open — reverse SOLL trust-links → `/referenzen/` (need a render slot):** now that `/referenzen/`
-> exists, `audit:links` reports it as a recommended SOLL link from `/`, `/moebel-nach-mass/`,
-> `/kuechen-nach-mass/`, `/gewerbe/`, all Gewerbe clusters, `/moebelplaner/` and `/kontakt/`. These are
-> *empfohlen* (Hinweise, not errors) and have **no existing link slot** in the current pixel-perfect sections,
-> so they're queued for a dedicated reverse-linking pass rather than shoehorned into existing markup.
-> `/moebel-nach-mass/` IntroStats col3 stays on `/kuechen-nach-mass/` (its "Küchen nach Maß entdecken" anchor
-> fits that target; not repointed to `/referenzen/`).
+> **Reverse SOLL trust-links → `/referenzen/` (Status nach 2026-06-Pass):**
+> 6 von 8 wired (see "Done" block below). Noch offen: `/moebelplaner/` und `/kontakt/`.
+> Beide Seiten haben hardcodierte Komponenten ohne Content-Props (`MpSchritte`, `MpIntro`,
+> `MpProzess`, `KontaktFormularHero`, `KontaktStandort`). Ein Link ist dort nur durch eine
+> Markup-Änderung möglich — das verstößt gegen den Architektur-Grundsatz (nur Daten-Props).
+> Lösung: bei der nächsten strukturellen Überarbeitung dieser Seiten einen props-fähigen
+> "Trust-Link"-Slot ergänzen (z. B. optionale `trustLinks`-Prop in `FaqSection` oder ein
+> neuer schlanker `TrustBadge`-Abschnitt vor dem FAQ-Block).
 
 ### Wired in the `audit:links` pass (2026-06)
 
