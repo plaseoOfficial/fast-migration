@@ -31,6 +31,7 @@ import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCt
 import { ReferenzenHero } from "@/components/sections/shared/ReferenzenHero";
 import { ReferenzenGrid } from "@/components/sections/shared/ReferenzenGrid";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 
@@ -109,6 +110,7 @@ import {
   gastroSegments,
   gastroUsp,
 } from "@/lib/content/gastronomieeinrichtung";
+import { ladenVergleich } from "@/lib/content/ladenbau";
 
 function meta(id: string): SectionMeta {
   const found = SECTION_META.find((entry) => entry.id === id);
@@ -151,6 +153,7 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-referenzen-hero"), ReferenzenHero, referenzenHeroSample),
   defineSection(meta("shared-referenzen-grid"), ReferenzenGrid, referenzenGridSample),
   defineSection(meta("shared-process-steps"), ProcessSteps, gastroProcess),
+  defineSection(meta("shared-spec-table"), SpecTable, ladenVergleich),
   defineSection(meta("shared-segment-cards"), SegmentCards, gastroSegments),
   defineSection(meta("shared-usp-highlight"), UspHighlight, gastroUsp),
 

@@ -14,6 +14,11 @@ interface ProcessStepsProps {
   steps: ProcessStep[];
   /** Optional small note below the steps, e.g. a scope clarification. */
   note?: string;
+  /**
+   * Drop the steps column down on desktop so step 01 lines up with the heading
+   * rather than the eyebrow. Default false (keeps existing pages byte-identical).
+   */
+  offsetSteps?: boolean;
 }
 
 /**
@@ -29,6 +34,7 @@ export function ProcessSteps({
   imageAlt,
   steps,
   note,
+  offsetSteps = false,
 }: ProcessStepsProps) {
   return (
     <section
@@ -77,7 +83,7 @@ export function ProcessSteps({
           </div>
 
           {/* Right: numbered steps */}
-          <div className="flex flex-col">
+          <div className={cn("flex flex-col", offsetSteps && "lg:mt-16")}>
             {steps.map((step, index) => (
               <div
                 key={step.title}

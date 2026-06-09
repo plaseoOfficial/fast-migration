@@ -3,11 +3,11 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**44 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**45 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
-- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight)
+- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight), [Shared — Spec / Comparison Table](#shared-spec-table)
 - **Home** — [Home — Hero](#home-hero), [Home — Discover](#home-discover), [Home — Quality](#home-quality), [Home — Parallax Quote](#home-parallax), [Home — Handwerk Tabs](#home-handwerk), [Home — Planner Embed](#home-planner), [Home — Räume Showcase](#home-raeume), [Home — Testimonials + Logos](#home-testimonials), [Home — FAQ](#home-faq)
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
@@ -218,6 +218,25 @@ _Prop-less (page-specific content)._
 | `imageLeft` | `boolean` | no |
 
 ![Shared — USP Highlight](../design-references/moebel-nach-mass/06-warum.jpg)
+
+#### Shared — Spec / Comparison Table
+
+`#shared-spec-table` — Airy N-column comparison/spec table (criterion → values), rendered as a real table on desktop and stacked cards on mobile. Turns a dense 'what's the difference / what drives the price' paragraph into a scannable, snippet-friendly AEO surface. One optional highlighted column. Reused several times per page.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `comparison-table` | `shared` | no | `/gewerbe/ladenbau` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `heading` | `string` | yes |
+| `firstColLabel` | `string` | yes |
+| `columns` | `string[]` | yes |
+| `rows` | `SpecRow[]` | yes |
+| `intro` | `string` | no |
+| `highlightColumn` | `number` | no |
+
+![Shared — Spec / Comparison Table](../design-references/moebel-nach-mass/06-warum.jpg)
 
 ### Home
 

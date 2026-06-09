@@ -25,6 +25,7 @@ export type UseCase =
   | "services-grid"
   | "reference-grid"
   | "categories-list"
+  | "comparison-table"
   | "gallery-masonry"
   | "story"
   | "planner-cta"

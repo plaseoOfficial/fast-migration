@@ -424,6 +424,24 @@ export const SECTION_META = [
     usedOn: ["/gastronomieeinrichtung"],
     screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
   },
+  {
+    id: "shared-spec-table",
+    displayName: "Shared — Spec / Comparison Table",
+    useCase: "comparison-table",
+    category: "shared",
+    description:
+      "Airy N-column comparison/spec table (criterion → values), rendered as a real table on desktop and stacked cards on mobile. Turns a dense 'what's the difference / what drives the price' paragraph into a scannable, snippet-friendly AEO surface. One optional highlighted column. Reused several times per page.",
+    propsSummary: [
+      { name: "heading", type: "string", required: true },
+      { name: "firstColLabel", type: "string", required: true },
+      { name: "columns", type: "string[]", required: true },
+      { name: "rows", type: "SpecRow[]", required: true },
+      { name: "intro", type: "string", required: false },
+      { name: "highlightColumn", type: "number", required: false },
+    ],
+    usedOn: ["/gewerbe/ladenbau"],
+    screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
+  },
 
   // ── Gewerbe (commercial page) ─────────────────────────────────────────────
   {
