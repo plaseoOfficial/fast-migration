@@ -31,6 +31,7 @@ import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCt
 import { ReferenzenHero } from "@/components/sections/shared/ReferenzenHero";
 import { ReferenzenGrid } from "@/components/sections/shared/ReferenzenGrid";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { ContrastCols } from "@/components/sections/shared/ContrastCols";
@@ -110,6 +111,7 @@ import {
   gastroSegments,
   gastroUsp,
 } from "@/lib/content/gastronomieeinrichtung";
+import { ladenVergleich } from "@/lib/content/ladenbau";
 import { praxisVergleich } from "@/lib/content/praxiseinrichtung";
 
 function meta(id: string): SectionMeta {
@@ -153,6 +155,7 @@ export const sectionRegistry: SectionEntry[] = [
   defineSection(meta("shared-referenzen-hero"), ReferenzenHero, referenzenHeroSample),
   defineSection(meta("shared-referenzen-grid"), ReferenzenGrid, referenzenGridSample),
   defineSection(meta("shared-process-steps"), ProcessSteps, gastroProcess),
+  defineSection(meta("shared-spec-table"), SpecTable, ladenVergleich),
   defineSection(meta("shared-segment-cards"), SegmentCards, gastroSegments),
   defineSection(meta("shared-usp-highlight"), UspHighlight, gastroUsp),
   defineSection(meta("shared-contrast-cols"), ContrastCols, praxisVergleich),

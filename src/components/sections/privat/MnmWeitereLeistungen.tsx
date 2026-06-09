@@ -146,21 +146,23 @@ export function MnmWeitereLeistungen({
                 {card.description}
               </p>
 
-              {/* Link */}
-              <Link
-                href={card.href}
-                className="mt-4 inline-block transition-colors hover:text-[rgb(237,168,33)]"
-                style={{
-                  fontSize: "14px",
-                  lineHeight: "23.8px",
-                  fontWeight: 500,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  color: "rgb(243,243,243)",
-                }}
-              >
-                {moreLabel}
-              </Link>
+              {/* Link (only when the card has a real target) */}
+              {card.href && (
+                <Link
+                  href={card.href}
+                  className="mt-4 inline-block transition-colors hover:text-[rgb(237,168,33)]"
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "23.8px",
+                    fontWeight: 500,
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    color: "rgb(243,243,243)",
+                  }}
+                >
+                  {moreLabel}
+                </Link>
+              )}
             </div>
           ))}
 

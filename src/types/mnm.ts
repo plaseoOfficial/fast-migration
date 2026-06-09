@@ -5,7 +5,8 @@ export interface ServiceCard {
   description: string;
   /** path under /public, e.g. /images/2024/03/interior-design-white-icons-15.svg */
   icon: string;
-  href: string;
+  /** Optional. When omitted, the card renders without a "more info" link (no dead `#`). */
+  href?: string;
   /** the trailing "&" + paragraph card variant (light card, no icon) */
   variant?: "dark" | "ampersand";
   moreLabel?: string;

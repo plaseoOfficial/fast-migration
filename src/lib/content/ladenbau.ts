@@ -25,12 +25,57 @@
  *    Tischler/System/Möbelhaus + Kostentreiber) = Design-Build (STRUKTUR-BEDARF).
  */
 
+import type { ServiceCard } from "@/types/mnm";
+
+/**
+ * "Weitere Leistungen"-Karten (shared MnmWeitereLeistungen). Überschreibt den
+ * Default bewusst: der zeigt auf /moebel-nach-mass/ (Privat-Silo) und würde die
+ * Silo-Integrität verletzen. Trägt stattdessen den Pflicht-Up-Link /gewerbe/
+ * (kontextuell, zusätzlich zum Breadcrumb) und den SOLL-Trust-Link /referenzen/.
+ */
+export const ladenWeitereLeistungen: { cards: ServiceCard[] } = {
+  cards: [
+    {
+      icon: "/images/2024/03/interior-design-white-icons-08.svg",
+      title: "Gewerbeeinrichtung",
+      description:
+        "Ladenbau ist Teil unserer Gewerbeeinrichtung: vom einzelnen Möbel bis zur kompletten Objekteinrichtung für Handel, Gastronomie und Dienstleistung.",
+      href: "/gewerbe/",
+    },
+    {
+      icon: "/images/2024/03/interior-design-white-icons-07.svg",
+      title: "Planung & 3D-Visualisierung",
+      description:
+        "Beratung, Aufmaß und technische 3D-Planung. Sie sehen Materialien, Farben und Anordnung, bevor wir mit der Fertigung beginnen.",
+    },
+    {
+      icon: "/images/2024/03/interior-design-white-icons-09.svg",
+      title: "Fertigung & Montage",
+      description:
+        "Fertigung im eigenen Werk in Espelkamp auf Homag-Technologie, Montage durch unser eigenes Team im Umkreis von rund 200 km.",
+    },
+    {
+      icon: "/images/2024/03/interior-design-white-icons-15.svg",
+      title: "Corporate Design",
+      description:
+        "Logo, Farben und Material nach Ihren Vorgaben am Point of Sale, auf Wunsch mit eigenen Gestaltungsvorschlägen von uns.",
+    },
+    {
+      icon: "/images/2024/03/interior-design-white-icons-22.svg",
+      title: "Referenzen",
+      description:
+        "Umgesetzte Projekte aus Einzelhandel und Gewerbe, von der Verkaufstheke bis zur kompletten Shopfläche.",
+      href: "/referenzen/",
+    },
+  ],
+};
+
 export const ladenHero = {
   bgImage: "/images/2025/11/DSC_9965.jpg",
   imageAlt: "Ladenbau nach Maß – individuelle Ladeneinrichtung von Fast Systemmöbel",
   title: "Ladenbau nach Maß",
   intro:
-    "Ladenbau nach Maß heißt bei uns: Ihre Verkaufsfläche kommt nicht aus dem Katalog, sondern wird Wand zu Wand für Ihren Grundriss geplant und im eigenen Meisterbetrieb gebaut. Ob einzelner Verkaufstresen oder schlüsselfertige Shopkonzeption, Beratung, 3D-Planung, Fertigung und Montage kommen aus einer Hand. Gefertigt wird in Espelkamp, montiert bei Ihnen im Geschäft, im Umkreis von rund 200 km in Ostwestfalen-Lippe, Niedersachsen und der Region.",
+    "Ladenbau nach Maß heißt bei uns: Ihre Verkaufsfläche kommt nicht aus dem Katalog, sondern wird Wand zu Wand für Ihren Grundriss geplant und im eigenen Meisterbetrieb gebaut. Vom einzelnen Verkaufstresen bis zur schlüsselfertigen Shopkonzeption kommen Beratung, 3D-Planung, Fertigung und Montage aus einer Hand.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
@@ -39,46 +84,73 @@ export const ladenHero = {
 };
 
 export const ladenIntroStats = {
-  since: "Meisterbetrieb",
-  sinceSub: "Geschäfte einrichten ist unser Handwerk.",
+  since: "seit 1996",
+  sinceSub: "Richten wir Geschäfte ein.",
   heading: "Ladeneinrichtung nach Maß, die zu Ihrer Marke passt",
   introBefore:
-    "Ladenbau nach Maß bedeutet maßgefertigte Ladenmöbel statt Systemregal aus dem Katalog. Einzelhandel, Boutique, Gastronomie, Praxis oder Büro: Wir begleiten Ihr Projekt von der ersten",
+    "Ob Einzelhandel, Boutique, Gastronomie oder Praxis. Wir begleiten Ihr Projekt von der ersten",
   introBold: "Planung",
   introAfter:
-    " über die Fertigung bis zur Montage. Jede Verkaufstheke, jedes Ladenregal und jeder Empfangstresen wird auf Ihren Grundriss, Ihren Warenfluss und Ihr Corporate Design zugeschnitten und im eigenen Werk in Espelkamp gebaut.",
+    " bis zur fertigen Montage. Maßgefertigte Ladenmöbel statt Systemregal, zugeschnitten auf Ihren Grundriss und Ihre Marke.",
   bandImage: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
   bandAlt: "Maßgefertigte Ladeneinrichtung im Einzelhandel",
   col1Title: "Shop planen",
   col1Body:
-    "Wir planen Ihre Ladeneinrichtung exakt nach Grundriss, Customer Journey und Markenauftritt. Verkaufstheken, Wandregale, Mittelraummöbel und Kassenzonen entstehen millimetergenau und sind auf den täglichen Betrieb ausgelegt. Wo es passt, denken wir Zoning, Warenpräsentation und Lichtkonzept gleich mit, damit Ihre Ware wirkt und Ihre Kunden den Weg durch den Laden finden. Was genau Ihre Fläche braucht, klären wir beim kostenlosen Aufmaß vor Ort.",
+    "Wir planen Ihre Ladeneinrichtung exakt nach Grundriss, Customer Journey und Markenauftritt. Verkaufstheken, Wandregale und Kassenzonen entstehen millimetergenau und sind auf den täglichen Betrieb ausgelegt. Was genau Ihre Fläche braucht, klären wir beim kostenlosen Aufmaß vor Ort.",
   col1CtaLabel: "Ladenbau-Projekt anfragen",
-  col1CtaHref: "/kontakt",
+  col1CtaHref: "/kontakt/",
   col2Body:
-    "Vom einzelnen Empfangstresen bis zur schlüsselfertigen Shopkonzeption bekommen Sie alles aus einer Hand: Beratung, 3D-Planung, Fertigung, baulichen Innenausbau, Beleuchtung und Montage. Auf Wunsch übernehmen wir auch Schaufenstergestaltung und Visual Merchandising. So entstehen Geschäftsräume, die Kunden führen, das Personal entlasten und über Jahre dem Kundenverkehr standhalten. Sie sprechen dabei mit den Leuten, die Ihre Theke später auch bauen, und müssen nicht zwischen Händler, Hersteller und Monteur vermitteln.",
+    "Vom einzelnen Empfangstresen bis zur schlüsselfertigen Shopkonzeption bekommen Sie alles aus einer Hand: Beratung, 3D-Planung, Fertigung, baulichen Innenausbau, Beleuchtung und Montage. Sie sprechen dabei mit den Leuten, die Ihre Theke später auch bauen, und vermitteln nicht zwischen Händler, Hersteller und Monteur.",
   counterTarget: 200,
   counterDuration: 2000,
   counterSuffix: " km",
   col3Title: "Montageradius rund um Espelkamp",
   col3Body:
-    "Wir fertigen in Espelkamp und montieren im Umkreis von rund 200 km, in Ostwestfalen-Lippe, Niedersachsen und der Umgebung, mit eigenem Montageteam und ohne Subunternehmer. Geliefert wird deutschlandweit. Auf Wunsch bauen wir im laufenden Betrieb oder außerhalb Ihrer Öffnungszeiten auf. Dann bleibt Ihr Geschäft so kurz wie möglich zu.",
+    "Wir fertigen in Espelkamp und montieren im Umkreis von rund 200 km, mit eigenem Montageteam und ohne Subunternehmer. Geliefert wird deutschlandweit. Auf Wunsch bauen wir außerhalb Ihrer Öffnungszeiten auf, dann bleibt Ihr Geschäft so kurz wie möglich zu.",
   col3CtaLabel: "Einsatzgebiet prüfen",
-  col3CtaHref: "/kontakt",
+  col3CtaHref: "/kontakt/",
 };
 
-export const ladenProcess = {
-  heading: "Ladenbau, alles aus einer Hand: so läuft Ihr Projekt ab",
-  paragraph:
-    "Ihr Ladenbau-Projekt entsteht in klaren Schritten. Erst Beratung und kostenloses Aufmaß vor Ort: Wir hören zu, nehmen Ihre Fläche auf und klären Sortiment, Warenfluss und Ihr Corporate Design. Dann die technische 3D-Planung Ihrer Verkaufsfläche. Sie sehen Materialien, Farben und Anordnung, bevor etwas gebaut wird, und geben die Planung frei. Anschließend die Fertigung im eigenen Werk auf Homag-Technologie, mit PU-Kantenverleimung an den belasteten Stoßkanten. Zum Schluss montiert unser eigenes Team, auf Wunsch außerhalb Ihrer Öffnungszeiten. Verkaufstheken, Ladenregale, Empfangstresen, Vitrinen, Shop-in-Shop-Flächen oder die komplette Ladeneinrichtung samt baulichem Innenausbau und Beleuchtung: Wir liefern robuste Warenpräsentation, die dem täglichen Kundenverkehr standhält. Durchgehend haben Sie einen festen Ansprechpartner, vom ersten Gespräch bis zur Abnahme. Einen verbindlichen Termin nennen wir nach Aufmaß und Freigabe, nicht ins Blaue hinein.",
-  paragraphStrong: "Made in Germany.",
+/**
+ * Process as scannable numbered steps (shared ProcessSteps section). Replaces
+ * the former single-paragraph MnmProcess block — the dense how-it-works wall is
+ * split into four steps; the furniture enumeration moved to `ladenTypische`.
+ */
+export const ladenSteps = {
+  eyebrow: "In vier Schritten",
+  heading: "Ladenbau, alles aus einer Hand",
   image: "/images/2025/11/DSC_0001.jpg",
   imageAlt: "Maßgefertigter Empfangs- und Thekenbereich",
+  offsetSteps: true,
+  steps: [
+    {
+      title: "Beratung & kostenloses Aufmaß",
+      description:
+        "Wir hören zu, nehmen Ihre Fläche vor Ort auf und klären Sortiment, Warenfluss und Ihr Corporate Design.",
+    },
+    {
+      title: "Technische 3D-Planung",
+      description:
+        "Sie sehen Materialien, Farben und Anordnung Ihrer Verkaufsfläche, bevor etwas gebaut wird, und geben die Planung frei.",
+    },
+    {
+      title: "Fertigung im eigenen Werk",
+      description:
+        "Wir fertigen in Espelkamp auf Homag-Technologie, mit PU-Kantenverleimung an den stark belasteten Stoßkanten. Made in Germany.",
+    },
+    {
+      title: "Montage durch unser Team",
+      description:
+        "Unser eigenes Team montiert bei Ihnen, auf Wunsch außerhalb Ihrer Öffnungszeiten. Ein fester Ansprechpartner begleitet Sie bis zur Abnahme.",
+    },
+  ],
+  note: "Einen verbindlichen Termin nennen wir nach Aufmaß und Freigabe, nicht ins Blaue hinein.",
 };
 
 export const ladenTypische = {
   heading: "Welche Ladenmöbel wir nach Maß bauen",
-  image1: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
-  image1Alt: "Maßgefertigte Ladeneinrichtung im Einzelhandel",
+  image1: "/images/2025/11/DSC_9934.jpg",
+  image1Alt: "Beleuchtete Ladenregale nach Maß mit integriertem Lichtkonzept",
   image2: "/images/2025/11/20181220_075204314_iOS-scaled.jpg",
   image2Alt: "Gastronomie-Einrichtung nach Maß",
   row1: [
@@ -100,34 +172,194 @@ export const ladenTypische = {
   ],
   row2: [
     {
-      title: "Gastronomie & Tresen",
+      title: "Vitrinen & Präsentationsmöbel",
       description:
-        "Tresen, Rückbuffets und Mobiliar für Café, Restaurant und Hotel, langlebig gebaut für den Dauereinsatz. Mehr dazu auf unserer Seite Gastronomieeinrichtung nach Maß.",
+        "Vitrinen, Mittelraummöbel und Präsentationstische, die einzelne Stücke gezielt in Szene setzen und Ihre Ware zum Anfassen einladen.",
     },
     {
-      title: "Empfangstresen, Praxis & Büro",
+      title: "Umkleide & Anprobe",
       description:
-        "Empfangstresen und Einrichtungen für Praxen, Kanzleien und Dienstleister, die Kompetenz ausstrahlen und Abläufe ordnen. Passend dazu: Praxiseinrichtung und Büroeinrichtung nach Maß.",
+        "Umkleidekabinen und Anprobebereiche, blickdicht und solide gebaut, als fester und belastbarer Teil Ihrer Ladeneinrichtung.",
     },
     {
-      title: "Shop-in-Shop & Filialausstattung",
+      title: "Stauraum & Backoffice",
       description:
-        "Modulare Markeninseln und Präsentationsflächen, die auffallen und sich an wechselnde Anforderungen anpassen. Für Filialisten fertigen wir Ladeneinrichtung in Serie, wiederholbar und in gleichbleibender Qualität über jeden Standort hinweg.",
+        "Rückwärtige Schränke sowie Lager- und Stauraumlösungen, die Nachschub und Verpackung griffbereit halten, ohne die Verkaufsfläche zu verstellen.",
     },
   ],
 };
 
+/**
+ * Branchen-Block (shared SegmentCards). Pflicht-Modul lt. Research-Kit §3 als
+ * Tiefe-/Entity-Fläche (Branchen-Begriffe aus der WDF·IDF-Liste). BEWUSST OHNE
+ * Links auf die Geschwister-Cluster: internal-linking.md §"Silo integrity"
+ * verbietet Cluster→Cluster lateral; die Verteilung läuft über den /gewerbe/-Hub.
+ */
+export const ladenSegments = {
+  eyebrow: "Für Ihre Branche",
+  heading: "Für welche Branchen wir Läden bauen",
+  intro:
+    "Jede Branche stellt eigene Anforderungen an Warenfluss, Belastbarkeit und Auftritt. Vom Modegeschäft bis zur Filialkette planen wir Ihre Ladeneinrichtung passend zu Sortiment und Marke.",
+  segments: [
+    {
+      title: "Einzelhandel & Boutique",
+      body: "Verkaufstheken, Wandregale und Präsentationsflächen für Mode, Schmuck, Buch oder Concept Store, abgestimmt auf Sortiment, Laufwege und Warenpräsentation.",
+    },
+    {
+      title: "Lebensmittel & Markt",
+      body: "Robuste Theken, Regale und Kühlmöbel-Umbauten für den Lebensmitteleinzelhandel, gebaut für hohe Frequenz und tägliche Reinigung am Point of Sale.",
+    },
+    {
+      title: "Gastronomie & Hotellerie",
+      body: "Tresen, Rückbuffets und Lobby-Möbel für Café, Restaurant und Hotel, langlebig gebaut für den Dauereinsatz.",
+    },
+    {
+      title: "Praxis & Gesundheit",
+      body: "Anmeldetresen und Einrichtung für Arztpraxen, Therapie- und Pflegebereiche, reinigbar und auf ruhige Abläufe ausgelegt.",
+    },
+    {
+      title: "Büro & Dienstleister",
+      body: "Empfangstresen und Büromöbel für Kanzleien, Agenturen und Dienstleister, die Kompetenz ausstrahlen und Abläufe ordnen.",
+    },
+    {
+      title: "Filialisten & Ketten",
+      body: "Wiederholbare Markeninseln und komplette Filialausstattung in gleichbleibender Qualität über jeden Standort hinweg.",
+    },
+  ],
+};
+
+/**
+ * USP-Beweis-Block (shared UspHighlight). Hebt den stärksten, belegbaren
+ * Differenzierer (PU-Kantenverleimung + 24-h-Wassertest) aus dem Warum-Absatz
+ * in eine eigene luftige Sektion. Material-Pflichtbaustein lt. Research-Kit §3/§4.
+ */
+export const ladenUsp = {
+  eyebrow: "Gebaut für den Kundenverkehr",
+  heading: "Eine Kante, die kein Wasser durchlässt",
+  body:
+    "An Theken, Regalen und Tresen bekommen die Kanten täglich Stöße, Spritzwasser und Reinigung ab, genau dort entscheidet sich die Langlebigkeit. Die stark beanspruchten Stoßkanten verleimen wir im PU-Verfahren: Das verschließt sie fugenlos und nahezu wasserfest, statt sie nur aufzukleben. Eine Musterkante haben wir dafür 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Zusammen mit Massivholz und hochwertigen Trägermaterialien bleibt Ihre Ladeneinrichtung über Jahre formstabil, auch dort, wo am Point of Sale am meisten los ist.",
+  stat: { value: "24 h", label: "unter Wasser getaucht, ohne aufzuquellen" },
+  image: "/images/2025/11/IMG_9120-scaled.jpg",
+  imageAlt:
+    "Saubere Massivholz-Kante mit dichter Kantenverleimung an einem maßgefertigten Möbel",
+};
+
 export const ladenWarum = {
-  heading: "Warum Ladenbau vom Meisterbetrieb statt Systemregal",
+  heading: "Maßanfertigung statt Systemregal",
   paragraph:
-    "Systemanbieter liefern Konfektion aus dem Katalog, ein Möbelhaus verkauft, was im Lager steht. Wir bauen Ihre Ladeneinrichtung selbst, komplett im Meisterbetrieb in Espelkamp, ohne Subunternehmer. Der Unterschied steckt im Detail: Eine Maßanfertigung sitzt Wand zu Wand ohne Passleisten, nutzt jede Nische und kommt aus Massivholz und branchenüblichen, hochwertigen Materialien, die dem Kundenverkehr über Jahre standhalten. Wo Ihre Wand 4,12 Meter misst, bleibt bei uns am Ende keine Lücke und keine Blende. An den stark beanspruchten Stoßkanten verleimen wir die Kanten im PU-Verfahren, nahezu wasserfest. Eine Musterkante haben wir dafür 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Gefertigt wird auf eigenem Maschinenpark mit Homag-Technologie, die Qualität kontrollieren wir selbst, und gerichtet wird sich nach Ihrem Corporate Design: Logo, Farben und Material nach Ihren Vorgaben, oder mit eigenen Gestaltungs- und Materialvorschlägen von uns. Liegt das Designkonzept bei Ihnen oder Ihrem Architekten, arbeiten wir danach; soll es von uns kommen, liefern wir es mit. Was das kostet? Pauschalen pro Quadratmeter nennen wir bewusst nicht, denn jede Fläche, jedes Sortiment und jeder Ausbaugrad ist anders. Den Preis treiben vor allem Raumgröße und Möbelumfang, die Materialwahl, Technik und Beleuchtung sowie der Aufwand für baulichen Innenausbau und Corporate Design. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles Angebot mit transparenter Material- und Kostenübersicht, Position für Position kalkuliert statt mit einer runden Hausnummer. Eine gut geplante Ladeneinrichtung ist dabei kein reiner Kostenposten: Sie steuert die Customer Journey, setzt die Warenpräsentation in Szene und beeinflusst über Atmosphäre und Verweildauer das Kaufverhalten am Point of Sale.",
+    "Systemanbieter liefern Konfektion aus dem Katalog, ein Möbelhaus verkauft, was im Lager steht. Wir bauen Ihre Ladeneinrichtung selbst im Meisterbetrieb in Espelkamp, ohne Subunternehmer: Wand zu Wand ohne Passleisten, aus Massivholz und hochwertigen Materialien, die dem Kundenverkehr über Jahre standhalten. Gefertigt wird auf eigenem Maschinenpark mit Homag-Technologie, die Qualität kontrollieren wir selbst, und gerichtet wird sich nach Ihrem Corporate Design.",
   images: [
     { src: "/images/2025/11/DSC_9965.jpg", alt: "Moderne Ladeneinrichtung", width: 600, height: 450 },
-    { src: "/images/2025/11/DSC_9814.jpg", alt: "Maßgefertigter Verkaufstresen", width: 600, height: 400 },
+    { src: "/images/2025/11/DSC_9938.jpg", alt: "Maßgefertigte Ladeneinrichtung vom Tresen bis zur Shopfläche", width: 600, height: 400 },
     { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Empfangsbereich mit Holzlamellenwand", width: 600, height: 800 },
     { src: "/images/2025/11/DSC_9843.jpg", alt: "Integrierte Technik im Möbel", width: 600, height: 420 },
-    { src: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg", alt: "Ladeneinrichtung im Einzelhandel", width: 600, height: 380 },
+    { src: "/images/2025/11/DSC_0001.jpg", alt: "Maßgefertigter Empfangs- und Thekenbereich", width: 600, height: 380 },
     { src: "/images/2025/11/20181220_075204314_iOS-scaled.jpg", alt: "Gastronomie-Mobiliar nach Maß", width: 600, height: 450 },
+  ],
+};
+
+/**
+ * Vergleichstabelle (shared SpecTable). Hebt den „warum Maßanfertigung"-Vergleich
+ * aus der Fließtext-Sektion heraus in einen zitierbaren AEO-Container. Keine Preise.
+ */
+export const ladenVergleich = {
+  heading: "Maßanfertigung, System oder Möbelhaus?",
+  intro:
+    "Drei Wege zur Ladeneinrichtung, drei Ergebnisse. Was eine Maßanfertigung vom Meisterbetrieb von Systembausatz und Möbelhaus-Konfektion unterscheidet.",
+  firstColLabel: "Kriterium",
+  columns: [
+    "Maßanfertigung vom Meisterbetrieb (Fast)",
+    "Systembausatz / Katalogregal",
+    "Möbelhaus / Konfektion",
+  ],
+  highlightColumn: 0,
+  rows: [
+    {
+      label: "Passform",
+      values: [
+        "Wand zu Wand ohne Passleisten, jede Nische genutzt",
+        "feste Raster, Lücken und Blenden",
+        "Standardmaße, selten exakt",
+      ],
+    },
+    {
+      label: "Material & Langlebigkeit",
+      values: [
+        "Massivholz + hochwertige Materialien, PU-Kante an Stoßkanten",
+        "je nach Serie, oft beschichtete Platten",
+        "wechselnd, oft auf Privatnutzung ausgelegt",
+      ],
+    },
+    {
+      label: "Markenbezug (CI)",
+      values: [
+        "Logo, Farben, Material nach Ihrem Corporate Design",
+        "kaum anpassbar",
+        "begrenzt",
+      ],
+    },
+    {
+      label: "Beratung & Planung",
+      values: [
+        "Aufmaß vor Ort + 3D-Planung, ein fester Ansprechpartner",
+        "Selbst- / Online-Planung",
+        "Verkaufsberatung",
+      ],
+    },
+    {
+      label: "Fertigung",
+      values: [
+        "eigener Meisterbetrieb in Espelkamp, ohne Subunternehmer",
+        "industrielle Serie",
+        "Zukauf",
+      ],
+    },
+    {
+      label: "Montage",
+      values: [
+        "eigenes Team, auf Wunsch im laufenden Betrieb",
+        "Selbstmontage / Fremddienstleister",
+        "externe Monteure",
+      ],
+    },
+  ],
+};
+
+/**
+ * Kostentreiber-Tabelle (shared SpecTable). Beantwortet „Was kostet das?" ohne
+ * €-Pauschale und nimmt den Preis-Absatz aus der Warum-Sektion auf (FACTS-sauber).
+ */
+export const ladenKosten = {
+  heading: "Was kostet Ladenbau nach Maß?",
+  intro:
+    "Eine Pauschale pro Quadratmeter nennen wir bewusst nicht, jede Fläche, jedes Sortiment und jeder Ausbaugrad ist anders. Diese sechs Faktoren bestimmen den Preis. Nach dem kostenlosen Aufmaß bekommen Sie ein Angebot, Position für Position kalkuliert.",
+  firstColLabel: "Kostenfaktor",
+  columns: ["Was den Preis bestimmt"],
+  rows: [
+    {
+      label: "Raumgröße & Möbelumfang",
+      values: ["Lauf- und Flächenmeter, Anzahl Theken, Regale und Tresen"],
+    },
+    {
+      label: "Materialwahl",
+      values: ["Massivholz, Dekore, Oberflächen, Beschläge"],
+    },
+    {
+      label: "Technik & Beleuchtung",
+      values: ["integrierte Kassen- und Wäge-Technik, Lichtkonzept"],
+    },
+    {
+      label: "Baulicher Innenausbau",
+      values: ["Boden, Wand, Decke, Trennwände"],
+    },
+    {
+      label: "Corporate Design",
+      values: ["Logo-Integration, Sonderfarben, Sonderanfertigungen"],
+    },
+    {
+      label: "Montageaufwand",
+      values: ["Anfahrt im rund 200-km-Radius, Montage im laufenden Betrieb"],
+    },
   ],
 };
 
@@ -149,8 +381,8 @@ export const ladenMoebelplaner = {
 export const ladenGeschichte = {
   heading: "Ein Meisterbetrieb aus OWL, der Geschäftsräume versteht",
   subheading: "Vom Garagenbetrieb zum Partner für Ladenbau",
-  anchorImage: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
-  anchorImageAlt: "Ladeneinrichtung im Einzelhandel nach Maß — Fast Systemmöbel Espelkamp",
+  anchorImage: "/images/2025/11/20230814_155316228_iOS-scaled.jpg",
+  anchorImageAlt: "Maßgefertigter Innenausbau für Geschäftsräume — Fast Systemmöbel Espelkamp",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
