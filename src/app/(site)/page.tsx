@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/sections/home/HeroSection";
 import { DiscoverSection } from "@/components/sections/home/DiscoverSection";
+import { BereicheSection } from "@/components/sections/home/BereicheSection";
 import { QualitySection } from "@/components/sections/home/QualitySection";
 import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
 import { HandwerkSection } from "@/components/sections/home/HandwerkSection";
@@ -10,6 +11,7 @@ import { FaqSection } from "@/components/sections/home/FaqSection";
 import {
   homeHero,
   homeDiscover,
+  homeBereiche,
   homeQuality,
   homeParallax,
   homeHandwerk,
@@ -24,6 +26,7 @@ export default function Home() {
     <main className="flex flex-col">
       <HeroSection {...homeHero} />
       <DiscoverSection {...homeDiscover} />
+      <BereicheSection {...homeBereiche} />
       <QualitySection {...homeQuality} />
       <ParallaxQuote {...homeParallax} />
       <HandwerkSection {...homeHandwerk} />

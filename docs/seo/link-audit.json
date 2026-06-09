@@ -7,7 +7,7 @@
       "/"
     ],
     "counts": {
-      "Fehler": 20,
+      "Fehler": 16,
       "Warnung": 1,
       "Hinweis": 32
     }
@@ -123,74 +123,6 @@
       "file": "src/components/sections/privat/MnmWeitereLeistungen.tsx",
       "line": 39,
       "href": "#"
-    },
-    {
-      "severity": "Fehler",
-      "check": "missing-muss",
-      "message": "/: fehlender MUSS-Link → `/moebel-nach-mass/`. Primärer Privat-Hub",
-      "page": "/",
-      "suggestAnchors": [
-        {
-          "target": "/moebel-nach-mass/",
-          "options": [
-            "maßgefertigte Möbel",
-            "individuelle Möbel",
-            "Möbel nach Maß für Zuhause",
-            "zum Möbel-Bereich"
-          ]
-        }
-      ]
-    },
-    {
-      "severity": "Fehler",
-      "check": "missing-muss",
-      "message": "/: fehlender MUSS-Link → `/gewerbe/`. Primärer Gewerbe-Hub",
-      "page": "/",
-      "suggestAnchors": [
-        {
-          "target": "/gewerbe/",
-          "options": [
-            "gewerbliche Einrichtung",
-            "Objekteinrichtung",
-            "Gewerbliche Einrichtung & Ladenbau",
-            "zum Gewerbe-Bereich"
-          ]
-        }
-      ]
-    },
-    {
-      "severity": "Fehler",
-      "check": "missing-muss",
-      "message": "/: fehlender MUSS-Link → `/moebelplaner/`. Haupt-CTA / Conversion",
-      "page": "/",
-      "suggestAnchors": [
-        {
-          "target": "/moebelplaner/",
-          "options": [
-            "Möbel online planen",
-            "online konfigurieren",
-            "Jetzt Möbel online planen",
-            "Küche online konfigurieren"
-          ]
-        }
-      ]
-    },
-    {
-      "severity": "Fehler",
-      "check": "missing-muss",
-      "message": "/: fehlender MUSS-Link → `/kontakt/`. Conversion-Ziel",
-      "page": "/",
-      "suggestAnchors": [
-        {
-          "target": "/kontakt/",
-          "options": [
-            "Beratung anfragen",
-            "Angebot anfordern",
-            "Kostenlose Beratung anfragen",
-            "Beratungsgespräch vereinbaren"
-          ]
-        }
-      ]
     },
     {
       "severity": "Fehler",
