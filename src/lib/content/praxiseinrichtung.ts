@@ -18,10 +18,10 @@
 export const praxisHero = {
   bgImage: "/images/2025/11/DSC07156-scaled.jpg",
   imageAlt:
-    "Praxiseinrichtung nach Maß: Empfangstresen und Wartebereich einer Arztpraxis von Fast Systemmöbel",
+    "Beratungsgespräch zur Praxiseinrichtung mit Materialmustern bei Fast Systemmöbel",
   title: "Praxiseinrichtung nach Maß aus Espelkamp",
   intro:
-    "Praxiseinrichtung nach Maß heißt: Möbel, die exakt zu Ihren Räumen, Abläufen und Hygieneanforderungen passen, statt Katalogware in festen Rastermaßen. Wir planen und fertigen Empfangstresen, Wartezimmer, Behandlungs- und Sprechzimmer, Schränke und Stauraum für Ihre Praxis oder Kanzlei. Gebaut im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team in Ostwestfalen-Lippe, darüber hinaus liefern wir bundesweit.",
+    "Möbel, die exakt zu Ihren Räumen, Abläufen und Hygieneanforderungen passen, statt Katalogware in festen Rastermaßen. Geplant, gefertigt und montiert aus einer Hand, vom Meisterbetrieb in Espelkamp.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
@@ -36,15 +36,15 @@ export const praxisIntroStats = {
   introBefore: "Von der ersten",
   introBold: "Planung",
   introAfter: " bis zur fertigen Montage, alles aus einer Hand.",
-  bandImage: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
-  bandAlt: "Maßgefertigter Anmelde- und Empfangstresen in einer Arztpraxis",
+  bandImage: "/images/2025/11/DSC_9843.jpg",
+  bandAlt: "Besprechungsraum mit Tisch nach Maß für Beratung und Planung",
   col1Title: "Praxis planen",
   col1Body:
-    "Wir entwickeln Ihre Einrichtung nach Grundriss, Hygieneanforderung und Patientenfluss. Anmeldetresen, Behandlungszimmer, Wartebereich und Materiallager planen wir millimetergenau und legen sie auf den täglichen Betrieb aus.",
+    "Wir entwickeln Ihre Einrichtung nach Grundriss, Hygieneanforderung und Patientenfluss. Tresen, Behandlungszimmer und Wartebereich planen wir millimetergenau.",
   col1CtaLabel: "Praxisprojekt unverbindlich anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Vom einzelnen Anmeldetresen bis zur kompletten Praxis bekommen Sie alles aus einer Hand: Beratung, Aufmaß, 3D-Planung, Fertigung und Montage. Als Meisterbetrieb arbeiten wir ohne Zwischenhändler und ohne Subunternehmer.",
+    "Vom einzelnen Anmeldetresen bis zur kompletten Praxis bekommen Sie alles aus einer Hand: Beratung, Aufmaß, 3D-Planung, Fertigung und Montage, ohne Subunternehmer.",
   counterTarget: 200,
   counterDuration: 2000,
   counterSuffix: " km",
@@ -60,7 +60,7 @@ export const praxisProcess = {
   heading: "Vom Aufmaß bis zur Montage",
   image: "/images/2025/11/DSC_0001.jpg",
   imageAlt:
-    "Maßgefertigter Anmelde- und Empfangsbereich für eine Praxis mit vorbereiteten Aussparungen",
+    "Maßgefertigtes Funktionsmöbel mit Klappmechanik und integrierter Arbeitsfläche",
   steps: [
     {
       title: "Beratung & kostenloses Aufmaß",
@@ -129,19 +129,19 @@ export const praxisUsp = {
   eyebrow: "Gebaut für die Hygiene",
   heading: "Kanten ohne Fuge, in der sich Keime sammeln",
   body:
-    "In der Praxis wird täglich wischdesinfiziert. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos, sodass keine Spalten bleiben, in denen sich Schmutz und Keime absetzen. Eine Musterkante haben wir 24 Stunden unter Wasser getaucht, ohne dass sie aufquillt. Zusammen mit abwischbaren, robusten Oberflächen halten die Möbel der täglichen Reinigung über Jahre stand, ohne aufgequollene Ränder oder offene Stellen. Das ist kein Aufpreis-Extra, sondern unser Standard in der Fertigung.",
+    "In der Praxis wird täglich wischdesinfiziert. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos, sodass keine Spalten bleiben, in denen sich Schmutz und Keime absetzen. Zusammen mit abwischbaren, robusten Oberflächen halten die Möbel der täglichen Reinigung über Jahre stand, ohne aufgequollene Ränder. Das ist kein Aufpreis-Extra, sondern unser Standard.",
   stat: { value: "24 h", label: "unter Wasser getaucht, ohne aufzuquellen" },
-  image: "/images/2025/11/DSC_9843.jpg",
+  image: "/images/2025/11/IMG_9120-scaled.jpg",
   imageAlt:
-    "Fugenlose PU-Kante an einem maßgefertigten Praxismöbel mit reinigbarer Oberfläche",
+    "Waschtisch-Unterschrank nach Maß mit reinigbaren, grifflosen Fronten",
 };
 
 export const praxisTypische = {
   heading: "Was wir für Praxen und Kanzleien bauen",
-  image1: "/images/2025/11/DSC07156-scaled.jpg",
-  image1Alt: "Maßgefertigter Empfangstresen mit reinigbarer Hygieneoberfläche",
-  image2: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
-  image2Alt: "Behandlungsraum mit fugenarmen Einbaumöbeln nach Maß",
+  image1: "/images/2025/11/20150701_185458257_iOS-scaled.jpg",
+  image1Alt: "Maßgefertigte Empfangstheke mit Glasregalen",
+  image2: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
+  image2Alt: "Schrankwand nach Maß mit offenen Fächern und Schubladen",
   row1: [
     {
       title: "Empfangs- & Anmeldetresen",
@@ -178,26 +178,54 @@ export const praxisTypische = {
   ],
 };
 
+/**
+ * Contrast block (shared ContrastCols): catalogue/system furniture vs custom
+ * joinery from the Meisterbetrieb. Carries the "Tischler statt Standard"
+ * argument as scannable bullets so it no longer lives as a prose wall.
+ */
+export const praxisVergleich = {
+  eyebrow: "Der Unterschied",
+  heading: "Warum Maßanfertigung statt Katalogware",
+  negative: {
+    title: "Katalog- & Systemmöbel",
+    points: [
+      "Feste Rastermaße, an der Wand bleibt eine Lücke oder Passleiste",
+      "Begrenzte Auswahl an Materialien und Oberflächen",
+      "Beratung, Lieferung und Aufbau oft getrennt",
+      "Fugenlose Hygienekanten meist nur gegen Aufpreis",
+    ],
+  },
+  positive: {
+    title: "Maß vom Meisterbetrieb Fast",
+    points: [
+      "Passgenau von Wand zu Wand, ganz ohne Lücke",
+      "Materialien für Hygiene und Dauereinsatz, PU-Kante als Standard",
+      "Planung, Fertigung und Montage aus einer Hand",
+      "Eigenes Montageteam, ohne Subunternehmer",
+    ],
+  },
+};
+
 export const praxisWarum = {
   heading: "Tischler statt Standard-Praxismöbel",
   paragraph:
-    "Im Möbelhaus und beim Systemanbieter kaufen Sie Praxismöbel aus dem Katalog: feste Rastermaße, begrenzte Materialien, Beratung und Aufbau meist getrennt. Wo Ihre Wand 3,84 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir bauen stattdessen jeden Tresen, jeden Behandlungsschrank und jedes Aktenmöbel selbst in Espelkamp, passgenau von Wand zu Wand und mit Materialien, die für Hygiene und Dauereinsatz ausgelegt sind. Planung, Fertigung, Lieferung und Montage liegen bei einem Ansprechpartner, mit eigenem Montageteam und ohne Subunternehmer.",
+    "Jeden Tresen, jeden Behandlungsschrank und jedes Aktenmöbel bauen wir selbst in Espelkamp, passgenau von Wand zu Wand und mit Materialien für Hygiene und Dauereinsatz. Planung, Fertigung und Montage bleiben in einer Hand.",
   images: [
-    { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Empfangstresen in einer Arztpraxis nach Maß", width: 600, height: 450 },
-    { src: "/images/2026/01/csm_Kabine_6550b3ca43.jpg", alt: "Behandlungsraum mit Einbaumöbeln nach Maß", width: 600, height: 800 },
-    { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Empfangsbereich einer Praxis mit Holzlamellenwand", width: 600, height: 800 },
-    { src: "/images/2025/11/DSC_9843.jpg", alt: "Materialschrank mit reinigbaren, fugenarmen Fronten", width: 600, height: 420 },
-    { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Anmeldetresen nach Maß mit abschließbarem Stauraum", width: 600, height: 380 },
-    { src: "/images/2025/11/IMG_6123-scaled.jpg", alt: "Beratungsraum einer Kanzlei mit Aktenschrank nach Maß", width: 600, height: 450 },
+    { src: "/images/2025/11/DSC_9747.jpg", alt: "Besprechungstisch nach Maß für Beratungs- und Sprechzimmer", width: 600, height: 400 },
+    { src: "/images/2025/11/IMG_2249.jpg", alt: "Einbauschrank nach Maß mit Garderoben-Nische in Eiche", width: 600, height: 800 },
+    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Raumhohe Einbauschränke nach Maß", width: 600, height: 800 },
+    { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Einbauschrank nach Maß vor einer Steinwand", width: 600, height: 440 },
+    { src: "/images/2025/11/90d42e7b-fa9d-4a8d-a60e-ca1c5bf55cb3.jpg", alt: "Garderobe nach Maß mit Eiche-Lamellen-Nische und Sitzbank", width: 600, height: 800 },
+    { src: "/images/2025/11/DSC_9934.jpg", alt: "Offenes Regal nach Maß mit indirekter LED-Beleuchtung", width: 600, height: 400 },
   ],
 };
 
 export const praxisGeschichte = {
   heading: "Ein Meisterbetrieb für Praxen und Kanzleien",
   subheading: "Vom Garagenbetrieb zum Partner für Praxen",
-  anchorImage: "/images/2025/11/DSC07156-scaled.jpg",
+  anchorImage: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
   anchorImageAlt:
-    "Empfangstresen nach Maß für eine Arztpraxis, gefertigt von Fast Systemmöbel in Espelkamp",
+    "Materialauswahl im Beratungsgespräch für eine Praxiseinrichtung",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
@@ -205,9 +233,9 @@ export const praxisGeschichte = {
     { value: "4.000+", label: "Projekte gefertigt" },
   ],
   paragraphs: [
-    "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation und fertigt auf über 1.000 m² mit moderner CNC-Technik.",
-    "In Ostwestfalen-Lippe haben wir bereits Praxen und Kanzleien eingerichtet, vom einzelnen Anmeldetresen bis zur kompletten Praxis. Wir kennen die Anforderungen an Hygiene, Reinigbarkeit, Diskretion und Termintreue, die ein Praxisprojekt mitbringt, und planen entsprechend.",
-    "Zur Planung gehört für uns mehr als die Möbel selbst. Wir denken Patienten- und Personalwege mit, halten den Empfang übersichtlich und legen Stauraum dorthin, wo er im Alltag gebraucht wird. Beispielprojekte finden Sie in unseren Referenzen.",
+    "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide, 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation.",
+    "In Ostwestfalen-Lippe haben wir bereits Praxen und Kanzleien eingerichtet, vom einzelnen Anmeldetresen bis zur kompletten Praxis. Wir kennen die Anforderungen an Hygiene, Diskretion und Termintreue, die ein Praxisprojekt mitbringt.",
+    "Zur Planung gehört für uns mehr als die Möbel: Wir denken Patienten- und Personalwege mit und legen Stauraum dorthin, wo er im Alltag gebraucht wird. Beispiele zeigen unsere Referenzen.",
   ],
 };
 
@@ -218,20 +246,20 @@ export const praxisMoebelplaner = {
     "Mit unserem Möbelplaner stellen Sie Tresen, Schränke und Wartebereich online zusammen und sehen Maße, Fronten und Oberflächen direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? Rufen Sie uns an unter 05771 9138312.",
   ctaLabel: "Möbelplaner ausprobieren",
   ctaHref: "/moebelplaner/",
-  image: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
-  imageAlt: "Behandlungsraum mit Einbaumöbeln nach Maß",
+  image: "/images/2025/11/20231220_131839984_iOS-scaled.jpg",
+  imageAlt: "Raumteiler aus Holzlamellen nach Maß",
 };
 
 /** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */
 export const praxisCtas = {
   intro: {
-    image: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
+    image: "/images/2025/11/DSC_9814.jpg",
     heading: "Ihre Praxis verdient mehr als Standardmöbel.",
     linkText: "Sprechen Sie mit uns über Ihr Praxisprojekt",
     href: "/kontakt/",
   },
   final: {
-    image: "/images/2025/11/IMG_6123-scaled.jpg",
+    image: "/images/2025/11/DSC_9965.jpg",
     heading: "Vom Anmeldetresen bis zum Behandlungsraum.",
     linkText: "Praxisprojekt jetzt unverbindlich anfragen",
     href: "/kontakt/",

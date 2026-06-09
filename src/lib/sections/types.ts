@@ -35,6 +35,7 @@ export type UseCase =
   | "rooms-showcase"
   | "logo-carousel"
   | "feature-text"
+  | "comparison"
   | "steps"
   | "timeline"
   | "values"

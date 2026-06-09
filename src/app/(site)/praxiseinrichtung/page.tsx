@@ -10,6 +10,7 @@ import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
+import { ContrastCols } from "@/components/sections/shared/ContrastCols";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -22,6 +23,7 @@ import {
   praxisSegments,
   praxisUsp,
   praxisTypische,
+  praxisVergleich,
   praxisWarum,
   praxisGeschichte,
   praxisMoebelplaner,
@@ -83,6 +85,7 @@ export default function PraxiseinrichtungPage() {
       <MnmWeitereLeistungen />
       <MnmTypische {...praxisTypische} />
       <UspHighlight {...praxisUsp} />
+      <ContrastCols {...praxisVergleich} />
       <MnmWarum {...praxisWarum} />
       <MnmGeschichte {...praxisGeschichte} />
       <MnmMoebelplaner {...praxisMoebelplaner} />
