@@ -33,13 +33,21 @@ import {
 
 const PAGE_PATH = "/gastronomieeinrichtung";
 const DESCRIPTION =
-  "Gastronomieeinrichtung nach Maß vom Meisterbetrieb in Espelkamp. Theken, Rückbuffets, Sitzbänke und Hotelmöbel, geplant, gefertigt und im Umkreis von 200 km montiert. Lieferung bundesweit.";
+  "Gastronomieeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Theken, Rückbuffets, Sitzbänke und Hotelmöbel – im Umkreis von 200 km montiert.";
 
 export const metadata: Metadata = {
   title: "Gastronomieeinrichtung nach Maß: Theke, Bar & Hotel",
   description: DESCRIPTION,
   alternates: { canonical: "/gastronomieeinrichtung/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Gastronomieeinrichtung nach Maß: Theke, Bar & Hotel",
     description: DESCRIPTION,
     url: "/gastronomieeinrichtung/",

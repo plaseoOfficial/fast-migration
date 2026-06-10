@@ -15,24 +15,46 @@ import {
   ueberNavCards,
   ueberFallbeispiel,
 } from "@/lib/content/ueber-uns";
+import { SITE_URL } from "@/lib/content";
+import { buildBrandPageJsonLd } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Über uns: Fast Systemmöbel, Meisterbetrieb aus Espelkamp seit 1996",
   description:
     "Vom Garagenstart 1996 zum Meisterbetrieb: Wer hinter Fast Systemmöbel steht, wofür wir stehen und wie wir Möbel nach Maß für Espelkamp und Umgebung planen und fertigen.",
+  alternates: { canonical: "/ueber-uns/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Über uns: Fast Systemmöbel, Meisterbetrieb aus Espelkamp seit 1996",
     description:
       "Vom Garagenstart 1996 zum Meisterbetrieb: Wer hinter Fast Systemmöbel steht, wofür wir stehen und wie wir Möbel nach Maß für Espelkamp und Umgebung planen und fertigen.",
+    url: "/ueber-uns/",
     locale: "de_DE",
-    type: "article",
-    siteName: "fast.side-boost.com",
+    type: "website",
+    siteName: "Fast Systemmöbel",
   },
 };
+
+const jsonLd = buildBrandPageJsonLd({
+  pageUrl: `${SITE_URL}/ueber-uns/`,
+  breadcrumb: ueberHero.breadcrumb,
+});
 
 export default function UeberUnsPage() {
   return (
     <main className="flex flex-col">
+      {/* Structured data: LocalBusiness + BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <UeberHero {...ueberHero} />
       <UeberTimeline {...ueberTimeline} />
       <UeberWofuer {...ueberWofuer} />

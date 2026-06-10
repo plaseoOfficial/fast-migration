@@ -34,18 +34,26 @@ import {
   ladenFaq,
 } from "@/lib/content/ladenbau";
 
-const PAGE_PATH = "/gewerbe/ladenbau";
+const PAGE_PATH = "/ladenbau";
 const DESCRIPTION =
-  "Ladenbau nach Maß vom Meisterbetrieb in Espelkamp. Verkaufstheken, Ladeneinrichtung und komplette Shopkonzepte für Einzelhandel, Gastronomie und Dienstleistung – geplant, gefertigt und im Umkreis von 200 km montiert.";
+  "Ladenbau nach Maß vom Meisterbetrieb in Espelkamp: Verkaufstheken, Ladeneinrichtung und Shopkonzepte – geplant, gefertigt und im Umkreis von 200 km montiert.";
 
 export const metadata: Metadata = {
   title: "Ladenbau nach Maß aus Espelkamp: Theke bis Shopkonzept",
   description: DESCRIPTION,
-  alternates: { canonical: PAGE_PATH },
+  alternates: { canonical: `${PAGE_PATH}/` },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Ladenbau nach Maß aus Espelkamp: Theke bis Shopkonzept",
     description: DESCRIPTION,
-    url: PAGE_PATH,
+    url: `${PAGE_PATH}/`,
     locale: "de_DE",
     type: "article",
     siteName: "Fast Systemmöbel",

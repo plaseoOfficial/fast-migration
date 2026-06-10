@@ -30,8 +30,8 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Privat",
     kind: "dropdown",
     items: [
-      { label: "Möbel nach Maß", href: "/moebel-nach-mass" },
-      { label: "Küchen nach Maß", href: "/kuechen-nach-mass" },
+      { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
+      { label: "Küchen nach Maß", href: "/kuechen-nach-mass/" },
     ],
   },
   {
@@ -41,17 +41,17 @@ export const NAV_ITEMS: NavItem[] = [
       {
         title: "Einrichtung",
         items: [
-          { label: "Gewerbeeinrichtung", href: "/gewerbe" },
-          { label: "Büroeinrichtung", href: "/bueroeinrichtung" },
-          { label: "Gastronomieeinrichtung", href: "/gastronomieeinrichtung" },
+          { label: "Gewerbeeinrichtung", href: "/gewerbe/" },
+          { label: "Büroeinrichtung", href: "/bueroeinrichtung/" },
+          { label: "Gastronomieeinrichtung", href: "/gastronomieeinrichtung/" },
         ],
       },
       {
         title: "Speziallösungen",
         items: [
-          { label: "Ladenbau nach Maß", href: "/gewerbe/ladenbau" },
-          { label: "Serienmöbel", href: "/serienmoebel" },
-          { label: "Praxiseinrichtung", href: "/praxiseinrichtung" },
+          { label: "Ladenbau nach Maß", href: "/ladenbau/" },
+          { label: "Serienmöbel", href: "/serienmoebel/" },
+          { label: "Praxiseinrichtung", href: "/praxiseinrichtung/" },
         ],
       },
     ],
@@ -59,8 +59,8 @@ export const NAV_ITEMS: NavItem[] = [
       image: "/images/2025/11/DSC_0001.jpg",
       heading: "Gewerbeeinrichtung",
       text: "Funktionale Lösungen für Büro, Praxis, Laden und Gastro.",
-      href: "/gewerbe",
-      cta: { label: "Projekt anfragen", href: "/kontakt" },
+      href: "/gewerbe/",
+      cta: { label: "Projekt anfragen", href: "/kontakt/" },
     },
   },
   { label: "Möbelplaner", kind: "link", href: "https://moebelplaner.fast-systemmoebel.de/", highlight: true },
@@ -68,9 +68,9 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Über uns",
     kind: "dropdown",
     items: [
-      { label: "Über uns", href: "/ueber-uns" },
-      { label: "Referenzen", href: "/referenzen" },
+      { label: "Über uns", href: "/ueber-uns/" },
+      { label: "Referenzen", href: "/referenzen/" },
     ],
   },
-  { label: "Kontakt", kind: "cta", href: "/kontakt" },
+  { label: "Kontakt", kind: "cta", href: "/kontakt/" },
 ];

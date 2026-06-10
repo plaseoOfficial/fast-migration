@@ -114,8 +114,8 @@ export const mnmWarum = {
 export const mnmGeschichte = {
   heading: "Qualität aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum modernen Möbelhersteller",
-  anchorImage: "/images/2024/03/test-img-83485.jpg",
-  anchorImageAlt: "Maßmöbel aus eigener Fertigung — Fast Systemmöbel Espelkamp",
+  anchorImage: "/images/2025/11/DSC_9965.jpg",
+  anchorImageAlt: "Lowboard nach Maß mit indirekter Beleuchtung aus eigener Fertigung — Fast Systemmöbel Espelkamp",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
@@ -146,10 +146,10 @@ export const mnmCtas = {
 };
 
 /** Testimonials + FAQ now render via the shared service sections. */
-export const mnmTestimonialsHeading = "Was unseren Kunden dazu sagen";
+export const mnmTestimonialsHeading = "Das sagen unsere Kunden";
 
 export const mnmFaq = {
-  heading: "Häufige Fragen zu unseren Raumkonzepten",
+  heading: "Häufige Fragen zu Möbeln nach Maß",
   items: [
     {
       question: "Arbeiten Sie nur in Espelkamp?",
@@ -157,8 +157,9 @@ export const mnmFaq = {
         "Wir fertigen in Espelkamp, montieren im Umkreis von ca. 200 km und liefern deutschlandweit.",
     },
     {
-      question: "Gibt es eine Garantie?",
-      answer: "Ja, unsere Möbel nach Maß erhalten bis zu 5 Jahre Garantie.",
+      question: "Wie langlebig sind Ihre Möbel nach Maß?",
+      answer:
+        "Wir fertigen in langlebiger Eigenfertigung in unserem Meisterbetrieb – mit robusten Materialien und sauberer Verarbeitung. Es gelten die gesetzlichen Gewährleistungsrechte.",
     },
     {
       question: "Sind Maßmöbel pflegeleicht?",
@@ -222,7 +223,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
     title: "Referenzprojekte",
     description:
-      "Über 25 Jahre Maßanfertigung: realisierte Küchen, Einbauschränke und Wohnmöbel aus unserer Werkstatt in Espelkamp — nach Maß, für jede Nische.",
+      "Maßanfertigung seit 1996: realisierte Küchen, Einbauschränke und Wohnmöbel aus unserer Werkstatt in Espelkamp — nach Maß, für jede Nische.",
     href: "/referenzen/",
     moreLabel: "Projekte ansehen",
   },

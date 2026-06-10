@@ -15,14 +15,12 @@ const DEFAULT_CARDS: ServiceCard[] = [
     title: "Raumkonzepte",
     description:
       "Wir denken Räume ganzheitlich. Durchdachte Konzepte verbinden Architektur, Licht, Materialien und Möbel zu einer harmonischen Einheit – vom ersten Entwurf bis zur Montage.",
-    href: "#",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
     title: "Fertigung",
     description:
       "Moderne Homag-Technik, präzise CNC-Verarbeitung und handwerkliche Qualitätskontrolle sorgen dafür, dass jedes Bauteil exakt passt. Von Einzelmöbeln bis zu kompletten Objekten.",
-    href: "#",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
@@ -36,7 +34,6 @@ const DEFAULT_CARDS: ServiceCard[] = [
     title: "Montage",
     description:
       "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt – bis jedes Detail sitzt.",
-    href: "#",
   },
 ];
 
@@ -160,7 +157,7 @@ export function MnmWeitereLeistungen({
                     color: "rgb(243,243,243)",
                   }}
                 >
-                  {moreLabel}
+                  {card.moreLabel ?? moreLabel}
                 </Link>
               )}
             </div>

@@ -6,17 +6,29 @@ import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCt
 import { MpSchritte } from "@/components/sections/moebelplaner/MpSchritte";
 import { MpIntro } from "@/components/sections/moebelplaner/MpIntro";
 import { MpProzess } from "@/components/sections/moebelplaner/MpProzess";
+import { SITE_URL } from "@/lib/content";
+import { buildServicePageJsonLd } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Möbelplaner online: Maßmöbel kostenlos konfigurieren",
   description:
     "Planen Sie Ihre Möbel nach Maß online – kostenlos und unverbindlich. 3D-Konfigurator mit Fertigung im Meisterbetrieb aus Espelkamp.",
+  alternates: { canonical: "/moebelplaner/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Möbelplaner online: Maßmöbel kostenlos konfigurieren",
     description:
       "Planen Sie Ihre Möbel nach Maß online – kostenlos und unverbindlich. Fertigung aus Espelkamp.",
+    url: "/moebelplaner/",
     locale: "de_DE",
-    type: "article",
+    type: "website",
     siteName: "Fast Systemmöbel",
   },
 };
@@ -46,9 +58,30 @@ const FAQ_ITEMS = [
   },
 ];
 
+/** Trust-CTA after FAQ: link to reference projects for last-minute confidence. */
+const FAQ_TRUST_CTA = { href: "/referenzen/", label: "Referenzprojekte ansehen" };
+
+const jsonLd = buildServicePageJsonLd({
+  pageUrl: `${SITE_URL}/moebelplaner/`,
+  name: "Möbelplaner online",
+  description:
+    "Planen Sie Ihre Möbel nach Maß online – kostenlos und unverbindlich. 3D-Konfigurator mit Fertigung im Meisterbetrieb aus Espelkamp.",
+  breadcrumb: [
+    { label: "Fast Systemmöbel", href: "/" },
+    { label: "Möbelplaner" },
+  ],
+  faq: FAQ_ITEMS,
+  serviceType: "Möbelplanung online",
+});
+
 export default function MoebelplanerPage() {
   return (
     <main className="flex flex-col">
+      {/* Structured data: LocalBusiness + Service + BreadcrumbList + FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ServiceHero
         title="Möbelplaner online – Maßmöbel planen und fertigen lassen in OWL"
         breadcrumb={[
@@ -71,13 +104,18 @@ export default function MoebelplanerPage() {
             image="/images/2025/11/DSC_9938.jpg"
             heading="Ihr Raum verdient mehr als Standard."
             linkText="Sprechen Sie mit uns über Ihr Projekt."
-            href="/kontakt"
+            href="/kontakt/"
           />
         </div>
       </section>
 
       <MpProzess />
-      <FaqSection heading="Häufige Fragen zum Möbelplaner" items={FAQ_ITEMS} />
+      <FaqSection
+        heading="Häufige Fragen zum Möbelplaner"
+        items={FAQ_ITEMS}
+        ctaHref={FAQ_TRUST_CTA.href}
+        ctaLabel={FAQ_TRUST_CTA.label}
+      />
     </main>
   );
 }

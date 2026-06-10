@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/home/HeroSection";
 import { DiscoverSection } from "@/components/sections/home/DiscoverSection";
 import { BereicheSection } from "@/components/sections/home/BereicheSection";
@@ -20,10 +21,24 @@ import {
   homeTestimonials,
   homeFaq,
 } from "@/lib/content/home";
+import { buildHomeJsonLd } from "@/lib/seo/jsonld";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const jsonLd = buildHomeJsonLd({
+  faq: homeFaq.items.map((item) => ({ question: item.q, answer: item.a })),
+});
 
 export default function Home() {
   return (
     <main className="flex flex-col">
+      {/* Structured data: WebSite + Organization + FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroSection {...homeHero} />
       <DiscoverSection {...homeDiscover} />
       <BereicheSection {...homeBereiche} />

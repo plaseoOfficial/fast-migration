@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { LegalPageLayout } from "@/components/layouts/LegalPageLayout";
 
 export const metadata: Metadata = {
@@ -8,6 +9,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/impressum/" },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Impressum | Fast Systemmöbel",
     description: "Angaben gemäß § 5 TMG, Kontakt und Hinweise zur Streitschlichtung.",
     locale: "de_DE",
@@ -23,7 +32,7 @@ export default function ImpressumPage() {
       <address>
         Johann Fast
         <br />
-        Fast Systemmöbel
+        <Link href="/">Fast Systemmöbel</Link>
         <br />
         Alte Waldstraße 32
         <br />

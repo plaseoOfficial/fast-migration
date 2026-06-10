@@ -27,13 +27,21 @@ import {
 
 const PAGE_PATH = "/serienmoebel";
 const DESCRIPTION =
-  "Möbel Serienfertigung nach Maß vom Meisterbetrieb in Espelkamp. Identische Möbel in Serie nach Zeichnung und CAD, seriengleiche Qualität, Lieferung bundesweit, Montage im Umkreis von 200 km.";
+  "Möbel-Serienfertigung vom Meisterbetrieb in Espelkamp: identische Möbel nach Zeichnung und CAD in seriengleicher Qualität, bundesweit geliefert.";
 
 export const metadata: Metadata = {
   title: "Serienmöbel & Serienfertigung nach Maß vom Meisterbetrieb",
   description: DESCRIPTION,
   alternates: { canonical: "/serienmoebel/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Serienmöbel & Serienfertigung nach Maß vom Meisterbetrieb",
     description: DESCRIPTION,
     url: "/serienmoebel/",

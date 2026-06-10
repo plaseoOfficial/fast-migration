@@ -455,7 +455,7 @@ export const SECTION_META = [
       { name: "intro", type: "string", required: false },
       { name: "highlightColumn", type: "number", required: false },
     ],
-    usedOn: ["/gewerbe/ladenbau"],
+    usedOn: ["/ladenbau"],
     screenshot: `${REF}/moebel-nach-mass/06-warum.jpg`,
   },
 

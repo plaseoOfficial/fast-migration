@@ -35,13 +35,21 @@ import {
 
 const PAGE_PATH = "/praxiseinrichtung";
 const DESCRIPTION =
-  "Praxiseinrichtung nach Maß vom Meisterbetrieb in Espelkamp. Empfangstresen, Behandlungs- und Kanzleimöbel für Ärzte, Therapeuten und Kanzleien. Hygienisch, repräsentativ, im Umkreis von 200 km montiert.";
+  "Praxiseinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Empfangstresen, Behandlungs- und Kanzleimöbel – im Umkreis von 200 km geplant und montiert.";
 
 export const metadata: Metadata = {
   title: "Praxiseinrichtung nach Maß: Ärzte, Therapeuten & Kanzleien",
   description: DESCRIPTION,
   alternates: { canonical: `${PAGE_PATH}/` },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Praxiseinrichtung nach Maß: Ärzte, Therapeuten & Kanzleien",
     description: DESCRIPTION,
     url: `${PAGE_PATH}/`,

@@ -24,7 +24,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 │   └─ /kuechen-nach-mass/   Cluster-Pillar ✓ built
 │       └─ (product / ratgeber / cluster-article pages — planned)
 ├─ /gewerbe/              Pillar-Hub (Gewerbe)
-│   ├─ /gewerbe/ladenbau/         Cluster-Pillar ✓ built
+│   ├─ /ladenbau/                 Cluster-Pillar ✓ built (flat URL; parent = /gewerbe/)
 │   ├─ /bueroeinrichtung/         Cluster-Pillar ✓ built (flat URL)
 │   ├─ /gastronomieeinrichtung/   Cluster-Pillar ✓ built (flat URL)
 │   ├─ /serienmoebel/             Cluster-Pillar ✓ built (flat URL)
@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/gewerbe/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
+**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
 
 ## Rules (condensed)
 
@@ -81,7 +81,7 @@ When the proper target page is built, repoint them (and drop this row):
 
 ## Done (wired)
 
-- **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/gewerbe/ladenbau/`, `/serienmoebel/`. *(hub → clusters, silo distribution)*
+- **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/ladenbau/`, `/serienmoebel/`. *(hub → clusters, silo distribution)*
 - **Each Gewerbe cluster → `/gewerbe/`** (breadcrumb "Gewerbe" up-link, Ebene 1→0 within silo).
 - **Each Gewerbe cluster → `/moebelplaner/`** (IntroStats col3 CTA + MnmMoebelplaner CTA) **and `/kontakt/`** (IntroStats col1, both ExpandingImageCtas, FaqSection) — conversion targets.
 - `/kuechen-nach-mass/` → `/moebel-nach-mass/` (breadcrumb + MnmWeitereLeistungen card "Möbel nach Maß").
@@ -101,7 +101,7 @@ When the proper target page is built, repoint them (and drop this row):
   Gewerbe (no silo violation). `built: true` + `contentModule: "referenzen"` in `linking-rules.ts`; added to
   `sitemap.ts` (prio 0.7). New reusable `ReferenzenGrid` section (category `shared`, useCase `reference-grid`).
 - **Outbound (forward) links wired** on `/referenzen/`: breadcrumb → `/`; pillar links → `/moebel-nach-mass/`
-  + `/gewerbe/`; project cards → `/kuechen-nach-mass/`, `/moebel-nach-mass/`, `/gewerbe/ladenbau/`,
+  + `/gewerbe/`; project cards → `/kuechen-nach-mass/`, `/moebel-nach-mass/`, `/ladenbau/`,
   `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/praxiseinrichtung/`; CTAs → `/kontakt/` + `/moebelplaner/`.
   (9 distinct targets, within the brand body-link budget of 10.)
 - **`/ueber-uns/` "Beispielprojekte" → `/referenzen/`** (repointed from interim `/gewerbe/`).
@@ -118,29 +118,33 @@ Wired via `MnmWeitereLeistungen cards`-Prop (neue silo-konforme Karten-Arrays je
 
 Gleichzeitig ersetzt die neue Karten-Array-Übergabe die Default-Cards (die fälschlicherweise auf `/moebel-nach-mass/` — Privat-Silo — zeigten) für alle Gewerbe-Cluster.
 
-- **Mixmarkt project card → `/gewerbe/ladenbau/`** (in-silo cluster). Repoint to a future
-  `/gewerbe/ladenbau/referenzen/mixmarkt/` detail page when that ships (and embed the project as a teaser on
+- **Mixmarkt project card → `/ladenbau/`** (in-silo cluster). Repoint to a future
+  `/ladenbau/referenzen/mixmarkt/` detail page when that ships (and embed the project as a teaser on
   the Ladenbau cluster page) — the aggregator's intended hub→detail wiring.
 
-> **Reverse SOLL trust-links → `/referenzen/` (Status nach 2026-06-Pass):**
-> 6 von 8 wired (see "Done" block below). Noch offen: `/moebelplaner/` und `/kontakt/`.
-> Beide Seiten haben hardcodierte Komponenten ohne Content-Props (`MpSchritte`, `MpIntro`,
-> `MpProzess`, `KontaktFormularHero`, `KontaktStandort`). Ein Link ist dort nur durch eine
-> Markup-Änderung möglich — das verstößt gegen den Architektur-Grundsatz (nur Daten-Props).
-> Lösung: bei der nächsten strukturellen Überarbeitung dieser Seiten einen props-fähigen
-> "Trust-Link"-Slot ergänzen (z. B. optionale `trustLinks`-Prop in `FaqSection` oder ein
-> neuer schlanker `TrustBadge`-Abschnitt vor dem FAQ-Block).
+> **Reverse SOLL trust-links → `/referenzen/` (Status nach 2026-06-Pass):** alle 8 wired.
+> `/moebelplaner/` und `/kontakt/` wurden über den `FaqSection`-CTA-Slot verdrahtet
+> (`ctaHref`/`ctaLabel` als Daten-Prop übergeben, keine Markup-Änderung).
+> `/kontakt/` erhielt dazu eine neue `FaqSection` als letzten Seitenabschnitt mit drei
+> trust-orientierten FAQ-Items und `ctaHref="/referenzen/"` als letzten Schritt vor der Anfrage.
 
 ### Wired in the `audit:links` pass (2026-06)
 
 - **Homepage** `homeRaeume`: `#kontakt` → `/kontakt/`, `#ueber-uns` → `/ueber-uns/` (dead placeholders removed).
 - **Footer Menü** (`FOOTER_LINKS.links`): Home → `/`, Leistungen → `/moebel-nach-mass/`, Über uns → `/ueber-uns/`, Kontakt → `/kontakt/`. *(Ratgeber/FAQ stay `#` until those pages ship.)*
-- **`/gewerbe/ladenbau/`** breadcrumb up-link fixed: retired `/leistungen/gewerbeeinrichtung` → `/gewerbe/` (canonical, no redirect hop; satisfies the cluster→hub MUSS).
-- **Dead `/project/mixmarkt/`** repointed in-silo: `/moebel-nach-mass/` IntroStats col3 → `/kuechen-nach-mass/`; `/gewerbe/` IntroStats col3 → `/gewerbe/ladenbau/`.
+- **`/ladenbau/`** breadcrumb up-link fixed: retired `/leistungen/gewerbeeinrichtung` → `/gewerbe/` (canonical, no redirect hop; satisfies the cluster→hub MUSS). URL moved from `/gewerbe/ladenbau/` to flat `/ladenbau/`; parent in `linking-rules.ts` remains `/gewerbe/`.
+- **Dead `/project/mixmarkt/`** repointed in-silo: `/moebel-nach-mass/` IntroStats col3 → `/kuechen-nach-mass/`; `/gewerbe/` IntroStats col3 → `/ladenbau/`.
 - **`/moebelplaner/`** hero CTA `#moebelplaner` → external planner URL.
 - **`/ueber-uns/` added to `sitemap.ts`** (was built but unlisted).
 - Removed unused legacy `NAV_LINKS` (phantom `#` placeholders).
 - Canonical trailing-slash fixes for `/kontakt`, `/moebel-nach-mass` in touched modules.
+
+### 4 SOLL-Links (2026-06-intern-verlinkung-pass)
+
+- **`/moebelplaner/` → `/referenzen/`** FaqSection CTA (`ctaHref={FAQ_TRUST_CTA.href}`, Anker: „Referenzprojekte ansehen") — letzter Vertrauensaufbau vor der Planung.
+- **`/kontakt/` → `/referenzen/`** Neue `FaqSection` am Seitenende (`ctaHref={KONTAKT_FAQ_CTA.href}`, Anker: „Referenzprojekte ansehen") — 3 trust-orientierte FAQ-Items.
+- **`/referenzen/` → `/gewerbe/`** `referenzenFaq.gewerbeHref` in `referenzen.ts` (Authority → Gewerbe-Hub; `walkValue` erkennt `*href`-Keys).
+- **`/referenzen/` → `/kontakt/`** `referenzenFaq.ctaHref` in `referenzen.ts` + explizit als `ctaHref`-Prop an `FaqSection` übergeben (Conversion).
 
 > Still open (need a render slot / target page, surfaced by `npm run audit:links`):
 > Homepage body MUSS-links to the two hubs + `/moebelplaner/` (header nav covers them site-wide; a

@@ -42,7 +42,7 @@ export const bueroIntroStats = {
   col1Body:
     "Arbeitsplätze, Schränke, Konferenztische — millimetergenau geplant nach Ihrem Grundriss und Ihren Abläufen. Was Sie brauchen, klären wir beim kostenlosen Aufmaß.",
   col1CtaLabel: "Büroprojekt unverbindlich anfragen",
-  col1CtaHref: "/kontakt",
+  col1CtaHref: "/kontakt/",
   col2Body:
     "Beratung, Planung, Fertigung und Montage aus einer Hand — kein Abstimmen zwischen drei Gewerken. Sie sprechen mit den Leuten, die Ihre Büromöbel bauen.",
   counterTarget: 200,
@@ -207,13 +207,13 @@ export const bueroCtas = {
     image: "/images/2025/11/IMG_2673-scaled.jpg",
     heading: "Ihr Büro verdient mehr als Möbel von der Stange.",
     linkText: "Sprechen Sie mit uns über Ihr Büroprojekt",
-    href: "/kontakt",
+    href: "/kontakt/",
   },
   final: {
     image: "/images/2025/11/DSC_9747.jpg",
     heading: "Ihr Büroprojekt — wir bauen es nach Maß.",
     linkText: "Jetzt unverbindlich anfragen",
-    href: "/kontakt",
+    href: "/kontakt/",
   },
 };
 
