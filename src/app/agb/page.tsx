@@ -47,7 +47,7 @@ export default function AgbPage() {
         verpflichtet, derartige Änderungen auch an bereits ausgelieferten Produkten vorzunehmen.
       </p>
       <p>
-        (2) Soweit wird das Angebot des Kunden nicht innerhalb der Frist von Abschnitt I.
+        (2) Soweit wir das Angebot des Kunden nicht innerhalb der Frist von Abschnitt I.
         annehmen, sind diese Unterlagen uns unverzüglich zurückzusenden.
       </p>
 
@@ -140,14 +140,14 @@ export default function AgbPage() {
         Bereitstellungsanzeige abzunehmen. Im Falle der Nichtabnahme können wir von unserem
         gesetzlichen Rechten Gebrauch machen. Verlangen wir Schadenersatz, so beträgt dieser 20 %
         der Nettoauftragssumme. Der Schadenersatz ist höher oder niedriger anzusetzen, wenn wir
-        einen höheren Schaden nachweisen oder der Kunden nachweist, dass ein geringerer oder
+        einen höheren Schaden nachweisen oder der Kunde nachweist, dass ein geringerer oder
         überhaupt kein Schaden entstanden ist.
       </p>
 
       <h2>VI. Eigentumsvorbehalt</h2>
       <p>
         (1) Die Ware bleibt bis zum Ausgleich der uns zustehenden Forderung unser Eigentum. Ist
-        der Kunden Kaufmann im Sinne des HGB, behalten wir uns das Eigentum an allen
+        der Kunde Kaufmann im Sinne des HGB, behalten wir uns das Eigentum an allen
         Liefergegenständen bis zum Ausgleich sämtlicher, auch künftiger und bedingter Forderungen
         aus der Geschäftsbeziehung vor.
       </p>
@@ -155,7 +155,7 @@ export default function AgbPage() {
         (2) Der Kunde ist nicht berechtigt, unter Eigentumsvorbehalt stehende Waren zu verpfänden
         oder zur Sicherheit zu übereignen. Einwirkungen Dritter auf diese Ware, insbesondere
         Pfändungen sind uns unverzüglich anzuzeigen. Bei Zugriffen Dritter auf die Ware,
-        insbesondere Pfändungen, wird der Kunden auf unser Eigentum hinweisen und uns unverzüglich
+        insbesondere Pfändungen, wird der Kunde auf unser Eigentum hinweisen und uns unverzüglich
         benachrichtigen, damit wir unsere Eigentumsrechte durchsetzen können. Soweit der Dritte
         nicht in der Lage ist, uns die in diesem Zusammenhang entstehenden gerichtlichen und
         außergerichtlichen Kosten zu erstatten, haftet hierfür der Kunde.

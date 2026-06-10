@@ -205,7 +205,7 @@ export const FOOTER_LINKS = {
   rechtliches: [
     { label: "Impressum", href: "/impressum/" },
     { label: "Datenschutz", href: "/datenschutz/" },
-    { label: "AGBS", href: "/agb/" },
+    { label: "AGB", href: "/agb/" },
   ],
 };
 
