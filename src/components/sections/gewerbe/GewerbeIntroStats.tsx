@@ -124,7 +124,7 @@ export function GewerbeIntroStats({
 
           {/* Col 1: seit 1996 eyebrow */}
           <div>
-            <h4
+            <p
               style={{
                 fontSize: "30px",
                 lineHeight: "30px",
@@ -134,7 +134,7 @@ export function GewerbeIntroStats({
               }}
             >
               {since}
-            </h4>
+            </p>
             <p
               style={{
                 fontSize: "16px",

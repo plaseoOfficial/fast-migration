@@ -11,8 +11,8 @@ interface FaqSectionProps {
   eyebrow: string;
   heading: string;
   items: FaqItem[];
-  ctaLabel: string;
-  ctaHref: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
 export function FaqSection({ eyebrow, heading, items, ctaLabel, ctaHref }: FaqSectionProps) {
@@ -99,11 +99,13 @@ export function FaqSection({ eyebrow, heading, items, ctaLabel, ctaHref }: FaqSe
           })}
         </div>
 
-        <div className="mt-10 text-center">
-          <Link href={ctaHref} className="fast-btn-pill">
-            {ctaLabel}
-          </Link>
-        </div>
+        {ctaLabel && ctaHref ? (
+          <div className="mt-10 text-center">
+            <Link href={ctaHref} className="fast-btn-pill">
+              {ctaLabel}
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

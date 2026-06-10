@@ -81,7 +81,7 @@ export function GewerbeWarum({
                   "bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                 )}
               >
-                <h4
+                <p
                   className="text-white font-medium text-center px-2"
                   style={{
                     fontFamily:
@@ -91,7 +91,7 @@ export function GewerbeWarum({
                   }}
                 >
                   {item.caption}
-                </h4>
+                </p>
               </figcaption>
             </figure>
           ))}

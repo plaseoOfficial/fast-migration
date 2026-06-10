@@ -179,6 +179,4 @@ export const homeFaq = {
   eyebrow: "Häufige Fragen",
   heading: "FAQ",
   items: FAQS,
-  ctaLabel: "Alle Fragen und Antworten",
-  ctaHref: "#",
 };
