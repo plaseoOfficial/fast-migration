@@ -68,6 +68,12 @@ Core rules (full detail in `ARCHITECTURE.md`):
   (`built: true`, `parent`, `type`). Run **`npm run audit:links`** to check the real link graph
   (dead links, missing MUSS, cross-silo, budgets, anchor diversity), and use the **`intern-verlinkung`**
   agent (`.claude/agents/intern-verlinkung.md`) to insert links + find anchors.
+- **SEO data is validated against reality.** Search-volume/SERP assumptions
+  (`docs/seo/keyword-map.md`, research kits) are checked against live DataForSEO data via
+  **`node scripts/dataforseo.mjs`** (`balance` · `volume` · `serp` · `validate-map` →
+  `docs/seo/keyword-volume-audit.json`); auth = `DATAFORSEO_AUTH` in `.env.local` (gitignored,
+  never commit). The **`seo-daten`** agent (`.claude/agents/seo-daten.md`) runs + interprets
+  this; live calls cost money — batch, don't loop.
 
 # Website Reverse-Engineer Template
 
