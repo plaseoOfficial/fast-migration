@@ -48,7 +48,7 @@ export function ReferenzenHero({ title, breadcrumb, images, intro }: ReferenzenH
       {/* Background — collage grid (or single full-bleed image) */}
       {isCollage ? (
         <div
-          className="absolute inset-0 z-0 grid grid-cols-2 grid-rows-2 gap-[2px] lg:grid-cols-4 lg:grid-rows-1"
+          className="fast-fade absolute inset-0 z-0 grid grid-cols-2 grid-rows-2 gap-[2px] lg:grid-cols-4 lg:grid-rows-1"
           style={{ backgroundColor: "rgb(45,45,45)" }}
           aria-hidden="true"
         >
@@ -71,7 +71,7 @@ export function ReferenzenHero({ title, breadcrumb, images, intro }: ReferenzenH
           alt={images[0].alt}
           fill
           priority
-          className="z-0 object-cover object-[50%_50%]"
+          className="fast-fade z-0 object-cover object-[50%_50%]"
         />
       )}
 
@@ -105,13 +105,18 @@ export function ReferenzenHero({ title, breadcrumb, images, intro }: ReferenzenH
           {/* Left: h1 + breadcrumb (~66%) */}
           <div className="lg:w-[66%]">
             <h1
-              className="text-white font-medium text-[28px] leading-[1.15] sm:text-[44px] sm:leading-[1.1] lg:text-[70px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
+              className="fast-rise text-white font-medium text-[28px] leading-[1.15] sm:text-[44px] sm:leading-[1.1] lg:text-[70px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
               lang="de"
+              style={{ animationDelay: "0.1s" }}
             >
               {title}
             </h1>
 
-            <nav aria-label="Breadcrumb" className="mt-4 flex flex-wrap items-center gap-1">
+            <nav
+              aria-label="Breadcrumb"
+              className="fast-rise mt-4 flex flex-wrap items-center gap-1"
+              style={{ animationDelay: "0.25s" }}
+            >
               {breadcrumb.map((item, index) => {
                 const isLast = index === breadcrumb.length - 1;
                 return (
@@ -141,8 +146,8 @@ export function ReferenzenHero({ title, breadcrumb, images, intro }: ReferenzenH
           {intro && (
             <div className="mt-6 lg:mt-0 lg:w-[30%] lg:flex-shrink-0">
               <p
-                className="font-medium text-white/70"
-                style={{ fontSize: "15px", lineHeight: "23.8px" }}
+                className="fast-rise font-medium text-white/70"
+                style={{ fontSize: "15px", lineHeight: "23.8px", animationDelay: "0.4s" }}
               >
                 {intro}
               </p>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface BueroMoebelplanerCtaProps {
   heading: string;
@@ -24,7 +25,7 @@ export function BueroMoebelplanerCta({ heading, body, ctaLabel, ctaHref, image, 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left: text */}
-          <div>
+          <Reveal>
             <h2
               className="text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] font-medium tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px]"
               style={{ color: "rgb(61,61,61)" }}
@@ -45,10 +46,10 @@ export function BueroMoebelplanerCta({ heading, body, ctaLabel, ctaHref, image, 
               {ctaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
             </Link>
-          </div>
+          </Reveal>
 
           {/* Right: image */}
-          <div className="w-full">
+          <Reveal delay={120} className="w-full">
             <Image
               src={image}
               alt={imageAlt}
@@ -56,7 +57,7 @@ export function BueroMoebelplanerCta({ heading, body, ctaLabel, ctaHref, image, 
               height={420}
               className="w-full h-auto object-cover"
             />
-          </div>
+          </Reveal>
 
         </div>
       </div>

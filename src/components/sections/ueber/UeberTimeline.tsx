@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
 interface TimelineYear {
@@ -205,7 +206,9 @@ export function UeberTimeline({
                   </div>
 
                   {/* Content card */}
-                  <div
+                  <Reveal
+                    y={0}
+                    delay={i * 80}
                     className={cn(
                       "border p-7 transition-opacity duration-300 lg:p-10",
                       cardLeft ? "lg:order-1" : "lg:order-2"
@@ -260,7 +263,7 @@ export function UeberTimeline({
                     >
                       {y.body}
                     </p>
-                  </div>
+                  </Reveal>
                 </li>
               );
             })}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ServiceCard } from "@/types/mnm";
+import { Reveal } from "@/components/Reveal";
 
 const DEFAULT_CARDS: ServiceCard[] = [
   {
@@ -97,9 +98,10 @@ export function MnmWeitereLeistungen({
         {/* Cards grid */}
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {/* Dark cards */}
-          {cards.map((card) => (
-            <div
+          {cards.map((card, i) => (
+            <Reveal
               key={card.title}
+              delay={i * 80}
               className="flex flex-col lg:min-h-[430px]"
               style={{
                 backgroundColor: "rgb(61,61,61)",
@@ -163,11 +165,12 @@ export function MnmWeitereLeistungen({
                   {moreLabel}
                 </Link>
               )}
-            </div>
+            </Reveal>
           ))}
 
           {/* White "&" card (cell 6) */}
-          <div
+          <Reveal
+            delay={cards.length * 80}
             className="flex flex-col lg:min-h-[430px]"
             style={{
               backgroundColor: "rgb(255,255,255)",
@@ -198,7 +201,7 @@ export function MnmWeitereLeistungen({
             >
               {ampersandText}
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

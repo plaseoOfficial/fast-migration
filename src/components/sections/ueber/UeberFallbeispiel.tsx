@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/Reveal";
 
 interface UeberFallbeispielProps {
   eyebrow: string;
@@ -58,7 +59,7 @@ export function UeberFallbeispiel({
 
         {/* Image + quote */}
         <div className="mt-12 grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:mt-16">
-          <div className="relative aspect-[3/4] w-full overflow-hidden md:aspect-auto md:min-h-[420px]">
+          <Reveal className="relative aspect-[3/4] w-full overflow-hidden md:aspect-auto md:min-h-[420px]">
             <Image
               src={image}
               alt={imageAlt}
@@ -66,9 +67,10 @@ export function UeberFallbeispiel({
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
-          </div>
+          </Reveal>
 
-          <div
+          <Reveal
+            delay={120}
             className="flex flex-col justify-center p-8 lg:p-14"
             style={{ backgroundColor: PANEL }}
           >
@@ -79,7 +81,7 @@ export function UeberFallbeispiel({
             >
               {quote}
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

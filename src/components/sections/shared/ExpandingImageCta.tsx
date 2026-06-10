@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface ExpandingImageCtaProps {
   image: string;
@@ -47,7 +48,7 @@ export function ExpandingImageCta({
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start">
+      <Reveal className="relative z-10 flex flex-col items-start">
         <h2
           className="text-white font-medium text-[28px] sm:text-[40px] leading-[1.1] lg:text-[65px] lg:leading-[71.5px] max-w-full lg:max-w-[60%] tracking-[-1px] sm:tracking-[-2px]"
         >
@@ -61,7 +62,7 @@ export function ExpandingImageCta({
           <span>{linkText}</span>
           <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle transition-transform group-hover:translate-x-1" />
         </Link>
-      </div>
+      </Reveal>
     </div>
   );
 }

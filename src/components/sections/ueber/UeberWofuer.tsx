@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface WofuerColumn {
   title: string;
@@ -59,7 +60,7 @@ export function UeberWofuer({
 
         {/* Image + two text columns */}
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-12">
-          <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:min-h-[180px]">
+          <Reveal className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:min-h-[180px]">
             <Image
               src={image}
               alt={imageAlt}
@@ -67,10 +68,10 @@ export function UeberWofuer({
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
-          </div>
+          </Reveal>
 
-          {columns.map((col) => (
-            <div key={col.title}>
+          {columns.map((col, i) => (
+            <Reveal key={col.title} delay={120 + i * 120}>
               <h3
                 className="font-medium"
                 style={{ fontSize: "18px", lineHeight: "1.3", color: "rgb(61,61,61)" }}
@@ -83,7 +84,7 @@ export function UeberWofuer({
               >
                 {col.body}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

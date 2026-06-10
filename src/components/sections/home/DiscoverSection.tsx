@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Blurb } from "@/types";
 import { HotspotLightbulbIcon, HotspotBoxIcon, HotspotLayersIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface Hotspot {
   x: number;
@@ -34,8 +35,11 @@ export function DiscoverSection({
 }: DiscoverSectionProps) {
   return (
     <section
-      className="fast-section w-full"
-      style={{ backgroundColor: "rgba(203, 191, 181, 0.59)" }}
+      className="fast-section fast-panel w-full"
+      // Opaque equivalent of the beige wash rgba(203,191,181,0.59) over the
+      // white body — pixel-identical at rest, but opaque so it fully covers the
+      // pinned hero as this panel slides over it.
+      style={{ backgroundColor: "rgb(224, 217, 211)" }}
     >
       <div className="mx-auto max-w-[1280px] px-6">
         <p className="fast-eyebrow mb-4 text-center">
@@ -56,7 +60,7 @@ export function DiscoverSection({
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left: kitchen photo with hotspots */}
-          <div className="lg:col-span-7">
+          <Reveal className="lg:col-span-7">
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-md">
               <Image
                 src={kitchenImage}
@@ -95,10 +99,10 @@ export function DiscoverSection({
                 );
               })}
             </div>
-          </div>
+          </Reveal>
 
           {/* Right: horizontal photo of team + intro paragraph */}
-          <div className="lg:col-span-5 flex flex-col gap-8">
+          <Reveal className="lg:col-span-5 flex flex-col gap-8" delay={120}>
             <div className="relative h-44 lg:h-56 w-full overflow-hidden rounded-md">
               <Image
                 src={teamImage}
@@ -128,13 +132,13 @@ export function DiscoverSection({
                 {teamBody}
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* 4 blurb cards row — Urbanist h4 18px 500 */}
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {blurbs.map((b) => (
-            <div key={b.title}>
+          {blurbs.map((b, i) => (
+            <Reveal key={b.title} delay={i * 90}>
               <Image
                 src={b.icon}
                 alt=""
@@ -160,7 +164,7 @@ export function DiscoverSection({
               >
                 {b.description}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

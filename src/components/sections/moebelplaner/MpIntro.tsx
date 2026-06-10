@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 export function MpIntro() {
   return (
@@ -11,7 +12,7 @@ export function MpIntro() {
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* 3-col header */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
           {/* Col 1: eyebrow */}
           <div>
             <h4
@@ -63,7 +64,7 @@ export function MpIntro() {
             Schubladen und Materialstärke gibt, die Maße prüft und die Möbel
             direkt in Espelkamp fertigt.
           </p>
-        </div>
+        </Reveal>
 
         {/* Iframe embed */}
         <div id="moebelplaner" className="mt-10">

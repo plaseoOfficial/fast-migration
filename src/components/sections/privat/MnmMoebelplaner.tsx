@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 // Decorative yellow line motif — a right-triangle of increasing-width bars
 const LINE_WIDTHS = [20, 32, 46, 60, 74, 88, 102, 116, 128, 140, 152, 164, 174, 184];
@@ -48,7 +49,7 @@ export function MnmMoebelplaner({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left — text column (vertically centered against the image on desktop) */}
-          <div className="pb-12 lg:pb-0">
+          <Reveal className="pb-12 lg:pb-0">
             <h2
               className="text-white font-medium text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px]"
             >
@@ -68,10 +69,10 @@ export function MnmMoebelplaner({
               {ctaLabel}
               <ArrowRightIcon className="inline-block h-[1em] w-auto ml-2 align-middle" />
             </Link>
-          </div>
+          </Reveal>
 
           {/* Right — image + yellow line motif */}
-          <div className="self-end flex flex-col">
+          <Reveal delay={120} className="self-end flex flex-col">
             {/* Yellow line motif — right-aligned, sits above / beside image bottom */}
             <div className="flex justify-end mb-4 pr-0">
               <YellowLineMotif />
@@ -87,7 +88,7 @@ export function MnmMoebelplaner({
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </div>

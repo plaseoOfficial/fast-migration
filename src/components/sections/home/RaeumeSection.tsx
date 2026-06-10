@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, ArrowUpRightIcon, StarIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface RaeumeSectionProps {
   heading: string;
@@ -45,7 +46,7 @@ export function RaeumeSection({
     >
       <div className="mx-auto max-w-[1280px] px-6">
         {/* Header — big bold heading + supporting text (left-aligned) */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <Reveal className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <h2
             className="max-w-[820px]"
             style={{
@@ -87,14 +88,15 @@ export function RaeumeSection({
               <ArrowRightIcon className="h-4 w-4" />
             </Link>
           </div>
-        </div>
+        </Reveal>
 
         {/* Staggered gallery — photo + caption only */}
         <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:items-start lg:gap-10">
           {/* Unsere Geschichte → Über uns */}
+          <Reveal className="sm:col-span-2 lg:col-span-1">
           <Link
             href={storyHref}
-            className="group relative block aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)] sm:col-span-2 lg:col-span-1"
+            className="group relative block aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)]"
           >
             <Image
               src={storyImage}
@@ -121,9 +123,11 @@ export function RaeumeSection({
               </span>
             </div>
           </Link>
+          </Reveal>
 
           {/* Rückzugsort (offset down for rhythm) */}
-          <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)] lg:mt-20">
+          <Reveal className="lg:mt-20" delay={100}>
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)]">
             <Image
               src={kitchenImage}
               alt={kitchenCaption}
@@ -139,9 +143,11 @@ export function RaeumeSection({
               {kitchenCaption}
             </h3>
           </div>
+          </Reveal>
 
           {/* Wohnumgebung (offset down) */}
-          <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)] lg:mt-10">
+          <Reveal className="lg:mt-10" delay={200}>
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-md bg-[rgb(61,61,61)]">
             <Image
               src={bathImage}
               alt={bathCaption}
@@ -157,10 +163,11 @@ export function RaeumeSection({
               {bathCaption}
             </h3>
           </div>
+          </Reveal>
         </div>
 
         {/* Trust — understated, left-aligned */}
-        <div className="mt-16 flex items-center gap-3">
+        <Reveal className="mt-16 flex items-center gap-3">
           <div className="flex items-center gap-1" style={{ color: "rgba(61,61,61,0.55)" }}>
             {Array.from({ length: 5 }).map((_, i) => (
               <StarIcon key={i} className="h-3.5 w-3.5" />
@@ -172,7 +179,7 @@ export function RaeumeSection({
           >
             {badge}
           </span>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

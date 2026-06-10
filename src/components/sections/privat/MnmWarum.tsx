@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface WarumImage {
   src: string;
@@ -20,37 +21,39 @@ interface MnmWarumProps {
 
 export function MnmWarum({ heading, paragraph, images, reverse = false, imageColumns = 3 }: MnmWarumProps) {
   const imageCol = (
-    <div
-      className={cn(
-        "gap-2 [&>*]:mb-2 [&>*]:break-inside-avoid",
-        imageColumns === 1
-          ? "[column-count:1]"
-          : "[column-count:2]",
-        imageColumns === 3
-          ? "lg:[column-count:3]"
-          : imageColumns === 2
-          ? "lg:[column-count:2]"
-          : "lg:[column-count:1]"
-      )}
-      style={{ columnGap: "8px" }}
-    >
-      {images.map((img) => (
-        <div key={img.src} className="break-inside-avoid mb-2">
-          <Image
-            src={img.src}
-            alt={img.alt}
-            width={img.width}
-            height={img.height}
-            className="w-full h-auto block"
-            style={{ display: "block" }}
-          />
-        </div>
-      ))}
-    </div>
+    <Reveal>
+      <div
+        className={cn(
+          "gap-2 [&>*]:mb-2 [&>*]:break-inside-avoid",
+          imageColumns === 1
+            ? "[column-count:1]"
+            : "[column-count:2]",
+          imageColumns === 3
+            ? "lg:[column-count:3]"
+            : imageColumns === 2
+            ? "lg:[column-count:2]"
+            : "lg:[column-count:1]"
+        )}
+        style={{ columnGap: "8px" }}
+      >
+        {images.map((img) => (
+          <div key={img.src} className="break-inside-avoid mb-2">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              className="w-full h-auto block"
+              style={{ display: "block" }}
+            />
+          </div>
+        ))}
+      </div>
+    </Reveal>
   );
 
   const textCol = (
-    <div className="flex flex-col">
+    <Reveal delay={120} className="flex flex-col">
       <h2
         className="text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] font-medium tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] text-left"
         style={{ color: "rgb(61,61,61)" }}
@@ -71,7 +74,7 @@ export function MnmWarum({ heading, paragraph, images, reverse = false, imageCol
         <span className="h-3 w-3 rounded-full" style={{ backgroundColor: "rgb(237,168,33)" }} />
         <span className="h-3 w-3 rounded-full" style={{ backgroundColor: "rgb(237,168,33)" }} />
       </div>
-    </div>
+    </Reveal>
   );
 
   return (

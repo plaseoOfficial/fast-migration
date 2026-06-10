@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
 const URBANIST: React.CSSProperties = {
@@ -90,7 +91,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-10 lg:gap-14 items-center">
 
           {/* Left — heading + breadcrumb + quick contact */}
-          <div>
+          <Reveal>
             <p
               className="uppercase tracking-[2px] text-[14px] font-medium mb-3"
               style={{ color: "rgba(255,255,255,0.6)", ...URBANIST }}
@@ -146,10 +147,11 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                 Mo&ndash;Fr&nbsp;&nbsp;6:00&ndash;17:00 Uhr
               </span>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right — form card */}
-          <div
+          <Reveal
+            y={0}
             className="px-6 py-8 lg:px-10 lg:py-10"
             style={{ backgroundColor: "rgb(61,61,61)" }}
           >
@@ -260,7 +262,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                 </button>
               </form>
             )}
-          </div>
+          </Reveal>
 
         </div>
       </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon, ChevronRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface NavCard {
   heading: string;
@@ -20,9 +21,9 @@ export function UeberNavCards({ cards }: UeberNavCardsProps) {
       style={{ fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif" }}
     >
       <div className="grid grid-cols-1 md:grid-cols-3">
-        {cards.map((card) => (
+        {cards.map((card, i) => (
+          <Reveal key={card.heading} delay={i * 80}>
           <Link
-            key={card.heading}
             href={card.href}
             className="group relative isolate flex min-h-[420px] flex-col justify-between overflow-hidden border border-white/20 p-8 lg:min-h-[620px] lg:p-10"
           >
@@ -57,6 +58,7 @@ export function UeberNavCards({ cards }: UeberNavCardsProps) {
               <ChevronRightIcon className="h-3 w-auto" />
             </span>
           </Link>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface GalleryItem {
   src: string;
@@ -34,7 +35,7 @@ export function GewerbeWarum({
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* Header — centered */}
-        <div className="flex flex-col items-center text-center">
+        <Reveal className="flex flex-col items-center text-center">
           <h2
             className="text-[36px] leading-[1.05] lg:text-[84px] lg:leading-[84px] font-medium mx-auto tracking-[-1.5px] lg:tracking-[-3px]"
             style={{
@@ -53,10 +54,10 @@ export function GewerbeWarum({
           >
             {eyebrow}
           </p>
-        </div>
+        </Reveal>
 
         {/* Masonry Gallery */}
-        <div
+        <Reveal
           className={cn(
             "mt-10",
             "columns-1 sm:columns-2 md:columns-3 lg:columns-5 gap-3",
@@ -94,24 +95,27 @@ export function GewerbeWarum({
               </figcaption>
             </figure>
           ))}
-        </div>
+        </Reveal>
 
         {/* Lower 2-col block */}
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left: body text */}
-          <p
-            className="font-medium"
-            style={{
-              fontSize: "16px",
-              lineHeight: "28px",
-              color: "rgb(23,33,33)",
-            }}
-          >
-            {bodyParagraph}
-          </p>
+          <Reveal>
+            <p
+              className="font-medium"
+              style={{
+                fontSize: "16px",
+                lineHeight: "28px",
+                color: "rgb(23,33,33)",
+              }}
+            >
+              {bodyParagraph}
+            </p>
+          </Reveal>
 
           {/* Right: dark fact box — single centered H3, no bullet list */}
-          <div
+          <Reveal
+            delay={120}
             className="flex items-center justify-center min-h-[160px] px-12 py-[48px] lg:py-[64px]"
             style={{ backgroundColor: "rgb(45,45,45)" }}
           >
@@ -127,7 +131,7 @@ export function GewerbeWarum({
             >
               {factBox}
             </h3>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
         alt={imageAlt}
         fill
         priority
-        className="object-cover object-[50%_50%] z-0"
+        className="object-cover object-[50%_50%] z-0 fast-fade"
       />
 
       {/* Gradient overlay */}
@@ -70,8 +70,9 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
           {/* Left column: h1 + breadcrumb (~66%) */}
           <div className="lg:w-[66%]">
             <h1
-              className="text-white font-medium text-[26px] leading-[1.15] sm:text-[48px] sm:leading-[1.1] lg:text-[70px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto"
+              className="text-white font-medium text-[26px] leading-[1.15] sm:text-[48px] sm:leading-[1.1] lg:text-[70px] lg:leading-[84px] tracking-[-1px] sm:tracking-[-2px] lg:tracking-[-3px] max-lg:break-words max-lg:hyphens-auto fast-rise"
               lang="de"
+              style={{ animationDelay: "0.1s" }}
             >
               {title}
             </h1>
@@ -79,7 +80,8 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
             {/* Breadcrumb */}
             <nav
               aria-label="Breadcrumb"
-              className="mt-4 flex flex-wrap items-center gap-1"
+              className="mt-4 flex flex-wrap items-center gap-1 fast-rise"
+              style={{ animationDelay: "0.4s" }}
             >
               {breadcrumb.map((item, index) => {
                 const isLast = index === breadcrumb.length - 1;
@@ -107,7 +109,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
           </div>
 
           {/* Right column: intro paragraph (~30%), bottom-aligned */}
-          <div className="mt-6 lg:mt-0 lg:w-[30%] lg:flex-shrink-0">
+          <div className="mt-6 lg:mt-0 lg:w-[30%] lg:flex-shrink-0 fast-rise" style={{ animationDelay: "0.25s" }}>
             <p
               className="font-medium text-white"
               style={{ fontSize: "15px", lineHeight: "23.8px" }}

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 function useCountUp(target: number, duration: number) {
   const [value, setValue] = useState(0);
@@ -119,7 +120,7 @@ export function GewerbeIntroStats({
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
 
         {/* Row A — 3 columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
 
           {/* Col 1: seit 1996 eyebrow */}
           <div>
@@ -175,7 +176,7 @@ export function GewerbeIntroStats({
             </strong>
             {" "}{introAfter}
           </p>
-        </div>
+        </Reveal>
 
         {/* Row B — full-width image band */}
         <div className="mt-9 h-[260px] lg:h-[430px] w-full overflow-hidden">
@@ -190,7 +191,7 @@ export function GewerbeIntroStats({
         </div>
 
         {/* Row C — 3 columns */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <Reveal className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
           {/* Col 1: Warum Maßarbeit zählt */}
           <div>
@@ -314,7 +315,7 @@ export function GewerbeIntroStats({
             </Link>
           </div>
 
-        </div>
+        </Reveal>
       </div>
     </section>
   );

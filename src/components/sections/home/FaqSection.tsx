@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { FaqItem } from "@/types";
 import { PlusIcon, MinusIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface FaqSectionProps {
   eyebrow: string;
@@ -42,8 +43,9 @@ export function FaqSection({ eyebrow, heading, items, ctaLabel, ctaHref }: FaqSe
           {items.map((item, i) => {
             const expanded = open === i;
             return (
-              <div
+              <Reveal
                 key={item.q}
+                delay={i * 60}
                 className={cn(
                   "rounded-md border transition-colors",
                   expanded ? "border-[rgb(237,168,33)] bg-white" : "border-black/10 bg-white"
@@ -76,12 +78,23 @@ export function FaqSection({ eyebrow, heading, items, ctaLabel, ctaHref }: FaqSe
                     {expanded ? <MinusIcon className="h-4 w-4" /> : <PlusIcon className="h-4 w-4" />}
                   </span>
                 </button>
-                {expanded && (
-                  <div className="px-6 pb-6 pt-0 fast-body" style={{ fontSize: 14, lineHeight: "23.8px" }}>
-                    {item.a}
+                {/* Height-eased reveal: the 0fr→1fr grid row animates open/
+                    closed smoothly. Answer stays in the DOM (good for SEO),
+                    clipped by overflow-hidden while collapsed. */}
+                <div
+                  className="grid transition-[grid-template-rows] duration-300 ease-out"
+                  style={{ gridTemplateRows: expanded ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <div
+                      className="px-6 pb-6 pt-0 fast-body"
+                      style={{ fontSize: 14, lineHeight: "23.8px" }}
+                    >
+                      {item.a}
+                    </div>
                   </div>
-                )}
-              </div>
+                </div>
+              </Reveal>
             );
           })}
         </div>

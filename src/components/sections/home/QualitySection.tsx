@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
+import { Reveal } from "@/components/Reveal";
 
 interface QualitySectionProps {
   headingLines: string[];
@@ -14,7 +15,7 @@ export function QualitySection({ headingLines, paragraphs, images }: QualitySect
       style={{ backgroundColor: "rgba(203, 191, 181, 0.59)" }}
     >
       <div className="mx-auto max-w-[1280px] px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12">
           <h2
             className="lg:col-span-8"
             style={{
@@ -39,12 +40,13 @@ export function QualitySection({ headingLines, paragraphs, images }: QualitySect
               </p>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-          {images.map((src) => (
-            <div
+          {images.map((src, i) => (
+            <Reveal
               key={src}
+              delay={i * 100}
               className="relative aspect-[3/4] w-full overflow-hidden rounded-md group"
             >
               <Image
@@ -54,7 +56,7 @@ export function QualitySection({ headingLines, paragraphs, images }: QualitySect
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

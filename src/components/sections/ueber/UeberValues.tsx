@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface ValueBlock {
   title: string;
@@ -80,7 +81,7 @@ export function UeberValues({
       <div className="mx-auto w-full max-w-[1280px] px-6 py-[48px] lg:px-8 lg:py-[84px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-4 lg:gap-8">
           {/* Left quarter: Innovation + Mission */}
-          <div className="flex flex-col lg:justify-between lg:gap-16">
+          <Reveal delay={0} className="flex flex-col lg:justify-between lg:gap-16">
             <ValueItem {...innovation} kind="ruler" />
             <div>
               <h2
@@ -101,10 +102,10 @@ export function UeberValues({
                 <ArrowRightIcon className="h-4 w-auto transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
-          </div>
+          </Reveal>
 
           {/* Center half: figure */}
-          <div className="relative order-first min-h-[360px] lg:order-none lg:col-span-2 lg:min-h-[560px]">
+          <Reveal className="relative order-first min-h-[360px] lg:order-none lg:col-span-2 lg:min-h-[560px]">
             <Image
               src={figure}
               alt={figureAlt}
@@ -112,13 +113,13 @@ export function UeberValues({
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-contain object-bottom"
             />
-          </div>
+          </Reveal>
 
           {/* Right quarter: Tradition + Leidenschaft */}
-          <div className="flex flex-col lg:justify-between lg:gap-16">
+          <Reveal delay={100} className="flex flex-col lg:justify-between lg:gap-16">
             <ValueItem {...tradition} kind="quote" />
             <ValueItem {...leidenschaft} kind="quote" />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

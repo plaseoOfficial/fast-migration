@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface MnmProcessProps {
   heading: string;
@@ -21,7 +22,7 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left column */}
-          <div>
+          <Reveal delay={120}>
             {/* Heading */}
             <h2
               className={cn(
@@ -60,10 +61,10 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
                 style={{ backgroundColor: "rgb(237,168,33)" }}
               />
             </div>
-          </div>
+          </Reveal>
 
           {/* Right column — image */}
-          <div className="w-full">
+          <Reveal className="w-full">
             <Image
               src={image}
               alt={imageAlt}
@@ -71,7 +72,7 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
               height={420}
               className="w-full h-auto object-cover"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

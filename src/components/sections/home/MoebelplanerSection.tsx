@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Reveal } from "@/components/Reveal";
 
 interface MoebelplanerSectionProps {
   eyebrow: string;
@@ -22,21 +23,23 @@ export function MoebelplanerSection({
       style={{ backgroundColor: "rgba(203, 191, 181, 0.59)" }}
     >
       <div className="mx-auto max-w-[1280px] px-6">
-        <p className="fast-eyebrow mb-4 text-center">
-          {eyebrow}
-        </p>
-        <h2
-          className="mb-12 text-center"
-          style={{
-            fontSize: "clamp(36px, 5vw, 65px)",
-            lineHeight: 1,
-            letterSpacing: "-2px",
-            fontWeight: 500,
-            color: "rgb(61,61,61)",
-          }}
-        >
-          {heading}
-        </h2>
+        <Reveal>
+          <p className="fast-eyebrow mb-4 text-center">
+            {eyebrow}
+          </p>
+          <h2
+            className="mb-12 text-center"
+            style={{
+              fontSize: "clamp(36px, 5vw, 65px)",
+              lineHeight: 1,
+              letterSpacing: "-2px",
+              fontWeight: 500,
+              color: "rgb(61,61,61)",
+            }}
+          >
+            {heading}
+          </h2>
+        </Reveal>
 
         <div className="relative w-full overflow-hidden rounded-md bg-white shadow-md">
           <iframe
@@ -48,7 +51,7 @@ export function MoebelplanerSection({
           />
         </div>
 
-        <div className="mt-10 text-center">
+        <Reveal className="mt-10 text-center">
           <Link
             href={ctaHref}
             target="_blank"
@@ -57,7 +60,7 @@ export function MoebelplanerSection({
           >
             {ctaLabel}
           </Link>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
