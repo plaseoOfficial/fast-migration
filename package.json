@@ -34,7 +34,8 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run typecheck && npm run build",
     "gen:catalog": "node --experimental-strip-types scripts/gen-section-catalog.mjs",
-    "audit:links": "node --experimental-strip-types scripts/audit-internal-links.mjs"
+    "audit:links": "node --experimental-strip-types scripts/audit-internal-links.mjs",
+    "seo:data": "node scripts/dataforseo.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
