@@ -49,11 +49,11 @@ export function KontaktStandort() {
             className="w-full px-8 py-8 lg:order-1 lg:px-10 lg:py-10"
             style={{ backgroundColor: "rgba(231,224,218,0.96)" }}
           >
-            <h4
+            <h3
               className="mb-4 text-[28px] leading-[1.1] font-medium text-black lg:text-[50px] lg:leading-[60px] tracking-[-1px] lg:tracking-[-2px]"
             >
               Unser Standort
-            </h4>
+            </h3>
 
             <address
               className="not-italic text-[20px] leading-[32px] font-medium text-black"

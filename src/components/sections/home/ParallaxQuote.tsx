@@ -46,7 +46,7 @@ export function ParallaxQuote({ bgImage, heading, body, quote }: ParallaxQuotePr
         >
           {body}
         </p>
-        <h4
+        <blockquote
           className="italic text-white/95 mx-auto max-w-[820px]"
           style={{
             fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
@@ -56,7 +56,7 @@ export function ParallaxQuote({ bgImage, heading, body, quote }: ParallaxQuotePr
           }}
         >
           {quote}
-        </h4>
+        </blockquote>
         </div>
       </Reveal>
     </section>

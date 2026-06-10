@@ -81,7 +81,7 @@ export function DiscoverSection({
                   >
                     <Icon className="h-9 w-9 lg:h-11 lg:w-11 drop-shadow-lg transition-transform group-hover:scale-110" />
                     <div className="invisible group-hover:visible absolute left-1/2 top-full mt-2 -translate-x-1/2 w-56 rounded-md bg-white p-3 shadow-lg z-10">
-                      <h3
+                      <p
                         className="mb-1"
                         style={{
                           fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -92,7 +92,7 @@ export function DiscoverSection({
                         }}
                       >
                         {h.title}
-                      </h3>
+                      </p>
                       <p className="fast-body-sm text-xs">{h.body}</p>
                     </div>
                   </button>
@@ -113,7 +113,7 @@ export function DiscoverSection({
               />
             </div>
             <div>
-              <h4
+              <h3
                 className="mb-4"
                 style={{
                   fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
@@ -124,7 +124,7 @@ export function DiscoverSection({
                 }}
               >
                 {teamHeading}
-              </h4>
+              </h3>
               <p
                 className="fast-body"
                 style={{ fontSize: 14, lineHeight: "23.8px" }}
@@ -146,7 +146,7 @@ export function DiscoverSection({
                 height={56}
                 className="mb-4 h-14 w-14"
               />
-              <h4
+              <h3
                 className="mb-2"
                 style={{
                   fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -157,7 +157,7 @@ export function DiscoverSection({
                 }}
               >
                 {b.title}
-              </h4>
+              </h3>
               <p
                 className="fast-body"
                 style={{ fontSize: 14, lineHeight: "23.8px" }}

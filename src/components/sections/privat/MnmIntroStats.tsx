@@ -121,7 +121,7 @@ export function MnmIntroStats({
         <Reveal className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
           {/* Col 1: seit 1996 eyebrow */}
           <div>
-            <h4
+            <p
               style={{
                 fontSize: "22px",
                 lineHeight: "22px",
@@ -131,7 +131,7 @@ export function MnmIntroStats({
               }}
             >
               {since}
-            </h4>
+            </p>
             <p
               style={{
                 fontSize: "16px",
