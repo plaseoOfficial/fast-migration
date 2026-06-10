@@ -4,10 +4,18 @@ import { LegalPageLayout } from "@/components/layouts/LegalPageLayout";
 export const metadata: Metadata = {
   title: "AGB | Fast Systemmöbel",
   description:
-    "Allgemeine Geschäftsbedingungen der Fast Systemmöbel, Inh. Johann Fast, Espelkamp – Angebot, Preise, Lieferung, Eigentumsvorbehalt, Sachmängelhaftung und Haftung.",
+    "AGB der Fast Systemmöbel, Inh. Johann Fast, Espelkamp – Angebot, Preise, Lieferung, Eigentumsvorbehalt und Sachmängelhaftung.",
   alternates: { canonical: "/agb/" },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "AGB | Fast Systemmöbel",
     description: "Allgemeine Geschäftsbedingungen der Fast Systemmöbel.",
     locale: "de_DE",
@@ -39,7 +47,7 @@ export default function AgbPage() {
         verpflichtet, derartige Änderungen auch an bereits ausgelieferten Produkten vorzunehmen.
       </p>
       <p>
-        (2) Soweit wird das Angebot des Kunden nicht innerhalb der Frist von Abschnitt I.
+        (2) Soweit wir das Angebot des Kunden nicht innerhalb der Frist von Abschnitt I.
         annehmen, sind diese Unterlagen uns unverzüglich zurückzusenden.
       </p>
 
@@ -50,7 +58,7 @@ export default function AgbPage() {
         Vereinbarung zulässig.
       </p>
       <p>
-        (3) Die Preise sind €-Preise und gelten ab Geschäftssitz, im Inland zzgl. der jeweils
+        (2) Die Preise sind €-Preise und gelten ab Geschäftssitz, im Inland zzgl. der jeweils
         geltenden Mehrwertsteuer und sind auf Basis der am Tag unserer Angebotsabgabe geltenden
         Lohn-, Material- und sonstigen Kosten errechnet. Bei einer Steigerung von Material- und
         Rohstoffpreisen, Energiekosten, Löhnen und Gehältern, Herstellungs- oder Transportkosten
@@ -59,7 +67,7 @@ export default function AgbPage() {
         einem Nichthandelsgeschäft innerhalb von vier Monaten nach Vertragsabschluss.
       </p>
       <p>
-        (4) Unsere Rechnungen sind - sofern nichts anderes vereinbart - sofort ohne Abzug fällig.
+        (3) Unsere Rechnungen sind - sofern nichts anderes vereinbart - sofort ohne Abzug fällig.
         Die Zahlungen sind zu leisten bar frei Zahlstelle. Eine Zahlung gilt erst dann als
         erfolgt, wenn wir über den Betrag verfügen können. Wir sind berechtigt, trotz anders
         lautender Bestimmungen des Kunden Zahlungen zunächst auf dessen ältere Schulden
@@ -68,7 +76,7 @@ export default function AgbPage() {
         Kosten, dann auf die Zinsen und zuletzt auf die Hauptleistung anzurechnen.
       </p>
       <p>
-        (5) Im Falle des Zahlungsverzugs sind wir unbeschadet weitergehender
+        (4) Im Falle des Zahlungsverzugs sind wir unbeschadet weitergehender
         Schadenersatzansprüche berechtigt, Verzugszinsen in Höhe von fünf Prozentpunkten über dem
         jeweiligen Basiszinssatz nach § 247 BGB gegenüber Verbrauchern zu verlangen. Gegenüber
         Kaufleuten beträgt der Verzugszins neun Prozentpunkte über dem jeweiligen Basiszinssatz.
@@ -78,12 +86,12 @@ export default function AgbPage() {
         Verweigerung aus dem Auftrag noch zu liefernder Waren ohne Schadenersatzpflicht berechtigt.
       </p>
       <p>
-        (6) Erfolgen Vorauszahlungen und Sicherheitsleistungen nicht innerhalb angemessener Frist,
+        (5) Erfolgen Vorauszahlungen und Sicherheitsleistungen nicht innerhalb angemessener Frist,
         so können wir unbeschadet weitergehender Schadenersatzforderungen vom Vertrag zurücktreten
         oder diesen kündigen.
       </p>
       <p>
-        (7) Eine Aufrechnung des Kunden kommt nur mit einer unbestrittenen oder rechtskräftig
+        (6) Eine Aufrechnung des Kunden kommt nur mit einer unbestrittenen oder rechtskräftig
         festgestellten Gegenforderung in Betracht. Ein Zurückbehaltungsrecht kann er nur geltend
         machen, soweit es auf Ansprüchen aus demselben Vertragsverhältnis beruht.
       </p>
@@ -132,14 +140,14 @@ export default function AgbPage() {
         Bereitstellungsanzeige abzunehmen. Im Falle der Nichtabnahme können wir von unserem
         gesetzlichen Rechten Gebrauch machen. Verlangen wir Schadenersatz, so beträgt dieser 20 %
         der Nettoauftragssumme. Der Schadenersatz ist höher oder niedriger anzusetzen, wenn wir
-        einen höheren Schaden nachweisen oder der Kunden nachweist, dass ein geringerer oder
+        einen höheren Schaden nachweisen oder der Kunde nachweist, dass ein geringerer oder
         überhaupt kein Schaden entstanden ist.
       </p>
 
       <h2>VI. Eigentumsvorbehalt</h2>
       <p>
         (1) Die Ware bleibt bis zum Ausgleich der uns zustehenden Forderung unser Eigentum. Ist
-        der Kunden Kaufmann im Sinne des HGB, behalten wir uns das Eigentum an allen
+        der Kunde Kaufmann im Sinne des HGB, behalten wir uns das Eigentum an allen
         Liefergegenständen bis zum Ausgleich sämtlicher, auch künftiger und bedingter Forderungen
         aus der Geschäftsbeziehung vor.
       </p>
@@ -147,7 +155,7 @@ export default function AgbPage() {
         (2) Der Kunde ist nicht berechtigt, unter Eigentumsvorbehalt stehende Waren zu verpfänden
         oder zur Sicherheit zu übereignen. Einwirkungen Dritter auf diese Ware, insbesondere
         Pfändungen sind uns unverzüglich anzuzeigen. Bei Zugriffen Dritter auf die Ware,
-        insbesondere Pfändungen, wird der Kunden auf unser Eigentum hinweisen und uns unverzüglich
+        insbesondere Pfändungen, wird der Kunde auf unser Eigentum hinweisen und uns unverzüglich
         benachrichtigen, damit wir unsere Eigentumsrechte durchsetzen können. Soweit der Dritte
         nicht in der Lage ist, uns die in diesem Zusammenhang entstehenden gerichtlichen und
         außergerichtlichen Kosten zu erstatten, haftet hierfür der Kunde.
@@ -270,7 +278,7 @@ export default function AgbPage() {
       </p>
 
       <p>
-        <strong>Stand aller Angaben: Mai 2021</strong>
+        <strong>Stand aller Angaben: Juni 2026</strong>
       </p>
     </LegalPageLayout>
   );

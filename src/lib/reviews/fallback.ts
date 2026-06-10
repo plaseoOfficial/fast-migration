@@ -11,7 +11,7 @@ import type { ReviewsData } from "./types";
 export const FALLBACK_REVIEWS: ReviewsData = {
   live: false,
   averageRating: 4.9,
-  totalReviewCount: 87,
+  totalReviewCount: 14,
   profileUrl: null,
   reviews: [
     {

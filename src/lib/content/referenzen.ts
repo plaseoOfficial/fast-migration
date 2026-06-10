@@ -4,7 +4,7 @@
  * The page bundles realised projects from both pillars (Privat "Möbel nach Maß"
  * and Gewerbe/Objekt) as a filterable image mosaic (ItemList/CollectionPage).
  * Each project tile links to the matching cluster page today; once individual
- * project detail pages exist (e.g. `/gewerbe/ladenbau/referenzen/...`) the `href`
+ * project detail pages exist (e.g. `/ladenbau/referenzen/...`) the `href`
  * is repointed there and the project is additionally embedded as a teaser block
  * on that cluster page.
  *
@@ -15,7 +15,7 @@
  *
  * Internal links (silo-neutral brand page, so it may link into both pillars):
  *   /moebel-nach-mass/, /kuechen-nach-mass/  (Privat)
- *   /bueroeinrichtung/, /gewerbe/ladenbau/, /serienmoebel/  (Gewerbe/Objekt)
+ *   /bueroeinrichtung/, /ladenbau/, /serienmoebel/  (Gewerbe/Objekt)
  *   /kontakt/ (conversion), /moebelplaner/ (conversion)
  */
 import type { ReferenzCategory, ReferenzProject } from "@/components/sections/shared/ReferenzenGrid";
@@ -30,7 +30,7 @@ export const referenzenHero = {
     { label: "Referenzen" },
   ],
   intro:
-    "Über 25 Jahre Maßanfertigung, gebündelt an einem Ort: realisierte Küchen, Wohnmöbel, Büro- und Objekteinrichtungen aus unserer Werkstatt in Espelkamp. Jedes Projekt zeigt, wie aus Planung, Handwerk und Montage ein fertiger Raum wird.",
+    "Maßanfertigung seit 1996, gebündelt an einem Ort: realisierte Küchen, Wohnmöbel, Büro- und Objekteinrichtungen aus unserer Werkstatt in Espelkamp. Jedes Projekt zeigt, wie aus Planung, Handwerk und Montage ein fertiger Raum wird.",
   // Collage of real, verified projects across both pillars (mobile 2×2, desktop strip).
   images: [
     { src: "/images/2025/11/ThabarSebastian_kueche2.jpeg", alt: "Offene Küche nach Maß mit Kochinsel" },
@@ -120,7 +120,9 @@ export const referenzenGrid = {
       meta: "Gewerbe · Büro",
       description:
         "Schreibtisch und Stauraum-Korpus als Einheit direkt am Fenster – funktionale Büromöbel nach Maß mit klaren, robusten Oberflächen.",
-      href: "/bueroeinrichtung/",
+      // Authority-Link zum Gewerbe-Hub (SOLL) — die beiden anderen Büro-Kacheln
+      // verlinken bereits den Cluster /bueroeinrichtung/.
+      href: "/gewerbe/",
     },
     {
       image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
@@ -131,7 +133,7 @@ export const referenzenGrid = {
       meta: "Gewerbe · Ladenbau",
       description:
         "Komplette Ladeneinrichtung für den MixMarkt Espelkamp – von der Holzlamellenwand über die beleuchtete Obst- und Gemüseabteilung bis zu den Warenregalen, geplant und montiert aus einer Hand.",
-      href: "/gewerbe/ladenbau/",
+      href: "/ladenbau/",
     },
     {
       image: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
@@ -160,6 +162,9 @@ export const referenzenTestimonialsHeading = "Was unsere Kunden über ihre Proje
 
 export const referenzenFaq = {
   heading: "Häufige Fragen zu unseren Referenzen",
+  /** FaqSection CTA — explicit so the audit picks up the /kontakt/ link. */
+  ctaHref: "/kontakt/",
+  ctaLabel: "Beratung anfragen",
   items: [
     {
       question: "Sind die gezeigten Projekte echte Aufträge?",

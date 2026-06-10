@@ -1,6 +1,6 @@
 /**
  * Schema.org JSON-LD builders. The site had no structured data; this module is
- * the first, scoped to the `/gewerbe/ladenbau` B2B landing page. It emits one
+ * the first, scoped to the `/ladenbau` B2B landing page. It emits one
  * `@graph` with LocalBusiness, Service, BreadcrumbList and FAQPage so the page
  * is eligible for local, service and FAQ rich results.
  *
@@ -39,7 +39,7 @@ export interface FaqEntry {
 }
 
 export interface LadenbauJsonLdOptions {
-  /** Absolute URL of the page (e.g. `${SITE_URL}/gewerbe/ladenbau`). */
+  /** Absolute URL of the page (e.g. `${SITE_URL}/ladenbau`). */
   pageUrl: string;
   /** Service name / page subject. */
   name: string;
@@ -48,7 +48,7 @@ export interface LadenbauJsonLdOptions {
   faq: FaqEntry[];
   /**
    * Schema.org `Service.serviceType`. Defaults to "Ladenbau nach Maß" so the
-   * original `/gewerbe/ladenbau` page stays byte-identical; the Gewerbe-cluster
+   * original `/ladenbau` page stays byte-identical; the Gewerbe-cluster
    * pages (Büro, Gastro, Serie, Praxis) pass their own type.
    */
   serviceType?: string;
@@ -62,15 +62,14 @@ function abs(pathOrUrl: string): string {
   return /^https?:\/\//.test(pathOrUrl) ? pathOrUrl : `${SITE_URL}${pathOrUrl}`;
 }
 
-export function buildLadenbauJsonLd({
-  pageUrl,
-  name,
-  description,
-  breadcrumb,
-  faq,
-  serviceType = "Ladenbau nach Maß",
-}: LadenbauJsonLdOptions) {
-  const localBusiness = {
+/**
+ * The shared Organization/LocalBusiness node (NAP, founder, social, service
+ * area), identified by the stable {@link ORG_ID}. Every page emits its own copy
+ * so Google can resolve the entity per-page; cross-page `@id` references
+ * (publisher / provider) all point at this same node.
+ */
+function organizationNode() {
+  return {
     "@type": "LocalBusiness",
     "@id": ORG_ID,
     name: "Fast Systemmöbel",
@@ -92,6 +91,17 @@ export function buildLadenbauJsonLd({
     areaServed: SERVICE_AREA,
     sameAs: SOCIAL_PROFILES,
   };
+}
+
+export function buildLadenbauJsonLd({
+  pageUrl,
+  name,
+  description,
+  breadcrumb,
+  faq,
+  serviceType = "Ladenbau nach Maß",
+}: LadenbauJsonLdOptions) {
+  const localBusiness = organizationNode();
 
   const service = {
     "@type": "Service",
@@ -136,6 +146,79 @@ export function buildLadenbauJsonLd({
  * Praxis). Same builder as {@link buildLadenbauJsonLd}; pass `serviceType`.
  */
 export const buildServicePageJsonLd = buildLadenbauJsonLd;
+
+// ---------------------------------------------------------------------------
+// Homepage (`/`) — WebSite + Organization + FAQPage
+// ---------------------------------------------------------------------------
+
+export interface HomeJsonLdOptions {
+  /** The homepage FAQ entries (shared `FAQS`). */
+  faq: FaqEntry[];
+}
+
+/**
+ * Authority graph for the homepage: the site-wide `WebSite` node (referenced by
+ * other pages via `isPartOf`), the shared `Organization`/`LocalBusiness` node
+ * (referenced via `publisher`/`provider`), and the homepage `FAQPage`.
+ */
+export function buildHomeJsonLd({ faq }: HomeJsonLdOptions) {
+  const website = {
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: `${SITE_URL}/`,
+    name: "Fast Systemmöbel",
+    inLanguage: "de-DE",
+    publisher: { "@id": ORG_ID },
+  };
+
+  const faqPage = {
+    "@type": "FAQPage",
+    "@id": `${SITE_URL}/#faq`,
+    mainEntity: faq.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: { "@type": "Answer", text: entry.answer },
+    })),
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [website, organizationNode(), faqPage],
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Brand page (`/ueber-uns/`) — Organization + BreadcrumbList (no Service/FAQ)
+// ---------------------------------------------------------------------------
+
+export interface BrandPageJsonLdOptions {
+  /** Absolute URL of the page (e.g. `${SITE_URL}/ueber-uns/`). */
+  pageUrl: string;
+  breadcrumb: BreadcrumbCrumb[];
+}
+
+/**
+ * Structured data for the brand/authority page: the shared
+ * Organization/LocalBusiness node plus a BreadcrumbList. No Service or FAQPage
+ * (the page sells nothing and renders no FAQ).
+ */
+export function buildBrandPageJsonLd({ pageUrl, breadcrumb }: BrandPageJsonLdOptions) {
+  const breadcrumbList = {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: breadcrumb.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.label,
+      item: crumb.href ? abs(crumb.href) : pageUrl,
+    })),
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [organizationNode(), breadcrumbList],
+  };
+}
 
 // ---------------------------------------------------------------------------
 // Reference hub (`/referenzen/`) — CollectionPage + ItemList + ImageObject

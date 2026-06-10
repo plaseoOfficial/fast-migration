@@ -1,0 +1,1682 @@
+{
+  "generatedAt": "2026-06-10T10:42:40.506Z",
+  "location": "Germany (2276)",
+  "language": "de",
+  "source": "keywords_data/google_ads/search_volume/live",
+  "counts": {
+    "keine-daten": 62,
+    "keine-schaetzung": 5,
+    "niedriger": 6,
+    "hoeher": 4,
+    "deutlich-niedriger": 31,
+    "ok": 2,
+    "deutlich-hoeher": 1
+  },
+  "rows": [
+    {
+      "url": "/",
+      "keyword": "Möbel nach Maß Meisterbetrieb",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/moebel-nach-mass/",
+      "keyword": "Möbel nach Maß",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 1900,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 7.27
+      },
+      "status": "keine-schaetzung"
+    },
+    {
+      "url": "/kuechen-nach-mass/",
+      "keyword": "Küche nach Maß",
+      "svText": "1.500–3.000",
+      "svMin": 1500,
+      "svMax": 3000,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 880,
+        "competition": "HIGH",
+        "competitionIndex": 77,
+        "cpc": 5.04
+      },
+      "status": "niedriger"
+    },
+    {
+      "url": "/kuechen-nach-mass/kueche-planen/",
+      "keyword": "Küche planen",
+      "svText": "4.000–8.000",
+      "svMin": 4000,
+      "svMax": 8000,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 8100,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 4.63
+      },
+      "status": "hoeher"
+    },
+    {
+      "url": "/kuechen-nach-mass/kuechenzeile-nach-mass/",
+      "keyword": "Küchenzeile nach Maß",
+      "svText": "400–800",
+      "svMin": 400,
+      "svMax": 800,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 40,
+        "competition": "HIGH",
+        "competitionIndex": 94,
+        "cpc": 4.81
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/kuechen-nach-mass/l-kueche-nach-mass/",
+      "keyword": "L-Küche nach Maß",
+      "svText": "300–600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/kuechen-nach-mass/kochinsel-nach-mass/",
+      "keyword": "Kochinsel nach Maß",
+      "svText": "300–700",
+      "svMin": 300,
+      "svMax": 700,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/kuechen-nach-mass/kueche-mit-dachschraege/",
+      "keyword": "Küche mit Dachschräge",
+      "svText": "500–1.000",
+      "svMin": 500,
+      "svMax": 1000,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 1900,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 1.36
+      },
+      "status": "hoeher"
+    },
+    {
+      "url": "/kuechen-nach-mass/offene-wohnkueche-nach-mass/",
+      "keyword": "offene Wohnküche nach Maß",
+      "svText": "200–500",
+      "svMin": 200,
+      "svMax": 500,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/kuechen-nach-mass/kueche-im-neubau/",
+      "keyword": "Küche im Neubau planen",
+      "svText": "400–800",
+      "svMin": 400,
+      "svMax": 800,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/kuechen-nach-mass/kueche-nach-mass-kosten/",
+      "keyword": "Küche nach Maß Kosten",
+      "svText": "600–1.200",
+      "svMin": 600,
+      "svMax": 1200,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 90,
+        "competition": "HIGH",
+        "competitionIndex": 90,
+        "cpc": 5.2
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/kuechen-nach-mass/tischlerkueche-vs-kuechenstudio/",
+      "keyword": "Küche vom Tischler Vorteile",
+      "svText": "200–500",
+      "svMin": 200,
+      "svMax": 500,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/",
+      "keyword": "Einbauschrank nach Maß",
+      "svText": "4.000-6.000",
+      "svMin": 4000,
+      "svMax": 6000,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 2400,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 5.38
+      },
+      "status": "niedriger"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/",
+      "keyword": "Kleiderschrank nach Maß",
+      "svText": "2.500-4.000",
+      "svMin": 2500,
+      "svMax": 4000,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 1000,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 4.72
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/",
+      "keyword": "begehbarer Kleiderschrank nach Maß",
+      "svText": "1.500-2.500",
+      "svMin": 1500,
+      "svMax": 2500,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 40,
+        "competition": "HIGH",
+        "competitionIndex": 84,
+        "cpc": 3.93
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
+      "keyword": "Einbauschrank Dachschräge",
+      "svText": "800-1.500",
+      "svMin": 800,
+      "svMax": 1500,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 1900,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.1
+      },
+      "status": "hoeher"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/garderobe-nach-mass/",
+      "keyword": "Garderobe nach Maß",
+      "svText": "600-1.000",
+      "svMin": 600,
+      "svMax": 1000,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 480,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 4.41
+      },
+      "status": "niedriger"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/kleiderschrank-schiebetuer-nach-mass/",
+      "keyword": "Kleiderschrank Schiebetür nach Maß",
+      "svText": "500-900",
+      "svMin": 500,
+      "svMax": 900,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/nischenschrank-nach-mass/",
+      "keyword": "Nischenschrank nach Maß",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 50,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.38
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/einbauschraenke-nach-mass/einbauschrank-kosten/",
+      "keyword": "Einbauschrank Kosten",
+      "svText": "1.200-2.000",
+      "svMin": 1200,
+      "svMax": 2000,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 260,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 3.32
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/badmoebel-nach-mass/",
+      "keyword": "Badmöbel nach Maß",
+      "svText": "1.500-2.500",
+      "svMin": 1500,
+      "svMax": 2500,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 320,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.3
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/badmoebel-nach-mass/waschtisch-nach-mass/",
+      "keyword": "Waschtisch nach Maß",
+      "svText": "800-1.300",
+      "svMin": 800,
+      "svMax": 1300,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 260,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.46
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/badmoebel-nach-mass/waschtischunterschrank-nach-mass/",
+      "keyword": "Waschtischunterschrank nach Maß",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 140,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/badmoebel-nach-mass/badschrank-nach-mass/",
+      "keyword": "Badschrank nach Maß",
+      "svText": "600-1.000",
+      "svMin": 600,
+      "svMax": 1000,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 110,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 4.09
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/badmoebel-nach-mass/spiegelschrank-nach-mass/",
+      "keyword": "Spiegelschrank nach Maß Bad",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 10,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/badmoebel-nach-mass/badmoebel-massivholz/",
+      "keyword": "Badmöbel Massivholz nach Maß",
+      "svText": "300-500",
+      "svMin": 300,
+      "svMax": 500,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/badmoebel-nach-mass/badmoebel-fuer-kleine-baeder/",
+      "keyword": "Badmöbel für kleine Bäder nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/badmoebel-nach-mass/badmoebel-nach-mass-kosten/",
+      "keyword": "Badmöbel nach Maß Kosten",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/",
+      "keyword": "Wohnmöbel nach Maß",
+      "svText": "1.000-2.000",
+      "svMin": 1000,
+      "svMax": 2000,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/tv-wand-nach-mass/",
+      "keyword": "TV-Wand nach Maß",
+      "svText": "1.300-2.000",
+      "svMin": 1300,
+      "svMax": 2000,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/wohnwand-nach-mass/",
+      "keyword": "Wohnwand nach Maß",
+      "svText": "800-1.500",
+      "svMin": 800,
+      "svMax": 1500,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 70,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 3.85
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/sideboard-nach-mass/",
+      "keyword": "Sideboard nach Maß",
+      "svText": "600-1.000",
+      "svMin": 600,
+      "svMax": 1000,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 320,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 6.07
+      },
+      "status": "niedriger"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/regal-nach-mass/",
+      "keyword": "Regal nach Maß",
+      "svText": "1.500-2.500",
+      "svMin": 1500,
+      "svMax": 2500,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 1600,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 5.67
+      },
+      "status": "ok"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/buecherregal-nach-mass/",
+      "keyword": "Bücherregal nach Maß",
+      "svText": "500-900",
+      "svMin": 500,
+      "svMax": 900,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 390,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 8.92
+      },
+      "status": "niedriger"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/raumteiler-nach-mass/",
+      "keyword": "Raumteiler nach Maß",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 140,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.32
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/",
+      "keyword": "Einbauschrank Wohnzimmer nach Maß",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/wohnmoebel-nach-mass/massmoebel-ratgeber/",
+      "keyword": "Maßmöbel Wohnzimmer",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/hauswirtschaftsraum/",
+      "keyword": "Hauswirtschaftsraum einrichten",
+      "svText": "4.000-6.000",
+      "svMin": 4000,
+      "svMax": 6000,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 390,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 0.79
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/hauswirtschaftsraum/schrank-nach-mass/",
+      "keyword": "HWR Schrank nach Maß",
+      "svText": "600-1.000",
+      "svMin": 600,
+      "svMax": 1000,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/",
+      "keyword": "Waschmaschinenschrank nach Maß",
+      "svText": "800-1.200",
+      "svMin": 800,
+      "svMax": 1200,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 70,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 1.76
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/hauswirtschaftsraum/vorratsschrank-nach-mass/",
+      "keyword": "Vorratsschrank nach Maß",
+      "svText": "500-900",
+      "svMin": 500,
+      "svMax": 900,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 10,
+        "competition": "HIGH",
+        "competitionIndex": 94,
+        "cpc": 2.52
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/hauswirtschaftsraum/besenschrank-nach-mass/",
+      "keyword": "Besenschrank nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/hauswirtschaftsraum/planen/",
+      "keyword": "Hauswirtschaftsraum planen",
+      "svText": "1.000-2.000",
+      "svMin": 1000,
+      "svMax": 2000,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 390,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 1.75
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/gewerbe/",
+      "keyword": "Möbel nach Maß Gewerbe",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ladenbau/",
+      "keyword": "Ladenbau nach Maß",
+      "svText": "1.500-3.000",
+      "svMin": 1500,
+      "svMax": 3000,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ladenbau/verkaufstheke-nach-mass/",
+      "keyword": "Verkaufstheke nach Maß",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ladenbau/ladenregale-nach-mass/",
+      "keyword": "Ladenregale nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ladenbau/ladeneinrichtung-planung/",
+      "keyword": "Ladeneinrichtung Planung",
+      "svText": "150-300",
+      "svMin": 150,
+      "svMax": 300,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 10,
+        "competition": "MEDIUM",
+        "competitionIndex": 38,
+        "cpc": null
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ladenbau/gastronomieeinrichtung/",
+      "keyword": "Gastronomieeinrichtung nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ladenbau/boutique-einrichten/",
+      "keyword": "Boutique einrichten",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 50,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 1.42
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ladenbau/empfangstresen-nach-mass/",
+      "keyword": "Empfangstresen nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ladenbau/objektmoebel-gewerbe/",
+      "keyword": "Objektmöbel Gewerbe",
+      "svText": "100-200",
+      "svMin": 100,
+      "svMax": 200,
+      "wettbewerb": "niedrig",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/bueroeinrichtung/",
+      "keyword": "Büroeinrichtung nach Maß",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/bueroeinrichtung/bueromoebel-nach-mass/",
+      "keyword": "Büromöbel nach Maß",
+      "svText": "500-900",
+      "svMin": 500,
+      "svMax": 900,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 70,
+        "competition": "HIGH",
+        "competitionIndex": 75,
+        "cpc": 7.07
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/bueroeinrichtung/empfangstresen-nach-mass/",
+      "keyword": "Empfangstresen nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/bueroeinrichtung/konferenztisch-nach-mass/",
+      "keyword": "Konferenztisch nach Maß",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 10,
+        "competition": "HIGH",
+        "competitionIndex": 83,
+        "cpc": 7.4
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/bueroeinrichtung/bueroschraenke-nach-mass/",
+      "keyword": "Büroschränke nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 40,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 7.79
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/bueroeinrichtung/konferenzraum-einrichten/",
+      "keyword": "Konferenzraum einrichten",
+      "svText": "600-1200",
+      "svMin": 600,
+      "svMax": 1200,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 110,
+        "competition": "HIGH",
+        "competitionIndex": 68,
+        "cpc": 8.14
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/bueroeinrichtung/bueroplanung/",
+      "keyword": "Büroplanung",
+      "svText": "800-1500",
+      "svMin": 800,
+      "svMax": 1500,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 590,
+        "competition": "MEDIUM",
+        "competitionIndex": 58,
+        "cpc": 16.02
+      },
+      "status": "niedriger"
+    },
+    {
+      "url": "/bueroeinrichtung/objekteinrichtung/",
+      "keyword": "Objekteinrichtung Büro",
+      "svText": "100-250",
+      "svMin": 100,
+      "svMax": 250,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 40,
+        "competition": "LOW",
+        "competitionIndex": 3,
+        "cpc": null
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/bueroeinrichtung/praxiseinrichtung-nach-mass/",
+      "keyword": "Praxiseinrichtung nach Maß",
+      "svText": "150-300",
+      "svMin": 150,
+      "svMax": 300,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/",
+      "keyword": "Gastronomieeinrichtung",
+      "svText": "1.300–2.900",
+      "svMin": 1300,
+      "svMax": 2900,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 170,
+        "competition": "MEDIUM",
+        "competitionIndex": 54,
+        "cpc": 5.82
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/gastronomieeinrichtung/tresen-nach-mass/",
+      "keyword": "Tresen nach Maß Gastronomie",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/gastro-sitzbank-nach-mass/",
+      "keyword": "Gastronomie Sitzbank nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/gastro-tische-nach-mass/",
+      "keyword": "Gastro Tische nach Maß",
+      "svText": "150-300",
+      "svMin": 150,
+      "svMax": 300,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/cafe-einrichtung/",
+      "keyword": "Café einrichten Möbel nach Maß",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/restaurant-einrichtung/",
+      "keyword": "Restaurant Einrichtung nach Maß",
+      "svText": "300-550",
+      "svMin": 300,
+      "svMax": 550,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/innenausbau-gastronomie/",
+      "keyword": "Innenausbau Gastronomie Tischler",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/hoteleinrichtung/",
+      "keyword": "Hoteleinrichtung nach Maß Tischler",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/kantine-einrichtung/",
+      "keyword": "Kantine Einrichtung nach Maß",
+      "svText": "100-250",
+      "svMin": 100,
+      "svMax": 250,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/gastronomieeinrichtung/gastronomieeinrichtung-planen/",
+      "keyword": "Gastronomieeinrichtung planen",
+      "svText": "200-450",
+      "svMin": 200,
+      "svMax": 450,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/",
+      "keyword": "Möbel Serienfertigung",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/kleinserien-moebel/",
+      "keyword": "Kleinserien Möbel",
+      "svText": "150-300",
+      "svMin": 150,
+      "svMax": 300,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/prototyp-erstmuster/",
+      "keyword": "Möbel Prototyp Serienfertigung",
+      "svText": "80-200",
+      "svMin": 80,
+      "svMax": 200,
+      "wettbewerb": "niedrig",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/hotelmoebel-serie/",
+      "keyword": "Hotelmöbel Serienfertigung",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/ladeneinrichtung-serie/",
+      "keyword": "Ladeneinrichtung Serienfertigung",
+      "svText": "100-200",
+      "svMin": 100,
+      "svMax": 200,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/pflegeeinrichtung-moebel-serie/",
+      "keyword": "Pflegeheim Möbel Serienfertigung",
+      "svText": "50-150",
+      "svMin": 50,
+      "svMax": 150,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/bueromoebel-serienfertigung/",
+      "keyword": "Büromöbel Serienfertigung",
+      "svText": "100-200",
+      "svMin": 100,
+      "svMax": 200,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/serienmoebel/lohnfertigung-tischler/",
+      "keyword": "Möbel Lohnfertigung Tischler",
+      "svText": "80-180",
+      "svMin": 80,
+      "svMax": 180,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/",
+      "keyword": "Praxiseinrichtung nach Maß",
+      "svText": "800-1.500",
+      "svMin": 800,
+      "svMax": 1500,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/arztpraxis-moebel/",
+      "keyword": "Arztpraxis Möbel nach Maß",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/empfangstheke-nach-mass/",
+      "keyword": "Empfangstheke nach Maß",
+      "svText": "400-700",
+      "svMin": 400,
+      "svMax": 700,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 10,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.67
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/praxiseinrichtung/wartezimmer-moebel/",
+      "keyword": "Wartezimmermöbel nach Maß",
+      "svText": "150-350",
+      "svMin": 150,
+      "svMax": 350,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/kanzleieinrichtung/",
+      "keyword": "Kanzleieinrichtung nach Maß",
+      "svText": "200-400",
+      "svMin": 200,
+      "svMax": 400,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/physiotherapie-einrichtung/",
+      "keyword": "Physiotherapie Einrichtung nach Maß",
+      "svText": "100-250",
+      "svMin": 100,
+      "svMax": 250,
+      "wettbewerb": "niedrig",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/bueromoebel-nach-mass-gewerbe/",
+      "keyword": "Büromöbel nach Maß Gewerbe",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/praxiseinrichtung/praxisplanung/",
+      "keyword": "Praxis einrichten planen",
+      "svText": "200-450",
+      "svMin": 200,
+      "svMax": 450,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ratgeber/",
+      "keyword": "Möbel nach Maß Ratgeber",
+      "svText": "2.000-4.000",
+      "svMin": 2000,
+      "svMax": 4000,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ratgeber/kueche-nach-mass-kosten/",
+      "keyword": "Küche nach Maß Kosten",
+      "svText": "1.000-2.000",
+      "svMin": 1000,
+      "svMax": 2000,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 90,
+        "competition": "HIGH",
+        "competitionIndex": 90,
+        "cpc": 5.2
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ratgeber/kueche-planen-schritt-fuer-schritt/",
+      "keyword": "Küche planen",
+      "svText": "2.000-4.000",
+      "svMin": 2000,
+      "svMax": 4000,
+      "wettbewerb": "hoch",
+      "live": {
+        "searchVolume": 8100,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 4.63
+      },
+      "status": "deutlich-hoeher"
+    },
+    {
+      "url": "/ratgeber/einbauschrank-dachschraege/",
+      "keyword": "Einbauschrank Dachschräge",
+      "svText": "800-1.500",
+      "svMin": 800,
+      "svMax": 1500,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 1900,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.1
+      },
+      "status": "hoeher"
+    },
+    {
+      "url": "/ratgeber/massmoebel-vs-von-der-stange/",
+      "keyword": "Maßmöbel Vorteile",
+      "svText": "500-1.000",
+      "svMin": 500,
+      "svMax": 1000,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ratgeber/begehbaren-kleiderschrank-planen/",
+      "keyword": "begehbaren Kleiderschrank planen",
+      "svText": "1.000-2.000",
+      "svMin": 1000,
+      "svMax": 2000,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 140,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 2.16
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ratgeber/kueche-beim-neubau-planen/",
+      "keyword": "Küche Neubau planen",
+      "svText": "500-900",
+      "svMin": 500,
+      "svMax": 900,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": 10,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ratgeber/massmoebel-kosten-schrank/",
+      "keyword": "Einbauschrank Kosten",
+      "svText": "800-1.500",
+      "svMin": 800,
+      "svMax": 1500,
+      "wettbewerb": "mittel-hoch",
+      "live": {
+        "searchVolume": 260,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 3.32
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ratgeber/holzarten-materialien-moebel/",
+      "keyword": "Holzarten Möbel",
+      "svText": "600-1.200",
+      "svMin": 600,
+      "svMax": 1200,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 880,
+        "competition": "HIGH",
+        "competitionIndex": 100,
+        "cpc": 0.76
+      },
+      "status": "ok"
+    },
+    {
+      "url": "/ratgeber/moebelplaner-anleitung/",
+      "keyword": "Möbel online planen",
+      "svText": "300-700",
+      "svMin": 300,
+      "svMax": 700,
+      "wettbewerb": "niedrig-mittel",
+      "live": {
+        "searchVolume": 40,
+        "competition": "HIGH",
+        "competitionIndex": 99,
+        "cpc": 4
+      },
+      "status": "deutlich-niedriger"
+    },
+    {
+      "url": "/ratgeber/umzug-neue-moebel-planen/",
+      "keyword": "Möbel beim Umzug neu planen",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "niedrig",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ratgeber/nischen-stauraum-einbauschrank/",
+      "keyword": "Nische Stauraum ausbauen",
+      "svText": "300-600",
+      "svMin": 300,
+      "svMax": 600,
+      "wettbewerb": "niedrig",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ratgeber/arbeitszimmer-homeoffice-einrichten/",
+      "keyword": "Arbeitszimmer einrichten Maßmöbel",
+      "svText": "400-800",
+      "svMin": 400,
+      "svMax": 800,
+      "wettbewerb": "mittel",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/moebelplaner/",
+      "keyword": "Möbelplaner online",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 40,
+        "competition": "HIGH",
+        "competitionIndex": 88,
+        "cpc": 2.01
+      },
+      "status": "keine-schaetzung"
+    },
+    {
+      "url": "/ablauf-massanfertigung/",
+      "keyword": "Ablauf Maßanfertigung Möbel",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/liefergebiet-montage/",
+      "keyword": "Möbel Montage Liefergebiet",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/referenzen/",
+      "keyword": "Möbel nach Maß Referenzen",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/ueber-uns/",
+      "keyword": "Tischlerei Meisterbetrieb Espelkamp",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/team/",
+      "keyword": "Team Tischlerei",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/team/meister/",
+      "keyword": "Tischlermeister Espelkamp",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/kontakt/",
+      "keyword": "Tischlerei Kontakt Anfrage",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": null,
+        "competition": null,
+        "competitionIndex": null,
+        "cpc": null
+      },
+      "status": "keine-daten"
+    },
+    {
+      "url": "/impressum/",
+      "keyword": "Impressum",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 18100,
+        "competition": "LOW",
+        "competitionIndex": 12,
+        "cpc": 3.14
+      },
+      "status": "keine-schaetzung"
+    },
+    {
+      "url": "/datenschutz/",
+      "keyword": "Datenschutzerklärung",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 9900,
+        "competition": "MEDIUM",
+        "competitionIndex": 41,
+        "cpc": 3.93
+      },
+      "status": "keine-schaetzung"
+    },
+    {
+      "url": "/agb/",
+      "keyword": "AGB",
+      "svText": "",
+      "svMin": null,
+      "svMax": null,
+      "wettbewerb": "",
+      "live": {
+        "searchVolume": 14800,
+        "competition": "LOW",
+        "competitionIndex": 7,
+        "cpc": 4.97
+      },
+      "status": "keine-schaetzung"
+    }
+  ]
+}

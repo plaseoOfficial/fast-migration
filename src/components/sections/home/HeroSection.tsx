@@ -1,3 +1,5 @@
+import { preload } from "react-dom";
+
 interface HeroSectionProps {
   bgImage: string;
   title: string;
@@ -6,6 +8,9 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
+  // The hero image is the LCP element but lives in a CSS background-image, which
+  // the preload scanner can't see — hint it explicitly without touching markup.
+  preload(bgImage, { as: "image" });
   return (
     <section
       data-hero

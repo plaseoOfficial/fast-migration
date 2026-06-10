@@ -1,5 +1,5 @@
 /**
- * Content for the `/gewerbe/ladenbau/` page — a B2B acquisition landing page
+ * Content for the `/ladenbau/` page — a B2B acquisition landing page
  * for "Ladenbau nach Maß" (custom shop fitting). It reuses the same library
  * sections as the canonical Privat page (see docs/sections/CATALOG.md → the
  * "Privat Page Recipe"); only the copy is swapped for the commercial segment

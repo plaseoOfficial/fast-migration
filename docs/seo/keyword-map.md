@@ -1,6 +1,6 @@
 # Keyword-Map — Fast Systemmöbel
 
-> **Source of truth:** [Google Sheet](https://docs.google.com/spreadsheets/d/1Jf_zmBGD8pOtzeKDjVX6jP0JkMmrgXGn7QMP9Fnzg5E/edit) Tab 02 URL-Master / 03 Keyword-Mapping. SV = grobe DE-Schätzung (vor Launch via Keyword-Planner/Sistrix verifizieren).
+> **Source of truth:** [Google Sheet](https://docs.google.com/spreadsheets/d/1Jf_zmBGD8pOtzeKDjVX6jP0JkMmrgXGn7QMP9Fnzg5E/edit) Tab 02 URL-Master / 03 Keyword-Mapping. SV = grobe DE-Schätzung — verifizieren via `node scripts/dataforseo.mjs validate-map` (DataForSEO, Google DE; Report: [`keyword-volume-audit.json`](keyword-volume-audit.json), Interpretation: **`seo-daten`**-Agent).
 
 **Intent:** C=Commercial · I=Informational · T=Transactional
 

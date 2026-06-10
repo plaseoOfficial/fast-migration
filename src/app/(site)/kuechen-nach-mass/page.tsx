@@ -33,12 +33,20 @@ export const metadata: Metadata = {
     "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, in eigener Fertigung gebaut, vom eigenen Team montiert. Kostenloses Aufmaß vor Ort.",
   alternates: { canonical: "/kuechen-nach-mass/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Küchen nach Maß aus Espelkamp: Planung, Fertigung, Montage",
     description:
       "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, gebaut und montiert.",
     url: "/kuechen-nach-mass/",
     locale: "de_DE",
-    type: "article",
+    type: "website",
     siteName: "Fast Systemmöbel",
   },
 };
@@ -65,21 +73,18 @@ const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
     title: "Raumkonzepte",
     description:
       "Wir denken Räume ganzheitlich. Durchdachte Konzepte verbinden Architektur, Licht, Materialien und Möbel zu einer harmonischen Einheit – vom ersten Entwurf bis zur Montage.",
-    href: "#",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
     title: "Fertigung",
     description:
       "Moderne Homag-Technik und handwerkliche Qualitätskontrolle sorgen dafür, dass jedes Bauteil exakt passt. Von Einzelmöbeln bis zu kompletten Räumen.",
-    href: "#",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
     title: "Montage",
     description:
       "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt – bis jedes Detail sitzt.",
-    href: "#",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",

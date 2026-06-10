@@ -22,26 +22,54 @@ import {
   gewerbeTestimonialsHeading,
   gewerbeFaq,
 } from "@/lib/content/gewerbe";
+import { SITE_URL } from "@/lib/content";
+import { buildServicePageJsonLd } from "@/lib/seo/jsonld";
+
+const DESCRIPTION =
+  "Funktionale Gewerbeeinrichtung nach Maß für Büro, Praxis, Ladenbau und Gastro. Geplant, in Espelkamp gefertigt und vor Ort montiert.";
 
 export const metadata: Metadata = {
   title: "Gewerbeeinrichtung nach Maß: Büro, Praxis & Ladenbau",
-  description:
-    "Funktionale Gewerbeeinrichtung nach Maß für Büro, Praxis, Ladenbau und Gastro. Geplant, in Espelkamp gefertigt und vor Ort montiert.",
+  description: DESCRIPTION,
+  alternates: { canonical: "/gewerbe/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Gewerbeeinrichtung nach Maß: Büro, Praxis & Ladenbau",
     description:
       "Funktionale Gewerbeeinrichtung nach Maß für Büro, Praxis, Ladenbau und Gastro.",
+    url: "/gewerbe/",
     locale: "de_DE",
-    type: "article",
+    type: "website",
     siteName: "Fast Systemmöbel",
   },
 };
 
 const BEIGE = "rgba(203, 191, 181, 0.59)";
 
+const jsonLd = buildServicePageJsonLd({
+  pageUrl: `${SITE_URL}/gewerbe/`,
+  name: "Gewerbeeinrichtung nach Maß",
+  description: DESCRIPTION,
+  breadcrumb: gewerbeHero.breadcrumb,
+  faq: gewerbeFaq.items,
+  serviceType: "Gewerbeeinrichtung nach Maß",
+});
+
 export default function GewerbeeinrichtungPage() {
   return (
     <main className="flex flex-col">
+      {/* Structured data: LocalBusiness + Service + BreadcrumbList + FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ServiceHero {...gewerbeHero} />
 
       <GewerbeIntroStats {...gewerbeIntroStats} />

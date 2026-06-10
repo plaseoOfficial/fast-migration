@@ -57,7 +57,6 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:flex lg:gap-x-12">
             <FooterColumn title="Menü" links={FOOTER_LINKS.links} />
             <FooterColumn title="Leistungen" links={FOOTER_LINKS.leistungen} />
-            <FooterColumn title="Einsatzgebiete" links={FOOTER_LINKS.einsatzgebiete} />
             <FooterColumn title="Social" links={SOCIAL_LINKS} />
             <FooterColumn title="Rechtliches" links={FOOTER_LINKS.rechtliches} />
           </div>
