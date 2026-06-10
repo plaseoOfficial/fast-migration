@@ -56,7 +56,7 @@ export const gewerbeIntroStats = {
   col3Body:
     "Unsere Fertigung kombiniert neueste CNC-Technik mit handwerklicher Perfektion. So entstehen Systemmöbel, die langlebig, funktional und ästhetisch überzeugen – in jedem Projekt, jedem Detail.",
   col3CtaLabel: "Entdecken Sie das Gefühl von Qualität",
-  col3CtaHref: "/gewerbe/ladenbau/",
+  col3CtaHref: "/ladenbau/",
 };
 
 export const gewerbeLadenGastro = {
@@ -152,9 +152,9 @@ export const gewerbeWarum = {
       height: 600,
     },
     {
-      src: "/images/2024/03/test-img-83485.jpg",
-      alt: "Modernes Wohnzimmer",
-      caption: "Luxor Collection",
+      src: "/images/2025/11/DSC_9747.jpg",
+      alt: "Konferenztisch nach Maß in modernem Besprechungsraum",
+      caption: "Konferenztisch nach Maß",
       width: 800,
       height: 400,
     },
@@ -218,7 +218,7 @@ export const gewerbeClusterCards: ServiceCard[] = [
     title: "Ladenbau nach Maß",
     description:
       "Verkaufstheken, Warenträger und komplette Shopkonzepte. Vom einzelnen Tresen bis zur fertigen Verkaufsfläche aus einer Hand.",
-    href: "/gewerbe/ladenbau/",
+    href: "/ladenbau/",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",

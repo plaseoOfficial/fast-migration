@@ -93,7 +93,7 @@ export const homeBereiche = {
           title: "Ladenbau",
           image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
           alt: "Ladenbau mit Verkaufsregalen im Lebensmittelmarkt",
-          href: "/gewerbe/ladenbau/",
+          href: "/ladenbau/",
         },
         {
           title: "Gastronomie",

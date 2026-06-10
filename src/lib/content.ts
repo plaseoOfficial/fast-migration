@@ -191,9 +191,8 @@ export const FOOTER_LINKS = {
     { label: "Home", href: "/" },
     { label: "Leistungen", href: "/moebel-nach-mass/" },
     { label: "Über uns", href: "/ueber-uns/" },
-    { label: "Ratgeber", href: "#" },
+    // "Ratgeber" kehrt zurück, sobald /ratgeber/ gebaut ist (Launch-Regel: keine Dead-Links).
     { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
-    { label: "FAQ", href: "#faq" },
     { label: "Kontakt", href: "/kontakt/" },
   ],
   leistungen: [
@@ -201,17 +200,12 @@ export const FOOTER_LINKS = {
     { label: "Gewerbe", href: "/gewerbe/" },
     { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
   ],
-  einsatzgebiete: [
-    { label: "Bielefeld", href: "#" },
-    { label: "Espelkamp", href: "#" },
-    { label: "Hannover", href: "#" },
-    { label: "Minden", href: "#" },
-  ],
+  // Einsatzgebiete-Spalte kehrt zurück, sobald /liefergebiet-montage/ als
+  // Linkziel existiert — Stadt-Doorway-Pages sind laut Silo-Modell tabu.
   rechtliches: [
     { label: "Impressum", href: "/impressum/" },
     { label: "Datenschutz", href: "/datenschutz/" },
     { label: "AGBS", href: "/agb/" },
-    { label: "Cookie-Richtlinie (EU)", href: "#" },
   ],
 };
 

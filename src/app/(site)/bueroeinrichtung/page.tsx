@@ -29,13 +29,21 @@ import {
 
 const PAGE_PATH = "/bueroeinrichtung";
 const DESCRIPTION =
-  "Büroeinrichtung nach Maß vom Meisterbetrieb in Espelkamp. Schreibtische, Aktenschränke, Konferenztische und komplette Objekteinrichtungen, geplant, gefertigt und im Umkreis von 200 km montiert.";
+  "Büroeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Schreibtische, Aktenschränke und Konferenztische – im Umkreis von 200 km montiert.";
 
 export const metadata: Metadata = {
   title: "Büroeinrichtung nach Maß aus Espelkamp: Büromöbel vom Meisterbetrieb",
   description: DESCRIPTION,
   alternates: { canonical: "/bueroeinrichtung/" },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Büroeinrichtung nach Maß aus Espelkamp: Büromöbel vom Meisterbetrieb",
     description: DESCRIPTION,
     url: "/bueroeinrichtung/",

@@ -95,7 +95,7 @@ export const ueberTimeline = {
 export const ueberWofuer = {
   heading: "Wofür wir stehen",
   ctaLabel: "Unsere Leistungen",
-  ctaHref: "/moebel-nach-mass",
+  ctaHref: "/moebel-nach-mass/",
   image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
   imageAlt: "Ladeneinrichtung im Lebensmittelmarkt von Fast Systemmöbel",
   columns: [
@@ -148,8 +148,8 @@ export const ueberNavCards = [
     imageAlt: "Maßgefertigte Möbel von Fast Systemmöbel",
   },
   {
-    heading: "FAQ",
-    href: "#",
+    heading: "Gewerbeeinrichtung",
+    href: "/gewerbe/",
     image: "/images/2025/11/DSC07156-scaled.jpg",
     imageAlt: "Beratungsgespräch bei Fast Systemmöbel",
   },

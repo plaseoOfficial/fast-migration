@@ -360,7 +360,14 @@ async function main() {
     ];
     const abs = candidates.find((c) => safeExists(c));
     if (!abs) continue;
-    const src = readFileSync(abs, "utf8");
+    // Scan the route file AND the page's content module — some pages build their
+    // JSON-LD in the content module and only import the ready object (e.g.
+    // `kuechenJsonLd`), so the route file alone won't mention BreadcrumbList.
+    let src = readFileSync(abs, "utf8");
+    if (node.contentModule) {
+      const modPath = resolve(ROOT, `src/lib/content/${node.contentModule}.ts`);
+      if (safeExists(modPath)) src += "\n" + readFileSync(modPath, "utf8");
+    }
     if (!/BreadcrumbList|buildServicePageJsonLd|buildLadenbauJsonLd/.test(src)) {
       add("Warnung", "breadcrumb-schema", `${node.slug}: kein BreadcrumbList-JSON-LD (Pflicht ab Ebene 2, Prinzip 7).`, { page: node.slug, file: relative(ROOT, abs) });
     }

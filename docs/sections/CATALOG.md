@@ -225,7 +225,7 @@ _Prop-less (page-specific content)._
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `comparison-table` | `shared` | no | `/gewerbe/ladenbau` |
+| `comparison-table` | `shared` | no | `/ladenbau` |
 
 | Prop | Type | Required |
 | --- | --- | --- |

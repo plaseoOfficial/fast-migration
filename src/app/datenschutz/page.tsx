@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { LegalPageLayout } from "@/components/layouts/LegalPageLayout";
 
 export const metadata: Metadata = {
@@ -8,6 +9,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/datenschutz/" },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+      },
+    ],
     title: "Datenschutzerklärung | Fast Systemmöbel",
     description: "Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
     locale: "de_DE",
@@ -24,7 +33,7 @@ export default function DatenschutzPage() {
       <h3>Allgemeine Hinweise</h3>
       <p>
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
-        personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten
+        personenbezogenen Daten passiert, wenn Sie <Link href="/">diese Website</Link> besuchen. Personenbezogene Daten
         sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche
         Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
         Datenschutzerklärung.

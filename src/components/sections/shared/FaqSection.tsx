@@ -16,6 +16,8 @@ interface FaqSectionProps {
   items: FaqItem[];
   ctaHref?: string;
   ctaLabel?: string;
+  /** Section wash; override to white when the preceding section is already beige. */
+  backgroundColor?: string;
 }
 
 /**
@@ -30,13 +32,14 @@ export function FaqSection({
   items,
   ctaHref = "/kontakt/",
   ctaLabel = "Frage stellen",
+  backgroundColor = "rgba(203,191,181,0.59)",
 }: FaqSectionProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section
       className="fast-section w-full"
-      style={{ backgroundColor: "rgba(203,191,181,0.59)" }}
+      style={{ backgroundColor }}
     >
       <div className="mx-auto max-w-[920px] px-6">
         <p className="fast-eyebrow mb-3 text-center">{eyebrow}</p>
