@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/Reveal";
 
 interface Stat {
   value: string;
@@ -33,7 +34,7 @@ export function MnmGeschichte({
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
 
         {/* Eyebrow + Heading */}
-        <div className="mb-8 lg:mb-10">
+        <Reveal className="mb-8 lg:mb-10">
           <p
             className="uppercase"
             style={{
@@ -52,10 +53,10 @@ export function MnmGeschichte({
           >
             {heading}
           </h2>
-        </div>
+        </Reveal>
 
         {/* Anchor photo — full container width */}
-        <div className="relative w-full h-[240px] sm:h-[360px] lg:h-[480px] overflow-hidden">
+        <Reveal className="relative w-full h-[240px] sm:h-[360px] lg:h-[480px] overflow-hidden">
           <Image
             src={anchorImage}
             alt={anchorImageAlt}
@@ -63,15 +64,15 @@ export function MnmGeschichte({
             className="object-cover"
             sizes="(max-width: 1280px) 100vw, 1224px"
           />
-        </div>
+        </Reveal>
 
         {/* Stats strip */}
         <div
           className="grid grid-cols-2 lg:grid-cols-4 py-8 lg:py-10 gap-y-8 border-b"
           style={{ borderColor: "rgba(61,61,61,0.15)" }}
         >
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col">
+          {stats.map((stat, i) => (
+            <Reveal key={stat.label} delay={i * 80} className="flex flex-col">
               <span
                 className="text-[37px] lg:text-[45px] leading-none font-medium tracking-[-1px]"
                 style={{ color: "rgb(61,61,61)" }}
@@ -84,12 +85,12 @@ export function MnmGeschichte({
               >
                 {stat.label}
               </span>
-            </div>
+            </Reveal>
           ))}
         </div>
 
         {/* Story text — 2 columns, odd paragraphs left, even right */}
-        <div className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+        <Reveal className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
           <div className="flex flex-col gap-5">
             {paragraphs.filter((_, i) => i % 2 === 0).map((para) => (
               <p
@@ -112,7 +113,7 @@ export function MnmGeschichte({
               </p>
             ))}
           </div>
-        </div>
+        </Reveal>
 
       </div>
     </section>

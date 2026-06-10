@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { PlusIcon, MinusIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface FaqItem {
   question: string;
@@ -60,8 +61,9 @@ export function FaqSection({
           {items.map((item, i) => {
             const expanded = open === i;
             return (
-              <div
+              <Reveal
                 key={i}
+                delay={i * 60}
                 className={cn(
                   "rounded-md border transition-colors",
                   expanded ? "border-[rgb(237,168,33)] bg-white" : "border-black/10 bg-white"
@@ -94,12 +96,17 @@ export function FaqSection({
                     {expanded ? <MinusIcon className="h-4 w-4" /> : <PlusIcon className="h-4 w-4" />}
                   </span>
                 </button>
-                {expanded && (
-                  <div className="px-6 pb-6 pt-0 fast-body" style={{ fontSize: 14, lineHeight: "23.8px" }}>
-                    {item.answer}
+                <div
+                  className="grid transition-[grid-template-rows] duration-300 ease-out"
+                  style={{ gridTemplateRows: expanded ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-6 pt-0 fast-body" style={{ fontSize: 14, lineHeight: "23.8px" }}>
+                      {item.answer}
+                    </div>
                   </div>
-                )}
-              </div>
+                </div>
+              </Reveal>
             );
           })}
         </div>

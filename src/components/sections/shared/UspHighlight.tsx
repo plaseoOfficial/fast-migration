@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface UspHighlightProps {
   eyebrow?: string;
@@ -49,7 +50,7 @@ export function UspHighlight({
           </div>
 
           {/* Text */}
-          <div className={imageLeft ? "lg:order-2" : "lg:order-1"}>
+          <Reveal className={imageLeft ? "lg:order-2" : "lg:order-1"}>
             {eyebrow && (
               <p
                 className="mb-3 uppercase"
@@ -92,7 +93,7 @@ export function UspHighlight({
                 </span>
               </div>
             )}
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

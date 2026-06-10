@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
 export interface SpecRow {
@@ -53,7 +54,7 @@ export function SpecTable({
         fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
       }}
     >
-      <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
+      <Reveal className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         <h2
           className={HEADING_CLASS}
           style={{ color: "rgb(61,61,61)", fontWeight: 500, maxWidth: "880px" }}
@@ -158,7 +159,7 @@ export function SpecTable({
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

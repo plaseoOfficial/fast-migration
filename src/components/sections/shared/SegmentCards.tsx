@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/Reveal";
+
 export interface Segment {
   title: string;
   body: string;
@@ -64,9 +66,10 @@ export function SegmentCards({
 
         {/* Cards */}
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {segments.map((segment) => (
-            <div
+          {segments.map((segment, i) => (
+            <Reveal
               key={segment.title}
+              delay={i * 80}
               className="flex flex-col p-8"
               style={{ backgroundColor: "rgb(243,243,243)" }}
             >
@@ -86,7 +89,7 @@ export function SegmentCards({
               >
                 {segment.body}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

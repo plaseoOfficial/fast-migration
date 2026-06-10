@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 export interface BereichCard {
   title: string;
@@ -58,7 +59,7 @@ export function BereicheSection({
     >
       <div className="mx-auto max-w-[1280px] px-6">
         {/* Header */}
-        <div className="mx-auto max-w-[820px] text-center">
+        <Reveal className="mx-auto max-w-[820px] text-center">
           <p className="fast-eyebrow">{eyebrow}</p>
           <h2
             className="mt-4"
@@ -75,12 +76,12 @@ export function BereicheSection({
           <p className="fast-body mt-5" style={{ fontSize: 16, lineHeight: "1.7" }}>
             {intro}
           </p>
-        </div>
+        </Reveal>
 
         {/* Two worlds */}
         <div className="mt-16 flex flex-col gap-16">
-          {groups.map((group) => (
-            <div key={group.label}>
+          {groups.map((group, gi) => (
+            <Reveal key={group.label} delay={gi * 120}>
               {/* Group header */}
               <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                 <div className="max-w-[640px]">
@@ -153,12 +154,12 @@ export function BereicheSection({
                   </Link>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
         {/* Closing CTA band */}
-        <div className="mt-16 flex flex-col items-center gap-5 border-t border-black/10 pt-10 text-center">
+        <Reveal className="mt-16 flex flex-col items-center gap-5 border-t border-black/10 pt-10 text-center">
           <p
             style={{
               fontFamily: "var(--font-poppins), Helvetica, Arial, sans-serif",
@@ -210,7 +211,7 @@ export function BereicheSection({
               <ArrowRightIcon className="h-4 w-4" />
             </Link>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

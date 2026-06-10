@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 function YellowDots() {
   return (
@@ -56,7 +57,7 @@ export function GewerbeLadenGastro({
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
 
           {/* Left: heading, paragraphs, dots */}
-          <div>
+          <Reveal>
             <h2
               className={cn(
                 "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
@@ -78,17 +79,17 @@ export function GewerbeLadenGastro({
             ))}
 
             <YellowDots />
-          </div>
+          </Reveal>
 
           {/* Right: big image */}
-          <div className="relative h-[260px] w-full lg:h-[330px]">
+          <Reveal delay={120} className="relative h-[260px] w-full lg:h-[330px]">
             <Image
               src={ladenImage}
               alt={ladenImageAlt}
               fill
               className="object-cover"
             />
-          </div>
+          </Reveal>
         </div>
 
         {/* ── Row 2: 3-image masonry + Gastro text ── */}
@@ -97,19 +98,19 @@ export function GewerbeLadenGastro({
           {/* Left: three-column image mosaic */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {mosaic.map((img, index) => (
-              <div key={index} className="relative h-[160px] w-full lg:h-[200px]">
+              <Reveal key={index} delay={index * 80} className="relative h-[160px] w-full lg:h-[200px]">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
                   className="object-cover"
                 />
-              </div>
+              </Reveal>
             ))}
           </div>
 
           {/* Right: Gastro heading, paragraphs, dots */}
-          <div>
+          <Reveal delay={120}>
             <h2
               className={cn(
                 "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
@@ -150,7 +151,7 @@ export function GewerbeLadenGastro({
             </p>
 
             <YellowDots />
-          </div>
+          </Reveal>
         </div>
 
       </div>

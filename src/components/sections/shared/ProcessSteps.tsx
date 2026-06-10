@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 export interface ProcessStep {
   title: string;
@@ -71,7 +72,7 @@ export function ProcessSteps({
               {heading}
             </h2>
 
-            <div className="relative mt-8 h-[240px] w-full sm:h-[280px] md:h-[340px] lg:h-[460px]">
+            <Reveal className="relative mt-8 h-[240px] w-full sm:h-[280px] md:h-[340px] lg:h-[460px]">
               <Image
                 src={image}
                 alt={imageAlt}
@@ -79,14 +80,15 @@ export function ProcessSteps({
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-            </div>
+            </Reveal>
           </div>
 
           {/* Right: numbered steps */}
           <div className={cn("flex flex-col", offsetSteps && "lg:mt-16")}>
             {steps.map((step, index) => (
-              <div
+              <Reveal
                 key={step.title}
+                delay={index * 90}
                 className={cn(
                   "flex gap-5 py-6",
                   index !== 0 && "border-t border-black/10"
@@ -112,7 +114,7 @@ export function ProcessSteps({
                     {step.description}
                   </p>
                 </div>
-              </div>
+              </Reveal>
             ))}
 
             {note && (

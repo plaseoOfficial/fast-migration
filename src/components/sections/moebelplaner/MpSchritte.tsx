@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
 const STEPS = [
@@ -31,7 +32,7 @@ export function MpSchritte() {
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
           {/* Left: Heading + Image */}
-          <div>
+          <Reveal>
             <h2
               className={cn(
                 "text-[32px] leading-[1.05] font-medium tracking-[-1.5px]",
@@ -54,13 +55,14 @@ export function MpSchritte() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </div>
+          </Reveal>
 
           {/* Right: 3 Steps */}
           <div className="flex flex-col gap-0">
             {STEPS.map((step, index) => (
-              <div
+              <Reveal
                 key={step.title}
+                delay={index * 90}
                 className={cn(
                   "py-6",
                   index !== 0 && "border-t border-black/10"
@@ -78,7 +80,7 @@ export function MpSchritte() {
                 >
                   {step.description}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

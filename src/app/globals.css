@@ -135,6 +135,253 @@
   .fast-parallax-bg { background-attachment: scroll; }
 }
 
+/* ── Scroll choreography ──────────────────────────────────────────────
+   --scroll-y holds the live Lenis scroll position (px), written once per
+   tick by <ScrollCoupler>. Several sections read this ONE signal (hero
+   parallax now, parallax-quote drift later) instead of each wiring its
+   own scroll listener — that's the "coupled across sections" effect. */
+:root {
+  --scroll-y: 0px;
+}
+
+/* On-load entrance — used above the fold (hero). Pure CSS so it plays even
+   without JS; opacity + transform only. animation-fill-mode: both holds the
+   start frame before play, so there is no flash of the final state. */
+@keyframes fast-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fast-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fast-rise { animation: fast-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.fast-fade { animation: fast-fade 1.2s ease both; }
+
+/* Scroll-triggered reveal. Gated behind the `js` class (added by a blocking
+   script in the root layout) so no-JS visitors and crawlers always see the
+   content — the hidden start state only ever applies when JS is present. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 24px));
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .js [data-reveal] { --reveal-y: 12px; }
+}
+
+/* Respect reduced-motion: no entrances, no reveals, no scroll coupling.
+   Everything rests in its final, fully visible state. */
+@media (prefers-reduced-motion: reduce) {
+  .fast-rise,
+  .fast-fade { animation: none; }
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Panel seam ───────────────────────────────────────────────────────
+   A section that slides over the one above gets a rounded top edge and a
+   soft upward shadow, so the GSAP over-slide reads as one panel gliding
+   over another. Most visible where the backgrounds differ (hero → content,
+   around the dark quote panel). Purely visual — safe under reduced-motion. */
+.fast-panel {
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  box-shadow: 0 -22px 44px -26px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Über-uns topic sequence ──────────────────────────────────────────
+   Default layout is a calm VERTICAL STACK (mobile / reduced-motion / no-JS).
+   GSAP adds `.is-horizontal` on the track only on desktop + no-preference,
+   which turns the stack into the pinned horizontal journey. */
+.topic-stage {
+  position: relative;
+}
+
+/* The journey "pins" via CSS sticky (not GSAP pin) to avoid the jolt that the
+   JS pin-spacer causes against Lenis momentum. In the stack fallback the
+   viewport is just normal flow. The wrapper (.topic-stage) gets an explicit
+   pixel height in JS so the sticky lasts exactly the horizontal travel. */
+.topic-viewport {
+  position: relative;
+}
+.topic-stage.is-sticky .topic-viewport {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topic-nav {
+  display: none;
+}
+/* Progress rail appears only once the horizontal mode is actually live. */
+.topic-stage:has(.topic-track.is-horizontal) .topic-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  position: absolute;
+  /* Clear the 96px fixed site header that sits over the pinned stage. */
+  top: 112px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  max-width: 92vw;
+}
+
+.topic-label {
+  font-family: var(--font-urbanist), Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(61, 61, 61);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+.topic-label.active {
+  background: rgb(61, 61, 61);
+  color: #ffffff;
+}
+
+.topic-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
+}
+/* Soft entry: the journey fades in (opacity only) the first time it scrolls
+   into view — softens the moment the section pins. `js`-gated so it is never
+   hidden without JS; no transform, so the pin stays intact. */
+.js .topic-track {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.js .topic-track.is-entered {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .topic-track {
+    opacity: 1;
+    transition: none;
+  }
+}
+.topic-panel {
+  width: 100%;
+}
+.topic-panel-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+.topic-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.topic-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .topic-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Horizontal journey — toggled by GSAP via `.is-horizontal`. */
+.topic-track.is-horizontal {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 0;
+  width: max-content;
+  will-change: transform;
+}
+.topic-track.is-horizontal .topic-panel {
+  width: 82vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 150px 4vw 6vh;
+}
+.topic-track.is-horizontal .topic-panel-inner {
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.topic-track.is-horizontal .topic-media {
+  aspect-ratio: auto;
+  height: 62vh;
+}
+.topic-track.is-horizontal .topic-cards {
+  grid-template-columns: 1fr;
+}
+
+/* Compact "Im Detail" overview — the less-prominent topics, grouped into one
+   quiet panel instead of a full photo stage each (shortens the journey and
+   visually recedes them). */
+.topic-overview {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.topic-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .topic-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.topic-mini {
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.topic-mini-media {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.topic-track.is-horizontal .topic-panel--overview {
+  /* Full viewport width so the grouped overview centres cleanly when the track
+     comes to rest at its right edge (instead of being pushed off to the side). */
+  width: 100vw;
+  align-items: center;
+}
+.topic-track.is-horizontal .topic-panel--overview .topic-panel-inner {
+  grid-template-columns: 1fr;
+}
+
 /* Section base padding */
 .fast-section {
   padding-top: 84px;

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 /** Filter tab in the category bar. `key` "all" shows every project. */
 export interface ReferenzCategory {
@@ -71,7 +72,7 @@ export function ReferenzenGrid({
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-[820px]">
+        <Reveal className="max-w-[820px]">
           <p
             className="uppercase"
             style={{
@@ -106,7 +107,7 @@ export function ReferenzenGrid({
               {paragraph}
             </p>
           ))}
-        </div>
+        </Reveal>
 
         {/* Category filter bar */}
         <nav
@@ -142,9 +143,10 @@ export function ReferenzenGrid({
 
         {/* Project grid (ItemList) */}
         <ul className="mt-10 grid list-none grid-cols-1 gap-x-6 gap-y-12 p-0 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-x-8">
-          {visible.map((project) => (
+          {visible.map((project, i) => (
             <li key={project.title} className="flex">
-              <Link href={project.href} className="group flex w-full flex-col">
+              <Reveal delay={i * 100} className="flex w-full">
+                <Link href={project.href} className="group flex w-full flex-col">
                 {/* Photo */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <Image
@@ -224,7 +226,8 @@ export function ReferenzenGrid({
                   <span>{project.linkLabel ?? "Projekt ansehen"}</span>
                   <ArrowRightIcon className="ml-2 inline-block h-[1em] w-auto align-middle transition-transform group-hover:translate-x-1" />
                 </span>
-              </Link>
+                </Link>
+              </Reveal>
             </li>
           ))}
         </ul>

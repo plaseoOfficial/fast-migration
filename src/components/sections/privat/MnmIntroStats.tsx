@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 interface MnmIntroStatsProps {
   since: string;
@@ -117,7 +118,7 @@ export function MnmIntroStats({
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
 
         {/* Row A — 3 columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1.2fr] gap-10 items-start">
           {/* Col 1: seit 1996 eyebrow */}
           <div>
             <h4
@@ -186,10 +187,10 @@ export function MnmIntroStats({
               {introAfter}
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {/* Row B — full-width image band */}
-        <div className="mt-9 h-[260px] lg:h-[430px] w-full overflow-hidden">
+        <Reveal className="mt-9 h-[260px] lg:h-[430px] w-full overflow-hidden">
           <Image
             src={bandImage}
             alt={bandAlt}
@@ -198,10 +199,10 @@ export function MnmIntroStats({
             className="h-full w-full object-cover"
             style={{ borderRadius: 0 }}
           />
-        </div>
+        </Reveal>
 
         {/* Row C — 3 columns */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <Reveal className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
           {/* Col 1: Maßarbeit planen */}
           <div>
@@ -314,7 +315,7 @@ export function MnmIntroStats({
             </Link>
           </div>
 
-        </div>
+        </Reveal>
       </div>
     </section>
   );

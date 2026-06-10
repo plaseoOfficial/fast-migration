@@ -13,6 +13,7 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
   preload(bgImage, { as: "image" });
   return (
     <section
+      data-hero
       className="relative w-full overflow-hidden"
       style={{
         height: "min(805px, 100vh)",
@@ -27,7 +28,7 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
           avoids that while rendering identically. */}
       <div
         aria-hidden
-        className="absolute inset-0"
+        className="absolute inset-0 fast-fade"
         style={{
           backgroundImage: `linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%), url(${bgImage})`,
           backgroundSize: "cover",
@@ -37,9 +38,10 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
       />
       {/* Centered massive title — Poppins 144px 500 −10px */}
       <h1
-        className="absolute left-0 right-0 select-none text-center"
+        className="absolute left-0 right-0 select-none text-center fast-rise"
         style={{
           top: "38%",
+          animationDelay: "0.15s",
           // Floor lowered (56→36px) and nowrap dropped so the title wraps instead of
           // clipping on phones. Slope (11vw) and 144px max are unchanged, so desktop
           // (≥~1309px viewport, where the 144px cap already applies) renders identically.
@@ -56,7 +58,7 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
       {/* Bottom-left white paragraphs — Poppins 18px 500 lh 28.8 */}
       <div className="absolute left-0 right-0 bottom-[12%]">
         <div className="mx-auto max-w-[1440px] px-6 lg:pl-[174px] lg:pr-[72px]">
-          <div className="max-w-[530px]">
+          <div className="max-w-[530px] fast-rise" style={{ animationDelay: "0.35s" }}>
             <p
               className="mb-4 text-white"
               style={{

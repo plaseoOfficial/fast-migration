@@ -49,9 +49,18 @@ export default function RootLayout({
   return (
     <html
       lang="de"
+      suppressHydrationWarning
       className={`${poppins.variable} ${urbanist.variable} ${openSans.variable} antialiased`}
     >
       <body>
+        {/* Mark JS as available before first paint so scroll-reveals only hide
+            their content when they can actually reveal it again. Without this,
+            a no-JS visitor (or crawler) would be left with empty sections. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

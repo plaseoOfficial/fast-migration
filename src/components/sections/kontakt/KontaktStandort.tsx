@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 export function KontaktStandort() {
   return (
@@ -12,20 +13,22 @@ export function KontaktStandort() {
       }}
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-        {/* Eyebrow */}
-        <p
-          className="text-center text-[14px] font-medium uppercase text-black"
-          style={{ letterSpacing: "2px" }}
-        >
-          STANDORT
-        </p>
+        <Reveal>
+          {/* Eyebrow */}
+          <p
+            className="text-center text-[14px] font-medium uppercase text-black"
+            style={{ letterSpacing: "2px" }}
+          >
+            STANDORT
+          </p>
 
-        {/* H2 */}
-        <h2
-          className="mt-2 mb-10 text-center text-[44px] leading-[1.0] font-medium text-black sm:text-[72px] lg:text-[120px] lg:leading-[120px] tracking-[-2px] sm:tracking-[-3px] lg:tracking-[-5px]"
-        >
-          Wir freuen uns auf Sie!
-        </h2>
+          {/* H2 */}
+          <h2
+            className="mt-2 mb-10 text-center text-[44px] leading-[1.0] font-medium text-black sm:text-[72px] lg:text-[120px] lg:leading-[120px] tracking-[-2px] sm:tracking-[-3px] lg:tracking-[-5px]"
+          >
+            Wir freuen uns auf Sie!
+          </h2>
+        </Reveal>
 
         {/* Location block — info card + full team photo, two columns at lg
             so the whole team stays visible (no crop, nothing overlaid). */}
@@ -42,7 +45,7 @@ export function KontaktStandort() {
           </div>
 
           {/* Info card — left column at lg, below the photo on mobile */}
-          <div
+          <Reveal
             className="w-full px-8 py-8 lg:order-1 lg:px-10 lg:py-10"
             style={{ backgroundColor: "rgba(231,224,218,0.96)" }}
           >
@@ -89,7 +92,7 @@ export function KontaktStandort() {
                 <span>Geschlossen</span>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

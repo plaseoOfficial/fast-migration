@@ -1,4 +1,5 @@
 import { CloseIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 export interface ContrastColumn {
   /** Card heading, e.g. "Katalog- & Systemmöbel". */
@@ -55,7 +56,7 @@ export function ContrastCols({
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-[760px]">
+        <Reveal className="max-w-[760px]">
           {eyebrow && (
             <p
               className="mb-3 uppercase"
@@ -83,12 +84,12 @@ export function ContrastCols({
               {intro}
             </p>
           )}
-        </div>
+        </Reveal>
 
         {/* Cards */}
         <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
           {/* Negative column */}
-          <div className="flex flex-col p-8" style={{ backgroundColor: "rgb(243,243,243)" }}>
+          <Reveal className="flex flex-col p-8" style={{ backgroundColor: "rgb(243,243,243)" }}>
             <h3
               className="text-[22px] font-medium leading-[1.3]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
@@ -108,10 +109,10 @@ export function ContrastCols({
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
           {/* Positive column */}
-          <div className="flex flex-col p-8" style={{ backgroundColor: "rgb(255,255,255)" }}>
+          <Reveal delay={120} className="flex flex-col p-8" style={{ backgroundColor: "rgb(255,255,255)" }}>
             <span
               className="mb-4 h-1 w-10 rounded-full"
               style={{ backgroundColor: "rgb(237,168,33)" }}
@@ -135,7 +136,7 @@ export function ContrastCols({
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

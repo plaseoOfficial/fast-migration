@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
 export function MpProzess() {
@@ -13,7 +14,7 @@ export function MpProzess() {
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left column */}
-          <div>
+          <Reveal>
             {/* Heading */}
             <h2
               className={cn(
@@ -55,10 +56,10 @@ export function MpProzess() {
                 style={{ backgroundColor: "rgb(237,168,33)" }}
               />
             </div>
-          </div>
+          </Reveal>
 
           {/* Right column — image */}
-          <div className="w-full">
+          <Reveal className="w-full">
             <Image
               src="/images/2025/11/20161103_150622294_iOS-scaled.jpg"
               alt="Maßgefertigter Einbauschrank"
@@ -66,7 +67,7 @@ export function MpProzess() {
               height={400}
               className="h-[260px] w-full object-cover lg:h-[400px]"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

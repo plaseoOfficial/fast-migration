@@ -2,6 +2,7 @@ import Image from "next/image";
 import { StarIcon, GoogleGIcon } from "@/components/icons";
 import { getReviews } from "@/lib/reviews";
 import type { Review } from "@/lib/reviews";
+import { Reveal } from "@/components/Reveal";
 
 interface TestimonialsSectionProps {
   heading: string;
@@ -113,7 +114,7 @@ export async function TestimonialsSection({
     >
       <div className="mx-auto w-full max-w-[1280px] px-6">
         {/* Header */}
-        <div className="flex flex-col items-center text-center">
+        <Reveal className="flex flex-col items-center text-center">
           {eyebrow && (
             <p
               style={{
@@ -154,7 +155,7 @@ export async function TestimonialsSection({
               {totalReviewCount} Google-Rezensionen
             </span>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* Auto-scrolling review wall (pauses on hover, freezes for reduced motion) */}

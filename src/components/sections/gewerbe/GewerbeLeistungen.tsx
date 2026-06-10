@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 interface ListItem {
   title: string;
@@ -20,8 +21,9 @@ function ItemList({ items }: { items: ListItem[] }) {
   return (
     <div className="flex flex-col">
       {items.map((item, index) => (
-        <div
+        <Reveal
           key={item.title}
+          delay={index * 80}
           className={cn("py-3 lg:py-5", index !== 0 && "border-t border-black/10")}
         >
           <h3
@@ -47,7 +49,7 @@ function ItemList({ items }: { items: ListItem[] }) {
           >
             {item.description}
           </p>
-        </div>
+        </Reveal>
       ))}
     </div>
   );
@@ -72,22 +74,24 @@ export function GewerbeLeistungen({
     >
       <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
         {/* Heading */}
-        <h2
-          className="text-[32px] leading-[1.05] lg:text-[64px] lg:leading-[64px] mb-10 tracking-[-1.5px] lg:tracking-[-3px]"
-          style={{
-            fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
-            fontWeight: 500,
-            color: "rgb(23,33,33)",
-            maxWidth: "820px",
-          }}
-        >
-          {heading}
-        </h2>
+        <Reveal>
+          <h2
+            className="text-[32px] leading-[1.05] lg:text-[64px] lg:leading-[64px] mb-10 tracking-[-1.5px] lg:tracking-[-3px]"
+            style={{
+              fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
+              fontWeight: 500,
+              color: "rgb(23,33,33)",
+              maxWidth: "820px",
+            }}
+          >
+            {heading}
+          </h2>
+        </Reveal>
 
         {/* Row 1: image left, list right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 lg:mb-12">
           {/* Left: image */}
-          <div className="relative h-[260px] lg:h-[360px] overflow-hidden">
+          <Reveal className="relative h-[260px] lg:h-[360px] overflow-hidden">
             <Image
               src={image1}
               alt={image1Alt}
@@ -95,7 +99,7 @@ export function GewerbeLeistungen({
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </Reveal>
 
           {/* Right: list */}
           <div>
@@ -111,7 +115,7 @@ export function GewerbeLeistungen({
           </div>
 
           {/* Right: image (on mobile, rendered first via order) */}
-          <div className="relative h-[260px] lg:h-[360px] overflow-hidden order-1 lg:order-2">
+          <Reveal className="relative h-[260px] lg:h-[360px] overflow-hidden order-1 lg:order-2">
             <Image
               src={image2}
               alt={image2Alt}
@@ -119,7 +123,7 @@ export function GewerbeLeistungen({
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

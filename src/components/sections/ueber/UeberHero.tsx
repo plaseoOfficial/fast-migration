@@ -42,7 +42,7 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
         alt={imageAlt}
         fill
         priority
-        className="object-cover object-[50%_50%] z-0"
+        className="object-cover object-[50%_50%] z-0 fast-fade"
       />
 
       {/* Radial vignette overlay (matches the original dark-center wash) */}
@@ -71,8 +71,8 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
             {/* Page h1, intentionally capped at the h2 step (65px) so it sets
                 the top of the heading hierarchy without overpowering the layout. */}
             <h1
-              className="text-white font-medium text-[45px] leading-[1.1] lg:text-[65px]"
-              style={{ letterSpacing: "-2px" }}
+              className="text-white font-medium text-[45px] leading-[1.1] lg:text-[65px] fast-rise"
+              style={{ letterSpacing: "-2px", animationDelay: "0.1s" }}
             >
               {title}
             </h1>
@@ -80,7 +80,8 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
             {/* Breadcrumb */}
             <nav
               aria-label="Breadcrumb"
-              className="mt-5 flex flex-wrap items-center gap-1"
+              className="mt-5 flex flex-wrap items-center gap-1 fast-rise"
+              style={{ animationDelay: "0.25s" }}
             >
               {breadcrumb.map((item, index) => {
                 const isLast = index === breadcrumb.length - 1;
@@ -108,7 +109,7 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
           </div>
 
           {/* Right column: intro paragraph (~32%) */}
-          <div className="mt-7 lg:mt-0 lg:w-[32%] lg:flex-shrink-0">
+          <div className="mt-7 lg:mt-0 lg:w-[32%] lg:flex-shrink-0 fast-rise" style={{ animationDelay: "0.4s" }}>
             <p
               className="font-medium text-white/80"
               style={{ fontSize: "16px", lineHeight: "1.7" }}

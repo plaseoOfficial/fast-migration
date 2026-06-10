@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/home/HeroSection";
 import { DiscoverSection } from "@/components/sections/home/DiscoverSection";
+import { OpeningOverlap } from "@/components/scroll/OpeningOverlap";
 import { BereicheSection } from "@/components/sections/home/BereicheSection";
 import { QualitySection } from "@/components/sections/home/QualitySection";
 import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
@@ -39,8 +40,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HeroSection {...homeHero} />
-      <DiscoverSection {...homeDiscover} />
+      {/* Signature cross-section moment: the hero pins and recedes while
+          Discover slides up and over it. See OpeningOverlap. */}
+      <OpeningOverlap>
+        <HeroSection {...homeHero} />
+        <DiscoverSection {...homeDiscover} />
+      </OpeningOverlap>
       <BereicheSection {...homeBereiche} />
       <QualitySection {...homeQuality} />
       <ParallaxQuote {...homeParallax} />

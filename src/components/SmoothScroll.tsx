@@ -3,6 +3,8 @@
 import { ReactLenis, type LenisRef } from "lenis/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, type ReactNode } from "react";
+import { ScrollCoupler } from "@/components/ScrollCoupler";
+import { gsap } from "@/lib/gsap";
 
 /**
  * Site-wide soft/inertial scrolling. Wraps the whole app in a global Lenis
@@ -25,6 +27,22 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     lenisRef.current?.lenis?.scrollTo(0, { immediate: true });
   }, [pathname]);
 
+  // Drive Lenis from GSAP's ticker (instead of its own RAF) so Lenis and
+  // ScrollTrigger advance on the exact same frame. Without this, pinned
+  // sections jolt when the pin engages/releases because the two run on
+  // separate animation loops a frame apart. `lagSmoothing(0)` stops GSAP from
+  // fast-forwarding after a stutter, which would otherwise desync the scroll.
+  useEffect(() => {
+    const update = (time: number) => {
+      lenisRef.current?.lenis?.raf(time * 1000);
+    };
+    gsap.ticker.add(update);
+    gsap.ticker.lagSmoothing(0);
+    return () => {
+      gsap.ticker.remove(update);
+    };
+  }, []);
+
   return (
     <ReactLenis
       root
@@ -36,8 +54,12 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
         smoothWheel: !prefersReducedMotion,
         // Keep anchor / programmatic jumps eased too.
         duration: 1.2,
+        // We pump Lenis from the GSAP ticker below — disable its own RAF so the
+        // two loops can't run a frame apart (the source of pin-jolt).
+        autoRaf: false,
       }}
     >
+      <ScrollCoupler />
       {children}
     </ReactLenis>
   );

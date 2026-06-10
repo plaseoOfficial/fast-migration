@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/Reveal";
+
 interface BueroVergleichProps {
   heading: string;
   intro: string;
@@ -21,20 +23,22 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
 
         {/* Row 1: heading left / intro right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 lg:mb-16">
-          <h2
-            className="text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] font-medium tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px]"
-            style={{ color: "#ffffff" }}
-          >
-            {heading}
-          </h2>
-          <div className="flex flex-col justify-end">
+          <Reveal>
+            <h2
+              className="text-[28px] leading-[1.15] sm:text-[34px] sm:leading-[1.05] lg:text-[65px] lg:leading-[65px] font-medium tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px]"
+              style={{ color: "#ffffff" }}
+            >
+              {heading}
+            </h2>
+          </Reveal>
+          <Reveal delay={120} className="flex flex-col justify-end">
             <p
               className="text-[16px] leading-[1.7] font-medium"
               style={{ color: "rgba(220,220,220,0.85)" }}
             >
               {intro}
             </p>
-          </div>
+          </Reveal>
         </div>
 
         {/* Row 2: 4 advantage columns */}
@@ -47,8 +51,9 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
             const title = parts[0];
             const detail = parts.slice(1).join(" — ");
             return (
-              <div
+              <Reveal
                 key={i}
+                delay={i * 80}
                 className={`py-6 lg:py-8 pr-6 lg:pr-8 flex flex-col gap-3 border-b sm:border-b-0 lg:border-r${i > 0 ? " pl-6 lg:pl-8" : ""}`}
                 style={{ borderColor: "rgba(255,255,255,0.30)" }}
               >
@@ -72,18 +77,20 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
                     {detail}
                   </p>
                 )}
-              </div>
+              </Reveal>
             );
           })}
         </div>
 
         {/* Footnote: PU-Kante */}
-        <p
-          className="mt-8 lg:mt-10 text-[12px] leading-[1.7] font-medium max-w-[640px]"
-          style={{ color: "rgba(220,220,220,0.85)" }}
-        >
-          {kantenText}
-        </p>
+        <Reveal>
+          <p
+            className="mt-8 lg:mt-10 text-[12px] leading-[1.7] font-medium max-w-[640px]"
+            style={{ color: "rgba(220,220,220,0.85)" }}
+          >
+            {kantenText}
+          </p>
+        </Reveal>
 
       </div>
     </section>
