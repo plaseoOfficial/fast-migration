@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { track } from "@vercel/analytics";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@/components/icons";
@@ -56,8 +57,11 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
       const result = await sendeKontaktAnfrage(formData);
       if (result.ok) {
         setSubmitted(true);
+        track("Kontaktformular gesendet", { seite: window.location.pathname });
       } else {
-        setError(result.error ?? "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.");
+        const grund = result.error ?? "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.";
+        setError(grund);
+        track("Kontaktformular Fehler", { grund });
       }
     });
   }

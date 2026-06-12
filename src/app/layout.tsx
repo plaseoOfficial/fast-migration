@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Urbanist, Open_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 import { SITE_URL } from "@/lib/content";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import "lenis/dist/lenis.css";
@@ -64,6 +65,7 @@ export default function RootLayout({
         />
         <SmoothScroll>{children}</SmoothScroll>
         <Analytics />
+        <AnalyticsEvents />
       </body>
     </html>
   );
