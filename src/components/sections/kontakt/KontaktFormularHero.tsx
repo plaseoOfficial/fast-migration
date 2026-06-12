@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { sendeKontaktAnfrage } from "@/lib/actions/kontakt";
 import { cn } from "@/lib/utils";
 
 const URBANIST: React.CSSProperties = {
@@ -44,10 +45,21 @@ const INPUT_CLASS =
 
 export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }: KontaktFormularHeroProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    const formData = new FormData(e.currentTarget);
+    setError(null);
+    startTransition(async () => {
+      const result = await sendeKontaktAnfrage(formData);
+      if (result.ok) {
+        setSubmitted(true);
+      } else {
+        setError(result.error ?? "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.");
+      }
+    });
   }
 
   return (
@@ -166,6 +178,15 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
+                {/* Honeypot — unsichtbar; füllen nur Bots aus. */}
+                <input
+                  type="text"
+                  name="firma"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
                 {/* Vorname + Nachname row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
@@ -174,6 +195,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     </label>
                     <input
                       id="vorname"
+                      name="vorname"
                       type="text"
                       placeholder="Vorname"
                       className={INPUT_CLASS}
@@ -186,6 +208,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     </label>
                     <input
                       id="nachname"
+                      name="nachname"
                       type="text"
                       placeholder="Nachname"
                       className={INPUT_CLASS}
@@ -202,6 +225,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     </label>
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="Email Adresse"
                       className={INPUT_CLASS}
@@ -214,6 +238,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     </label>
                     <input
                       id="telefon"
+                      name="telefon"
                       type="tel"
                       placeholder="Telefonnummer"
                       className={INPUT_CLASS}
@@ -229,6 +254,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                   </label>
                   <textarea
                     id="nachricht"
+                    name="nachricht"
                     placeholder="Nachricht"
                     rows={4}
                     className={cn(INPUT_CLASS, "resize-none")}
@@ -236,17 +262,29 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                   />
                 </div>
 
+                {/* Fehlermeldung */}
+                {error && (
+                  <p
+                    role="alert"
+                    className="mt-4 text-[15px] font-medium"
+                    style={{ color: "rgb(249,178,51)", ...URBANIST }}
+                  >
+                    {error}
+                  </p>
+                )}
+
                 {/* Senden button */}
                 <button
                   type="submit"
-                  className="w-full mt-6 text-[20px] font-medium transition-colors duration-200"
+                  disabled={isPending}
+                  className="w-full mt-6 text-[20px] font-medium transition-colors duration-200 disabled:opacity-70"
                   style={{
                     backgroundColor: "rgb(249,178,51)",
                     color: "rgb(61,61,61)",
                     borderRadius: "100px",
                     padding: "16px 20px",
                     border: "none",
-                    cursor: "pointer",
+                    cursor: isPending ? "default" : "pointer",
                     ...URBANIST,
                   }}
                   onMouseEnter={(e) => {
@@ -258,7 +296,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     (e.currentTarget as HTMLButtonElement).style.color = "rgb(61,61,61)";
                   }}
                 >
-                  Senden
+                  {isPending ? "Wird gesendet …" : "Senden"}
                 </button>
               </form>
             )}
