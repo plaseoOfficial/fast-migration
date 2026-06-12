@@ -2,6 +2,8 @@
 
 import { Resend } from "resend";
 
+import { buildKontaktAnfrageHtml } from "@/lib/email/kontakt-anfrage";
+
 export interface KontaktFormState {
   ok: boolean;
   error?: string;
@@ -53,6 +55,7 @@ export async function sendeKontaktAnfrage(
     to: TO_EMAIL,
     replyTo: email,
     subject: `Neue Anfrage über die Website von ${vorname} ${nachname}`,
+    html: buildKontaktAnfrageHtml({ vorname, nachname, email, telefon, nachricht }),
     text: [
       `Neue Anfrage über das Kontaktformular auf fast-systemmoebel.de`,
       ``,
