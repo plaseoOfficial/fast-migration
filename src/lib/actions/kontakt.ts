@@ -10,7 +10,7 @@ export interface KontaktFormState {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 /** Empfänger der Formular-Anfragen; per Env überschreibbar (z. B. fürs Testen). */
-const TO_EMAIL = process.env.KONTAKT_TO_EMAIL ?? "info@fast-systemmoebel.de";
+const TO_EMAIL = process.env.KONTAKT_TO_EMAIL ?? "anfrage@fast-systemmoebel.de";
 const FROM_EMAIL = "Fast Systemmöbel <formular@mail.plaseo.de>";
 
 export async function sendeKontaktAnfrage(
