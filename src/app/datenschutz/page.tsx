@@ -84,9 +84,9 @@ export default function DatenschutzPage() {
       <h3>Analyse-Tools und Tools von Drittanbietern</h3>
       <p>
         Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das
-        geschieht vor allem mit Cookies und mit Analyseprogrammen. Wir setzen hierfür Matomo
-        (selbst gehostet) sowie Google Analytics ein. Diese Analyse erfolgt nur mit Ihrer
-        Einwilligung.
+        geschieht mit Analyseprogrammen. Wir setzen hierfür Matomo (Cloud-Hosting in der EU) ein,
+        und zwar cookieless und mit anonymisierter IP-Adresse. Der Einsatz erfolgt auf Grundlage
+        unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).
       </p>
       <p>
         Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden
@@ -481,28 +481,30 @@ export default function DatenschutzPage() {
 
       <h3>Matomo</h3>
       <p>
-        Diese Website benutzt den Open-Source-Webanalysedienst Matomo. Matomo wird ausschließlich
-        auf unseren eigenen Servern gehostet; eine Weitergabe der Analysedaten an Dritte oder eine
-        Übermittlung in Drittstaaten findet nicht statt.
+        Diese Website benutzt den Open-Source-Webanalysedienst Matomo. Anbieter ist die InnoCraft
+        Ltd., 150 Willis Street, 6011 Wellington, Neuseeland. Wir nutzen Matomo in der
+        Cloud-Variante; die Verarbeitung und Speicherung der Analysedaten erfolgt auf Servern in der
+        Europäischen Union (Deutschland).
       </p>
       <p>
-        Matomo verwendet Technologien, die die seitenübergreifende Wiedererkennung des Nutzers zur
-        Analyse des Nutzerverhaltens ermöglichen (z. B. Cookies). Die durch Matomo erfassten
-        Informationen über die Benutzung dieser Website werden ausschließlich auf unseren Servern
-        gespeichert. Ihre IP-Adresse wird vor der Speicherung anonymisiert.
+        Wir betreiben Matomo cookieless: Es werden keine Cookies gesetzt und keine Technologien zur
+        seitenübergreifenden Wiedererkennung eingesetzt. Ihre IP-Adresse wird vor der Speicherung
+        anonymisiert. Eine Weitergabe der Analysedaten an Dritte zu deren eigenen Zwecken findet
+        nicht statt.
       </p>
       <p>
         Mithilfe von Matomo sind wir in der Lage, Daten über die Nutzung unserer Website durch die
         Websitebesucher zu erfassen und zu analysieren. Hierdurch können wir u. a. herausfinden,
         wann welche Seitenaufrufe getätigt wurden und aus welcher Region sie kommen. Außerdem
-        erfassen wir verschiedene Logdateien (z. B. IP-Adresse, Referrer, verwendete Browser und
-        Betriebssysteme) und können messen, ob unsere Websitebesucher bestimmte Aktionen
-        durchführen (z. B. Klicks).
+        erfassen wir verschiedene Logdateien (z. B. gekürzte IP-Adresse, Referrer, verwendete
+        Browser und Betriebssysteme) und können messen, ob unsere Websitebesucher bestimmte
+        Aktionen durchführen (z. B. Klicks).
       </p>
       <p>
-        Die Speicherung von Matomo-Cookies und der Einsatz dieses Analyse-Tools erfolgen auf
-        Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG). Die
-        Einwilligung ist jederzeit widerrufbar.
+        Da Matomo cookieless und mit anonymisierter IP-Adresse betrieben wird, erfolgt der Einsatz
+        auf Grundlage unseres berechtigten Interesses an einer datenschutzkonformen Analyse des
+        Nutzerverhaltens (Art. 6 Abs. 1 lit. f DSGVO). Die Verarbeitung erfolgt im Auftrag durch die
+        InnoCraft Ltd.; hierzu wurde ein Vertrag zur Auftragsverarbeitung (AVV) geschlossen.
       </p>
 
       <h3>Google Analytics</h3>
