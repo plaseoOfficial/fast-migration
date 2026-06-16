@@ -97,7 +97,7 @@ export const ueberWofuer = {
   ctaLabel: "Unsere Leistungen",
   ctaHref: "/moebel-nach-mass/",
   image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
-  imageAlt: "Ladeneinrichtung im Lebensmittelmarkt von Fast Systemmöbel",
+  imageAlt: "Ladeneinrichtung im Lebensmittelmarkt",
   columns: [
     {
       title: "Möbel, die auf Ihren Alltag reagieren",

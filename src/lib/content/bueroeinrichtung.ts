@@ -17,7 +17,7 @@
 
 export const bueroHero = {
   bgImage: "/images/2025/11/DSC_9747.jpg",
-  imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel aus Espelkamp",
+  imageAlt: "Büroeinrichtung nach Maß aus Espelkamp",
   title: "Büroeinrichtung nach Maß",
   intro:
     "Vom Schreibtisch bis zur Objekteinrichtung — geplant, gefertigt und montiert im eigenen Meisterbetrieb in Espelkamp.",
@@ -37,7 +37,7 @@ export const bueroIntroStats = {
   introAfter:
     " bis zur Montage — kalkuliert nach Grundriss, gefertigt im eigenen Werk, aufgebaut vom eigenen Team.",
   bandImage: "/images/2025/11/IMG_2673-scaled.jpg",
-  bandAlt: "Maßgefertigte Büroeinrichtung mit Arbeitsplätzen und Stauraum",
+  bandAlt: "Büro-Arbeitsplätze nach Maß mit Stauraum",
   col1Title: "Büro planen",
   col1Body:
     "Arbeitsplätze, Schränke, Konferenztische — millimetergenau geplant nach Ihrem Grundriss und Ihren Abläufen. Was Sie brauchen, klären wir beim kostenlosen Aufmaß.",
@@ -169,7 +169,7 @@ export const bueroVergleich = {
     "Hält der täglichen Beanspruchung über Jahre stand — keine Kompromisse bei Material und Verarbeitung",
   ],
   image: "/images/2025/11/DSC_9747.jpg",
-  imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel Espelkamp",
+  imageAlt: "Büroeinrichtung nach Maß in Espelkamp",
   kantenText:
     "Ein Detail, das im Alltag den Unterschied macht: Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Für den Büroalltag bedeutet das: Die Teeküche verträgt Spritzwasser, Schreibtischkanten überstehen Jahre der Beanspruchung, und nichts platzt an den Rändern ab.",
 };
@@ -178,7 +178,7 @@ export const bueroGeschichte = {
   heading: "Ein Meisterbetrieb, der Arbeitsräume versteht",
   subheading: "Vom Garagenbetrieb zum Partner für Büroeinrichtung",
   anchorImage: "/images/2025/11/IMG_2673-scaled.jpg",
-  anchorImageAlt: "Arbeitsplätze nach Maß — Fast Systemmöbel Espelkamp",
+  anchorImageAlt: "Arbeitsplätze nach Maß in Espelkamp",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },

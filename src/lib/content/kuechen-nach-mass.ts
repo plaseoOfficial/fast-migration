@@ -10,7 +10,7 @@ const PATH = "/kuechen-nach-mass/";
 
 export const kuechenHero = {
   bgImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
-  imageAlt: "Moderne Küche nach Maß mit grifflosen Fronten und Kochinsel",
+  imageAlt: "Grifflose Küche nach Maß mit Kochinsel",
   title: "Küchen nach Maß, zentimetergenau aus Espelkamp",
   intro:
     "Wir planen und bauen Ihre Küche nach Maß — zentimetergenau auf Ihren Raum zugeschnitten. Vom Aufmaß bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp.",
@@ -31,7 +31,7 @@ export const kuechenIntroStats = {
   introAfter:
     ". So entsteht eine Küche, die genau in Ihren Raum passt, sich an Ihren Alltag anpasst und über Jahre hält.",
   bandImage: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg",
-  bandAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte",
+  bandAlt: "U-Küche nach Maß mit Kochinsel",
   col1Title: "Küche planen",
   col1Body:
     "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, danach richten wir die Küche aus. Markengeräte aller gängigen Hersteller planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube. Die Geräte wählen Sie frei.",
@@ -128,7 +128,7 @@ export const kuechenWarum = {
     "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Wir bauen Ihre Küche in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen.",
   images: [
     { src: "/images/2026/05/variante_1778229163946_1-scaled.jpg", alt: "Graue Küche nach Maß mit Holzdecke und Insel", width: 600, height: 400 },
-    { src: "/images/2025/11/IMG_9387-scaled.jpg", alt: "Küche nach Maß mit grifflosen Fronten und Holzrückwand", width: 600, height: 800 },
+    { src: "/images/2025/11/IMG_9387-scaled.jpg", alt: "Grifflose Küche nach Maß mit Holzrückwand", width: 600, height: 800 },
     { src: "/images/2025/11/20231204_095459232_iOS-scaled.jpg", alt: "Moderne Küche in Grau mit Kochinsel", width: 600, height: 450 },
     { src: "/images/2025/11/IMG_4797-scaled.jpg", alt: "Weiße Küche nach Maß mit Holz-Arbeitsplatte", width: 600, height: 800 },
   ],
@@ -148,7 +148,7 @@ export const kuechenGeschichte = {
   heading: "Küchenhandwerk aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
   anchorImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
-  anchorImageAlt: "Grifflose Inselküche nach Maß mit Holzdecke — Fast Systemmöbel Espelkamp",
+  anchorImageAlt: "Grifflose Inselküche nach Maß mit Holzdecke",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
