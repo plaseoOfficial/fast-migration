@@ -57,6 +57,7 @@ const nextConfig: NextConfig = {
       { source: "/ladenbau/gastronomieeinrichtung/", destination: "/gastronomieeinrichtung/", permanent: true },
       { source: "/gastronomieeinrichtung/hoteleinrichtung/", destination: "/serienmoebel/", permanent: true }, // INTERIM → /serienmoebel/hotelmoebel-serie/
       { source: "/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/nischenschrank-nach-mass/
+      { source: "/index.php", destination: "/", permanent: true }, // Startseite aus dem alten WordPress-Setup, die in Next.js einfach /index.html ist (und damit auch über / erreichbar).
     ];
   },
 };
