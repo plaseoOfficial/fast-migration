@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
   // Keep the WordPress/relaunch URL convention: every URL ends with a slash.
   trailingSlash: true,
   images: {
+    // Serve AVIF first (≈30–50% smaller than WebP), WebP as the fallback. The
+    // hero photo is the mobile LCP element, so the smaller encode directly
+    // shaves seconds off LCP on phones. Next falls back to the original JPEG
+    // for browsers that support neither.
+    formats: ["image/avif", "image/webp"],
     // All SVGs are local, trusted assets downloaded from the target site.
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
