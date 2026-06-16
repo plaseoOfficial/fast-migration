@@ -1,4 +1,4 @@
-import { preload } from "react-dom";
+import Image from "next/image";
 
 interface HeroSectionProps {
   bgImage: string;
@@ -8,9 +8,6 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
-  // The hero image is the LCP element but lives in a CSS background-image, which
-  // the preload scanner can't see — hint it explicitly without touching markup.
-  preload(bgImage, { as: "image" });
   return (
     <section
       data-hero
@@ -20,22 +17,35 @@ export function HeroSection({ bgImage, title, intro, body }: HeroSectionProps) {
         minHeight: 640,
       }}
     >
-      {/* Background image lives on an absolutely-positioned child layer, not on
-          the <section> itself. A position:fixed element (the header) sitting
-          over a section that carries its own background-image triggers a Chrome
-          compositing bug where the header's background stops repainting on
-          scroll (the bar shows up see-through). Painting the image on a child
-          avoids that while rendering identically. */}
-      <div
-        aria-hidden
-        className="absolute inset-0 fast-fade"
-        style={{
-          backgroundImage: `linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%), url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+      {/* The hero photo is the mobile LCP element. It's rendered with next/image
+          (priority) instead of a CSS background-image so it's served as a
+          responsive, device-sized AVIF/WebP and preloaded with fetchpriority
+          high — the original full-size "-scaled.jpg" (≈800 KiB) was pushing LCP
+          past 6 s on phones.
+
+          The image sits on an absolutely-positioned child layer, not on the
+          <section> itself. A position:fixed element (the header) sitting over a
+          section that carries its own background triggers a Chrome compositing
+          bug where the header's background stops repainting on scroll (the bar
+          shows up see-through). Painting on a child avoids that. The light top
+          fade is kept as a gradient overlay on top of the image. */}
+      <div aria-hidden className="absolute inset-0 fast-fade">
+        <Image
+          src={bgImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgb(243,243,243) 0%, rgba(255,255,255,0) 23%)",
+          }}
+        />
+      </div>
       {/* Centered massive title — Poppins 144px 500 −10px */}
       <h1
         className="absolute left-0 right-0 select-none text-center fast-rise"

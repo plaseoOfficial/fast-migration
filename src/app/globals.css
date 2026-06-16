@@ -123,18 +123,6 @@
   }
 }
 
-/* Parallax fixed-attachment helper */
-.fast-parallax-bg {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-  .fast-parallax-bg { background-attachment: scroll; }
-}
-
 /* ── Scroll choreography ──────────────────────────────────────────────
    --scroll-y holds the live Lenis scroll position (px), written once per
    tick by <ScrollCoupler>. Several sections read this ONE signal (hero

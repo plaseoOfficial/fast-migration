@@ -104,6 +104,11 @@ export function Header() {
             width={150}
             height={52}
             priority
+            // The logo is a vector SVG and sits in the fixed header (top of every
+            // page). Routing it through /_next/image gains nothing for an SVG but
+            // adds an optimizer round-trip on the critical path — serve the file
+            // directly so it paints immediately.
+            unoptimized
             className="h-12 w-auto"
           />
         </Link>
