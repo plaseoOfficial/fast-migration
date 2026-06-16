@@ -28,7 +28,7 @@ import {
 } from "@/lib/content/kuechen-nach-mass";
 
 export const metadata: Metadata = {
-  title: "Küchen nach Maß aus Espelkamp: Planung, Fertigung, Montage",
+  title: "Küchen nach Maß aus Espelkamp vom Meisterbetrieb",
   description:
     "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, in eigener Fertigung gebaut, vom eigenen Team montiert. Kostenloses Aufmaß vor Ort.",
   alternates: { canonical: "/kuechen-nach-mass/" },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Küchen nach Maß aus Espelkamp: Planung, Fertigung, Montage",
+    title: "Küchen nach Maß aus Espelkamp vom Meisterbetrieb",
     description:
       "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, gebaut und montiert.",
     url: "/kuechen-nach-mass/",
