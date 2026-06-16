@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { track } from "@vercel/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 /**
  * Site-weites Event-Tracking über einen delegierten Klick-Listener:
@@ -32,7 +32,7 @@ function trackeKlick(target: EventTarget | null) {
   const knopf = target.closest("button[aria-expanded]");
   if (knopf && !knopf.hasAttribute("aria-haspopup")) {
     if (knopf.getAttribute("aria-expanded") === "false") {
-      track("FAQ geöffnet", { seite, frage: kurz(knopf.textContent) });
+      trackEvent("FAQ geöffnet", { seite, frage: kurz(knopf.textContent) });
     }
     return;
   }
@@ -43,11 +43,11 @@ function trackeKlick(target: EventTarget | null) {
   const label = kurz(link.textContent) || kurz(link.getAttribute("aria-label"));
 
   if (href.startsWith("tel:")) {
-    track("Telefon geklickt", { seite });
+    trackEvent("Telefon geklickt", { seite });
     return;
   }
   if (href.startsWith("mailto:")) {
-    track("E-Mail geklickt", { seite });
+    trackEvent("E-Mail geklickt", { seite });
     return;
   }
 
@@ -60,27 +60,27 @@ function trackeKlick(target: EventTarget | null) {
   const host = url.hostname.replace(/^www\./, "");
 
   if (host === "moebelplaner.fast-systemmoebel.de") {
-    track("Möbelplaner geöffnet", { seite, label });
+    trackEvent("Möbelplaner geöffnet", { seite, label });
     return;
   }
   if (host.endsWith("google.com") && url.pathname.startsWith("/maps")) {
-    track("Google Maps geöffnet", { seite });
+    trackEvent("Google Maps geöffnet", { seite });
     return;
   }
   for (const [domain, netzwerk] of Object.entries(SOCIAL_NETZWERKE)) {
     if (host === domain || host.endsWith(`.${domain}`)) {
-      track("Social geklickt", { seite, netzwerk });
+      trackEvent("Social geklickt", { seite, netzwerk });
       return;
     }
   }
   if (url.origin === window.location.origin) {
     if (url.pathname === "/kontakt/" || url.pathname === "/kontakt") {
-      track("Kontakt-CTA geklickt", { seite, label });
+      trackEvent("Kontakt-CTA geklickt", { seite, label });
     }
     return;
   }
   // Sonstige ausgehende Links (Partner, Impressums-Links, …)
-  track("Externer Link geklickt", { seite, ziel: host });
+  trackEvent("Externer Link geklickt", { seite, ziel: host });
 }
 
 export function AnalyticsEvents() {
