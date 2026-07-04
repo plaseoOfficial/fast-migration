@@ -41,9 +41,9 @@ export default function ImpressumPage() {
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: 05771- 9138 312
+        Telefon: 05771 9138312
         <br />
-        Telefax: 05771- 9138 314
+        Telefax: 05771 9138314
         <br />
         E-Mail: <a href="mailto:anfrage@fast-systemmoebel.de">anfrage@fast-systemmoebel.de</a>
       </p>

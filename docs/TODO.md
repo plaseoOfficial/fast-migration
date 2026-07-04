@@ -5,15 +5,6 @@ siehe das spezielle Backlog in [`seo/internal-linking.md`](seo/internal-linking.
 
 ## Offen
 
-- [ ] **Kontaktformular: echter Versand via Server Action.** Das Formular in
-  `src/components/sections/kontakt/KontaktFormularHero.tsx` setzt aktuell nur
-  clientseitig `submitted = true` (Fake) und verschickt nichts. Eine Next.js 16
-  Server Action ergänzen, die die Felder (Vorname, Nachname, Email, Telefon,
-  Nachricht) entgegennimmt, **serverseitig validiert** und **per E-Mail
-  versendet** (an die Fast-Adresse). Inklusive: Fehler-/Erfolgs-State im UI,
-  Spam-Schutz (z. B. Honeypot) und Beibehaltung der Erfolgsmeldung
-  „Danke! Wir melden uns."
-
 ### Ladenbau `/gewerbe/ladenbau/` — Dev-Schritte zum Content-PR #29
 
 Content ist fertig in `src/lib/content/ladenbau.ts` (2.029 W · 16 FAQ · FACTS-sauber).
@@ -33,10 +24,10 @@ Volle Details + Tabellen-Inhalte siehe
   `/serienmoebel/`) werden NICHT lateral gesetzt — `internal-linking.md`
   („A Cluster-Pillar must not link to another silo's clusters") verbietet
   Cluster↔Cluster; Verteilung läuft über den `/gewerbe/`-Hub.
-- [ ] **Wortzahl auf Korridor bringen.** Aktuell ~2.070 W, Kit-Korridor verbindlich
-  2.400–2.800. Es fehlen ~330 W — NICHT bestehende Sektionen aufblähen, sondern
-  ein weiteres Pflicht-Modul ergänzen (empfohlen: `UspHighlight` für die PU-Kante
-  analog `gastroUsp`, + ggf. Material-/Innenausbau-Block).
+- [~] **Wortzahl auf Korridor bringen — WIRD NICHT MEHR VERFOLGT (Entscheidung 2026-06-16).**
+  Aktuell ~2.070 W, Kit-Korridor wäre 2.400–2.800 gewesen. Bewusst so belassen;
+  kein Launch-Blocker. Falls später doch gewünscht: ein weiteres Pflicht-Modul
+  ergänzen (z. B. `UspHighlight` analog `gastroUsp`), bestehende Sektionen NICHT aufblähen.
 - [x] **2 Tabellen-Sektionen für SEO-Tiefe gebaut.** Neue props-getriebene
   `SpecTable`-Sektion (`src/components/sections/shared/SpecTable.tsx`, in
   registry/catalog registriert), 2× genutzt: Vergleich (`ladenVergleich`) +
@@ -46,11 +37,13 @@ Volle Details + Tabellen-Inhalte siehe
 - [ ] **(optional) Schema für neue Tabellen.** `buildLadenbauJsonLd` deckt
   LocalBusiness + Service + Breadcrumb + FAQPage (16 FAQ automatisch) bereits ab.
   Nur nötig, falls die neuen Tabellen zusätzlich ausgezeichnet werden sollen.
-- [ ] **(separat) URL-Migration** `/gewerbe/ladenbau/` → flaches `/ladenbau/`
+- [x] **(separat) URL-Migration** `/gewerbe/ladenbau/` → flaches `/ladenbau/`
   (konsistent mit `/gastronomieeinrichtung/`, `/bueroeinrichtung/`,
   `/praxiseinrichtung/`): Route-Move + Redirect + Nav + `linking-rules.ts` +
-  canonical. Bewusst getrennt vom Content-PR gehalten.
+  canonical. Live verifiziert (`/ladenbau/` 200, Redirect greift).
 
 ## Erledigt
 
-<!-- abgeschlossene Aufgaben hierher verschieben -->
+- [x] **Kontaktformular: echter Versand via Server Action.** Umgesetzt (PR #42):
+  `src/lib/actions/kontakt.ts` validiert serverseitig + versendet per Resend,
+  Honeypot-Spam-Schutz, Fehler-/Erfolgs-State im UI. Live deployed auf `master`.

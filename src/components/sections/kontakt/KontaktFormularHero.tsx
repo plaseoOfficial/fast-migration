@@ -149,7 +149,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
             {/* Quick contact row */}
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
               <a
-                href="tel:057719138312"
+                href="tel:+4957719138312"
                 className="text-[20px] font-medium text-white hover:text-[rgb(249,178,51)] transition-colors"
                 style={URBANIST}
               >

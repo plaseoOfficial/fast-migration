@@ -259,7 +259,7 @@ export function KontaktPanel() {
                 >
                   <span>Jetzt anrufen</span>
                   <a
-                    href="tel:057719138312"
+                    href="tel:+4957719138312"
                     className="hover:underline"
                     style={{ color: "rgb(255,255,255)", ...URBANIST }}
                   >

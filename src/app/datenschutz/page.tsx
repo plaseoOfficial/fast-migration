@@ -162,7 +162,7 @@ export default function DatenschutzPage() {
         <br />
         32339 Espelkamp
         <br />
-        Tel: 05771- 9138 312
+        Tel: 05771 9138312
         <br />
         E-Mail: anfrage@fast-systemmoebel.de
       </address>

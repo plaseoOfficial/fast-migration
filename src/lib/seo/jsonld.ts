@@ -9,7 +9,7 @@
  *     dangerouslySetInnerHTML={{ __html: JSON.stringify(buildLadenbauJsonLd(...)) }} />
  *
  * NAP from the live Impressum (https://www.fast-systemmoebel.de/impressum.html):
- * Inhaber Johann Fast, Alte Waldstraße 32, 32339 Espelkamp, Tel. 05771-9138312.
+ * Inhaber Johann Fast, Alte Waldstraße 32, 32339 Espelkamp, Tel. 05771 9138312.
  */
 import { SITE_URL } from "@/lib/content";
 
