@@ -10,7 +10,11 @@ import type { ReviewsData } from "./types";
  */
 export const FALLBACK_REVIEWS: ReviewsData = {
   live: false,
-  averageRating: 4.9,
+  // Muss dem echten Google-Business-Profil entsprechen (Stand Audit 24.06.2026:
+  // 4,2★ / 14 Bewertungen, 3 Quellen bestätigt). Dieser statische Wert greift
+  // nur, solange FEATURABLE_WIDGET_ID nicht gesetzt ist; mit Live-Sync kommt die
+  // Zahl direkt vom GBP. Bei neuen Bewertungen hier gegenprüfen/anpassen.
+  averageRating: 4.2,
   totalReviewCount: 14,
   profileUrl: null,
   reviews: [
