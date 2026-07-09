@@ -192,6 +192,13 @@ export const mnmWeitereCards: ServiceCard[] = [
     href: "/kuechen-nach-mass/",
   },
   {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Einbauschränke nach Maß",
+    description:
+      "Kleiderschränke, Ankleiden und Nischenlösungen vom Meisterbetrieb. Bis zur Decke, Wand zu Wand, auch unter Dachschrägen.",
+    href: "/einbauschraenke-nach-mass/",
+  },
+  {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Raumkonzepte",
     description:
