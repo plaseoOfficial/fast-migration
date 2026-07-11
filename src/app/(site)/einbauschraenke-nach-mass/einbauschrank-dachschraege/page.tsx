@@ -13,25 +13,25 @@ import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCt
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
-  einbauHero,
-  einbauIntroStats,
-  einbauProcess,
-  einbauTypische,
-  einbauWarum,
-  einbauWarum2,
-  einbauGeschichte,
-  einbauMoebelplaner,
-  einbauCtas,
-  einbauTestimonialsHeading,
-  einbauFaq,
-  einbauJsonLd,
-} from "@/lib/content/einbauschraenke-nach-mass";
+  dachHero,
+  dachIntroStats,
+  dachProcess,
+  dachTypische,
+  dachWarum,
+  dachWarum2,
+  dachGeschichte,
+  dachMoebelplaner,
+  dachCtas,
+  dachTestimonialsHeading,
+  dachFaq,
+  dachJsonLd,
+} from "@/lib/content/einbauschrank-dachschraege";
 
 export const metadata: Metadata = {
-  title: "Einbauschränke nach Maß aus Espelkamp: Planung & Montage",
+  title: "Schrank für Dachschräge nach Maß aus Espelkamp: Planung & Montage",
   description:
-    "Einbauschränke nach Maß vom Meisterbetrieb in Espelkamp: geplant, gefertigt und vom eigenen Team montiert. Auch für Dachschrägen und Nischen. Kostenloses Aufmaß.",
-  alternates: { canonical: "/einbauschraenke-nach-mass/" },
+    "Schrank für Dachschräge nach Maß vom Meisterbetrieb in Espelkamp: Drempel- und Kniestockschränke, passgenau an die Schräge geplant, gefertigt und vom eigenen Team montiert. Kostenloses Aufmaß.",
+  alternates: { canonical: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
   openGraph: {
     images: [
       {
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Einbauschränke nach Maß aus Espelkamp: Planung & Montage",
+    title: "Schrank für Dachschräge nach Maß aus Espelkamp: Planung & Montage",
     description:
-      "Einbauschränke nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, gebaut und montiert.",
-    url: "/einbauschraenke-nach-mass/",
+      "Dachschrägenschränke nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an die Schräge geplant, gebaut und montiert.",
+    url: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
     locale: "de_DE",
     type: "website",
     siteName: "Fast Systemmöbel",
@@ -55,16 +55,23 @@ const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 /**
  * Silo-konforme Karten für MnmWeitereLeistungen: kein Cross-Silo in den Gewerbe-
- * Bereich (internal-linking.md Silo-Integrität). Der Up-Link zum Hub
- * /moebel-nach-mass/ trägt einen keyword-reichen Anker; die Geschwister-Cluster
- * werden über den Hub verteilt, nicht seitwärts. Kinder-Seite „Schrank für
- * Dachschräge nach Maß" ist gebaut → keyword-reicher In-Content-Link (Cluster-
- * Pillar → Spoke, own-cluster-spokes MUSS). Weitere Kinder (Kleiderschrank,
- * Nischenschrank …) noch nicht gebaut → kein Link (launch clean).
+ * Bereich (internal-linking.md Silo-Integrität). Der keyword-reiche Up-Link zeigt
+ * auf den Cluster-Pillar /einbauschraenke-nach-mass/ (parent), dazu der Hub
+ * /moebel-nach-mass/ und der Trust-Link /referenzen/. /kontakt/ und /moebelplaner/
+ * werden über IntroStats, die beiden ExpandingImageCtas, MnmMoebelplaner und die
+ * FaqSection verlinkt (Conversion-MUSS, wie beim Pillar).
  */
 const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Einbauschränke nach Maß",
+    description:
+      "Der Dachschrägenschrank ist Teil unserer Einbauschränke nach Maß: Kleiderschränke, Nischenschränke und Ankleiden, zentimetergenau von Wand zu Wand geplant.",
+    href: "/einbauschraenke-nach-mass/",
+    moreLabel: "Alle Einbauschränke nach Maß",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Möbel nach Maß",
     description:
       "Jedes Stück ein Unikat. Ob Küche, Schrank oder Wohnraum: Wir fertigen passgenaue Möbel, die sich exakt nach Ihrem Stil, Ihrem Alltag und Ihrem Raum richten.",
@@ -72,85 +79,77 @@ const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
     moreLabel: "Alle Möbel nach Maß",
   },
   {
-    icon: "/images/2024/03/interior-design-white-icons-22.svg",
-    title: "Schrank für Dachschräge nach Maß",
-    description:
-      "Unter der Dachschräge nutzen wir auch die niedrigen Zonen am Kniestock. Passgenaue Fronten folgen exakt der Schräge, vom Drempelschrank bis zur begehbaren Ankleide unterm Dach.",
-    href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
-    moreLabel: "Dachschrägenschrank ansehen",
-  },
-  {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
-    title: "Fertigung",
+    title: "Aufmaß & 3D-Planung",
     description:
-      "Moderne Homag-Technik und handwerkliche Qualitätskontrolle sorgen dafür, dass jedes Bauteil exakt passt. Von Einzelmöbeln bis zu kompletten Räumen.",
+      "Wir nehmen die Schräge kostenlos vor Ort auf, mit Kniestockhöhe und Winkel, und planen Ihren Schrank in 3D. Sie sehen ihn, bevor das erste Bauteil entsteht.",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
-    title: "Montage",
+    title: "Fertigung & Montage",
     description:
-      "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt – bis jedes Detail sitzt.",
+      "Gefertigt auf Homag-Technik in Espelkamp, montiert von unserem eigenen Team. Die Passung an der Schräge stimmen wir vor Ort ab, bis jedes Detail sitzt.",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
     title: "Referenzprojekte",
     description:
-      "Realisierte Einbauschränke nach Maß aus unserer Werkstatt: Kleiderschränke, Ankleiden und Nischenlösungen, zentimetergenau eingebaut.",
+      "Realisierte Schränke nach Maß aus unserer Werkstatt: Dachschrägen, Drempel und Ankleiden, passgenau eingebaut in ganz OWL.",
     href: "/referenzen/",
     moreLabel: "Schrankprojekte ansehen",
   },
 ];
 
-export default function EinbauschraenkeNachMassPage() {
+export default function EinbauschrankDachschraegePage() {
   return (
     <PrivatPageLayout>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(einbauJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dachJsonLd) }}
       />
 
-      <MnmHero {...einbauHero} />
-      <MnmIntroStats {...einbauIntroStats} />
+      <MnmHero {...dachHero} />
+      <MnmIntroStats {...dachIntroStats} />
 
       {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
       <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...einbauCtas.intro} />
+          <ExpandingImageCta {...dachCtas.intro} />
         </div>
       </section>
 
-      <MnmProcess {...einbauProcess} />
+      <MnmProcess {...dachProcess} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
-      <MnmTypische {...einbauTypische} />
-      <MnmWarum {...einbauWarum} imageColumns={2} />
-      <MnmWarum {...einbauWarum2} reverse imageColumns={1} />
-      <MnmGeschichte {...einbauGeschichte} />
-      <MnmMoebelplaner {...einbauMoebelplaner} />
-      <TestimonialsSection heading={einbauTestimonialsHeading} />
+      <MnmTypische {...dachTypische} />
+      <MnmWarum {...dachWarum} imageColumns={1} />
+      <MnmWarum {...dachWarum2} reverse imageColumns={1} />
+      <MnmGeschichte {...dachGeschichte} />
+      <MnmMoebelplaner {...dachMoebelplaner} />
+      <TestimonialsSection heading={dachTestimonialsHeading} />
 
       {/* Final CTA — bottom of the testimonials section (beige) */}
       <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
         <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...einbauCtas.final} />
+          <ExpandingImageCta {...dachCtas.final} />
           {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
           <p
             className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
             style={{ color: "rgb(61,61,61)" }}
           >
-            {einbauCtas.phone.label}{" "}
+            {dachCtas.phone.label}{" "}
             <a
-              href={einbauCtas.phone.href}
+              href={dachCtas.phone.href}
               className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
             >
-              {einbauCtas.phone.number}
+              {dachCtas.phone.number}
             </a>
           </p>
         </div>
       </section>
 
       <FaqSection
-        heading={einbauFaq.heading}
-        items={einbauFaq.items}
+        heading={dachFaq.heading}
+        items={dachFaq.items}
         ctaLabel="Weitere Fragen? Jetzt anfragen"
         ctaHref="/kontakt/"
       />
