@@ -101,6 +101,17 @@ export const referenzenGrid = {
       href: "/moebel-nach-mass/",
     },
     {
+      image: "/images/einbauschrank-dachschraege/dachschraegenschrank-nach-mass-trapezform-schlafzimmer.jpg",
+      imageAlt: "Dachschrägenschrank nach Maß, trapezförmig an beide Dachschrägen angepasst",
+      category: "Möbel nach Maß",
+      categoryKey: "moebel",
+      title: "Dachschrägenschrank über die ganze Wand",
+      meta: "Privat · Schlafzimmer",
+      description:
+        "Ein Schrank für die Dachschräge, der beiden Schrägen exakt folgt und die volle Wandbreite bis unter das Dach nutzt. Vom Kniestock bis zur Spitze passgenau eingeteilt.",
+      href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
+    },
+    {
       image: "/images/2025/11/DSC_9747.jpg",
       imageAlt: "Konferenzraum mit großem Tisch nach Maß und schwarzen Stühlen",
       category: "Büroeinrichtung",

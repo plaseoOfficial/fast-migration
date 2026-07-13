@@ -1,18 +1,33 @@
 {
   "summary": {
-    "pagesBuilt": 17,
+    "pagesBuilt": 18,
     "pagesPlanned": 9,
-    "linksFound": 157,
+    "linksFound": 170,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 0,
+      "Warnung": 2,
       "Hinweis": 7
     }
   },
   "findings": [
+    {
+      "severity": "Warnung",
+      "check": "darf-nicht",
+      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: möglicher Cross-Silo-Link → `/moebel-nach-mass/` (moebel). Nur bei echtem semantischem Bezug erlaubt.",
+      "file": "src/lib/content/einbauschrank-dachschraege.ts",
+      "href": "/moebel-nach-mass/"
+    },
+    {
+      "severity": "Warnung",
+      "check": "darf-nicht",
+      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: möglicher Cross-Silo-Link → `/moebel-nach-mass/` (moebel). Nur bei echtem semantischem Bezug erlaubt.",
+      "file": "src/app/(site)/einbauschraenke-nach-mass/einbauschrank-dachschraege/page.tsx",
+      "line": 78,
+      "href": "/moebel-nach-mass/"
+    },
     {
       "severity": "Hinweis",
       "check": "muss-backlog",

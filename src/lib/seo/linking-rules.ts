@@ -61,6 +61,8 @@ export const PAGES: PageNode[] = [
   { slug: "/kuechen-nach-mass/", type: "cluster-pillar", silo: "kuechen", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "kuechen-nach-mass" },
   // Planned privat sibling clusters (hub→cluster MUSS, blocked until built)
   { slug: "/einbauschraenke-nach-mass/", type: "cluster-pillar", silo: "einbauschraenke", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "einbauschraenke-nach-mass" },
+  // Einbauschränke spoke (cluster child): Schrank für Dachschräge nach Maß
+  { slug: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "einbauschrank-dachschraege" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: false },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: false },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
@@ -302,6 +304,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Beratung anfragen", "Angebot anfordern"],
     brand: [],
     descriptive: ["Kostenlose Beratung anfragen", "Beratungsgespräch vereinbaren", "jetzt anfragen"],
+  },
+  "/einbauschraenke-nach-mass/einbauschrank-dachschraege/": {
+    exact: ["Schrank für Dachschräge nach Maß"],
+    partial: ["Dachschrägenschrank nach Maß", "Schrank unter der Dachschräge", "Drempelschrank nach Maß"],
+    brand: ["Fast Systemmöbel Dachschrägenschrank"],
+    descriptive: ["Dachschrägenschrank ansehen", "Schrank für die Dachschräge planen"],
   },
   "/referenzen/": {
     exact: ["Referenzen"],
