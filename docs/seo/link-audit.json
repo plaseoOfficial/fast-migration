@@ -2,32 +2,17 @@
   "summary": {
     "pagesBuilt": 18,
     "pagesPlanned": 9,
-    "linksFound": 173,
+    "linksFound": 181,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 2,
-      "Hinweis": 7
+      "Warnung": 0,
+      "Hinweis": 4
     }
   },
   "findings": [
-    {
-      "severity": "Warnung",
-      "check": "darf-nicht",
-      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: möglicher Cross-Silo-Link → `/moebel-nach-mass/` (moebel). Nur bei echtem semantischem Bezug erlaubt.",
-      "file": "src/lib/content/einbauschrank-dachschraege.ts",
-      "href": "/moebel-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "darf-nicht",
-      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: möglicher Cross-Silo-Link → `/moebel-nach-mass/` (moebel). Nur bei echtem semantischem Bezug erlaubt.",
-      "file": "src/app/(site)/einbauschraenke-nach-mass/einbauschrank-dachschraege/page.tsx",
-      "line": 78,
-      "href": "/moebel-nach-mass/"
-    },
     {
       "severity": "Hinweis",
       "check": "muss-backlog",
@@ -51,27 +36,6 @@
       "check": "muss-backlog",
       "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/kontakt/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "footer",
-      "message": "Footer verlinkt `/` (Typ homepage) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).",
-      "file": "src/lib/content.ts",
-      "line": 191,
-      "href": "/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "footer",
-      "message": "Footer verlinkt `/ueber-uns/` (Typ brand) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).",
-      "file": "src/lib/content.ts",
-      "line": 193,
-      "href": "/ueber-uns/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "backlog",
-      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/`, `/gewerbe/`, `/moebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`, `/referenzen/`, `/ueber-uns/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`."
     }
   ]
 }

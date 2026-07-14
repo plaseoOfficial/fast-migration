@@ -105,7 +105,9 @@ function walkValue(val, out, seen = new Set()) {
   for (const v of Object.values(val)) walkValue(v, out, seen);
 }
 
-const HREF_RE = /href\s*[:=]\s*\{?\s*["'`]([^"'`{}\s]+)["'`]/g;
+// Matches plain `href` plus suffixed keys (`ctaHref`, `primaryHref`, `gewerbeHref`, …)
+// so the regex fallback sees the same links as the walkValue() module extraction.
+const HREF_RE = /(?:^|[^a-zA-Z0-9_])[a-zA-Z0-9_]*[hH]ref\s*[:=]\s*\{?\s*["'`]([^"'`{}\s]+)["'`]/g;
 
 /** Regex sweep of a source file → [{ href, line }]. */
 function regexLinks(absPath) {
@@ -387,19 +389,27 @@ async function main() {
   for (const link of links.filter((l) => l.source === "footer-global" && isInternal(l.href))) {
     const t = nodeBySlug.get(normSlug(link.href));
     if (t && !FOOTER_ALLOWED_TYPES.includes(t.type)) {
-      add("Hinweis", "footer", `Footer verlinkt \`${t.slug}\` (Typ ${t.type}) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).`, loc(link));
+      add("Hinweis", "footer", `Footer verlinkt \`${t.slug}\` (Typ ${t.type}) — Footer sollte nur Hubs/Conversion/Brand/Legal enthalten, keine Cluster-/Produkt-Tiefenlinks (Prinzip 4).`, loc(link));
     }
   }
 
   // === CHECK 10: backlog reconciliation ===
   try {
     const backlog = readFileSync(resolve(ROOT, "docs/seo/internal-linking.md"), "utf8");
-    const backlogSection = backlog.split(/##\s*Backlog/i)[1]?.split(/##\s*Done/i)[0] ?? "";
+    // Backlog table only (stop at the interim-retargets subsection, whose
+    // "Currently" column intentionally points at built pages).
+    const backlogSection = (backlog.split(/##\s*Backlog/i)[1]?.split(/##\s*Done/i)[0] ?? "").split(/###\s/)[0];
     const slugRe = /`(\/[a-z0-9-/]+\/)`/g;
     const nowBuilt = new Set();
-    for (const m of backlogSection.matchAll(slugRe)) {
-      const s = normSlug(m[1]);
-      if (builtSlugs.has(s)) nowBuilt.add(s);
+    for (const line of backlogSection.split("\n")) {
+      if (!line.trim().startsWith("|")) continue;
+      // Only the "Should link to" column (cell 2) — a built slug in the From
+      // column just means the source page exists, not that a link is pending.
+      const targetCell = line.split("|")[2] ?? "";
+      for (const m of targetCell.matchAll(slugRe)) {
+        const s = normSlug(m[1]);
+        if (builtSlugs.has(s)) nowBuilt.add(s);
+      }
     }
     if (nowBuilt.size) {
       add("Hinweis", "backlog", `Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): ${[...nowBuilt].map((s) => `\`${s}\``).join(", ")}.`);
@@ -423,12 +433,23 @@ function label(target) {
   return typeof target === "string" ? target : `[${target}]`;
 }
 
+/** Is `anc` an ancestor of `node` along the parent chain? */
+function isAncestor(anc, node) {
+  for (let p = node.parent; p; p = nodeBySlug.get(p)?.parent ?? null) {
+    if (p === anc.slug) return true;
+  }
+  return false;
+}
+
 function isCrossSilo(from, to) {
   if (from.audience === "neutral" || to.audience === "neutral") return false;
   // hub ↔ hub is always allowed (Ebene 0–1)
   if (from.type === "pillar-hub" && to.type === "pillar-hub") return false;
   // own parent / own child within the silo is fine
   if (to.slug === from.parent || to.parent === from.slug) return false;
+  // up-links along the ancestor chain (e.g. product → grandparent pillar-hub,
+  // breadcrumb trail) are hierarchy links, never cross-silo
+  if (isAncestor(to, from)) return false;
   // different audience, or different silo within same audience → cross-silo
   if (from.audience !== to.audience) return true;
   return to.silo !== "" && to.silo !== from.silo;

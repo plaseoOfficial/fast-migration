@@ -37,13 +37,13 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
+**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/einbauschraenke-nach-mass/`, `/einbauschraenke-nach-mass/einbauschrank-dachschraege/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
 
 ## Rules (condensed)
 
 - **Click-depth ≤ 3.** Hub → Cluster → Product. Each child links **up** to its direct parent (breadcrumb + 1 contextual in-content link).
 - **Silo integrity.** Privat silos don't link to Gewerbe silos (and vice versa), except hub↔hub (Ebene 0–1). A Cluster-Pillar must not link to another silo's clusters.
-- **Contextual > boilerplate.** ≥3 contextual in-body links per page. Footer = only Pillar-Hubs + legal (no link-graves).
+- **Contextual > boilerplate.** ≥3 contextual in-body links per page. Footer = Pillar-Hubs + Conversion + Brand-Menü (Home/Über uns/Referenzen) + Legal — **keine** Cluster-/Produkt-Tiefenlinks (no link-graves; Entscheidung 2026-07-14, siehe `FOOTER_ALLOWED_TYPES`).
 - **Anchor diversity.** Vary anchors: exact ("Küchen nach Maß"), partial ("maßgefertigte Küche"), brand+keyword, descriptive, max ~10% generic. Exact-match anchor to one URL: max 2–3× per page.
 - **Conversion targets.** Every strong page links to `/moebelplaner/` and `/kontakt/`. Dofollow internal links only.
 - **Max body links:** Hub 10–12 · Cluster-Pillar 8–10 · Product 5–7 · Conversion 3–5.
@@ -56,16 +56,13 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 | `/kuechen-nach-mass/` | Product pages (Küchenzeile / L-Küche / Kochinsel nach Maß) | MUSS (spokes) | Product pages built |
 | `/kuechen-nach-mass/` | `/kuechen-nach-mass/kueche-planen/`, `/kuechen-nach-mass/tischlerkueche-vs-kuechenstudio/` | SOLL (cluster articles) | Articles built |
 | `/kuechen-nach-mass/` | `/ablauf-massanfertigung/` | SOLL (trust) | Page built |
-| `/kuechen-nach-mass/` (MnmWeitereLeistungen) | privat-only cards (drop cross-silo `/gewerbe/` discovery card) | cleanup | sibling privat clusters built |
 | `/kuechen-nach-mass/` (FaqSection) + `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/` | `/faq/` ("Zum FAQ", currently `#`) | SOLL | `/faq/` built |
-| `/moebel-nach-mass/` | sibling cluster pillars (Einbauschränke / Badmöbel / Wohnmöbel nach Maß) | MUSS (hub→clusters) | clusters built |
-| `/` (Homepage) | flat hub links `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/`, `/kontakt/` (MUSS) + SOLL `/kuechen-nach-mass/`, `/referenzen/`, `/ablauf-massanfertigung/` | MUSS/SOLL | homepage nav/links still use `#`-anchors → update during homepage relaunch pass |
-| Header nav "Leistungen" dropdown | hub + cluster links | nav | dropdown not yet populated |
+| `/moebel-nach-mass/` | remaining sibling cluster pillars (Badmöbel / Wohnmöbel nach Maß) | MUSS (hub→clusters) | clusters built |
 | `/moebelplaner/`, `/kontakt/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | MUSS | pages built |
 | `/ueber-uns/` (UeberNavCards "FAQ" card, currently `#`) | `/faq/` | SOLL | `/faq/` built |
 | Gewerbe clusters (`/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`) | their product / ratgeber spokes (e.g. Konferenztisch, Empfangstresen, …) | MUSS (cluster→product) | spoke pages built |
 | Gewerbe clusters (FaqSection "Zum FAQ", currently `#`) | `/faq/` | SOLL | `/faq/` built |
-| Gewerbe clusters | `/referenzen/`, `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
+| Gewerbe clusters | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | City pages (`/einsatzgebiete/*` or flat city×service) | relevant clusters | new silo | city pages migrated/built |
 
 ### ⚠️ Interim retargets — REVERT when the real target page ships
@@ -146,8 +143,24 @@ Gleichzeitig ersetzt die neue Karten-Array-Übergabe die Default-Cards (die fäl
 - **`/referenzen/` → `/gewerbe/`** `referenzenFaq.gewerbeHref` in `referenzen.ts` (Authority → Gewerbe-Hub; `walkValue` erkennt `*href`-Keys).
 - **`/referenzen/` → `/kontakt/`** `referenzenFaq.ctaHref` in `referenzen.ts` + explizit als `ctaHref`-Prop an `FaqSection` übergeben (Conversion).
 
+### Audit-Pass 2026-07-14 (Quick Wins)
+
+- **Footer zurückgebaut auf Prinzip 4** (Entscheidung Ben): `FOOTER_LINKS.leistungen` = nur die zwei
+  Pillar-Hubs + Möbelplaner; Cluster-/Produkt-Tiefenlinks entfernt (Cluster sind über die
+  Nav-Dropdowns sitewide verlinkt). `FOOTER_ALLOWED_TYPES` in `linking-rules.ts` um
+  `homepage` + `brand` erweitert — die Footer-Menü-Spalte (Home/Über uns/Referenzen) ist gewollt.
+- **Möbelplaner-Links in Nav + Footer bleiben bewusst extern** (Entscheidung Ben, Conversion-first):
+  Header-CTA + Footer zeigen direkt auf `moebelplaner.fast-systemmoebel.de`; die interne
+  `/moebelplaner/` wird nur über Body-Links versorgt. Nicht "fixen".
+- **Audit-Skript:** (a) Aufwärts-Links entlang der Ancestor-Kette (z. B. Produkt → Großeltern-Hub
+  via Breadcrumb) gelten nicht mehr als Cross-Silo; (b) der Regex-Fallback erkennt jetzt auch
+  `ctaHref`/`primaryHref`/`*Href`-Keys, nicht nur lowercase `href:`.
+- **Backlog abgetragen (verifiziert erledigt):** Homepage-Body verlinkt beide Hubs +
+  `/moebelplaner/` + `/kontakt/` (home.ts / BereicheSection); Nav-Dropdowns Privat + Gewerbe
+  voll bestückt inkl. Einbauschränke + Dachschrägen-Spoke; `/kuechen-nach-mass/` hat keine
+  Cross-Silo-`/gewerbe/`-Karte mehr; `/moebel-nach-mass/` → `/einbauschraenke-nach-mass/` gewired;
+  Gewerbe-Cluster → `/referenzen/` (alle 8, s. o.).
+
 > Still open (need a render slot / target page, surfaced by `npm run audit:links`):
-> Homepage body MUSS-links to the two hubs + `/moebelplaner/` (header nav covers them site-wide; a
-> contextual in-body link still to be placed); strong pages link to the **external** planner, not the
-> internal `/moebelplaner/` page (judgment call); legal pages → `/`; the remaining `#` are genuinely
-> backlog-blocked (`/faq/`, `/ratgeber/`, city pages, cookie policy); broader canonical sweep of `nav.ts`.
+> legal pages → `/`; the remaining `#` are genuinely backlog-blocked
+> (`/faq/`, `/ratgeber/`, city pages, cookie policy); broader canonical sweep of `nav.ts`.

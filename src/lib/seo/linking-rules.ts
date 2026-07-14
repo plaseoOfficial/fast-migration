@@ -344,5 +344,11 @@ export const GENERIC_MAX_RATIO = 0.1;
 /** Anchors that count as "generic" (principle 5). */
 export const GENERIC_ANCHORS = ["hier", "mehr erfahren", "mehr", "weiterlesen", "klicken", "mehr dazu"];
 
-/** Footer body = pillar-hubs + legal only (principle 4: no link graves). */
-export const FOOTER_ALLOWED_TYPES: PageType[] = ["pillar-hub", "conversion", "legal"];
+/**
+ * Footer link targets allowed by principle 4 (no link graves): pillar-hubs,
+ * conversion, legal, plus the standard footer menu (homepage + brand pages
+ * like /ueber-uns/ and /referenzen/ — decision 2026-07-14). Cluster-pillars
+ * and deeper pages stay forbidden; they are covered sitewide by the nav
+ * dropdowns and would dilute the contextual link signal.
+ */
+export const FOOTER_ALLOWED_TYPES: PageType[] = ["pillar-hub", "conversion", "legal", "homepage", "brand"];
