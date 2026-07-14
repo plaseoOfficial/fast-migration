@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface ValueBlock {
   title: string;
@@ -54,7 +55,7 @@ function ValueItem({ title, body, kind }: ValueBlock & { kind: "ruler" | "quote"
         className="mt-3"
         style={{ fontSize: "16px", lineHeight: "1.7", color: "rgb(102,102,102)" }}
       >
-        {body}
+        {renderInlineLinks(body)}
       </p>
     </div>
   );

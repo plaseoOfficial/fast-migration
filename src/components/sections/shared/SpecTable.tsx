@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 export interface SpecRow {
   /** Row header — the criterion or factor (first column). */
@@ -67,7 +68,7 @@ export function SpecTable({
             className="mt-5 max-w-[760px] text-[16px] leading-[28px] font-medium"
             style={{ color: "rgb(102,102,102)" }}
           >
-            {intro}
+            {renderInlineLinks(intro)}
           </p>
         )}
 

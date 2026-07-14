@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Blurb } from "@/types";
 import { HotspotLightbulbIcon, HotspotBoxIcon, HotspotLayersIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface Hotspot {
   x: number;
@@ -93,7 +94,7 @@ export function DiscoverSection({
                       >
                         {h.title}
                       </p>
-                      <p className="fast-body-sm text-xs">{h.body}</p>
+                      <p className="fast-body-sm text-xs">{renderInlineLinks(h.body)}</p>
                     </div>
                   </button>
                 );
@@ -129,7 +130,7 @@ export function DiscoverSection({
                 className="fast-body"
                 style={{ fontSize: 14, lineHeight: "23.8px" }}
               >
-                {teamBody}
+                {renderInlineLinks(teamBody)}
               </p>
             </div>
           </Reveal>
@@ -162,7 +163,7 @@ export function DiscoverSection({
                 className="fast-body"
                 style={{ fontSize: 14, lineHeight: "23.8px" }}
               >
-                {b.description}
+                {renderInlineLinks(b.description)}
               </p>
             </Reveal>
           ))}

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface MnmIntroStatsProps {
   since: string;
@@ -180,11 +181,11 @@ export function MnmIntroStats({
                 marginBottom: 0,
               }}
             >
-              {introBefore}{" "}
+              {renderInlineLinks(introBefore)}{" "}
               <strong style={{ color: "rgb(61,61,61)", fontWeight: 700 }}>
-                {introBold}
+                {renderInlineLinks(introBold)}
               </strong>
-              {introAfter}
+              {renderInlineLinks(introAfter)}
             </p>
           </div>
         </Reveal>
@@ -227,7 +228,7 @@ export function MnmIntroStats({
                 marginBottom: 0,
               }}
             >
-              {col1Body}
+              {renderInlineLinks(col1Body)}
             </p>
             <Link
               href={col1CtaHref}
@@ -258,7 +259,7 @@ export function MnmIntroStats({
                 margin: 0,
               }}
             >
-              {col2Body}
+              {renderInlineLinks(col2Body)}
             </p>
           </div>
 
@@ -296,7 +297,7 @@ export function MnmIntroStats({
                 marginBottom: 0,
               }}
             >
-              {col3Body}
+              {renderInlineLinks(col3Body)}
             </p>
             <Link
               href={col3CtaHref}

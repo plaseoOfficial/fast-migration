@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface WofuerColumn {
   title: string;
@@ -82,7 +83,7 @@ export function UeberWofuer({
                 className="mt-3"
                 style={{ fontSize: "16px", lineHeight: "1.7", color: "rgb(102,102,102)" }}
               >
-                {col.body}
+                {renderInlineLinks(col.body)}
               </p>
             </Reveal>
           ))}

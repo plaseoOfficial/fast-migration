@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface Stat {
   value: string;
@@ -98,7 +99,7 @@ export function MnmGeschichte({
                 className="text-[16px] leading-[28px] font-medium"
                 style={{ color: "rgb(102,102,102)" }}
               >
-                {para}
+                {renderInlineLinks(para)}
               </p>
             ))}
           </div>
@@ -109,7 +110,7 @@ export function MnmGeschichte({
                 className="text-[16px] leading-[28px] font-medium"
                 style={{ color: "rgb(102,102,102)" }}
               >
-                {para}
+                {renderInlineLinks(para)}
               </p>
             ))}
           </div>

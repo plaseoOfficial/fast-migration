@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 // Decorative yellow line motif — a right-triangle of increasing-width bars
 const LINE_WIDTHS = [20, 32, 46, 60, 74, 88, 102, 116, 128, 140, 152, 164, 174, 184];
@@ -59,7 +60,7 @@ export function MnmMoebelplaner({
             <p
               className="mt-5 text-white text-[16px] leading-[28px] font-medium"
             >
-              {body}
+              {renderInlineLinks(body)}
             </p>
 
             <Link

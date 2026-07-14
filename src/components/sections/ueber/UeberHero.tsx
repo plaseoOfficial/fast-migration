@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { ChevronRightIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface BreadcrumbItem {
   label: string;
@@ -114,7 +115,7 @@ export function UeberHero({ bgImage, imageAlt, title, intro, breadcrumb, headerS
               className="font-medium text-white/80"
               style={{ fontSize: "16px", lineHeight: "1.7" }}
             >
-              {intro}
+              {renderInlineLinks(intro)}
             </p>
           </div>
         </div>

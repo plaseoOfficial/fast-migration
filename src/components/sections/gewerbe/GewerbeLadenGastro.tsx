@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 function YellowDots() {
   return (
@@ -74,7 +75,7 @@ export function GewerbeLadenGastro({
                 className="mt-5 text-[16px] leading-[28px]"
                 style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
               >
-                {text}
+                {renderInlineLinks(text)}
               </p>
             ))}
 
@@ -125,29 +126,29 @@ export function GewerbeLadenGastro({
               className="mt-4 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {gastroIntroLead}{" "}
+              {renderInlineLinks(gastroIntroLead)}{" "}
               <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
                 {gastroIntroBold1}
               </strong>
-              {gastroIntroMid}
+              {renderInlineLinks(gastroIntroMid)}
             </p>
 
             <p
               className="mt-4 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {gastroBody2Before}{" "}
+              {renderInlineLinks(gastroBody2Before)}{" "}
               <strong style={{ color: "rgb(23,33,33)", fontWeight: 700 }}>
                 {gastroBody2Bold}
               </strong>{" "}
-              {gastroBody2After}
+              {renderInlineLinks(gastroBody2After)}
             </p>
 
             <p
               className="mt-4 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {gastroBody3}
+              {renderInlineLinks(gastroBody3)}
             </p>
 
             <YellowDots />

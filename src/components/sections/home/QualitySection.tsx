@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface QualitySectionProps {
   headingLines: string[];
@@ -36,7 +37,7 @@ export function QualitySection({ headingLines, paragraphs, images }: QualitySect
           <div className="lg:col-span-4 flex flex-col gap-4 self-end">
             {paragraphs.map((paragraph, i) => (
               <p key={i} className="fast-body" style={{ fontSize: 18, lineHeight: "23.8px" }}>
-                {paragraph}
+                {renderInlineLinks(paragraph)}
               </p>
             ))}
           </div>

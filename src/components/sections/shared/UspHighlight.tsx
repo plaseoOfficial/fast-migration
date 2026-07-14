@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface UspHighlightProps {
   eyebrow?: string;
@@ -74,7 +75,7 @@ export function UspHighlight({
               className="mt-5 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {body}
+              {renderInlineLinks(body)}
             </p>
 
             {stat && (

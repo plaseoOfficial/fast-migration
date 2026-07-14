@@ -5,6 +5,7 @@ import Link from "next/link";
 import { PlusIcon, MinusIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface FaqItem {
   question: string;
@@ -102,7 +103,7 @@ export function FaqSection({
                 >
                   <div className="overflow-hidden">
                     <div className="px-6 pb-6 pt-0 fast-body" style={{ fontSize: 14, lineHeight: "23.8px" }}>
-                      {item.answer}
+                      {renderInlineLinks(item.answer)}
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface WarumImage {
   src: string;
@@ -65,7 +66,7 @@ export function MnmWarum({ heading, paragraph, images, reverse = false, imageCol
         className="mt-5 text-[16px] leading-[28px] font-medium"
         style={{ color: "rgb(102,102,102)" }}
       >
-        {paragraph}
+        {renderInlineLinks(paragraph)}
       </p>
 
       {/* Decorative dots */}

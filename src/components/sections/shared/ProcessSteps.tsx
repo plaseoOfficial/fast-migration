@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 export interface ProcessStep {
   title: string;
@@ -111,7 +112,7 @@ export function ProcessSteps({
                     className="mt-2 text-[14px] font-medium leading-[23.8px]"
                     style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
                   >
-                    {step.description}
+                    {renderInlineLinks(step.description)}
                   </p>
                 </div>
               </Reveal>

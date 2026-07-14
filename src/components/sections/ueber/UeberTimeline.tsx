@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface TimelineYear {
   year: string;
@@ -107,7 +108,7 @@ export function UeberTimeline({
           className="mx-auto mt-8 max-w-[760px] text-center"
           style={{ fontSize: "16px", lineHeight: "1.7", color: "rgb(61,61,61)" }}
         >
-          {intro}
+          {renderInlineLinks(intro)}
         </p>
 
         {/* Vertical timeline */}
@@ -261,7 +262,7 @@ export function UeberTimeline({
                         color: "rgb(61,61,61)",
                       }}
                     >
-                      {y.body}
+                      {renderInlineLinks(y.body)}
                     </p>
                   </Reveal>
                 </li>

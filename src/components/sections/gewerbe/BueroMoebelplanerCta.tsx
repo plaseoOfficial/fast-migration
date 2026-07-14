@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface BueroMoebelplanerCtaProps {
   heading: string;
@@ -36,7 +37,7 @@ export function BueroMoebelplanerCta({ heading, body, ctaLabel, ctaHref, image, 
               className="mt-5 text-[16px] leading-[1.7] font-medium"
               style={{ color: "rgb(102,102,102)" }}
             >
-              {body}
+              {renderInlineLinks(body)}
             </p>
             <Link
               href={ctaHref}
