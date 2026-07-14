@@ -72,7 +72,7 @@ export const PAGES: PageNode[] = [
   { slug: "/kuechen-nach-mass/kuechenzeile-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
 
   // Gewerbe silo (flat URLs; clusters of the Gewerbe hub by topic, not by nesting)
-  { slug: "/gewerbe/", type: "pillar-hub", silo: "gewerbe", audience: "gewerbe", parent: "/", built: true },
+  { slug: "/gewerbe/", type: "pillar-hub", silo: "gewerbe", audience: "gewerbe", parent: "/", built: true, contentModule: "gewerbe" },
   { slug: "/ladenbau/", type: "cluster-pillar", silo: "ladenbau", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "ladenbau" },
   { slug: "/bueroeinrichtung/", type: "cluster-pillar", silo: "buero", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "bueroeinrichtung" },
   { slug: "/gastronomieeinrichtung/", type: "cluster-pillar", silo: "gastronomie", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "gastronomieeinrichtung" },
@@ -133,6 +133,8 @@ export type ForbiddenRule =
 export interface TypeRule {
   maxBodyLinks: number;
   maxNavFooter: number;
+  /** Minimum echter kontextueller In-Content-Links ([Anker](/ziel/)-Marker im Fließtext). */
+  minInlineLinks: number;
   must: TargetRule[];
   soll: TargetRule[];
   darfNicht: ForbiddenRule[];
@@ -142,6 +144,7 @@ export const RULES: Record<PageType, TypeRule> = {
   homepage: {
     maxBodyLinks: 15,
     maxNavFooter: 20,
+    minInlineLinks: 2,
     must: [
       { target: "/moebel-nach-mass/", why: "Primärer Privat-Hub" },
       { target: "/gewerbe/", why: "Primärer Gewerbe-Hub" },
@@ -158,6 +161,7 @@ export const RULES: Record<PageType, TypeRule> = {
   "pillar-hub": {
     maxBodyLinks: 12,
     maxNavFooter: 20,
+    minInlineLinks: 3,
     must: [
       { target: "parent", why: "Breadcrumb-Aufwärtslink" },
       { target: "own-children", why: "Hub & Spoke — alle eigenen Cluster-Pillars" },
@@ -173,6 +177,7 @@ export const RULES: Record<PageType, TypeRule> = {
   "cluster-pillar": {
     maxBodyLinks: 10,
     maxNavFooter: 20,
+    minInlineLinks: 3,
     must: [
       { target: "parent", why: "Aufwärtslink zum Pillar-Hub (Breadcrumb)" },
       { target: "own-cluster-spokes", why: "Vollständige Spoke-Abdeckung (Produktseiten)" },
@@ -188,6 +193,7 @@ export const RULES: Record<PageType, TypeRule> = {
   product: {
     maxBodyLinks: 7,
     maxNavFooter: 20,
+    minInlineLinks: 2,
     must: [
       { target: "parent", why: "Aufwärtslink zum Cluster-Pillar (Breadcrumb)" },
       { target: "/moebelplaner/", why: "Primärer CTA" },
@@ -203,6 +209,7 @@ export const RULES: Record<PageType, TypeRule> = {
   "ratgeber-pillar": {
     maxBodyLinks: 8,
     maxNavFooter: 20,
+    minInlineLinks: 3,
     must: [
       { target: "parent", why: "Aufwärtslink zum Cluster-Pillar (Breadcrumb)" },
       { target: "own-cluster-spokes", why: "Informational → Transaktional überführen" },
@@ -217,6 +224,7 @@ export const RULES: Record<PageType, TypeRule> = {
   "cluster-article": {
     maxBodyLinks: 6,
     maxNavFooter: 20,
+    minInlineLinks: 2,
     must: [
       { target: "parent", why: "Aufwärtslink zum Cluster-Pillar (Breadcrumb)" },
       { target: "own-cluster-spokes", why: "Mind. 1 Produktseite im Cluster" },
@@ -230,6 +238,7 @@ export const RULES: Record<PageType, TypeRule> = {
   conversion: {
     maxBodyLinks: 5,
     maxNavFooter: 20,
+    minInlineLinks: 1,
     must: [
       { target: "/ablauf-massanfertigung/", why: "Erwartungsmanagement" },
     ],
@@ -242,6 +251,7 @@ export const RULES: Record<PageType, TypeRule> = {
   brand: {
     maxBodyLinks: 10,
     maxNavFooter: 20,
+    minInlineLinks: 2,
     must: [],
     soll: [
       { target: "/moebel-nach-mass/", why: "Authority → Privat-Hub" },
@@ -253,6 +263,7 @@ export const RULES: Record<PageType, TypeRule> = {
   legal: {
     maxBodyLinks: 1,
     maxNavFooter: 20,
+    minInlineLinks: 0,
     must: [{ target: "/", why: "Einziger erlaubter Ausgangslink" }],
     soll: [],
     darfNicht: ["cross-silo", "skip-hub-level"],
@@ -328,6 +339,42 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Unsere Geschichte", "der Meisterbetrieb"],
     brand: ["Über Fast Systemmöbel"],
     descriptive: ["mehr über uns", "das Team kennenlernen"],
+  },
+  "/einbauschraenke-nach-mass/": {
+    exact: ["Einbauschränke nach Maß"],
+    partial: ["maßgefertigte Einbauschränke", "Einbauschrank vom Tischler", "Schrank nach Maß"],
+    brand: ["Fast Systemmöbel Einbauschränke"],
+    descriptive: ["alle Einbauschränke nach Maß", "zum Einbauschrank-Bereich"],
+  },
+  "/ladenbau/": {
+    exact: ["Ladenbau nach Maß"],
+    partial: ["individueller Ladenbau", "Ladeneinrichtung vom Tischler"],
+    brand: ["Fast Systemmöbel Ladenbau"],
+    descriptive: ["unsere Ladenbau-Leistungen", "zum Ladenbau-Bereich"],
+  },
+  "/bueroeinrichtung/": {
+    exact: ["Büroeinrichtung"],
+    partial: ["Büromöbel nach Maß", "maßgefertigte Büroeinrichtung"],
+    brand: ["Fast Systemmöbel Büroeinrichtung"],
+    descriptive: ["Büros einrichten lassen", "zur Büroeinrichtung"],
+  },
+  "/gastronomieeinrichtung/": {
+    exact: ["Gastronomieeinrichtung"],
+    partial: ["Gastro-Möbel nach Maß", "Einrichtung für Gastronomie"],
+    brand: ["Fast Systemmöbel Gastronomie"],
+    descriptive: ["Gastronomie einrichten lassen", "zur Gastronomieeinrichtung"],
+  },
+  "/serienmoebel/": {
+    exact: ["Serienmöbel"],
+    partial: ["Möbel in Serie", "Serienfertigung für Objektausstatter"],
+    brand: ["Fast Systemmöbel Serienfertigung"],
+    descriptive: ["Möbel in Serie fertigen lassen", "zur Serienfertigung"],
+  },
+  "/praxiseinrichtung/": {
+    exact: ["Praxiseinrichtung"],
+    partial: ["Praxismöbel nach Maß", "Einrichtung für Praxen"],
+    brand: ["Fast Systemmöbel Praxiseinrichtung"],
+    descriptive: ["Praxis einrichten lassen", "zur Praxiseinrichtung"],
   },
 };
 

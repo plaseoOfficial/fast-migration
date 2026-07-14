@@ -2,17 +2,46 @@
   "summary": {
     "pagesBuilt": 18,
     "pagesPlanned": 9,
-    "linksFound": 181,
+    "linksFound": 191,
     "partialExtraction": [
       "/"
     ],
     "counts": {
-      "Fehler": 0,
+      "Fehler": 1,
       "Warnung": 0,
-      "Hinweis": 4
+      "Hinweis": 20
     }
   },
   "findings": [
+    {
+      "severity": "Fehler",
+      "check": "missing-muss",
+      "message": "/gewerbe/: fehlender MUSS-Link → `/moebelplaner/`. Conversion-CTA",
+      "page": "/gewerbe/",
+      "suggestAnchors": [
+        {
+          "target": "/moebelplaner/",
+          "options": [
+            "Möbel online planen",
+            "online konfigurieren",
+            "Jetzt Möbel online planen",
+            "Küche online konfigurieren"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/moebel-nach-mass/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/moebel-nach-mass/"
+    },
     {
       "severity": "Hinweis",
       "check": "muss-backlog",
@@ -27,8 +56,74 @@
     },
     {
       "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/kuechen-nach-mass/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/kuechen-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/einbauschraenke-nach-mass/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/einbauschraenke-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/gewerbe/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/gewerbe/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/gewerbe/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/gewerbe/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/ladenbau/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/ladenbau/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/bueroeinrichtung/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/bueroeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/gastronomieeinrichtung/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/gastronomieeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/serienmoebel/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/serienmoebel/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/praxiseinrichtung/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/praxiseinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/moebelplaner/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
+      "page": "/moebelplaner/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/moebelplaner/: nur 0/1 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
       "page": "/moebelplaner/"
     },
     {
@@ -36,6 +131,24 @@
       "check": "muss-backlog",
       "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/kontakt/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/kontakt/: nur 0/1 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/kontakt/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/ueber-uns/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/ueber-uns/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "min-inline",
+      "message": "/referenzen/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/referenzen/"
     }
   ]
 }

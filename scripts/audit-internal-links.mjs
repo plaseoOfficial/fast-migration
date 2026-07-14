@@ -30,10 +30,14 @@ import {
   GENERIC_ANCHORS,
   FOOTER_ALLOWED_TYPES,
 } from "../src/lib/seo/linking-rules.ts";
+import { INLINE_LINK_RE } from "../src/lib/inline-links/parse.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const OUT = resolve(ROOT, "docs/seo/link-audit.json");
+
+// Task 8 stellt auf "Fehler" (CI-Gate), sobald der Retrofit aller Seiten durch ist.
+const MIN_INLINE_SEVERITY = "Hinweis";
 
 // ---------------------------------------------------------------------------
 // Page-graph helpers
@@ -88,6 +92,13 @@ function anchorForHrefKey(obj, key) {
   return undefined;
 }
 
+/** [Anker](/ziel/)-Marker aus einem Copy-String → { href, anchor, inline } (siehe src/lib/inline-links). */
+function inlineLinksFromString(text, out) {
+  const re = new RegExp(INLINE_LINK_RE.source, "g");
+  let m;
+  while ((m = re.exec(text)) !== null) out.push({ href: m[2], anchor: m[1], inline: true });
+}
+
 /** Recursively walk a data value, collecting { href, anchor } pairs. */
 function walkValue(val, out, seen = new Set()) {
   if (!val || typeof val !== "object" || seen.has(val)) return;
@@ -98,6 +109,7 @@ function walkValue(val, out, seen = new Set()) {
   }
   if (typeof val.href === "string") out.push({ href: val.href, anchor: pickAnchor(val) });
   for (const [k, v] of Object.entries(val)) {
+    if (typeof v === "string") inlineLinksFromString(v, out);
     if (typeof v === "string" && /href$/i.test(k) && k.toLowerCase() !== "href") {
       out.push({ href: v, anchor: anchorForHrefKey(val, k) });
     }
@@ -118,6 +130,8 @@ function regexLinks(absPath) {
     let m;
     HREF_RE.lastIndex = 0;
     while ((m = HREF_RE.exec(line)) !== null) out.push({ href: m[1], line: i + 1 });
+    const inlineRe = new RegExp(INLINE_LINK_RE.source, "g");
+    while ((m = inlineRe.exec(line)) !== null) out.push({ href: m[2], anchor: m[1], inline: true, line: i + 1 });
   });
   return out;
 }
@@ -139,7 +153,7 @@ async function extractModule(node) {
   } catch {
     // Fallback: regex sweep (e.g. home.ts has an unresolvable value import).
     for (const l of regexLinks(abs)) {
-      const link = { href: l.href, anchor: undefined, source: node.slug, scope: "page", file, line: l.line };
+      const link = { ...l, source: node.slug, scope: "page", file };
       links.push(link);
       addPageLink(node.slug, link);
     }
@@ -246,7 +260,7 @@ async function main() {
     { abs: navFile, source: "header-nav", scope: "chrome" },
     { abs: contentFile, source: "footer-global", scope: "chrome" },
   ]) {
-    for (const l of regexLinks(abs)) links.push({ href: l.href, source, scope, file: relative(ROOT, abs), line: l.line });
+    for (const l of regexLinks(abs)) links.push({ ...l, source, scope, file: relative(ROOT, abs) });
   }
 
   const pageFiles = listFiles(resolve(ROOT, "src/app"), (p) => p.endsWith(`${sep}page.tsx`));
@@ -255,7 +269,7 @@ async function main() {
     if (slug.startsWith("/library")) continue; // internal showcase, excluded
     const file = relative(ROOT, abs);
     for (const l of regexLinks(abs)) {
-      const link = { href: l.href, source: slug, scope: "page", file, line: l.line };
+      const link = { ...l, source: slug, scope: "page", file };
       links.push(link);
       if (builtSlugs.has(slug)) addPageLink(slug, link);
     }
@@ -266,7 +280,7 @@ async function main() {
     const file = relative(ROOT, abs);
     for (const l of regexLinks(abs)) {
       if (l.href === "#" || isInternal(l.href) || isFragment(l.href)) {
-        links.push({ href: l.href, source: `component:${file.split(sep).pop()}`, scope: "chrome", file, line: l.line });
+        links.push({ ...l, source: `component:${file.split(sep).pop()}`, scope: "chrome", file });
       }
     }
   }
@@ -349,6 +363,12 @@ async function main() {
     // CHECK 6: anchor diversity (only where we have real anchors)
     if (node.contentModule && !partialPages.has(node.slug)) {
       checkAnchors(node, outgoing);
+    }
+
+    // CHECK 11: Minimum kontextueller In-Content-Links (Marker im Fließtext)
+    const inlineCount = outgoing.filter((l) => l.inline && isInternal(l.href)).length;
+    if (hasModule && rule.minInlineLinks > 0 && inlineCount < rule.minInlineLinks) {
+      add(MIN_INLINE_SEVERITY, "min-inline", `${node.slug}: nur ${inlineCount}/${rule.minInlineLinks} kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).`, { page: node.slug });
     }
   }
 
