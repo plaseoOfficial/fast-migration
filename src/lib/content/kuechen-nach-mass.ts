@@ -38,7 +38,7 @@ export const kuechenIntroStats = {
   col1CtaLabel: "Jetzt Küche anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Front, jeder Korpus, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
+    "Jede Front, jeder Korpus, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp, dort, wo alle unsere [Möbel nach Maß](/moebel-nach-mass/) entstehen. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
@@ -125,7 +125,7 @@ export const kuechenTypische = {
 export const kuechenWarum = {
   heading: "Warum die Küche vom Tischler mehr kann",
   paragraph:
-    "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Wir bauen Ihre Küche in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen.",
+    "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Wir bauen Ihre Küche in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen. Wie das in der Praxis aussieht, zeigen unsere [realisierten Küchenprojekte](/referenzen/).",
   images: [
     { src: "/images/2026/05/variante_1778229163946_1-scaled.jpg", alt: "Graue Küche nach Maß mit Holzdecke und Insel", width: 600, height: 400 },
     { src: "/images/2025/11/IMG_9387-scaled.jpg", alt: "Küche nach Maß mit grifflosen Fronten und Holzrückwand", width: 600, height: 800 },
@@ -165,7 +165,7 @@ export const kuechenGeschichte = {
 export const kuechenMoebelplaner = {
   heading: "Ihre Küche online planen und konfigurieren",
   body:
-    "Mit unserem Möbelplaner stellen Sie Ihre Küche online zusammen. Maße, Fronten, Auszüge und Geräte sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrer Küche vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird eine Küche nach Maß.",
+    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Ihre Küche online zusammen. Maße, Fronten, Auszüge und Geräte sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrer Küche vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird eine Küche nach Maß.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/IMG_9387-scaled.jpg",

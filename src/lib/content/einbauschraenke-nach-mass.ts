@@ -43,7 +43,7 @@ export const einbauIntroStats = {
   col1CtaLabel: "Jetzt Einbauschrank anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Front, jeder Korpus und jeder Auszug entsteht in unserer eigenen Fertigung in Espelkamp. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
+    "Jede Front, jeder Korpus und jeder Auszug entsteht in unserer eigenen Fertigung in Espelkamp, dort, wo alle unsere [individuellen Möbel](/moebel-nach-mass/) entstehen. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
@@ -100,7 +100,7 @@ export const einbauTypische = {
     {
       title: "Einbauschränke für Dachschrägen",
       description:
-        "Wo Standardschränke aufhören, fangen wir an. Unter der Dachschräge nutzen wir auch die niedrigen Zonen aus, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
+        "Wo Standardschränke aufhören, fangen wir an. Unser [Schrank für Dachschräge nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) nutzt auch die niedrigen Zonen unter der Schräge, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
     },
     {
       title: "Nischenschränke",
@@ -130,7 +130,7 @@ export const einbauTypische = {
 export const einbauWarum = {
   heading: "Warum der Einbauschrank vom Tischler mehr kann",
   paragraph:
-    "Ein Online-Konfigurator rechnet mit festen Rastermaßen, das Möbelhaus verkauft Standard von der Stange, mit Passleisten und Lücken. Wir bauen Ihren Einbauschrank in Espelkamp selbst, zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken und verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Vor dem Bau nehmen wir bei Ihnen Maß, statt Sie Zahlen in eine Maske eintragen zu lassen. Fronten und Materialien wählen Sie frei, bis hin zu ungewöhnlichen Kombinationen aus Massivholz und anderen Werkstoffen.",
+    "Ein Online-Konfigurator rechnet mit festen Rastermaßen, das Möbelhaus verkauft Standard von der Stange, mit Passleisten und Lücken. Wir bauen Ihren Einbauschrank in Espelkamp selbst, zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken und verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Vor dem Bau nehmen wir bei Ihnen Maß, statt Sie Zahlen in eine Maske eintragen zu lassen. Fronten und Materialien wählen Sie frei, bis hin zu ungewöhnlichen Kombinationen aus Massivholz und anderen Werkstoffen. Wie das aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
   images: [
     { src: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`, alt: "Einbauschrank nach Maß in Anthrazit mit beleuchtetem Regalfach neben bodentiefem Fenster", width: 1280, height: 715 },
     { src: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`, alt: "Ankleide nach Maß mit ausgezogenen Schubladen und Standspiegel", width: 1280, height: 715 },

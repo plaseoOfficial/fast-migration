@@ -2,14 +2,14 @@
   "summary": {
     "pagesBuilt": 18,
     "pagesPlanned": 9,
-    "linksFound": 192,
+    "linksFound": 203,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 0,
-      "Hinweis": 20
+      "Hinweis": 16
     }
   },
   "findings": [
@@ -18,12 +18,6 @@
       "check": "min-inline",
       "message": "/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
       "page": "/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/moebel-nach-mass/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/moebel-nach-mass/"
     },
     {
       "severity": "Hinweis",
@@ -36,24 +30,6 @@
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
       "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/kuechen-nach-mass/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/einbauschraenke-nach-mass/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/einbauschraenke-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/"
     },
     {
       "severity": "Hinweis",
