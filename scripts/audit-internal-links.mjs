@@ -104,7 +104,10 @@ function walkValue(val, out, seen = new Set()) {
   if (!val || typeof val !== "object" || seen.has(val)) return;
   seen.add(val);
   if (Array.isArray(val)) {
-    for (const v of val) walkValue(v, out, seen);
+    for (const v of val) {
+      if (typeof v === "string") inlineLinksFromString(v, out);
+      else walkValue(v, out, seen);
+    }
     return;
   }
   if (typeof val.href === "string") out.push({ href: val.href, anchor: pickAnchor(val) });
