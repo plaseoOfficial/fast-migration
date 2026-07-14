@@ -108,7 +108,7 @@ export const gewerbeLeistungen = {
     {
       title: "Praxisräume",
       description:
-        "Hygienische, funktionale Möbel für Behandlungs- und Funktionsräume.",
+        "Hygienische, funktionale [Praxismöbel nach Maß](/praxiseinrichtung/) für Behandlungs- und Funktionsräume.",
     },
     {
       title: "Büros",
@@ -125,7 +125,7 @@ export const gewerbeLeistungen = {
     {
       title: "Hotel & Gastro",
       description:
-        "Strapazierfähige Lösungen für Empfang, Zimmer, Bar- und Servicebereiche.",
+        "Strapazierfähige [Einrichtung für Gastronomie](/gastronomieeinrichtung/): Empfang, Zimmer, Bar- und Servicebereiche.",
     },
     {
       title: "Empfangstheken",
@@ -181,7 +181,7 @@ export const gewerbeWarum = {
     },
   ],
   bodyParagraph:
-    "Gewerbeprojekte brauchen Verlässlichkeit. Termine müssen halten, Qualität muss stimmen, Kommunikation muss klar sein. Als Meisterbetrieb mit eigenem Maschinenpark setzen wir jedes Detail kontrolliert um – von der Planung bis zur Montage. Für Architekten, Arztpraxen, Unternehmen und Gastronomen ist das entscheidend.",
+    "Gewerbeprojekte brauchen Verlässlichkeit. Termine müssen halten, Qualität muss stimmen, Kommunikation muss klar sein. Als Meisterbetrieb mit eigenem Maschinenpark setzen wir jedes Detail kontrolliert um – von der Planung bis zur Montage. Für Architekten, Arztpraxen, Unternehmen und Gastronomen ist das entscheidend. Einen Eindruck davon geben unsere [Referenzprojekte](/referenzen/).",
   // "100" + U+00A0 (geschütztes Leerzeichen) + "% …" → byte-identisch zu 100&nbsp;%
   factBox: "100 % Maßfertigung aus Espelkamp",
 };
@@ -271,7 +271,7 @@ export const gewerbeFaq = {
     {
       question: "Für welche Branchen fertigt Fast Systemmöbel Gewerbeeinrichtungen?",
       answer:
-        "Wir richten Büros und Kanzleien, Praxen, Ladenflächen sowie Restaurants, Cafés und Hotels ein. Für Filialisten und Ketten fertigen wir zusätzlich Serienmöbel in jeder Stückzahl. Hotel zählt zur Gastronomie, Kanzleien zur Büroeinrichtung.",
+        "Wir richten Büros und Kanzleien, Praxen, Ladenflächen sowie Restaurants, Cafés und Hotels ein. Für Filialisten und Ketten fertigen wir zusätzlich [Möbel in Serie](/serienmoebel/), in jeder Stückzahl. Hotel zählt zur Gastronomie, Kanzleien zur Büroeinrichtung.",
     },
     {
       question:

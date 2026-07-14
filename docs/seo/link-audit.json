@@ -2,14 +2,14 @@
   "summary": {
     "pagesBuilt": 18,
     "pagesPlanned": 9,
-    "linksFound": 203,
+    "linksFound": 222,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 0,
-      "Hinweis": 16
+      "Hinweis": 9
     }
   },
   "findings": [
@@ -30,48 +30,6 @@
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
       "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/gewerbe/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
-      "page": "/gewerbe/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/gewerbe/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/gewerbe/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/ladenbau/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/ladenbau/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/bueroeinrichtung/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/bueroeinrichtung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/gastronomieeinrichtung/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/gastronomieeinrichtung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/serienmoebel/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/serienmoebel/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "min-inline",
-      "message": "/praxiseinrichtung/: nur 0/3 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
-      "page": "/praxiseinrichtung/"
     },
     {
       "severity": "Hinweis",

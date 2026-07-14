@@ -234,7 +234,7 @@ export const praxisGeschichte = {
   paragraphs: [
     "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide, 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation.",
     "In Ostwestfalen-Lippe haben wir bereits Praxen und Kanzleien eingerichtet, vom einzelnen Anmeldetresen bis zur kompletten Praxis. Wir kennen die Anforderungen an Hygiene, Diskretion und Termintreue, die ein Praxisprojekt mitbringt.",
-    "Zur Planung gehört für uns mehr als die Möbel: Wir denken Patienten- und Personalwege mit und legen Stauraum dorthin, wo er im Alltag gebraucht wird. Beispiele zeigen unsere Referenzen.",
+    "Zur Planung gehört für uns mehr als die Möbel: Wir denken Patienten- und Personalwege mit und legen Stauraum dorthin, wo er im Alltag gebraucht wird. Beispiele zeigen unsere [Referenzprojekte](/referenzen/).",
   ],
 };
 
@@ -242,7 +242,7 @@ export const praxisGeschichte = {
 export const praxisMoebelplaner = {
   heading: "Ihre Praxiseinrichtung online planen",
   body:
-    "Mit unserem Möbelplaner stellen Sie Tresen, Schränke und Wartebereich online zusammen und sehen Maße, Fronten und Oberflächen direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? Rufen Sie uns an unter 05771 9138312.",
+    "Mit unserem Möbelplaner stellen Sie Tresen, Schränke und Wartebereich online zusammen und sehen Maße, Fronten und Oberflächen direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? [Vereinbaren Sie ein Beratungsgespräch](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
   ctaLabel: "Möbelplaner ausprobieren",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/20231220_131839984_iOS-scaled.jpg",
@@ -276,7 +276,7 @@ export const praxisWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
     title: "Gewerbeeinrichtung",
     description:
-      "Praxiseinrichtung ist Teil unserer Gewerbeeinrichtung: Vom Anmeldetresen bis zur kompletten Einrichtung für Praxen, Kanzleien und Büros.",
+      "Praxiseinrichtung ist Teil unserer [Gewerbeeinrichtung](/gewerbe/): Vom Anmeldetresen bis zur kompletten Einrichtung für Praxen, Kanzleien und Büros.",
     href: "/gewerbe/",
   },
   {

@@ -202,14 +202,14 @@ export const gastroGeschichte = {
   ],
   paragraphs: [
     "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation und fertigt auf über 1.000 m² mit moderner CNC-Technik.",
-    "In Ostwestfalen-Lippe haben wir bereits Gastronomiebetriebe eingerichtet, vom einzelnen Bartresen bis zur Hoteleinrichtung. Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Beispielprojekte finden Sie in unseren Referenzen.",
+    "In Ostwestfalen-Lippe haben wir bereits Gastronomiebetriebe eingerichtet, vom einzelnen Bartresen bis zur Hoteleinrichtung. Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
   ],
 };
 
 export const gastroMoebelplaner = {
   heading: "Ihre Gastro-Möbel online planen",
   body:
-    "Mit unserem Möbelplaner stellen Sie einzelne Elemente online zusammen und sehen Maße, Oberflächen und Fronten direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? Rufen Sie uns an unter 05771 9138312.",
+    "Mit unserem Möbelplaner stellen Sie einzelne Elemente online zusammen und sehen Maße, Oberflächen und Fronten direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? [Jetzt anfragen](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
   ctaLabel: "Möbelplaner ausprobieren",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/IMG_2772-scaled.jpg",
@@ -243,7 +243,7 @@ export const gastroWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
     title: "Gewerbeeinrichtung",
     description:
-      "Gastronomieeinrichtung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Bartresen bis zur kompletten Objekteinrichtung für Handel, Hotellerie und Gastronomie.",
+      "Gastronomieeinrichtung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Bartresen bis zur kompletten [Objekteinrichtung](/gewerbe/) für Handel, Hotellerie und Gastronomie.",
     href: "/gewerbe/",
   },
   {
