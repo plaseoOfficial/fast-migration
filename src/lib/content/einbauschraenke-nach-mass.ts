@@ -43,7 +43,7 @@ export const einbauIntroStats = {
   col1CtaLabel: "Jetzt Einbauschrank anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Front, jeder Korpus und jeder Auszug entsteht in unserer eigenen Fertigung in Espelkamp, dort, wo alle unsere [individuellen Möbel](/moebel-nach-mass/) entstehen. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
+    "Jede Front, jeder Korpus und jeder Auszug entsteht in unserer eigenen Fertigung in Espelkamp, wo auch alle unsere [individuellen Möbel](/moebel-nach-mass/) gefertigt werden. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
@@ -100,7 +100,7 @@ export const einbauTypische = {
     {
       title: "Einbauschränke für Dachschrägen",
       description:
-        "Wo Standardschränke aufhören, fangen wir an. Unser [Schrank für Dachschräge nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) nutzt auch die niedrigen Zonen unter der Schräge, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
+        "Wo Standardschränke aufhören, fangen wir an. Unser [Schrank für Dachschräge nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) nutzt auch die niedrigen Zonen ganz unten aus, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
     },
     {
       title: "Nischenschränke",
