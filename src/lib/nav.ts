@@ -32,6 +32,8 @@ export const NAV_ITEMS: NavItem[] = [
     items: [
       { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
       { label: "Küchen nach Maß", href: "/kuechen-nach-mass/" },
+      { label: "Einbauschränke nach Maß", href: "/einbauschraenke-nach-mass/" },
+      { label: "Schrank für Dachschräge nach Maß", href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
     ],
   },
   {
