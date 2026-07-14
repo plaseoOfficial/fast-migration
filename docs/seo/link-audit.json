@@ -2,34 +2,17 @@
   "summary": {
     "pagesBuilt": 18,
     "pagesPlanned": 9,
-    "linksFound": 191,
+    "linksFound": 192,
     "partialExtraction": [
       "/"
     ],
     "counts": {
-      "Fehler": 1,
+      "Fehler": 0,
       "Warnung": 0,
       "Hinweis": 20
     }
   },
   "findings": [
-    {
-      "severity": "Fehler",
-      "check": "missing-muss",
-      "message": "/gewerbe/: fehlender MUSS-Link → `/moebelplaner/`. Conversion-CTA",
-      "page": "/gewerbe/",
-      "suggestAnchors": [
-        {
-          "target": "/moebelplaner/",
-          "options": [
-            "Möbel online planen",
-            "online konfigurieren",
-            "Jetzt Möbel online planen",
-            "Küche online konfigurieren"
-          ]
-        }
-      ]
-    },
     {
       "severity": "Hinweis",
       "check": "min-inline",
