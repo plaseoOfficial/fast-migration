@@ -54,7 +54,7 @@ const FAQ_ITEMS = [
   {
     question: "Wie genau ist der Online-Möbelplaner?",
     answer:
-      "Die Maße – Höhe, Breite, Korpustiefe, Sockel und Rückwand – fließen direkt in die Fertigung. Unser Team prüft jeden Plan vor der Produktion – so entstehen die [Projekte in unseren Referenzen](/referenzen/).",
+      "Die Maße – Höhe, Breite, Korpustiefe, Sockel und Rückwand – fließen direkt in die Fertigung. Unser Team prüft jeden Plan vor der Produktion; die Ergebnisse sehen Sie in unseren [Referenzen](/referenzen/).",
   },
 ];
 

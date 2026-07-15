@@ -131,7 +131,7 @@ export const ueberValues = {
     },
     {
       title: "Tradition",
-      body: "Seit 30 Jahren entstehen bei Fast Systemmöbel Möbel aus Erfahrung, nicht aus Trends. Planung, Materialverständnis und saubere Ausführung sind über tausende [realisierte Projekte](/referenzen/) gewachsen, nicht über Nacht. Wir wissen, warum die Möbel halten.",
+      body: "Seit 30 Jahren entstehen bei Fast Systemmöbel Möbel aus Erfahrung, nicht aus Trends. Planung, Materialverständnis und saubere Ausführung sind in über tausend [realisierten Projekten](/referenzen/) gewachsen, nicht über Nacht. Wir wissen, warum die Möbel halten.",
     },
     {
       title: "Leidenschaft",
