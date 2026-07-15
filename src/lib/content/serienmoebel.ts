@@ -144,7 +144,7 @@ export const serienGeschichte = {
   paragraphs: [
     "Angefangen haben wir 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog unsere Fertigung nach Espelkamp, wo wir heute auf rund 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
     "Heute steht mit Andreas und Peter Fast die zweite Generation im Betrieb. Über 4.000 Projekte und mehr als 72.000 gefertigte Einzelteile stecken in unserer Erfahrung mit Maß und Stückzahl.",
-    "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, Liefertreue und konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben. Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp und liefern bundesweit. Eine Auswahl umgesetzter Serien zeigen unsere [Referenzen](/referenzen/).",
+    "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, Liefertreue und konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben. Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp und liefern bundesweit. Einige [Beispielprojekte](/referenzen/) aus dieser Arbeit haben wir für Sie zusammengestellt.",
   ],
 };
 

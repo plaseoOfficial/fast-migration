@@ -209,7 +209,7 @@ export const gastroGeschichte = {
 export const gastroMoebelplaner = {
   heading: "Ihre Gastro-Möbel online planen",
   body:
-    "Mit unserem Möbelplaner stellen Sie einzelne Elemente online zusammen und sehen Maße, Oberflächen und Fronten direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? [Jetzt anfragen](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
+    "Mit unserem Möbelplaner stellen Sie einzelne Elemente online zusammen und sehen Maße, Oberflächen und Fronten direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? Stellen Sie [jetzt Ihre Anfrage](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
   ctaLabel: "Möbelplaner ausprobieren",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/IMG_2772-scaled.jpg",
