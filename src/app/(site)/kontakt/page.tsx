@@ -44,7 +44,7 @@ const KONTAKT_FAQ_ITEMS = [
   {
     question: "Kann ich mir vorher fertige Projekte ansehen?",
     answer:
-      "Ja. In unseren Referenzprojekten finden Sie realisierte Küchen, Möbel nach Maß und Gewerbeeinrichtungen – hilfreich, um konkrete Vorstellungen mitzubringen.",
+      "Ja. In unseren [Referenzprojekten](/referenzen/) finden Sie realisierte Küchen, Möbel nach Maß und Gewerbeeinrichtungen – hilfreich, um konkrete Vorstellungen mitzubringen.",
   },
 ];
 

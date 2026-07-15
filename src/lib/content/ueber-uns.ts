@@ -101,7 +101,7 @@ export const ueberWofuer = {
   columns: [
     {
       title: "Möbel, die auf Ihren Alltag reagieren",
-      body: "Uns interessiert nicht das perfekte Foto, sondern das perfekte Leben im Raum. Jede Küche, jeder Schrank, jedes Systemmöbel wird so geplant, dass es Ihre Gewohnheiten unterstützt. Viele unterschätzen, wie stark gute Möbel den Alltag erleichtern – bis sie es selbst erleben.",
+      body: "Uns interessiert nicht das perfekte Foto, sondern das perfekte Leben im Raum. Jede Küche, jeder Schrank, jedes Systemmöbel wird so geplant, dass es Ihre Gewohnheiten unterstützt. Viele unterschätzen, wie stark [gute Möbel nach Maß](/moebel-nach-mass/) den Alltag erleichtern – bis sie es selbst erleben.",
     },
     {
       title: "Planung ohne Umwege",
@@ -131,7 +131,7 @@ export const ueberValues = {
     },
     {
       title: "Tradition",
-      body: "Seit 30 Jahren entstehen bei Fast Systemmöbel Möbel aus Erfahrung, nicht aus Trends. Planung, Materialverständnis und saubere Ausführung sind nicht über Nacht gekommen. Wir wissen, warum die Möbel halten.",
+      body: "Seit 30 Jahren entstehen bei Fast Systemmöbel Möbel aus Erfahrung, nicht aus Trends. Planung, Materialverständnis und saubere Ausführung sind über tausende [realisierte Projekte](/referenzen/) gewachsen, nicht über Nacht. Wir wissen, warum die Möbel halten.",
     },
     {
       title: "Leidenschaft",

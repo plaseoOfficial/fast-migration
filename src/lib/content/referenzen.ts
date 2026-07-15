@@ -44,7 +44,7 @@ export const referenzenGrid = {
   eyebrow: "REFERENZEN AUS WERKSTATT UND OBJEKT",
   heading: "Ausgewählte Projekte – privat und gewerblich",
   leadParagraphs: [
-    "Wir fertigen für zwei Welten: maßgefertigte Möbel für Zuhause und komplette Einrichtungen für Büro, Ladenbau und Objekt. Diese Referenzen bündeln Projekte aus beiden Bereichen – vom ersten Aufmaß bis zur montierten Lösung vor Ort.",
+    "Wir fertigen für zwei Welten: [maßgefertigte Möbel für Zuhause](/moebel-nach-mass/) und [komplette Einrichtungen für Büro, Ladenbau und Objekt](/gewerbe/). Diese Referenzen bündeln Projekte aus beiden Bereichen – vom ersten Aufmaß bis zur montierten Lösung vor Ort.",
     "Filtern Sie nach Bereich und öffnen Sie ein Projekt, das Ihrem Vorhaben ähnelt. Im jeweiligen Leistungsbereich finden Sie weitere Beispiele, technische Details und den konkreten Ablauf.",
   ],
   categories: [
