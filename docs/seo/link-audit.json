@@ -1,14 +1,14 @@
 {
   "summary": {
-    "pagesBuilt": 18,
+    "pagesBuilt": 19,
     "pagesPlanned": 9,
-    "linksFound": 173,
+    "linksFound": 187,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 2,
+      "Warnung": 5,
       "Hinweis": 7
     }
   },
@@ -27,6 +27,27 @@
       "file": "src/app/(site)/einbauschraenke-nach-mass/einbauschrank-dachschraege/page.tsx",
       "line": 78,
       "href": "/moebel-nach-mass/"
+    },
+    {
+      "severity": "Warnung",
+      "check": "darf-nicht",
+      "message": "/einbauschraenke-nach-mass/schrank-unter-treppe/: möglicher Cross-Silo-Link → `/moebel-nach-mass/` (moebel). Nur bei echtem semantischem Bezug erlaubt.",
+      "file": "src/lib/content/schrank-unter-treppe.ts",
+      "href": "/moebel-nach-mass/"
+    },
+    {
+      "severity": "Warnung",
+      "check": "darf-nicht",
+      "message": "/einbauschraenke-nach-mass/schrank-unter-treppe/: möglicher Cross-Silo-Link → `/moebel-nach-mass/` (moebel). Nur bei echtem semantischem Bezug erlaubt.",
+      "file": "src/app/(site)/einbauschraenke-nach-mass/schrank-unter-treppe/page.tsx",
+      "line": 78,
+      "href": "/moebel-nach-mass/"
+    },
+    {
+      "severity": "Warnung",
+      "check": "budget",
+      "message": "/referenzen/: 11 Body-Links > Budget 10 (PageRank-Verdünnung).",
+      "page": "/referenzen/"
     },
     {
       "severity": "Hinweis",
