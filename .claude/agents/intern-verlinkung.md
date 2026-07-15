@@ -37,9 +37,10 @@ Props, nie Klassen/Styles). Berühre **niemals** Component-Klassen/Markup.
 Führe `npm run audit:links` aus. Es extrahiert den echten Link-Graphen und prüft
 gegen `linking-rules.ts`; Ergebnis im Terminal + strukturiert in
 `docs/seo/link-audit.json`. Befund-Schwere: **Fehler** (Dead-Link, fehlender
-MUSS, retiretes Ziel), **Warnung** (Cross-Silo, Hub-Übersprung, Budget,
-Anker-Monotonie, fehlendes Breadcrumb-Schema), **Hinweis** (Canonical/Trailing-
-Slash, fehlender SOLL, Sitemap, Backlog). Exit ≠ 0 bei Fehlern.
+MUSS, retiretes Ziel, unterschrittenes `minInlineLinks`-Minimum — CI-Gate seit
+2026-07), **Warnung** (Cross-Silo, Hub-Übersprung, Budget, Anker-Monotonie,
+fehlendes Breadcrumb-Schema), **Hinweis** (Canonical/Trailing-Slash, fehlender
+SOLL, Sitemap, Backlog). Exit ≠ 0 bei Fehlern.
 
 Du *interpretierst* diese Befunde – das Skript misst, du urteilst (welcher Satz,
 welcher Anker, ob ein Cross-Silo-Link einen echten semantischen Bezug hat).
@@ -59,22 +60,33 @@ Melde Drift: neue Dead-Links, neu erfüllbare MUSS-Links in **beide** Richtungen
 
 ### 3. einfügen
 Verdrahte konkrete Links durch Edits an den Daten-Modulen:
+- **Bevorzugt als Inline-Marker im Fließtext:** `[Anker](/ziel/)` direkt in der
+  Copy des Content-Moduls (nur in Props, die durch `renderInlineLinks()`
+  laufen — `src/lib/inline-links`), nicht als separates CTA/Card-Element. Die
+  Marker-Syntax und die gewrappten Sections stehen in
+  `docs/seo/internal-linking.md`. CTA/Card-Links bleiben zusätzlich möglich,
+  zählen aber nicht als Inline-Content-Link.
 - **Ziel existiert** (`built: true` in `PAGES`)? Nur dann verlinken – sonst bleibt
   es Backlog (kein Dead-Link beim Launch).
 - **Kanonische Form** verwenden: Trailing-Slash (`/kontakt/`, nicht `/kontakt`).
 - **Kontextuell vor Boilerplate:** bevorzugt einen Link im Fließtext mit
   umgebendem Satz; CTA/Card nur zusätzlich.
+- **`minInlineLinks` respektieren:** jede Seite braucht mindestens
+  `RULES[type].minInlineLinks` echte `[Anker](/ziel/)`-Marker im Fließtext
+  (Hub/Cluster/Ratgeber ≥ 3 · Produkt/Artikel/Brand ≥ 2 · Homepage ≥ 2 ·
+  Conversion ≥ 1) – sonst schlägt `npm run audit:links` als Fehler fehl.
 - **Budget einhalten** (`RULES[type].maxBodyLinks`), **dofollow** intern.
 - Bei neuer Seite den Knoten in `linking-rules.ts` pflegen (`built: true`,
   korrekter `parent`/`type`/`silo`) und ggf. `sitemap.ts` ergänzen.
 
 ### 4. anker finden
 Für eine Quelle→Ziel-Beziehung 3–5 natürliche, diverse Ankertexte vorschlagen.
-Basis: `ANCHORS[ziel]` (exact/partial/brand/descriptive). Regeln:
-Exact-Match pro Seite max. `EXACT_MATCH_CAP` (3) auf dieselbe URL; generische
-Anker („hier", „mehr erfahren") max. 10 %; derselbe Anker nie silo-weit identisch.
-Wähle die Variante, die **zur Suchintention** und zum umgebenden Satz passt
-(transaktional → Produkt, informational → Ratgeber).
+Basis: `ANCHORS[ziel]` (exact/partial/brand/descriptive) – **aus diesen Sets
+rotieren**, auch für Inline-Marker, statt denselben Anker wiederzuverwenden.
+Regeln: Exact-Match pro Seite max. `EXACT_MATCH_CAP` (3) auf dieselbe URL;
+generische Anker („hier", „mehr erfahren") max. 10 %; derselbe Anker nie
+silo-weit identisch. Wähle die Variante, die **zur Suchintention** und zum
+umgebenden Satz passt (transaktional → Produkt, informational → Ratgeber).
 
 ## Ausgabe (Modi kontrollieren/monitoren)
 

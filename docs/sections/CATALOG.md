@@ -804,3 +804,11 @@ When a page is marked **Privat**, build it from this canonical section order (de
 | 10 | TestimonialsSection (shared) | `#shared-testimonials` |
 | 11 | ExpandingImageCta inside <section beige className="pb-14 lg:pb-[64px]"> | `#shared-image-cta` |
 | 12 | FaqSection (shared) | `#shared-faq` |
+
+**Inline-Content-Links.** New pages ship their contextual in-body links as
+`[Anker](/ziel/)` markers directly in the content module's copy props (rendered
+via `renderInlineLinks()`), not bolted on afterwards — see
+[`docs/seo/internal-linking.md`](../seo/internal-linking.md) for the marker
+syntax, the `ANCHORS` rotation, and the per-type `minInlineLinks` minimum.
+Run `npm run audit:links` before considering the page done; it fails the
+build if the minimum isn't met.

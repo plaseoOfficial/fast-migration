@@ -36,8 +36,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const OUT = resolve(ROOT, "docs/seo/link-audit.json");
 
-// Task 8 stellt auf "Fehler" (CI-Gate), sobald der Retrofit aller Seiten durch ist.
-const MIN_INLINE_SEVERITY = "Hinweis";
+// Scharf seit Retrofit 2026-07 (CI-Gate): Seiten ohne Minimum an kontextuellen
+// In-Content-Links brechen das Audit.
+const MIN_INLINE_SEVERITY = "Fehler";
 
 // ---------------------------------------------------------------------------
 // Page-graph helpers
