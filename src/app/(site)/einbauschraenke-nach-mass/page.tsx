@@ -26,6 +26,7 @@ import {
   einbauFaq,
   einbauJsonLd,
 } from "@/lib/content/einbauschraenke-nach-mass";
+import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Einbauschränke nach Maß aus Espelkamp: Planung & Montage",
@@ -106,7 +107,7 @@ export default function EinbauschraenkeNachMassPage() {
     <PrivatPageLayout>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(einbauJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(stripJsonLdLinks(einbauJsonLd)) }}
       />
 
       <MnmHero {...einbauHero} />

@@ -12,8 +12,31 @@
  * Inhaber Johann Fast, Alte Waldstraße 32, 32339 Espelkamp, Tel. 05771 9138312.
  */
 import { SITE_URL } from "@/lib/content";
+import { stripInlineLinks } from "@/lib/inline-links/parse";
 
 const ORG_ID = `${SITE_URL}/#organization`;
+
+/**
+ * Recursively strips `[Anker](/ziel/)` inline-link markers from every string
+ * value in a JSON-LD graph, leaving only the anchor text. Content-copy
+ * strings (FAQ answers, descriptions, …) may contain the marker syntax —
+ * `renderInlineLinks` turns it into an `<a>` for HTML output — but
+ * `application/ld+json` is machine-read structured data, not HTML, so the raw
+ * marker syntax must never reach it. Apply once at the serialization edge
+ * rather than stripping every source string individually.
+ */
+export function stripJsonLdLinks<T>(value: T): T {
+  if (typeof value === "string") return stripInlineLinks(value) as unknown as T;
+  if (Array.isArray(value)) return value.map((v) => stripJsonLdLinks(v)) as unknown as T;
+  if (value && typeof value === "object") {
+    const out: Record<string, unknown> = {};
+    for (const [key, v] of Object.entries(value as Record<string, unknown>)) {
+      out[key] = stripJsonLdLinks(v);
+    }
+    return out as T;
+  }
+  return value;
+}
 
 const SOCIAL_PROFILES = [
   "https://www.instagram.com/fastsystemmobel/",
@@ -135,10 +158,10 @@ export function buildLadenbauJsonLd({
     })),
   };
 
-  return {
+  return stripJsonLdLinks({
     "@context": "https://schema.org",
     "@graph": [localBusiness, service, breadcrumbList, faqPage],
-  };
+  });
 }
 
 /**
@@ -181,10 +204,10 @@ export function buildHomeJsonLd({ faq }: HomeJsonLdOptions) {
     })),
   };
 
-  return {
+  return stripJsonLdLinks({
     "@context": "https://schema.org",
     "@graph": [website, organizationNode(), faqPage],
-  };
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -214,10 +237,10 @@ export function buildBrandPageJsonLd({ pageUrl, breadcrumb }: BrandPageJsonLdOpt
     })),
   };
 
-  return {
+  return stripJsonLdLinks({
     "@context": "https://schema.org",
     "@graph": [organizationNode(), breadcrumbList],
-  };
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -311,8 +334,8 @@ export function buildReferenzenJsonLd({
     })),
   };
 
-  return {
+  return stripJsonLdLinks({
     "@context": "https://schema.org",
     "@graph": [collectionPage, itemList, breadcrumbList, faqPage],
-  };
+  });
 }
