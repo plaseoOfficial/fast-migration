@@ -43,14 +43,18 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 
 - **Click-depth ≤ 3.** Hub → Cluster → Product. Each child links **up** to its direct parent (breadcrumb + 1 contextual in-content link).
 - **Silo integrity.** Privat silos don't link to Gewerbe silos (and vice versa), except hub↔hub (Ebene 0–1). A Cluster-Pillar must not link to another silo's clusters.
-- **Contextual > boilerplate.** ≥3 contextual in-body links per page (per-type minimums enforced as `minInlineLinks`, see below). Footer = Pillar-Hubs + Conversion + Brand-Menü (Home/Über uns/Referenzen) + Legal — **keine** Cluster-/Produkt-Tiefenlinks (no link-graves; Entscheidung 2026-07-14, siehe `FOOTER_ALLOWED_TYPES`).
+- **Contextual > boilerplate.** Kontextuelle In-Body-Links statt Link-Gräber; die konkrete Mindestzahl ist **pro Seitentyp** als `minInlineLinks` festgelegt (Hub/Cluster/Ratgeber ≥ 3 · Produkt/Artikel/Brand ≥ 2 · Homepage ≥ 2 · Conversion ≥ 1 · Legal 0 — siehe Inline-Content-Links unten), nicht als pauschale Zahl. Footer = Pillar-Hubs + Conversion + Brand-Menü (Home/Über uns/Referenzen) + Legal — **keine** Cluster-/Produkt-Tiefenlinks (no link-graves; Entscheidung 2026-07-14, siehe `FOOTER_ALLOWED_TYPES`).
 - **Inline-Content-Links (Pflicht seit 2026-07).** Kontextuelle Links stehen als
   Marker direkt in der Copy der Content-Module: `[Anker](/ziel/)` — gerendert via
   `renderInlineLinks()` (`src/lib/inline-links`), geprüft via `minInlineLinks` in
   `linking-rules.ts` (Hub/Cluster/Ratgeber ≥ 3 · Produkt/Artikel/Brand ≥ 2 ·
   Homepage ≥ 2 · Conversion ≥ 1). Anker aus den `ANCHORS`-Sets rotieren
   (exact/partial/brand/descriptive). Neue Seiten liefern ihre Inline-Links im
-  Content-Modul direkt mit — `npm run audit:links` bricht sonst.
+  Content-Modul direkt mit — `npm run audit:links` bricht sonst. *Randfall:* Der
+  `minInlineLinks`-Check greift nur bei Seiten mit `contentModule` (bzw.
+  extrahierten ausgehenden Links) — der `hasModule`-Gate im Audit. Eine neue Seite
+  ohne registriertes Content-Modul rutscht am Gate vorbei; darum wird jede Seite in
+  `linking-rules.ts` mit ihrem `contentModule` registriert (siehe Page Recipe).
 - **Anchor diversity.** Vary anchors: exact ("Küchen nach Maß"), partial ("maßgefertigte Küche"), brand+keyword, descriptive, max ~10% generic. Exact-match anchor to one URL: max 2–3× per page.
 - **Conversion targets.** Every strong page links to `/moebelplaner/` and `/kontakt/`. Dofollow internal links only.
 - **Max body links:** Hub 10–12 · Cluster-Pillar 8–10 · Product 5–7 · Conversion 3–5.

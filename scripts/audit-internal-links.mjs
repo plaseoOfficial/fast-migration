@@ -369,7 +369,11 @@ async function main() {
       checkAnchors(node, outgoing);
     }
 
-    // CHECK 11: Minimum kontextueller In-Content-Links (Marker im Fließtext)
+    // CHECK 11: Minimum kontextueller In-Content-Links (Marker im Fließtext).
+    // Invariante: Modul-Walk (extractModule) und page.tsx-Regex-Sweep dürfen NICHT
+    // denselben String sehen — sonst würde ein Marker doppelt zählen. Heute disjunkt
+    // (Copy lebt in src/lib/content/*, nur die 2 Conversion-Seiten inlinen Marker in
+    // page.tsx). Wenn eine Seite künftig beides tut, hier nach href+anchor deduplizieren.
     const inlineCount = outgoing.filter((l) => l.inline && isInternal(l.href)).length;
     if (hasModule && rule.minInlineLinks > 0 && inlineCount < rule.minInlineLinks) {
       add(MIN_INLINE_SEVERITY, "min-inline", `${node.slug}: nur ${inlineCount}/${rule.minInlineLinks} kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).`, { page: node.slug });
