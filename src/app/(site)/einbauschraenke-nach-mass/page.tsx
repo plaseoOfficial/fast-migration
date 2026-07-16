@@ -57,10 +57,11 @@ const BEIGE = "rgba(203, 191, 181, 0.59)";
  * Silo-konforme Karten für MnmWeitereLeistungen: kein Cross-Silo in den Gewerbe-
  * Bereich (internal-linking.md Silo-Integrität). Der Up-Link zum Hub
  * /moebel-nach-mass/ trägt einen keyword-reichen Anker; die Geschwister-Cluster
- * werden über den Hub verteilt, nicht seitwärts. Kinder-Seite „Schrank für
- * Dachschräge nach Maß" ist gebaut → keyword-reicher In-Content-Link (Cluster-
- * Pillar → Spoke, own-cluster-spokes MUSS). Weitere Kinder (Kleiderschrank,
- * Nischenschrank …) noch nicht gebaut → kein Link (launch clean).
+ * werden über den Hub verteilt, nicht seitwärts. Gebaute Kinder-Seiten „Schrank
+ * für Dachschräge nach Maß" und „Schrank unter der Treppe nach Maß" → keyword-
+ * reiche In-Content-Links (Cluster-Pillar → Spoke, own-cluster-spokes MUSS).
+ * Weitere Kinder (Kleiderschrank, Nischenschrank …) noch nicht gebaut → kein
+ * Link (launch clean).
  */
 const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
   {
@@ -78,6 +79,14 @@ const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
       "Unter der Dachschräge nutzen wir auch die niedrigen Zonen am Kniestock. Passgenaue Fronten folgen exakt der Schräge, vom Drempelschrank bis zur begehbaren Ankleide unterm Dach.",
     href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
     moreLabel: "Dachschrägenschrank ansehen",
+  },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Schrank unter der Treppe nach Maß",
+    description:
+      "Aus dem keilförmigen Totraum unter der Treppe machen wir echten Stauraum. Vom Stufenschrank mit Auszügen über den geschlossenen Treppenschrank bis zur Garderobe unter der Treppe.",
+    href: "/einbauschraenke-nach-mass/schrank-unter-treppe/",
+    moreLabel: "Schrank unter der Treppe ansehen",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
