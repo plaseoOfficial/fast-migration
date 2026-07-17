@@ -35,7 +35,7 @@ export const homeDiscover = {
   teamHeading:
     "Fast verbindet Handwerk und Design zu ganzheitlichen Möbelkonzepten.",
   teamBody:
-    "Als Familienbetrieb in zweiter Generation fertigen wir seit 1996 maßgefertigte Einrichtungen – für Wohnräume, Büros, Praxen, Ladengeschäfte und Gastronomie. Präzise, langlebig und passgenau auf Ihren Raum abgestimmt, geplant und gebaut in unserem Meisterbetrieb in Espelkamp und geliefert bundesweit.",
+    "Als Familienbetrieb in zweiter Generation fertigen wir seit 1996 [individuelle Möbel nach Maß](/moebel-nach-mass/) und [gewerbliche Objekteinrichtung](/gewerbe/) – für Wohnräume, Büros, Praxen, Ladengeschäfte und Gastronomie. Präzise, langlebig und passgenau auf Ihren Raum abgestimmt, geplant und gebaut in unserem Meisterbetrieb in Espelkamp und geliefert bundesweit.",
   blurbs: DISCOVER_BLURBS,
 };
 

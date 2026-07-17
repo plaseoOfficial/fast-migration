@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface ProcessStep {
   number: string;
@@ -57,7 +58,7 @@ export function BueroProcessSteps({ heading, steps }: BueroProcessStepsProps) {
                 className="text-[14px] leading-[1.7] font-medium"
                 style={{ color: "rgb(102,102,102)" }}
               >
-                {step.description}
+                {renderInlineLinks(step.description)}
               </p>
             </Reveal>
           ))}

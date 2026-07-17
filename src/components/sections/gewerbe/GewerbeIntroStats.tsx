@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 function useCountUp(target: number, duration: number) {
   const [value, setValue] = useState(0);
@@ -216,7 +217,7 @@ export function GewerbeIntroStats({
                 marginBottom: 0,
               }}
             >
-              {col1Body}
+              {renderInlineLinks(col1Body)}
             </p>
             <Link
               href={col1CtaHref}
@@ -258,7 +259,7 @@ export function GewerbeIntroStats({
                 marginBottom: 0,
               }}
             >
-              {col2Body}
+              {renderInlineLinks(col2Body)}
             </p>
           </div>
 
@@ -296,7 +297,7 @@ export function GewerbeIntroStats({
                 marginBottom: 0,
               }}
             >
-              {col3Body}
+              {renderInlineLinks(col3Body)}
             </p>
             <Link
               href={col3CtaHref}

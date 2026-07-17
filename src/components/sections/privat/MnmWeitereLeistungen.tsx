@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ServiceCard } from "@/types/mnm";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 const DEFAULT_CARDS: ServiceCard[] = [
   {
@@ -142,7 +143,7 @@ export function MnmWeitereLeistungen({
                   marginTop: "auto",
                 }}
               >
-                {card.description}
+                {renderInlineLinks(card.description)}
               </p>
 
               {/* Link (only when the card has a real target) */}

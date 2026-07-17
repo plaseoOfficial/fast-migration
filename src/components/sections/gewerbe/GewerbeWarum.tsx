@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface GalleryItem {
   src: string;
@@ -109,7 +110,7 @@ export function GewerbeWarum({
                 color: "rgb(23,33,33)",
               }}
             >
-              {bodyParagraph}
+              {renderInlineLinks(bodyParagraph)}
             </p>
           </Reveal>
 

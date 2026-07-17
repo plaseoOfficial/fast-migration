@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 export interface Segment {
   title: string;
@@ -59,7 +60,7 @@ export function SegmentCards({
               className="mt-5 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {intro}
+              {renderInlineLinks(intro)}
             </p>
           )}
         </div>

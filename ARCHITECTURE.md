@@ -170,6 +170,11 @@ design. Pixel parity is the contract.
 - 2-space indentation. Mobile-first responsive.
 - Content is data: section content lives in `src/lib/content/*` (or page-inline
   consts), passed via props. Components stay presentational.
+- **Inline-Content-Links are part of the content module, not an afterthought.**
+  Contextual in-body links are `[Anker](/ziel/)` markers inside copy props,
+  rendered via `renderInlineLinks()` (`src/lib/inline-links`). See
+  `docs/seo/internal-linking.md` for the marker syntax, anchor rotation, and the
+  per-page-type `minInlineLinks` minimum — `npm run audit:links` is a CI gate on it.
 - **Next.js 16 is not the Next.js in your training data** — read the relevant guide
   in `node_modules/next/dist/docs/` before writing framework code.
 - Verify before pushing: **`npm run check`** (lint + typecheck + build) must be green.

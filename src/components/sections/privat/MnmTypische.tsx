@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CategoryItem } from "@/types/mnm";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface MnmTypischeProps {
   heading: string;
@@ -42,7 +43,7 @@ function ItemList({ items }: { items: CategoryItem[] }) {
               marginTop: "8px",
             }}
           >
-            {item.description}
+            {renderInlineLinks(item.description)}
           </p>
         </div>
       ))}

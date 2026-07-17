@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface MnmProcessProps {
   heading: string;
@@ -42,7 +43,7 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
               className="mt-5 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {paragraph}{" "}
+              {renderInlineLinks(paragraph)}{" "}
               <strong style={{ color: "rgb(61,61,61)", fontWeight: 700 }}>{paragraphStrong}</strong>
             </p>
 

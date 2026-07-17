@@ -191,13 +191,16 @@ export const FOOTER_LINKS = {
     { label: "Home", href: "/" },
     { label: "Leistungen", href: "/moebel-nach-mass/" },
     { label: "Über uns", href: "/ueber-uns/" },
+    { label: "Referenzen", href: "/referenzen/" },
     // "Ratgeber" kehrt zurück, sobald /ratgeber/ gebaut ist (Launch-Regel: keine Dead-Links).
     { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
     { label: "Kontakt", href: "/kontakt/" },
   ],
+  // Prinzip 4: Footer = Pillar-Hubs + Conversion, keine Cluster-/Produkt-Tiefenlinks
+  // (Link-Grab). Cluster sind über die Nav-Dropdowns sitewide verlinkt.
   leistungen: [
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
-    { label: "Gewerbe", href: "/gewerbe/" },
+    { label: "Gewerbeeinrichtung", href: "/gewerbe/" },
     { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
   ],
   // Einsatzgebiete-Spalte kehrt zurück, sobald /liefergebiet-montage/ als

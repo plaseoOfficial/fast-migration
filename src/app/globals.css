@@ -70,6 +70,17 @@
   /* Paragraphs in marketing sections render Poppins by default;
      small/list copy explicitly uses Open Sans via .fast-body-sm. */
   a { color: inherit; text-decoration: none; }
+  /* Inline-Content-Links im Fließtext (Entscheidung 2026-07-14): Farbe erbt vom
+     Absatz, dezente Unterstreichung, Hover → Fast-Gelb. Gerendert von
+     renderInlineLinks() (src/lib/inline-links). */
+  .fast-inline-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+  }
+  .fast-inline-link:hover {
+    color: rgb(237, 168, 33);
+  }
 }
 
 /* Generic Poppins body paragraph — most marketing copy uses this */

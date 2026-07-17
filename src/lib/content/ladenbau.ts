@@ -39,7 +39,7 @@ export const ladenWeitereLeistungen: { cards: ServiceCard[] } = {
       icon: "/images/2024/03/interior-design-white-icons-08.svg",
       title: "Gewerbeeinrichtung",
       description:
-        "Ladenbau ist Teil unserer Gewerbeeinrichtung: vom einzelnen Möbel bis zur kompletten Objekteinrichtung für Handel, Gastronomie und Dienstleistung.",
+        "Ladenbau ist Teil unserer Gewerbeeinrichtung: vom einzelnen Möbel bis zur kompletten [Objekteinrichtung](/gewerbe/) für Handel, Gastronomie und Dienstleistung.",
       href: "/gewerbe/",
     },
     {
@@ -370,7 +370,7 @@ export const ladenKosten = {
 export const ladenMoebelplaner = {
   heading: "Ihre Ladeneinrichtung online vorab planen",
   body:
-    "Im Möbelplaner stellen Sie einzelne Elemente Ihrer Ladeneinrichtung selbst zusammen, etwa Theke, Regale und Anordnung. Maße, Oberflächen, Fronten und Auszüge sehen Sie direkt im 3D-Konfigurator, so bekommen Sie schnell eine erste Orientierung für Ihre Fläche. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung zu Material und Corporate Design, Fertigung und Montage. Aus Ihrer Online-Planung wird eine Ladeneinrichtung nach Maß. Sie möchten lieber gleich sprechen? Dann erreichen Sie uns telefonisch unter 05771 9138312.",
+    "Im Möbelplaner stellen Sie einzelne Elemente Ihrer Ladeneinrichtung selbst zusammen, etwa Theke, Regale und Anordnung. Maße, Oberflächen, Fronten und Auszüge sehen Sie direkt im 3D-Konfigurator, so bekommen Sie schnell eine erste Orientierung für Ihre Fläche. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung zu Material und Corporate Design, Fertigung und Montage. Aus Ihrer Online-Planung wird eine Ladeneinrichtung nach Maß. Sie möchten lieber gleich sprechen? Dann [fordern Sie ein Angebot an](/kontakt/), oder Sie erreichen uns telefonisch unter 05771 9138312.",
   ctaLabel: "Ladeneinrichtung selbst planen",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/DSC_9814.jpg",
@@ -391,7 +391,7 @@ export const ladenGeschichte = {
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit Homag-Technologie und einem eingespielten Team arbeiten. Seit 2010 stehen mit Andreas und Peter Fast die Nachkommen des Gründers Johann Fast im Betrieb, ein echter Familienbetrieb in zweiter Generation. Über 72.000 gefertigte Einzelteile stehen für diese Erfahrung.",
     "Was im Möbelbau für Privatkunden entstand, zahlt sich im Gewerbe doppelt aus: Wir kennen die Anforderungen an Belastbarkeit, Termintreue und Funktion, die ein Ladenbau-Projekt mitbringt, und planen entsprechend praxisnah. Für die Umkleide- und Spielerkabine von Arminia Bielefeld haben wir den kompletten Innenausbau übernommen, ein Beleg dafür, dass unsere Einbauten auch hoher Beanspruchung standhalten.",
-    "Vom einzelnen Tresen über die Boutique bis zur Filialausstattung in Serie fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit. Mehr Projekte aus dem Einzelhandel und Gewerbe finden Sie in unseren Referenzen.",
+    "Vom einzelnen Tresen über die Boutique bis zur Filialausstattung in Serie fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit. Sie möchten sich vorab unsere [Arbeiten ansehen](/referenzen/)? Dort finden Sie Projekte aus Einzelhandel und Gewerbe.",
   ],
 };
 

@@ -144,7 +144,7 @@ export const serienGeschichte = {
   paragraphs: [
     "Angefangen haben wir 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog unsere Fertigung nach Espelkamp, wo wir heute auf rund 1.000 m² mit moderner Homag- und CNC-Technologie und einem eingespielten Team arbeiten.",
     "Heute steht mit Andreas und Peter Fast die zweite Generation im Betrieb. Über 4.000 Projekte und mehr als 72.000 gefertigte Einzelteile stecken in unserer Erfahrung mit Maß und Stückzahl.",
-    "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, Liefertreue und konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben. Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp und liefern bundesweit.",
+    "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, Liefertreue und konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben. Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp und liefern bundesweit. Einige [Beispielprojekte](/referenzen/) aus dieser Arbeit haben wir für Sie zusammengestellt.",
   ],
 };
 
@@ -175,7 +175,7 @@ export const serienWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
     title: "Gewerbeeinrichtung",
     description:
-      "Serienfertigung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Möbel bis zur kompletten Objektausstattung für Filialhandel, Hotellerie und Büro.",
+      "Serienfertigung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Möbel bis zur kompletten [Objektausstattung](/gewerbe/) für Filialhandel, Hotellerie und Büro.",
     href: "/gewerbe/",
   },
   {
@@ -215,7 +215,7 @@ export const serienFaq = {
     {
       question: "Welche Mindest- und Maximalstückzahlen fertigen Sie?",
       answer:
-        "Eine starre Mindestmenge wie in der Industrie gibt es bei uns nicht. Wir fertigen kleine Auflagen ebenso wie große Serien und skalieren die Stückzahl mit. Nennen Sie uns Ihre geplante Menge, dann prüfen wir Fertigung und Termin und nennen Ihnen einen verbindlichen Rahmen.",
+        "Eine starre Mindestmenge wie in der Industrie gibt es bei uns nicht. Wir fertigen kleine Auflagen ebenso wie große Serien und skalieren die Stückzahl mit. [Nennen Sie uns Ihre geplante Menge](/kontakt/), dann prüfen wir Fertigung und Termin und geben Ihnen einen verbindlichen Rahmen.",
     },
     {
       question: "Wie läuft die Mustermöbel-Freigabe ab?",

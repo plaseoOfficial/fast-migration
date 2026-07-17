@@ -26,6 +26,7 @@ import {
   dachFaq,
   dachJsonLd,
 } from "@/lib/content/einbauschrank-dachschraege";
+import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Schrank für Dachschräge nach Maß aus Espelkamp: Planung & Montage",
@@ -105,7 +106,7 @@ export default function EinbauschrankDachschraegePage() {
     <PrivatPageLayout>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(dachJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(stripJsonLdLinks(dachJsonLd)) }}
       />
 
       <MnmHero {...dachHero} />

@@ -187,14 +187,14 @@ export const bueroGeschichte = {
   ],
   paragraphs: [
     "Fast Systemmöbel startete 1996 als Ein-Mann-Betrieb in Rahden-Tonnenheide. Heute arbeiten wir auf über 1.000 m² in Espelkamp mit moderner Homag- und CNC-Technologie. Geführt von Familie Fast: Gründer Johann und seine Söhne Andreas und Peter, seit 2010 mit an Bord.",
-    "Inzwischen haben wir zahlreiche komplette Büros in Ostwestfalen-Lippe eingerichtet — von einzelnen Arbeitsplätzen bis zu Empfang, Schrankwand und Konferenzraum. Ein Betrieb, ein Ansprechpartner, ein Stil über alle Möbel hinweg.",
+    "Inzwischen haben wir zahlreiche komplette Büros in Ostwestfalen-Lippe eingerichtet — von einzelnen Arbeitsplätzen bis zu Empfang, Schrankwand und Konferenzraum. Ein Betrieb, ein Ansprechpartner, ein Stil über alle Möbel hinweg. Einen Teil dieser Arbeiten zeigen wir in unseren [Referenzprojekten](/referenzen/).",
   ],
 };
 
 export const bueroMoebelplaner = {
   heading: "Ihre Büromöbel online planen und konfigurieren",
   body:
-    "Stellen Sie Schränke und Büromöbel im 3D-Konfigurator online zusammen — Maße, Oberflächen und Einlegeböden direkt sichtbar. Den Rest übernehmen wir: Aufmaß, Fertigung, Montage. Oder direkt anrufen: 05771 9138312.",
+    "Stellen Sie Schränke und Büromöbel im 3D-Konfigurator online zusammen — Maße, Oberflächen und Einlegeböden direkt sichtbar. Den Rest übernehmen wir: Aufmaß, Fertigung, Montage. [Beratung anfragen](/kontakt/) oder direkt anrufen: 05771 9138312.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/IMG_2772-scaled.jpg",
@@ -229,7 +229,7 @@ export const bueroWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
     title: "Gewerbeeinrichtung",
     description:
-      "Büroeinrichtung ist Teil unserer Gewerbeeinrichtung: Vom einzelnen Schreibtisch bis zur kompletten Objekteinrichtung für Büro, Ladenbau und Gastronomie.",
+      "Büroeinrichtung ist Teil unserer [gewerblichen Einrichtung](/gewerbe/): Vom einzelnen Schreibtisch bis zur kompletten Objekteinrichtung für Büro, Ladenbau und Gastronomie.",
     href: "/gewerbe/",
   },
   {

@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface BueroVergleichProps {
   heading: string;
@@ -36,7 +37,7 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
               className="text-[16px] leading-[1.7] font-medium"
               style={{ color: "rgba(220,220,220,0.85)" }}
             >
-              {intro}
+              {renderInlineLinks(intro)}
             </p>
           </Reveal>
         </div>
@@ -88,7 +89,7 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
             className="mt-8 lg:mt-10 text-[12px] leading-[1.7] font-medium max-w-[640px]"
             style={{ color: "rgba(220,220,220,0.85)" }}
           >
-            {kantenText}
+            {renderInlineLinks(kantenText)}
           </p>
         </Reveal>
 

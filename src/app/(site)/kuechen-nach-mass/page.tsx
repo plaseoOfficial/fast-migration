@@ -26,6 +26,7 @@ import {
   kuechenFaq,
   kuechenJsonLd,
 } from "@/lib/content/kuechen-nach-mass";
+import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Küchen nach Maß aus Espelkamp: Planung, Fertigung, Montage",
@@ -101,7 +102,7 @@ export default function KuechenNachMassPage() {
     <PrivatPageLayout>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(kuechenJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(stripJsonLdLinks(kuechenJsonLd)) }}
       />
 
       <MnmHero {...kuechenHero} />

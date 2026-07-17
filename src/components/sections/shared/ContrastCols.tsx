@@ -1,5 +1,6 @@
 import { CloseIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 export interface ContrastColumn {
   /** Card heading, e.g. "Katalog- & Systemmöbel". */
@@ -81,7 +82,7 @@ export function ContrastCols({
               className="mt-5 text-[16px] leading-[28px]"
               style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
             >
-              {intro}
+              {renderInlineLinks(intro)}
             </p>
           )}
         </Reveal>
@@ -104,7 +105,7 @@ export function ContrastCols({
                     className="text-[16px] leading-[26px]"
                     style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
                   >
-                    {point}
+                    {renderInlineLinks(point)}
                   </span>
                 </li>
               ))}
@@ -131,7 +132,7 @@ export function ContrastCols({
                     className="text-[16px] leading-[26px]"
                     style={{ color: "rgb(61,61,61)", fontWeight: 500 }}
                   >
-                    {point}
+                    {renderInlineLinks(point)}
                   </span>
                 </li>
               ))}

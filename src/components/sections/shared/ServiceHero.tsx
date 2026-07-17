@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface BreadcrumbItem {
   label: string;
@@ -129,7 +130,7 @@ export function ServiceHero({ title, breadcrumb, bgImage, intro, cta, headerScri
                 className="font-medium text-white/70"
                 style={{ fontSize: "15px", lineHeight: "23.8px" }}
               >
-                {intro}
+                {renderInlineLinks(intro)}
               </p>
             </div>
           )}

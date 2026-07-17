@@ -30,10 +30,15 @@ import {
   GENERIC_ANCHORS,
   FOOTER_ALLOWED_TYPES,
 } from "../src/lib/seo/linking-rules.ts";
+import { INLINE_LINK_RE } from "../src/lib/inline-links/parse.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const OUT = resolve(ROOT, "docs/seo/link-audit.json");
+
+// Scharf seit Retrofit 2026-07 (CI-Gate): Seiten ohne Minimum an kontextuellen
+// In-Content-Links brechen das Audit.
+const MIN_INLINE_SEVERITY = "Fehler";
 
 // ---------------------------------------------------------------------------
 // Page-graph helpers
@@ -88,16 +93,27 @@ function anchorForHrefKey(obj, key) {
   return undefined;
 }
 
+/** [Anker](/ziel/)-Marker aus einem Copy-String → { href, anchor, inline } (siehe src/lib/inline-links). */
+function inlineLinksFromString(text, out) {
+  const re = new RegExp(INLINE_LINK_RE.source, "g");
+  let m;
+  while ((m = re.exec(text)) !== null) out.push({ href: m[2], anchor: m[1], inline: true });
+}
+
 /** Recursively walk a data value, collecting { href, anchor } pairs. */
 function walkValue(val, out, seen = new Set()) {
   if (!val || typeof val !== "object" || seen.has(val)) return;
   seen.add(val);
   if (Array.isArray(val)) {
-    for (const v of val) walkValue(v, out, seen);
+    for (const v of val) {
+      if (typeof v === "string") inlineLinksFromString(v, out);
+      else walkValue(v, out, seen);
+    }
     return;
   }
   if (typeof val.href === "string") out.push({ href: val.href, anchor: pickAnchor(val) });
   for (const [k, v] of Object.entries(val)) {
+    if (typeof v === "string") inlineLinksFromString(v, out);
     if (typeof v === "string" && /href$/i.test(k) && k.toLowerCase() !== "href") {
       out.push({ href: v, anchor: anchorForHrefKey(val, k) });
     }
@@ -105,7 +121,9 @@ function walkValue(val, out, seen = new Set()) {
   for (const v of Object.values(val)) walkValue(v, out, seen);
 }
 
-const HREF_RE = /href\s*[:=]\s*\{?\s*["'`]([^"'`{}\s]+)["'`]/g;
+// Matches plain `href` plus suffixed keys (`ctaHref`, `primaryHref`, `gewerbeHref`, …)
+// so the regex fallback sees the same links as the walkValue() module extraction.
+const HREF_RE = /(?:^|[^a-zA-Z0-9_])[a-zA-Z0-9_]*[hH]ref\s*[:=]\s*\{?\s*["'`]([^"'`{}\s]+)["'`]/g;
 
 /** Regex sweep of a source file → [{ href, line }]. */
 function regexLinks(absPath) {
@@ -116,6 +134,8 @@ function regexLinks(absPath) {
     let m;
     HREF_RE.lastIndex = 0;
     while ((m = HREF_RE.exec(line)) !== null) out.push({ href: m[1], line: i + 1 });
+    const inlineRe = new RegExp(INLINE_LINK_RE.source, "g");
+    while ((m = inlineRe.exec(line)) !== null) out.push({ href: m[2], anchor: m[1], inline: true, line: i + 1 });
   });
   return out;
 }
@@ -137,7 +157,7 @@ async function extractModule(node) {
   } catch {
     // Fallback: regex sweep (e.g. home.ts has an unresolvable value import).
     for (const l of regexLinks(abs)) {
-      const link = { href: l.href, anchor: undefined, source: node.slug, scope: "page", file, line: l.line };
+      const link = { ...l, source: node.slug, scope: "page", file };
       links.push(link);
       addPageLink(node.slug, link);
     }
@@ -244,7 +264,7 @@ async function main() {
     { abs: navFile, source: "header-nav", scope: "chrome" },
     { abs: contentFile, source: "footer-global", scope: "chrome" },
   ]) {
-    for (const l of regexLinks(abs)) links.push({ href: l.href, source, scope, file: relative(ROOT, abs), line: l.line });
+    for (const l of regexLinks(abs)) links.push({ ...l, source, scope, file: relative(ROOT, abs) });
   }
 
   const pageFiles = listFiles(resolve(ROOT, "src/app"), (p) => p.endsWith(`${sep}page.tsx`));
@@ -253,7 +273,7 @@ async function main() {
     if (slug.startsWith("/library")) continue; // internal showcase, excluded
     const file = relative(ROOT, abs);
     for (const l of regexLinks(abs)) {
-      const link = { href: l.href, source: slug, scope: "page", file, line: l.line };
+      const link = { ...l, source: slug, scope: "page", file };
       links.push(link);
       if (builtSlugs.has(slug)) addPageLink(slug, link);
     }
@@ -264,7 +284,7 @@ async function main() {
     const file = relative(ROOT, abs);
     for (const l of regexLinks(abs)) {
       if (l.href === "#" || isInternal(l.href) || isFragment(l.href)) {
-        links.push({ href: l.href, source: `component:${file.split(sep).pop()}`, scope: "chrome", file, line: l.line });
+        links.push({ ...l, source: `component:${file.split(sep).pop()}`, scope: "chrome", file });
       }
     }
   }
@@ -348,6 +368,16 @@ async function main() {
     if (node.contentModule && !partialPages.has(node.slug)) {
       checkAnchors(node, outgoing);
     }
+
+    // CHECK 11: Minimum kontextueller In-Content-Links (Marker im Fließtext).
+    // Invariante: Modul-Walk (extractModule) und page.tsx-Regex-Sweep dürfen NICHT
+    // denselben String sehen — sonst würde ein Marker doppelt zählen. Heute disjunkt
+    // (Copy lebt in src/lib/content/*, nur die 2 Conversion-Seiten inlinen Marker in
+    // page.tsx). Wenn eine Seite künftig beides tut, hier nach href+anchor deduplizieren.
+    const inlineCount = outgoing.filter((l) => l.inline && isInternal(l.href)).length;
+    if (hasModule && rule.minInlineLinks > 0 && inlineCount < rule.minInlineLinks) {
+      add(MIN_INLINE_SEVERITY, "min-inline", `${node.slug}: nur ${inlineCount}/${rule.minInlineLinks} kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).`, { page: node.slug });
+    }
   }
 
   // === CHECK 7: breadcrumb schema on level ≥ 2 pages ===
@@ -387,19 +417,27 @@ async function main() {
   for (const link of links.filter((l) => l.source === "footer-global" && isInternal(l.href))) {
     const t = nodeBySlug.get(normSlug(link.href));
     if (t && !FOOTER_ALLOWED_TYPES.includes(t.type)) {
-      add("Hinweis", "footer", `Footer verlinkt \`${t.slug}\` (Typ ${t.type}) — Footer sollte nur Pillar-Hubs/Conversion/Legal enthalten (Prinzip 4).`, loc(link));
+      add("Hinweis", "footer", `Footer verlinkt \`${t.slug}\` (Typ ${t.type}) — Footer sollte nur Hubs/Conversion/Brand/Legal enthalten, keine Cluster-/Produkt-Tiefenlinks (Prinzip 4).`, loc(link));
     }
   }
 
   // === CHECK 10: backlog reconciliation ===
   try {
     const backlog = readFileSync(resolve(ROOT, "docs/seo/internal-linking.md"), "utf8");
-    const backlogSection = backlog.split(/##\s*Backlog/i)[1]?.split(/##\s*Done/i)[0] ?? "";
+    // Backlog table only (stop at the interim-retargets subsection, whose
+    // "Currently" column intentionally points at built pages).
+    const backlogSection = (backlog.split(/##\s*Backlog/i)[1]?.split(/##\s*Done/i)[0] ?? "").split(/###\s/)[0];
     const slugRe = /`(\/[a-z0-9-/]+\/)`/g;
     const nowBuilt = new Set();
-    for (const m of backlogSection.matchAll(slugRe)) {
-      const s = normSlug(m[1]);
-      if (builtSlugs.has(s)) nowBuilt.add(s);
+    for (const line of backlogSection.split("\n")) {
+      if (!line.trim().startsWith("|")) continue;
+      // Only the "Should link to" column (cell 2) — a built slug in the From
+      // column just means the source page exists, not that a link is pending.
+      const targetCell = line.split("|")[2] ?? "";
+      for (const m of targetCell.matchAll(slugRe)) {
+        const s = normSlug(m[1]);
+        if (builtSlugs.has(s)) nowBuilt.add(s);
+      }
     }
     if (nowBuilt.size) {
       add("Hinweis", "backlog", `Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): ${[...nowBuilt].map((s) => `\`${s}\``).join(", ")}.`);
@@ -423,12 +461,23 @@ function label(target) {
   return typeof target === "string" ? target : `[${target}]`;
 }
 
+/** Is `anc` an ancestor of `node` along the parent chain? */
+function isAncestor(anc, node) {
+  for (let p = node.parent; p; p = nodeBySlug.get(p)?.parent ?? null) {
+    if (p === anc.slug) return true;
+  }
+  return false;
+}
+
 function isCrossSilo(from, to) {
   if (from.audience === "neutral" || to.audience === "neutral") return false;
   // hub ↔ hub is always allowed (Ebene 0–1)
   if (from.type === "pillar-hub" && to.type === "pillar-hub") return false;
   // own parent / own child within the silo is fine
   if (to.slug === from.parent || to.parent === from.slug) return false;
+  // up-links along the ancestor chain (e.g. product → grandparent pillar-hub,
+  // breadcrumb trail) are hierarchy links, never cross-silo
+  if (isAncestor(to, from)) return false;
   // different audience, or different silo within same audience → cross-silo
   if (from.audience !== to.audience) return true;
   return to.silo !== "" && to.silo !== from.silo;

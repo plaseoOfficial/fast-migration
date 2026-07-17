@@ -97,6 +97,7 @@ arbitrary one-off px gaps that don't map to it.
 | **FAQ item** | card `padding 26px 32px` · `radius 6px` · `border border-subtle` · question Poppins 16px · toggle circle `radius 50%`, yellow/dark |
 | **Eyebrow** | Poppins `14px / 500` · `+2px` tracking · uppercase, color `fast-dark` |
 | **Stats / Tabs / Testimonial** | per `preview/components-{stats,tabs,testimonial}.html` (Urbanist tab/labels, pill tabs, star ratings, avatar circles) |
+| **Inline-Content-Links** (`.fast-inline-link`) | Links im Fließtext (Content-Marker `[Anker](/ziel/)`, gerendert via `renderInlineLinks()` aus `src/lib/inline-links`) · Farbe erbt vom umgebenden Absatz · `text-decoration: underline` mit `text-underline-offset: 4px` · Hover: `color: rgb(237, 168, 33)` (Fast-Gelb) · `transition: color 0.2s ease` · Nur in Fließtext-Props — nie in Headings, Eyebrows, Stats oder Button-Labels |
 
 ## 6. Known repo divergences (the agent flags these)
 

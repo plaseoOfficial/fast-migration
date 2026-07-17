@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 /** Filter tab in the category bar. `key` "all" shows every project. */
 export interface ReferenzCategory {
@@ -104,7 +105,7 @@ export function ReferenzenGrid({
                 color: "rgb(102,102,102)",
               }}
             >
-              {paragraph}
+              {renderInlineLinks(paragraph)}
             </p>
           ))}
         </Reveal>

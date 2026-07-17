@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface ListItem {
   title: string;
@@ -47,7 +48,7 @@ function ItemList({ items }: { items: ListItem[] }) {
               marginTop: "8px",
             }}
           >
-            {item.description}
+            {renderInlineLinks(item.description)}
           </p>
         </Reveal>
       ))}
