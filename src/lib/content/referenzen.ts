@@ -112,6 +112,17 @@ export const referenzenGrid = {
       href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
     },
     {
+      image: "/images/schrank-unter-treppe/schrank-unter-treppe-nach-mass-stufen-schubladen.jpg",
+      imageAlt: "Schrank unter der Treppe nach Maß mit Schubladen in den Treppenstufen und Spiegel",
+      category: "Möbel nach Maß",
+      categoryKey: "moebel",
+      title: "Stufenschrank unter der Treppe",
+      meta: "Privat · Flur",
+      description:
+        "Ein Schrank unter der Treppe, bei dem jede Stufe zum Schubfach wird. Der keilförmige Raum unter den Stufen ist bis in die tiefe Ecke passgenau als Stauraum genutzt.",
+      href: "/einbauschraenke-nach-mass/schrank-unter-treppe/",
+    },
+    {
       image: "/images/2025/11/DSC_9747.jpg",
       imageAlt: "Konferenzraum mit großem Tisch nach Maß und schwarzen Stühlen",
       category: "Büroeinrichtung",
