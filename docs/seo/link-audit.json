@@ -2,17 +2,29 @@
   "summary": {
     "pagesBuilt": 19,
     "pagesPlanned": 9,
-    "linksFound": 230,
+    "linksFound": 245,
     "partialExtraction": [
       "/"
     ],
     "counts": {
-      "Fehler": 0,
-      "Warnung": 0,
+      "Fehler": 1,
+      "Warnung": 1,
       "Hinweis": 4
     }
   },
   "findings": [
+    {
+      "severity": "Fehler",
+      "check": "min-inline",
+      "message": "/einbauschraenke-nach-mass/schrank-unter-treppe/: nur 0/2 kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).",
+      "page": "/einbauschraenke-nach-mass/schrank-unter-treppe/"
+    },
+    {
+      "severity": "Warnung",
+      "check": "budget",
+      "message": "/referenzen/: 11 Body-Links > Budget 10 (PageRank-Verdünnung).",
+      "page": "/referenzen/"
+    },
     {
       "severity": "Hinweis",
       "check": "muss-backlog",

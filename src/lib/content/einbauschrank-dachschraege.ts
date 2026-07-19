@@ -1,9 +1,11 @@
 /**
  * Content for the `/einbauschraenke-nach-mass/einbauschrank-dachschraege/` page:
  * the "Schrank für Dachschräge nach Maß" cluster child under the Einbauschränke
- * pillar (`/einbauschraenke-nach-mass/`). Built from the same Privat library
- * sections as the pillar; copy is Dachschräge-specific (Drempel, Kniestock,
- * Abseite, Schrägenwinkel) to avoid cannibalising the generic pillar text.
+ * pillar (`/einbauschraenke-nach-mass/`). Built from the Privat library sections
+ * plus shared sections (ProcessSteps, SpecTable, SegmentCards, UspHighlight) so
+ * each section carries one topic (ARCHITECTURE.md §1.1); copy is
+ * Dachschräge-specific (Drempel, Kniestock, Abseite, Schrägenwinkel) to avoid
+ * cannibalising the generic pillar text.
  *
  * Copy follows the Fast Systemmöbel brand voice (Sie-Anrede, handwerklich,
  * konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md and
@@ -23,7 +25,7 @@ export const dachHero = {
   bgImage: `${IMG}/dachschraegenschrank-nach-mass-trapezform-schlafzimmer.jpg`,
   imageAlt:
     "Dachschrägenschrank nach Maß über die gesamte Wand, trapezförmig an beide Dachschrägen angepasst",
-  title: "Schrank für Dachschräge nach Maß, passgenau vom Tischler aus Espelkamp",
+  title: "Schrank für Dachschräge nach Maß aus Espelkamp",
   intro:
     "Wir planen und bauen Ihren Schrank für die Dachschräge nach Maß, der jeden Zentimeter unter der Schräge nutzt. Vom Aufmaß der Schräge bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem toten Winkel unter dem Dach ein Dachschrägenschrank, der wirklich passt.",
   breadcrumb: [
@@ -34,33 +36,64 @@ export const dachHero = {
   ],
 };
 
+/**
+ * Slim intro (§1.1: 3 Spalten × wenige Sätze). Die Begriffs-Definitionen
+ * (Kniestock/Drempel/Abseite, 40–80 cm) leben in dachBegriffe, die
+ * Aufmaß-Details in dachProcess Schritt 1 + FAQ "Wie läuft das Aufmaß".
+ */
 export const dachIntroStats = {
   since: "seit 1996",
   sinceSub: "Bauen wir Schränke nach Maß.",
-  heading: "Was ist ein Drempelschrank oder Dachschrägenschrank?",
+  // Kein Wort > ~14 Zeichen: die 2fr-Mittelspalte hat min-width:auto, ein langes
+  // Kompositum wie "Dachschrägenschrank?" (~700px bei 65px) quetscht die Intro-Spalte.
+  heading: "Drempelschrank oder Schrank für die Schräge?",
   introBefore:
-    "Ein Dachschrägenschrank ist ein Schrank, dessen Korpus und Fronten exakt dem Winkel Ihrer Dachschräge folgen. Er nutzt auch die niedrige Zone am",
+    "Beides meint dasselbe: ein Schrank, der exakt dem Winkel Ihrer Dachschräge folgt, bis hinunter zum",
   introBold: "Kniestock",
-  introAfter:
-    ", dort, wo ein Standardschrank längst aufhört. Der Kniestock, auch Drempel genannt, ist die niedrige Wand an der Traufseite, auf der die Dachschräge aufsetzt. Meist ist sie zwischen etwa 40 und 80 Zentimeter hoch.",
+  introAfter: ".",
   bandImage: `${IMG}/begehbare-ankleide-dachschraege-nach-mass-glasfront.jpg`,
   bandAlt:
     "Begehbare Ankleide unter Dachschräge nach Maß mit beleuchteten Glasfront-Schränken und bronzefarbener Kommodeninsel",
-  col1Title: "Kniestock, Drempel und Abseite",
+  col1Title: "Stauraum statt toter Winkel",
   col1Body:
-    "Diese Begriffe begegnen Ihnen unter dem Dach ständig. Der Kniestock, auch Drempel genannt, ist die niedrige Wand, auf der die Schräge beginnt. Als Abseite bezeichnet man den flachen Raum hinter der Schräge, der sonst ungenutzt bleibt. Genau diese Zonen holen wir mit einem Schrank unter der Dachschräge zurück, statt sie zu verschenken.",
+    "Kniestock, Abseite und die flache Zone unter der Schräge bleiben sonst ungenutzt. Genau diese Bereiche holen wir mit einem Schrank nach Maß zurück.",
   col1CtaLabel: "Dachschräge anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Ein Schrank für die Dachschräge lebt vom Winkel. Wir messen die Schräge an mehreren Punkten, erfassen die Kniestockhöhe und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Aus diesen Werten fertigen wir Fronten und Korpus so, dass der Kniestockschrank fugenlos an der Schräge anschließt. Kein toter Winkel, keine Passleiste, kein verschenkter Zentimeter.",
+    "Ein Schrank für die Dachschräge lebt vom Winkel. Aus Kniestockhöhe und Schrägenwinkel fertigen wir Fronten und Korpus, die fugenlos an der Schräge anschließen. Keine Passleiste, kein verschenkter Zentimeter.",
   counterTarget: 200,
   counterDuration: 2000,
   counterSuffix: " km",
   col3Title: "Montage-Radius um Espelkamp",
   col3Body:
-    "Wir kommen zu Ihnen und nehmen die Schräge vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, zum Beispiel in Minden, Lübbecke, Osnabrück und Bielefeld. Dachschrägen sind für uns Alltag, ob im Neubau, im Altbau oder im ausgebauten Spitzboden.",
+    "Wir nehmen die Schräge bei Ihnen vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Osnabrück und Bielefeld.",
   col3CtaLabel: "Dachschräge online planen",
   col3CtaHref: "/moebelplaner/",
+};
+
+/**
+ * SegmentCards (shared): Begriffs-Glossar. Nimmt die Definitionen auf, die
+ * vorher IntroStats überfrachtet haben (Kniestock/Drempel/Abseite, 40–80 cm,
+ * Neubau/Altbau/Spitzboden). AEO-Surface für "Was ist ein Drempel?".
+ */
+export const dachBegriffe = {
+  heading: "Kniestock, Drempel und Abseite kurz erklärt",
+  intro:
+    "Diese Begriffe begegnen Ihnen unter dem Dach ständig, ob im Neubau, im Altbau oder im ausgebauten Spitzboden.",
+  segments: [
+    {
+      title: "Kniestock",
+      body: "Die niedrige Wand an der Traufseite, auf der die Dachschräge aufsetzt. Meist ist sie zwischen etwa 40 und 80 Zentimeter hoch.",
+    },
+    {
+      title: "Drempel",
+      body: "Ein anderes Wort für den Kniestock. Ein Drempelschrank stellt sich genau in diese niedrige Zone und macht sie zu Stauraum.",
+    },
+    {
+      title: "Abseite",
+      body: "Der flache Raum hinter der Schräge. Ohne Ausbau bleibt er ungenutzt, mit Türen oder Auszügen wird er zugänglich.",
+    },
+  ],
 };
 
 export const dachCtas = {
@@ -84,14 +117,38 @@ export const dachCtas = {
   },
 };
 
+/**
+ * ProcessSteps (shared): the dense "how it works" paragraph, split into four
+ * numbered steps so each step carries one stage of the Ablauf. No copy dropped.
+ */
 export const dachProcess = {
+  eyebrow: "Ablauf",
   heading: "So planen wir Ihren Schrank für die Dachschräge",
-  paragraph:
-    "Erst kommen wir zu Ihnen und nehmen die Schräge kostenlos vor Ort auf: Kniestockhöhe, Schrägenwinkel und jeder Anschluss an Wand und Boden. Dann planen wir in 3D, mit Einteilung, Fronten und passgenauem Verlauf entlang der Schräge, und Sie sehen Ihren Schrank, bevor das erste Bauteil entsteht. Nach Ihrer Freigabe fertigen wir auf Homag-Technik in Espelkamp, montiert wird zum verbindlichen Termin von unserem eigenen Team, das die Passung an der Schräge vor Ort feinjustiert.",
-  paragraphStrong: "Made in Germany.",
   image: `${IMG}/begehbarer-kleiderschrank-dachschraege-spitzdach-nach-mass.jpg`,
   imageAlt:
     "Begehbarer Kleiderschrank unter dem Spitzdach nach Maß mit beidseitigen offenen Regalen und Kommodeninsel",
+  steps: [
+    {
+      title: "Aufmaß vor Ort",
+      description:
+        "Erst kommen wir zu Ihnen und nehmen die Schräge kostenlos vor Ort auf: Kniestockhöhe, Schrägenwinkel und jeder Anschluss an Wand und Boden.",
+    },
+    {
+      title: "3D-Planung",
+      description:
+        "Dann planen wir in 3D, mit Einteilung, Fronten und passgenauem Verlauf entlang der Schräge. Sie sehen Ihren Schrank, bevor das erste Bauteil entsteht.",
+    },
+    {
+      title: "Fertigung in Espelkamp",
+      description:
+        "Nach Ihrer Freigabe fertigen wir auf Homag-Technik in unserer eigenen Werkstatt in Espelkamp. Made in Germany.",
+    },
+    {
+      title: "Montage zum verbindlichen Termin",
+      description:
+        "Montiert wird von unserem eigenen Team, das die Passung an der Schräge vor Ort feinjustiert.",
+    },
+  ],
 };
 
 /** Schrank types under the slope: drive the MnmTypische rows AND the JSON-LD ItemList. */
@@ -107,34 +164,34 @@ export const dachTypische = {
     {
       title: "Kleiderschrank an der Dachschräge",
       description:
-        "Der Kleiderschrank, der die volle Höhe bis unter die Schräge nutzt. Kleiderstangen kommen dorthin, wo der Raum hoch genug ist, Fächer und Auszüge in die flacheren Zonen. So verlieren Sie an der Schräge keinen Stauraum.",
+        "Nutzt die volle Höhe bis unter die Schräge: Stangen, wo der Raum hoch ist, Fächer und Auszüge in den flachen Zonen.",
     },
     {
       title: "Drempelschrank am Kniestock",
       description:
-        "Der niedrige Schrank direkt am Kniestock. Statt die Abseite hinter einer Rigipswand verschwinden zu lassen, machen wir sie mit einem Drempelschrank zugänglich, mit Türen oder Auszügen, die genau bis zum Beginn der Schräge reichen.",
+        "Macht die Abseite zugänglich statt sie hinter Rigips zu verstecken, mit Türen bis genau zum Beginn der Schräge.",
     },
     {
       title: "Schiebetüren an der Schräge",
       description:
-        "Wo eine Drehtür an der niedrigen Schräge ansteht, gleiten Schiebetüren platzsparend zur Seite. Wir führen sie sauber an der Schräge entlang, so bleibt der Weg vor dem Schrank frei, auch im schmalen Dachzimmer.",
+        "Gleiten platzsparend zur Seite, wo eine Drehtür ansteht. Der Weg vor dem Schrank bleibt frei, auch im schmalen Dachzimmer.",
     },
   ],
   row2: [
     {
       title: "Begehbare Ankleide unterm Dach",
       description:
-        "Ein ganzer Ankleidebereich, geplant um Ihre Wege und die Höhen der Schräge. Offene Regale, Auszüge und Stangen ordnen wir so an, dass auch die niedrigen Seiten unter dem Dach sinnvoll genutzt werden.",
+        "Ein ganzer Ankleidebereich, geplant um Ihre Wege und die Höhen der Schräge, bis in die niedrigen Seiten hinein.",
     },
     {
       title: "Ausziehbare Elemente für die tiefe Schräge",
       description:
-        "Ganz hinten, wo die Schräge fast den Boden berührt, kommt man mit festen Fächern schlecht heran. Ausziehbare Auszüge und Rollelemente holen den Stauraum aus der tiefen Schräge nach vorne, statt ihn tot liegen zu lassen.",
+        "Auszüge und Rollelemente holen den Stauraum aus der tiefen Schräge nach vorne, statt ihn tot liegen zu lassen.",
     },
     {
       title: "Offene Regale in der Schräge",
       description:
-        "Nicht alles muss hinter Türen verschwinden. Offene, dem Winkel folgende Regalfächer setzen Bücher oder Deko in Szene und lassen ein niedriges Dachzimmer luftiger wirken.",
+        "Dem Winkel folgende Fächer setzen Bücher und Deko in Szene und lassen ein niedriges Dachzimmer luftiger wirken.",
     },
   ],
 };
@@ -142,7 +199,7 @@ export const dachTypische = {
 export const dachWarum = {
   heading: "Warum ein Schrank für die Dachschräge nach Maß muss",
   paragraph:
-    "Unter dem Dach passt kein Standardmaß. Fertigschränke und Modelle von der Stange enden dort, wo die Schräge beginnt, und über dem Schrank bleibt ein toter Winkel offen. Auch ein IKEA-Schrank oder PAX steht senkrecht im Raum und lässt die Schräge ungenutzt. Wir bauen den Schrank stattdessen zentimetergenau bis unter die Schräge, als [maßgefertigten Einbauschrank](/einbauschraenke-nach-mass/), mit Fronten, die dem Winkel exakt folgen. Kniestock, Abseite und die flache Zone ganz hinten werden so vom Problem zur Stellfläche. Genau die verwinkelten Räume, an denen Standardmöbel scheitern, sind für uns Alltag.",
+    "Unter dem Dach passt kein Standardmaß. Fertigschränke und Modelle von der Stange enden dort, wo die Schräge beginnt, und über dem Schrank bleibt ein toter Winkel offen. Wir bauen den Schrank stattdessen zentimetergenau bis unter die Schräge, als [maßgefertigten Einbauschrank](/einbauschraenke-nach-mass/), mit Fronten, die dem Winkel exakt folgen. Kniestock, Abseite und die flache Zone ganz hinten werden so vom Problem zur Stellfläche. Genau die verwinkelten Räume, an denen Standardmöbel scheitern, sind für uns Alltag.",
   images: [
     {
       src: `${IMG}/schrank-fuer-dachschraege-nach-mass-anthrazit-regalfaecher.jpg`,
@@ -153,18 +210,103 @@ export const dachWarum = {
   ],
 };
 
-export const dachWarum2 = {
+/**
+ * SpecTable (shared): the "Selber bauen / IKEA / Tischler" third of the former
+ * dachWarum2 paragraph as a scannable 3-column comparison. Cell copy keeps the
+ * original claims (incl. the IKEA/PAX sentence moved out of dachWarum).
+ */
+export const dachVergleich = {
   heading: "Selber bauen, IKEA oder vom Tischler?",
-  paragraph:
-    "Einen Dachschrägenschrank selber bauen kann sich lohnen, wenn die Schräge gerade verläuft, die Ansprüche einfach sind und Sie Zeit und Werkzeug haben. Ein IKEA- oder PAX-Bausatz ist günstig, bleibt aber ein senkrechtes Standardmaß, das die Schräge nicht ausnutzt und den toten Winkel offen lässt. Sobald Winkel, Kniestockhöhe und Nische zusammenkommen, spielt die Maßanfertigung ihre Stärke aus: Sie nutzt jeden Zentimeter und schließt sauber an die Schräge an. Einen Pauschalpreis gibt es dabei nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Der Preis richtet sich nach der Größe, den Fronten und dem Material, der Innenausstattung mit Auszügen und Beleuchtung und der Einbausituation. Ein steiler Winkel oder eine schiefe Wand ist aufwändiger als eine flache, gerade Schräge, und Beschläge wie Schiebetüren wirken sich aus. Nach dem kostenlosen Aufmaß sagen wir Ihnen offen, was den Preis bei Ihrer Schräge bestimmt, und Sie erhalten ein klares, individuelles Angebot ohne versteckte Kosten. Wie fertige Dachschrägenschränke aussehen, zeigen unsere [Beispielprojekte](/referenzen/).",
-  images: [
+  intro:
+    "Sobald Winkel, Kniestockhöhe und Nische zusammenkommen, spielt die Maßanfertigung ihre Stärke aus: Sie nutzt jeden Zentimeter und schließt sauber an die Schräge an.",
+  firstColLabel: "Kriterium",
+  columns: ["Selber bauen", "IKEA & PAX", "Maßanfertigung vom Tischler"],
+  highlightColumn: 2,
+  rows: [
     {
-      src: `${IMG}/dachschraegenschrank-schiebetuer-nach-mass-kupfer.jpg`,
-      alt: "Dachschrägenschrank mit Schiebetür nach Maß in Kupferoptik mit offenen Regalen und Kommode",
-      width: 1280,
-      height: 714,
+      label: "Passform an der Schräge",
+      values: [
+        "Kann sich lohnen, wenn die Schräge gerade verläuft und die Ansprüche einfach sind.",
+        "Steht senkrecht im Raum und endet dort, wo die Schräge beginnt. Die Schräge bleibt ungenutzt.",
+        "Fronten und Korpus folgen dem Winkel exakt und schließen fugenlos an die Schräge an.",
+      ],
+    },
+    {
+      label: "Kniestock & toter Winkel",
+      values: [
+        "Niedrige Zonen sauber auszubauen braucht Erfahrung im Umgang mit Winkeln.",
+        "Der tote Winkel über und neben dem Schrank bleibt offen.",
+        "Kniestock und Abseite werden mit Drempelschrank und Auszügen zu Stauraum.",
+      ],
+    },
+    {
+      label: "Aufwand & Zeit",
+      values: [
+        "Setzt voraus, dass Sie Zeit und Werkzeug haben.",
+        "Schneller Aufbau nach Bausatz.",
+        "Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir komplett.",
+      ],
+    },
+    {
+      label: "Preis",
+      values: [
+        "Materialkosten, dafür viel Eigenleistung.",
+        "Günstig, bezahlt aber mit verschenktem Stauraum.",
+        "Individuelles Angebot nach dem kostenlosen Aufmaß, jeder Schrank ein Unikat.",
+      ],
     },
   ],
+};
+
+/**
+ * SegmentCards (shared): the price-factor sentences of the former dachWarum2
+ * paragraph as one card per factor. 3×2 grid, symmetric.
+ */
+export const dachPreisFaktoren = {
+  heading: "Was den Preis Ihres Schranks bestimmt",
+  intro:
+    "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Der Preis richtet sich nach diesen Faktoren:",
+  segments: [
+    {
+      title: "Größe",
+      body: "Je mehr Meter Schräge der Schrank füllt, desto mehr Material und Fertigungszeit stecken darin.",
+    },
+    {
+      title: "Fronten & Material",
+      body: "Die Wahl der Fronten und des Materials prägt Optik und Preis Ihres Dachschrägenschranks.",
+    },
+    {
+      title: "Innenausstattung",
+      body: "Auszüge, Rollelemente und Beleuchtung holen mehr aus der Schräge heraus und wirken sich auf den Preis aus.",
+    },
+    {
+      title: "Einbausituation",
+      body: "Anschlüsse an Wand und Boden, Gauben und Balken bestimmen den Aufwand beim Einpassen.",
+    },
+    {
+      title: "Winkel & Wände",
+      body: "Ein steiler Winkel oder eine schiefe Wand ist aufwändiger als eine flache, gerade Schräge.",
+    },
+    {
+      title: "Beschläge",
+      body: "Beschläge wie Schiebetüren wirken sich aus, sparen im schmalen Dachzimmer aber Platz.",
+    },
+  ],
+};
+
+/**
+ * UspHighlight (shared): the offer/trust close of the former dachWarum2
+ * paragraph, incl. the [Beispielprojekte](/referenzen/) inline link and the
+ * Kupfer photo that illustrated dachWarum2.
+ */
+export const dachAngebot = {
+  eyebrow: "Kostenloses Aufmaß",
+  heading: "Klares Angebot ohne versteckte Kosten",
+  body:
+    "Nach dem kostenlosen Aufmaß sagen wir Ihnen offen, was den Preis bei Ihrer Schräge bestimmt, und Sie erhalten ein klares, individuelles Angebot ohne versteckte Kosten. Wie fertige Dachschrägenschränke aussehen, zeigen unsere [Beispielprojekte](/referenzen/).",
+  image: `${IMG}/dachschraegenschrank-schiebetuer-nach-mass-kupfer.jpg`,
+  imageAlt:
+    "Dachschrägenschrank mit Schiebetür nach Maß in Kupferoptik mit offenen Regalen und Kommode",
 };
 
 export const dachGeschichte = {

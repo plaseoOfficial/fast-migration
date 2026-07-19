@@ -3,22 +3,28 @@ import type { ServiceCard } from "@/types/mnm";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { MnmProcess } from "@/components/sections/privat/MnmProcess";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
+import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SpecTable } from "@/components/sections/shared/SpecTable";
+import { SegmentCards } from "@/components/sections/shared/SegmentCards";
+import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
   dachHero,
   dachIntroStats,
+  dachBegriffe,
   dachProcess,
   dachTypische,
   dachWarum,
-  dachWarum2,
+  dachVergleich,
+  dachPreisFaktoren,
+  dachAngebot,
   dachGeschichte,
   dachMoebelplaner,
   dachCtas,
@@ -119,11 +125,16 @@ export default function EinbauschrankDachschraegePage() {
         </div>
       </section>
 
-      <MnmProcess {...dachProcess} />
+      {/* Begriffs-Glossar — nimmt die Definitionen auf, die IntroStats überfrachtet haben */}
+      <SegmentCards {...dachBegriffe} />
+      <ProcessSteps {...dachProcess} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
       <MnmTypische {...dachTypische} />
       <MnmWarum {...dachWarum} imageColumns={1} />
-      <MnmWarum {...dachWarum2} reverse imageColumns={1} />
+      {/* Ex-dachWarum2, aufgeteilt (§1.1): Vergleich → Preisfaktoren → Angebots-USP */}
+      <SpecTable {...dachVergleich} />
+      <SegmentCards {...dachPreisFaktoren} />
+      <UspHighlight {...dachAngebot} />
       <MnmGeschichte {...dachGeschichte} />
       <MnmMoebelplaner {...dachMoebelplaner} />
       <TestimonialsSection heading={dachTestimonialsHeading} />
