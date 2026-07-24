@@ -29,9 +29,9 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Küchen nach Maß aus Espelkamp: Planung, Fertigung, Montage",
+  title: "Küchen nach Maß aus Espelkamp: Einbauküche bis Kochinsel",
   description:
-    "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, in eigener Fertigung gebaut, vom eigenen Team montiert. Kostenloses Aufmaß vor Ort.",
+    "Einbauküchen nach Maß vom Meisterbetrieb in Espelkamp: zentimetergenau geplant, Wand zu Wand ohne Passleisten gebaut. Kostenloses Aufmaß vor Ort.",
   alternates: { canonical: "/kuechen-nach-mass/" },
   openGraph: {
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Küchen nach Maß aus Espelkamp: Planung, Fertigung, Montage",
+    title: "Küchen nach Maß aus Espelkamp: Einbauküche bis Kochinsel",
     description:
       "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, gebaut und montiert.",
     url: "/kuechen-nach-mass/",
