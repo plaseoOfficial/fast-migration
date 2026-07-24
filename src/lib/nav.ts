@@ -28,14 +28,31 @@ export type NavItem =
 export const NAV_ITEMS: NavItem[] = [
   {
     label: "Privat",
-    kind: "dropdown",
-    items: [
-      { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
-      { label: "Küchen nach Maß", href: "/kuechen-nach-mass/" },
-      { label: "Einbauschränke nach Maß", href: "/einbauschraenke-nach-mass/" },
-      { label: "Schrank für Dachschräge nach Maß", href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
-      { label: "Badmöbel nach Maß", href: "/badmoebel-nach-mass/" },
+    kind: "mega",
+    columns: [
+      {
+        title: "Wohnräume",
+        items: [
+          { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
+          { label: "Küchen nach Maß", href: "/kuechen-nach-mass/" },
+          { label: "Badmöbel nach Maß", href: "/badmoebel-nach-mass/" },
+        ],
+      },
+      {
+        title: "Schränke & Stauraum",
+        items: [
+          { label: "Einbauschränke nach Maß", href: "/einbauschraenke-nach-mass/" },
+          { label: "Schrank für Dachschräge nach Maß", href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
+        ],
+      },
     ],
+    teaser: {
+      image: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
+      heading: "Möbel nach Maß",
+      text: "Maßgefertigte Lösungen für Küche, Bad, Einbauschrank und Dachschräge.",
+      href: "/moebel-nach-mass/",
+      cta: { label: "Beratung anfragen", href: "/kontakt/" },
+    },
   },
   {
     label: "Gewerbe",
