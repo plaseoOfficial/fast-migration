@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/einbauschraenke-nach-mass/`, `/einbauschraenke-nach-mass/einbauschrank-dachschraege/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
+**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/einbauschraenke-nach-mass/`, `/einbauschraenke-nach-mass/einbauschrank-dachschraege/`, `/einbauschraenke-nach-mass/schrank-unter-treppe/`, `/badmoebel-nach-mass/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
 
 ## Rules (condensed)
 
@@ -68,7 +68,10 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 | `/kuechen-nach-mass/` | `/kuechen-nach-mass/kueche-planen/`, `/kuechen-nach-mass/tischlerkueche-vs-kuechenstudio/` | SOLL (cluster articles) | Articles built |
 | `/kuechen-nach-mass/` | `/ablauf-massanfertigung/` | SOLL (trust) | Page built |
 | `/kuechen-nach-mass/` (FaqSection) + `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/` | `/faq/` ("Zum FAQ", currently `#`) | SOLL | `/faq/` built |
-| `/moebel-nach-mass/` | remaining sibling cluster pillars (Badmöbel / Wohnmöbel nach Maß) | MUSS (hub→clusters) | clusters built |
+| `/moebel-nach-mass/` | remaining sibling cluster pillar (Wohnmöbel nach Maß) | MUSS (hub→clusters) | cluster built |
+| `/badmoebel-nach-mass/` | Produkt-Kinder (`/badmoebel-nach-mass/waschtisch-nach-mass/`, `.../waschtischunterschrank-nach-mass/`, `.../badschrank-nach-mass/`, `.../spiegelschrank-nach-mass/`, `.../badmoebel-massivholz/`) | MUSS (cluster→spokes) | spoke pages built |
+| `/badmoebel-nach-mass/` | Ratgeber-Kinder (`.../badmoebel-nach-mass-kosten/`, `.../badmoebel-fuer-kleine-baeder/`) | MUSS/SOLL (cost/ratgeber) | ratgeber built |
+| `/badmoebel-nach-mass/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | `/moebelplaner/`, `/kontakt/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | MUSS | pages built |
 | `/ueber-uns/` (UeberNavCards "FAQ" card, currently `#`) | `/faq/` | SOLL | `/faq/` built |
 | Gewerbe clusters (`/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`) | their product / ratgeber spokes (e.g. Konferenztisch, Empfangstresen, …) | MUSS (cluster→product) | spoke pages built |
@@ -88,6 +91,19 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/badmoebel-nach-mass/` launch (2026-07)
+
+- **`/badmoebel-nach-mass/` shipped** als Cluster-Pillar (Silo `badmoebel`, parent `/moebel-nach-mass/`):
+  `built: true` + `contentModule: "badmoebel-nach-mass"` + `ANCHORS`-Set in `linking-rules.ts`;
+  Nav-Dropdown „Privat" + `sitemap.ts` (prio 0.8).
+- **Beidseitig verdrahtet:** `/moebel-nach-mass/` → `/badmoebel-nach-mass/` (mnmWeitereCards-Karte
+  „Badmöbel nach Maß", hub→cluster MUSS) · `/badmoebel-nach-mass/` → `/moebel-nach-mass/`
+  (Breadcrumb + Karte „Möbel nach Maß" + kontextueller In-Content-Link) · → `/moebelplaner/`
+  (IntroStats col3 + MnmMoebelplaner, Conversion-MUSS) · → `/kontakt/` (IntroStats col1, beide
+  ExpandingImageCtas, FaqSection) · → `/referenzen/` (Karte „Referenzprojekte", SOLL Trust).
+- Bad-Kinder (Waschtisch, Unterschrank, Badschrank, Spiegelschrank, Massivholz, Kosten, kleine
+  Bäder) sind **nicht gebaut** → keine Links (launch clean), siehe Backlog-Zeilen oben.
 
 - **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/ladenbau/`, `/serienmoebel/`. *(hub → clusters, silo distribution)*
 - **Each Gewerbe cluster → `/gewerbe/`** (breadcrumb "Gewerbe" up-link, Ebene 1→0 within silo).

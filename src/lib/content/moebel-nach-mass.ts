@@ -199,6 +199,13 @@ export const mnmWeitereCards: ServiceCard[] = [
     href: "/einbauschraenke-nach-mass/",
   },
   {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Badmöbel nach Maß",
+    description:
+      "Waschtisch, Unterschrank und Spiegelschrank vom Meisterbetrieb. Feuchtigkeitsbeständig verarbeitet, passgenau für Nische, Dachschräge und kleines Bad.",
+    href: "/badmoebel-nach-mass/",
+  },
+  {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Raumkonzepte",
     description:

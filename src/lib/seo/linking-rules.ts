@@ -65,7 +65,7 @@ export const PAGES: PageNode[] = [
   { slug: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "einbauschrank-dachschraege" },
   // Einbauschränke spoke (cluster child): Schrank unter der Treppe nach Maß
   { slug: "/einbauschraenke-nach-mass/schrank-unter-treppe/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "schrank-unter-treppe" },
-  { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: false },
+  { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: false },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
@@ -347,6 +347,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Unsere Geschichte", "der Meisterbetrieb"],
     brand: ["Über Fast Systemmöbel"],
     descriptive: ["mehr über uns", "das Team kennenlernen"],
+  },
+  "/badmoebel-nach-mass/": {
+    exact: ["Badmöbel nach Maß"],
+    partial: ["maßgefertigte Badmöbel", "Badmöbel vom Tischler", "Waschtisch und Badschrank nach Maß"],
+    brand: ["Fast Systemmöbel Badmöbel"],
+    descriptive: ["alle Badmöbel nach Maß", "zum Badmöbel-Bereich"],
   },
   "/einbauschraenke-nach-mass/": {
     exact: ["Einbauschränke nach Maß"],
