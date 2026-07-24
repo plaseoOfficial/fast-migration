@@ -5,6 +5,12 @@ import { Resend } from "resend";
 export interface KontaktFormState {
   ok: boolean;
   error?: string;
+  /**
+   * true, wenn die Anfrage als Spam erkannt und stillschweigend verworfen wurde
+   * (Honeypot). Dem Bot wird Erfolg vorgetäuscht, es geht aber KEINE E-Mail raus
+   * — der Client darf für diesen Fall daher auch keine Conversion tracken.
+   */
+  spam?: boolean;
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -18,7 +24,7 @@ export async function sendeKontaktAnfrage(
 ): Promise<KontaktFormState> {
   // Honeypot: echte Besucher lassen das unsichtbare Feld leer.
   if (formData.get("firma")) {
-    return { ok: true };
+    return { ok: true, spam: true };
   }
 
   const vorname = String(formData.get("vorname") ?? "").trim();

@@ -57,7 +57,12 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
       const result = await sendeKontaktAnfrage(formData);
       if (result.ok) {
         setSubmitted(true);
-        trackEvent("Kontaktformular gesendet", { seite: window.location.pathname });
+        // Nur echte Absendungen als Conversion zählen. Der Honeypot-Fall
+        // (result.spam) täuscht dem Bot Erfolg vor, verschickt aber keine Mail —
+        // sonst zählte Matomo Spam-Bots als Kontaktanfragen mit.
+        if (!result.spam) {
+          trackEvent("Kontaktformular gesendet", { seite: window.location.pathname });
+        }
       } else {
         const grund = result.error ?? "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.";
         setError(grund);
