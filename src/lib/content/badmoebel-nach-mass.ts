@@ -21,7 +21,7 @@ export const badHero = {
     "Badmöbel nach Maß in einem hellen Bad: Waschtisch mit Unterschrank und passendem Spiegelschrank, feuchtigkeitsbeständig verarbeitet von Fast Systemmöbel",
   title: "Badmöbel nach Maß aus Espelkamp",
   intro:
-    "Wir planen und fertigen Ihre Badmöbel nach Maß, auf den Millimeter genau für Ihr Bad. Beratung, 3D-Planung, Fertigung und Montage kommen aus unserem Meisterbetrieb in Espelkamp, das Aufmaß bei Ihnen vor Ort kostet nichts. So sitzt der Waschtisch in der Nische, der Unterschrank an der Wand und der Spiegelschrank über Ihrem vorhandenen Waschbecken. Und die Kanten? Verschließen wir mit PU-Technik, fugenlos und feuchtigkeitsbeständig.",
+    "Wir planen und fertigen Ihre Badmöbel nach Maß, auf den Millimeter genau für Ihr Bad. Beratung, 3D-Planung, Fertigung und Montage aus unserem Meisterbetrieb in Espelkamp, das Aufmaß vor Ort kostet nichts. Die Kanten? Mit PU-Technik verschlossen, fugenlos und feuchtigkeitsbeständig.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -37,22 +37,22 @@ export const badIntroStats = {
     "Fast Systemmöbel aus Espelkamp plant Ihr Bad von der ersten Idee bis zur Montage. Wir nehmen uns Zeit für das Aufmaß bei Ihnen und nutzen jeden",
   introBold: "Zentimeter",
   introAfter:
-    ". Waschtisch, Unterschrank und Schränke schließen dann exakt an Wand, Nische und Anschlüsse an. Keine Passleisten, kein verschenkter Stauraum. Auch für schmale Bäder und Dachschrägen finden wir eine Lösung, an der Serienware scheitert.",
+    ". Waschtisch, Unterschrank und Schränke schließen exakt an Wand, Nische und Anschlüsse an. Keine Passleisten, kein verschenkter Stauraum, auch bei schmalen Bädern und Dachschrägen.",
   bandImage: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
   bandAlt: "Waschtischunterschrank nach Maß mit geöffneten Auszügen und passgenauer Einteilung",
   col1Title: "Badmöbel planen",
   col1Body:
-    "Wir planen Ihr Bad um Sie herum. Raumhöhe, Nische, Dachschräge, das vorhandene Becken, Armatur und Anschlüsse fließen alle in die Planung ein. Sie sagen uns, was unterkommen soll, danach teilen wir Fächer, Auszüge und Beleuchtung ein. Bei Fronten und Oberflächen haben Sie freie Wahl: lackiertes MDF im RAL-Farbton, Dekor oder Massivholz.",
+    "Wir planen Ihr Bad um Sie herum: Raumhöhe, Nische, Dachschräge, Becken, Armatur und Anschlüsse fließen in die Planung ein. Danach teilen wir Fächer, Auszüge und Beleuchtung ein. Bei den Fronten haben Sie freie Wahl: lackiertes MDF im RAL-Farbton, Dekor oder Massivholz.",
   col1CtaLabel: "Jetzt Badmöbel anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Front, jeder Korpus, jeder Auszug entsteht in unserer eigenen Werkstatt in Espelkamp, dort, wo alle unsere [Möbel nach Maß](/moebel-nach-mass/) gebaut werden. Kein Zwischenhändler, kein festes Rastermaß. Die Schnittkanten verleimen wir mit PU-Technik, so bleiben sie fugenlos verschlossen und feuchtigkeitsbeständig. Im Bad zählt genau das, denn Spritzwasser und Wasserdampf arbeiten dort jeden Tag an den Möbeln.",
+    "Jede Front, jeder Korpus, jeder Auszug entsteht in unserer eigenen Werkstatt in Espelkamp, wo alle unsere [Möbel nach Maß](/moebel-nach-mass/) gebaut werden. Kein Zwischenhändler, kein festes Rastermaß. Die Schnittkanten verleimen wir mit PU-Technik, fugenlos und feuchtigkeitsbeständig. Im Bad zählt genau das: Spritzwasser und Wasserdampf arbeiten dort jeden Tag an den Möbeln.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
   col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Mehr als 72.000 gefertigte Einzelteile haben unsere Fertigung schon verlassen. Die Homag-Technik arbeitet jedes Bauteil millimetergenau aus, danach prüft die Hand des Tischlers, ob wirklich alles sitzt. Deshalb schließt Ihr Badmöbel am Ende sauber mit Wand und Becken ab.",
+    "Mehr als 72.000 gefertigte Einzelteile haben unsere Fertigung schon verlassen. Die Homag-Technik arbeitet jedes Bauteil millimetergenau aus, danach prüft die Hand des Tischlers, ob alles sitzt. Deshalb schließt Ihr Badmöbel sauber mit Wand und Becken ab.",
   col3CtaLabel: "Badmöbel online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -127,29 +127,29 @@ export const badTypische = {
     {
       title: "Waschtisch nach Maß",
       description:
-        "Die Waschtischplatte in genau Ihrer Breite, von Wand zu Wand oder als Doppelwaschtisch fürs Familienbad. Den Ausschnitt für Ihr Aufsatzbecken oder Einbaubecken arbeiten wir passgenau ein, die Platte richten wir an Armatur und Anschluss aus.",
+        "Die Waschtischplatte in genau Ihrer Breite, von Wand zu Wand oder als Doppelwaschtisch fürs Familienbad. Den Ausschnitt für Ihr Aufsatz- oder Einbaubecken arbeiten wir passgenau ein.",
     },
     {
       title: "Waschtischunterschrank nach Maß",
       description:
-        "Der Korpus unter dem Becken, hängend für mehr Bodenfreiheit oder stehend. Die Auszüge planen wir um den Siphon herum, mit Vollauszug und Soft-Close. So bleibt der Stauraum am Waschplatz voll nutzbar.",
+        "Der Korpus unter dem Becken, hängend oder stehend. Die Auszüge planen wir um den Siphon herum, mit Vollauszug und Soft-Close, der Stauraum bleibt voll nutzbar.",
     },
     {
       title: "Badschrank nach Maß",
       description:
-        "Stauraum abseits des Waschplatzes, als Hochschrank, Hängeschrank oder niedriges Sideboard. Für Handtücher, Vorräte und Pflegeprodukte, passgenau in die Nische oder an die Wand gebaut. Bei Bedarf raumhoch bis unter die Decke.",
+        "Stauraum abseits des Waschplatzes: Hochschrank, Hängeschrank oder Sideboard für Handtücher und Vorräte, passgenau in die Nische gebaut, bei Bedarf raumhoch bis unter die Decke.",
     },
   ],
   row2: [
     {
       title: "Spiegelschrank nach Maß",
       description:
-        "Spiegel, Stauraum und Licht in einem Möbel. Mit LED-Beleuchtung, Steckdose im Inneren und Türen, die bündig in Ihre Nische einbauen. Sie gewinnen Ablage, ohne dass der Schrank ins Bad ragt.",
+        "Spiegel, Stauraum und Licht in einem Möbel. Mit LED-Beleuchtung, Steckdose im Inneren und Türen, die bündig in Ihre Nische einbauen, ohne ins Bad zu ragen.",
     },
     {
       title: "Badmöbel aus Massivholz",
       description:
-        "Wer Holz im Bad möchte, bekommt bei uns Massivholz mit passender Oberfläche, geölt oder lackiert. Sauber verarbeitet hält es der Feuchtigkeit im Bad stand und bringt Wärme in den Raum.",
+        "Wer Holz im Bad möchte, bekommt Massivholz mit passender Oberfläche, geölt oder lackiert. Sauber verarbeitet hält es der Feuchtigkeit stand und bringt Wärme in den Raum.",
     },
     {
       title: "Badmöbel für kleine Bäder",
