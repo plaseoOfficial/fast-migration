@@ -78,13 +78,42 @@ export const badCtas = {
   },
 };
 
-export const badProcess = {
+/**
+ * Fünf Schritte als nummerierte Steps statt Fließtext (Sektions-Politik Ben
+ * 2026-07-24: Aufzählungen nie als Textwand in eine Sektion pressen).
+ */
+export const badProcessSteps = {
+  eyebrow: "So läuft es ab",
   heading: "Ihre Badmöbel, alles aus einer Hand",
-  paragraph:
-    "Der Weg zu Ihren Badmöbeln nach Maß hat fünf Schritte. Zuerst beraten wir Sie, bei Ihnen zu Hause oder in unserem Büro, und hören erst einmal zu: Was soll Ihr Bad leisten? Dann nehmen wir vor Ort kostenlos Maß und erfassen Nische, Schräge, Becken, Armatur und Anschlüsse millimetergenau. In der 3D-Planung sehen Sie anschließend Einteilung, Fronten und Oberfläche und können noch ändern, bevor das erste Bauteil entsteht. Nach Ihrer Freigabe fertigen wir jedes Teil selbst. Zum Schluss baut unser Montageteam die Möbel zum verbindlichen Termin ein und richtet sie sauber an Wand und Becken aus.",
-  paragraphStrong: "Made in Germany.",
   image: `${IMG}/einbauschrank-montage-espelkamp.jpg`,
   imageAlt: "Monteure von Fast Systemmöbel montieren Badmöbel nach Maß vor Ort",
+  steps: [
+    {
+      title: "Beratung",
+      description:
+        "Bei Ihnen zu Hause oder in unserem Büro. Wir hören erst einmal zu: Was soll Ihr Bad leisten?",
+    },
+    {
+      title: "Aufmaß vor Ort",
+      description:
+        "Kostenlos bei Ihnen. Nische, Schräge, Becken, Armatur und Anschlüsse erfassen wir millimetergenau.",
+    },
+    {
+      title: "3D-Planung",
+      description:
+        "Sie sehen Einteilung, Fronten und Oberfläche vorab und ändern, bevor das erste Bauteil entsteht.",
+    },
+    {
+      title: "Fertigung",
+      description:
+        "Nach Ihrer Freigabe fertigen wir jedes Teil selbst in unserer Werkstatt in Espelkamp. Made in Germany.",
+    },
+    {
+      title: "Montage",
+      description:
+        "Unser Montageteam baut zum verbindlichen Termin ein und richtet alles sauber an Wand und Becken aus.",
+    },
+  ],
 };
 
 /** Objekt-Taxonomie: drives the MnmTypische rows AND the JSON-LD OfferCatalog / ItemList. */
@@ -133,7 +162,7 @@ export const badTypische = {
 export const badWarum = {
   heading: "Warum Badmöbel vom Tischler mehr können",
   paragraph:
-    "Ein Bad verzeiht keine Näherungswerte. Deshalb kommen wir vor dem ersten Zuschnitt zu Ihnen und messen Nische, Schräge und Anschlüsse selbst, statt Sie Zahlen in eine Maske tippen zu lassen. Ihr vorhandenes Becken, Ihre Armatur, die Lage von Siphon und Wasseranschluss: darum herum bauen wir. Und weil Planung, Fertigung und Montage bei uns zusammenbleiben, geht an keiner Schnittstelle Verantwortung verloren. Sie haben einen persönlichen Ansprechpartner, und am Ende sitzen die Möbel ohne Blenden und Füllstücke in Wand und Nische. Wie das aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
+    "Ein Bad verzeiht keine Näherungswerte. Deshalb kommen wir vor dem ersten Zuschnitt zu Ihnen und messen Nische, Schräge und Anschlüsse selbst, statt Sie Zahlen in eine Maske tippen zu lassen. Ihr vorhandenes Becken, Ihre Armatur, die Lage von Siphon und Wasseranschluss: darum herum bauen wir. Am Ende sitzen die Möbel ohne Blenden und Füllstücke in Wand und Nische. Wie das aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
   images: [
     {
       src: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`,
@@ -221,22 +250,45 @@ export const badVergleich = {
   ],
 };
 
-export const badWarum2 = {
+/**
+ * "Aus einer Hand"-USP als eigener Proof-Block (aus dem Warum-Absatz gelöst,
+ * Sektions-Politik Ben 2026-07-24).
+ */
+export const badUsp = {
+  eyebrow: "Aus einer Hand",
+  heading: "Planung, Fertigung und Montage bleiben bei uns im Haus",
+  body:
+    "Weil Beratung, Aufmaß, 3D-Planung, Fertigung und Montage bei Fast Systemmöbel zusammenbleiben, geht an keiner Schnittstelle Verantwortung verloren. Vom ersten Gespräch bis zum eingebauten Möbel haben Sie einen persönlichen Ansprechpartner, der Ihr Bad und Ihre Planung kennt.",
+  stat: { value: "1", label: "Ansprechpartner für Ihr Projekt" },
+  image: `${IMG}/sonderanfertigung-nach-mass-weinwand.jpg`,
+  imageAlt: "Individuell geplantes Badmöbel nach Maß als Beispiel für Sonderlösungen aus einer Hand",
+};
+
+/**
+ * Vier Preisfaktoren als Karten statt Fließtext-Aufzählung (Sektions-Politik
+ * Ben 2026-07-24). Keine Preise, keine Pauschalen (FACTS.md).
+ */
+export const badKosten = {
+  eyebrow: "Kosten",
   heading: "Was Badmöbel nach Maß kosten",
-  paragraph:
-    "Ein Pauschalpreis? Den gibt es bei einer Maßanfertigung nicht, jedes Bad ist ein Unikat. Vier Faktoren bestimmen den Preis. Der Umfang, denn ein einzelner Waschtischunterschrank kostet weniger als ein komplettes Bad mit Waschtisch, Hochschrank und Spiegelschrank. Das Material, weil beschichtete Platten und lackiertes MDF unter Massivholz liegen, das im Einkauf und in der Verarbeitung aufwändiger ist. Die Ausstattung, also Vollauszüge, Soft-Close und LED-Beleuchtung, die im Alltag über den Komfort entscheiden. Und die Einbausituation, denn eine gerade Wand ist schneller gemacht als Nische, Dachschräge oder die Anpassung an vorhandene Anschlüsse. Nach dem Aufmaß wissen Sie, woran Sie sind: ein individuelles Angebot, klar aufgeschlüsselt, ohne versteckte Kosten.",
-  images: [
+  intro:
+    "Ein Pauschalpreis? Den gibt es bei einer Maßanfertigung nicht, jedes Bad ist ein Unikat. Vier Faktoren bestimmen den Preis. Nach dem Aufmaß wissen Sie, woran Sie sind: ein individuelles Angebot, klar aufgeschlüsselt, ohne versteckte Kosten.",
+  segments: [
     {
-      src: `${IMG}/sonderanfertigung-nach-mass-weinwand.jpg`,
-      alt: "Individuell geplantes Badmöbel nach Maß als Beispiel für Sonderlösungen",
-      width: 1280,
-      height: 715,
+      title: "Umfang",
+      body: "Ein einzelner Waschtischunterschrank kostet weniger als ein komplettes Bad mit Waschtisch, Hochschrank und Spiegelschrank.",
     },
     {
-      src: `${IMG}/einbauschrank-dachschraege-nach-mass.jpg`,
-      alt: "Badschrank nach Maß, passgenau an eine Dachschräge im Bad angepasst",
-      width: 1280,
-      height: 715,
+      title: "Material",
+      body: "Beschichtete Platten und lackiertes MDF liegen unter Massivholz, das im Einkauf und in der Verarbeitung aufwändiger ist.",
+    },
+    {
+      title: "Ausstattung",
+      body: "Vollauszüge, Soft-Close und LED-Beleuchtung entscheiden im Alltag über den Komfort und fließen in den Preis ein.",
+    },
+    {
+      title: "Einbausituation",
+      body: "Eine gerade Wand ist schneller gemacht als Nische, Dachschräge oder die Anpassung an vorhandene Anschlüsse.",
     },
   ],
 };

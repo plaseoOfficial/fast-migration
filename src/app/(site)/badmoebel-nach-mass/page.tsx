@@ -3,7 +3,9 @@ import type { ServiceCard } from "@/types/mnm";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { MnmProcess } from "@/components/sections/privat/MnmProcess";
+import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { SegmentCards } from "@/components/sections/shared/SegmentCards";
+import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
@@ -16,11 +18,12 @@ import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
   badHero,
   badIntroStats,
-  badProcess,
+  badProcessSteps,
   badTypische,
   badWarum,
+  badUsp,
   badVergleich,
-  badWarum2,
+  badKosten,
   badGeschichte,
   badMoebelplaner,
   badCtas,
@@ -119,12 +122,13 @@ export default function BadmoebelNachMassPage() {
         </div>
       </section>
 
-      <MnmProcess {...badProcess} />
+      <ProcessSteps {...badProcessSteps} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
       <MnmTypische {...badTypische} />
       <MnmWarum {...badWarum} imageColumns={2} />
+      <UspHighlight {...badUsp} />
       <SpecTable {...badVergleich} />
-      <MnmWarum {...badWarum2} reverse imageColumns={1} />
+      <SegmentCards {...badKosten} />
       <MnmGeschichte {...badGeschichte} />
       <MnmMoebelplaner {...badMoebelplaner} />
       <TestimonialsSection heading={badTestimonialsHeading} />
