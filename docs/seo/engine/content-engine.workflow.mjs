@@ -24,7 +24,7 @@ export const meta = {
   description: 'Ebene 1: SERP + Konkurrenz-Tiefe + WDF*IDF + Intent → dichtes, gecachtes Research-Kit (1× pro Keyword)',
   phases: [
     { title: 'Recherche', detail: 'SERP/Wortzahl/Konkurrenz + WDF/Intent/Gap (2 read-only Agents parallel)' },
-    { title: 'Synthese', detail: 'Dichtes Research-Kit inkl. Korridor, Pflicht-Module, FAQ, Do-NOT-claim, Discovery-Fragen' },
+    { title: 'Synthese', detail: 'Dichtes Research-Kit inkl. Korridor, Pflicht-Module, FAQ, Do-NOT-claim, offene Punkte' },
   ],
 }
 
@@ -129,7 +129,7 @@ const kit = await agent(
   `## 6 · Gaps & unser Winkel (wo Fast überholt) + Negativ-Abgrenzung lt. Playbook\n` +
   `## 7 · Interne Links (rein/raus, Anker) lt. internal-linking.md\n` +
   `## 8 · Do-NOT-claim-Liste (❌ aus FACTS.md, konkret für dieses Thema)\n` +
-  `## 9 · 🔴 Discovery-Fragen an den Kunden (PFLICHT vor dem Schreiben — nur was NUR der Kunde weiß; IMMER inkl. Geo-Reichweite „bundesweit oder montage-gebunden?")\n` +
+  `## 9 · Offene Punkte / Wissenslücken (was NUR der Kunde weiß; IMMER inkl. Geo-Reichweite „bundesweit oder montage-gebunden?"). Wird NICHT beim Kunden erfragt, sondern vor dem Schreiben gegen FACTS.md + den Antwort-Fundus des Mandanten aufgelöst; alles Unbelegte bleibt Leerstelle und wird nicht behauptet.\n` +
   `Nur das Kit-Markdown, dicht und konkret, keine Vorrede.`,
   { phase: 'Synthese', label: 'research-kit' })
 
