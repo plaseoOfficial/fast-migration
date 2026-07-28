@@ -11,15 +11,23 @@ Läuft **1× pro Keyword**, Ergebnis wird **gecacht** (`docs/seo/research/<slug>
 1. **SERP + Konkurrenz-Tiefe** — Top-8 fetchen, Wortzahl MESSEN → Median; Tiefe-Blaupause der Sieger; Formate; Snippet/PAA.
 2. **WDF\*IDF + Intent + Gap** — Pflicht-Terme (mit Gewicht), Entitäten, Intent/Job-to-be-done/Micro-Intents, intent-abgeleitete Pflicht-Module, Gaps, unser Winkel, FAQ-Kandidaten.
 → **Korridor** deterministisch in Code: `max(SERP-Median, Archetyp-Min) … Median×Bonus`
-3. **Synthese → Research-Kit** — dicht & entscheidungsfertig (Korridor · Pflicht-Module · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel) **inkl. §9 Discovery-Fragen**.
+3. **Synthese → Research-Kit** — dicht & entscheidungsfertig (Korridor · Pflicht-Module · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel) **inkl. §9 offene Punkte/Wissenslücken**.
 **Gate:** Kit liegt vor.
 
-## Phase 1.5 — 🔴 DISCOVERY (PFLICHT · Kunde-Regel · NACH der SERP-Suche, VOR dem Schreiben)
-Die im Kit (§9) erzeugten **seitenspezifischen Fragen an den Kunden** werden gestellt und **vom Menschen/Kunden beantwortet** → Antworten zurück ins Kit. **IMMER dabei:** Geo-Reichweite („bundesweit oder montage-gebunden?"). Nur was NUR der Kunde weiß. *(Das ist die ausdrückliche Regel: erst passende Fragen stellen, dann schreiben.)*
-**Hard-Stop:** Solange Discovery-Fragen offen sind → **kein Authoring.**
+## Phase 1.5 — WISSENSSTAND AUFLÖSEN (NACH der SERP-Suche, VOR dem Schreiben)
+> **Geändert am 2026-07-28 (Ben):** Es wird **nicht mehr beim Kunden nachgefragt** — die Fragen waren gut, aber praktisch nicht beantwortbar und banden Zeit, die es nicht gibt. Der frühere Hard-Stop »ohne beantwortete Discovery kein Authoring« ist **aufgehoben**; die Texte werden ohne Rückfrage geschrieben.
+
+Die im Kit (§9) erzeugten seitenspezifischen Fragen werden **selbst aufgelöst** — gegen den vorhandenen Wissensstand, in dieser Rangfolge:
+1. **`brand/FACTS.md`** — Single Source of Truth für Zahlen und Claims.
+2. **Antwort-Fundus des Mandanten** (`clients/<kunde>/kundenwissen.md` im Ops-Repo) — was der Kunde früher generell festgelegt hat (Geo, Preis-Politik, Referenzen, Materialien …).
+3. Bereits vorliegende Antworten zur Seite (Altbestand `inbox/discovery/<slug>.md`).
+
+**IMMER explizit auflösen:** Geo-Reichweite pro Seite (montage-gebunden vs. Lieferung).
+
+**Leerstellen-Regel (ersetzt den Hard-Stop):** Was in keiner dieser Quellen steht, ist unbekannt und wird **nicht behauptet** — Thema weglassen, machbar/allgemein formulieren oder auf Beratung + kostenloses Aufmaß verweisen. **Nie raten**, nie aus SERP-/Wettbewerber-Texten übernehmen: keine erfundenen Maße, Fristen, Preise, Hersteller, Serien, Holzarten, Zertifikate oder Referenzprojekte. Die Leerstellen werden im Kit §9 geführt und im Review-Paket unter »Offene Fakten (nicht behauptet)« ausgewiesen — Korrektur erfolgt im PR-Review, nicht vorab per Rückfrage.
 
 ## Phase 2 — AUTHORING (Ebene 2 · Engine: `authoring-engine.workflow.mjs`) — LEAN, **text-only**
-Eingabe: das **beantwortete** Kit. **4 Agents, alle TEXT-ONLY (editieren NIE Dateien, fahren KEIN Bash/Build):**
+Eingabe: das **aufgelöste** Kit (§9 gegen FACTS + Kundenwissen geklärt, Leerstellen markiert). **4 Agents, alle TEXT-ONLY (editieren NIE Dateien, fahren KEIN Bash/Build):**
 1. **Writer** — Kit → prop-gemappte Copy in einem Aufruf.
 2. **Humanizer** — KI-Muster brechen, O-Ton Fast (voice-only; ändert KEINE Fakten/Keywords/Links/Struktur).
 → **Code-Gates** (0 Token, deterministisch, 100 %): Wortzahl-Korridor · **Verbotene-Claims** (FACTS ❌) · FAQ-Zahl · Title/Description-Länge.
@@ -45,7 +53,7 @@ Eingabe: das **beantwortete** Kit. **4 Agents, alle TEXT-ONLY (editieren NIE Dat
 - **Conversion (Kontakt/Planer):** Formular zuerst · Minimal-Copy · LocalBusiness/ContactPoint · **kein** SEO-Fülltext.
 
 ## Hard Stops (Abbruch-Regeln)
-- **Discovery-Fragen (Phase 1.5) unbeantwortet** → kein Authoring (erst fragen, dann schreiben).
+- **Fakt nicht in FACTS.md / Kundenwissen belegt** → nicht behaupten (Leerstelle umschiffen, Phase 1.5). *(Der frühere Discovery-Hard-Stop ist seit 2026-07-28 aufgehoben — nicht mehr fragen, nicht mehr warten.)*
 - **Verbotene-Claims-Gate rot** (ein ❌-Claim aus FACTS.md, in Code erkannt) → **sofortiger Stopp, nie live.**
 - **Agents editieren Dateien / fahren Bash/Build** → Verstoß. Agents geben nur Text zurück; **der Mensch** setzt ein.
 - **`npm run check` rot** → **nicht mergen.**

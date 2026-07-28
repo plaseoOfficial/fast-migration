@@ -66,8 +66,8 @@ Jedes Playbook fixiert für seinen Archetyp: **Ziel · Such-Intent · Pflicht-Ba
 
 ## Der Lauf pro Seite (immer identisch)
 1. **(einmal je Cluster)** Differenzierungs-Map anlegen.
-2. **SERP-Intelligence-Engine** (Ebene 1, **1× pro Keyword, gecacht**) → `research/<slug>.kit.md`: Korridor · Pflicht-Module + Tiefe-Blaupause · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel · **§9 Discovery-Fragen**.
-3. **🔴 Discovery** — Kunden-Fragen aus dem Kit **stellen + beantworten lassen** (erst fragen, dann schreiben). Hard-Stop, solange offen.
+2. **SERP-Intelligence-Engine** (Ebene 1, **1× pro Keyword, gecacht**) → `research/<slug>.kit.md`: Korridor · Pflicht-Module + Tiefe-Blaupause · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel · **§9 offene Punkte/Wissenslücken**.
+3. **Wissensstand auflösen** — §9-Fragen des Kits gegen `brand/FACTS.md` + den Antwort-Fundus des Mandanten (`kundenwissen.md`) beantworten; Unbelegtes bleibt Leerstelle und wird **nicht behauptet**. *(Seit 2026-07-28 keine Rückfrage beim Kunden und kein Hard-Stop mehr — siehe AGENT-WORKFLOW.md Phase 1.5.)*
 4. **Authoring-Engine** (Ebene 2, **lean, text-only**) → Writer → Code-Gates → QC&Fix → Chefredakteur → Copy als **Text**.
 5. **Mensch** setzt Copy in `src/lib/content/<slug>.ts` ein → interne Links → **einmal** `npm run check` → Visual-Diff vs. `docs/design-references/`.
 6. **`STATUS.md`** aktualisieren.
