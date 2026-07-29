@@ -206,6 +206,13 @@ export const mnmWeitereCards: ServiceCard[] = [
     href: "/badmoebel-nach-mass/",
   },
   {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Wohnmöbel nach Maß",
+    description:
+      "Wohnwand, TV-Wand, Sideboard und Regal vom Meisterbetrieb. Wand zu Wand geplant, passgenau für Nische, Dachschräge und jeden Raumzuschnitt.",
+    href: "/wohnmoebel-nach-mass/",
+  },
+  {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Raumkonzepte",
     description:
