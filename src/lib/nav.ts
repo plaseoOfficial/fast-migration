@@ -36,6 +36,7 @@ export const NAV_ITEMS: NavItem[] = [
           { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
           { label: "Küchen nach Maß", href: "/kuechen-nach-mass/" },
           { label: "Badmöbel nach Maß", href: "/badmoebel-nach-mass/" },
+          { label: "Wohnmöbel nach Maß", href: "/wohnmoebel-nach-mass/" },
         ],
       },
       {
