@@ -213,6 +213,13 @@ export const mnmWeitereCards: ServiceCard[] = [
     href: "/wohnmoebel-nach-mass/",
   },
   {
+    icon: "/images/2024/03/interior-design-white-icons-15.svg",
+    title: "Hauswirtschaftsraum nach Maß",
+    description:
+      "Waschküche, Vorratskammer und Stauraum vom Meisterbetrieb. Waschmaschine verbaut, Vorrat und Reinigung geordnet, Wand zu Wand bis unter die Decke.",
+    href: "/hauswirtschaftsraum/",
+  },
+  {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Raumkonzepte",
     description:

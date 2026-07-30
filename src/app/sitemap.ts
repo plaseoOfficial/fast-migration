@@ -15,6 +15,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/einbauschraenke-nach-mass/schrank-unter-treppe/", priority: 0.7 },
   { path: "/badmoebel-nach-mass/", priority: 0.8 },
   { path: "/wohnmoebel-nach-mass/", priority: 0.8 },
+  { path: "/hauswirtschaftsraum/", priority: 0.8 },
   { path: "/gewerbe/", priority: 0.8 },
   { path: "/ladenbau/", priority: 0.8 },
   { path: "/bueroeinrichtung/", priority: 0.8 },

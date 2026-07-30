@@ -67,6 +67,7 @@ export const PAGES: PageNode[] = [
   { slug: "/einbauschraenke-nach-mass/schrank-unter-treppe/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "schrank-unter-treppe" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "wohnmoebel-nach-mass" },
+  { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
@@ -359,6 +360,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigte Wohnmöbel", "Wohnmöbel vom Tischler", "Wohnwand und Sideboard nach Maß"],
     brand: ["Fast Systemmöbel Wohnmöbel"],
     descriptive: ["alle Wohnmöbel nach Maß", "zum Wohnmöbel-Bereich"],
+  },
+  "/hauswirtschaftsraum/": {
+    exact: ["Hauswirtschaftsraum einrichten"],
+    partial: ["Hauswirtschaftsraum nach Maß", "HWR nach Maß", "Waschküche nach Maß"],
+    brand: ["Fast Systemmöbel Hauswirtschaftsraum"],
+    descriptive: ["Hauswirtschaftsraum planen und einrichten", "zum Hauswirtschaftsraum-Bereich"],
   },
   "/einbauschraenke-nach-mass/": {
     exact: ["Einbauschränke nach Maß"],
