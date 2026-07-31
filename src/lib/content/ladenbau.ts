@@ -91,7 +91,7 @@ export const ladenIntroStats = {
     "Ob Einzelhandel, Boutique, Gastronomie oder Praxis. Wir begleiten Ihr Projekt von der ersten",
   introBold: "Planung",
   introAfter:
-    " bis zur fertigen Montage. Maßgefertigte Ladenmöbel statt Systemregal, zugeschnitten auf Ihren Grundriss und Ihre Marke.",
+    " bis zur fertigen Montage. Ihre Geschäftseinrichtung nach Maß entsteht zugeschnitten auf Ihren Grundriss und Ihre Marke, statt aus dem Systemregal.",
   bandImage: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
   bandAlt: "Maßgefertigte Ladeneinrichtung im Einzelhandel",
   col1Title: "Shop planen",
@@ -498,4 +498,18 @@ export const ladenFaq = {
         "Ja. Im Möbelplaner können Sie Ihre Ideen für Theke, Regale und Anordnung selbst anlegen und uns als Grundlage fürs Gespräch schicken. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
     },
   ],
+};
+
+/**
+ * Anfrage-Block am Seitenende (LeistungAnfrage). Ergänzt die beiden
+ * ExpandingImageCtas um einen echten Kontaktweg auf der Seite selbst: im
+ * Ladenbau-Wettbewerbsfeld führt jede Top-10-Seite die Kontaktaufnahme direkt
+ * auf der Leistungsseite (Formular und/oder NAP-Block), gemessen 2026-07-31.
+ */
+export const ladenAnfrage = {
+  eyebrow: "ANFRAGE",
+  heading: "Sprechen wir über Ihren Laden",
+  intro:
+    "Schreiben Sie kurz, was Sie einrichten möchten, ob Theke, Regalsystem oder komplette Fläche. Wir melden uns mit einem Terminvorschlag für das kostenlose Aufmaß vor Ort.",
+  seite: "Ladenbau",
 };

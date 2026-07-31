@@ -12,6 +12,7 @@ import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { SITE_URL } from "@/lib/content";
@@ -32,11 +33,12 @@ import {
   ladenCtas,
   ladenTestimonialsHeading,
   ladenFaq,
+  ladenAnfrage,
 } from "@/lib/content/ladenbau";
 
 const PAGE_PATH = "/ladenbau";
 const DESCRIPTION =
-  "Ladenbau nach Maß vom Meisterbetrieb in Espelkamp: Verkaufstheken, Ladeneinrichtung und Shopkonzepte – geplant, gefertigt und im Umkreis von 200 km montiert.";
+  "Ladenbau und Geschäftseinrichtung nach Maß aus Espelkamp: Verkaufstheken, Ladeneinrichtung und Shopkonzepte, geplant, gefertigt und im Umkreis von 200 km montiert.";
 
 export const metadata: Metadata = {
   title: "Ladenbau nach Maß aus Espelkamp: Theke bis Shopkonzept",
@@ -109,6 +111,9 @@ export default function LadenbauPage() {
       </section>
 
       <FaqSection heading={ladenFaq.heading} items={ladenFaq.items} />
+
+      {/* Anfrage direkt auf der Seite statt nur CTA-Link auf /kontakt/ */}
+      <LeistungAnfrage {...ladenAnfrage} />
     </PrivatPageLayout>
   );
 }
