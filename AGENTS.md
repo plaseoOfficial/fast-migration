@@ -65,6 +65,14 @@ Core rules (full detail in `ARCHITECTURE.md`):
   (`built: true`, `parent`, `type`). Run **`npm run audit:links`** to check the real link graph
   (dead links, missing MUSS, cross-silo, budgets, anchor diversity), and use the **`intern-verlinkung`**
   agent (`.claude/agents/intern-verlinkung.md`) to insert links + find anchors.
+- **Bilder & Alt-Texte** → **[`docs/seo/bilder.md`](docs/seo/bilder.md)**. Kernregel: **Der
+  Alt-Text beschreibt das Bild, nicht die Seite.** Passt ein Motiv nicht zum Seitenthema,
+  ist das Bild falsch — nicht der Alt-Text. Ein Audit am 2026-07-31 fand denselben Pool
+  generischer Fotos über alle Seiten verteilt, mit widersprüchlichen Alt-Texten (eine private
+  Wohnküche hieß auf der Gastro-Seite „Restauranttheke", auf der Büro-Seite „Büroeinrichtung
+  mit Arbeitsplätzen"). Dort stehen auch die technischen Vorgaben: sprechende Dateinamen ohne
+  Umlaute, 1600 px / q82–84, ein Bild pro Seite — und der Fallstrick, dass `MnmWarum` mit
+  `object-fit: fill` rendert (falsches Seitenverhältnis verzerrt dort sichtbar).
 - **SEO data is validated against reality.** Search-volume/SERP assumptions
   (`docs/seo/keyword-map.md`, research kits) are checked against live DataForSEO data via
   **`node scripts/dataforseo.mjs`** (`balance` · `volume` · `serp` · `validate-map` →
