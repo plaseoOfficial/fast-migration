@@ -6,19 +6,20 @@
  * voice (Sie-Anrede, handwerklich, konkret, belegt, keine em-dashes). See
  * docs/seo/brand/BRAND_VOICE.md and docs/seo/brand/FACTS.md.
  *
- * Bilder: vorerst Platzhalter aus /images/einbauschraenke/ (Vorlage-Assets);
- * Alt-Texte beschreiben bereits die gewünschten Bad-Motive. Vor Launch gegen
- * echte Badmöbel-Fotos tauschen (siehe REVIEW.md Bild-Vorschläge).
+ * Bilder: echte Badmöbel-Projektfotos unter /images/badmoebel/ (2026-07-31 vom
+ * Kunden geliefert, ersetzen die Platzhalter aus /images/einbauschraenke/).
+ * Ausnahme: das Montagefoto bleibt im Einbauschrank-Ordner, es zeigt echte
+ * Montagearbeit. Alt-Texte beschreiben das jeweilige Motiv, siehe docs/seo/bilder.md.
  */
 
 const SITE = "https://www.fast-systemmoebel.de";
 const PATH = "/badmoebel-nach-mass/";
-const IMG = "/images/einbauschraenke";
+const IMG = "/images/badmoebel";
 
 export const badHero = {
-  bgImage: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
+  bgImage: `${IMG}/waschtisch-nach-mass-eiche-aufsatzbecken.jpg`,
   imageAlt:
-    "Badmöbel nach Maß in einem hellen Bad: Waschtisch mit Unterschrank und passendem Spiegelschrank, feuchtigkeitsbeständig verarbeitet von Fast Systemmöbel",
+    "Waschtisch nach Maß mit Front in Eiche, weißem Aufsatzbecken und Wandarmatur in einem hellen Bad",
   title: "Badmöbel nach Maß aus Espelkamp",
   intro:
     "Wir planen und fertigen Ihre Badmöbel nach Maß, auf den Millimeter genau für Ihr Bad. Beratung, 3D-Planung, Fertigung und Montage aus unserem Meisterbetrieb in Espelkamp, das Aufmaß vor Ort kostet nichts. Die Kanten? Mit PU-Technik verschlossen, fugenlos und feuchtigkeitsbeständig.",
@@ -38,8 +39,8 @@ export const badIntroStats = {
   introBold: "Zentimeter",
   introAfter:
     ". Waschtisch, Unterschrank und Schränke schließen exakt an Wand, Nische und Anschlüsse an. Keine Passleisten, kein verschenkter Stauraum, auch bei schmalen Bädern und Dachschrägen.",
-  bandImage: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
-  bandAlt: "Waschtischunterschrank nach Maß mit geöffneten Auszügen und passgenauer Einteilung",
+  bandImage: `${IMG}/waschtisch-nach-mass-anthrazit-auszug.jpg`,
+  bandAlt: "Waschtisch nach Maß in Anthrazit mit geöffnetem Auszug, um den Siphon herum gebaut",
   col1Title: "Badmöbel planen",
   col1Body:
     "Wir planen Ihr Bad um Sie herum: Raumhöhe, Nische, Dachschräge, Becken, Armatur und Anschlüsse fließen in die Planung ein. Danach teilen wir Fächer, Auszüge und Beleuchtung ein. Bei den Fronten haben Sie freie Wahl: lackiertes MDF im RAL-Farbton, Dekor oder Massivholz.",
@@ -59,13 +60,13 @@ export const badIntroStats = {
 
 export const badCtas = {
   intro: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-weiss.jpg`,
+    image: `${IMG}/badmoebel-spiegelschrank-doppelwaschtisch.jpg`,
     heading: "Ihre Badmöbel nach Maß beginnen mit einem Gespräch",
     linkText: "Sprechen Sie mit uns über Ihr Bad",
     href: "/kontakt/",
   },
   final: {
-    image: `${IMG}/einbauschrank-dachschraege-nach-mass.jpg`,
+    image: `${IMG}/badezimmer-nach-mass-freistehende-badewanne.jpg`,
     heading: "Ihr Bad verdient Möbel, die genau passen.",
     linkText: "Jetzt kostenloses Aufmaß anfragen",
     href: "/kontakt/",
@@ -85,8 +86,8 @@ export const badCtas = {
 export const badProcessSteps = {
   eyebrow: "So läuft es ab",
   heading: "Ihre Badmöbel, alles aus einer Hand",
-  image: `${IMG}/einbauschrank-montage-espelkamp.jpg`,
-  imageAlt: "Monteure von Fast Systemmöbel montieren Badmöbel nach Maß vor Ort",
+  image: "/images/einbauschraenke/einbauschrank-montage-espelkamp.jpg",
+  imageAlt: "Monteure von Fast Systemmöbel bei der Montage eines Einbaumöbels vor Ort",
   steps: [
     {
       title: "Beratung",
@@ -119,10 +120,10 @@ export const badProcessSteps = {
 /** Objekt-Taxonomie: drives the MnmTypische rows AND the JSON-LD OfferCatalog / ItemList. */
 export const badTypische = {
   heading: "Badmöbel nach Maß für jeden Grundriss im Bad",
-  image1: `${IMG}/begehbare-ankleide-nach-mass-eck.jpg`,
-  image1Alt: "Badschrank nach Maß als raumhoher Hochschrank mit offenen und geschlossenen Fächern",
-  image2: `${IMG}/einbauschrank-nach-mass-anthrazit-regalnische.jpg`,
-  image2Alt: "Spiegelschrank nach Maß mit LED-Beleuchtung, bündig in eine Nische eingebaut",
+  image1: `${IMG}/badschrank-nach-mass-hochschrank-grau.jpg`,
+  image1Alt: "Badschrank nach Maß in Grau als raumhoher Hochschrank neben der Badewanne",
+  image2: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,
+  image2Alt: "Waschtisch nach Maß mit beleuchtetem Spiegel und angrenzender bodengleicher Dusche",
   row1: [
     {
       title: "Waschtisch nach Maß",
@@ -165,26 +166,26 @@ export const badWarum = {
     "Ein Bad verzeiht keine Näherungswerte. Deshalb kommen wir vor dem ersten Zuschnitt zu Ihnen und messen Nische, Schräge und Anschlüsse selbst, statt Sie Zahlen in eine Maske tippen zu lassen. Ihr vorhandenes Becken, Ihre Armatur, die Lage von Siphon und Wasseranschluss: darum herum bauen wir. Am Ende sitzen die Möbel ohne Blenden und Füllstücke in Wand und Nische. Wie das aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
   images: [
     {
-      src: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`,
-      alt: "Waschtisch nach Maß mit Unterschrank in Anthrazit, an Fensterwand und Armatur angepasst",
+      src: `${IMG}/doppelwaschtisch-nach-mass-anthrazit.jpg`,
+      alt: "Doppelwaschtisch nach Maß in Anthrazit mit zwei Becken, an die Fensterwand angepasst",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`,
-      alt: "Waschtischunterschrank nach Maß mit ausgezogenen Schubladen um den Siphon herum",
+      src: `${IMG}/waschtisch-nach-mass-weiss-holzplatte.jpg`,
+      alt: "Waschtisch nach Maß in Weiß mit massiver Holzplatte, am Fenster eingebaut",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/garderobe-flur-nach-mass-anthrazit.jpg`,
-      alt: "Badschrank nach Maß in Anthrazit mit offenen und geschlossenen Fächern für Handtücher",
+      src: `${IMG}/doppelwaschtisch-nach-mass-weiss-schwebend.jpg`,
+      alt: "Schwebender Doppelwaschtisch nach Maß in Weiß mit zwei Aufsatzbecken und Rundspiegel",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/raumteiler-eichenlamellen-nach-mass.jpg`,
-      alt: "Badmöbel aus Massivholz nach Maß mit warmer Maserung und indirekter Beleuchtung",
+      src: `${IMG}/waschtisch-nach-mass-holz-led-spiegel.jpg`,
+      alt: "Waschtisch nach Maß mit Holzplatte, Aufsatzbecken und beleuchtetem Spiegel",
       width: 1280,
       height: 715,
     },
@@ -260,8 +261,8 @@ export const badUsp = {
   body:
     "Weil Beratung, Aufmaß, 3D-Planung, Fertigung und Montage bei Fast Systemmöbel zusammenbleiben, geht an keiner Schnittstelle Verantwortung verloren. Vom ersten Gespräch bis zum eingebauten Möbel haben Sie einen persönlichen Ansprechpartner, der Ihr Bad und Ihre Planung kennt.",
   stat: { value: "1", label: "Ansprechpartner für Ihr Projekt" },
-  image: `${IMG}/sonderanfertigung-nach-mass-weinwand.jpg`,
-  imageAlt: "Individuell geplantes Badmöbel nach Maß als Beispiel für Sonderlösungen aus einer Hand",
+  image: `${IMG}/badmoebel-nach-mass-beleuchtete-nische.jpg`,
+  imageAlt: "Waschtisch nach Maß mit beleuchteter Wandnische und bodengleicher Dusche",
 };
 
 /**
@@ -296,9 +297,9 @@ export const badKosten = {
 export const badGeschichte = {
   heading: "Möbelhandwerk aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
-  anchorImage: `${IMG}/einbauschrank-nach-mass-anthrazit-regalnische.jpg`,
+  anchorImage: `${IMG}/waschtisch-nach-mass-holzbank-spiegelwand.jpg`,
   anchorImageAlt:
-    "Badmöbel nach Maß in Anthrazit mit offener Regalnische, gefertigt von Fast Systemmöbel in Espelkamp",
+    "Waschtisch nach Maß mit Holzbank und raumhoher Spiegelwand, gefertigt in Espelkamp",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
@@ -318,8 +319,8 @@ export const badMoebelplaner = {
     "Mit unserem Möbelplaner stellen Sie Ihre Badmöbel online zusammen. Maße, Fronten, Einteilung, Auszüge: alles sehen Sie direkt im 3D-Konfigurator und spielen Varianten durch, bevor Sie sich festlegen. Den Rest übernehmen wir, vom Aufmaß bei Ihnen bis zur Montage. So wird aus Ihrer Online-Planung ein fertig montiertes Badmöbel.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
-  image: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
-  imageAlt: "Badmöbel nach Maß, grifflos und Wand zu Wand in ein Bad eingebaut",
+  image: `${IMG}/badmoebel-nach-mass-sitzbank-holzplatte.jpg`,
+  imageAlt: "Badmöbel nach Maß mit durchgehender Holzplatte, Sitzbank und indirekter Beleuchtung",
 };
 
 export const badTestimonialsHeading = "Was unsere Kunden über ihre Möbel sagen";

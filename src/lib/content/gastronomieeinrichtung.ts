@@ -16,7 +16,7 @@
  */
 
 export const gastroHero = {
-  bgImage: "/images/2025/11/DSC_9938.jpg",
+  bgImage: "/images/gastronomie/gastronomieeinrichtung-gastraum-massivholztische.jpg",
   imageAlt:
     "Gastronomieeinrichtung nach Maß: massive Holztheke für ein Restaurant von Fast Systemmöbel",
   title: "Gastronomieeinrichtung nach Maß aus Espelkamp",
@@ -38,7 +38,7 @@ export const gastroIntroStats = {
   introBold: "Planung",
   introAfter:
     " bis zur fertigen Montage – alles aus einer Hand.",
-  bandImage: "/images/2025/11/IMG_2673-scaled.jpg",
+  bandImage: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
   bandAlt: "Maßgefertigte Theke und Service-Station in einem Gastronomiebetrieb",
   col1Title: "Gastraum planen",
   col1Body:
@@ -60,7 +60,7 @@ export const gastroIntroStats = {
 export const gastroProcess = {
   eyebrow: "In fünf Schritten",
   heading: "Vom Aufmaß bis zur Montage",
-  image: "/images/2025/11/IMG_2772-scaled.jpg",
+  image: "/images/gastronomie/gastronomieeinrichtung-tische-stuehle-gastraum.jpg",
   imageAlt:
     "Maßgefertigte Bar mit Rückbuffet und vorbereiteten Technik-Aussparungen",
   steps: [
@@ -128,16 +128,16 @@ export const gastroUsp = {
   heading: "Fugenlose Kanten, die der täglichen Reinigung standhalten",
   body:
     "Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Verschüttete Getränke, tägliche Reinigung und Spritzwasser am Rückbuffet hinterlassen so keine aufgequollenen Ränder.",
-  image: "/images/2025/11/DSC_9843.jpg",
-  imageAlt: "Massivholz-Oberfläche eines maßgefertigten Thekenmöbels mit dichter PU-Kante",
+  image: "/images/gastronomie/gastronomieeinrichtung-gastraum-massivholztische.jpg",
+  imageAlt: "Massivholztische im Gastraum, Oberflächen und Kanten für den täglichen Betrieb gebaut",
 };
 
 export const gastroTypische = {
   heading: "Was wir für die Gastronomie fertigen",
-  image1: "/images/2025/11/IMG_2673-scaled.jpg",
-  image1Alt: "Maßgefertigte Theke in einem Restaurant",
-  image2: "/images/2025/11/DSC_9938.jpg",
-  image2Alt: "Bar mit Rückbuffet nach Maß",
+  image1: "/images/gastronomie/gastronomieeinrichtung-gastraum-uebersicht.jpg",
+  image1Alt: "Gastraum mit Tischreihen, Bestuhlung und Wandbank nach Maß",
+  image2: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
+  image2Alt: "Wandbank mit Tischen und Leuchten in einem Gastraum",
   row1: [
     {
       title: "Theke, Bartresen und Empfang",
@@ -179,21 +179,19 @@ export const gastroWarum = {
   paragraph:
     "Im Gastro-Online-Shop und im Möbelhaus kaufen Sie Serienmöbel aus dem Katalog: feste Maße, begrenzte Materialien, Beratung und Aufbau meist getrennt. Wo Ihre Wand 4,12 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir bauen stattdessen jede Theke, jedes Rückbuffet und jede Sitzbank selbst in Espelkamp, passgenau von Wand zu Wand. Planung, Fertigung, Lieferung und Montage liegen bei einem Ansprechpartner, mit eigenem Montageteam und ohne Subunternehmer.",
   images: [
-    { src: "/images/2025/11/DSC_9938.jpg", alt: "Bar mit Rückbuffet nach Maß", width: 600, height: 450 },
-    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Maßgefertigter Bartresen mit vorbereiteten Technik-Aussparungen", width: 600, height: 800 },
-    { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Restauranttheke aus Massivholz nach Maß", width: 600, height: 400 },
-    { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Wandbank und feste Bestuhlung im Gastraum", width: 600, height: 800 },
-    { src: "/images/2025/11/DSC_9843.jpg", alt: "Massivholz-Oberfläche eines maßgefertigten Thekenmöbels", width: 600, height: 380 },
-    { src: "/images/2025/11/IMG_6123-scaled.jpg", alt: "Hotellobby mit Empfangstresen nach Maß", width: 600, height: 450 },
+    { src: "/images/gastronomie/gastro-galerie-gastraum-tische.jpg", alt: "Gastraum mit Massivholztischen nach Maß und Bilderwand", width: 600, height: 450 },
+    { src: "/images/gastronomie/gastro-galerie-gastraum-hoch.jpg", alt: "Blick über die Tischreihen im Gastraum, Tische und Stühle nach Maß", width: 600, height: 800 },
+    { src: "/images/gastronomie/gastro-galerie-wandbank.jpg", alt: "Gepolsterte Wandbank mit Tischen und Hängeleuchten im Gastraum", width: 600, height: 400 },
+    { src: "/images/gastronomie/gastro-galerie-bestuhlung.jpg", alt: "Bestuhlung und Massivholztische entlang der Fensterseite des Gastraums", width: 600, height: 450 },
   ],
 };
 
 export const gastroGeschichte = {
   heading: "Ein Meisterbetrieb für den Gastraum",
   subheading: "Vom Garagenbetrieb zum Partner für Gastronomie",
-  anchorImage: "/images/2025/11/IMG_6123-scaled.jpg",
+  anchorImage: "/images/gastronomie/gastronomieeinrichtung-tische-stuehle-gastraum.jpg",
   anchorImageAlt:
-    "Hotellobby mit Empfangstresen nach Maß, gefertigt von Fast Systemmöbel in Espelkamp",
+    "Eingerichteter Gastraum mit Tischen und Stühlen, gefertigt von Fast Systemmöbel in Espelkamp",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
@@ -212,20 +210,20 @@ export const gastroMoebelplaner = {
     "Mit unserem Möbelplaner stellen Sie einzelne Elemente online zusammen und sehen Maße, Oberflächen und Fronten direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? Stellen Sie [jetzt Ihre Anfrage](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
   ctaLabel: "Möbelplaner ausprobieren",
   ctaHref: "/moebelplaner/",
-  image: "/images/2025/11/IMG_2772-scaled.jpg",
+  image: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
   imageAlt:
-    "Maßgefertigter Bartresen mit vorbereiteten Technik-Aussparungen",
+    "Sitzgruppe mit Wandbank und Tischen nach Maß im Gastraum",
 };
 
 export const gastroCtas = {
   intro: {
-    image: "/images/2025/11/IMG_2673-scaled.jpg",
+    image: "/images/gastronomie/gastronomieeinrichtung-gastraum-uebersicht.jpg",
     heading: "Ihr Gastraum verdient mehr als Massenware.",
     linkText: "Sprechen Sie mit uns über Ihr Gastro-Projekt",
     href: "/kontakt/",
   },
   final: {
-    image: "/images/2025/11/DSC_9938.jpg",
+    image: "/images/gastronomie/gastronomieeinrichtung-tische-stuehle-gastraum.jpg",
     heading: "Von der Theke bis zur Lobby: nach Maß gebaut.",
     linkText: "Gastronomie-Projekt jetzt unverbindlich anfragen",
     href: "/kontakt/",

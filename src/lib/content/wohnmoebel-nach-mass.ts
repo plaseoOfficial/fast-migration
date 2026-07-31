@@ -14,12 +14,12 @@
 
 const SITE = "https://www.fast-systemmoebel.de";
 const PATH = "/wohnmoebel-nach-mass/";
-const IMG = "/images/einbauschraenke";
+const IMG = "/images/wohnmoebel";
 
 export const wohnHero = {
-  bgImage: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
+  bgImage: `${IMG}/wohnmoebel-nach-mass-tv-wand-kamin.jpg`,
   imageAlt:
-    "Wohnmöbel nach Maß in einem hellen Wohnzimmer: raumhohe Wohnwand mit integriertem TV-Element und passendem Sideboard, gefertigt von Fast Systemmöbel",
+    "Wohnzimmer mit TV-Wand nach Maß, integriertem Kamin und offenem Übergang zur Küche",
   title: "Wohnmöbel nach Maß aus dem Meisterbetrieb in Espelkamp",
   intro:
     "Sie wollen Wohnmöbel, die in Ihr Wohnzimmer passen, statt ein Standardregal, um das herum Lücken bleiben. Als Tischler-Meisterbetrieb in Espelkamp planen, fertigen und montieren wir Wohnmöbel nach Maß selbst: von der TV-Wand über die Wohnwand bis zum Sideboard. Alles aus einer Hand.",
@@ -39,8 +39,8 @@ export const wohnIntroStats = {
   introBold: "Zentimeter",
   introAfter:
     ", Wand zu Wand, in der Nische und unter der Schräge. So entsteht ein Möbel, das aussieht, als wäre der Raum darum herum gebaut worden.",
-  bandImage: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
-  bandAlt: "Wohnwand nach Maß mit offenen und geschlossenen Fächern und passgenauer Einteilung",
+  bandImage: `${IMG}/sideboard-nach-mass-weiss-metallgestell.jpg`,
+  bandAlt: "Sideboard nach Maß in Weiß auf schlankem Metallgestell mit offenem Mittelfach",
   col1Title: "Wohnraum planen",
   col1Body:
     "Wir planen Ihre Wohnmöbel um Sie und Ihren Alltag herum, nicht um ein fertiges Raster. Fronten und Materialien wählen Sie frei, von lackiertem MDF über Dekor bis Massivholz.",
@@ -60,13 +60,13 @@ export const wohnIntroStats = {
 
 export const wohnCtas = {
   intro: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-weiss.jpg`,
+    image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
     heading: "Ihre Wohnmöbel nach Maß beginnen mit einem Gespräch",
     linkText: "Sprechen Sie mit uns über Ihren Wohnraum",
     href: "/kontakt/",
   },
   final: {
-    image: `${IMG}/einbauschrank-dachschraege-nach-mass.jpg`,
+    image: `${IMG}/tv-wand-nach-mass-wandpolsterung.jpg`,
     heading: "Ihr Wohnraum verdient Möbel, die genau passen.",
     linkText: "Jetzt kostenloses Aufmaß anfragen",
     href: "/kontakt/",
@@ -86,8 +86,8 @@ export const wohnCtas = {
 export const wohnProcessSteps = {
   eyebrow: "So läuft es ab",
   heading: "Ihre Wohnmöbel, alles aus einer Hand",
-  image: `${IMG}/einbauschrank-montage-espelkamp.jpg`,
-  imageAlt: "Monteure von Fast Systemmöbel bauen eine Wohnwand nach Maß vor Ort im Wohnzimmer ein",
+  image: "/images/einbauschraenke/einbauschrank-montage-espelkamp.jpg",
+  imageAlt: "Monteure von Fast Systemmöbel bei der Montage eines Einbaumöbels vor Ort",
   steps: [
     {
       title: "Beratung",
@@ -120,9 +120,9 @@ export const wohnProcessSteps = {
 /** Objekt-Taxonomie: drives the MnmTypische rows AND the JSON-LD OfferCatalog / ItemList. */
 export const wohnTypische = {
   heading: "Wohnmöbel nach Maß für jeden Raumzuschnitt",
-  image1: `${IMG}/begehbare-ankleide-nach-mass-eck.jpg`,
-  image1Alt: "Wohnwand nach Maß als raumhohe Einheit mit offenen und geschlossenen Fächern",
-  image2: `${IMG}/einbauschrank-nach-mass-anthrazit-regalnische.jpg`,
+  image1: `${IMG}/garderobe-nach-mass-flur-schrank-kommode.jpg`,
+  image1Alt: "Garderobe nach Maß im Flur mit Hochschrank und zwei passenden Kommoden",
+  image2: "/images/einbauschraenke/einbauschrank-nach-mass-anthrazit-regalnische.jpg",
   image2Alt: "Regal nach Maß, bündig in eine Nische im Wohnzimmer eingebaut",
   row1: [
     {
@@ -171,25 +171,25 @@ export const wohnWarum = {
     "Der Unterschied entsteht, bevor gesägt wird. Wir kommen zu Ihnen und messen Nische, Eckwand, Schräge und Fensterlaibung selbst auf, statt uns auf Rastermaße zu verlassen. Eine Dachschräge bauen wir bis zum letzten nutzbaren Zentimeter aus. Ein raumhoher Schrank schließt Wand zu Wand ab, ohne Passleisten und Lücken. Das kann ein Serienmöbel nicht. Wie unsere Wohnmöbel nach Maß aussehen, zeigen unsere [Referenzprojekte](/referenzen/), und wer dahintersteht, lesen Sie [über uns](/ueber-uns/).",
   images: [
     {
-      src: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`,
+      src: "/images/einbauschraenke/einbauschrank-nach-mass-anthrazit-fenster.jpg",
       alt: "Wohnwand nach Maß in Anthrazit, an eine Fensterwand angepasst",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`,
-      alt: "Sideboard nach Maß mit ausgezogenen Schubladen und passgenauer Einteilung",
+      src: `${IMG}/garderobe-nach-mass-sitzbank-eiche.jpg`,
+      alt: "Garderobenbank nach Maß in Weiß mit Eiche-Sitzfläche und zwei Schubladen",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/garderobe-flur-nach-mass-anthrazit.jpg`,
-      alt: "Regal nach Maß in Anthrazit mit offenen und geschlossenen Fächern",
+      src: `${IMG}/garderobe-nach-mass-nische-spiegel.jpg`,
+      alt: "Garderobennische nach Maß mit Kleiderstange, Schubladen und Standspiegel",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/raumteiler-eichenlamellen-nach-mass.jpg`,
+      src: "/images/einbauschraenke/raumteiler-eichenlamellen-nach-mass.jpg",
       alt: "Raumteiler nach Maß aus Holz mit warmer Maserung und indirekter Beleuchtung",
       width: 1280,
       height: 715,
@@ -265,7 +265,7 @@ export const wohnUsp = {
   body:
     "Weil bei Fast Systemmöbel alles zusammenbleibt, geht an keiner Schnittstelle Verantwortung verloren. Wer Sie berät, plant Ihre Wohnmöbel, kennt das Aufmaß und weiß, wie das Möbel gefertigt und montiert wird. Ihre Wohnzimmermöbel nach Maß entstehen so durch eine Hand, mit einem festen Ansprechpartner statt Schuldzuweisungen zwischen Händler, Werk und Monteur.",
   stat: { value: "1", label: "Ansprechpartner für Ihr Projekt" },
-  image: `${IMG}/sonderanfertigung-nach-mass-weinwand.jpg`,
+  image: "/images/einbauschraenke/sonderanfertigung-nach-mass-weinwand.jpg",
   imageAlt: "Individuell geplantes Wohnmöbel nach Maß als Beispiel für Sonderlösungen aus einer Hand",
 };
 
@@ -301,9 +301,9 @@ export const wohnKosten = {
 export const wohnGeschichte = {
   heading: "Möbelhandwerk aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
-  anchorImage: `${IMG}/einbauschrank-nach-mass-anthrazit-regalnische.jpg`,
+  anchorImage: `${IMG}/garderobe-nach-mass-flur-anthrazit.jpg`,
   anchorImageAlt:
-    "Wohnmöbel nach Maß in Anthrazit mit offener Regalnische, gefertigt von Fast Systemmöbel in Espelkamp",
+    "Garderobe nach Maß in Anthrazit mit Kommode, Ablagen und Spiegel im Flur",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
@@ -323,8 +323,8 @@ export const wohnMoebelplaner = {
     "Sie wollen sich erst einmal selbst ein Gefühl verschaffen? Mit unserem Möbelplaner stellen Sie Ihre Wohnmöbel online zusammen und sehen Maße, Fronten und Einteilung direkt im 3D-Konfigurator. Ihre Vorplanung schicken Sie uns, den Rest, vom Aufmaß bis zur Montage, übernehmen wir persönlich.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
-  image: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
-  imageAlt: "Wohnmöbel nach Maß, grifflos und Wand zu Wand in ein Wohnzimmer eingebaut",
+  image: `${IMG}/arbeitszimmer-nach-mass-schreibtisch-sideboard.jpg`,
+  imageAlt: "Arbeitszimmer nach Maß mit Schreibtisch, Besprechungstisch und Sideboard",
 };
 
 export const wohnTestimonialsHeading = "Was unsere Kunden über ihre Möbel sagen";
