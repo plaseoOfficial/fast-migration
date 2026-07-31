@@ -35,9 +35,9 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Schrank für Dachschräge nach Maß aus Espelkamp: Planung & Montage",
+  title: "Schrank für Dachschräge & Drempelschrank nach Maß, Espelkamp",
   description:
-    "Schrank für Dachschräge nach Maß vom Meisterbetrieb in Espelkamp: Drempel- und Kniestockschränke, passgenau an die Schräge geplant, gefertigt und vom eigenen Team montiert. Kostenloses Aufmaß.",
+    "Drempelschrank und Schrank für Dachschräge nach Maß vom Meisterbetrieb in Espelkamp: passgenau an den Kniestock gebaut und montiert. Kostenloses Aufmaß.",
   alternates: { canonical: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
   openGraph: {
     images: [
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Schrank für Dachschräge nach Maß aus Espelkamp: Planung & Montage",
+    title: "Schrank für Dachschräge & Drempelschrank nach Maß, Espelkamp",
     description:
-      "Dachschrägenschränke nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an die Schräge geplant, gebaut und montiert.",
+      "Drempelschrank und Dachschrägenschrank nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an Kniestock und Schräge geplant, gebaut und montiert.",
     url: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
     locale: "de_DE",
     type: "website",
