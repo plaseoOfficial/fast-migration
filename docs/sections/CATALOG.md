@@ -3,11 +3,11 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**47 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**48 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
-- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight), [Shared — Spec / Comparison Table](#shared-spec-table), [Shared — Contrast Cols](#shared-contrast-cols)
+- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Leistung Anfrage (Formular + Kontakt)](#shared-leistung-anfrage), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight), [Shared — Spec / Comparison Table](#shared-spec-table), [Shared — Contrast Cols](#shared-contrast-cols)
 - **Home** — [Home — Hero](#home-hero), [Home — Discover](#home-discover), [Home — Bereiche (Zwei Welten)](#home-bereiche), [Home — Quality](#home-quality), [Home — Parallax Quote](#home-parallax), [Home — Handwerk Tabs](#home-handwerk), [Home — Planner Embed](#home-planner), [Home — Räume Showcase](#home-raeume), [Home — Testimonials + Logos](#home-testimonials), [Home — FAQ](#home-faq)
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
@@ -129,6 +129,23 @@ _Prop-less (page-specific content)._
 | `className` | `string` | no |
 
 ![Shared — Expanding Image CTA](../design-references/moebel-nach-mass/02b-massmoebel.jpg)
+
+#### Shared — Leistung Anfrage (Formular + Kontakt)
+
+`#shared-leistung-anfrage` — Anfrage-Block für Leistungsseiten: Kontaktdaten (Telefon, Zeiten, Adresse) links, echtes Kontaktformular rechts. Nutzt dieselbe Server-Action wie die Kontaktseite (inkl. Honeypot) und kennzeichnet die Herkunftsseite in der Mail. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln, das nichts versendet.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `contact-form` | `shared` | no | `/ladenbau` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `eyebrow` | `string` | no |
+| `heading` | `string` | yes |
+| `intro` | `string` | yes |
+| `seite` | `string` | yes |
+
+![Shared — Leistung Anfrage (Formular + Kontakt)](../design-references/kontakt/band-0.jpg)
 
 #### Shared — Referenzen Hero (Collage)
 
@@ -804,11 +821,3 @@ When a page is marked **Privat**, build it from this canonical section order (de
 | 10 | TestimonialsSection (shared) | `#shared-testimonials` |
 | 11 | ExpandingImageCta inside <section beige className="pb-14 lg:pb-[64px]"> | `#shared-image-cta` |
 | 12 | FaqSection (shared) | `#shared-faq` |
-
-**Inline-Content-Links.** New pages ship their contextual in-body links as
-`[Anker](/ziel/)` markers directly in the content module's copy props (rendered
-via `renderInlineLinks()`), not bolted on afterwards — see
-[`docs/seo/internal-linking.md`](../seo/internal-linking.md) for the marker
-syntax, the `ANCHORS` rotation, and the per-type `minInlineLinks` minimum.
-Run `npm run audit:links` before considering the page done; it fails the
-build if the minimum isn't met.
