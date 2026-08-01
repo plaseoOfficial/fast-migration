@@ -356,6 +356,23 @@ export const SECTION_META = [
   },
 
   {
+    id: "shared-leistung-anfrage",
+    displayName: "Shared — Leistung Anfrage (Formular + Kontakt)",
+    useCase: "contact-form",
+    category: "shared",
+    description:
+      "Anfrage-Block für Leistungsseiten: Kontaktdaten (Telefon, Zeiten, Adresse) links, echtes Kontaktformular rechts. Nutzt dieselbe Server-Action wie die Kontaktseite (inkl. Honeypot) und kennzeichnet die Herkunftsseite in der Mail. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln, das nichts versendet.",
+    propsSummary: [
+      { name: "eyebrow", type: "string", required: false },
+      { name: "heading", type: "string", required: true },
+      { name: "intro", type: "string", required: true },
+      { name: "seite", type: "string", required: true },
+    ],
+    usedOn: ["/ladenbau"],
+    screenshot: `${REF}/kontakt/band-0.jpg`,
+  },
+
+  {
     id: "shared-referenzen-hero",
     displayName: "Shared — Referenzen Hero (Collage)",
     useCase: "hero",

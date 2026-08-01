@@ -28,9 +28,9 @@ import {
 } from "@/lib/content/schrank-unter-treppe";
 
 export const metadata: Metadata = {
-  title: "Schrank unter der Treppe nach Maß aus Espelkamp: Planung & Montage",
+  title: "Einbauschrank unter der Treppe nach Maß | Tischler aus Espelkamp",
   description:
-    "Schrank unter der Treppe nach Maß vom Meisterbetrieb in Espelkamp: Treppen- und Stufenschränke, passgenau an die Treppe geplant, gefertigt und vom eigenen Team montiert. Kostenloses Aufmaß.",
+    "Einbauschrank unter der Treppe nach Maß vom Meisterbetrieb in Espelkamp: Treppen- und Stufenschränke, passgenau an die Treppe geplant, gefertigt und vom eigenen Team montiert. Kostenloses Aufmaß.",
   alternates: { canonical: "/einbauschraenke-nach-mass/schrank-unter-treppe/" },
   openGraph: {
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Schrank unter der Treppe nach Maß aus Espelkamp: Planung & Montage",
+    title: "Einbauschrank unter der Treppe nach Maß | Tischler aus Espelkamp",
     description:
-      "Schränke unter der Treppe nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an die Treppe geplant, gebaut und montiert.",
+      "Einbauschränke unter der Treppe nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an die Treppe geplant, gebaut und montiert.",
     url: "/einbauschraenke-nach-mass/schrank-unter-treppe/",
     locale: "de_DE",
     type: "website",

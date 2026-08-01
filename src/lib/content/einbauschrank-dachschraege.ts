@@ -25,9 +25,9 @@ export const dachHero = {
   bgImage: `${IMG}/dachschraegenschrank-nach-mass-trapezform-schlafzimmer.jpg`,
   imageAlt:
     "Dachschrägenschrank nach Maß über die gesamte Wand, trapezförmig an beide Dachschrägen angepasst",
-  title: "Schrank für Dachschräge & Drempelschrank nach Maß aus Espelkamp",
+  title: "Dachschrägenschrank nach Maß aus Espelkamp",
   intro:
-    "Wir planen und bauen Ihren Schrank für die Dachschräge nach Maß, der jeden Zentimeter unter der Schräge nutzt. Vom Aufmaß der Schräge bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem toten Winkel unter dem Dach ein Dachschrägenschrank, der wirklich passt.",
+    "Wir planen und bauen Ihren Dachschrägenschrank nach Maß, der jeden Zentimeter unter der Schräge nutzt. Vom Aufmaß der Schräge bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem toten Winkel unter dem Dach ein Dachschrägenschrank, der wirklich passt.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },

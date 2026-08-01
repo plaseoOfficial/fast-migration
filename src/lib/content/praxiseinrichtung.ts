@@ -16,9 +16,9 @@
  */
 
 export const praxisHero = {
-  bgImage: "/images/2025/11/DSC07156-scaled.jpg",
+  bgImage: "/images/praxiseinrichtung/anmeldetresen-nach-mass-praxis-weiss.jpg",
   imageAlt:
-    "Beratungsgespräch zur Praxiseinrichtung mit Materialmustern bei Fast Systemmöbel",
+    "Anmeldetresen nach Maß in Weiß mit umlaufender LED-Sockelbeleuchtung in einer Praxis",
   title: "Praxiseinrichtung nach Maß aus Espelkamp",
   intro:
     "Möbel, die exakt zu Ihren Räumen, Abläufen und Hygieneanforderungen passen, statt Katalogware in festen Rastermaßen. Geplant, gefertigt und montiert aus einer Hand, vom Meisterbetrieb in Espelkamp.",
@@ -36,8 +36,8 @@ export const praxisIntroStats = {
   introBefore: "Von der ersten",
   introBold: "Planung",
   introAfter: " bis zur fertigen Montage, alles aus einer Hand.",
-  bandImage: "/images/2025/11/DSC_9843.jpg",
-  bandAlt: "Besprechungsraum mit Tisch nach Maß für Beratung und Planung",
+  bandImage: "/images/praxiseinrichtung/praxiseinrichtung-empfangstresen-led-sockel.jpg",
+  bandAlt: "Empfangstresen nach Maß mit abgesetzter Arbeitsplatte und beleuchtetem Sockel",
   col1Title: "Praxis planen",
   col1Body:
     "Wir entwickeln Ihre Einrichtung nach Grundriss, Hygieneanforderung und Patientenfluss. Tresen, Behandlungszimmer und Wartebereich planen wir millimetergenau.",
@@ -58,9 +58,9 @@ export const praxisIntroStats = {
 export const praxisProcess = {
   eyebrow: "In fünf Schritten",
   heading: "Vom Aufmaß bis zur Montage",
-  image: "/images/2025/11/DSC_0001.jpg",
+  image: "/images/praxiseinrichtung/anmeldetresen-nach-mass-praxis-front.jpg",
   imageAlt:
-    "Maßgefertigtes Funktionsmöbel mit Klappmechanik und integrierter Arbeitsfläche",
+    "Anmeldetresen nach Maß von vorn, mit Arbeitsplatz hinter der erhöhten Front",
   steps: [
     {
       title: "Beratung & kostenloses Aufmaß",
@@ -130,9 +130,9 @@ export const praxisUsp = {
   heading: "Kanten ohne Fuge, in der sich Keime sammeln",
   body:
     "In der Praxis wird täglich wischdesinfiziert. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos, sodass keine Spalten bleiben, in denen sich Schmutz und Keime absetzen. Zusammen mit abwischbaren, robusten Oberflächen halten die Möbel der täglichen Reinigung über Jahre stand, ohne aufgequollene Ränder. Das ist kein Aufpreis-Extra, sondern unser Standard.",
-  image: "/images/2025/11/IMG_9120-scaled.jpg",
+  image: "/images/praxiseinrichtung/praxiseinrichtung-anmeldung-wartebereich.jpg",
   imageAlt:
-    "Waschtisch-Unterschrank nach Maß mit reinigbaren, grifflosen Fronten",
+    "Anmeldung mit Tresen nach Maß, dahinter der verglaste Wartebereich",
 };
 
 export const praxisTypische = {
@@ -140,7 +140,7 @@ export const praxisTypische = {
   image1: "/images/2025/11/20150701_185458257_iOS-scaled.jpg",
   image1Alt: "Maßgefertigte Empfangstheke mit Glasregalen",
   image2: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
-  image2Alt: "Schrankwand nach Maß mit offenen Fächern und Schubladen",
+  image2Alt: "Schrankwand nach Maß mit offenen Fächern und Schubladen in einem Objektraum",
   row1: [
     {
       title: "Empfangs- & Anmeldetresen",
@@ -210,11 +210,11 @@ export const praxisWarum = {
   paragraph:
     "Jeden Tresen, jeden Behandlungsschrank und jedes Aktenmöbel bauen wir selbst in Espelkamp, passgenau von Wand zu Wand und mit Materialien für Hygiene und Dauereinsatz. Planung, Fertigung und Montage bleiben in einer Hand.",
   images: [
-    { src: "/images/2025/11/DSC_9747.jpg", alt: "Besprechungstisch nach Maß für Beratungs- und Sprechzimmer", width: 600, height: 400 },
-    { src: "/images/2025/11/IMG_2249.jpg", alt: "Einbauschrank nach Maß mit Garderoben-Nische in Eiche", width: 600, height: 800 },
-    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Raumhohe Einbauschränke nach Maß", width: 600, height: 800 },
-    { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Einbauschrank nach Maß vor einer Steinwand", width: 600, height: 440 },
-    { src: "/images/2025/11/90d42e7b-fa9d-4a8d-a60e-ca1c5bf55cb3.jpg", alt: "Garderobe nach Maß mit Eiche-Lamellen-Nische und Sitzbank", width: 600, height: 800 },
+    { src: "/images/2025/11/DSC_9747.jpg", alt: "Konferenztisch nach Maß mit Bestuhlung in einem Besprechungsraum", width: 600, height: 400 },
+    { src: "/images/2025/11/IMG_2249.jpg", alt: "Einbauschrank nach Maß mit offener Garderoben-Nische in Eiche", width: 600, height: 800 },
+    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Raumhohe Einbauschrankwand nach Maß in Weiß entlang eines Flurs", width: 600, height: 800 },
+    { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Einbauschrank nach Maß neben einer Wand in Steinoptik", width: 600, height: 440 },
+    { src: "/images/2025/11/90d42e7b-fa9d-4a8d-a60e-ca1c5bf55cb3.jpg", alt: "Garderobennische nach Maß mit Eiche-Lamellen und integrierter Sitzbank", width: 600, height: 800 },
     { src: "/images/2025/11/DSC_9934.jpg", alt: "Offenes Regal nach Maß mit indirekter LED-Beleuchtung", width: 600, height: 400 },
   ],
 };
@@ -246,7 +246,7 @@ export const praxisMoebelplaner = {
   ctaLabel: "Möbelplaner ausprobieren",
   ctaHref: "/moebelplaner/",
   image: "/images/2025/11/20231220_131839984_iOS-scaled.jpg",
-  imageAlt: "Raumteiler aus Holzlamellen nach Maß",
+  imageAlt: "Raumteiler aus Holzlamellen nach Maß als Sichtschutz im Objektbereich",
 };
 
 /** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */

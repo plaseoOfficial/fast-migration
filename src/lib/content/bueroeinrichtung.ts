@@ -16,8 +16,8 @@
  */
 
 export const bueroHero = {
-  bgImage: "/images/2025/11/DSC_9747.jpg",
-  imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel aus Espelkamp",
+  bgImage: "/images/bueroeinrichtung/empfangstresen-nach-mass-rund-edelstahl.jpg",
+  imageAlt: "Runder Empfangstresen nach Maß mit Edelstahlfront in einem Büro-Foyer",
   title: "Büroeinrichtung nach Maß",
   intro:
     "Vom Schreibtisch bis zur Objekteinrichtung — geplant, gefertigt und montiert im eigenen Meisterbetrieb in Espelkamp.",
@@ -36,8 +36,8 @@ export const bueroIntroStats = {
   introBold: "Planung",
   introAfter:
     " bis zur Montage — kalkuliert nach Grundriss, gefertigt im eigenen Werk, aufgebaut vom eigenen Team.",
-  bandImage: "/images/2025/11/IMG_2673-scaled.jpg",
-  bandAlt: "Maßgefertigte Büroeinrichtung mit Arbeitsplätzen und Stauraum",
+  bandImage: "/images/bueroeinrichtung/bueroeinrichtung-arbeitsplaetze-grossraumbuero.jpg",
+  bandAlt: "Großraumbüro mit Arbeitsplätzen, Rollcontainern und Stauraum nach Maß",
   col1Title: "Büro planen",
   col1Body:
     "Arbeitsplätze, Schränke, Konferenztische — millimetergenau geplant nach Ihrem Grundriss und Ihren Abläufen. Was Sie brauchen, klären wir beim kostenlosen Aufmaß.",
@@ -60,8 +60,8 @@ export const bueroProcess = {
   paragraph:
     "Beratung, kostenloses Aufmaß vor Ort, 3D-Planung, Fertigung im eigenen Werk in Espelkamp, Montage durch unser Team: fünf klare Schritte, ein fester Ansprechpartner. Auf Wunsch montieren wir außerhalb der Geschäftszeiten oder in Etappen, damit Ihr Betrieb weiterläuft. Aufbauen müssen Sie nichts selbst.",
   paragraphStrong: "Made in Germany.",
-  image: "/images/2025/11/IMG_2249.jpg",
-  imageAlt: "Maßgefertigter Empfangs- und Arbeitsbereich im Büro",
+  image: "/images/bueroeinrichtung/schreibtisch-nach-mass-betonoptik-buero.jpg",
+  imageAlt: "Schreibtisch nach Maß mit Platte in Betonoptik und offenem Regal dahinter",
 };
 
 /** Structured process steps — used by BueroProcessSteps (instead of the monolithic paragraph). */
@@ -103,10 +103,10 @@ export const bueroProcessSteps = {
 
 export const bueroTypische = {
   heading: "Alles fürs Büro, aus einer Werkstatt",
-  image1: "/images/2025/11/IMG_2772-scaled.jpg",
-  image1Alt: "Maßgefertigte Arbeitsplätze im Büro",
-  image2: "/images/2025/11/DSC06206-scaled.jpg",
-  image2Alt: "Aktenschränke und Stauraum nach Maß",
+  image1: "/images/bueroeinrichtung/aktenschrankwand-nach-mass-buero.jpg",
+  image1Alt: "Aktenschrankwand nach Maß in Weiß mit Arbeitsplätzen davor",
+  image2: "/images/bueroeinrichtung/besprechungstisch-nach-mass-massivholz.jpg",
+  image2Alt: "Besprechungstisch aus Massivholz nach Maß mit Bildschirm an der Wand",
   row1: [
     {
       title: "Schreibtische & Arbeitsplätze nach Maß",
@@ -148,12 +148,12 @@ export const bueroWarum = {
   paragraph:
     "Kataloganbieter liefern feste Rastermaße. Wo Ihre Wand 2,87 Meter misst, bleibt am Ende eine Lücke oder eine Passleiste. Wir fertigen Ihre Büroeinrichtung wand-zu-wand — millimetergenau auf Ihre Räume, Beratung, Fertigung und Montage aus einer Hand. Ein Detail, das im Alltag zählt: Unsere PU-Kantenverleimung verschließt Kanten fugenlos und feuchtigkeitsbeständig. Schreibtischkanten überstehen Jahre der Beanspruchung, die Teeküche verträgt Feuchtigkeit, nichts platzt an den Rändern ab.",
   images: [
-    { src: "/images/2025/11/DSC_9747.jpg", alt: "Moderne Büroeinrichtung nach Maß", width: 600, height: 450 },
-    { src: "/images/2025/11/IMG_2673-scaled.jpg", alt: "Arbeitsplätze mit integriertem Stauraum", width: 600, height: 400 },
-    { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Aktenschränke nach Maß im Büro", width: 600, height: 800 },
-    { src: "/images/2025/11/IMG_2249.jpg", alt: "Empfangsbereich mit Theke nach Maß", width: 600, height: 420 },
-    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Maßgefertigte Schreibtische im Büro", width: 600, height: 380 },
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Konferenzbereich mit Tisch nach Maß", width: 600, height: 450 },
+    { src: "/images/bueroeinrichtung/buero-galerie-schrankwand.jpg", alt: "Raumhohe Büroschrankwand nach Maß in Grau entlang eines Flurs", width: 600, height: 450 },
+    { src: "/images/bueroeinrichtung/buero-galerie-konferenzraum.jpg", alt: "Konferenzraum mit Glastisch nach Maß vor einer Backsteinwand", width: 600, height: 400 },
+    { src: "/images/bueroeinrichtung/buero-galerie-flur-lamellen.jpg", alt: "Bürogang mit Holzlamellen-Wandverkleidung und integrierter Sitzbank", width: 600, height: 800 },
+    { src: "/images/bueroeinrichtung/buero-galerie-teekueche.jpg", alt: "Teeküche im Büro mit Küchenblock und Holzlamellen-Wand", width: 600, height: 420 },
+    { src: "/images/bueroeinrichtung/buero-galerie-empfangstresen.jpg", alt: "Empfangstresen nach Maß in hellem Holz mit Ablage", width: 600, height: 380 },
+    { src: "/images/bueroeinrichtung/buero-galerie-arbeitsplatz.jpg", alt: "Schreibtisch nach Maß mit Rollcontainer an einer Sichtbetonwand", width: 600, height: 450 },
   ],
 };
 
@@ -168,8 +168,8 @@ export const bueroVergleich = {
     "Beratung, Fertigung und Montage aus einer Hand — Sie sprechen mit den Leuten, die Ihre Möbel bauen",
     "Hält der täglichen Beanspruchung über Jahre stand — keine Kompromisse bei Material und Verarbeitung",
   ],
-  image: "/images/2025/11/DSC_9747.jpg",
-  imageAlt: "Büroeinrichtung nach Maß von Fast Systemmöbel Espelkamp",
+  image: "/images/bueroeinrichtung/bueroeinrichtung-sitzecke-pausenbereich.jpg",
+  imageAlt: "Sitzecke im Büro mit gepolsterter Bank und Tisch nach Maß",
   kantenText:
     "Ein Detail, das im Alltag den Unterschied macht: Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Für den Büroalltag bedeutet das: Die Teeküche verträgt Spritzwasser, Schreibtischkanten überstehen Jahre der Beanspruchung, und nichts platzt an den Rändern ab.",
 };
@@ -177,8 +177,8 @@ export const bueroVergleich = {
 export const bueroGeschichte = {
   heading: "Ein Meisterbetrieb, der Arbeitsräume versteht",
   subheading: "Vom Garagenbetrieb zum Partner für Büroeinrichtung",
-  anchorImage: "/images/2025/11/IMG_2673-scaled.jpg",
-  anchorImageAlt: "Arbeitsplätze nach Maß — Fast Systemmöbel Espelkamp",
+  anchorImage: "/images/bueroeinrichtung/bueroeinrichtung-lounge-aufenthaltsbereich.jpg",
+  anchorImageAlt: "Aufenthaltsbereich mit Loungemöbeln unter offenem Holzdach, eingerichtet von Fast Systemmöbel",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
@@ -197,20 +197,20 @@ export const bueroMoebelplaner = {
     "Stellen Sie Schränke und Büromöbel im 3D-Konfigurator online zusammen — Maße, Oberflächen und Einlegeböden direkt sichtbar. Den Rest übernehmen wir: Aufmaß, Fertigung, Montage. [Beratung anfragen](/kontakt/) oder direkt anrufen: 05771 9138312.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
-  image: "/images/2025/11/IMG_2772-scaled.jpg",
-  imageAlt: "Maßgefertigte Arbeitsplätze im Büro",
+  image: "/images/bueroeinrichtung/bueroeinrichtung-empfang-kuechenzeile.jpg",
+  imageAlt: "Empfangsbereich mit Küchenzeile und Holzlamellen-Wand nach Maß",
 };
 
 /** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */
 export const bueroCtas = {
   intro: {
-    image: "/images/2025/11/IMG_2673-scaled.jpg",
+    image: "/images/bueroeinrichtung/bueroeinrichtung-konferenzraum-glastisch.jpg",
     heading: "Ihr Büro verdient mehr als Möbel von der Stange.",
     linkText: "Sprechen Sie mit uns über Ihr Büroprojekt",
     href: "/kontakt/",
   },
   final: {
-    image: "/images/2025/11/DSC_9747.jpg",
+    image: "/images/bueroeinrichtung/schreibtisch-nach-mass-arbeitsplatz.jpg",
     heading: "Ihr Büroprojekt — wir bauen es nach Maß.",
     linkText: "Jetzt unverbindlich anfragen",
     href: "/kontakt/",

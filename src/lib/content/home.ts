@@ -98,7 +98,7 @@ export const homeBereiche = {
         {
           title: "Gastronomie",
           image: "/images/2025/11/DSC_9938.jpg",
-          alt: "Gastronomieeinrichtung – Regaldetail mit indirekter Beleuchtung",
+          alt: "Regaldetail nach Maß mit indirekter LED-Beleuchtung",
           href: "/gastronomieeinrichtung/",
         },
         {

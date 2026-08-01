@@ -32,6 +32,9 @@ export async function sendeKontaktAnfrage(
   const email = String(formData.get("email") ?? "").trim();
   const telefon = String(formData.get("telefon") ?? "").trim();
   const nachricht = String(formData.get("nachricht") ?? "").trim();
+  // Optional: Herkunftsseite (z. B. "Ladenbau"). Leer bei den Formularen, die es
+  // nicht mitschicken — das Verhalten bleibt dann unverändert.
+  const seite = String(formData.get("seite") ?? "").trim();
 
   if (!vorname || !nachname) {
     return { ok: false, error: "Bitte geben Sie Ihren Namen an." };
@@ -58,9 +61,12 @@ export async function sendeKontaktAnfrage(
     from: FROM_EMAIL,
     to: TO_EMAIL,
     replyTo: email,
-    subject: `Neue Anfrage über die Website von ${vorname} ${nachname}`,
+    subject: seite
+      ? `Neue Anfrage (${seite}) über die Website von ${vorname} ${nachname}`
+      : `Neue Anfrage über die Website von ${vorname} ${nachname}`,
     text: [
       `Neue Anfrage über das Kontaktformular auf fast-systemmoebel.de`,
+      ...(seite ? [`Seite: ${seite}`] : []),
       ``,
       `Name: ${vorname} ${nachname}`,
       `E-Mail: ${email}`,
