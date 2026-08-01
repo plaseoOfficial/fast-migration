@@ -25,8 +25,8 @@
  */
 
 export const serienHero = {
-  bgImage: "/images/2025/11/DSC06206-scaled.jpg",
-  imageAlt: "Möbel Serienfertigung nach Maß im Meisterbetrieb Fast Systemmöbel",
+  bgImage: "/images/serienmoebel/serienfertigung-cnc-anlage-werkhalle.jpg",
+  imageAlt: "CNC-Anlage in der Fertigungshalle von Fast Systemmöbel in Espelkamp",
   title: "Möbel-Serienfertigung nach Maß",
   intro:
     "Sie brauchen viele gleiche Möbel, nicht ein Einzelstück. Wir fertigen Ihre Serie nach Zeichnung und CAD-Daten, zentimetergenau und in seriengleicher Qualität, ob kleine Auflage oder große Stückzahl. Geplant, gefertigt und geprüft aus einer Hand im eigenen Meisterbetrieb in Espelkamp, geliefert bundesweit.",
@@ -46,8 +46,8 @@ export const serienIntroStats = {
   introBold: "Mustermöbel-Freigabe",
   introAfter:
     " bis zur letzten Lieferung. Jedes Möbel hält die gleichen Maße, die gleiche Oberfläche und die gleiche Qualität.",
-  bandImage: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
-  bandAlt: "Korpusserie in der CNC-Fertigung von Fast Systemmöbel",
+  bandImage: "/images/serienmoebel/serienfertigung-maschinenpark-zuschnitt.jpg",
+  bandAlt: "Maschinenpark mit Zuschnitt und Plattenmaterial in der eigenen Fertigung",
   col1Title: "Serie anfragen",
   col1Body:
     "Sie senden uns Ihre Zeichnung oder CAD-Daten. Wir prüfen die Fertigbarkeit, bauen ein Mustermöbel zur Freigabe und produzieren danach die volle Stückzahl. Korpusse, Schränke, Fronten, Theken und Module entstehen seriengleich auf Homag- und CNC-Technik.",
@@ -70,16 +70,16 @@ export const serienProcess = {
   paragraph:
     "Am Anfang setzen wir uns mit Ihrer Zeichnung oder Ihren CAD-Daten zusammen und gehen Stückzahl, Maße, Materialien und Oberflächen in Ruhe mit Ihnen durch. Sobald die Fertigbarkeit steht, bauen wir Ihnen ein Mustermöbel, das Sie in die Hand nehmen und freigeben. Erst wenn Sie zufrieden sind, geht die volle Stückzahl in Produktion, jedes Bauteil auf derselben Homag- und CNC-Technik nach demselben Programm. Bevor etwas das Haus verlässt, sieht sich unser Team jede Charge noch einmal auf Maß und Oberfläche an. Geliefert wird bundesweit, auf Wunsch Schritt für Schritt, etwa Filiale für Filiale oder Etage für Etage.",
   paragraphStrong: "Made in Germany.",
-  image: "/images/2025/11/DSC07156-scaled.jpg",
-  imageAlt: "Serienteile in der Fertigung mit Homag-Technik",
+  image: "/images/serienmoebel/serienfertigung-homag-plattenaufteilung.jpg",
+  imageAlt: "Plattenmaterial an der Homag-Anlage, vorbereitet für die Serienfertigung",
 };
 
 export const serienTypische = {
   heading: "Was wir in Serie fertigen",
-  image1: "/images/2025/11/DSC06340-scaled.jpg",
-  image1Alt: "Filialserie aus identischen Möbeln nach Maß",
+  image1: "/images/serienmoebel/serienfertigung-werkhalle-absaugung.jpg",
+  image1Alt: "Werkhalle mit Absauganlage und Bearbeitungsplätzen in Espelkamp",
   image2: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",
-  image2Alt: "Serienmodul für Objektausstattung",
+  image2Alt: "Umkleidekabine als Serienmodul für die Objektausstattung",
   row1: [
     {
       title: "Filial- und Ladenserien",
@@ -121,20 +121,19 @@ export const serienWarum = {
   paragraph:
     "Eine Serie im Meisterbetrieb verbindet zwei Dinge, die selten zusammenkommen: die Wiederholgenauigkeit der Maschine und die Sorgfalt von Menschen, die ihr Handwerk verstehen. Wir fertigen Ihre Serie nach Zeichnung, zentimetergenau und ohne starre Mindestmenge, von der kleinen Auflage bis zur großen Stückzahl. Jedes Möbel entsteht auf demselben CNC-Programm, daher sitzen Maße und Oberflächen über die ganze Serie gleich, mit der Präzision moderner Homag-Technik. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig. Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung bleiben bei uns in einer Hand und lassen sich auch bei Nachbestellungen sauber wiederholen.",
   images: [
-    { src: "/images/2025/11/DSC06206-scaled.jpg", alt: "Serienmöbel in der Fertigung", width: 600, height: 450 },
-    { src: "/images/2025/11/DSC07129-Kopie-scaled.jpg", alt: "Korpusserie auf CNC-Technik", width: 600, height: 800 },
-    { src: "/images/2025/11/DSC07156-scaled.jpg", alt: "Serienteile mit Homag-Technik", width: 600, height: 400 },
-    { src: "/images/2025/11/DSC06340-scaled.jpg", alt: "Werkstatt und Team in Espelkamp", width: 600, height: 420 },
-    { src: "/images/2026/01/3838_1702_1_m.jpg", alt: "Modulares Möbelsystem in Serie", width: 600, height: 380 },
-    { src: "/images/2026/01/csm_Kabine_6550b3ca43.jpg", alt: "Serienmodul für die Objektausstattung", width: 600, height: 450 },
+    { src: "/images/serienmoebel/serie-galerie-cnc-halle.jpg", alt: "CNC-Bearbeitungsanlage in der Fertigungshalle von Fast Systemmöbel", width: 600, height: 450 },
+    { src: "/images/serienmoebel/serie-galerie-plattenaufteilung.jpg", alt: "Homag-Anlage mit aufgeteiltem Plattenmaterial in der Fertigung", width: 600, height: 800 },
+    { src: "/images/serienmoebel/serie-galerie-maschinenpark.jpg", alt: "Maschinenpark mit Zuschnitt und Stapler in der Werkhalle", width: 600, height: 400 },
+    { src: "/images/serienmoebel/serie-galerie-werkhalle.jpg", alt: "Werkhalle mit Absauganlage und Bearbeitungsplätzen", width: 600, height: 420 },
+    { src: "/images/serienmoebel/serie-galerie-produktionshalle.jpg", alt: "Blick durch die Produktionshalle in Espelkamp", width: 600, height: 380 },
   ],
 };
 
 export const serienGeschichte = {
   heading: "Ein Meisterbetrieb, der Serien liefert",
   subheading: "Vom Garagenbetrieb zum Partner für Serienfertigung",
-  anchorImage: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
-  anchorImageAlt: "Serienfertigung mit Homag-Technologie bei Fast Systemmöbel in Espelkamp",
+  anchorImage: "/images/serienmoebel/serienfertigung-produktionshalle-espelkamp.jpg",
+  anchorImageAlt: "Produktionshalle von Fast Systemmöbel in Espelkamp mit Bearbeitungsplätzen",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
@@ -150,13 +149,13 @@ export const serienGeschichte = {
 
 export const serienCtas = {
   intro: {
-    image: "/images/2025/11/DSC07129-Kopie-scaled.jpg",
+    image: "/images/serienmoebel/serienfertigung-werkhalle-absaugung.jpg",
     heading: "Viele gleiche Möbel. Eine konstante Qualität.",
     linkText: "Sprechen Sie mit uns über Ihre Serienanfrage",
     href: "/kontakt/",
   },
   final: {
-    image: "/images/2025/11/DSC06206-scaled.jpg",
+    image: "/images/serienmoebel/serienfertigung-cnc-anlage-werkhalle.jpg",
     heading: "Ihre Serie nach Zeichnung, seriengleich gefertigt.",
     linkText: "Sprechen Sie mit uns über Ihr Serienprojekt.",
     href: "/kontakt/",

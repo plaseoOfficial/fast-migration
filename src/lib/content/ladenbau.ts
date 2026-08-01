@@ -71,8 +71,9 @@ export const ladenWeitereLeistungen: { cards: ServiceCard[] } = {
 };
 
 export const ladenHero = {
-  bgImage: "/images/2025/11/DSC_9965.jpg",
-  imageAlt: "Ladenbau nach Maß – individuelle Ladeneinrichtung von Fast Systemmöbel",
+  bgImage: "/images/ladenbau/ladenbau-fischtheke-holzlamellen-nach-mass.jpg",
+  imageAlt:
+    "Fischtheke nach Maß mit Holzlamellen-Decke, schwarzen Metrofliesen, Unterschränken in Holzoptik und integrierter Zapfanlage",
   title: "Ladenbau nach Maß",
   intro:
     "Ladenbau nach Maß heißt bei uns: Ihre Verkaufsfläche kommt nicht aus dem Katalog, sondern wird Wand zu Wand für Ihren Grundriss geplant und im eigenen Meisterbetrieb gebaut. Vom einzelnen Verkaufstresen bis zur schlüsselfertigen Shopkonzeption kommen Beratung, 3D-Planung, Fertigung und Montage aus einer Hand.",
@@ -91,9 +92,10 @@ export const ladenIntroStats = {
     "Ob Einzelhandel, Boutique, Gastronomie oder Praxis. Wir begleiten Ihr Projekt von der ersten",
   introBold: "Planung",
   introAfter:
-    " bis zur fertigen Montage. Maßgefertigte Ladenmöbel statt Systemregal, zugeschnitten auf Ihren Grundriss und Ihre Marke.",
-  bandImage: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
-  bandAlt: "Maßgefertigte Ladeneinrichtung im Einzelhandel",
+    " bis zur fertigen Montage. Ihre Geschäftseinrichtung nach Maß entsteht zugeschnitten auf Ihren Grundriss und Ihre Marke, statt aus dem Systemregal.",
+  bandImage: "/images/ladenbau/ladenbau-obst-gemuese-wandregal-nach-mass.jpg",
+  bandAlt:
+    "Wandregal der Obst- und Gemüseabteilung nach Maß, mit Holzlamellen-Blende, Schriftzug und Strahlerschiene",
   col1Title: "Shop planen",
   col1Body:
     "Wir planen Ihre Ladeneinrichtung exakt nach Grundriss, Customer Journey und Markenauftritt. Verkaufstheken, Wandregale und Kassenzonen entstehen millimetergenau und sind auf den täglichen Betrieb ausgelegt. Was genau Ihre Fläche braucht, klären wir beim kostenlosen Aufmaß vor Ort.",
@@ -119,8 +121,9 @@ export const ladenIntroStats = {
 export const ladenSteps = {
   eyebrow: "In vier Schritten",
   heading: "Ladenbau, alles aus einer Hand",
-  image: "/images/2025/11/DSC_0001.jpg",
-  imageAlt: "Maßgefertigter Empfangs- und Thekenbereich",
+  image: "/images/ladenbau/ladeneinrichtung-geschwungene-obst-gemuese-nische.jpg",
+  imageAlt:
+    "Geschwungene Obst- und Gemüse-Nische aus Holzlamellen, passgenau in die Ladenfläche eingebaut",
   offsetSteps: true,
   steps: [
     {
@@ -149,10 +152,12 @@ export const ladenSteps = {
 
 export const ladenTypische = {
   heading: "Welche Ladenmöbel wir nach Maß bauen",
-  image1: "/images/2025/11/DSC_9934.jpg",
-  image1Alt: "Beleuchtete Ladenregale nach Maß mit integriertem Lichtkonzept",
-  image2: "/images/2025/11/20181220_075204314_iOS-scaled.jpg",
-  image2Alt: "Gastronomie-Einrichtung nach Maß",
+  image1: "/images/ladenbau/ladenbau-backwaren-regal-nach-mass.jpg",
+  image1Alt:
+    "Backwaren-Selbstbedienungsregal nach Maß mit Holzlamellen-Blende und beleuchtetem Schriftzug",
+  image2: "/images/ladenbau/ladenbau-frischetheke-fleisch-holzdecke.jpg",
+  image2Alt:
+    "Frischetheke für Fleisch und Wurst mit Holzlamellen-Decke und maßgefertigter Thekenverkleidung",
   row1: [
     {
       title: "Verkaufstheke & Kassenzone",
@@ -238,9 +243,9 @@ export const ladenUsp = {
   heading: "Eine Kante ohne Fuge, gebaut für harten Alltag",
   body:
     "An Theken, Regalen und Tresen bekommen die Kanten täglich Stöße, Spritzwasser und Reinigung ab, genau dort entscheidet sich die Langlebigkeit. Die stark beanspruchten Stoßkanten verleimen wir im PU-Verfahren: Das verschließt sie fugenlos und feuchtigkeitsbeständig, statt sie nur aufzukleben. Zusammen mit Massivholz und hochwertigen Trägermaterialien bleibt Ihre Ladeneinrichtung über Jahre formstabil, auch dort, wo am Point of Sale am meisten los ist.",
-  image: "/images/2025/11/IMG_9120-scaled.jpg",
+  image: "/images/ladenbau/ladenbau-thekenplatte-kante-zapftechnik.jpg",
   imageAlt:
-    "Saubere Massivholz-Kante mit dichter Kantenverleimung an einem maßgefertigten Möbel",
+    "Thekenplatte mit sauber verleimter Kante, darunter die im Möbel verbaute Zapftechnik mit CO2-Flaschen",
 };
 
 export const ladenWarum = {
@@ -248,12 +253,12 @@ export const ladenWarum = {
   paragraph:
     "Systemanbieter liefern Konfektion aus dem Katalog, ein Möbelhaus verkauft, was im Lager steht. Wir bauen Ihre Ladeneinrichtung selbst im Meisterbetrieb in Espelkamp, ohne Subunternehmer: Wand zu Wand ohne Passleisten, aus Massivholz und hochwertigen Materialien, die dem Kundenverkehr über Jahre standhalten. Gefertigt wird auf eigenem Maschinenpark mit Homag-Technologie, die Qualität kontrollieren wir selbst, und gerichtet wird sich nach Ihrem Corporate Design.",
   images: [
-    { src: "/images/2025/11/DSC_9965.jpg", alt: "Moderne Ladeneinrichtung", width: 600, height: 450 },
-    { src: "/images/2025/11/DSC_9938.jpg", alt: "Maßgefertigte Ladeneinrichtung vom Tresen bis zur Shopfläche", width: 600, height: 400 },
-    { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Empfangsbereich mit Holzlamellenwand", width: 600, height: 800 },
-    { src: "/images/2025/11/DSC_9843.jpg", alt: "Integrierte Technik im Möbel", width: 600, height: 420 },
-    { src: "/images/2025/11/DSC_0001.jpg", alt: "Maßgefertigter Empfangs- und Thekenbereich", width: 600, height: 380 },
-    { src: "/images/2025/11/20181220_075204314_iOS-scaled.jpg", alt: "Gastronomie-Mobiliar nach Maß", width: 600, height: 450 },
+    { src: "/images/ladenbau/ladenbau-kuehlregal-verkleidung-milch-kaese.jpg", alt: "Kühlregal mit maßgefertigter Holzverkleidung und Schriftzug Milch und Käse im Supermarkt", width: 600, height: 450 },
+    { src: "/images/ladenbau/warentraeger-fertigung-eigene-tischlerei-espelkamp.jpg", alt: "Fertiger Warenträger mit Edelstahl-Behältern in der eigenen Tischlerei in Espelkamp, dahinter die Furnierpresse", width: 600, height: 400 },
+    { src: "/images/ladenbau/ladenbau-obst-gemuese-theke-rundung.jpg", alt: "Gerundete Verkaufstheke aus Holzlamellen für die Obst- und Gemüseabteilung", width: 600, height: 800 },
+    { src: "/images/ladenbau/ladenbau-getraenkeregal-wandverkleidung.jpg", alt: "Getränkeregal vor maßgefertigter Wandverkleidung mit Rautenmuster", width: 600, height: 420 },
+    { src: "/images/ladenbau/warentraeger-insel-obst-gemuese-nach-mass.jpg", alt: "Warenträger-Insel für Obst und Gemüse mit Lamellenverkleidung in Holzoptik", width: 600, height: 380 },
+    { src: "/images/ladenbau/ladeneinrichtung-obst-gemuese-insel-supermarkt.jpg", alt: "Voll bestückte Obst- und Gemüseinsel nach Maß im Supermarkt", width: 600, height: 450 },
   ],
 };
 
@@ -373,15 +378,17 @@ export const ladenMoebelplaner = {
     "Im Möbelplaner stellen Sie einzelne Elemente Ihrer Ladeneinrichtung selbst zusammen, etwa Theke, Regale und Anordnung. Maße, Oberflächen, Fronten und Auszüge sehen Sie direkt im 3D-Konfigurator, so bekommen Sie schnell eine erste Orientierung für Ihre Fläche. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung zu Material und Corporate Design, Fertigung und Montage. Aus Ihrer Online-Planung wird eine Ladeneinrichtung nach Maß. Sie möchten lieber gleich sprechen? Dann [fordern Sie ein Angebot an](/kontakt/), oder Sie erreichen uns telefonisch unter 05771 9138312.",
   ctaLabel: "Ladeneinrichtung selbst planen",
   ctaHref: "/moebelplaner/",
-  image: "/images/2025/11/DSC_9814.jpg",
-  imageAlt: "Maßgefertigter Verkaufstresen im Einzelhandel",
+  image: "/images/ladenbau/ladenbau-obst-gemuese-abteilung-kunden.jpg",
+  imageAlt:
+    "Obst- und Gemüseabteilung nach Maß mit Kunden am Warenträger im Verkaufsraum",
 };
 
 export const ladenGeschichte = {
   heading: "Ein Meisterbetrieb aus OWL, der Geschäftsräume versteht",
   subheading: "Vom Garagenbetrieb zum Partner für Ladenbau",
-  anchorImage: "/images/2025/11/20230814_155316228_iOS-scaled.jpg",
-  anchorImageAlt: "Maßgefertigter Innenausbau für Geschäftsräume — Fast Systemmöbel Espelkamp",
+  anchorImage: "/images/ladenbau/ladenbau-spirituosen-regal-nach-mass.jpg",
+  anchorImageAlt:
+    "Spirituosenregal nach Maß über die gesamte Wandlänge, gebaut von Fast Systemmöbel in Espelkamp",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
@@ -398,13 +405,13 @@ export const ladenGeschichte = {
 /** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */
 export const ladenCtas = {
   intro: {
-    image: "/images/2025/11/DSC_9814.jpg",
+    image: "/images/ladenbau/ladenbau-zapfanlage-theke-integrierte-technik.jpg",
     heading: "Ihr Geschäft verdient mehr als Standardmöbel.",
     linkText: "Sprechen Sie mit uns über Ihr Ladenbau-Projekt",
     href: "/kontakt/",
   },
   final: {
-    image: "/images/2025/11/DSC_9938.jpg",
+    image: "/images/ladenbau/ladenbau-frischebereich-holzkisten-praesentation.jpg",
     heading: "Vom Tresen bis zur Shopfläche.",
     linkText: "Ladenbau-Projekt unverbindlich anfragen.",
     href: "/kontakt/",
@@ -498,4 +505,18 @@ export const ladenFaq = {
         "Ja. Im Möbelplaner können Sie Ihre Ideen für Theke, Regale und Anordnung selbst anlegen und uns als Grundlage fürs Gespräch schicken. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
     },
   ],
+};
+
+/**
+ * Anfrage-Block am Seitenende (LeistungAnfrage). Ergänzt die beiden
+ * ExpandingImageCtas um einen echten Kontaktweg auf der Seite selbst: im
+ * Ladenbau-Wettbewerbsfeld führt jede Top-10-Seite die Kontaktaufnahme direkt
+ * auf der Leistungsseite (Formular und/oder NAP-Block), gemessen 2026-07-31.
+ */
+export const ladenAnfrage = {
+  eyebrow: "ANFRAGE",
+  heading: "Sprechen wir über Ihren Laden",
+  intro:
+    "Schreiben Sie kurz, was Sie einrichten möchten, ob Theke, Regalsystem oder komplette Fläche. Wir melden uns mit einem Terminvorschlag für das kostenlose Aufmaß vor Ort.",
+  seite: "Ladenbau",
 };

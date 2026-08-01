@@ -26,9 +26,9 @@ export const suHero = {
   bgImage: `${IMG}/schrank-unter-treppe-nach-mass-stufen-schubladen.jpg`,
   imageAlt:
     "Schrank unter der Treppe nach Maß mit Schubladen in den Treppenstufen, Spiegel und Einbauschrank",
-  title: "Schrank unter der Treppe nach Maß, passgenau vom Tischler aus Espelkamp",
+  title: "Einbauschrank unter der Treppe nach Maß, passgenau vom Tischler aus Espelkamp",
   intro:
-    "Wir planen und bauen Ihren Schrank unter der Treppe nach Maß, der jeden Zentimeter unter den Stufen nutzt. Vom Aufmaß der Treppe bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem dreieckigen Totraum unter der Treppe echter Stauraum, der wirklich passt.",
+    "Wir planen und bauen Ihren Einbauschrank unter der Treppe nach Maß, der jeden Zentimeter unter den Stufen nutzt. Vom Aufmaß der Treppe bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem dreieckigen Totraum unter der Treppe echter Stauraum, der wirklich passt.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -40,7 +40,7 @@ export const suHero = {
 export const suIntroStats = {
   since: "seit 1996",
   sinceSub: "Bauen wir Schränke nach Maß.",
-  heading: "Was ist ein Treppenschrank oder Schrank unter der Treppe?",
+  heading: "Was ist ein Treppenschrank oder Einbauschrank unter der Treppe?",
   introBefore:
     "Ein Schrank unter der Treppe ist ein Möbel, dessen Korpus und Fronten exakt der",
   introBold: "Stufenlinie",
@@ -51,7 +51,7 @@ export const suIntroStats = {
     "Stauraum unter der Treppe nach Maß mit beleuchteten Schubladen-Stufen und offener Regalnische",
   col1Title: "Treppenschrank, Stufenschrank und Stauraum",
   col1Body:
-    "Diese Begriffe meinen dasselbe Möbel, nur mit anderem Schwerpunkt. Als Stufenschrank bezeichnet man die Lösung, bei der jede Stufe ein eigenes Schubfach wird. Ein Treppenschrank fasst den ganzen Raum unter der Treppe als geschlossenen Korpus. Genau diesen keilförmigen Raum holen wir mit einem Schrank unter der Treppe zurück, statt ihn zu verschenken.",
+    "Diese Begriffe meinen dasselbe Möbel, nur mit anderem Schwerpunkt. Als Stufenschrank bezeichnet man die Lösung, bei der jede Stufe ein eigenes Schubfach wird. Ein Treppenschrank fasst den ganzen Raum unter der Treppe als geschlossenen Korpus. Genau diesen keilförmigen Raum holen wir mit einem Einbauschrank unter der Treppe zurück, statt ihn zu verschenken.",
   col1CtaLabel: "Treppenschrank anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
