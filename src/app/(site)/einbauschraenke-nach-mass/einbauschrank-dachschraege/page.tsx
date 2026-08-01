@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     ],
     title: "Dachschrägenschrank & Drempelschrank nach Maß | Espelkamp",
     description:
-      "Dachschrägenschränke nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an die Schräge geplant, gebaut und montiert.",
+      "Drempelschrank und Dachschrägenschrank nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an Kniestock und Schräge geplant, gebaut und montiert.",
     url: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
     locale: "de_DE",
     type: "website",

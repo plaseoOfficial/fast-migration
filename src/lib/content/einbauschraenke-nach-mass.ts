@@ -100,7 +100,7 @@ export const einbauTypische = {
     {
       title: "Einbauschränke für Dachschrägen",
       description:
-        "Wo Standardschränke aufhören, fangen wir an. Unser [Schrank für Dachschräge nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) nutzt auch die niedrigen Zonen ganz unten aus, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
+        "Wo Standardschränke aufhören, fangen wir an. Unser [Drempelschrank nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) nutzt auch die niedrigen Zonen ganz unten aus, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
     },
     {
       title: "Nischenschränke",
