@@ -23,6 +23,21 @@ function kurz(text: string | null | undefined, max = 80): string {
   return t.length > max ? `${t.slice(0, max - 1)}…` : t;
 }
 
+/**
+ * Die auslösende Zone eines Klicks — der nächstgelegene Vorfahre mit
+ * `data-track-zone` (z. B. die Floating-Button-Leiste). Ohne Annotation greifen
+ * die semantischen Landmarks Header/Footer, damit auch bestehende Links eine
+ * Herkunft melden. `undefined`, wenn der Klick im normalen Seiteninhalt liegt —
+ * dann bleibt der Event unverändert wie bisher.
+ */
+function zone(el: Element): string | undefined {
+  const markiert = el.closest<HTMLElement>("[data-track-zone]")?.dataset.trackZone;
+  if (markiert) return markiert;
+  if (el.closest("header")) return "Header";
+  if (el.closest("footer")) return "Footer";
+  return undefined;
+}
+
 function trackeKlick(target: EventTarget | null) {
   if (!(target instanceof Element)) return;
   const seite = window.location.pathname;
@@ -42,12 +57,17 @@ function trackeKlick(target: EventTarget | null) {
   const href = link.getAttribute("href") ?? "";
   const label = kurz(link.textContent) || kurz(link.getAttribute("aria-label"));
 
+  // Herkunft des Klicks. Als Prop nur setzen, wenn es eine gibt — `EventWert`
+  // lässt kein `undefined` zu, und ein leeres Feld wäre ohnehin kein Signal.
+  const herkunft = zone(link);
+  const woher: Record<string, string> = herkunft ? { zone: herkunft } : {};
+
   if (href.startsWith("tel:")) {
-    trackEvent("Telefon geklickt", { seite });
+    trackEvent("Telefon geklickt", { seite, ...woher });
     return;
   }
   if (href.startsWith("mailto:")) {
-    trackEvent("E-Mail geklickt", { seite });
+    trackEvent("E-Mail geklickt", { seite, ...woher });
     return;
   }
 
@@ -60,27 +80,27 @@ function trackeKlick(target: EventTarget | null) {
   const host = url.hostname.replace(/^www\./, "");
 
   if (host === "moebelplaner.fast-systemmoebel.de") {
-    trackEvent("Möbelplaner geöffnet", { seite, label });
+    trackEvent("Möbelplaner geöffnet", { seite, label, ...woher });
     return;
   }
   if (host.endsWith("google.com") && url.pathname.startsWith("/maps")) {
-    trackEvent("Google Maps geöffnet", { seite });
+    trackEvent("Google Maps geöffnet", { seite, ...woher });
     return;
   }
   for (const [domain, netzwerk] of Object.entries(SOCIAL_NETZWERKE)) {
     if (host === domain || host.endsWith(`.${domain}`)) {
-      trackEvent("Social geklickt", { seite, netzwerk });
+      trackEvent("Social geklickt", { seite, netzwerk, ...woher });
       return;
     }
   }
   if (url.origin === window.location.origin) {
     if (url.pathname === "/kontakt/" || url.pathname === "/kontakt") {
-      trackEvent("Kontakt-CTA geklickt", { seite, label });
+      trackEvent("Kontakt-CTA geklickt", { seite, label, ...woher });
     }
     return;
   }
   // Sonstige ausgehende Links (Partner, Impressums-Links, …)
-  trackEvent("Externer Link geklickt", { seite, ziel: host });
+  trackEvent("Externer Link geklickt", { seite, ziel: host, ...woher });
 }
 
 export function AnalyticsEvents() {

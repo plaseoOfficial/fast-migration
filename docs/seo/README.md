@@ -17,6 +17,7 @@ heißt nur Werte editieren, Design bleibt pixel-perfect.
 docs/seo/
   README.md            ← du bist hier
   internal-linking.md  Silo-/Pillar-Cluster-Modell + Link-Backlog (bestehend)
+  tracking.md          Matomo: Event-Katalog, Zonen, was als Conversion zählt
   architecture.md      Ziel-Seitenlandkarte / URL-Master (Phase B, aus seo-audit)
   keyword-map.md       Keyword → URL, Intent, Volumen-Schätzung (Phase B, aus seo-audit)
   brand/
