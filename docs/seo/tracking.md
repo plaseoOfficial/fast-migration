@@ -73,21 +73,37 @@ Deshalb liegt er seit der Floating-Button-Einführung in der Kategorie
 **`Engagement`** statt `Kontakt`; die Kategorie `Kontakt` bezeichnet damit
 ausschließlich echte Kontaktaufnahmen.
 
-**Der Code kann Ziele nicht abschalten — Ziele werden im Matomo-Backend
-konfiguriert.** Die Kategorie-Umstellung macht die Absicht eindeutig und greift
-automatisch bei jedem Ziel, das auf die Kategorie `Kontakt` matcht. Ein Ziel, das
-direkt auf die *Aktion* `Kontakt-CTA geklickt` matcht, muss manuell weg:
+**Die Kategorie-Umstellung allein schaltet das Ziel NICHT ab.** Am 2026-08-05 über
+die Matomo-API (`Goals.getGoals`, Site-ID 3) geprüft — alle fünf Ziele matchen auf
+`event_action`, keines auf die Kategorie:
 
-### Aufgabe im Matomo-Backend (einmalig)
+| Ziel | Name | matcht auf `event_action` (exakt) | Status |
+|---|---|---|---|
+| 1 | Kontaktformular abgeschickt | `Kontaktformular gesendet` | ✅ behalten |
+| 2 | Telefon-Klick | `Telefon geklickt` | ✅ behalten |
+| 3 | E-Mail-Klick | `E-Mail geklickt` | ✅ behalten (feuert erst, wenn eine E-Mail-Adresse online steht) |
+| 4 | Möbelplaner geöffnet | `Möbelplaner geöffnet` | ✅ behalten |
+| 5 | **Kontakt-CTA geklickt** | `Kontakt-CTA geklickt` | ❌ **muss weg** |
+
+Die Kategorie ist für das Matching also irrelevant — **Ziel 5 zählt weiter, bis es
+im Backend entfernt wird.** Die Umstellung auf `Engagement` bleibt trotzdem richtig:
+sie hält Berichte und Segmente ehrlich und verhindert, dass der Event später über
+ein kategoriebasiertes Ziel zurückkehrt.
+
+### Aufgabe im Matomo-Backend (einmalig, zwingend)
 
 1. *Ziele → Ziele verwalten* öffnen.
-2. Prüfen, ob ein Ziel auf `Kontakt-CTA geklickt` (oder auf Kategorie `Kontakt`
-   in Verbindung mit diesem Event) matcht.
-3. Falls ja: **Ziel löschen** — oder, wenn die Historie erhalten bleiben soll,
-   den Ziel-Namen auf `[inaktiv] Kontakt-CTA` setzen und die Bedingung auf einen
-   Wert ändern, der nie zutrifft.
-4. Sicherstellen, dass diese Ziele existieren und aktiv sind:
-   `Kontaktformular gesendet` · `Telefon geklickt` · `Möbelplaner geöffnet`.
+2. **Ziel 5 „Kontakt-CTA geklickt" löschen** — oder, wenn die Historie im Bericht
+   sichtbar bleiben soll, umbenennen in `[inaktiv] Kontakt-CTA` und das Muster auf
+   einen nie zutreffenden Wert ändern (z. B. `__deaktiviert__`).
+3. Ziele 1–4 unverändert aktiv lassen.
+
+> Der Ziel-Bestand lässt sich jederzeit gegenprüfen:
+> ```bash
+> set -a && . ./.env.local && set +a
+> curl -s -X POST "${NEXT_PUBLIC_MATOMO_URL}index.php" \
+>   -d "module=API&method=Goals.getGoals&idSite=${NEXT_PUBLIC_MATOMO_SITE_ID}&format=JSON&token_auth=${MATOMO_TOKEN_AUTH}"
+> ```
 
 > Historische Daten bleiben unberührt: Matomo berechnet Ziele zum Zeitpunkt der
 > Messung. Der Bruch in der Zeitreihe ist gewollt — vorher wurden Seitenwechsel

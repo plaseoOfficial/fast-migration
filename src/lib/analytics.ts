@@ -19,7 +19,11 @@ type EventProps = Record<string, EventWert>;
  * Link zur Kontaktseite, keine Kontaktaufnahme. Seit die Floating-Buttons auf
  * jeder Seite stehen, würde dieser Event die Zielzahlen dominieren und die
  * echten Leads (Formular, Anruf) verwässern — deshalb „Engagement".
- * Conversion-Definition und Matomo-Ziele: docs/seo/tracking.md.
+ *
+ * ACHTUNG: Die Matomo-Ziele matchen auf die AKTION, nicht auf die Kategorie.
+ * Diese Zuordnung schaltet das Ziel „Kontakt-CTA geklickt" also NICHT ab — das
+ * muss im Matomo-Backend passieren. Ziel-Inventar, Begründung und Anleitung:
+ * docs/seo/tracking.md.
  */
 const MATOMO_KATEGORIE: Record<string, string> = {
   "Kontaktformular gesendet": "Kontakt",
