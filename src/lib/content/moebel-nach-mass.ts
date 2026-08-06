@@ -100,7 +100,7 @@ export const mnmTypische = {
 export const mnmWarum = {
   heading: "Warum Maßmöbel aus eigener Fertigung überzeugen",
   paragraph:
-    "Ihre Möbel nach Maß fertigen wir vollständig in Espelkamp, in unserem eigenen [Meisterbetrieb](/ueber-uns/). Stabile Konstruktionen und Präzision bis ins Detail sorgen dafür, dass Möbel und Raum eine Einheit bilden. Ob Kleiderschrank, Kommode, Regal oder Sideboard: Jedes Stück wird auf Ihre Bedürfnisse zugeschnitten, aus langlebigen Materialien sauber verarbeitet. Lieferung und Montage übernimmt unser eigenes Team.",
+    "Ihre Möbel nach Maß fertigen wir vollständig in Espelkamp, in unserem eigenen [Meisterbetrieb](/ueber-uns/). Stabile Konstruktionen und Präzision bis ins Detail sorgen dafür, dass Möbel und Raum eine Einheit bilden. Ob Kleiderschrank, Kommode, Regal oder Sideboard: Jedes Stück wird auf Ihre Bedürfnisse zugeschnitten, aus langlebigen Materialien sauber verarbeitet. Lieferung und Montage übernimmt unser eigenes Team. Was Maßmöbel ausmacht und wann sie sich lohnen, lesen Sie im [Ratgeber Möbel nach Maß](/ratgeber/).",
   images: [
     { src: "/images/2025/11/20231204_095459232_iOS-scaled.jpg", alt: "Moderne Küche in Grau und Weiß", width: 600, height: 450 },
     { src: "/images/2025/11/DSC_0001.jpg", alt: "Moderner Schreibtisch", width: 600, height: 400 },

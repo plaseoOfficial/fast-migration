@@ -92,6 +92,7 @@ export const NAV_ITEMS: NavItem[] = [
     items: [
       { label: "Über uns", href: "/ueber-uns/" },
       { label: "Referenzen", href: "/referenzen/" },
+      { label: "Ratgeber", href: "/ratgeber/" },
     ],
   },
   { label: "Kontakt", kind: "cta", href: "/kontakt/" },

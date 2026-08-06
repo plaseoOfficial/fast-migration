@@ -192,7 +192,7 @@ export const FOOTER_LINKS = {
     { label: "Leistungen", href: "/moebel-nach-mass/" },
     { label: "Über uns", href: "/ueber-uns/" },
     { label: "Referenzen", href: "/referenzen/" },
-    // "Ratgeber" kehrt zurück, sobald /ratgeber/ gebaut ist (Launch-Regel: keine Dead-Links).
+    { label: "Ratgeber", href: "/ratgeber/" },
     { label: "Möbelplaner", href: "https://moebelplaner.fast-systemmoebel.de/" },
     { label: "Kontakt", href: "/kontakt/" },
   ],

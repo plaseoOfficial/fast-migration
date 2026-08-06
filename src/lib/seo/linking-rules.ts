@@ -89,6 +89,9 @@ export const PAGES: PageNode[] = [
 
   // Planned neutral trust/info pages (backlog targets)
   { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "referenzen" },
+  // Neutraler Ratgeber-Hub (Ebene 1): ordnet ein + verteilt in die Cluster.
+  // audience "neutral" ⇒ die Verteiler-Links in privat-Cluster gelten nicht als Cross-Silo.
+  { slug: "/ratgeber/", type: "pillar-hub", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "ratgeber" },
   { slug: "/ablauf-massanfertigung/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/liefergebiet-montage/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/faq/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
@@ -294,6 +297,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigte Möbel", "individuelle Möbel"],
     brand: ["Fast Systemmöbel Möbel nach Maß"],
     descriptive: ["Möbel nach Maß für Zuhause", "zum Möbel-Bereich", "alle Möbel nach Maß"],
+  },
+  "/ratgeber/": {
+    exact: ["Möbel nach Maß Ratgeber"],
+    partial: ["Ratgeber Möbel nach Maß", "Ratgeber für Möbel nach Maß"],
+    brand: ["Fast Systemmöbel Ratgeber"],
+    descriptive: ["zum Ratgeber", "Wissenswertes rund um Möbel nach Maß", "Ratgeber lesen"],
   },
   "/gewerbe/": {
     exact: ["Gewerbeeinrichtung"],
