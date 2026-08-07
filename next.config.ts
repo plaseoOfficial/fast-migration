@@ -32,9 +32,9 @@ const nextConfig: NextConfig = {
       { source: "/produkte/kuechen.html", destination: "/kuechen-nach-mass/", permanent: true },
       { source: "/produkte/ladenbau.html", destination: "/ladenbau/", permanent: true },
       { source: "/produkte/bueroeinrichtungen.html", destination: "/bueroeinrichtung/", permanent: true },
-      { source: "/produkte/badezimmer.html", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /badmoebel-nach-mass/
-      { source: "/produkte/einbauschraenke.html", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/
-      { source: "/produkte/hwr.html", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /hauswirtschaftsraum/
+      { source: "/produkte/badezimmer.html", destination: "/badmoebel-nach-mass/", permanent: true },
+      { source: "/produkte/einbauschraenke.html", destination: "/einbauschraenke-nach-mass/", permanent: true },
+      { source: "/produkte/hwr.html", destination: "/hauswirtschaftsraum/", permanent: true },
       // --- Altsite: Unternehmens- & Pflichtseiten ---
       { source: "/unternehmen.html", destination: "/ueber-uns/", permanent: true },
       { source: "/kontakt.html", destination: "/kontakt/", permanent: true },
