@@ -1,31 +1,91 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { PhoneIcon, MessageIcon } from "@/components/icons";
 
 /** Zentrale Telefonnummer — identisch zu Kontaktseite und Leistungsseiten. */
 const TELEFON_HREF = "tel:+4957719138312";
 
 /**
+ * Die Hero-Sektion der aktuellen Seite. Die Startseite markiert ihre Hero mit
+ * `data-hero` (sie steckt im `OpeningOverlap`-Wrapper, ist also kein direktes
+ * Kind von `<main>`); auf allen anderen Seiten ist die Hero die erste
+ * `<section>` direkt im `<main>`. `querySelector` liefert bei einer Selektorliste
+ * das erste Element in Dokumentreihenfolge — auf der Startseite also die Hero.
+ */
+const HERO_SELECTOR = "main [data-hero], main > section";
+
+/** Fallback ohne auffindbare Hero: knapp eine Bildschirmhöhe Scroll. */
+const FALLBACK_RATIO = 0.8;
+
+/**
+ * Scroll-Distanz, ab der die Hero durch ist. Jede Hero sitzt ganz oben im
+ * Dokument, also ist ihre eigene Höhe exakt die Schwelle: `scrollY >= Höhe`
+ * heißt, die Hero ist oben aus dem Viewport raus und die erste Sektion steht.
+ *
+ * Bewusst Geometrie statt IntersectionObserver: die Startseiten-Hero wird von
+ * `OpeningOverlap` gepinnt (GSAP setzt `position: fixed`) und bleibt für einen
+ * Observer damit dauerhaft „sichtbar", obwohl die Discover-Sektion längst
+ * darübergeschoben ist. `offsetHeight` bleibt vom Pin unberührt.
+ */
+function heroThreshold(hero: HTMLElement | null) {
+  return hero ? hero.offsetHeight : window.innerHeight * FALLBACK_RATIO;
+}
+
+/**
  * Feste Kontakt-Leiste an der rechten Bildschirmkante, vertikal mittig — dasselbe
- * Muster, das bei TB Jaguar und Family Umzüge messbar Leads bringt, hier in Fasts
+ * Muster, das bei TB Jaguar und Family Umzügen messbar Leads bringt, hier in Fasts
  * Formsprache: goldener Telefon-Button (Anruf = die harte Conversion), darunter ein
  * dunkler Button zur Beratungsanfrage. Beim Hover fährt links das Label aus.
  *
  * Zwei Kanäle statt drei: Fast hat weder WhatsApp noch eine öffentliche E-Mail —
  * ein Button ohne dahinterliegenden Kanal wäre eine Sackgasse.
  *
- * Reine Links, kein State ⇒ Server Component. Einmal im `(site)`-Layout gerendert
- * und damit auf jeder öffentlichen Seite präsent. `z-40` hält die Leiste unter dem
- * Header (`z-50`) und dem mobilen Menü (`z-60`).
+ * SICHTBARKEIT: Über der Hero soll nichts stören — die Leiste fährt erst von rechts
+ * ein, wenn die Hero durchgescrollt ist und die erste Sektion steht (Schwelle:
+ * `heroThreshold`). Scrollt man zurück nach oben, fährt sie wieder aus. Im
+ * versteckten Zustand macht `inert` die Links weder klick- noch fokussierbar,
+ * damit sie nicht per Tab erreichbar sind, während sie unsichtbar sind.
+ *
+ * `z-40` hält die Leiste unter dem Header (`z-50`) und dem mobilen Menü (`z-60`).
  *
  * TRACKING: `data-track-zone="Floating-Button"` — `AnalyticsEvents` liest die Zone
  * beim Klick aus und stellt sie dem Matomo-Event-Namen voran, damit im Bericht
  * sichtbar ist, welche Leads über diese Leiste kamen (siehe docs/seo/tracking.md).
  */
 export function FloatingActionButtons() {
+  const pathname = usePathname();
+  const [visible, setVisible] = useState(false);
+
+  // Nach jedem Seitenwechsel neu messen: die Hero ist dann eine andere.
+  useEffect(() => {
+    const hero = document.querySelector<HTMLElement>(HERO_SELECTOR);
+    let threshold = heroThreshold(hero);
+
+    const update = () => setVisible(window.scrollY >= threshold);
+    const remeasure = () => {
+      threshold = heroThreshold(hero);
+      update();
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", remeasure);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", remeasure);
+    };
+  }, [pathname]);
+
   return (
     <div
       data-track-zone="Floating-Button"
-      className="fixed top-1/2 right-0 z-40 flex -translate-y-1/2 flex-col"
+      inert={!visible}
+      className={`fixed top-1/2 right-0 z-40 flex -translate-y-1/2 flex-col transition-[translate,opacity] duration-300 ease-out motion-reduce:transition-none ${
+        visible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+      }`}
     >
       {/* Anruf — Fast-Gelb */}
       <a
