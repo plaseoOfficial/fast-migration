@@ -8,17 +8,11 @@
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 1,
+      "Warnung": 0,
       "Hinweis": 4
     }
   },
   "findings": [
-    {
-      "severity": "Warnung",
-      "check": "budget",
-      "message": "/referenzen/: 11 Body-Links > Budget 10 (PageRank-Verdünnung).",
-      "page": "/referenzen/"
-    },
     {
       "severity": "Hinweis",
       "check": "muss-backlog",

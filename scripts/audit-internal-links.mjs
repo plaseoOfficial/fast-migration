@@ -100,25 +100,32 @@ function inlineLinksFromString(text, out) {
   while ((m = re.exec(text)) !== null) out.push({ href: m[2], anchor: m[1], inline: true });
 }
 
-/** Recursively walk a data value, collecting { href, anchor } pairs. */
-function walkValue(val, out, seen = new Set()) {
+/**
+ * Recursively walk a data value, collecting { href, anchor } pairs.
+ *
+ * `crumb` marks links that come from a nested `breadcrumb:` array (convention in
+ * 16 of the content modules: `<slug>Hero.breadcrumb`). They stay in the link list —
+ * a dead breadcrumb must still be caught — but they are NOT body links and are
+ * excluded from the budget in CHECK 5.
+ */
+function walkValue(val, out, seen = new Set(), crumb = false) {
   if (!val || typeof val !== "object" || seen.has(val)) return;
   seen.add(val);
   if (Array.isArray(val)) {
     for (const v of val) {
       if (typeof v === "string") inlineLinksFromString(v, out);
-      else walkValue(v, out, seen);
+      else walkValue(v, out, seen, crumb);
     }
     return;
   }
-  if (typeof val.href === "string") out.push({ href: val.href, anchor: pickAnchor(val) });
+  if (typeof val.href === "string") out.push({ href: val.href, anchor: pickAnchor(val), crumb });
   for (const [k, v] of Object.entries(val)) {
     if (typeof v === "string") inlineLinksFromString(v, out);
     if (typeof v === "string" && /href$/i.test(k) && k.toLowerCase() !== "href") {
-      out.push({ href: v, anchor: anchorForHrefKey(val, k) });
+      out.push({ href: v, anchor: anchorForHrefKey(val, k), crumb });
     }
   }
-  for (const v of Object.values(val)) walkValue(v, out, seen);
+  for (const [k, v] of Object.entries(val)) walkValue(v, out, seen, crumb || k === "breadcrumb");
 }
 
 // Matches plain `href` plus suffixed keys (`ctaHref`, `primaryHref`, `gewerbeHref`, …)
@@ -359,7 +366,17 @@ async function main() {
     }
 
     // CHECK 5: link budget
-    const bodyCount = targetSet.size + outgoing.filter((l) => isExternal(l.href)).length;
+    // Breadcrumb-Links zählen NICHT mit: sie sind Navigation, nicht Body-Content,
+    // stehen auf jeder Seite ab Ebene 2 und sind für das BreadcrumbList-Schema
+    // Pflicht. Sie mitzuzählen belastete jede Seite still um einen Budget-Platz —
+    // bei /referenzen/ war genau das der Grund für eine Dauer-Warnung (11 > 10),
+    // obwohl der elfte „Body-Link" die Breadcrumb auf `/` war. `targetSet` bleibt
+    // unverändert: die MUSS-Prüfungen oben dürfen eine Breadcrumb weiterhin als
+    // erfüllten Pflicht-Link akzeptieren.
+    const bodyTargets = new Set(
+      outgoing.filter((l) => isInternal(l.href) && !l.crumb).map((l) => normSlug(l.href)),
+    );
+    const bodyCount = bodyTargets.size + outgoing.filter((l) => isExternal(l.href)).length;
     if (node.contentModule && bodyCount > rule.maxBodyLinks) {
       add("Warnung", "budget", `${node.slug}: ${bodyCount} Body-Links > Budget ${rule.maxBodyLinks} (PageRank-Verdünnung).`, { page: node.slug });
     }
