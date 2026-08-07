@@ -26,7 +26,7 @@ export const kuechenIntroStats = {
   sinceSub: "Bauen wir Küchen nach Maß.",
   heading: "Ihre Küche: präzise geplant, sauber gebaut",
   introBefore:
-    "Fast Systemmöbel aus Espelkamp plant Ihre Küche von der ersten Skizze bis zur Montage. Wir nehmen uns Zeit für ein kostenloses Aufmaß vor Ort und nutzen jeden",
+    "Fast Systemmöbel aus Espelkamp plant Ihre Einbauküche nach Maß von der ersten Skizze bis zur Montage. Wir nehmen uns Zeit für ein kostenloses Aufmaß vor Ort und nutzen jeden",
   introBold: "Zentimeter",
   introAfter:
     ". So entsteht eine Küche, die genau in Ihren Raum passt, sich an Ihren Alltag anpasst und über Jahre hält.",
@@ -125,7 +125,7 @@ export const kuechenTypische = {
 export const kuechenWarum = {
   heading: "Warum die Küche vom Tischler mehr kann",
   paragraph:
-    "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Wir bauen Ihre Küche in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen. Wie das in der Praxis aussieht, zeigen unsere [realisierten Küchenprojekte](/referenzen/).",
+    "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Ihre Einbauküche bauen wir in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen. Wie das in der Praxis aussieht, zeigen unsere [realisierten Küchenprojekte](/referenzen/).",
   images: [
     { src: "/images/2026/05/variante_1778229163946_1-scaled.jpg", alt: "Graue Küche nach Maß mit Holzdecke und Insel", width: 600, height: 400 },
     { src: "/images/2025/11/IMG_9387-scaled.jpg", alt: "Küche nach Maß mit grifflosen Fronten und Holzrückwand", width: 600, height: 800 },
