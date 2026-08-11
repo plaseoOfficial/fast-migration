@@ -1,7 +1,7 @@
 # Tracking — Events, Zonen & Conversion-Definition
 
-Was gemessen wird, was davon als **Conversion** zählt und was im Matomo-Backend
-eingestellt sein muss. Code: `src/lib/analytics.ts` (Versand) und
+Was gemessen wird, was davon als **Conversion** zählt und wie die Matomo-Ziele
+dazu konfiguriert sind. Code: `src/lib/analytics.ts` (Versand) und
 `src/components/AnalyticsEvents.tsx` (delegierter Klick-Listener).
 
 ## 1. Wie ein Event entsteht
@@ -73,37 +73,70 @@ Deshalb liegt er seit der Floating-Button-Einführung in der Kategorie
 **`Engagement`** statt `Kontakt`; die Kategorie `Kontakt` bezeichnet damit
 ausschließlich echte Kontaktaufnahmen.
 
-**Die Kategorie-Umstellung allein schaltet das Ziel NICHT ab.** Am 2026-08-05 über
-die Matomo-API (`Goals.getGoals`, Site-ID 3) geprüft — alle fünf Ziele matchen auf
-`event_action`, keines auf die Kategorie:
+**Wichtig zum Verständnis:** die Ziele matchen auf die **Aktion**, nicht auf die
+Kategorie. Die Umstellung auf `Engagement` allein hätte das Ziel deshalb nicht
+abgeschaltet — es musste im Backend gelöscht werden. Die Umstellung bleibt
+trotzdem richtig: sie hält Berichte und Segmente ehrlich und verhindert, dass der
+Event später über ein kategoriebasiertes Ziel zurückkehrt.
 
-| Ziel | Name | matcht auf `event_action` (exakt) | Status |
+### Ziel-Bestand (Site-ID 3, Stand 2026-08-05)
+
+| Ziel | Name | matcht auf `event_action` (exakt) |
+|---|---|---|
+| 1 | Kontaktformular abgeschickt | `Kontaktformular gesendet` |
+| 2 | Telefon-Klick | `Telefon geklickt` |
+| 3 | E-Mail-Klick | `E-Mail geklickt` |
+| 4 | Möbelplaner geöffnet | `Möbelplaner geöffnet` |
+
+**Ziel 5 „Kontakt-CTA geklickt" wurde am 2026-08-05 gelöscht** (`Goals.deleteGoal`,
+per API bestätigt: 4 aktive Ziele, Ziel 5 nicht mehr vorhanden). Die Zahlen davor
+zeigen, warum — Conversions je Ziel und Monat, letzte drei Monate:
+
+| Ziel | −2 | −1 | akt. |
 |---|---|---|---|
-| 1 | Kontaktformular abgeschickt | `Kontaktformular gesendet` | ✅ behalten |
-| 2 | Telefon-Klick | `Telefon geklickt` | ✅ behalten |
-| 3 | E-Mail-Klick | `E-Mail geklickt` | ✅ behalten (feuert erst, wenn eine E-Mail-Adresse online steht) |
-| 4 | Möbelplaner geöffnet | `Möbelplaner geöffnet` | ✅ behalten |
-| 5 | **Kontakt-CTA geklickt** | `Kontakt-CTA geklickt` | ❌ **muss weg** |
+| Kontaktformular abgeschickt | 4 | 7 | 1 |
+| Telefon-Klick | 0 | 1 | 1 |
+| E-Mail-Klick | 1 | 0 | 0 |
+| Möbelplaner geöffnet | 7 | 19 | 3 |
+| ~~Kontakt-CTA geklickt~~ | ~~22~~ | ~~25~~ | ~~8~~ |
 
-Die Kategorie ist für das Matching also irrelevant — **Ziel 5 zählt weiter, bis es
-im Backend entfernt wird.** Die Umstellung auf `Engagement` bleibt trotzdem richtig:
-sie hält Berichte und Segmente ehrlich und verhindert, dass der Event später über
-ein kategoriebasiertes Ziel zurückkehrt.
+Im Vormonat standen **25 CTA-Klicks gegen 8 echte Leads** (Formular + Telefon) —
+rund drei Viertel der gemeldeten „Conversions" waren reine Seitenwechsel.
 
-### Aufgabe im Matomo-Backend (einmalig, zwingend)
+> **Falls das Ziel je wiederhergestellt werden soll**, war es so definiert:
+> `match_attribute: event_action` · `pattern_type: exact` ·
+> `pattern: "Kontakt-CTA geklickt"` · `case_sensitive: 0` · `allow_multiple: 0` ·
+> `revenue: 0`
 
-1. *Ziele → Ziele verwalten* öffnen.
-2. **Ziel 5 „Kontakt-CTA geklickt" löschen** — oder, wenn die Historie im Bericht
-   sichtbar bleiben soll, umbenennen in `[inaktiv] Kontakt-CTA` und das Muster auf
-   einen nie zutreffenden Wert ändern (z. B. `__deaktiviert__`).
-3. Ziele 1–4 unverändert aktiv lassen.
+### ⚠️ Achtung beim Lead-Trend — der Rückgang ist ein Messartefakt
 
-> Der Ziel-Bestand lässt sich jederzeit gegenprüfen:
-> ```bash
-> set -a && . ./.env.local && set +a
-> curl -s -X POST "${NEXT_PUBLIC_MATOMO_URL}index.php" \
->   -d "module=API&method=Goals.getGoals&idSite=${NEXT_PUBLIC_MATOMO_SITE_ID}&format=JSON&token_auth=${MATOMO_TOKEN_AUTH}"
-> ```
+Matomo hat die **bereits archivierten Zeiträume nicht neu berechnet**. Am
+2026-08-05 nach dem Löschen geprüft: die Gesamt-Conversions der Vormonate
+enthalten die CTA-Klicks unverändert weiter (34 / 52 / 13). Ab jetzt zählen nur
+noch echte Leads — der Trend **sieht** deshalb aus wie ein Einbruch, obwohl sich
+nichts verschlechtert hat.
+
+Vergleichsbasis für Berichte (Portfolio-Snapshot, Retainer-Reporting) — die
+zweite Spalte ist die ehrliche:
+
+| Monat | wie archiviert (mit CTA) | echte Leads |
+|---|---|---|
+| 2026-06 | 34 | **12** |
+| 2026-07 | 52 | **27** |
+| 2026-08 (bis 05.) | 13 | **5** |
+
+Ab 2026-08-05 sind gemeldete und echte Zahl identisch. **Bei jedem Vergleich mit
+Zeiträumen vor diesem Datum die rechte Spalte verwenden** — sonst wird eine
+Bereinigung als Leistungsabfall gelesen. Betrifft insbesondere den
+Portfolio-Snapshot, der Ziel-Conversions als Lead-KPI zieht.
+
+Ziel-Bestand jederzeit gegenprüfen:
+
+```bash
+set -a && . ./.env.local && set +a
+curl -s -X POST "${NEXT_PUBLIC_MATOMO_URL}index.php" \
+  -d "module=API&method=Goals.getGoals&idSite=${NEXT_PUBLIC_MATOMO_SITE_ID}&format=JSON&token_auth=${MATOMO_TOKEN_AUTH}"
+```
 
 > Historische Daten bleiben unberührt: Matomo berechnet Ziele zum Zeitpunkt der
 > Messung. Der Bruch in der Zeitreihe ist gewollt — vorher wurden Seitenwechsel
