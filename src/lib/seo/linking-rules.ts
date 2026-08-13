@@ -72,7 +72,7 @@ export const PAGES: PageNode[] = [
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-planen" },
   { slug: "/kuechen-nach-mass/l-kueche-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
-  { slug: "/kuechen-nach-mass/kuechenzeile-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
+  { slug: "/kuechen-nach-mass/kuechenzeile-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kuechenzeile-nach-mass" },
 
   // Gewerbe silo (flat URLs; clusters of the Gewerbe hub by topic, not by nesting)
   { slug: "/gewerbe/", type: "pillar-hub", silo: "gewerbe", audience: "gewerbe", parent: "/", built: true, contentModule: "gewerbe" },
@@ -336,6 +336,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Beratung anfragen", "Angebot anfordern"],
     brand: [],
     descriptive: ["Kostenlose Beratung anfragen", "Beratungsgespräch vereinbaren", "jetzt anfragen"],
+  },
+  "/kuechen-nach-mass/kuechenzeile-nach-mass/": {
+    exact: ["Küchenzeile nach Maß"],
+    partial: ["einzeilige Küche nach Maß", "Küchenzeile vom Tischler", "einzeilige Küche"],
+    brand: ["Fast Systemmöbel Küchenzeile"],
+    descriptive: ["Küchenzeile nach Maß ansehen", "einzeilige Küche planen"],
   },
   "/einbauschraenke-nach-mass/einbauschrank-dachschraege/": {
     exact: ["Schrank für Dachschräge nach Maß"],

@@ -90,7 +90,7 @@ export const kuechenTypische = {
     {
       title: "Küchenzeilen",
       description:
-        "Klare, gerade Küchenzeilen, die jeden Meter Wand ausnutzen. Wir bauen Wand zu Wand, ohne Passleisten und ohne Lücken. Ideal für offene Wohnküchen und schmale Grundrisse.",
+        "Die [Küchenzeile nach Maß](/kuechen-nach-mass/kuechenzeile-nach-mass/) nutzt jeden Meter Wand aus. Wir bauen Wand zu Wand, ohne Passleisten und ohne Lücken. Ideal für offene Wohnküchen und schmale Grundrisse.",
     },
     {
       title: "L- und U-Küchen",
