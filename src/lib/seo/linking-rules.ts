@@ -313,12 +313,6 @@ export const ANCHORS: Record<string, AnchorSet> = {
     brand: ["Fast Systemmöbel Küchenplanung"],
     descriptive: ["so planen Sie Ihre Küche", "unser Ratgeber zur Küchenplanung", "Küchenplanungs-Ratgeber"],
   },
-  "/kuechen-nach-mass/kuechenzeile-nach-mass/": {
-    exact: ["Küchenzeile nach Maß"],
-    partial: ["einzeilige Küche nach Maß", "Singleküche nach Maß", "Küchenzeile vom Tischler"],
-    brand: ["Fast Systemmöbel Küchenzeile"],
-    descriptive: ["Küchenzeile für kleine Räume", "einzeilige Küche ansehen"],
-  },
   "/kuechen-nach-mass/kueche-mit-dachschraege/": {
     exact: ["Küche mit Dachschräge"],
     partial: ["Dachschrägen-Küche nach Maß", "Küche unterm Dach", "Küche mit Dachschräge nach Maß"],
