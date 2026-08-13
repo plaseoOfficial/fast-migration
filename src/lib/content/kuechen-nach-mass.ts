@@ -34,7 +34,7 @@ export const kuechenIntroStats = {
   bandAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte",
   col1Title: "Küche planen",
   col1Body:
-    "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, danach richten wir die Küche aus. Markengeräte aller gängigen Hersteller planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube. Die Geräte wählen Sie frei.",
+    "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, danach richten wir die Küche aus. Markengeräte aller gängigen Hersteller planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube. Die Geräte wählen Sie frei. Wie Sie sich vorbereiten, zeigt unser Ratgeber, [Ihre Küche Schritt für Schritt zu planen](/kuechen-nach-mass/kueche-planen/).",
   col1CtaLabel: "Jetzt Küche anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:

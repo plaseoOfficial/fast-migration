@@ -70,7 +70,7 @@ export const PAGES: PageNode[] = [
   { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
-  { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
+  { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-planen" },
   { slug: "/kuechen-nach-mass/l-kueche-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kuechenzeile-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kuechenzeile-nach-mass" },
 
@@ -306,6 +306,24 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigte Küche", "individuelle Küche", "Maßküche vom Tischler"],
     brand: ["Fast Systemmöbel Küchen"],
     descriptive: ["unsere Küchenangebote", "zum Küchenbereich", "alle Küchen nach Maß"],
+  },
+  "/kuechen-nach-mass/kueche-planen/": {
+    exact: ["Küche planen"],
+    partial: ["Küche Schritt für Schritt planen", "Küchenplanung"],
+    brand: ["Fast Systemmöbel Küchenplanung"],
+    descriptive: ["so planen Sie Ihre Küche", "unser Ratgeber zur Küchenplanung", "Küchenplanungs-Ratgeber"],
+  },
+  "/kuechen-nach-mass/kuechenzeile-nach-mass/": {
+    exact: ["Küchenzeile nach Maß"],
+    partial: ["einzeilige Küche nach Maß", "Singleküche nach Maß", "Küchenzeile vom Tischler"],
+    brand: ["Fast Systemmöbel Küchenzeile"],
+    descriptive: ["Küchenzeile für kleine Räume", "einzeilige Küche ansehen"],
+  },
+  "/kuechen-nach-mass/kueche-mit-dachschraege/": {
+    exact: ["Küche mit Dachschräge"],
+    partial: ["Dachschrägen-Küche nach Maß", "Küche unterm Dach", "Küche mit Dachschräge nach Maß"],
+    brand: ["Fast Systemmöbel Dachschrägen-Küche"],
+    descriptive: ["Küche für die Dachschräge planen", "Dachschrägen-Küche ansehen"],
   },
   "/moebelplaner/": {
     exact: ["Möbelplaner"],
