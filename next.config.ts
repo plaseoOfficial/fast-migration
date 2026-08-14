@@ -45,11 +45,11 @@ const nextConfig: NextConfig = {
       { source: "/unser-standard/qualitaet-nachhaltigkeit.html", destination: "/ueber-uns/", permanent: true },
       { source: "/unser-standard/service-beratung.html", destination: "/ueber-uns/", permanent: true }, // INTERIM → /ablauf-massanfertigung/
       // --- Kannibalisierungs-Auflösung: alte Ratgeber-URLs → Cluster ---
-      { source: "/ratgeber/kueche-planen-schritt-fuer-schritt/", destination: "/kuechen-nach-mass/", permanent: true }, // INTERIM → /kuechen-nach-mass/kueche-planen/
+      { source: "/ratgeber/kueche-planen-schritt-fuer-schritt/", destination: "/kuechen-nach-mass/kueche-planen/", permanent: true },
       { source: "/ratgeber/kueche-nach-mass-kosten/", destination: "/kuechen-nach-mass/", permanent: true }, // INTERIM → /kuechen-nach-mass/kueche-nach-mass-kosten/
       { source: "/ratgeber/kueche-beim-neubau-planen/", destination: "/kuechen-nach-mass/", permanent: true }, // INTERIM → /kuechen-nach-mass/kueche-im-neubau/
       { source: "/ratgeber/massmoebel-kosten-schrank/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/einbauschrank-kosten/
-      { source: "/ratgeber/einbauschrank-dachschraege/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/einbauschrank-dachschraege/
+      { source: "/ratgeber/einbauschrank-dachschraege/", destination: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", permanent: true },
       { source: "/ratgeber/begehbaren-kleiderschrank-planen/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/
       // --- Kannibalisierungs-Auflösung: nicht gebaute Architektur-Varianten ---
       { source: "/bueroeinrichtung/empfangstresen-nach-mass/", destination: "/ladenbau/", permanent: true }, // INTERIM → /ladenbau/empfangstresen-nach-mass/

@@ -337,12 +337,6 @@ export const ANCHORS: Record<string, AnchorSet> = {
     brand: [],
     descriptive: ["Kostenlose Beratung anfragen", "Beratungsgespräch vereinbaren", "jetzt anfragen"],
   },
-  "/kuechen-nach-mass/kuechenzeile-nach-mass/": {
-    exact: ["Küchenzeile nach Maß"],
-    partial: ["einzeilige Küche nach Maß", "Küchenzeile vom Tischler", "einzeilige Küche"],
-    brand: ["Fast Systemmöbel Küchenzeile"],
-    descriptive: ["Küchenzeile nach Maß ansehen", "einzeilige Küche planen"],
-  },
   "/einbauschraenke-nach-mass/einbauschrank-dachschraege/": {
     exact: ["Schrank für Dachschräge nach Maß"],
     partial: ["Dachschrägenschrank nach Maß", "Schrank unter der Dachschräge", "Drempelschrank nach Maß"],
