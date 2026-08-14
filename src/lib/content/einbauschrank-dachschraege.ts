@@ -66,7 +66,7 @@ export const dachIntroStats = {
   counterSuffix: " km",
   col3Title: "Montage-Radius um Espelkamp",
   col3Body:
-    "Wir nehmen die Schräge bei Ihnen vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Osnabrück und Bielefeld.",
+    "Wir nehmen die Schräge bei Ihnen vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Unter derselben Schräge planen wir auf Wunsch auch Ihre [Küche mit Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/).",
   col3CtaLabel: "Dachschräge online planen",
   col3CtaHref: "/moebelplaner/",
 };
