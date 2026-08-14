@@ -195,7 +195,7 @@ export const kuechenFaq = {
     {
       question: "Passt eine Küche nach Maß auch in einen schwierigen Grundriss oder unter eine Dachschräge?",
       answer:
-        "Genau dafür ist sie da. Schräge Wände, Dachschrägen, Nischen und niedrige Decken nutzen wir gezielt aus. Wir bauen Wand zu Wand dort, wo Standardküchen aufhören, und setzen auch ungewöhnliche Vorstellungen um.",
+        "Genau dafür ist sie da. Schräge Wände, Dachschrägen, Nischen und niedrige Decken nutzen wir gezielt aus. Wir bauen Wand zu Wand dort, wo Standardküchen aufhören, und setzen auch ungewöhnliche Vorstellungen um. Wie das unterm Dach aussieht, zeigt unsere [Küche mit Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/).",
     },
   ],
 };

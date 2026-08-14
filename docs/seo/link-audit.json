@@ -1,29 +1,49 @@
 {
   "summary": {
-    "pagesBuilt": 22,
-    "pagesPlanned": 7,
-    "linksFound": 299,
+    "pagesBuilt": 25,
+    "pagesPlanned": 5,
+    "linksFound": 338,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 0,
-      "Hinweis": 4
+      "Warnung": 2,
+      "Hinweis": 7
     }
   },
   "findings": [
     {
-      "severity": "Hinweis",
-      "check": "muss-backlog",
-      "message": "/kuechen-nach-mass/: MUSS-Link `own-cluster-spokes` noch blockiert (Ziel ungebaut). Vollständige Spoke-Abdeckung (Produktseiten)",
-      "page": "/kuechen-nach-mass/"
+      "severity": "Warnung",
+      "check": "darf-nicht",
+      "message": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/: möglicher Cross-Silo-Link → `/kuechen-nach-mass/kueche-mit-dachschraege/` (kuechen). Nur bei echtem semantischem Bezug erlaubt.",
+      "file": "src/lib/content/einbauschrank-dachschraege.ts",
+      "href": "/kuechen-nach-mass/kueche-mit-dachschraege/"
+    },
+    {
+      "severity": "Warnung",
+      "check": "darf-nicht",
+      "message": "/kuechen-nach-mass/kueche-mit-dachschraege/: möglicher Cross-Silo-Link → `/einbauschraenke-nach-mass/einbauschrank-dachschraege/` (einbauschraenke). Nur bei echtem semantischem Bezug erlaubt.",
+      "file": "src/lib/content/kueche-mit-dachschraege.ts",
+      "href": "/einbauschraenke-nach-mass/einbauschrank-dachschraege/"
     },
     {
       "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
       "page": "/kuechen-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/kuechen-nach-mass/kuechenzeile-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/kuechen-nach-mass/kuechenzeile-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/kuechen-nach-mass/kueche-mit-dachschraege/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/kuechen-nach-mass/kueche-mit-dachschraege/"
     },
     {
       "severity": "Hinweis",
@@ -36,6 +56,17 @@
       "check": "muss-backlog",
       "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/kontakt/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "sitemap",
+      "message": "/kuechen-nach-mass/kueche-planen/ ist gebaut, fehlt aber in src/app/sitemap.ts.",
+      "page": "/kuechen-nach-mass/kueche-planen/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "backlog",
+      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/kueche-planen/`."
     }
   ]
 }
