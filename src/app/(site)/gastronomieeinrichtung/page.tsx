@@ -33,7 +33,7 @@ import {
 
 const PAGE_PATH = "/gastronomieeinrichtung";
 const DESCRIPTION =
-  "Gastronomieeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Theken, Rückbuffets, Sitzbänke und Hotelmöbel – im Umkreis von 200 km montiert.";
+  "Gastronomieeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Theken, Rückbuffets, Sitzbänke und Hotelmöbel, gebaut für den täglichen Dauereinsatz.";
 
 export const metadata: Metadata = {
   title: "Gastronomieeinrichtung nach Maß: Theke, Bar & Hotel",
