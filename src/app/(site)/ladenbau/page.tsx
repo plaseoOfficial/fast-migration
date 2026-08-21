@@ -38,7 +38,7 @@ import {
 
 const PAGE_PATH = "/ladenbau";
 const DESCRIPTION =
-  "Ladenbau und Geschäftseinrichtung nach Maß aus Espelkamp: Verkaufstheken, Ladeneinrichtung und Shopkonzepte, geplant, gefertigt und im Umkreis von 200 km montiert.";
+  "Ladenbau nach Maß aus Espelkamp: Verkaufstheken, Shopkonzepte und maßgefertigte Ladeneinrichtung, geplant, gefertigt und montiert aus einer Hand.";
 
 export const metadata: Metadata = {
   title: "Ladenbau nach Maß aus Espelkamp: Theke bis Shopkonzept",
