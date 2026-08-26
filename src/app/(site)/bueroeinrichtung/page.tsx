@@ -29,7 +29,7 @@ import {
 
 const PAGE_PATH = "/bueroeinrichtung";
 const DESCRIPTION =
-  "Büroeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Schreibtische, Aktenschränke und Konferenztische – im Umkreis von 200 km montiert.";
+  "Büroeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Schreibtische, Aktenschränke und Konferenztische – alles aus einer Hand gefertigt und montiert.";
 
 export const metadata: Metadata = {
   title: "Büroeinrichtung nach Maß aus Espelkamp: Büromöbel vom Meisterbetrieb",
