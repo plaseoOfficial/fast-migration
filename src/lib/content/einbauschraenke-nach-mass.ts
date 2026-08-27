@@ -130,7 +130,7 @@ export const einbauTypische = {
 export const einbauWarum = {
   heading: "Warum der Einbauschrank vom Tischler mehr kann",
   paragraph:
-    "Ein Online-Konfigurator rechnet mit festen Rastermaßen, das Möbelhaus verkauft Standard von der Stange, mit Passleisten und Lücken. Wir bauen Ihren Einbauschrank in Espelkamp selbst, zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken und verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Vor dem Bau nehmen wir bei Ihnen Maß, statt Sie Zahlen in eine Maske eintragen zu lassen. Fronten und Materialien wählen Sie frei, bis hin zu ungewöhnlichen Kombinationen aus Massivholz und anderen Werkstoffen. Wie das aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
+    "Ein Online-Konfigurator rechnet mit festen Rastermaßen, das Möbelhaus verkauft Standard von der Stange, mit Passleisten und Lücken. Wir bauen Ihren Einbauschrank in Espelkamp selbst, zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen und der [Stauraum unter der Treppe](/einbauschraenke-nach-mass/schrank-unter-treppe/) sind für uns Alltag. Vor dem Bau nehmen wir bei Ihnen Maß, statt Sie Zahlen in eine Maske eintragen zu lassen. Fronten und Materialien wählen Sie frei, bis hin zu Massivholz und anderen Werkstoffen. Wie das aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
   images: [
     { src: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`, alt: "Einbauschrank nach Maß in Anthrazit mit beleuchtetem Regalfach neben bodentiefem Fenster", width: 1280, height: 715 },
     { src: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`, alt: "Ankleide nach Maß mit ausgezogenen Schubladen und Standspiegel", width: 1280, height: 715 },
