@@ -3,10 +3,25 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PhoneIcon, MessageIcon } from "@/components/icons";
+import { MailIcon, PhoneIcon, MessageIcon } from "@/components/icons";
 
 /** Zentrale Telefonnummer — identisch zu Kontaktseite und Leistungsseiten. */
 const TELEFON_HREF = "tel:+4957719138312";
+const EMAIL_ADDRESS = "anfrage@fast-systemmoebel.de";
+const EMAIL_SUBJECT = "Anfrage für ein Erstgespräch";
+const EMAIL_BODY = [
+  "Guten Tag,",
+  "",
+  "ich interessiere mich für ein Erstgespräch zu meinem Möbelprojekt.",
+  "",
+  "Projekt / gewünschtes Möbel:",
+  "Ort:",
+  "Telefonnummer:",
+  "Bevorzugte Rückmeldung:",
+  "",
+  "Viele Grüße",
+].join("\n");
+const EMAIL_HREF = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(EMAIL_SUBJECT)}&body=${encodeURIComponent(EMAIL_BODY)}`;
 
 /**
  * Die Hero-Sektion der aktuellen Seite. Die Startseite markiert ihre Hero mit
@@ -37,11 +52,11 @@ function heroThreshold(hero: HTMLElement | null) {
 /**
  * Feste Kontakt-Leiste an der rechten Bildschirmkante, vertikal mittig — dasselbe
  * Muster, das bei TB Jaguar und Family Umzügen messbar Leads bringt, hier in Fasts
- * Formsprache: goldener Telefon-Button (Anruf = die harte Conversion), darunter ein
- * dunkler Button zur Beratungsanfrage. Beim Hover fährt links das Label aus.
+ * Formsprache: zwei dunkelgraue Kontakt-Buttons mit einem goldenen Telefon-Button
+ * dazwischen. Beim Hover fährt links das Label aus.
  *
- * Zwei Kanäle statt drei: Fast hat weder WhatsApp noch eine öffentliche E-Mail —
- * ein Button ohne dahinterliegenden Kanal wäre eine Sackgasse.
+ * Drei direkte Kontaktwege: Telefon, Beratungsanfrage und E-Mail mit Vorlage für ein
+ * Erstgespräch.
  *
  * SICHTBARKEIT: Über der Hero soll nichts stören — die Leiste fährt erst von rechts
  * ein, wenn die Hero durchgescrollt ist und die erste Sektion steht (Schwelle:
@@ -87,27 +102,39 @@ export function FloatingActionButtons() {
         visible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
       }`}
     >
+      {/* E-Mail schreiben — Fast-Dunkel */}
+      <a
+        href={EMAIL_HREF}
+        aria-label="E-Mail schreiben mit Vorlage für ein Erstgespräch"
+        className="group/fab relative flex size-12 items-center justify-center bg-[rgb(61,61,61)] text-[rgb(237,168,33)] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all hover:brightness-125 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(237,168,33)] motion-reduce:transition-none lg:size-14"
+      >
+        <MailIcon className="size-5" />
+        <span className="pointer-events-none absolute right-full flex h-full items-center bg-[rgb(61,61,61)] px-0 font-[var(--font-poppins)] text-[15px] font-medium whitespace-nowrap text-[rgb(237,168,33)] opacity-0 shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover/fab:px-5 group-hover/fab:opacity-100 motion-reduce:transition-none">
+          E-Mail schreiben
+        </span>
+      </a>
+
       {/* Anruf — Fast-Gelb */}
       <a
         href={TELEFON_HREF}
         aria-label="Jetzt anrufen: 05771 9138312"
-        className="group/fab relative flex size-12 items-center justify-center bg-[rgb(237,168,33)] text-[rgb(61,61,61)] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all hover:brightness-95 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(61,61,61)] motion-reduce:transition-none lg:size-14"
+        className="group/fab relative flex size-12 items-center justify-center bg-[rgb(237,168,33)] text-[rgb(61,61,61)] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all hover:bg-[rgb(61,61,61)] hover:text-[rgb(237,168,33)] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(61,61,61)] motion-reduce:transition-none lg:size-14"
       >
         <PhoneIcon className="size-5" />
-        <span className="pointer-events-none absolute right-full flex h-full items-center bg-[rgb(237,168,33)] px-0 font-[var(--font-poppins)] text-[15px] font-medium whitespace-nowrap text-[rgb(61,61,61)] opacity-0 shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover/fab:px-5 group-hover/fab:opacity-100 motion-reduce:transition-none">
+        <span className="pointer-events-none absolute right-full flex h-full items-center bg-[rgb(237,168,33)] px-0 font-[var(--font-poppins)] text-[15px] font-medium whitespace-nowrap text-[rgb(61,61,61)] opacity-0 shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover/fab:bg-[rgb(61,61,61)] group-hover/fab:px-5 group-hover/fab:text-[rgb(237,168,33)] group-hover/fab:opacity-100 motion-reduce:transition-none">
           Anrufen
         </span>
       </a>
 
-      {/* Beratung anfragen — Fast-Dunkel */}
+      {/* Anfrage — Fast-Dunkel */}
       <Link
         href="/kontakt/"
-        aria-label="Beratung anfragen"
+        aria-label="Anfrage"
         className="group/fab relative flex size-12 items-center justify-center bg-[rgb(61,61,61)] text-[rgb(237,168,33)] shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all hover:brightness-125 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(237,168,33)] motion-reduce:transition-none lg:size-14"
       >
         <MessageIcon className="size-5" />
         <span className="pointer-events-none absolute right-full flex h-full items-center bg-[rgb(61,61,61)] px-0 font-[var(--font-poppins)] text-[15px] font-medium whitespace-nowrap text-[rgb(237,168,33)] opacity-0 shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover/fab:px-5 group-hover/fab:opacity-100 motion-reduce:transition-none">
-          Beratung
+          Anfrage
         </span>
       </Link>
     </div>
