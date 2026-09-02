@@ -138,7 +138,7 @@ export const wohnTypische = {
     {
       title: "Sideboard nach Maß",
       description:
-        "Das niedrige Wohnzimmermöbel mit Schubladen und Türen, ob als Kommode, Anrichte, Highboard oder Lowboard, in genau Ihrer Breite, Höhe und Tiefe.",
+        "Das niedrige Wohnzimmermöbel mit Schubladen und Türen, ob als Kommode, Anrichte, Highboard oder Lowboard, in genau Ihrer Breite, Höhe und Tiefe. Zum [Sideboard nach Maß](/wohnmoebel-nach-mass/sideboard-nach-mass/).",
     },
     {
       title: "Regal nach Maß",

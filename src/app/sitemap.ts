@@ -19,6 +19,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/badmoebel-nach-mass/", priority: 0.8 },
   { path: "/wohnmoebel-nach-mass/", priority: 0.8 },
   { path: "/wohnmoebel-nach-mass/regal-nach-mass/", priority: 0.7 },
+  { path: "/wohnmoebel-nach-mass/sideboard-nach-mass/", priority: 0.7 },
   { path: "/hauswirtschaftsraum/", priority: 0.8 },
   { path: "/gewerbe/", priority: 0.8 },
   { path: "/ladenbau/", priority: 0.8 },
