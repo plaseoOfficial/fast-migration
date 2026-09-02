@@ -143,7 +143,7 @@ export const wohnTypische = {
     {
       title: "Regal nach Maß",
       description:
-        "Offene oder gemischte Fächer als flexible Fläche für Deko, Ordner und Kleinteile, passgenau in die Nische und bis unter die Decke geplant.",
+        "Offene oder gemischte Fächer als flexible Fläche für Deko, Ordner und Kleinteile, passgenau in die Nische und bis unter die Decke geplant. Zum [Regal nach Maß](/wohnmoebel-nach-mass/regal-nach-mass/).",
     },
   ],
   row2: [
