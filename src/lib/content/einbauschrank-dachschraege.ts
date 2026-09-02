@@ -25,9 +25,9 @@ export const dachHero = {
   bgImage: `${IMG}/dachschraegenschrank-nach-mass-trapezform-schlafzimmer.jpg`,
   imageAlt:
     "Dachschrägenschrank nach Maß über die gesamte Wand, trapezförmig an beide Dachschrägen angepasst",
-  title: "Dachschrägenschrank nach Maß aus Espelkamp",
+  title: "Drempelschrank & Dachschrägenschrank nach Maß",
   intro:
-    "Wir planen und bauen Ihren Dachschrägenschrank nach Maß, der jeden Zentimeter unter der Schräge nutzt. Vom Aufmaß der Schräge bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem toten Winkel unter dem Dach ein Dachschrägenschrank, der wirklich passt.",
+    "Wir planen und bauen Ihren Drempelschrank nach Maß, der jeden Zentimeter unter der Schräge nutzt. Vom Aufmaß am Kniestock bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem toten Winkel unter dem Dach ein Dachschrägenschrank, der wirklich passt.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -77,9 +77,9 @@ export const dachIntroStats = {
  * Neubau/Altbau/Spitzboden). AEO-Surface für "Was ist ein Drempel?".
  */
 export const dachBegriffe = {
-  heading: "Kniestock, Drempel und Abseite kurz erklärt",
+  heading: "Was ist ein Drempelschrank?",
   intro:
-    "Diese Begriffe begegnen Ihnen unter dem Dach ständig, ob im Neubau, im Altbau oder im ausgebauten Spitzboden.",
+    "Ein Drempelschrank ist ein niedriger Einbauschrank direkt am Kniestock, also an der niedrigen Wand, auf der die Dachschräge aufsetzt. Er macht die Zone nutzbar, die sonst toter Winkel bleibt. Diese drei Begriffe begegnen Ihnen unter dem Dach ständig, im Neubau wie im Altbau:",
   segments: [
     {
       title: "Kniestock",
@@ -90,8 +90,8 @@ export const dachBegriffe = {
       body: "Ein anderes Wort für den Kniestock. Ein Drempelschrank stellt sich genau in diese niedrige Zone und macht sie zu Stauraum.",
     },
     {
-      title: "Abseite",
-      body: "Der flache Raum hinter der Schräge. Ohne Ausbau bleibt er ungenutzt, mit Türen oder Auszügen wird er zugänglich.",
+      title: "Abseite und Abseitenschrank",
+      body: "Die Abseite ist der flache Raum hinter der Schräge. Ohne Ausbau bleibt er ungenutzt. Ein Abseitenschrank macht ihn über Türen oder Auszüge zugänglich.",
     },
   ],
 };
@@ -99,7 +99,7 @@ export const dachBegriffe = {
 export const dachCtas = {
   intro: {
     image: `${IMG}/drempelschrank-kniestock-nach-mass-betonoptik.jpg`,
-    heading: "Ihr Dachschrägenschrank beginnt mit einem Blick auf Ihre Schräge",
+    heading: "Ihr Drempelschrank beginnt mit einem Blick auf Ihre Schräge",
     linkText: "Sprechen Sie mit uns über Ihre Dachschräge",
     href: "/kontakt/",
   },
@@ -159,7 +159,7 @@ export const dachTypische = {
     "Einbauschrank an Dachschräge nach Maß in Anthrazit mit beleuchtetem offenem Eckregal",
   image2: `${IMG}/einbauschrank-dachschraege-nach-mass-weiss-kniestock.jpg`,
   image2Alt:
-    "Weißer Einbauschrank unter der Dachschräge nach Maß am Kniestock mit LED-Lichtleiste und Holzwand",
+    "Weißer Drempelschrank nach Maß am Kniestock mit LED-Lichtleiste und Holzwand",
   row1: [
     {
       title: "Kleiderschrank an der Dachschräge",
@@ -169,7 +169,7 @@ export const dachTypische = {
     {
       title: "Drempelschrank am Kniestock",
       description:
-        "Macht die Abseite zugänglich statt sie hinter Rigips zu verstecken, mit Türen bis genau zum Beginn der Schräge.",
+        "Als Abseitenschrank macht er den Raum hinter der Schräge zugänglich, statt ihn hinter Rigips zu verstecken, mit Türen bis genau zum Beginn der Schräge.",
     },
     {
       title: "Schiebetüren an der Schräge",
@@ -218,7 +218,7 @@ export const dachWarum = {
 export const dachVergleich = {
   heading: "Selber bauen, IKEA oder vom Tischler?",
   intro:
-    "Sobald Winkel, Kniestockhöhe und Nische zusammenkommen, spielt die Maßanfertigung ihre Stärke aus: Sie nutzt jeden Zentimeter und schließt sauber an die Schräge an.",
+    "Sobald Winkel, Kniestockhöhe und Nische zusammenkommen, spielt ein Drempelschrank nach Maß seine Stärke aus: Er nutzt jeden Zentimeter und schließt sauber an die Schräge an.",
   firstColLabel: "Kriterium",
   columns: ["Selber bauen", "IKEA & PAX", "Maßanfertigung vom Tischler"],
   highlightColumn: 2,
@@ -265,7 +265,7 @@ export const dachVergleich = {
 export const dachPreisFaktoren = {
   heading: "Was den Preis Ihres Schranks bestimmt",
   intro:
-    "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Der Preis richtet sich nach diesen Faktoren:",
+    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank und jeder Schrank unter der Dachschräge ist ein Unikat. Der Preis richtet sich nach diesen Faktoren:",
   segments: [
     {
       title: "Größe",
@@ -345,9 +345,14 @@ export const dachFaq = {
   heading: "Häufige Fragen zu Schränken für die Dachschräge",
   items: [
     {
-      question: "Was ist ein Drempelschrank?",
+      question: "Wie messe ich die Drempelhöhe richtig?",
       answer:
-        "Ein Drempelschrank ist ein niedriger Schrank direkt am Kniestock, also an der niedrigen Wand, auf der die Dachschräge aufsetzt. Der Bereich hinter der Schräge heißt Abseite und bleibt ohne Schrank meist ungenutzt. Ein Drempelschrank nach Maß macht genau diese niedrige Zone zugänglich, mit Türen oder Auszügen, die bis zum Beginn der Schräge reichen. So gewinnen Sie Stauraum, wo sonst nur toter Winkel wäre.",
+        "Gemessen wird senkrecht: von der Oberkante des Fußbodens bis zu dem Punkt, an dem die Dachschräge auf die Außenwand trifft. Entscheidend ist dabei der Bezugspunkt am Boden, denn eine genormte Messregel für den Kniestock gibt es nicht. Estrich, Dämmung und Belag machen mehrere Zentimeter aus, und für einen Schrank zählt der fertige Fußboden, nicht die Rohdecke. Messen Sie an mehreren Stellen entlang der Wand und nicht nur an einer, denn Altbauwände stehen selten im Lot und in der Schräge sitzt oft ein leichter Bauch. Nehmen Sie außerdem den Winkel der Schräge mit einer Schmiege ab und prüfen Sie, ob die Ecken wirklich rechtwinklig sind. Für die Planung zählt am Ende das kleinste gemessene Maß. Beim kostenlosen Aufmaß nehmen wir diese Werte vor Ort selbst auf.",
+    },
+    {
+      question: "Ab welcher Kniestockhöhe lohnt sich ein Drempelschrank?",
+      answer:
+        "Eine feste Untergrenze gibt es nicht, und sie hängt weniger an der Wandhöhe als an der Tiefe des Schranks: Weil das Dach zur Raummitte hin ansteigt, gewinnt der Schrank über seine Tiefe zusätzliche Höhe. Für eine Kleiderstange sollten darunter mindestens 90 Zentimeter frei bleiben, Hemden und Jacken brauchen etwa einen Meter, Mäntel und lange Kleider rund 1,50 bis 1,60 Meter. Im Neubau liegt der Kniestock bei 45 Grad Dachneigung meist zwischen 40 und 80 Zentimetern, im Altbau gehen die Werte weit auseinander. In dieser Größenordnung ist eine Hängezone direkt am Kniestock selten möglich. Deshalb arbeiten wir dort mit Auszügen, Schubkästen und Regalböden und legen die Kleiderstange in den höheren Bereich zur Raumseite. Was in Ihrem Zimmer möglich ist, zeigt sich beim kostenlosen Aufmaß.",
     },
     {
       question: "Was kostet ein Schrank für die Dachschräge?",
