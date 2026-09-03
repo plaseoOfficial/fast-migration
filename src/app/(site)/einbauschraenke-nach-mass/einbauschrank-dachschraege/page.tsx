@@ -35,9 +35,9 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Dachschrägenschrank & Drempelschrank nach Maß | Espelkamp",
+  title: "Drempelschrank nach Maß für Kniestock & Dachschräge",
   description:
-    "Dachschrägenschrank nach Maß vom Meisterbetrieb in Espelkamp: Drempelschränke und Kniestockschränke, passgenau an die Schräge geplant, gefertigt und vom eigenen Team montiert. Kostenloses Aufmaß.",
+    "Drempelschrank und Kniestockschrank nach Maß vom Meisterbetrieb: passgenau an Ihre Schräge geplant, gefertigt, montiert. Kostenloses Aufmaß.",
   alternates: { canonical: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
   openGraph: {
     images: [

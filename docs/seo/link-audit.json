@@ -1,8 +1,8 @@
 {
   "summary": {
-    "pagesBuilt": 25,
+    "pagesBuilt": 26,
     "pagesPlanned": 5,
-    "linksFound": 338,
+    "linksFound": 353,
     "partialExtraction": [
       "/"
     ],
@@ -36,6 +36,12 @@
     {
       "severity": "Hinweis",
       "check": "missing-soll",
+      "message": "/wohnmoebel-nach-mass/regal-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/wohnmoebel-nach-mass/regal-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
       "message": "/kuechen-nach-mass/kuechenzeile-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/kuechen-nach-mass/kuechenzeile-nach-mass/"
     },
@@ -56,12 +62,6 @@
       "check": "muss-backlog",
       "message": "/kontakt/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/kontakt/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "sitemap",
-      "message": "/kuechen-nach-mass/kueche-planen/ ist gebaut, fehlt aber in src/app/sitemap.ts.",
-      "page": "/kuechen-nach-mass/kueche-planen/"
     },
     {
       "severity": "Hinweis",

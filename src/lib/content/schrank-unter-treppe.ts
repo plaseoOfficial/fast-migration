@@ -145,7 +145,7 @@ export const suTypische = {
 export const suWarum = {
   heading: "Warum ein Schrank unter der Treppe nach Maß muss",
   paragraph:
-    "Unter der Treppe passt kein Standardmaß. Fertigschränke und Modelle von der Stange stehen senkrecht im Raum und enden dort, wo die Stufen tiefer werden, über dem Schrank bleibt der keilförmige Raum offen. Auch ein IKEA-Schrank oder PLATSA lässt die niedrige Ecke ungenutzt. Wir bauen den Schrank stattdessen zentimetergenau bis unter die Stufen, mit Fronten, die dem Verlauf der Treppe exakt folgen. Die tiefe Ecke ganz hinten und die niedrige Zone unter den ersten Stufen werden so vom Problem zur Stellfläche. Genau die verwinkelten Räume, an denen Standardmöbel scheitern, sind für uns Alltag, wie bei allen unseren [maßgefertigten Einbauschränken](/einbauschraenke-nach-mass/).",
+    "Unter der Treppe passt kein Standardmaß. Fertigschränke und Modelle von der Stange stehen senkrecht im Raum und enden dort, wo die Stufen tiefer werden, über dem Schrank bleibt der keilförmige Raum offen. Auch ein IKEA-Schrank oder PLATSA lässt die niedrige Ecke ungenutzt. Wir bauen den Schrank stattdessen zentimetergenau bis unter die Stufen, mit Fronten, die dem Verlauf der Treppe exakt folgen. Die tiefe Ecke ganz hinten und die niedrige Zone unter den ersten Stufen werden so vom Problem zur Stellfläche. Genau die verwinkelten Räume, an denen Standardmöbel scheitern, sind für uns Alltag, wie bei allen unseren [maßgefertigten Einbauschränken](/einbauschraenke-nach-mass/) — von der niedrigen Ecke unter der Treppe bis zum [Drempelschrank nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) am Kniestock.",
   images: [
     {
       src: `${IMG}/stauraum-unter-treppe-nach-mass-schubladen-led.jpg`,
