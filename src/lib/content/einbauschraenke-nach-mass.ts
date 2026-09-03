@@ -95,7 +95,7 @@ export const einbauTypische = {
     {
       title: "Kleiderschränke nach Maß",
       description:
-        "Vom Boden bis zur Decke, Wand zu Wand: der Kleiderschrank, der jeden Zentimeter Ihres Schlafzimmers nutzt. Einteilung, Kleiderstangen, Auszüge und Fächer planen wir genau nach Ihrer Garderobe.",
+        "Vom Boden bis zur Decke, Wand zu Wand: der [Kleiderschrank nach Maß](/einbauschraenke-nach-mass/kleiderschrank-nach-mass/), der jeden Zentimeter Ihres Schlafzimmers nutzt. Einteilung, Kleiderstangen, Auszüge und Fächer planen wir genau nach Ihrer Garderobe.",
     },
     {
       title: "Einbauschränke für Dachschrägen",

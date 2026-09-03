@@ -65,6 +65,8 @@ export const PAGES: PageNode[] = [
   { slug: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "einbauschrank-dachschraege" },
   // Einbauschränke spoke (cluster child): Schrank unter der Treppe nach Maß
   { slug: "/einbauschraenke-nach-mass/schrank-unter-treppe/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "schrank-unter-treppe" },
+  // Einbauschränke spoke (cluster child): Kleiderschrank nach Maß (Schlafzimmer-Frontlösung)
+  { slug: "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "kleiderschrank-nach-mass" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "wohnmoebel-nach-mass" },
   // Wohnmöbel spoke (cluster child): Regal nach Maß (offenes Regal, flexible Fläche)
@@ -345,6 +347,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Treppenschrank nach Maß", "Stauraum unter der Treppe", "Stufenschrank nach Maß"],
     brand: ["Fast Systemmöbel Treppenschrank"],
     descriptive: ["Schrank unter der Treppe ansehen", "Raum unter der Treppe planen"],
+  },
+  "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/": {
+    exact: ["Kleiderschrank nach Maß"],
+    partial: ["maßgefertigter Kleiderschrank", "Kleiderschrank vom Tischler", "Einbau-Kleiderschrank nach Maß"],
+    brand: ["Fast Systemmöbel Kleiderschrank"],
+    descriptive: ["Kleiderschrank nach Maß planen", "Kleiderschrank ansehen"],
   },
   "/referenzen/": {
     exact: ["Referenzen"],
