@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Conversion
 
-> Die Abschluss-Seite: Formular/Aktion zuerst, Reibung minimal, Text bewusst kurz. Hier wird der Lead geholt — nicht erklärt, nicht gerankt. | Korridor: **300–600 W** (Hard-Cap nach oben — der Tiefe-Agent **blockt bei Über-Länge**) | Schema: **LocalBusiness + ContactPoint** (+ BreadcrumbList; FAQPage nur 0–3 Einträge, optional)
+> Die Abschluss-Seite: Formular/Aktion zuerst, Reibung minimal, Text bewusst kurz. Hier wird
+> der Lead geholt — nicht erklärt, nicht gerankt. Schema: **LocalBusiness + ContactPoint**
+> (+ BreadcrumbList; FAQPage nur 0–3 Einträge, optional).
 
 Beispiel-Seiten Fast: `/kontakt/`, `/moebelplaner/`.
 
@@ -50,20 +52,21 @@ Jeder Baustein leitet sich direkt aus einem Micro-Intent aus §1 ab — nichts i
 | 7 | **Erwartungs-Satz** nach Absenden („Wir melden uns werktags zurück") — 1 Satz | 5 | nein |
 | 8 | **Knapper Vertrauens-Anker** (1 Zeile, z. B. Meisterbetrieb seit 1996, Espelkamp) — **kein** Trust-Block, **keine** Story | 7 | bedingt |
 
-**Verboten als Baustein** (das macht ein anderer Typ): Prozess-Erklärung, Vergleichstabelle, Material-Ratgeber, USP-Listen, Referenz-Stories, FAQ-Marathon, Kosten-Tabellen. Wer das hier einbaut, sprengt den Korridor und das Tiefe-Gate blockt.
+**Verboten als Baustein** (das macht ein anderer Typ): Prozess-Erklärung, Vergleichstabelle,
+Material-Ratgeber, USP-Listen, Referenz-Stories, FAQ-Marathon, Kosten-Tabellen. Diese Inhalte
+würden die direkte Conversion-Frage überlagern.
 
-**Pflicht-FAQ-Anzahl: 0–3 (bewusst niedrig).** Nur falls eine Frage **direkt die Conversion entstört** (z. B. „Ist die Beratung kostenlos?", „Muss ich nach Espelkamp kommen oder geht das remote?"). **Keine** 10–15-FAQ-Block wie bei Ratgeber/Leistung — das wäre Über-Länge und Intent-Bruch. Im Zweifel: lieber 0 FAQ als Fülltext.
+**Pflicht-FAQ-Anzahl: 0–3 (bewusst niedrig).** Nur falls eine Frage **direkt die Conversion entstört**
+(z. B. „Ist die Beratung kostenlos?", „Muss ich nach Espelkamp kommen oder geht das remote?").
+Keine FAQ-Sammlung ohne direkten Nutzwert.
 
 ---
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
+## 3 · Recherche-Tiefe und Struktur
 
-**Korridor: 300–600 Wörter — mit hartem Cap nach oben.** Das ist der einzige Archetyp, bei dem **mehr Text schlechter** ist.
-
-- **SERP-Realität:** Bei navigational/transactional Brand-Queries („firma kontakt", „firma planer") ranken **kurze, funktionale Seiten**. Es gibt hier **keinen 3.000-Wörter-Wettbewerb** — die SERP belohnt das Erfüllen der Aktion, nicht Textmasse. Der „SERP-Median" als Untergrenze (Regel: `Korridor = max(SERP-Median, Seitentyp-Untergrenze)`) liegt hier **unter** der Seitentyp-Untergrenze, also greift die Untergrenze 300 W.
-- **Warum nicht weniger als ~300:** Unter ~300 W fehlt oft NAP + Öffnungszeiten + Erwartungs-Satz vollständig → dünne Trust-Signale, schwaches LocalBusiness-Schema-Fundament.
-- **Warum hartes Cap bei ~600:** Jeder Satz über die Pflicht-Bausteine hinaus ist Reibung. **Der Tiefe-Agent blockt hier bei ÜBER-Länge** (umgekehrte Logik zu allen anderen Typen). Ergänzungen wie „Küchen nach Maß und mehr — seit 1996 fertigen wir in Espelkamp …" sind SEO-Fülltext und werden geflaggt.
-- **Wichtige System-Diskrepanz (explizit benannt):** Andere Typen ziehen den Korridor *nach oben* an den SERP-Median (Cluster-Pillar real 2.400–3.200 statt der DEPTH.md-Richtwerte; kommerzieller Pillar-Hub real 3.200–4.000 statt der DEPTH.md-Hub-Spanne 800–1.200). **Bei Conversion ist es genau spiegelverkehrt:** Der Korridor wird **nach unten gedeckelt**, nicht nach oben getrieben. Die `nie unter SERP-Median`-Regel führt hier zu keiner Aufblähung, weil der relevante SERP-Median niedrig ist. **Conversion ist die einzige Ausnahme von „mehr Tiefe = besser".**
+Die SERP-Recherche bestätigt für Kontakt- und Planer-Seiten die funktionale, kurze Struktur.
+Sie setzt keine Wortgrenze. NAP, Aktion und nur conversion-relevante Fragen müssen vollständig
+erkennbar sein; zusätzlicher Text braucht einen direkten Nutzwert.
 
 ---
 
@@ -144,7 +147,8 @@ AEO ist hier **schmal, aber präzise** — KI-Assistenten zitieren von Conversio
 
 Reihenfolge nach Schärfe für Conversion (von den 13 Gates in SYSTEM.md):
 
-1. **Gate 5 — Umfang/Tiefe (INVERTIERT, am härtesten):** Hier blockt das Tiefe-Gate bei **Über-Länge**, nicht bei Kürze. Über ~600 W oder ein „nice-to-have"-SEO-Block → **rot, zurück zum Kürzen**. Einziger Typ mit Decken-Prüfung.
+1. **Gate 5 — Umfang/Tiefe:** Formular, NAP und conversion-relevante Fragen sind klar erkennbar;
+   SEO-Fülltext und nicht benötigte Blöcke fehlen.
 2. **Gate 6 — Faktentreue (Hard-Stop):** NAP, Öffnungszeiten, Telefon **exakt** wie FACTS.md. Ein verbotener Claim („1996 in Espelkamp", „5 Jahre Garantie", „200 km Radius") → sofortiger Stopp, nie live.
 3. **Gate 12 — Technical-SEO:** `tel:`-Link funktional · NAP byte-identisch zu Impressum + Schema · Title/Desc-Länge · H-Hierarchie sauber (kein H2-Fülltext-Wildwuchs) · Karten-/Bild-`alt`.
 4. **Gate 8 — Schema/Technik:** LocalBusiness + ContactPoint vollständig & valide; **kein** leeres FAQPage; **kein** aggregateRating ohne Live-Beleg.
