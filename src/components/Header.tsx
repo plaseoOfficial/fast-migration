@@ -83,8 +83,8 @@ export function Header() {
 
   const panelItems = NAV_ITEMS.filter((i) => i.kind !== "cta");
   const cta = NAV_ITEMS.find((i) => i.kind === "cta");
-  const activeMega = NAV_ITEMS.find(
-    (i): i is Extract<NavItem, { kind: "mega" }> => i.kind === "mega" && i.label === openMenu
+  const megaItems = NAV_ITEMS.filter(
+    (i): i is Extract<NavItem, { kind: "mega" }> => i.kind === "mega"
   );
 
   return (
@@ -150,9 +150,10 @@ export function Header() {
                       />
                     </button>
 
-                    {item.kind === "dropdown" && isOpen && (
+                    {item.kind === "dropdown" && (
                       <div
-                        className="absolute right-0 top-full pt-3"
+                        aria-hidden={!isOpen}
+                        className={cn("absolute right-0 top-full pt-3", !isOpen && "hidden")}
                         onMouseEnter={() => openNow(item.label)}
                         onMouseLeave={scheduleClose}
                       >
@@ -217,18 +218,26 @@ export function Header() {
         </button>
       </div>
 
-      {/* Desktop mega panel (centered band below the bar) */}
-      {activeMega && (
-        <div
-          className="absolute inset-x-0 top-full hidden lg:block"
-          onMouseEnter={() => openNow(activeMega.label)}
-          onMouseLeave={scheduleClose}
-        >
-          <div className="flex justify-center px-6 pt-3">
-            <MegaPanel item={activeMega} onNavigate={closeAll} />
+      {/*
+       * Keep every panel in the initial HTML so the complete navigation is
+       * server-rendered. Client state only controls which panel is visible.
+       */}
+      {megaItems.map((item) => {
+        const isOpen = openMenu === item.label;
+        return (
+          <div
+            key={item.label}
+            aria-hidden={!isOpen}
+            className={cn("absolute inset-x-0 top-full hidden", isOpen && "lg:block")}
+            onMouseEnter={() => openNow(item.label)}
+            onMouseLeave={scheduleClose}
+          >
+            <div className="flex justify-center px-6 pt-3">
+              <MegaPanel item={item} onNavigate={closeAll} />
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })}
 
       {mobileOpen && <MobileNav onClose={() => setMobileOpen(false)} />}
     </header>
