@@ -140,9 +140,9 @@ export const gastroTypische = {
   image2Alt: "Wandbank mit Tischen und Leuchten in einem Gastraum",
   row1: [
     {
-      title: "Theke, Bartresen und Empfang",
+      title: "Thekenbau und Bartresen nach Maß",
       description:
-        "Der Mittelpunkt im Service. Wir bauen den Tresen als Möbelstück mit robusten Oberflächen und durchdachtem Stauraum und arbeiten Aussparungen für Ihre Technik millimetergenau ein. So hat jede Bewegung hinter der Theke ihren Platz, von der Kasse bis zum Gläserregal.",
+        "Der Mittelpunkt im Service. Vom Empfangstresen bis zur Bar ist der Tresenbau unser Handwerk: Wir bauen die Theke als Möbelstück mit robusten Oberflächen und durchdachtem Stauraum und arbeiten Aussparungen für Ihre Technik millimetergenau ein. So hat jede Bewegung hinter der Theke ihren Platz, von der Kasse bis zum Gläserregal.",
     },
     {
       title: "Rückbuffet und Buffettheke",
