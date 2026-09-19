@@ -96,7 +96,7 @@ export const klCtas = {
 export const klVarianten = {
   heading: "Kleiderschrank nach Maß in jeder Bauform",
   intro:
-    "Welche Bauform passt, entscheidet Ihr Raum: die Wand davor, der Platz zum Öffnen und die Optik. Jede davon bauen wir nach Maß. Für die Schräge unter dem Dach gibt es einen eigenen [Schrank für die Dachschräge](/einbauschraenke-nach-mass/einbauschrank-dachschraege/), für einen ganzen Ankleideraum die begehbare Ankleide.",
+    "Welche Bauform passt, entscheidet Ihr Raum: die Wand davor, der Platz zum Öffnen und die Optik. Jede davon bauen wir nach Maß. Für die Schräge unter dem Dach gibt es einen eigenen [Schrank für die Dachschräge](/einbauschraenke-nach-mass/einbauschrank-dachschraege/), für einen ganzen Ankleideraum die begehbare Ankleide. Für den Flur bauen wir die passende [Garderobe nach Maß](/einbauschraenke-nach-mass/garderobe-nach-mass/).",
   segments: [
     {
       title: "Drehtürenschrank",

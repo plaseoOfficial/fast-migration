@@ -67,6 +67,8 @@ export const PAGES: PageNode[] = [
   { slug: "/einbauschraenke-nach-mass/schrank-unter-treppe/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "schrank-unter-treppe" },
   // Einbauschränke spoke (cluster child): Kleiderschrank nach Maß (Schlafzimmer-Frontlösung)
   { slug: "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "kleiderschrank-nach-mass" },
+  // Einbauschränke spoke (cluster child): Garderobe nach Maß (Flur/Eingangsbereich)
+  { slug: "/einbauschraenke-nach-mass/garderobe-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "garderobe-nach-mass" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "wohnmoebel-nach-mass" },
   // Wohnmöbel spoke (cluster child): Regal nach Maß (offenes Regal, flexible Fläche)
@@ -353,6 +355,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigter Kleiderschrank", "Kleiderschrank vom Tischler", "Einbau-Kleiderschrank nach Maß"],
     brand: ["Fast Systemmöbel Kleiderschrank"],
     descriptive: ["Kleiderschrank nach Maß planen", "Kleiderschrank ansehen"],
+  },
+  "/einbauschraenke-nach-mass/garderobe-nach-mass/": {
+    exact: ["Garderobe nach Maß"],
+    partial: ["Garderobenschrank nach Maß", "Flurgarderobe nach Maß", "Garderobe für den Flur"],
+    brand: ["Fast Systemmöbel Garderobe"],
+    descriptive: ["Garderobe im Flur planen", "Garderobe nach Maß ansehen"],
   },
   "/referenzen/": {
     exact: ["Referenzen"],

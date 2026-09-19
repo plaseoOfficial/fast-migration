@@ -112,7 +112,7 @@ export const einbauTypische = {
     {
       title: "Flur und Garderobe nach Maß",
       description:
-        "Schmale Flure sind unser Spezialgebiet. Garderobe, Schuhschrank und Stauraum fassen wir in einem ruhigen, geschlossenen Möbel zusammen, das auch bei wenig Platz alles aufnimmt.",
+        "Schmale Flure sind unser Spezialgebiet. Die [Garderobe nach Maß](/einbauschraenke-nach-mass/garderobe-nach-mass/) fasst Schuhschrank, Sitzbank und Stauraum in einem ruhigen Möbel zusammen, das auch bei wenig Platz alles aufnimmt.",
     },
     {
       title: "Begehbare Ankleide",
