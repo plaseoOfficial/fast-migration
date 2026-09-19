@@ -36,7 +36,7 @@ const DESCRIPTION =
   "Gastronomieeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Theken, Rückbuffets, Sitzbänke und Hotelmöbel, gebaut für den täglichen Dauereinsatz.";
 
 export const metadata: Metadata = {
-  title: "Gastronomieeinrichtung nach Maß: Theke, Bar & Hotel",
+  title: "Gastronomieeinrichtung nach Maß: Thekenbau & Hotelmöbel",
   description: DESCRIPTION,
   alternates: { canonical: "/gastronomieeinrichtung/" },
   openGraph: {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Gastronomieeinrichtung nach Maß: Theke, Bar & Hotel",
+    title: "Gastronomieeinrichtung nach Maß: Thekenbau & Hotelmöbel",
     description: DESCRIPTION,
     url: "/gastronomieeinrichtung/",
     locale: "de_DE",
