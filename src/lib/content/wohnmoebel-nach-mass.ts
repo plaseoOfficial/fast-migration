@@ -150,7 +150,7 @@ export const wohnTypische = {
     {
       title: "Bücherregal nach Maß",
       description:
-        "Fachhöhen und Tiefen nach Ihren Büchern, tragfähig geplant und raumhoch bis unter die Decke, auch als Bücherwand in der Nische.",
+        "Fachhöhen und Tiefen nach Ihren Büchern, tragfähig geplant und raumhoch bis unter die Decke, auch als Bücherwand in der Nische. Zum [Bücherregal nach Maß](/wohnmoebel-nach-mass/buecherregal-nach-mass/).",
     },
     {
       title: "Raumteiler nach Maß",

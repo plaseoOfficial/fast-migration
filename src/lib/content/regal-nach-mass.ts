@@ -91,7 +91,7 @@ export const regCtas = {
 export const regVarianten = {
   heading: "Regal nach Maß in jeder Ausführung",
   intro:
-    "An der Wand, frei im Raum oder in die Ecke gesetzt: Wir planen das offene Regal in der Bauform, die zu Ihrem Raum passt. Vom schlichten Wandregal über das Stufenregal bis zur raumhohen Regalwand. Die Fächer teilen wir millimetergenau ein.",
+    "An der Wand, frei im Raum oder in die Ecke gesetzt: Wir planen das offene Regal in der Bauform, die zu Ihrem Raum passt. Vom schlichten Wandregal über das Stufenregal bis zur raumhohen Regalwand. Für Bücher planen wir es als [Bücherregal nach Maß](/wohnmoebel-nach-mass/buecherregal-nach-mass/).",
   segments: [
     {
       title: "Wandregal",
