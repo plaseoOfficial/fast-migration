@@ -73,6 +73,8 @@ export const PAGES: PageNode[] = [
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "wohnmoebel-nach-mass" },
   // Wohnmöbel spoke (cluster child): Regal nach Maß (offenes Regal, flexible Fläche)
   { slug: "/wohnmoebel-nach-mass/regal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "regal-nach-mass" },
+  // Wohnmöbel spoke (cluster child): Bücherregal nach Maß ("Buch als Maßgabe", Fachtiefen/Statik)
+  { slug: "/wohnmoebel-nach-mass/buecherregal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "buecherregal-nach-mass" },
   { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
@@ -397,6 +399,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigtes Regal", "Regal vom Tischler", "offenes Regal nach Maß"],
     brand: ["Fast Systemmöbel Regal"],
     descriptive: ["Regal nach Maß planen", "zum Regal nach Maß"],
+  },
+  "/wohnmoebel-nach-mass/buecherregal-nach-mass/": {
+    exact: ["Bücherregal nach Maß"],
+    partial: ["maßgefertigtes Bücherregal", "Bücherwand nach Maß", "Bücherregal vom Tischler"],
+    brand: ["Fast Systemmöbel Bücherregal"],
+    descriptive: ["Bücherregal individuell planen", "zum Bücherregal nach Maß"],
   },
   "/hauswirtschaftsraum/": {
     exact: ["Hauswirtschaftsraum einrichten"],
