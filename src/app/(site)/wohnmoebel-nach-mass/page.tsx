@@ -34,9 +34,9 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Wohnmöbel nach Maß aus Espelkamp: Planung & Montage",
+  title: "Wohnmöbel & Wohnzimmermöbel nach Maß aus Espelkamp",
   description:
-    "Wohnmöbel nach Maß vom Meisterbetrieb in Espelkamp: Wohnwand, TV-Wand, Sideboard und Regal, passgenau geplant. Kostenloses Aufmaß vor Ort.",
+    "Wohnzimmermöbel nach Maß vom Meisterbetrieb in Espelkamp: Wohnwand, TV-Wand, Sideboard und Regal, passgenau geplant. Kostenloses Aufmaß vor Ort.",
   alternates: { canonical: "/wohnmoebel-nach-mass/" },
   openGraph: {
     images: [
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Wohnmöbel nach Maß aus Espelkamp: Planung & Montage",
+    title: "Wohnmöbel & Wohnzimmermöbel nach Maß aus Espelkamp",
     description:
-      "Wohnmöbel nach Maß vom Meisterbetrieb in Espelkamp. Millimetergenau geplant, gefertigt und montiert.",
+      "Wohnzimmermöbel nach Maß vom Meisterbetrieb in Espelkamp. Millimetergenau geplant, gefertigt und montiert.",
     url: "/wohnmoebel-nach-mass/",
     locale: "de_DE",
     type: "website",
