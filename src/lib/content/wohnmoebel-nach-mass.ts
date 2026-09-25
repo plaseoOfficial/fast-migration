@@ -33,7 +33,7 @@ export const wohnHero = {
 export const wohnIntroStats = {
   since: "seit 1996",
   sinceSub: "fertigen wir Möbel nach Maß.",
-  heading: "Wohnmöbel nach Maß, die genau in Ihren Wohnraum passen",
+  heading: "Wohnzimmermöbel nach Maß, die genau in Ihren Wohnraum passen",
   introBefore:
     "Von der Stange passt selten wirklich. Jede Wand hat ihre Länge, jede Nische ihre Tiefe, jede Dachschräge ihren Winkel. Wir messen bei Ihnen vor Ort auf und nutzen jeden",
   introBold: "Zentimeter",
