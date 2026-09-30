@@ -40,7 +40,7 @@ export const bueroIntroStats = {
   bandAlt: "Großraumbüro mit Arbeitsplätzen, Rollcontainern und Stauraum nach Maß",
   col1Title: "Büro planen",
   col1Body:
-    "Arbeitsplätze, Schränke, Konferenztische — millimetergenau geplant nach Ihrem Grundriss und Ihren Abläufen. Was Sie brauchen, klären wir beim kostenlosen Aufmaß.",
+    "Arbeitsplätze, Schränke, Konferenztische, millimetergenau geplant nach Ihrem Grundriss und Ihren Abläufen. Wie eine [Büroplanung](/bueroeinrichtung/bueroplanung/) abläuft, klären wir beim kostenlosen Aufmaß.",
   col1CtaLabel: "Büroprojekt unverbindlich anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
