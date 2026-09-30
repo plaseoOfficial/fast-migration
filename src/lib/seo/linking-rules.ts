@@ -90,6 +90,8 @@ export const PAGES: PageNode[] = [
   { slug: "/gastronomieeinrichtung/", type: "cluster-pillar", silo: "gastronomie", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "gastronomieeinrichtung" },
   { slug: "/serienmoebel/", type: "cluster-pillar", silo: "serienmoebel", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "serienmoebel", mustExempt: ["/moebelplaner/"] },
   { slug: "/praxiseinrichtung/", type: "cluster-pillar", silo: "praxis", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "praxiseinrichtung" },
+  // Büro-Cluster: Produkt-Spokes unter dem Büroeinrichtung-Pillar (verschachtelte URLs)
+  { slug: "/bueroeinrichtung/bueroplanung/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroplanung" },
 
   // Conversion + brand (neutral)
   { slug: "/moebelplaner/", type: "conversion", silo: "", audience: "neutral", parent: "/", built: true },
@@ -447,6 +449,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Praxismöbel nach Maß", "Einrichtung für Praxen"],
     brand: ["Fast Systemmöbel Praxiseinrichtung"],
     descriptive: ["Praxis einrichten lassen", "zur Praxiseinrichtung"],
+  },
+  "/bueroeinrichtung/bueroplanung/": {
+    exact: ["Büroplanung"],
+    partial: ["Büro planen lassen", "professionelle Büroplanung"],
+    brand: ["Büroplanung von Fast Systemmöbel"],
+    descriptive: ["Ihr Büro planen lassen", "zur Büroplanung"],
   },
 };
 

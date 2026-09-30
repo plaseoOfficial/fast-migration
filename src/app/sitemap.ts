@@ -26,6 +26,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/gewerbe/", priority: 0.8 },
   { path: "/ladenbau/", priority: 0.8 },
   { path: "/bueroeinrichtung/", priority: 0.8 },
+  { path: "/bueroeinrichtung/bueroplanung/", priority: 0.7 },
   { path: "/gastronomieeinrichtung/", priority: 0.8 },
   { path: "/serienmoebel/", priority: 0.8 },
   { path: "/praxiseinrichtung/", priority: 0.8 },
