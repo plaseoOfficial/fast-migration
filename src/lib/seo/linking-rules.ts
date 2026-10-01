@@ -70,6 +70,8 @@ export const PAGES: PageNode[] = [
   // Einbauschränke spoke (cluster child): Garderobe nach Maß (Flur/Eingangsbereich)
   { slug: "/einbauschraenke-nach-mass/garderobe-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "garderobe-nach-mass" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
+  // Badmöbel spoke (cluster child): Waschtisch nach Maß (Platte + Becken)
+  { slug: "/badmoebel-nach-mass/waschtisch-nach-mass/", type: "product", silo: "badmoebel", audience: "privat", parent: "/badmoebel-nach-mass/", built: true, contentModule: "waschtisch-nach-mass" },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "wohnmoebel-nach-mass" },
   // Wohnmöbel spoke (cluster child): Regal nach Maß (offenes Regal, flexible Fläche)
   { slug: "/wohnmoebel-nach-mass/regal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "regal-nach-mass" },
@@ -387,6 +389,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigte Badmöbel", "Badmöbel vom Tischler", "Waschtisch und Badschrank nach Maß"],
     brand: ["Fast Systemmöbel Badmöbel"],
     descriptive: ["alle Badmöbel nach Maß", "zum Badmöbel-Bereich"],
+  },
+  "/badmoebel-nach-mass/waschtisch-nach-mass/": {
+    exact: ["Waschtisch nach Maß"],
+    partial: ["Waschtischplatte nach Maß", "maßgefertigter Waschtisch", "Waschtisch mit Becken nach Maß"],
+    brand: ["Fast Systemmöbel Waschtisch"],
+    descriptive: ["Waschtisch nach Maß planen", "passende Waschtischplatte nach Maß"],
   },
   "/wohnmoebel-nach-mass/": {
     exact: ["Wohnmöbel nach Maß"],

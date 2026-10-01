@@ -128,7 +128,7 @@ export const badTypische = {
     {
       title: "Waschtisch nach Maß",
       description:
-        "Die Waschtischplatte in genau Ihrer Breite, von Wand zu Wand oder als Doppelwaschtisch fürs Familienbad. Den Ausschnitt für Ihr Aufsatz- oder Einbaubecken arbeiten wir passgenau ein.",
+        "Die [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) in genau Ihrer Breite, von Wand zu Wand oder als Doppelwaschtisch fürs Familienbad. Den Ausschnitt für Ihr Aufsatz- oder Einbaubecken arbeiten wir passgenau ein.",
     },
     {
       title: "Waschtischunterschrank nach Maß",
