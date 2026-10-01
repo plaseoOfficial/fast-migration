@@ -19,6 +19,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/", priority: 0.7 },
   { path: "/einbauschraenke-nach-mass/garderobe-nach-mass/", priority: 0.7 },
   { path: "/badmoebel-nach-mass/", priority: 0.8 },
+  { path: "/badmoebel-nach-mass/waschtisch-nach-mass/", priority: 0.7 },
   { path: "/wohnmoebel-nach-mass/", priority: 0.8 },
   { path: "/wohnmoebel-nach-mass/regal-nach-mass/", priority: 0.7 },
   { path: "/wohnmoebel-nach-mass/buecherregal-nach-mass/", priority: 0.7 },
