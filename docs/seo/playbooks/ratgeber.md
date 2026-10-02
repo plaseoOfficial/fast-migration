@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Ratgeber
 
-> Informationaler Tiefen-Content, der eine echte Nutzerfrage erschöpfend beantwortet — und so rankt **und** in KI-Antworten (ChatGPT/Perplexity/AI Overviews) zitiert wird. Verkauft nicht, sondern hilft. | Korridor: **2.000–3.500 W** (intent-abhängig; Kosten- & Planungs-Guides eher oben) | Schema: **HowTo** (Schritt-Anleitungen) **+ FAQPage** + **Article/BlogPosting** + **BreadcrumbList**
+> Informationaler Tiefen-Content, der eine echte Nutzerfrage erschöpfend beantwortet und in
+> KI-Antworten zitiert werden kann. Verkauft nicht, sondern hilft. Schema: **HowTo**
+> (Schritt-Anleitungen) **+ FAQPage** + **Article/BlogPosting** + **BreadcrumbList**.
 
 ---
 
@@ -53,19 +55,22 @@ Jeder Baustein adressiert einen Micro-Intent aus §1. **AEO** = Direktantwort-/S
 
 ---
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
-**Regel:** Korridor = max(SERP-Median bei gleichem Intent, Seitentyp-Untergrenze) … bis SERP-Median × Tiefe-Bonus. **Nie unter SERP-Median bei gleichem Intent.**
+## 3 · Recherche-Tiefe und Struktur
+Die SERP-Recherche liefert Formate, Pflicht-Themen und echte Fragen. Sie ist eine Orientierung
+für die Struktur; der Ratgeber bleibt so ausführlich, wie es die Leserfrage verlangt.
 
-| Ratgeber-Untertyp | Gemessener/erwarteter SERP-Median | **Ziel-Korridor** | Begründung |
+| Ratgeber-Untertyp | Recherche-Hinweis | **Struktur-Fokus** | Begründung |
 |---|---|---|---|
-| **Kosten-Ratgeber** (z. B. „Küche nach Maß Kosten") | hoch — Top-Treffer haben volle Kosten-/Segment-/Material-Blöcke (vergleichbar zum Küchen-Cluster-Korridor 2.400–3.200) | **2.600–3.500** | Preisthemen sind die tiefsten Informational-SERPs; Sieger liefern 3 Kostensegmente + Preistreiber + FAQ. Oberes Band des Ratgeber-Korridors. |
+| **Kosten-Ratgeber** (z. B. „Küche nach Maß Kosten") | Kosten-, Segment-, Material- und FAQ-Blöcke | Kostenfaktoren verständlich erklären | Preisthemen brauchen nachvollziehbare Treiber und klare Grenzen. |
 | **Planungs-/HowTo-Ratgeber** (z. B. „Küche planen", „Hauswirtschaftsraum planen") | hoch (SV 4.000–8.000 bei „Küche planen", starke Konkurrenz) | **2.400–3.200** | Schritt-für-Schritt + Fehler + Checkliste + FAQ erzeugen die Tiefe; Untergrenze nie < 2.000. |
 | **Vergleichs-Ratgeber** (z. B. „Tischlerküche vs. Küchenstudio") | mittel | **2.000–2.600** | Entscheidungsstoff ist fokussierter; Tabelle trägt viel Informationsdichte bei weniger Fließtext. |
 | **Themen-/Orientierungs-Ratgeber** (z. B. „Maßmöbel Wohnzimmer", „Ladeneinrichtung Planung") | niedrig-mittel | **2.000–2.400** | Untergrenze des Seitentyps; Substanz vor Länge. |
 
-> **Diskrepanz-Hinweis (bewusst dokumentiert):** `DEPTH.md` gibt für **Ratgeber 2.000–3.500** an — das passt. Die Keyword-Map nennt für einzelne Ratgeber-URLs niedrigere Werte (z. B. `kueche-nach-mass-kosten` 1.200–1.800, `kueche-planen` 1.800–2.400). Diese Werte stammen aus einer früheren, **vor-SERP-Schätzung** und sind **zu niedrig**: die echte SERP-Recherche 2026-06-06 zeigt, dass Kosten-/Planungs-SERPs auf dem Niveau der Cluster-Pillars (2.400–3.200) ranken. **Es gilt der hier verankerte Korridor, nicht die alte Keyword-Map-Spalte.** (Analog zur Hub-Diskrepanz: ein kommerzieller Pillar-Hub braucht real 3.200–4.000, nicht die 800–1.200 der dünnen Orientierungs-Hubs.) Die SERP-Analyse pro Seite (Phase 1) misst den echten Median und setzt den finalen Wert; der Brief darf **nie unter** den SERP-Median bei gleichem Intent gehen.
+Die früheren Umfangsschätzungen in Keyword-Maps bleiben historische Recherche. Maßgeblich sind
+aktuelle Nutzerfragen, belegbare Fakten und die Pflichtmodule des jeweiligen Briefs.
 
-**Anti-Fülltext-Klausel:** Die Länge entsteht durch **Depth-Module** (§2), nicht durch aufgeblähte Absätze. Lieber 2.400 starke Wörter mit echten Zahlen/Maßen/Schritten als 3.000 wässrige. Wiederholung = QC-Fail (Gate 5).
+**Anti-Fülltext-Klausel:** Die Tiefe entsteht durch Depth-Module mit echtem Leser-Nutzen, nicht
+durch aufgeblähte Absätze. Wiederholung = QC-Fail.
 
 ---
 
@@ -143,7 +148,9 @@ Der Ratgeber ist **Spoke** unter einem Cluster-Pillar — er fängt Recherche-Tr
 ## 10 · QC-Schwerpunkte für diesen Typ (welche Gates besonders hart)
 Alle 13 Gates gelten. Für Ratgeber **besonders scharf**:
 
-- **Gate 5 (Umfang/Tiefe):** Korridor §3 zwingend; Pflicht-Depth-Module vorhanden (HowTo bei Planung, ≥1 Tabelle, ≥10 FAQ, Vergleich/Kosten je nach Untertyp). Bei „zu kurz" sagt das Gate **welche** Section fehlt — nicht „schreib mehr".
+- **Gate 5 (Umfang/Tiefe):** Pflicht-Depth-Module vorhanden (HowTo bei Planung, ≥1 Tabelle,
+  passende FAQ, Vergleich/Kosten je nach Untertyp). Bei fehlender Substanz benennt das Gate
+  die fehlende Section.
 - **Gate 10 (AEO/Zitierbarkeit):** **Härtester Gate für diesen Typ.** Direktantwort oben vorhanden? H2-Absätze self-contained? ≥1 Tabelle? FAQ ≥10? Entitäten konsistent? Ein Ratgeber ohne saubere AEO ist nicht launch-fähig.
 - **Gate 6 (Faktentreue vs. FACTS):** Hart bei Kosten-/Zahlen-Ratgebern — **keine** erfundenen Preise als Festwerte, **keine** verbotenen Claims. Bandbreiten kennzeichnen, Quelle/Logik der Zahlen plausibel.
 - **Gate 11 (Korpus-Dedup):** Hoch-Risiko, weil Kosten/Planen/Vergleich desselben Clusters thematisch nah sind. Semantische Überlappung gegen Schwester-Ratgeber **unter Schwelle** halten — eigener Winkel, eigene Beispiele/Maße/FAQ (Differenzierungs-Contract).

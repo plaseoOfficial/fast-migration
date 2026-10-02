@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Produkt
 
-> Die Kaufabsicht-Seite für **ein konkretes, maßgefertigtes Möbel** (Küchenzeile, Kleiderschrank, Waschtisch, Empfangstresen …): zeigt Varianten/Maße, gibt Kosten-Orientierung, klärt technische Specs und holt die Anfrage ab. | Korridor: **1.200–1.800 W** | Schema: **Product + FAQPage + BreadcrumbList (+ LocalBusiness)**
+> Die Kaufabsicht-Seite für **ein konkretes, maßgefertigtes Möbel** (Küchenzeile, Kleiderschrank,
+> Waschtisch, Empfangstresen …): zeigt Varianten/Maße, gibt Kosten-Orientierung, klärt technische
+> Specs und holt die Anfrage ab. Schema: **Product + FAQPage + BreadcrumbList (+ LocalBusiness)**.
 
 ## 0 · Wann dieser Typ greift (Auswahl über Spalte "Seitentyp" der URL-Master)
 - **Trigger:** Spalte „Seitentyp" der URL-Master = **`Produktseite`**. Die Engine wählt dieses Ebene-2-Playbook automatisch.
@@ -38,12 +40,14 @@ Jeder Baustein ist aus genau einem Micro-Intent (§1) abgeleitet. **AEO** = Snip
 **Pflicht-FAQ-Anzahl: ≥ 6** (Cluster-Pillar liegt bei 10–15; Produkt darf schlanker sein, aber nie unter 6, sonst kein FAQPage-Mehrwert).
 **Pflicht-Tabellen: ≥ 2** (Maß-Tabelle + Kosten-Tabelle sind beide obligatorisch).
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
-**Korridor: 1.200–1.800 Wörter.** Quelle: DEPTH.md Produkt-Richtwert (1.200–1.800) und URL-Master-Spalte „Wortzahl" (überwiegend 800–1.500, Spitzen bis 1.800). Wir setzen die **Untergrenze auf 1.200**, weil 800–1.000 mit zwei Pflicht-Tabellen + 6 FAQ kaum substanziell zu füllen sind, ohne dünn zu wirken.
+## 3 · Recherche-Tiefe und Struktur
+Die SERP-Recherche dient als Orientierung für Formate, Pflicht-Themen und Fragen. Der Brief
+ordnet diese Themen den Props zu; der Text endet, wenn die Kaufentscheidung ausreichend
+beantwortet ist.
 
-**Verankerungs-Regel (aus SYSTEM/DEPTH):** Korridor = `max(SERP-Median bei gleichem Intent; Seitentyp-Untergrenze) … SERP-Median × Tiefe-Bonus`. **Nie unter den SERP-Median bei gleichem Intent.** Die Brief-Engine misst den echten Top-10-Median pro Produkt-KW und hebt den Korridor an, falls die SERP dichter ist.
-
-**Wichtige Abgrenzung zu §2 der Recherche-Korridore:** Die gemessenen 2.400–4.000-W-Korridore für „küchen nach maß" / „möbel nach maß" gelten für **Cluster-Pillar/Hub-Intent (Gattung)**, **nicht** für Produkt-Spokes. Ein Produkt-KW wie „Kochinsel nach Maß" hat eine **engere, kaufnähere SERP** mit deutlich kürzeren Top-Treffern — den Pillar-Korridor hier zu übernehmen würde die Seite mit Fülltext aufblähen und gegen Regel 3 (Anti-Fülltext) verstoßen. Produkt bleibt **kompakt-dicht**: jede zusätzliche 100 Wörter müssen neue Maße/Specs/FAQ bringen, nie Wiederholung des Pillar-Texts.
+**Abgrenzung zur Recherche:** Produkt-Spokes beantworten die engere Kauf- und Detailfrage. Die
+SERP zeigt dafür hilfreiche Formate und Themen, schreibt aber keinen Textumfang vor. Jede
+zusätzliche Passage muss neue Maße, Specs oder eine echte Nutzerfrage beantworten.
 
 ## 4 · Schema-Markup (konkrete JSON-LD-Typen)
 - **`Product`** (Pflicht): `name`, `description`, `brand` (Fast Systemmöbel), `category`, `material`, `manufacturer` (Organization → Fast). **`offers`** als `AggregateOffer` mit `priceCurrency: "EUR"`, `lowPrice`/`highPrice` (= die kommunizierte Kosten-Orientierung, **konsistent zum Kosten-Block**), `availability`, `priceValidUntil`, `seller` (Organization). **Kein erfundener Festpreis** — Spanne = AggregateOffer; sind keine Preise belegbar, `offers` weglassen statt erfinden (Faktentreue-Gate). Keine erfundenen `aggregateRating`/`review` ohne echte Bewertungen (FACTS: ~4,2★ nur als Organization-Signal, nicht pro Produkt).
@@ -94,7 +98,8 @@ Grundton bleibt: handwerklich-stolz, ruhig, „Sie", Beweis statt Behauptung. **
 - **Gate 6 Faktentreue (HÄRTESTE hier):** Preis-/Maß-/Lieferzeit-Angaben sind das größte Erfindungs-Risiko. Jede Zahl muss belegbar oder klar als unverbindliche Orientierung markiert sein. Schema-`offers` **muss** mit dem sichtbaren Kosten-Block übereinstimmen. **Ein erfundener Festpreis/Garantiezeitraum = Hard Stop.**
 - **Gate 11 Korpus-Dedup (zweithärteste):** Schwester-Produkte desselben Clusters (Küchenzeile/L-Küche/Kochinsel; Kleiderschrank Dreh-/Schiebetür) sind das **Haupt-Duplikat-Risiko** des ganzen Projekts. Pflicht: Differenzierungs-Map (`clusters/<cluster>.md`) **vor** dem Schreiben; jede Produktseite mit **eigenen** Maßen/Varianten/Beispielen/FAQ; Synonym-Umschreibung = Fail.
 - **Gate 8 Schema/Technik:** Product + FAQPage + Breadcrumb valide; AggregateOffer-Felder vollständig & konsistent; FAQ-Markup = sichtbare FAQ.
-- **Gate 5 Tiefe & Umfang:** im 1.200–1.800-Korridor, beide Pflicht-Tabellen + ≥ 6 FAQ vorhanden, **kein Padding** (nicht mit Pillar-Text aufblähen).
+- **Gate 5 Tiefe & Umfang:** beide Pflicht-Tabellen und mindestens 6 passende FAQ sind vorhanden;
+  jede Passage liefert eigene Information und kein Padding.
 - **Gate 7 interne Links/CTA:** Aufstieg zum Cluster-Pillar vorhanden, Conversion-Links gesetzt, Silo nicht durchbrochen, ≤ 7 Body-Links.
 
 ## 11 · NEGATIV-ABGRENZUNG — was dieser Typ bewusst NICHT tut
@@ -102,4 +107,5 @@ Grundton bleibt: handwerklich-stolz, ruhig, „Sie", Beweis statt Behauptung. **
 - **NICHT Leistung/Cluster-Pillar:** behandelt **eine Produkt-Variante**, nicht die ganze Gattung. **Kein** vollständiger USP-Roman, **keine** große Tischler-vs-Studio-vs-Möbelhaus-Vergleichstabelle, **kein** 2.400–4.000-W-Langtext. Der Produkt-USP-Block ist eine **komprimierte** Version dessen, was beim Pillar ausführlich steht — bewusst kürzer, um Dedup/Kannibalisierung zu vermeiden. Verkauft das *Produkt*, nicht die *Leistung*.
 - **NICHT Ratgeber:** **kein** schwacher CTA, **keine** neutrale „so planen Sie"-Anleitung als Hauptzweck. Produkt hat **starken** CTA und Kaufabsicht; Wissens-Tiefe nur so weit, wie sie den Kauf stützt. „Wie plane ich eine Küche?" → Ratgeber verlinken, nicht selbst ausführen.
 - **NICHT Referenz/Über-uns:** **keine** Marken-/Familien-Story, **keine** Projekt-Galerie als Selbstzweck, **kein** Team-/Werkstatt-Porträt. Experience nur als 1 Praxis-Detail, das die Produkt-Kompetenz belegt — nicht als Erzählung.
-- **NICHT Conversion (Kontakt/Planer):** Produkt **hat** SEO-Substanz (Maße, Specs, FAQ, Korridor 1.200–1.800) — die Conversion-Seite ist bewusst kurz (300–600 W, Formular zuerst). Produkt verkauft *vor* dem Formular; Conversion *ist* das Formular.
+- **NICHT Conversion (Kontakt/Planer):** Produkt beantwortet Maße, Specs und FAQ; die Conversion-Seite
+  ist bewusst kurz und formular-zuerst. Produkt verkauft *vor* dem Formular; Conversion *ist* das Formular.

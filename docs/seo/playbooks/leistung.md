@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Leistung
 
-> Die kommerzielle Cluster-Pillar-Seite einer Möbelkategorie: baut Vertrauen auf und führt zur **Anfrage**. Das ist der **häufigste Archetyp** (Mehrzahl der 111 Seiten). | Korridor: **2.400–3.200 Wörter** (intent-verankert, s. §3) | Schema: **Service + FAQPage + BreadcrumbList** (+ optional AggregateOffer-Hinweis im Kosten-Modul, nur belegte Werte)
+> Die kommerzielle Cluster-Pillar-Seite einer Möbelkategorie: baut Vertrauen auf und führt zur
+> **Anfrage**. Schema: **Service + FAQPage + BreadcrumbList** (+ optional AggregateOffer-Hinweis
+> im Kosten-Modul, nur belegte Werte).
 
 ## 0 · Wann dieser Typ greift (Auswahl über Spalte „Seitentyp" der URL-Master)
 
@@ -44,20 +46,16 @@ Konkrete Micro-Intents (jeder muss auf der Seite eine Antwort finden):
 
 **Pflicht-FAQ-Anzahl: 10–15** (E-E-A-T-Checkliste verlangt ≥5; dieser Typ liegt deutlich höher, weil FAQ hier Haupt-Tiefenträger **und** Conversion-Vorbereiter ist). **Mindestens eine Tabelle** ist Pflicht (Vergleich); das Kostenmodul liefert idealerweise die zweite. Snippet-Strategie: Baustein 1, 3, 4, 5, 8 sind die zitierbaren Kerne (s. §9).
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
+## 3 · Recherche-Tiefe und Struktur
 
-**Korridor: 2.400–3.200 Wörter.**
+Die SERP-Recherche dient als Strukturhinweis. Der veröffentlichte Text beantwortet die
+Leistungsfrage vollständig und endet, wenn die relevanten Nutzerfragen, Belege und nächsten
+Schritte abgedeckt sind.
 
-Herleitung über die Regel *Korridor = max(SERP-Median bei gleichem Intent, Seitentyp-Untergrenze) … SERP-Median × Tiefe-Bonus*:
+- Gemessene SERP-Formate und Wortzahlen bleiben im Research-Kit als Beleg für Themenabdeckung
+  und Struktur erhalten.
 
-- **Gemessener SERP-Median** für „küche/küchen nach maß" (Leistung/commercial, Google.de, 2026-06-06): **~2.000 Wörter**, Spitze 2.950.
-- DEPTH.md nennt für „Cluster-Pillar (commercial)" den Richtwert **1.800–2.800**.
-- Untergrenze des Korridors = `max(2.000, 1.800) = ~2.000`; wir setzen sie bewusst auf **2.400**, weil **alle** Top-Treffer Preis-, Prozess- und FAQ-Block tragen und die Sieger zusätzlich Vergleichstabelle + Kostentabelle (3 Segmente) + Material-Ratgeber + Referenzprojekte mit Ort führen — diese Pflicht-Bausteine (§2) füllen real nicht unter 2.400.
-- Obergrenze = SERP-Spitze (2.950) × moderater Tiefe-Bonus ≈ **3.200**. Darüber droht Verwässerung (Anti-Fülltext, §10).
-
-**⚠️ Diskrepanz-Hinweis (explizit benennen):** DEPTH.md führt für **Hub** nur 800–1.200 Wörter. Das gilt **nur für dünne Orientierungs-Hubs**. Ein **kommerzieller Pillar-Hub mit eigenem Ratgeber-Langtext** — gemessen an „möbel nach maß" (Median 2.900, Spitze 4.500) — braucht real **3.200–4.000 Wörter**. Wenn ein Silo-Kopf wie `/moebel-nach-mass/` faktisch als kommerzieller Pillar mit Langtext gebaut wird (nicht als reine Karten-Verteilseite), liegt er **näher an diesem Leistung-Korridor bzw. darüber** — nicht beim Hub-Richtwert. Diese Entscheidung trifft der Per-Seite-Brief anhand der SERP, nicht das Hub-Playbook pauschal. **Nie unter den SERP-Median bei gleichem Intent.**
-
-Der konkrete Korridor jeder Einzelseite wird vom Brief (Phase 1, SERP-Analyse) gesetzt — dieser Korridor ist die **Default-Verankerung**, falls die SERP keinen höheren Median zeigt.
+Der Brief hält die Nutzerfragen, Pflichtmodule, Belege und offenen Fakten für die Einzelseite fest.
 
 ## 4 · Schema-Markup (konkrete JSON-LD-Typen)
 
@@ -121,7 +119,8 @@ Grundton bleibt: Meisterbetrieb mit ruhigem Handwerksstolz, „Sie", Beweis stat
 
 Alle 13 Gates gelten; für „Leistung" sind diese **besonders hart**:
 
-- **Gate 5 (Umfang/Tiefe):** Korridor 2.400–3.200 **und** alle Pflicht-Depth-Module vorhanden (Prozess, Vergleichstabelle, Kostenmodul, 10–15 FAQ). Fehlt das **Kostenmodul** → Gate rot (intent-pflicht).
+- **Gate 5 (Umfang/Tiefe):** Pflicht-Depth-Module (Prozess, Vergleichstabelle, Kostenmodul,
+  10–15 passende FAQ) beantworten die Nutzerfrage; fehlende intent-pflichtige Module blockieren.
 - **Gate 6 (Faktentreue):** härtester Stopp. Ein einziger ❌-Claim (Garantie, „seit 2013", 200 km, exotische Hölzer, „eigenes Montageteam") → sofortiger Hard Stop, nie live.
 - **Gate 7 (interne Links/CTA):** starker CTA + Möbelplaner UND Kontakt + ≥3 kontextuelle Links + Up-Link zum Hub; kein Cross-Silo.
 - **Gate 8/12 (Schema/Technical):** Service + FAQPage + Breadcrumb vorhanden; FAQ-Schema deckt sich exakt mit sichtbarem Text; Title/Desc-Länge, H-Hierarchie, alt-Texte.

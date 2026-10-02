@@ -6,11 +6,11 @@
  * Aufruf:
  *   Workflow({ scriptPath: ".../authoring-engine.workflow.mjs",
  *     args: { slug, url, primaryKeyword, pageType, cluster, kitPath, modulePath,
- *             corridor: {min,max}, seoRoot, repoRoot } })
+ *             seoRoot, repoRoot } })
  *
  * 4 Agents, alle TEXT-ONLY (editieren NIE Dateien): Writer → Humanizer → QC&Fix → Chefredakteur.
- * Dazwischen DETERMINISTISCHE Code-Gates (0 Token, 100%): Wortzahl, Verbotene-Claims,
- * FAQ-Zahl, Title/Description-Länge. KEINE teure Multi-Runden-Schleife.
+ * Dazwischen DETERMINISTISCHE Code-Gates (0 Token, 100%): Verbotene-Claims,
+ * FAQ-Struktur, Title/Description-Länge. KEINE teure Multi-Runden-Schleife.
  *
  * Rückgabe: { slug, copy (Markdown, prop-gemappt), gates, qc, chef, status }.
  * Der Orchestrator (Mensch) setzt copy in src/lib/content/<slug>.ts ein und fährt EINMAL `npm run check`.
@@ -25,7 +25,7 @@ export const meta = {
   phases: [
     { title: 'Writer', detail: 'Kit → prop-gemappte Copy in einem Aufruf (Text)' },
     { title: 'Humanize', detail: 'KI-Muster brechen, O-Ton Fast (voice-only, günstig)' },
-    { title: 'QC&Fix', detail: 'Code-Gates (Wortzahl/Claims/FAQ/Title) + 1 Reviewer → korrigierte Copy' },
+    { title: 'QC&Fix', detail: 'Code-Gates (Claims/FAQ/Title) + 1 Reviewer → korrigierte Copy' },
     { title: 'Endabnahme', detail: 'Chefredakteur: dient & konvertiert? (Verdikt)' },
   ],
 }
@@ -35,10 +35,8 @@ if (typeof cfg === 'string') { try { cfg = JSON.parse(cfg) } catch (e) { cfg = {
 const { slug: SLUG, url: URL, primaryKeyword: KW, kitPath: KIT, modulePath: MODULE, seoRoot: SEO, repoRoot: REPO } = cfg
 const PAGE_TYPE = String(cfg.pageType || 'leistung').toLowerCase()
 const CLUSTER = cfg.cluster || null
-const CORRIDOR = (cfg.corridor && Number.isFinite(cfg.corridor.min)) ? cfg.corridor : { min: 0, max: 999999 }
-const FAQ_MIN = (PAGE_TYPE === 'conversion' || PAGE_TYPE === 'produkt') ? 5 : 10
 if (!SLUG || !KW || !KIT || !MODULE || !SEO) {
-  throw new Error('authoring-engine: args unvollständig. Erwarte {slug,url,primaryKeyword,pageType,kitPath,modulePath,corridor,seoRoot}. Erhalten: ' + JSON.stringify(args))
+  throw new Error('authoring-engine: args unvollständig. Erwarte {slug,url,primaryKeyword,pageType,kitPath,modulePath,seoRoot}. Erhalten: ' + JSON.stringify(args))
 }
 
 const PLAYBOOK = `${SEO}/playbooks/${PAGE_TYPE}.md`
@@ -50,13 +48,13 @@ const TEXTONLY =
 
 const CANON =
   `KANON (FACTS/BRAND_VOICE/Playbook/Kit überstimmen alles):\n` +
-  `- Research-Kit (deine Hauptquelle — Korridor, Pflicht-Module, WDF-Checkliste, FAQ, Do-NOT-claim, Winkel): ${KIT}\n` +
+  `- Research-Kit (deine Hauptquelle — Nutzeraufgabe, belegte Fakten, offene Fragen, Do-NOT-claim): ${KIT}\n` +
   `- Fakten (nur ✅/🟢; ❌ nie): ${SEO}/brand/FACTS.md\n- Stimme (Sie, keine em-dashes): ${SEO}/brand/BRAND_VOICE.md\n` +
-  `- Playbook ${PAGE_TYPE} (Pflicht-Module/Schema/CTA/Ton/Negativ-Abgrenzung): ${PLAYBOOK}\n- Tiefe/Anti-Fülltext: ${SEO}/DEPTH.md\n` +
+  `- Playbook ${PAGE_TYPE} (geeignete Module/Schema/CTA/Ton/Negativ-Abgrenzung): ${PLAYBOOK}\n- Tiefe/Anti-Fülltext: ${SEO}/DEPTH.md\n` +
   `- Humanizer: ${SEO}/templates/humanizer.md\n- Interne Verlinkung: ${SEO}/internal-linking.md\n` +
   (CLUSTER_MAP ? `- Cluster-Differenzierung (Anti-Duplikat): ${CLUSTER_MAP}\n` : '') +
   `- Bestehendes Modul (Prop-Struktur, die du neu textest — Keys/Bildpfade/Maße/hrefs NICHT ändern): ${MODULE}\n` +
-  `- Korridor: ${CORRIDOR.min}–${CORRIDOR.max} W · FAQ ≥${FAQ_MIN}.`
+  `- FAQ nur für verbleibende echte Nutzerfragen; keine Mindestanzahl.`
 
 // ---------- deterministische Code-Gates (0 Token) ----------
 // Schneidet etwaige Agent-Trailing-Notizen ab, damit die Gates NUR die echte Copy messen
@@ -73,20 +71,13 @@ function stripNotes(md) {
 // zählt ALLE Quote-Strings, ohne Pfade/URLs/Bilddateien/reine alt-Werte.
 function countCopy(md) {
   const body = stripNotes(md)
-  let words = 0
+  let faq = 0
   for (const line of body.split('\n')) {
-    const isAlt = /(imageAlt|imgAlt|\balt|Alt)\s*:/.test(line)
-    const quotes = line.match(/"([^"]{2,})"/g) || []
-    for (const raw of quotes) {
-      const s = raw.slice(1, -1)
-      if (/^\//.test(s) || /^https?:/.test(s) || /^#/.test(s) || /^tel:/.test(s)) continue
-      if (/\.(jpg|jpeg|png|svg|webp)$/i.test(s)) continue
-      if (isAlt && quotes.length === 1) continue
-      words += s.trim().split(/\s+/).filter(Boolean).length
-    }
+    if (/\bquestion\s*:/.test(line)) faq += 1
   }
-  const faq = (body.match(/question:/g) || []).length
-  return { words, faq }
+  // Umfang nur grob beschreiben, ohne Mindestlänge oder Abnahmeschwelle.
+  const words = body.trim() ? body.trim().split(/\s+/).length : 0
+  return { faq, words }
 }
 const FORBIDDEN = [
   { re: /\b(bis\s*zu\s*)?\d+\s*jahr\w*\s*garantie\b/i, why: '„X Jahre Garantie" (gibt es nicht)' },
@@ -121,12 +112,12 @@ phase('Writer')
 let copy = await agent(
   `${TEXTONLY}\nDu schreibst die FINALE Website-Copy für Fast Systemmöbel — als das Unternehmen selbst.\n` +
   `Seite ${URL} · „${KW}" · Archetyp ${PAGE_TYPE}.\n${CANON}\n\n` +
-  `AUFGABE: Texte JEDEN menschenlesbaren Prop des Moduls neu, dicht entlang des Research-Kits.\n` +
+  `AUFGABE: Bearbeite die für den Auftrag relevanten Props nach der Leseraufgabe; passende bestehende Inhalte erhalten.\n` +
   `REGELN:\n- „Sie", O-Ton Fast, konkret, KEINE em-dashes, keine Floskeln, keine Dreiklang-Slogan-Tics, keine Wort-Wiederholungs-Tics.\n` +
-  `- Primär-Keyword in title/H1/erstem Absatz; WDF*IDF-Checkliste (Kit §4) natürlich abarbeiten; kein Stuffing.\n` +
-  `- **Korridor ${CORRIDOR.min}–${CORRIDOR.max} W treffen**; alle Pflicht-Module (Kit §3) abdecken; **FAQ ≥${FAQ_MIN}** (aus Kit §5).\n` +
+  `- Thema in Title/H1 verständlich benennen; Begriffe nach Nutzwert einsetzen, keine WDF-Checkliste abarbeiten.\n` +
+  `- Abschnitte nach Nutzeraufgabe wählen. Kit §3/§5 sind Recherchehinweise, keine Modul- oder FAQ-Quote.\n` +
   `- Faktentreue: nichts aus Kit §8 (Do-NOT-claim). Winkel/USPs aus Kit §6 einbauen.\n` +
-  `- Reicht die Prop-Struktur nicht für Korridor/Pflicht-Module, vermerke am Ende „STRUKTUR-BEDARF (Design): <Modul>" statt Fülltext.\n\n` +
+  `- Reicht die Prop-Struktur für eine relevante Nutzerfrage nicht aus, vermerke am Ende „STRUKTUR-BEDARF (Design): <Modul>" statt Fülltext.\n\n` +
   `OUTPUT-FORMAT (zwingend, einzeilige Werte): pro Export ein Block „### <exportName>", darunter je Prop eine Zeile \`propName: "Text"\` (Array-Einträge nummeriert, FAQ je „question:"/„answer:"-Zeile). NUR das.`,
   { phase: 'Writer', label: 'writer' })
 
@@ -135,7 +126,7 @@ phase('Humanize')
 copy = await agent(
   `${TEXTONLY}\nDu bist der Humanizer für die Copy von ${URL}. Arbeite nach ${SEO}/templates/humanizer.md und ${SEO}/brand/BRAND_VOICE.md.\n` +
   `EINZIGE Aufgabe: die KI-Anmutung rausnehmen, menschlicher O-Ton Fast rein. Brich gleichförmige Satzlängen, Floskeln, „nicht nur…sondern", generische Übergänge, Dreiklang-Slogan-Tics, Wort-Wiederholungen, leere Superlative; variiere den Rhythmus (mal ein kurzer Satz als Pointe); „Sie"-Anrede; idiomatisches Deutsch; KEINE em-dashes.\n` +
-  `ÄNDERE NICHT: Fakten/Zahlen, Keywords/Entitäten, interne Links, Prop-Keys/Struktur, den Umfang (Wortzahl-Korridor halten). Gib die Copy im exakt gleichen Format zurück (### <exportName> / propName: "…").\n\nCOPY:\n${copy}`,
+  `ÄNDERE NICHT: Fakten/Zahlen, Keywords/Entitäten, interne Links oder Prop-Keys/Struktur. Gib die Copy im exakt gleichen Format zurück (### <exportName> / propName: "…").\n\nCOPY:\n${copy}`,
   { phase: 'Humanize', label: 'humanizer' })
 
 // ---------- Code-Gates + QC&Fix (1 Agent, Text) ----------
@@ -143,17 +134,16 @@ phase('QC&Fix')
 let measured = countCopy(copy)
 let forbidden = lintForbidden(copy)
 let metaIssues = metaLens(copy)
-const tooShort = measured.words < CORRIDOR.min || measured.faq < FAQ_MIN
-log(`Code-Gates: ${measured.words} W / ${measured.faq} FAQ (Soll ${CORRIDOR.min}+/≥${FAQ_MIN}) · Verbotene ${forbidden.length} · Meta ${metaIssues.length}`)
+log(`Code-Gates: ${measured.words} W / ${measured.faq} FAQ (nur Information) · Verbotene ${forbidden.length} · Meta ${metaIssues.length}`)
 
 const review = await agent(
   `${TEXTONLY}\nDu bist EIN strenger, adversarialer QC-Reviewer für die finale Copy von ${URL} („${KW}", ${PAGE_TYPE}). Prüfe ALLE Dimensionen in EINEM Durchgang und gib die KORRIGIERTE Copy zurück.\n${CANON}\n\n` +
   `DETERMINISTISCHE BEFUNDE (in Code gemessen — zwingend beheben):\n` +
-  `- Wortzahl ${measured.words} (Soll ${CORRIDOR.min}–${CORRIDOR.max})${tooShort ? ' → ZU KURZ, dehnbare Props mit ECHTER Substanz erweitern (kein Fülltext)' : ' → ok'}\n` +
-  `- FAQ ${measured.faq} (Soll ≥${FAQ_MIN})${measured.faq < FAQ_MIN ? ' → mehr echte FAQ aus Kit §5' : ' → ok'}\n` +
+  `- Wortzahl ${measured.words}: Information, keine Mindestlänge.\n` +
+  `- FAQ ${measured.faq}: Nur hilfreiche offene Fragen beantworten, keine Quote.\n` +
   `- Verbotene Claims: ${forbidden.length ? forbidden.join('; ') + ' → ENTFERNEN' : 'keine'}\n` +
   `- Meta-Länge: ${metaIssues.length ? metaIssues.join('; ') : 'ok'}\n\n` +
-  `PRÜFE ZUSÄTZLICH (und behebe): Faktentreue (FACTS/Kit §8) · Keywords/WDF (Kit §4) · E-E-A-T (Region, Prozess, PU-Kante, Familie Fast, NAP) · interne Links + CTA (Kit §7, Möbelplaner+Kontakt, kein Cross-Silo) · AEO (Direktantworten, keine erfundenen Zahlen) · Korpus-Dedup (nicht „dasselbe + andere Wörter" wie Schwesterseiten in ${REPO}/src/lib/content/) · Human-Score (O-Ton, Sie, Rhythmus, keine em-dashes).\n\n` +
+  `PRÜFE ZUSÄTZLICH (und behebe): Faktentreue (FACTS/Kit §8) · verständliche Fachbegriffe und Nutzerantworten (Kit §4) · E-E-A-T (Region, Prozess, PU-Kante, Familie Fast, NAP) · interne Links + CTA (Kit §7, Möbelplaner+Kontakt, kein Cross-Silo) · AEO (Direktantworten, keine erfundenen Zahlen) · Korpus-Dedup (nicht „dasselbe + andere Wörter" wie Schwesterseiten in ${REPO}/src/lib/content/) · Human-Score (O-Ton, Sie, Rhythmus, keine em-dashes).\n\n` +
   `Gib NUR die KORRIGIERTE Copy im exakt gleichen Format (### <exportName> / propName: "…") zurück. Behalte Keys/Bildpfade/Maße/hrefs.\n\nAKTUELLE COPY:\n${copy}`,
   { phase: 'QC&Fix', label: 'qc-fix' })
 copy = review || copy
@@ -161,8 +151,7 @@ copy = review || copy
 // Re-Check (Code) nach dem Fix
 measured = countCopy(copy); forbidden = lintForbidden(copy); metaIssues = metaLens(copy)
 const gates = {
-  words: measured.words, faq: measured.faq, corridor: CORRIDOR,
-  wordOk: measured.words >= CORRIDOR.min, faqOk: measured.faq >= FAQ_MIN,
+  words: measured.words, faq: measured.faq, formatCountsInformational: true,
   forbidden, metaIssues,
 }
 log(`Nach Fix: ${measured.words} W / ${measured.faq} FAQ · Verbotene ${forbidden.length} · Meta ${metaIssues.length}`)
@@ -178,7 +167,6 @@ const chef = await agent(
 
 let status = 'OK'
 if (forbidden.length) status = 'FACTS_VIOLATION'
-else if (!gates.wordOk || !gates.faqOk) status = 'BLOCKED_STRUCTURAL'  // Prop-Decke erschöpft → Design-Section nötig
 else if (chef && !chef.pass) status = 'CHEF_REVIEW'
 
 return { slug: SLUG, url: URL, pageType: PAGE_TYPE, copy, gates, chef, status }

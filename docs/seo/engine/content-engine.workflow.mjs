@@ -21,10 +21,10 @@
 
 export const meta = {
   name: 'serp-intelligence',
-  description: 'Ebene 1: SERP + Konkurrenz-Tiefe + WDF*IDF + Intent → dichtes, gecachtes Research-Kit (1× pro Keyword)',
+  description: 'Ebene 1: offene Intent-Fragen mit SERP/Konkurrenz prüfen → gecachtes Research-Kit',
   phases: [
-    { title: 'Recherche', detail: 'SERP/Wortzahl/Konkurrenz + WDF/Intent/Gap (2 read-only Agents parallel)' },
-    { title: 'Synthese', detail: 'Dichtes Research-Kit inkl. Korridor, Pflicht-Module, FAQ, Do-NOT-claim, offene Punkte' },
+    { title: 'Recherche', detail: 'SERP/Konkurrenz + Nutzeraufgabe (2 read-only Agents parallel)' },
+    { title: 'Synthese', detail: 'Research-Kit: Nutzerantworten, geeignete Module, Do-NOT-claim, offene Punkte' },
   ],
 }
 
@@ -42,15 +42,10 @@ if (!KW || !SEO || !REPO || !SLUG) {
   throw new Error('serp-intelligence: args unvollständig. Erwarte {slug,url,primaryKeyword,pageType,seoRoot,repoRoot}. Erhalten: ' + JSON.stringify(args))
 }
 
-const ARCHETYPE_CORRIDOR = {
-  hub: { min: 800, max: 1200 }, leistung: { min: 2400, max: 3200 }, produkt: { min: 1200, max: 1800 },
-  ratgeber: { min: 2000, max: 3500 }, referenz: { min: 1200, max: 2000 }, conversion: { min: 300, max: 600 },
-}
-const baseCorr = ARCHETYPE_CORRIDOR[PAGE_TYPE] || ARCHETYPE_CORRIDOR.leistung
 const PLAYBOOK = `${SEO}/playbooks/${PAGE_TYPE}.md`
 const CLUSTER_MAP = CLUSTER ? `${SEO}/playbooks/clusters/${CLUSTER}.md` : null
 
-const WEB = 'Lade zuerst Web-Tools via ToolSearch ("select:WebSearch,WebFetch") und nutze sie für echte Google.de-Recherche (Markt Deutschland). Wortzahlen aus gefetchtem Body MESSEN, nicht schätzen.'
+const WEB = 'Lade zuerst Web-Tools via ToolSearch ("select:WebSearch,WebFetch") und nutze sie für echte Google.de-Recherche (Markt Deutschland). Inhalte, Formate und Nutzerfragen aus den Treffern prüfen.'
 const TEXTONLY = 'WICHTIG: Gib AUSSCHLIESSLICH die geforderten Daten zurück. Bearbeite KEINE Dateien, führe KEINE schreibenden Befehle aus.'
 
 const SERP_SCHEMA = {
@@ -80,7 +75,7 @@ const WDF_SCHEMA = {
     dominantIntent: { type: 'string', enum: ['informational', 'commercial', 'transactional', 'navigational', 'mixed'] },
     jobToBeDone: { type: 'string' },
     microIntents: { type: 'array', items: { type: 'string' } },
-    intentMandatoryModules: { type: 'array', items: { type: 'string' }, description: 'Module, die FAST ALLE Top-Treffer haben → auf unserer Seite Pflicht' },
+    intentMandatoryModules: { type: 'array', items: { type: 'string' }, description: 'Geeignete Module für die konkrete Nutzeraufgabe; Konkurrentenhäufigkeit begründet keine Pflicht' },
     contentGaps: { type: 'array', items: { type: 'string' } },
     ourAngles: { type: 'array', items: { type: 'string' }, description: 'wo Fast (Meisterbetrieb, Eigenfertigung, PU-Kante, Familie, Möbelplaner) überholt' },
     faqCandidates: { type: 'array', items: { type: 'string' } },
@@ -99,18 +94,15 @@ const [serp, wdf] = await parallel([
     { schema: SERP_SCHEMA, phase: 'Recherche', label: 'serp+konkurrenz', model: 'sonnet', agentType: 'Explore' }),
   () => agent(
     `${TEXTONLY}\n${WEB}\nDu bist WDF*IDF-, Intent- & Gap-Analyst für "${KW}" (DE).\n` +
-    `Leite aus den rankenden Top-Treffern ab: thematische Pflicht-Terme (mit Gewicht hoch/mittel/niedrig), Pflicht-Entitäten, ` +
-    `den dominanten Intent + Job-to-be-done + 4–7 Micro-Intents, die intent-abgeleiteten Pflicht-Module (was fast alle Treffer haben), Content-Gaps, unseren Winkel (Fast: Meisterbetrieb Espelkamp/OWL, Eigenfertigung, PU-Kantenverleimung, Familie Fast, Möbelplaner) und FAQ-Kandidaten (≥10) aus PAA + echten Nutzerfragen.\n` +
+    `Leite aus den rankenden Top-Treffern ab: hilfreiche Fachbegriffe (mit Relevanz hoch/mittel/niedrig), relevante Entitäten, ` +
+    `den vermuteten Intent + Job-to-be-done + zu prüfende konkrete Nutzerfragen, dafür geeignete Module (nicht aus Konkurrenzhäufigkeit ableiten), unbeantwortete Fragen, unseren Winkel (Fast: Meisterbetrieb Espelkamp/OWL, Eigenfertigung, PU-Kantenverleimung, Familie Fast, Möbelplaner) und FAQ-Kandidaten ohne Mindestanzahl aus tatsächlich offenen Nutzerfragen; PAA nur als Hinweis.\n` +
     `Lies ${SEO}/keyword-map.md für die Zeile zu ${URL} und ${SEO}/research/competitors/_overview.md.`,
     { schema: WDF_SCHEMA, phase: 'Recherche', label: 'wdf+intent+gap', model: 'sonnet', agentType: 'Explore' }),
 ])
 
-// ---------- Korridor (deterministisch, in Code) ----------
+// ---------- Recherche-Tiefe (nur als Beleg im Kit) ----------
 let serpMedian = (serp && Number.isFinite(serp.medianWordCount)) ? serp.medianWordCount : null
-let cmin = baseCorr.min, cmax = baseCorr.max
-if (serpMedian && PAGE_TYPE !== 'conversion') { cmin = Math.max(serpMedian, baseCorr.min); cmax = Math.max(cmin + 400, Math.round(serpMedian * 1.3)) }
-const corridor = { min: cmin, max: cmax, serpMedian, archetype: PAGE_TYPE }
-log(`Korridor [${PAGE_TYPE}] = ${cmin}–${cmax} W (SERP-Median ${serpMedian ?? 'n/a'})`)
+log(`SERP-Tiefe [${PAGE_TYPE}] = ${serpMedian ?? 'n/a'} W (Recherchebeleg, keine Schreibvorgabe)`)
 
 // ---------- Synthese → Research-Kit (1 Agent, Text) ----------
 phase('Synthese')
@@ -121,11 +113,11 @@ const kit = await agent(
   `ROHRECHERCHE:\nSERP/Konkurrenz:\n${JSON.stringify(serp, null, 2)}\n\nWDF/Intent/Gap:\n${JSON.stringify(wdf, null, 2)}\n\n` +
   `Gib das Kit als Markdown mit EXAKT diesen Abschnitten zurück:\n` +
   `# Research-Kit: ${KW} (${URL})\n` +
-  `## 1 · Wortzahl-Korridor → **${cmin}–${cmax} W** (SERP-Median ${serpMedian ?? 'n/a'}) — verbindlich, kein Raten\n` +
+  `## 1 · SERP-Tiefe → **${serpMedian ?? 'n/a'} W Median** (Recherchebeleg, keine Schreibvorgabe)\n` +
   `## 2 · Intent & Job-to-be-done (was will der Nutzer sehen/tun)\n` +
-  `## 3 · Pflicht-Module (intent-abgeleitet, was ALLE Top-Treffer haben) + Tiefe-Blaupause (wie die Sieger Tiefe erzeugen)\n` +
-  `## 4 · WDF*IDF-Termliste als CHECKLISTE (Term · Gewicht · ☐) — zum Abhaken beim Schreiben\n` +
-  `## 5 · FAQ-Liste (≥10, fertig formulierbar, aus PAA + Nutzerfragen)\n` +
+  `## 3 · Nötige Antworten nach Leseraufgabe; Vergleichsseiten nur als interne Hinweise\n` +
+  `## 4 · Begriffe und Entitäten als Recherchehinweise; keine Pflichtliste zum Abhaken\n` +
+  `## 5 · Offene Nutzerfragen, soweit sie nach dem Haupttext noch eine Antwort brauchen\n` +
   `## 6 · Gaps & unser Winkel (wo Fast überholt) + Negativ-Abgrenzung lt. Playbook\n` +
   `## 7 · Interne Links (rein/raus, Anker) lt. internal-linking.md\n` +
   `## 8 · Do-NOT-claim-Liste (❌ aus FACTS.md, konkret für dieses Thema)\n` +
@@ -133,4 +125,4 @@ const kit = await agent(
   `Nur das Kit-Markdown, dicht und konkret, keine Vorrede.`,
   { phase: 'Synthese', label: 'research-kit' })
 
-return { slug: SLUG, url: URL, pageType: PAGE_TYPE, corridor, kit, research: { serp, wdf } }
+return { slug: SLUG, url: URL, pageType: PAGE_TYPE, serpMedianWordCount: serpMedian, kit, research: { serp, wdf } }
