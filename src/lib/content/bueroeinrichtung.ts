@@ -31,7 +31,7 @@ export const bueroHero = {
 export const bueroIntroStats = {
   since: "seit 1996",
   sinceSub: "Fertigen wir Möbel nach Maß.",
-  heading: "Büromöbel nach Maß, die zu Ihren Räumen und Abläufen passen",
+  heading: "Büroeinrichtung nach Maß, die zu Ihren Räumen und Abläufen passt",
   introBefore: "Von der ersten",
   introBold: "Planung",
   introAfter:
@@ -44,7 +44,7 @@ export const bueroIntroStats = {
   col1CtaLabel: "Büroprojekt unverbindlich anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Beratung, Planung, Fertigung und Montage aus einer Hand — kein Abstimmen zwischen drei Gewerken. Sie sprechen mit den Leuten, die Ihre Büromöbel bauen.",
+    "Beratung, Planung, Fertigung und Montage aus einer Hand, kein Abstimmen zwischen drei Gewerken. Sie sprechen mit den Leuten, die Ihre [Büromöbel nach Maß](/bueroeinrichtung/bueromoebel-nach-mass/) bauen.",
   counterTarget: 200,
   counterDuration: 2000,
   counterSuffix: " km",

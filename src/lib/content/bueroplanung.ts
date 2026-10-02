@@ -267,7 +267,7 @@ export const bpKosten = {
 export const bpMoebelplaner = {
   heading: "Ihr Büro online vorplanen, den Rest übernehmen wir",
   body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Schränke und Büromöbel online zusammen: Maße, Oberflächen und Einlegeböden im 3D-Konfigurator. Was Sie dort planen, nehmen wir auf. Alles Weitere liegt bei uns: kostenloses Aufmaß, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team.",
+    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Schränke und [Büromöbel nach Maß](/bueroeinrichtung/bueromoebel-nach-mass/) online zusammen: Maße, Oberflächen und Einlegeböden im 3D-Konfigurator. Was Sie dort planen, nehmen wir auf. Alles Weitere liegt bei uns: kostenloses Aufmaß, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: `${IMG}/bueroeinrichtung-empfang-kuechenzeile.jpg`,

@@ -94,6 +94,7 @@ export const PAGES: PageNode[] = [
   { slug: "/praxiseinrichtung/", type: "cluster-pillar", silo: "praxis", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "praxiseinrichtung" },
   // Büro-Cluster: Produkt-Spokes unter dem Büroeinrichtung-Pillar (verschachtelte URLs)
   { slug: "/bueroeinrichtung/bueroplanung/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroplanung" },
+  { slug: "/bueroeinrichtung/bueromoebel-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueromoebel-nach-mass" },
 
   // Conversion + brand (neutral)
   { slug: "/moebelplaner/", type: "conversion", silo: "", audience: "neutral", parent: "/", built: true },
@@ -463,6 +464,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Büro planen lassen", "professionelle Büroplanung"],
     brand: ["Büroplanung von Fast Systemmöbel"],
     descriptive: ["Ihr Büro planen lassen", "zur Büroplanung"],
+  },
+  "/bueroeinrichtung/bueromoebel-nach-mass/": {
+    exact: ["Büromöbel nach Maß"],
+    partial: ["maßgefertigte Büromöbel", "individuelle Büromöbel"],
+    brand: ["Büromöbel von Fast Systemmöbel"],
+    descriptive: ["unser Büromöbel-Programm", "zu den Büromöbeln nach Maß"],
   },
 };
 
