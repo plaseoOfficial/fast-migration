@@ -96,7 +96,7 @@ export const wtCtas = {
 export const wtBecken = {
   heading: "Becken und Armatur, passgenau in die Platte gearbeitet",
   intro:
-    "Welches Becken in Ihr Bad kommt, entscheiden Sie. Wir arbeiten die Platte darum herum, mit exaktem Ausschnitt, Hahnlochbohrung für die Armatur und Aussparung für den Siphon.",
+    "Welches Becken in Ihr Bad kommt, entscheiden Sie. Wir arbeiten die Platte darum herum, mit exaktem Ausschnitt, Hahnlochbohrung für die Armatur und Aussparung für den Siphon. Der passende [Waschtischunterschrank nach Maß](/badmoebel-nach-mass/waschtischunterschrank-nach-mass/) kommt darunter.",
   segments: [
     {
       title: "Aufsatzbecken",

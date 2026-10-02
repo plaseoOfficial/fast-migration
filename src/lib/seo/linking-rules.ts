@@ -72,6 +72,8 @@ export const PAGES: PageNode[] = [
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   // Badmöbel spoke (cluster child): Waschtisch nach Maß (Platte + Becken)
   { slug: "/badmoebel-nach-mass/waschtisch-nach-mass/", type: "product", silo: "badmoebel", audience: "privat", parent: "/badmoebel-nach-mass/", built: true, contentModule: "waschtisch-nach-mass" },
+  // Badmöbel spoke (cluster child): Waschtischunterschrank nach Maß (Korpus unter dem Becken)
+  { slug: "/badmoebel-nach-mass/waschtischunterschrank-nach-mass/", type: "product", silo: "badmoebel", audience: "privat", parent: "/badmoebel-nach-mass/", built: true, contentModule: "waschtischunterschrank-nach-mass" },
   { slug: "/wohnmoebel-nach-mass/", type: "cluster-pillar", silo: "wohnmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "wohnmoebel-nach-mass" },
   // Wohnmöbel spoke (cluster child): Regal nach Maß (offenes Regal, flexible Fläche)
   { slug: "/wohnmoebel-nach-mass/regal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "regal-nach-mass" },
@@ -397,6 +399,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Waschtischplatte nach Maß", "maßgefertigter Waschtisch", "Waschtisch mit Becken nach Maß"],
     brand: ["Fast Systemmöbel Waschtisch"],
     descriptive: ["Waschtisch nach Maß planen", "passende Waschtischplatte nach Maß"],
+  },
+  "/badmoebel-nach-mass/waschtischunterschrank-nach-mass/": {
+    exact: ["Waschtischunterschrank nach Maß"],
+    partial: ["Waschbeckenunterschrank nach Maß", "maßgefertigter Waschtischunterschrank", "Unterschrank fürs Waschbecken nach Maß"],
+    brand: ["Fast Systemmöbel Waschtischunterschrank"],
+    descriptive: ["Unterschrank am Waschplatz nach Maß", "Waschtischunterschrank planen"],
   },
   "/wohnmoebel-nach-mass/": {
     exact: ["Wohnmöbel nach Maß"],

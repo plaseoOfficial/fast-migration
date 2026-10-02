@@ -133,7 +133,7 @@ export const badTypische = {
     {
       title: "Waschtischunterschrank nach Maß",
       description:
-        "Der Korpus unter dem Becken, hängend oder stehend. Die Auszüge planen wir um den Siphon herum, mit Vollauszug und Soft-Close, der Stauraum bleibt voll nutzbar.",
+        "Der [Waschtischunterschrank nach Maß](/badmoebel-nach-mass/waschtischunterschrank-nach-mass/) als Korpus unter dem Becken, hängend oder stehend. Die Auszüge planen wir um den Siphon herum, mit Vollauszug und Soft-Close, der Stauraum bleibt voll nutzbar.",
     },
     {
       title: "Badschrank nach Maß",
