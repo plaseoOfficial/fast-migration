@@ -138,7 +138,7 @@ export const badTypische = {
     {
       title: "Badschrank nach Maß",
       description:
-        "Stauraum abseits des Waschplatzes: Hochschrank, Hängeschrank oder Sideboard für Handtücher und Vorräte, passgenau in die Nische gebaut, bei Bedarf raumhoch bis unter die Decke.",
+        "[Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/) für Stauraum abseits des Waschplatzes: Hochschrank, Hängeschrank oder Sideboard für Handtücher und Vorräte, passgenau in die Nische gebaut, bei Bedarf raumhoch bis unter die Decke.",
     },
   ],
   row2: [
