@@ -209,7 +209,7 @@ export function ReferenzenGrid({
                     color: "rgb(102,102,102)",
                   }}
                 >
-                  {project.description}
+                  {renderInlineLinks(project.description)}
                 </p>
 
                 <span

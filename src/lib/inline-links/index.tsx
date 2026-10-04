@@ -22,7 +22,13 @@ export function renderInlineLinks(text: string): ReactNode {
         {seg.label}
       </Link>
     ) : (
-      <a key={i} href={seg.href} className="fast-inline-link">
+      <a
+        key={i}
+        href={seg.href}
+        target="_blank"
+        rel="noopener"
+        className="fast-inline-link"
+      >
         {seg.label}
       </a>
     ),

@@ -40,7 +40,6 @@ export function stripJsonLdLinks<T>(value: T): T {
 
 const SOCIAL_PROFILES = [
   "https://www.instagram.com/fastsystemmobel/",
-  "https://de.linkedin.com/in/andreas-fast-089245143",
   "https://www.facebook.com/fastsystemmobel/",
 ];
 

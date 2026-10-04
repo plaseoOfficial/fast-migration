@@ -190,6 +190,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Zentimetergenaue Küchen vom Meisterbetrieb. Geplant, gefertigt und montiert aus einer Hand, passgenau auf Ihren Raum.",
     href: "/kuechen-nach-mass/",
+    moreLabel: "Küchen nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -197,6 +198,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Kleiderschränke, Ankleiden und Nischenlösungen vom Meisterbetrieb. Bis zur Decke, Wand zu Wand, auch unter Dachschrägen.",
     href: "/einbauschraenke-nach-mass/",
+    moreLabel: "Einbauschränke nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -204,6 +206,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Waschtisch, Unterschrank und Spiegelschrank vom Meisterbetrieb. Feuchtigkeitsbeständig verarbeitet, passgenau für Nische, Dachschräge und kleines Bad.",
     href: "/badmoebel-nach-mass/",
+    moreLabel: "Badmöbel nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -211,6 +214,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Wohnwand, TV-Wand, Sideboard und Regal vom Meisterbetrieb. Wand zu Wand geplant, passgenau für Nische, Dachschräge und jeden Raumzuschnitt.",
     href: "/wohnmoebel-nach-mass/",
+    moreLabel: "Wohnmöbel nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -218,6 +222,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Waschküche, Vorratskammer und Stauraum vom Meisterbetrieb. Waschmaschine verbaut, Vorrat und Reinigung geordnet, Wand zu Wand bis unter die Decke.",
     href: "/hauswirtschaftsraum/",
+    moreLabel: "Hauswirtschaftsraum nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
@@ -225,6 +230,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Wir planen den ganzen Raum: Architektur, Licht, Materialien und Möbel als Einheit. Vom Entwurf bis zur Montage.",
     href: "/moebelplaner/",
+    moreLabel: "Möbel online planen",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
@@ -232,6 +238,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Moderne Homag-Technik, präzise CNC-Verarbeitung und handwerkliche Qualitätskontrolle. Von Einzelmöbeln bis zu kompletten Objekten.",
     href: "/ueber-uns/",
+    moreLabel: "Mehr über uns",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
@@ -239,6 +246,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Für Hotels, Büros oder Ladengeschäfte entwickeln wir langlebige Möbelkonzepte, die Design und Funktion vereinen.",
     href: "/gewerbe/",
+    moreLabel: "Gewerbeeinrichtung",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
@@ -246,6 +254,7 @@ export const mnmWeitereCards: ServiceCard[] = [
     description:
       "Unsere Monteure arbeiten sauber, termingerecht und millimetergenau. Die finale Passung wird vor Ort abgestimmt.",
     href: "/kontakt/",
+    moreLabel: "Montage anfragen",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",

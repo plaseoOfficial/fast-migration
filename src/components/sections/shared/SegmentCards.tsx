@@ -88,7 +88,7 @@ export function SegmentCards({
                 className="mt-3 text-[16px] leading-[26px]"
                 style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
               >
-                {segment.body}
+                {renderInlineLinks(segment.body)}
               </p>
             </Reveal>
           ))}

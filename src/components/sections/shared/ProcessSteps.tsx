@@ -123,7 +123,7 @@ export function ProcessSteps({
                 className="mt-4 text-[14px] leading-[22px]"
                 style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
               >
-                {note}
+                {renderInlineLinks(note)}
               </p>
             )}
           </div>

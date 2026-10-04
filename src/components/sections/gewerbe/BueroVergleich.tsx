@@ -75,7 +75,7 @@ export function BueroVergleich({ heading, intro, items, kantenText }: BueroVergl
                     className="text-[14px] leading-[1.7] font-medium"
                     style={{ color: "rgba(220,220,220,0.85)" }}
                   >
-                    {detail}
+                    {renderInlineLinks(detail)}
                   </p>
                 )}
               </Reveal>

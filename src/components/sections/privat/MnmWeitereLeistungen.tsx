@@ -56,7 +56,7 @@ export function MnmWeitereLeistungen({
   heading = "Weitere Leistungen von Fast Systemmöbel",
   cards = DEFAULT_CARDS,
   ampersandText = DEFAULT_AMPERSAND_TEXT,
-  moreLabel = "Mehr Infos hier",
+  moreLabel,
 }: MnmWeitereLeistungenProps) {
   return (
     <section
@@ -160,7 +160,7 @@ export function MnmWeitereLeistungen({
                     color: "rgb(243,243,243)",
                   }}
                 >
-                  {card.moreLabel ?? moreLabel}
+                  {card.moreLabel ?? moreLabel ?? card.title}
                 </Link>
               )}
             </Reveal>

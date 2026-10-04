@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 const STEPS = [
   {
@@ -78,7 +79,7 @@ export function MpSchritte() {
                   className="mt-2 text-[14px] leading-[23.8px] font-medium"
                   style={{ color: "rgb(102,102,102)", fontWeight: 500 }}
                 >
-                  {step.description}
+                  {renderInlineLinks(step.description)}
                 </p>
               </Reveal>
             ))}
