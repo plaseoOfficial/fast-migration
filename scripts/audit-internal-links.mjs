@@ -382,7 +382,9 @@ async function main() {
       if (rule.darfNicht.includes("legal-in-body") && t.type === "legal") {
         add("Warnung", "darf-nicht", `${node.slug}: Body-Link auf Rechtsseite \`${t.slug}\` (nur im Footer erlaubt).`, loc(l));
       }
-      if (rule.darfNicht.includes("skip-hub-level") && ["product", "cluster-article", "ratgeber-pillar"].includes(t.type) && t.parent !== node.slug) {
+      // Geschwister unter demselben Cluster sind kein Ebenen-Sprung: Ein Ratgeber
+      // (Ebene 3) verlinkt seine Produktseiten (Ebene 3) — das ist sogar sein MUSS.
+      if (rule.darfNicht.includes("skip-hub-level") && ["product", "cluster-article", "ratgeber-pillar"].includes(t.type) && t.parent !== node.slug && t.parent !== node.parent) {
         add("Warnung", "darf-nicht", `${node.slug}: Hub-Ebenen-Übersprung → \`${t.slug}\` (Ebene 3). Über den Cluster-Pillar verlinken.`, loc(l));
       }
       if (rule.darfNicht.includes("cross-silo") && isCrossSilo(node, t) && !bridgeBetween(node.slug, t.slug)) {
@@ -406,9 +408,11 @@ async function main() {
     const bodyTargets = new Set(
       outgoing.filter((l) => isInternal(l.href) && !l.crumb).map((l) => normSlug(l.href)),
     );
-    const bodyCount = bodyTargets.size + outgoing.filter((l) => isExternal(l.href)).length;
-    if (node.contentModule && bodyCount > rule.maxBodyLinks) {
-      add("Warnung", "budget", `${node.slug}: ${bodyCount} Body-Links > Budget ${rule.maxBodyLinks} (PageRank-Verdünnung).`, { page: node.slug });
+    // tel:/mailto: geben keine Linkkraft ab und zählen deshalb nicht mit.
+    const bodyCount = bodyTargets.size + outgoing.filter((l) => isExternal(l.href) && !/^(mailto|tel):/.test(l.href)).length;
+    const budget = node.maxBodyLinks ?? rule.maxBodyLinks;
+    if (node.contentModule && bodyCount > budget) {
+      add("Warnung", "budget", `${node.slug}: ${bodyCount} Body-Links > Budget ${budget} (PageRank-Verdünnung).`, { page: node.slug });
     }
 
     // CHECK 6: anchor diversity (only where we have real anchors)

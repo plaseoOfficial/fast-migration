@@ -50,6 +50,12 @@ export interface PageNode {
    * persönlichen Kontakt (/kontakt/), nicht über den Privat-Möbelplaner.
    */
   mustExempt?: string[];
+  /**
+   * Eigenes Linkbudget statt `RULES[type].maxBodyLinks`. Nur mit Begründung im
+   * Kommentar am Knoten — z. B. /referenzen/: Jede Projektkarte soll auf die
+   * genaueste Leistungsseite zeigen, das Budget wächst mit den Projekten.
+   */
+  maxBodyLinks?: number;
 }
 
 export const PAGES: PageNode[] = [
@@ -106,7 +112,9 @@ export const PAGES: PageNode[] = [
   { slug: "/ueber-uns/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "ueber-uns" },
 
   // Planned neutral trust/info pages (backlog targets)
-  { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "referenzen" },
+  // Portfolio: Jede Projektkarte verlinkt die genaueste Leistungsseite (Link-Analyse
+  // 02.10.2026). Das sind mehr Ziele als die 10 einer Marken-Seite.
+  { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "referenzen", maxBodyLinks: 14 },
   { slug: "/ablauf-massanfertigung/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/liefergebiet-montage/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/faq/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
