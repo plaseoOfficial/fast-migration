@@ -174,7 +174,14 @@ async function extractModule(node) {
   try {
     const mod = await import(pathToFileURL(abs).href);
     const out = [];
-    for (const v of Object.values(mod)) walkValue(v, out);
+    // JSON-LD-Exporte (…JsonLd) überspringen: stripJsonLdLinks entfernt dort alle Marker, sie
+    // werden nie als Link gerendert und würden FAQ-Links sonst doppelt zählen. Ein gemeinsames
+    // `seen` verhindert Doppelzählung, wenn mehrere Exporte dasselbe Objekt referenzieren.
+    const seen = new Set();
+    for (const [name, v] of Object.entries(mod)) {
+      if (/jsonld$/i.test(name)) continue;
+      walkValue(v, out, seen);
+    }
     for (const l of out) {
       const link = { ...l, source: node.slug, scope: "page", file, fromModule: true };
       links.push(link);
