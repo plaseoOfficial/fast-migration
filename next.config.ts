@@ -57,6 +57,46 @@ const nextConfig: NextConfig = {
       { source: "/ladenbau/gastronomieeinrichtung/", destination: "/gastronomieeinrichtung/", permanent: true },
       { source: "/gastronomieeinrichtung/hoteleinrichtung/", destination: "/serienmoebel/", permanent: true }, // INTERIM → /serienmoebel/hotelmoebel-serie/
       { source: "/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/nischenschrank-nach-mass/
+      // --- Altsite (Joomla, 2013–2020): 33 Adressen aus dem Webarchiv, die bis
+      // 10/2026 auf 404 endeten. Google kannte einige davon noch (z. B.
+      // /geschaeftskunden/geschaeftseinrichtung.html). Ziel = nächstes Thema.
+      // Privatkunden → passender Cluster
+      { source: "/privatkunden/kuechen.html", destination: "/kuechen-nach-mass/", permanent: true },
+      { source: "/privatkunden/badezimmer.html", destination: "/badmoebel-nach-mass/", permanent: true },
+      { source: "/privatkunden/wohnbereich.html", destination: "/wohnmoebel-nach-mass/", permanent: true },
+      { source: "/privatkunden/auf-wunsch.html", destination: "/moebel-nach-mass/", permanent: true },
+      { source: "/privatkunden1.html", destination: "/moebel-nach-mass/", permanent: true },
+      { source: "/privatkunden1/kuechen1.html", destination: "/kuechen-nach-mass/", permanent: true },
+      { source: "/privatkunden1/bad1.html", destination: "/badmoebel-nach-mass/", permanent: true },
+      { source: "/privatkunden1/wohnbereich1.html", destination: "/wohnmoebel-nach-mass/", permanent: true },
+      { source: "/privatkunden1/2013-06-08-20-54-06.html", destination: "/moebel-nach-mass/", permanent: true },
+      // Geschäfts- und Industriekunden
+      { source: "/geschaeftskunden.html", destination: "/gewerbe/", permanent: true },
+      { source: "/geschaeftskunden1.html", destination: "/gewerbe/", permanent: true },
+      { source: "/geschaeftskunden/geschaeftseinrichtung.html", destination: "/gewerbe/", permanent: true },
+      { source: "/geschaeftskunden1/geschaeftseinrichtung.html", destination: "/gewerbe/", permanent: true },
+      { source: "/geschaeftskunden/ladenbau.html", destination: "/ladenbau/", permanent: true },
+      { source: "/geschaeftskunden1/ladenbau.html", destination: "/ladenbau/", permanent: true },
+      { source: "/industriekunden.html", destination: "/serienmoebel/", permanent: true },
+      { source: "/industriekunden1.html", destination: "/serienmoebel/", permanent: true },
+      // Unternehmen, Aktuelles, Jobs → Über uns
+      { source: "/unternehmen/unser-unternehmen.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/unternehmen/unser-qualitaetsversprechen.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/unternehmen/unser-service.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/1ueber-uns.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/1ueber-uns/2013-06-08-20-48-42.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/1ueber-uns/2013-06-08-20-52-53.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/1ueber-uns/2013-06-08-20-53-06.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/aktuelles.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/aktuelles1.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/aktuelles.feed", destination: "/ueber-uns/", permanent: true },
+      { source: "/aktuelles1.feed", destination: "/ueber-uns/", permanent: true },
+      { source: "/aktuelles/39-neuer-unternehmensautritt.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/jobs/kuechenmonteure.html", destination: "/ueber-uns/", permanent: true },
+      { source: "/jobs/auszubildenden-kaufmann-fuer-bueromanagement.html", destination: "/ueber-uns/", permanent: true },
+      // Doppelte Pflicht- und Kontaktseiten
+      { source: "/kontakt1.html", destination: "/kontakt/", permanent: true },
+      { source: "/impressum2.html", destination: "/impressum/", permanent: true },
     ];
   },
 };
