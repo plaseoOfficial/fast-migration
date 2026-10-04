@@ -503,6 +503,18 @@ export const GENERIC_MAX_RATIO = 0.1;
 export const GENERIC_ANCHORS = ["hier", "mehr erfahren", "mehr", "weiterlesen", "klicken", "mehr dazu"];
 
 /**
+ * Wörter ohne Aussage über das Ziel. Ein Anker, der NUR aus solchen Wörtern
+ * besteht („Mehr Infos hier", „Jetzt entdecken"), gilt als generisch — auch wenn
+ * er nicht wörtlich in GENERIC_ANCHORS steht. Bis 10/2026 prüfte das Audit nur
+ * exakte Treffer, und 23-mal „Mehr Infos hier" fiel durch.
+ */
+export const GENERIC_WORDS = [
+  "hier", "mehr", "infos", "info", "informationen", "erfahren", "dazu", "weiter", "weiterlesen",
+  "lesen", "klicken", "details", "detail", "entdecken", "ansehen", "anschauen", "jetzt", "link",
+  "seite", "zur", "zum", "zu", "sie", "die", "der", "das", "und", "alle", "unsere", "ihre",
+];
+
+/**
  * Footer link targets allowed by principle 4 (no link graves): pillar-hubs,
  * conversion, legal, plus the standard footer menu (homepage + brand pages
  * like /ueber-uns/ and /referenzen/ — decision 2026-07-14). Cluster-pillars
@@ -510,3 +522,54 @@ export const GENERIC_ANCHORS = ["hier", "mehr erfahren", "mehr", "weiterlesen", 
  * dropdowns and would dilute the contextual link signal.
  */
 export const FOOTER_ALLOWED_TYPES: PageType[] = ["pillar-hub", "conversion", "legal", "homepage", "brand"];
+
+// ---------------------------------------------------------------------------
+// Brücken: erlaubte Links über die Silogrenze (Entscheidung 2026-10-04)
+// ---------------------------------------------------------------------------
+
+/**
+ * Das Silo-Modell verbietet Links zwischen Clustern. Für 33 Seiten ist das zu
+ * streng: Manche Themen gehören echt zu zwei Clustern (die Theke zu Ladenbau und
+ * Gastronomie, die Dachschräge zu Schrank und Küche). Eine Brücke erlaubt genau
+ * dieses Seitenpaar in beide Richtungen; jede andere Cross-Silo-Verbindung warnt
+ * weiter. Je Seite höchstens MAX_BRIDGES_PER_PAGE Brücken, sonst verwischt das
+ * Silo. Quelle: Link-Analyse 02.10.2026, Befund F.
+ */
+export interface Bridge {
+  a: string;
+  b: string;
+  /** Das gemeinsame Thema, das die Brücke rechtfertigt. */
+  thema: string;
+}
+
+export const BRIDGES: Bridge[] = [
+  { a: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", b: "/kuechen-nach-mass/kueche-mit-dachschraege/", thema: "Dachschräge" },
+  { a: "/ladenbau/", b: "/gastronomieeinrichtung/", thema: "Theke und Tresen" },
+  { a: "/serienmoebel/", b: "/gastronomieeinrichtung/", thema: "Hotel und Objekt" },
+  { a: "/praxiseinrichtung/", b: "/bueroeinrichtung/", thema: "Empfang" },
+  { a: "/kuechen-nach-mass/", b: "/hauswirtschaftsraum/", thema: "Küche und Vorrat" },
+];
+
+export const MAX_BRIDGES_PER_PAGE = 2;
+
+/** Brücke zwischen zwei Seiten (Richtung egal), sonst undefined. */
+export function bridgeBetween(x: string, y: string): Bridge | undefined {
+  return BRIDGES.find((br) => (br.a === x && br.b === y) || (br.a === y && br.b === x));
+}
+
+// ---------------------------------------------------------------------------
+// Eingehende Links im Inhalt (Link-Analyse 02.10.2026, Befund A + D)
+// ---------------------------------------------------------------------------
+
+/**
+ * Mindestzahl verschiedener Seiten, die eine Seite im Inhaltsbereich verlinken
+ * (ohne Menü, Footer und Breadcrumb). Produktseiten hingen im Oktober 2026 an
+ * ein bis zwei Quellen — ihrem Cluster und höchstens einem Geschwister — und
+ * bekamen im Linkkraft-Modell zusammen weniger als das Impressum.
+ */
+export const MIN_INBOUND: Partial<Record<PageType, number>> = {
+  "cluster-pillar": 3,
+  product: 3,
+  "ratgeber-pillar": 3,
+  "cluster-article": 3,
+};

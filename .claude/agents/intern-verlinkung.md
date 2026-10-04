@@ -107,7 +107,11 @@ Gruppiere nach **Fehler · Warnung · Hinweis**. Schließe mit einem **Verdikt**
   `linking-rules.ts`, `sitemap.ts`) – nie Component-Markup/-Klassen.
 - Geteilte Singletons (`nav.ts`, `content.ts`) sequenziell bearbeiten.
 - Silo-Integrität: Privat verlinkt nicht auf Gewerbe (und umgekehrt), außer
-  Hub↔Hub oder bei echtem semantischem Bezug (begründen).
+  Hub↔Hub oder als eingetragene Brücke (`BRIDGES` in `linking-rules.ts`, höchstens
+  2 je Seite). Neue Brücke nur bei gemeinsamem Thema, im Eintrag als `thema` begründen.
+- Warnungen `inbound`, `ziel-zu-allgemein` und `anker-generisch` sind Arbeitsaufträge:
+  fehlende Quellen aus thematisch passenden Seiten nachverlinken, auf das genaueste
+  gebaute Ziel zeigen, Linktext mit dem Zielbegriff.
 - Nach **jeder** Einfüge-Aktion Self-Check: `npm run audit:links` (0 Fehler bei
   entsperrbaren Links; verbleibende Fehler müssen echt Backlog-blockiert sein)
   **und** `npm run check` (lint+typecheck+build).
