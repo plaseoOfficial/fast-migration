@@ -89,7 +89,7 @@ export const serienTypische = {
     {
       title: "Hotelzimmer in Serie",
       description:
-        "Komplette Zimmerausstattung in Serie: Schränke, Betten, Schreibtische und Paneele. Pro Etage gleich aufgebaut und schnell montiert.",
+        "Komplette Zimmerausstattung in Serie: Schränke, Betten, Schreibtische und Paneele. Pro Etage gleich aufgebaut und schnell montiert. Lobby, Bar und Frühstücksraum planen wir als [Gastronomieeinrichtung](/gastronomieeinrichtung/) dazu.",
     },
     {
       title: "Pflege- und Senioreneinrichtungen",

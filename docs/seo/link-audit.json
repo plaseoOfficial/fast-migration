@@ -2,13 +2,13 @@
   "summary": {
     "pagesBuilt": 34,
     "pagesPlanned": 5,
-    "linksFound": 469,
+    "linksFound": 494,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 20,
+      "Warnung": 6,
       "Hinweis": 20
     }
   },
@@ -39,44 +39,6 @@
     },
     {
       "severity": "Warnung",
-      "check": "ziel-zu-allgemein",
-      "message": "/referenzen/: „Einbauschrank mit offenen Fächern\" → `/moebel-nach-mass/`, passt aber zu `/einbauschraenke-nach-mass/` / `/einbauschraenke-nach-mass/einbauschrank-dachschraege/` — auf das genauere Ziel verlinken.",
-      "file": "src/lib/content/referenzen.ts",
-      "href": "/moebel-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "ziel-zu-allgemein",
-      "message": "/referenzen/: „Arbeitsplatz & Stauraum im Büro\" → `/gewerbe/`, passt aber zu `/bueroeinrichtung/` / `/bueroeinrichtung/bueroplanung/` — auf das genauere Ziel verlinken.",
-      "file": "src/lib/content/referenzen.ts",
-      "href": "/gewerbe/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/einbauschraenke-nach-mass/`, `/einbauschraenke-nach-mass/garderobe-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/einbauschraenke-nach-mass/garderobe-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/einbauschraenke-nach-mass/`, `/einbauschraenke-nach-mass/kleiderschrank-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/einbauschraenke-nach-mass/garderobe-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/badmoebel-nach-mass/waschtisch-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/badmoebel-nach-mass/`, `/badmoebel-nach-mass/waschtischunterschrank-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/badmoebel-nach-mass/waschtisch-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/badmoebel-nach-mass/badschrank-nach-mass/: nur 1 Seite(n) verlinken im Inhalt (Minimum 3) — `/badmoebel-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/badmoebel-nach-mass/badschrank-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
       "check": "inbound",
       "message": "/wohnmoebel-nach-mass/regal-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/wohnmoebel-nach-mass/`, `/wohnmoebel-nach-mass/buecherregal-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
       "page": "/wohnmoebel-nach-mass/regal-nach-mass/"
@@ -90,56 +52,8 @@
     {
       "severity": "Warnung",
       "check": "inbound",
-      "message": "/hauswirtschaftsraum/: nur 1 Seite(n) verlinken im Inhalt (Minimum 3) — `/moebel-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
+      "message": "/hauswirtschaftsraum/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/moebel-nach-mass/`, `/kuechen-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
       "page": "/hauswirtschaftsraum/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/kuechen-nach-mass/kueche-planen/: nur 1 Seite(n) verlinken im Inhalt (Minimum 3) — `/kuechen-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/kuechen-nach-mass/kueche-planen/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/kuechen-nach-mass/kuechenzeile-nach-mass/: nur 1 Seite(n) verlinken im Inhalt (Minimum 3) — `/kuechen-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/kuechen-nach-mass/kuechenzeile-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/kuechen-nach-mass/kueche-mit-dachschraege/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/kuechen-nach-mass/`, `/einbauschraenke-nach-mass/einbauschrank-dachschraege/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/kuechen-nach-mass/kueche-mit-dachschraege/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/gastronomieeinrichtung/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/`, `/gewerbe/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/gastronomieeinrichtung/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/serienmoebel/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/gewerbe/`, `/referenzen/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/serienmoebel/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/praxiseinrichtung/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/`, `/gewerbe/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/praxiseinrichtung/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/bueroeinrichtung/bueroplanung/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/bueroeinrichtung/`, `/bueroeinrichtung/bueromoebel-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/bueroeinrichtung/bueroplanung/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/bueroeinrichtung/bueromoebel-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/bueroeinrichtung/`, `/bueroeinrichtung/bueroplanung/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/bueroeinrichtung/bueromoebel-nach-mass/"
     },
     {
       "severity": "Hinweis",
@@ -242,16 +156,16 @@
     {
       "severity": "Hinweis",
       "check": "anker-relevanz",
-      "message": "/referenzen/: Linktext „Sideboard in Betonoptik\" → `/bueroeinrichtung/` enthält keinen Begriff des Ziels.",
+      "message": "/referenzen/: Linktext „Sideboard in Betonoptik\" → `/bueroeinrichtung/bueromoebel-nach-mass/` enthält keinen Begriff des Ziels.",
       "file": "src/lib/content/referenzen.ts",
-      "href": "/bueroeinrichtung/"
+      "href": "/bueroeinrichtung/bueromoebel-nach-mass/"
     },
     {
       "severity": "Hinweis",
       "check": "anker-relevanz",
-      "message": "/referenzen/: Linktext „Konferenzraum mit Tisch nach Maß\" → `/bueroeinrichtung/` enthält keinen Begriff des Ziels.",
+      "message": "/referenzen/: Linktext „Konferenzraum mit Tisch nach Maß\" → `/bueroeinrichtung/bueroplanung/` enthält keinen Begriff des Ziels.",
       "file": "src/lib/content/referenzen.ts",
-      "href": "/bueroeinrichtung/"
+      "href": "/bueroeinrichtung/bueroplanung/"
     },
     {
       "severity": "Hinweis",
