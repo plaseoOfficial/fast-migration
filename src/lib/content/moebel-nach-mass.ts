@@ -70,7 +70,7 @@ export const mnmTypische = {
     {
       title: "Bad",
       description:
-        "Präzise Planung für kleine und große Bäder: Stauraum, Lichtführung und harmonische Materialien.",
+        "Präzise Planung für kleine und große Bäder: [Badmöbel nach Maß](/badmoebel-nach-mass/) mit Stauraum, Lichtführung und harmonischen Materialien.",
     },
     {
       title: "Garderoben",
@@ -82,7 +82,7 @@ export const mnmTypische = {
     {
       title: "Wohnbereiche",
       description:
-        "Wohnräume, die Struktur geben: Möbel, Akzente und Proportionen mit klarer Wirkung.",
+        "Wohnräume, die Struktur geben: [Wohnmöbel nach Maß](/wohnmoebel-nach-mass/), Akzente und Proportionen mit klarer Wirkung.",
     },
     {
       title: "Homeoffice",
@@ -92,7 +92,7 @@ export const mnmTypische = {
     {
       title: "Stauraum",
       description:
-        "[Einbauschränke nach Maß](/einbauschraenke-nach-mass/) und individuelle Lösungen, die jeden Zentimeter nutzen – für Nischen, Dachschrägen und Sonderbereiche.",
+        "[Einbauschränke nach Maß](/einbauschraenke-nach-mass/) und individuelle Lösungen, die jeden Zentimeter nutzen – für Nischen, Dachschrägen und den [Hauswirtschaftsraum](/hauswirtschaftsraum/).",
     },
   ],
 };

@@ -128,7 +128,7 @@ export const bueroTypische = {
     {
       title: "Empfangstresen & Thekenbereiche",
       description:
-        "Empfangstresen nach Maß, die Besucher führen und für einen guten ersten Eindruck sorgen. Ausgelegt auf Ihr Corporate Design und Ihre Abläufe am Empfang, mit durchdachtem Arbeitsplatz dahinter und Stauraum für alles, was im Sichtbereich nicht herumliegen soll.",
+        "Empfangstresen nach Maß, die Besucher führen und für einen guten ersten Eindruck sorgen. Ausgelegt auf Ihr Corporate Design und Ihre Abläufe am Empfang, mit durchdachtem Arbeitsplatz dahinter und Stauraum für alles, was im Sichtbereich nicht herumliegen soll. In Arztpraxen wird daraus die Anmeldung, mehr dazu bei der [Praxiseinrichtung](/praxiseinrichtung/).",
     },
     {
       title: "Teeküchen & Akustiklösungen",

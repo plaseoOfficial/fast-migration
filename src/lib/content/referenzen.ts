@@ -87,7 +87,7 @@ export const referenzenGrid = {
       meta: "Gewerbe · Büro",
       description:
         "Ein schwebendes Sideboard in Betonoptik mit dunkler Stirnseite – als ruhiger Stauraum im Büro, exakt auf die Wand und den Raum abgestimmt.",
-      href: "/bueroeinrichtung/",
+      href: "/bueroeinrichtung/bueromoebel-nach-mass/",
     },
     {
       image: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
@@ -98,7 +98,7 @@ export const referenzenGrid = {
       meta: "Privat · Schlafzimmer",
       description:
         "Ein raumhoher Einbauschrank in Anthrazit verbindet geschlossene Flächen mit offenen Fächern und Schubladen – passgenau von Wand zu Wand gebaut.",
-      href: "/moebel-nach-mass/",
+      href: "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/",
     },
     {
       image: "/images/einbauschrank-dachschraege/dachschraegenschrank-nach-mass-trapezform-schlafzimmer.jpg",
@@ -131,7 +131,7 @@ export const referenzenGrid = {
       meta: "Gewerbe · Büro",
       description:
         "Ein großer Konferenztisch aus Holz, dazu Sideboard und Medienwand – ein repräsentativer Besprechungsraum, abgestimmt auf den Büroalltag.",
-      href: "/bueroeinrichtung/",
+      href: "/bueroeinrichtung/bueroplanung/",
     },
     {
       image: "/images/2025/11/DSC_0001.jpg",
@@ -142,9 +142,7 @@ export const referenzenGrid = {
       meta: "Gewerbe · Büro",
       description:
         "Schreibtisch und Stauraum-Korpus als Einheit direkt am Fenster – funktionale Büromöbel nach Maß mit klaren, robusten Oberflächen.",
-      // Authority-Link zum Gewerbe-Hub (SOLL) — die beiden anderen Büro-Kacheln
-      // verlinken bereits den Cluster /bueroeinrichtung/.
-      href: "/gewerbe/",
+      href: "/bueroeinrichtung/bueromoebel-nach-mass/",
     },
     {
       image: "/images/2025/11/WhatsApp-Bild-2025-01-16-um-12.34.29_b25a14a5.jpg",
