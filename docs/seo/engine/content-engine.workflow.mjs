@@ -127,7 +127,8 @@ const kit = await agent(
   `## 4 · WDF*IDF-Termliste als CHECKLISTE (Term · Gewicht · ☐) — zum Abhaken beim Schreiben\n` +
   `## 5 · FAQ-Liste (≥10, fertig formulierbar, aus PAA + Nutzerfragen)\n` +
   `## 6 · Gaps & unser Winkel (wo Fast überholt) + Negativ-Abgrenzung lt. Playbook\n` +
-  `## 7 · Interne Links (rein/raus, Anker) lt. internal-linking.md\n` +
+  `## 7 · Interne Links (rein/raus, Anker) lt. internal-linking.md — PFLICHT bei Produkt/Ratgeber/Artikel: ≥ 1 gebautes Geschwister (gleicher Cluster) im Fließtext verlinken UND in ≥ 1 indexierter Geschwister-Seite einen Rücklink einplanen (Quelle + Anker nennen; Budget der Quelle prüfen, bei vollem Budget eine Karte/einen schwächeren Link tauschen)\n` +
+  `## 7b · Belege (Outbound): Norm-/Vorschrift-/Messwert-Angaben mit max. 2 Links je Seite NUR auf Quellen der EXTERNAL_SOURCE_ALLOWLIST (src/lib/seo/linking-rules.ts: gesetze-im-internet.de, baua.de, dguv.de, eur-lex.europa.eu, rki.de, bundesgesundheitsministerium.de, amk.de, amk-ratgeber-kueche.de, verbraucherzentrale.de, nullbarriere.de); Ankertext = Name der Quelle; nie Hersteller/Wettbewerber; nichts erfinden; kostenpflichtige Normen (DIN/EN/ISO) als Text ohne Link\n` +
   `## 8 · Do-NOT-claim-Liste (❌ aus FACTS.md, konkret für dieses Thema)\n` +
   `## 9 · Offene Punkte / Wissenslücken (was NUR der Kunde weiß; IMMER inkl. Geo-Reichweite „bundesweit oder montage-gebunden?"). Wird NICHT beim Kunden erfragt, sondern vor dem Schreiben gegen FACTS.md + den Antwort-Fundus des Mandanten aufgelöst; alles Unbelegte bleibt Leerstelle und wird nicht behauptet.\n` +
   `Nur das Kit-Markdown, dicht und konkret, keine Vorrede.`,

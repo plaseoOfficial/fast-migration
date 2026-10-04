@@ -101,11 +101,13 @@ Grundton bleibt: Meisterbetrieb mit ruhigem Handwerksstolz, „Sie", Beweis stat
 
 **Rolle: Cluster-Pillar — Verteilzentrum des Clusters (Ebene 1, unter dem Hub).**
 
-- **Eingehend (rein):** vom **Pillar-Hub** (`/moebel-nach-mass/` bzw. `/gewerbe/`), von der **Homepage** (SOLL), von **Geschwister-Produkt-/Ratgeber-Seiten** desselben Clusters (Kind → Pillar als Up-Link).
+- **Eingehend (rein, Pflicht, Audit-Gate `inbound`):** mind. **2 verschiedene indexierte Seiten** verlinken die Leistungsseite aus dem Inhalt (`RULES["cluster-pillar"].minInboundInline = 3`) — typischerweise der **Pillar-Hub** (`/moebel-nach-mass/` bzw. `/gewerbe/`), die **Homepage** oder `/referenzen/` und die **eigenen Produkt-/Ratgeber-Kinder** (Kind → Pillar als Up-Link im Fließtext). Breadcrumb, Header-Nav und Footer zählen nicht.
 - **Ausgehend (raus):** **nach unten** zu allen **Produkt-Kindern** (Varianten) und **Ratgeber-Kindern** (Kosten-, planen-, vs.-Artikel) des eigenen Clusters; **nach oben** zum direkten Hub (Breadcrumb + 1 kontextueller In-Content-Link); **zu den Conversion-Zielen** Möbelplaner + Kontakt (Pflicht); SOLL zu `/referenzen/` und Ablauf-/Liefergebiet-Seiten, sobald gebaut.
 - **Silo-Integrität:** **niemals** in den anderen Silo querverlinken (Privat-Cluster ↔ Gewerbe-Cluster) — Ausnahme nur Hub↔Hub. Eine Leistungsseite verlinkt nicht zu Clustern eines fremden Silos.
 - **Link-Budget:** **8–10 Body-Links** (Cluster-Pillar-Limit), davon ≥3 kontextuell.
 - **Anker-Logik:** Anker variieren — Exact-Match („Küche nach Maß") max. 2–3× pro URL, dazu partial („maßgefertigte Küche"), brand+keyword, beschreibend; ≤10 % generisch. Zu Kindern beschreibende/partial Anker (z. B. „Was eine Maßküche kostet", „L-Küche nach Maß planen"), nicht stur Exact-Match.
+- **Geschwister-Pflicht der Kinder (PFLICHT, beidseitig):** Wird unter dieser Leistungsseite eine neue Produkt-/Ratgeber-Seite gebaut, verlinkt die neue Seite **≥ 1 gebautes Geschwister** im Fließtext **und** trägt in **≥ 1 indexierter Geschwister-Seite** einen **Rücklink** ein — im selben PR (Audit: `must: sibling-spokes` + `inbound`). Zusätzlich nimmt die Leistungsseite das neue Kind in ihre Spoke-Liste auf (`must: own-cluster-spokes`).
+- **Budget der Quelle prüfen:** Ist das Body-Link-Budget der Quelle (Leistungsseite max 10, Produkt max 7) voll, wird nicht angehängt, sondern ein schwächerer Link/eine Karte **getauscht** — nie Pflichtlinks (Parent, Möbelplaner, Kontakt) entfernen.
 - **Backlog beachten:** noch nicht gebaute Kinder als pending im internal-linking-Backlog führen, beim Bau **beidseitig** nachverdrahten; **keine Dead-Links** (launch clean).
 
 ## 9 · AEO/Zitierbarkeit (Frage-zuerst, Direktantworten, Tabellen, Entitäten)
@@ -123,7 +125,7 @@ Alle 13 Gates gelten; für „Leistung" sind diese **besonders hart**:
 
 - **Gate 5 (Umfang/Tiefe):** Korridor 2.400–3.200 **und** alle Pflicht-Depth-Module vorhanden (Prozess, Vergleichstabelle, Kostenmodul, 10–15 FAQ). Fehlt das **Kostenmodul** → Gate rot (intent-pflicht).
 - **Gate 6 (Faktentreue):** härtester Stopp. Ein einziger ❌-Claim (Garantie, „seit 2013", 200 km, exotische Hölzer, „eigenes Montageteam") → sofortiger Hard Stop, nie live.
-- **Gate 7 (interne Links/CTA):** starker CTA + Möbelplaner UND Kontakt + ≥3 kontextuelle Links + Up-Link zum Hub; kein Cross-Silo.
+- **Gate 7 (interne Links/CTA):** starker CTA + Möbelplaner UND Kontakt + ≥3 kontextuelle Links + Up-Link zum Hub; ≥ 2 eingehende Inhaltslinks; alle gebauten Kinder verlinkt; kein Cross-Silo; externe Links nur nach §12. Maschinell: `pnpm run audit:links` muss **0 Fehler** zeigen.
 - **Gate 8/12 (Schema/Technical):** Service + FAQPage + Breadcrumb vorhanden; FAQ-Schema deckt sich exakt mit sichtbarem Text; Title/Desc-Länge, H-Hierarchie, alt-Texte.
 - **Gate 10 (AEO):** Frage-zuerst + Direktantworten + ≥1 Tabelle.
 - **Gate 11 (Korpus-Dedup):** Cluster-Pillars teilen viel Vokabular („nach Maß", „Meisterbetrieb", Prozess) → hohe Überlappungsgefahr mit Schwester-Clustern. Differenzierung über **kategoriespezifische** Inhalte (eigene Maße, Materialien, Anwendungsfälle, Kostenbeispiele, FAQ) — Cluster-Differenzierungs-Map (Ebene 2b) zwingend befolgt.
@@ -136,3 +138,13 @@ Alle 13 Gates gelten; für „Leistung" sind diese **besonders hart**:
 - **vs. Ratgeber (wichtigste Abgrenzung neben Referenz):** Die Leistungsseite **erklärt nicht erschöpfend „wie man plant"** und **verkauft** offen (starker CTA, commercial). Der Ratgeber ist informational, hat **schwachen** CTA, HowTo/FAQ-Schema und maximale Erklär-Tiefe. Die Leistungsseite **verlinkt** zu den Ratgeber-Kindern (Kosten, planen, vs.), statt deren Tiefe selbst zu duplizieren — sonst Kannibalisierung.
 - **vs. Referenz/Trust (besonders scharf trennen):** Die Leistungsseite **beweist nicht ausführlich mit Projektgalerie/Team/Story** — sie nutzt Trust nur als **kurzen Anriss** (ein Projektdetail mit Ort, Familie Fast) zur **Conversion-Vorbereitung**. Die Referenz-Seite ist **weicher** CTA, Experience-/Authority-Fokus, Organization/AboutPage-Schema, ausführliche echte Projekte und Team/Zahlen. **Leistung = „wir bauen Ihnen X, so läuft es, fragen Sie an"; Referenz = „seht, was wir schon gebaut haben und wer wir sind".** Trust-Tiefe wandert auf die Referenz-Seite, die Leistungsseite **verlinkt** dorthin.
 - **vs. Conversion:** Die Leistungsseite ist **kein** Formular-First-Minimaltext. Sie trägt vollen SEO-Langtext und führt **zum** Conversion-Ziel (Möbelplaner/Kontakt), ersetzt es aber nicht.
+
+## 12 · Belege (Outbound)
+Externe Links sind **Belege**, keine Deko. Sie gelten nur für Angaben, die eine Quelle brauchen.
+- **Wann:** Norm-, Vorschrift- oder Messwert-Angaben (z. B. Arbeitsstättenverordnung/ASR bei Büro, DGUV bei Ladenbau/Gastro, Hygiene bei Praxis, DIN 18040 bei Barrierefreiheit).
+- **Wohin:** nur Hosts aus `EXTERNAL_SOURCE_ALLOWLIST` in `src/lib/seo/linking-rules.ts` (gesetze-im-internet.de, baua.de, publikationen.dguv.de/dguv.de, eur-lex.europa.eu, rki.de, bundesgesundheitsministerium.de, amk.de, amk-ratgeber-kueche.de, verbraucherzentrale.de, nullbarriere.de; Subdomains eingeschlossen). Anderer Host = Audit-**Fehler** (`extern`).
+- **Wie viele:** **max. 2 je Seite** (`MAX_EXTERNAL_PER_PAGE`); mehr = Audit-Warnung. Externe Links zählen ins Body-Link-Budget.
+- **Ankertext = Name der Quelle** (z. B. „ASR A1.2", „DGUV Information 215-410"), nie „hier"/„mehr infos".
+- **Nie** auf Hersteller, Händler, Wettbewerber oder Verzeichnisse verlinken.
+- **Nichts erfinden:** keine Quelle nennen, die nicht geprüft die Aussage trägt; keine geratenen Paragraphen/Nummern.
+- **Kostenpflichtige Normen** (DIN/EN/ISO): als **Text ohne Link** nennen — außer eine Allowlist-Quelle gibt den Inhalt frei wieder.

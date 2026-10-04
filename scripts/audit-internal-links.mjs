@@ -29,6 +29,8 @@ import {
   GENERIC_MAX_RATIO,
   GENERIC_ANCHORS,
   FOOTER_ALLOWED_TYPES,
+  EXTERNAL_SOURCE_ALLOWLIST,
+  MAX_EXTERNAL_PER_PAGE,
 } from "../src/lib/seo/linking-rules.ts";
 import { INLINE_LINK_RE } from "../src/lib/inline-links/parse.ts";
 
@@ -61,6 +63,24 @@ function normSlug(href) {
 const isExternal = (h) => /^(https?:)?\/\//.test(h) || /^(mailto|tel):/.test(h);
 const isInternal = (h) => typeof h === "string" && h.startsWith("/") && !h.startsWith("//");
 const isFragment = (h) => h === "#" || (typeof h === "string" && h.startsWith("#"));
+/** Externer Web-Link (http/https/protokoll-relativ) — ohne mailto:/tel:. */
+const isWebExternal = (h) => typeof h === "string" && /^(https?:)?\/\//.test(h);
+
+/** Hostname eines externen Links (lowercase, ohne `www.`), oder null. */
+function hostOf(href) {
+  try {
+    return new URL(href.startsWith("//") ? `https:${href}` : href).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+}
+
+/** Host auf der Beleg-Allowlist? Ein Eintrag deckt auch alle Subdomains ab. */
+function hostAllowed(host) {
+  return !!host && EXTERNAL_SOURCE_ALLOWLIST.some((d) => host === d || host.endsWith(`.${d}`));
+}
+
+const PRODUCTISH = ["product", "cluster-article", "ratgeber-pillar"];
 
 // ---------------------------------------------------------------------------
 // Link extraction
@@ -156,7 +176,7 @@ async function extractModule(node) {
     const out = [];
     for (const v of Object.values(mod)) walkValue(v, out);
     for (const l of out) {
-      const link = { ...l, source: node.slug, scope: "page", file };
+      const link = { ...l, source: node.slug, scope: "page", file, fromModule: true };
       links.push(link);
       addPageLink(node.slug, link);
     }
@@ -164,7 +184,7 @@ async function extractModule(node) {
   } catch {
     // Fallback: regex sweep (e.g. home.ts has an unresolvable value import).
     for (const l of regexLinks(abs)) {
-      const link = { ...l, source: node.slug, scope: "page", file };
+      const link = { ...l, source: node.slug, scope: "page", file, fromModule: true };
       links.push(link);
       addPageLink(node.slug, link);
     }
@@ -222,6 +242,8 @@ function resolveTargets(target, node) {
       return BUILT.filter((p) => p.parent === node.slug && ["product", "cluster-article", "ratgeber-pillar"].includes(p.type)).map((p) => p.slug);
     case "own-ratgeber":
       return BUILT.filter((p) => p.parent === node.slug && p.type === "ratgeber-pillar").map((p) => p.slug);
+    case "sibling-spokes":
+      return siblingSpokes(node).map((p) => p.slug);
     default:
       return [];
   }
@@ -244,9 +266,17 @@ function targetIsBacklog(target, node) {
       return PAGES.some((p) => p.parent === node.slug && !p.built && p.type === "ratgeber-pillar");
     case "parent":
       return !!node.parent && !builtSlugs.has(node.parent);
+    case "sibling-spokes":
+      return !!node.parent && PAGES.some((p) => p.parent === node.parent && p.slug !== node.slug && !p.built && PRODUCTISH.includes(p.type));
     default:
       return false;
   }
+}
+
+/** Gebaute Geschwister-Spokes (gleicher parent, Produkt/Ratgeber/Artikel, ohne sich selbst). */
+function siblingSpokes(node) {
+  if (!node.parent) return [];
+  return BUILT.filter((p) => p.parent === node.parent && p.slug !== node.slug && PRODUCTISH.includes(p.type));
 }
 
 // ---------------------------------------------------------------------------
@@ -254,6 +284,7 @@ function targetIsBacklog(target, node) {
 // ---------------------------------------------------------------------------
 
 const partialPages = new Set(); // pages extracted via regex (no anchors)
+const externalByPage = {}; // slug → [{ href, host, anchor, inline, allowed, file }] (nur Content-Module)
 
 async function main() {
   // --- Extraction: content modules (page-scoped) ---
@@ -333,7 +364,17 @@ async function main() {
         }
         continue;
       }
-      const missing = resolved.filter((r) => !targetSet.has(r) && r !== node.slug);
+      const candidates = resolved.filter((r) => r !== node.slug);
+      const missing = candidates.filter((r) => !targetSet.has(r));
+      if (typeof t.min === "number") {
+        // „mind. N von den aufgelösten Zielen“ (z. B. 1 Geschwister), nicht „alle“.
+        const need = Math.min(t.min, candidates.length);
+        const have = candidates.length - missing.length;
+        if (have < need && hasModule) {
+          add("Fehler", "missing-muss", `${node.slug}: MUSS-Link \`${label(t.target)}\` — nur ${have}/${need} verlinkt, Kandidaten: ${missing.map((m) => `\`${m}\``).join(", ")}. ${t.why ?? ""}`.trim(), { page: node.slug, suggestAnchors: missing.map((m) => suggestAnchors(m, node)) });
+        }
+        continue;
+      }
       if (missing.length && hasModule) {
         add("Fehler", "missing-muss", `${node.slug}: fehlender MUSS-Link → ${missing.map((m) => `\`${m}\``).join(", ")}. ${t.why ?? ""}`.trim(), { page: node.slug, suggestAnchors: missing.map((m) => suggestAnchors(m, node)) });
       }
@@ -357,7 +398,9 @@ async function main() {
       if (rule.darfNicht.includes("legal-in-body") && t.type === "legal") {
         add("Warnung", "darf-nicht", `${node.slug}: Body-Link auf Rechtsseite \`${t.slug}\` (nur im Footer erlaubt).`, loc(l));
       }
-      if (rule.darfNicht.includes("skip-hub-level") && ["product", "cluster-article", "ratgeber-pillar"].includes(t.type) && t.parent !== node.slug) {
+      if (rule.darfNicht.includes("skip-hub-level") && PRODUCTISH.includes(t.type) && t.parent !== node.slug && t.parent !== node.parent) {
+        // Geschwister (gleicher parent wie die Quelle, z. B. Ratgeber-Artikel → Produkt im
+        // selben Cluster) sind kein Ebenensprung, sondern Querverlinkung im Cluster.
         add("Warnung", "darf-nicht", `${node.slug}: Hub-Ebenen-Übersprung → \`${t.slug}\` (Ebene 3). Über den Cluster-Pillar verlinken.`, loc(l));
       }
       if (rule.darfNicht.includes("cross-silo") && isCrossSilo(node, t)) {
@@ -377,6 +420,7 @@ async function main() {
       outgoing.filter((l) => isInternal(l.href) && !l.crumb).map((l) => normSlug(l.href)),
     );
     const bodyCount = bodyTargets.size + outgoing.filter((l) => isExternal(l.href)).length;
+    // (Externe Links zählen bewusst mit — ein Beleg-Link kostet einen Budget-Platz.)
     if (node.contentModule && bodyCount > rule.maxBodyLinks) {
       add("Warnung", "budget", `${node.slug}: ${bodyCount} Body-Links > Budget ${rule.maxBodyLinks} (PageRank-Verdünnung).`, { page: node.slug });
     }
@@ -394,6 +438,56 @@ async function main() {
     const inlineCount = outgoing.filter((l) => l.inline && isInternal(l.href)).length;
     if (hasModule && rule.minInlineLinks > 0 && inlineCount < rule.minInlineLinks) {
       add(MIN_INLINE_SEVERITY, "min-inline", `${node.slug}: nur ${inlineCount}/${rule.minInlineLinks} kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).`, { page: node.slug });
+    }
+
+    // CHECK 12: externe Links aus Content-Modulen (Belege, Outbound).
+    // Chrome (Social, Maps, externer Möbelplaner in Header/Footer/Komponenten) und
+    // page.tsx-Links (z. B. Datenschutz) sind ausgenommen: nur `fromModule`-Links.
+    const ext = outgoing.filter((l) => l.fromModule && isWebExternal(l.href));
+    if (ext.length) {
+      const entries = ext.map((l) => {
+        const host = hostOf(l.href);
+        return { href: l.href, host, anchor: l.anchor ?? null, inline: !!l.inline, allowed: hostAllowed(host), file: l.file };
+      });
+      externalByPage[node.slug] = entries;
+      for (const e of entries) {
+        if (!e.allowed) {
+          add("Fehler", "extern", `${node.slug}: externer Link auf \`${e.host ?? e.href}\` — Host nicht auf EXTERNAL_SOURCE_ALLOWLIST (nur Beleg-Quellen; nie Hersteller/Wettbewerber).`, { page: node.slug, file: e.file, href: e.href });
+        }
+      }
+      if (entries.length > MAX_EXTERNAL_PER_PAGE) {
+        add("Warnung", "extern", `${node.slug}: ${entries.length} externe Links > ${MAX_EXTERNAL_PER_PAGE} je Seite.`, { page: node.slug });
+      }
+    }
+  }
+
+  // === CHECK 13: eingehende Inhaltslinks (Pflicht-Rücklinks) ===
+  // pageLinks invertieren. Gezählt werden VERSCHIEDENE gebaute Quellseiten mit einem
+  // Inhaltslink (Fließtext-Marker oder Inhaltskarte aus Content-Modul/page.tsx).
+  // Breadcrumbs (crumb), Header-Nav und Footer (scope "chrome") zählen nicht.
+  const inbound = new Map(); // target slug → Set(source slug)
+  for (const [src, outs] of pageLinks) {
+    for (const l of outs) {
+      if (!isInternal(l.href) || l.crumb) continue;
+      const tgt = normSlug(l.href);
+      if (tgt === src || !builtSlugs.has(tgt)) continue;
+      if (!inbound.has(tgt)) inbound.set(tgt, new Set());
+      inbound.get(tgt).add(src);
+    }
+  }
+  for (const node of BUILT) {
+    const rule = RULES[node.type];
+    const min = node.minInboundInline ?? rule?.minInboundInline ?? 0;
+    if (!min) continue;
+    const sources = [...(inbound.get(node.slug) ?? [])];
+    if (sources.length < min) {
+      add("Fehler", "inbound", `${node.slug}: nur ${sources.length}/${min} eingehende Inhaltslinks von anderen Seiten${sources.length ? ` (${sources.map((s) => `\`${s}\``).join(", ")})` : ""}. Rücklinks im Fließtext/Karten nachtragen.`, { page: node.slug, sources });
+    }
+    if (node.type === "product") {
+      const sibs = siblingSpokes(node).map((p) => p.slug);
+      if (sibs.length && !sources.some((s) => sibs.includes(s))) {
+        add("Fehler", "inbound", `${node.slug}: kein Rücklink von einem Geschwister (${sibs.map((s) => `\`${s}\``).join(", ")}). Mind. 1 Geschwister muss diese Seite im Inhalt verlinken.`, { page: node.slug, sources });
+      }
     }
   }
 
@@ -524,11 +618,51 @@ function checkAnchors(node, outgoing) {
       add("Warnung", "anchor-diversity", `${node.slug}: Exact-Match-Anker auf \`${s}\` ${exactHits}× (> ${EXACT_MATCH_CAP}). Anker variieren.`, { page: node.slug });
     }
   }
-  // generic ratio
-  const generic = internal.filter((l) => GENERIC_ANCHORS.includes(l.anchor.trim().toLowerCase())).length;
+  // generic anchors (normalisiert + Teilstring, siehe isGenericAnchor)
+  const genericLinks = internal.filter((l) => isGenericAnchor(l.anchor));
+  for (const l of genericLinks.filter((g) => g.inline)) {
+    add("Warnung", "anchor-generic", `${node.slug}: generischer Inline-Anker „${l.anchor}“ → \`${normSlug(l.href)}\`. Beschreibenden Anker wählen (Ziel-Thema nennen).`, { page: node.slug, file: l.file, href: l.href });
+  }
+  const generic = genericLinks.length;
   if (generic / internal.length > GENERIC_MAX_RATIO) {
     add("Warnung", "anchor-diversity", `${node.slug}: ${Math.round((generic / internal.length) * 100)}% generische Anker (> ${GENERIC_MAX_RATIO * 100}%).`, { page: node.slug });
   }
+}
+
+/** Anker normalisieren: lowercase, Satzzeichen raus, Leerraum zusammenfassen. */
+function normAnchor(a) {
+  return a
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+const GENERIC_NORM = GENERIC_ANCHORS.map(normAnchor);
+
+/**
+ * Generisch, wenn der normalisierte Anker
+ *  - exakt einem GENERIC_ANCHORS-Eintrag entspricht, oder
+ *  - eine mehrwortige generische Phrase („mehr infos hier“, „entdecken sie“) als
+ *    Wortfolge enthält, oder
+ *  - kurz ist (≤ 2 Wörter) und ein einwortiges generisches Wort enthält („hier klicken“).
+ * „mehr über uns“ bleibt beschreibend (3 Wörter, keine mehrwortige Phrase).
+ */
+function isGenericAnchor(anchor) {
+  if (typeof anchor !== "string") return false;
+  const a = normAnchor(anchor);
+  if (!a) return false;
+  const padded = ` ${a} `;
+  const words = a.split(" ");
+  for (const g of GENERIC_NORM) {
+    if (a === g) return true;
+    if (g.includes(" ")) {
+      if (padded.includes(` ${g} `)) return true;
+    } else if (words.length <= 2 && words.includes(g)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function safeExists(p) {
@@ -557,6 +691,12 @@ function report() {
       linksFound: links.length,
       partialExtraction: [...partialPages],
       counts,
+    },
+    // Eigene Kategorie: alle externen Links aus Content-Modulen je Seite, mit Allowlist-Urteil.
+    external: {
+      allowlist: EXTERNAL_SOURCE_ALLOWLIST,
+      maxPerPage: MAX_EXTERNAL_PER_PAGE,
+      pages: externalByPage,
     },
     findings,
   };

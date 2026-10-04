@@ -39,10 +39,11 @@ Eingabe: das **aufgelöste** Kit (§9 gegen FACTS + Kundenwissen geklärt, Leers
 11. **Mensch-Review / Freigabe** (du)
 12. Copy in `src/lib/content/<slug>.ts` einsetzen — **nur Werte, pixel-perfect**
 13. **Schema + Metadata** setzen (seitentyp-spezifisch, s. u.)
-14. **Interne Links beidseitig** verdrahten (`internal-linking.md`)
-15. **`npm run check`** (lint+typecheck+build) + **Visual-Diff** vs. `docs/design-references/`
-16. **`design-qc`-Agent** (bei UI-Änderungen)
-17. **`STATUS.md`** aktualisieren (Seite = live-ready)
+14. **Interne Links beidseitig** verdrahten (`internal-linking.md`) — Pflicht bei Produkt/Ratgeber/Artikel: ≥ 1 Geschwister im Fließtext verlinken **und** in ≥ 1 indexierter Geschwister-Seite den Rücklink eintragen (Budget der Quelle prüfen, bei vollem Budget tauschen). Externe Links nur als Beleg auf `EXTERNAL_SOURCE_ALLOWLIST`, max. 2 je Seite.
+15. **`pnpm run audit:links`** — **Pflicht-Gate vor jedem PR** (0 Fehler; läuft auch in CI und in `check`). Prüft MUSS-Links inkl. Geschwister, eingehende Inhaltslinks, generische Anker, externe Belege.
+16. **`npm run check`** (lint+typecheck+audit:links+build) + **Visual-Diff** vs. `docs/design-references/`
+17. **`design-qc`-Agent** (bei UI-Änderungen)
+18. **`STATUS.md`** aktualisieren (Seite = live-ready)
 
 ## Kategorie-spezifische Abzweige (das Ebene-2-Playbook entscheidet)
 - **Hub:** CollectionPage-Schema · Cluster-Karten · breite Einordnung · **keine** Tiefe-Konkurrenz zu den Kind-Seiten.
@@ -56,7 +57,7 @@ Eingabe: das **aufgelöste** Kit (§9 gegen FACTS + Kundenwissen geklärt, Leers
 - **Fakt nicht in FACTS.md / Kundenwissen belegt** → nicht behaupten (Leerstelle umschiffen, Phase 1.5). *(Der frühere Discovery-Hard-Stop ist seit 2026-07-28 aufgehoben — nicht mehr fragen, nicht mehr warten.)*
 - **Verbotene-Claims-Gate rot** (ein ❌-Claim aus FACTS.md, in Code erkannt) → **sofortiger Stopp, nie live.**
 - **Agents editieren Dateien / fahren Bash/Build** → Verstoß. Agents geben nur Text zurück; **der Mensch** setzt ein.
-- **`npm run check` rot** → **nicht mergen.**
+- **`npm run check` oder `pnpm run audit:links` rot** → **nicht mergen.**
 
 ## Skalierungs-Modus (Batch)
 **Recherche (Ebene 1) 1× pro Keyword/Cluster** — Kits gecacht, von allen Cluster-Unterseiten wiederverwendet. **Authoring (Ebene 2) pro Seite, lean** (3 text-only Agents). Sammel-Review (Phase 3) → ein Merge. Cluster-Seiten **erst nach** ihrer Differenzierungs-Map (Phase 0). Richtwert: ~4 Agents/Seite (Writer · Humanizer · QC&Fix · Chefredakteur), ~140k Token/Seite (statt 32 Agents / 2,2 Mio); Recherche (Ebene 1) zusätzlich 1× pro Keyword, gecacht.

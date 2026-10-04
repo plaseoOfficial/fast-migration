@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today:** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/einbauschraenke-nach-mass/`, `/einbauschraenke-nach-mass/einbauschrank-dachschraege/`, `/einbauschraenke-nach-mass/schrank-unter-treppe/`, `/badmoebel-nach-mass/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/`, `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`), `/hauswirtschaftsraum/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal.
 
 ## Rules (condensed)
 
@@ -57,19 +57,36 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
   `linking-rules.ts` mit ihrem `contentModule` registriert (siehe Page Recipe).
 - **Anchor diversity.** Vary anchors: exact ("Küchen nach Maß"), partial ("maßgefertigte Küche"), brand+keyword, descriptive, max ~10% generic. Exact-match anchor to one URL: max 2–3× per page.
 - **Conversion targets.** Every strong page links to `/moebelplaner/` and `/kontakt/`. Dofollow internal links only.
-- **Max body links:** Hub 10–12 · Cluster-Pillar 8–10 · Product 5–7 · Conversion 3–5.
+- **Max body links:** Hub 10–12 · Cluster-Pillar 8–10 · Product 5–7 · Conversion 3–5. Externe Links zählen mit, Breadcrumbs nicht.
+- **Geschwister-Pflicht (seit 2026-10, Audit-Fehler).** Jede Produkt-/Ratgeber-/Artikel-Seite verlinkt **≥ 1 gebautes Geschwister** (gleicher `parent`) im Fließtext (`must: sibling-spokes`, `min: 1`). **Beidseitig:** Beim Bau einer neuen Seite wird im selben PR in **≥ 1 indexierter Geschwister-Seite** ein Rücklink eingetragen. Vorher das Body-Link-Budget der Quelle prüfen — ist es voll, eine schwächere Karte/einen schwächeren Link **tauschen**, nie Pflichtlinks (Parent, Möbelplaner, Kontakt) entfernen. Ohne gebautes Geschwister entfällt die Pflicht automatisch.
+- **Eingehende Inhaltslinks (seit 2026-10, Audit-Fehler `inbound`).** `minInboundInline` je Typ: Produkt ≥ 2 verschiedene Quellseiten (davon ≥ 1 Geschwister, sofern vorhanden), Cluster-Pillar ≥ 2. Gezählt werden Fließtext-Marker und Inhaltskarten aus Content-Modulen/`page.tsx` — **nicht** Breadcrumbs, Header-Nav oder Footer.
+- **Generische Anker** (`GENERIC_ANCHORS`, u. a. „hier", „mehr erfahren", „mehr infos (hier)", „entdecken Sie") werden normalisiert und als Wortfolge erkannt: jeder generische **Inline**-Anker = Warnung, Anteil > 10 % = Warnung.
+- **Ebenensprung-Ausnahme:** Links zwischen Geschwistern (gleicher `parent`, z. B. Ratgeber-Artikel → Produkt im selben Cluster) gelten nicht als `skip-hub-level`.
+
+## Belege (Outbound)
+
+Externe Links aus dem **Inhalt** (Content-Module) sind Belege, keine Deko. Social-Profile, Google Maps und der externe Möbelplaner sind Chrome (Header/Footer/Komponenten) und fallen nicht unter diese Regel; Rechtsseiten-Links in `page.tsx` ebenso nicht.
+
+- **Wann:** nur für Norm-, Vorschrift- oder Messwert-Angaben.
+- **Wohin:** nur Hosts aus `EXTERNAL_SOURCE_ALLOWLIST` (`linking-rules.ts`): gesetze-im-internet.de, baua.de, publikationen.dguv.de, dguv.de, eur-lex.europa.eu, rki.de, bundesgesundheitsministerium.de, amk.de, amk-ratgeber-kueche.de, verbraucherzentrale.de, nullbarriere.de — inkl. Subdomains. Anderer Host = **Fehler** (`extern`).
+- **Wie viele:** max. **2 je Seite** (`MAX_EXTERNAL_PER_PAGE`), mehr = Warnung.
+- **Anker = Name der Quelle** (z. B. „ASR A1.2", „DGUV Information 215-410"); nie Hersteller/Wettbewerber; nichts erfinden; kostenpflichtige Normen (DIN/EN/ISO) als Text ohne Link.
+- `docs/seo/link-audit.json` führt alle externen Inhaltslinks je Seite unter `external.pages` (mit `allowed`-Urteil).
+
+## Gate
+
+**`pnpm run audit:links` ist Pflicht vor jedem PR** (0 Fehler). Es läuft in `npm run check` und in CI (`.github/workflows/ci.yml`, nach dem Typecheck). Rot = nicht mergen.
 
 ## Backlog — pending internal links (blocked until target exists)
 
 | From (page) | Should link to | Type | Blocked until |
 |---|---|---|---|
 | `/kuechen-nach-mass/` | `/kuechen-nach-mass/kueche-nach-mass-kosten/` | MUSS (cost ratgeber) | Kosten-Ratgeber built |
-| `/kuechen-nach-mass/` | Product pages (Küchenzeile / L-Küche / Kochinsel nach Maß) | MUSS (spokes) | Product pages built |
-| `/kuechen-nach-mass/` | `/kuechen-nach-mass/kueche-planen/`, `/kuechen-nach-mass/tischlerkueche-vs-kuechenstudio/` | SOLL (cluster articles) | Articles built |
+| `/kuechen-nach-mass/` | `/kuechen-nach-mass/l-kueche-nach-mass/`, Kochinsel nach Maß (Küchenzeile + Dachschräge sind gebaut und verlinkt) | MUSS (spokes) | Product pages built |
+| `/kuechen-nach-mass/` | `/kuechen-nach-mass/tischlerkueche-vs-kuechenstudio/` (Küche planen ist gebaut und verlinkt) | SOLL (cluster articles) | Articles built |
 | `/kuechen-nach-mass/` | `/ablauf-massanfertigung/` | SOLL (trust) | Page built |
 | `/kuechen-nach-mass/` (FaqSection) + `/moebel-nach-mass/`, `/gewerbe/`, `/moebelplaner/` | `/faq/` ("Zum FAQ", currently `#`) | SOLL | `/faq/` built |
-| `/moebel-nach-mass/` | remaining sibling cluster pillar (Wohnmöbel nach Maß) | MUSS (hub→clusters) | cluster built |
-| `/badmoebel-nach-mass/` | Produkt-Kinder (`/badmoebel-nach-mass/waschtisch-nach-mass/`, `.../waschtischunterschrank-nach-mass/`, `.../badschrank-nach-mass/`, `.../spiegelschrank-nach-mass/`, `.../badmoebel-massivholz/`) | MUSS (cluster→spokes) | spoke pages built |
+| `/badmoebel-nach-mass/` | restliche Produkt-Kinder (`.../spiegelschrank-nach-mass/`, `.../badmoebel-massivholz/`; Waschtisch, Waschtischunterschrank und Badschrank sind gebaut und verlinkt) | MUSS (cluster→spokes) | spoke pages built |
 | `/badmoebel-nach-mass/` | Ratgeber-Kinder (`.../badmoebel-nach-mass-kosten/`, `.../badmoebel-fuer-kleine-baeder/`) | MUSS/SOLL (cost/ratgeber) | ratgeber built |
 | `/badmoebel-nach-mass/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | `/moebelplaner/`, `/kontakt/` | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | MUSS | pages built |

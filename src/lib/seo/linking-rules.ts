@@ -50,6 +50,11 @@ export interface PageNode {
    * persönlichen Kontakt (/kontakt/), nicht über den Privat-Möbelplaner.
    */
   mustExempt?: string[];
+  /**
+   * Überschreibt RULES[type].minInboundInline für genau diese Seite. Nur mit Begründung
+   * im Kommentar am Eintrag setzen (z. B. kein natürlicher Zweitlink ohne Silo-Bruch).
+   */
+  minInboundInline?: number;
 }
 
 export const PAGES: PageNode[] = [
@@ -81,7 +86,7 @@ export const PAGES: PageNode[] = [
   { slug: "/wohnmoebel-nach-mass/regal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "regal-nach-mass" },
   // Wohnmöbel spoke (cluster child): Bücherregal nach Maß ("Buch als Maßgabe", Fachtiefen/Statik)
   { slug: "/wohnmoebel-nach-mass/buecherregal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "buecherregal-nach-mass" },
-  { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
+  { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum", minInboundInline: 1 }, // einziger natürlicher Inhalts-Link: /moebel-nach-mass/; Querlinks aus Küche/Schränken wären Cross-Silo. Erreichbar über Header + /leistungen/.,
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-planen" },
@@ -129,19 +134,29 @@ export const PAGES: PageNode[] = [
  *  - "sibling-clusters"  → other cluster-pillars sharing the same parent hub
  *  - "own-cluster-spokes"→ built product/ratgeber/article nodes under this cluster
  *  - "own-ratgeber"      → built ratgeber-pillar nodes under this cluster
+ *  - "sibling-spokes"    → built product/ratgeber/article nodes with the SAME
+ *                          parent as this node (Geschwister im eigenen Cluster)
  */
 export type SymbolicTarget =
   | "parent"
   | "own-children"
   | "sibling-clusters"
   | "own-cluster-spokes"
-  | "own-ratgeber";
+  | "own-ratgeber"
+  | "sibling-spokes";
 
 export interface TargetRule {
   /** Concrete slug (leading "/") or a SymbolicTarget keyword. */
   target: string | SymbolicTarget;
   /** Human note / rationale (shown in audit + agent output). */
   why?: string;
+  /**
+   * Mindestanzahl der aufgelösten Ziele, die verlinkt sein müssen. Fehlt das Feld,
+   * gilt „alle“. Beispiel: `sibling-spokes` mit `min: 1` = mindestens ein
+   * Geschwister, nicht jedes. Greift nur, wenn das Ziel überhaupt etwas auflöst
+   * (Seite ohne gebaute Geschwister → keine Pflicht).
+   */
+  min?: number;
 }
 
 /** Forbidden link patterns (DARF NICHT). */
@@ -156,6 +171,15 @@ export interface TypeRule {
   maxNavFooter: number;
   /** Minimum echter kontextueller In-Content-Links ([Anker](/ziel/)-Marker im Fließtext). */
   minInlineLinks: number;
+  /**
+   * Mindestanzahl VERSCHIEDENER indexierter Seiten, die diese Seite aus dem Inhalt
+   * heraus verlinken (Fließtext-Marker oder Inhaltskarten im Content-Modul bzw.
+   * page.tsx). Breadcrumbs, Header-Nav und Footer zählen NICHT. Fehlt das Feld
+   * oder ist es 0, wird nicht geprüft. Für `product` prüft das Audit zusätzlich,
+   * dass mindestens EINE dieser Quellen ein Geschwister ist (sofern Geschwister
+   * existieren) — der Rücklink gehört zur Pflicht beim Bau einer neuen Seite.
+   */
+  minInboundInline?: number;
   must: TargetRule[];
   soll: TargetRule[];
   darfNicht: ForbiddenRule[];
@@ -199,6 +223,7 @@ export const RULES: Record<PageType, TypeRule> = {
     maxBodyLinks: 10,
     maxNavFooter: 20,
     minInlineLinks: 3,
+    minInboundInline: 2,
     must: [
       { target: "parent", why: "Aufwärtslink zum Pillar-Hub (Breadcrumb)" },
       { target: "own-cluster-spokes", why: "Vollständige Spoke-Abdeckung (Produktseiten)" },
@@ -215,8 +240,10 @@ export const RULES: Record<PageType, TypeRule> = {
     maxBodyLinks: 7,
     maxNavFooter: 20,
     minInlineLinks: 2,
+    minInboundInline: 2,
     must: [
       { target: "parent", why: "Aufwärtslink zum Cluster-Pillar (Breadcrumb)" },
+      { target: "sibling-spokes", min: 1, why: "Mind. 1 Geschwister im eigenen Cluster (Querverlinkung; Rücklink beim Geschwister nachtragen)" },
       { target: "/moebelplaner/", why: "Primärer CTA" },
       { target: "/kontakt/", why: "Conversion-Fallback" },
     ],
@@ -500,7 +527,45 @@ export const EXACT_MATCH_CAP = 3;
 export const GENERIC_MAX_RATIO = 0.1;
 
 /** Anchors that count as "generic" (principle 5). */
-export const GENERIC_ANCHORS = ["hier", "mehr erfahren", "mehr", "weiterlesen", "klicken", "mehr dazu"];
+export const GENERIC_ANCHORS = [
+  "hier",
+  "mehr erfahren",
+  "mehr",
+  "weiterlesen",
+  "klicken",
+  "mehr dazu",
+  "mehr infos hier",
+  "mehr infos",
+  "entdecken sie",
+];
+
+// ---------------------------------------------------------------------------
+// Outbound (externe Belege) — gilt NUR für Links aus Content-Modulen
+// ---------------------------------------------------------------------------
+
+/**
+ * Hosts, auf die Inhalts-Text extern verlinken darf (Belege für Norm-, Vorschrifts-
+ * und Messwert-Angaben). Ein Eintrag deckt auch alle Subdomains ab
+ * (`dguv.de` erlaubt `publikationen.dguv.de`). Hersteller, Wettbewerber, Shops,
+ * Verzeichnisse: nie. Social-Profile, Google Maps und der externe Möbelplaner sind
+ * Chrome (Header/Footer/Komponenten), kein Content — für sie gilt diese Liste nicht.
+ */
+export const EXTERNAL_SOURCE_ALLOWLIST = [
+  "gesetze-im-internet.de",
+  "baua.de",
+  "publikationen.dguv.de",
+  "dguv.de",
+  "eur-lex.europa.eu",
+  "rki.de",
+  "bundesgesundheitsministerium.de",
+  "amk.de",
+  "amk-ratgeber-kueche.de",
+  "verbraucherzentrale.de",
+  "nullbarriere.de",
+];
+
+/** Höchstzahl externer Beleg-Links je Seite (aus Content-Modulen). */
+export const MAX_EXTERNAL_PER_PAGE = 2;
 
 /**
  * Footer link targets allowed by principle 4 (no link graves): pillar-hubs,

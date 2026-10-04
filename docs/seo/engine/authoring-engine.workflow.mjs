@@ -54,6 +54,8 @@ const CANON =
   `- Fakten (nur ✅/🟢; ❌ nie): ${SEO}/brand/FACTS.md\n- Stimme (Sie, keine em-dashes): ${SEO}/brand/BRAND_VOICE.md\n` +
   `- Playbook ${PAGE_TYPE} (Pflicht-Module/Schema/CTA/Ton/Negativ-Abgrenzung): ${PLAYBOOK}\n- Tiefe/Anti-Fülltext: ${SEO}/DEPTH.md\n` +
   `- Humanizer: ${SEO}/templates/humanizer.md\n- Interne Verlinkung: ${SEO}/internal-linking.md\n` +
+  `- LINK-PFLICHT (Audit-Gate pnpm run audit:links): Produkt/Ratgeber/Artikel verlinkt ≥ 1 gebautes Geschwister (gleicher Cluster) im Fließtext als [Anker](/pfad/)-Marker; der Rücklink aus ≥ 1 indexierter Geschwister-Seite wird im selben PR nachgetragen (Budget der Quelle prüfen, bei vollem Budget tauschen).\n` +
+  `- BELEGE (Outbound): Norm-/Vorschrift-/Messwert-Angaben max. 2 externe Links je Seite, NUR Hosts der EXTERNAL_SOURCE_ALLOWLIST (src/lib/seo/linking-rules.ts), Ankertext = Name der Quelle, nie Hersteller/Wettbewerber, nichts erfinden, kostenpflichtige Normen als Text ohne Link.\n` +
   (CLUSTER_MAP ? `- Cluster-Differenzierung (Anti-Duplikat): ${CLUSTER_MAP}\n` : '') +
   `- Bestehendes Modul (Prop-Struktur, die du neu textest — Keys/Bildpfade/Maße/hrefs NICHT ändern): ${MODULE}\n` +
   `- Korridor: ${CORRIDOR.min}–${CORRIDOR.max} W · FAQ ≥${FAQ_MIN}.`
@@ -135,7 +137,7 @@ phase('Humanize')
 copy = await agent(
   `${TEXTONLY}\nDu bist der Humanizer für die Copy von ${URL}. Arbeite nach ${SEO}/templates/humanizer.md und ${SEO}/brand/BRAND_VOICE.md.\n` +
   `EINZIGE Aufgabe: die KI-Anmutung rausnehmen, menschlicher O-Ton Fast rein. Brich gleichförmige Satzlängen, Floskeln, „nicht nur…sondern", generische Übergänge, Dreiklang-Slogan-Tics, Wort-Wiederholungen, leere Superlative; variiere den Rhythmus (mal ein kurzer Satz als Pointe); „Sie"-Anrede; idiomatisches Deutsch; KEINE em-dashes.\n` +
-  `ÄNDERE NICHT: Fakten/Zahlen, Keywords/Entitäten, interne Links, Prop-Keys/Struktur, den Umfang (Wortzahl-Korridor halten). Gib die Copy im exakt gleichen Format zurück (### <exportName> / propName: "…").\n\nCOPY:\n${copy}`,
+  `ÄNDERE NICHT: Fakten/Zahlen, Keywords/Entitäten, interne Links (inkl. Geschwister-Links), externe Beleg-Links samt Quellen-Anker, Prop-Keys/Struktur, den Umfang (Wortzahl-Korridor halten). Gib die Copy im exakt gleichen Format zurück (### <exportName> / propName: "…").\n\nCOPY:\n${copy}`,
   { phase: 'Humanize', label: 'humanizer' })
 
 // ---------- Code-Gates + QC&Fix (1 Agent, Text) ----------
@@ -153,7 +155,7 @@ const review = await agent(
   `- FAQ ${measured.faq} (Soll ≥${FAQ_MIN})${measured.faq < FAQ_MIN ? ' → mehr echte FAQ aus Kit §5' : ' → ok'}\n` +
   `- Verbotene Claims: ${forbidden.length ? forbidden.join('; ') + ' → ENTFERNEN' : 'keine'}\n` +
   `- Meta-Länge: ${metaIssues.length ? metaIssues.join('; ') : 'ok'}\n\n` +
-  `PRÜFE ZUSÄTZLICH (und behebe): Faktentreue (FACTS/Kit §8) · Keywords/WDF (Kit §4) · E-E-A-T (Region, Prozess, PU-Kante, Familie Fast, NAP) · interne Links + CTA (Kit §7, Möbelplaner+Kontakt, kein Cross-Silo) · AEO (Direktantworten, keine erfundenen Zahlen) · Korpus-Dedup (nicht „dasselbe + andere Wörter" wie Schwesterseiten in ${REPO}/src/lib/content/) · Human-Score (O-Ton, Sie, Rhythmus, keine em-dashes).\n\n` +
+  `PRÜFE ZUSÄTZLICH (und behebe): Faktentreue (FACTS/Kit §8) · Keywords/WDF (Kit §4) · E-E-A-T (Region, Prozess, PU-Kante, Familie Fast, NAP) · interne Links + CTA (Kit §7, Möbelplaner+Kontakt, kein Cross-Silo, ≥ 1 Geschwister-Link im Fließtext bei Produkt/Ratgeber, keine generischen Anker wie „hier“/„mehr infos“/„entdecken Sie“) · Belege (max. 2 externe Links, nur EXTERNAL_SOURCE_ALLOWLIST, Anker = Quellenname, sonst entfernen) · AEO (Direktantworten, keine erfundenen Zahlen) · Korpus-Dedup (nicht „dasselbe + andere Wörter" wie Schwesterseiten in ${REPO}/src/lib/content/) · Human-Score (O-Ton, Sie, Rhythmus, keine em-dashes).\n\n` +
   `Gib NUR die KORRIGIERTE Copy im exakt gleichen Format (### <exportName> / propName: "…") zurück. Behalte Keys/Bildpfade/Maße/hrefs.\n\nAKTUELLE COPY:\n${copy}`,
   { phase: 'QC&Fix', label: 'qc-fix' })
 copy = review || copy
