@@ -28,7 +28,11 @@ import {
   EXACT_MATCH_CAP,
   GENERIC_MAX_RATIO,
   GENERIC_ANCHORS,
+  GENERIC_WORDS,
   FOOTER_ALLOWED_TYPES,
+  MAX_BRIDGES_PER_PAGE,
+  MIN_INBOUND,
+  bridgeBetween,
 } from "../src/lib/seo/linking-rules.ts";
 import { INLINE_LINK_RE } from "../src/lib/inline-links/parse.ts";
 
@@ -132,6 +136,27 @@ function walkValue(val, out, seen = new Set(), crumb = false) {
 // so the regex fallback sees the same links as the walkValue() module extraction.
 const HREF_RE = /(?:^|[^a-zA-Z0-9_])[a-zA-Z0-9_]*[hH]ref\s*[:=]\s*\{?\s*["'`]([^"'`{}\s]+)["'`]/g;
 
+const ANCHOR_KEY_RE = /\b(?:label|linkText|title|text)\s*:\s*["'`]([^"'`]+)["'`]/;
+
+/**
+ * Anker zu einem href im Regex-Modus: dieselbe Zeile (`{ label: "…", href: "…" }`)
+ * oder bis zu vier Zeilen darüber im selben Objekt (`title: "…",` … `href: "…"`).
+ * Ohne das sah das Audit auf der Startseite (home.ts, Regex-Fallback) keinen
+ * einzigen Linktext — und die Kachel „Badmöbel nach Maß" → /moebel-nach-mass/
+ * blieb unsichtbar (Link-Analyse 02.10.2026, Befund B).
+ */
+function regexAnchor(lines, i) {
+  const same = lines[i].match(ANCHOR_KEY_RE);
+  if (same) return same[1];
+  for (let j = i - 1; j >= Math.max(0, i - 4); j--) {
+    if (/[{}]\s*,?\s*$/.test(lines[j]) && !/:\s*\{\s*$/.test(lines[j])) break; // Objektgrenze
+    if (/[hH]ref\s*:/.test(lines[j])) break; // gehört zu einem anderen Link
+    const m = lines[j].match(ANCHOR_KEY_RE);
+    if (m) return m[1];
+  }
+  return undefined;
+}
+
 /** Regex sweep of a source file → [{ href, line }]. */
 function regexLinks(absPath) {
   const text = readFileSync(absPath, "utf8");
@@ -140,7 +165,7 @@ function regexLinks(absPath) {
   lines.forEach((line, i) => {
     let m;
     HREF_RE.lastIndex = 0;
-    while ((m = HREF_RE.exec(line)) !== null) out.push({ href: m[1], line: i + 1 });
+    while ((m = HREF_RE.exec(line)) !== null) out.push({ href: m[1], line: i + 1, anchor: regexAnchor(lines, i) });
     const inlineRe = new RegExp(INLINE_LINK_RE.source, "g");
     while ((m = inlineRe.exec(line)) !== null) out.push({ href: m[2], anchor: m[1], inline: true, line: i + 1 });
   });
@@ -360,9 +385,14 @@ async function main() {
       if (rule.darfNicht.includes("skip-hub-level") && ["product", "cluster-article", "ratgeber-pillar"].includes(t.type) && t.parent !== node.slug) {
         add("Warnung", "darf-nicht", `${node.slug}: Hub-Ebenen-Übersprung → \`${t.slug}\` (Ebene 3). Über den Cluster-Pillar verlinken.`, loc(l));
       }
-      if (rule.darfNicht.includes("cross-silo") && isCrossSilo(node, t)) {
-        add("Warnung", "darf-nicht", `${node.slug}: möglicher Cross-Silo-Link → \`${t.slug}\` (${t.silo || t.audience}). Nur bei echtem semantischem Bezug erlaubt.`, loc(l));
+      if (rule.darfNicht.includes("cross-silo") && isCrossSilo(node, t) && !bridgeBetween(node.slug, t.slug)) {
+        add("Warnung", "darf-nicht", `${node.slug}: möglicher Cross-Silo-Link → \`${t.slug}\` (${t.silo || t.audience}). Nur bei echtem semantischem Bezug erlaubt — dann als Brücke in BRIDGES eintragen.`, loc(l));
       }
+    }
+    const bridges = [...new Set(outgoing.filter((l) => isInternal(l.href) && !l.crumb).map((l) => normSlug(l.href)))]
+      .filter((s) => bridgeBetween(node.slug, s));
+    if (bridges.length > MAX_BRIDGES_PER_PAGE) {
+      add("Warnung", "bruecke", `${node.slug}: ${bridges.length} Brücken-Links (> ${MAX_BRIDGES_PER_PAGE}) — das Silo verwischt: ${bridges.map((b) => `\`${b}\``).join(", ")}.`, { page: node.slug });
     }
 
     // CHECK 5: link budget
@@ -385,6 +415,8 @@ async function main() {
     if (node.contentModule && !partialPages.has(node.slug)) {
       checkAnchors(node, outgoing);
     }
+    // CHECK 13: Linktext sagt etwas über das Ziel / Ziel ist das genaueste
+    checkAnchorRelevance(node, outgoing);
 
     // CHECK 11: Minimum kontextueller In-Content-Links (Marker im Fließtext).
     // Invariante: Modul-Walk (extractModule) und page.tsx-Regex-Sweep dürfen NICHT
@@ -394,6 +426,29 @@ async function main() {
     const inlineCount = outgoing.filter((l) => l.inline && isInternal(l.href)).length;
     if (hasModule && rule.minInlineLinks > 0 && inlineCount < rule.minInlineLinks) {
       add(MIN_INLINE_SEVERITY, "min-inline", `${node.slug}: nur ${inlineCount}/${rule.minInlineLinks} kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).`, { page: node.slug });
+    }
+  }
+
+  // === CHECK 12: eingehende Links im Inhalt (ohne Menü, Footer, Breadcrumb) ===
+  // Das Audit prüfte bis 10/2026 nur ausgehende Regeln. Ob eine Seite überhaupt
+  // Linkkraft bekommt, sah es nicht: Produktseiten hingen an ein bis zwei
+  // Quellen und fielen nie auf (Link-Analyse 02.10.2026, Befund A + D).
+  const inbound = new Map();
+  for (const [src, list] of pageLinks) {
+    for (const l of list) {
+      if (!isInternal(l.href) || l.crumb) continue;
+      const t = normSlug(l.href);
+      if (t === src) continue;
+      if (!inbound.has(t)) inbound.set(t, new Set());
+      inbound.get(t).add(src);
+    }
+  }
+  for (const node of BUILT) {
+    const min = MIN_INBOUND[node.type];
+    if (!min) continue;
+    const quellen = inbound.get(node.slug) ?? new Set();
+    if (quellen.size < min) {
+      add("Warnung", "inbound", `${node.slug}: nur ${quellen.size} Seite(n) verlinken im Inhalt (Minimum ${min})${quellen.size ? ` — ${[...quellen].map((q) => `\`${q}\``).join(", ")}` : ""}. Nachverlinken aus thematisch passenden Seiten.`, { page: node.slug });
     }
   }
 
@@ -528,6 +583,82 @@ function checkAnchors(node, outgoing) {
   const generic = internal.filter((l) => GENERIC_ANCHORS.includes(l.anchor.trim().toLowerCase())).length;
   if (generic / internal.length > GENERIC_MAX_RATIO) {
     add("Warnung", "anchor-diversity", `${node.slug}: ${Math.round((generic / internal.length) * 100)}% generische Anker (> ${GENERIC_MAX_RATIO * 100}%).`, { page: node.slug });
+  }
+}
+
+// --- CHECK 13: Linktext-Relevanz ------------------------------------------
+
+const FUELLWORTE = new Set(["nach", "mass", "fast", "systemmoebel", "systemmobel", "fuer", "unser", "unsere", "ihren", "ihre", "einem", "einer", "eine", "ohne", "oder", "mit", "vom", "von", "bereich"]);
+const UMLAUT = { ä: "ae", ö: "oe", ü: "ue", ß: "ss" };
+
+/** Inhaltswörter eines Textes: klein, Umlaute aufgelöst, ≥ 4 Zeichen, ohne Füllwörter. */
+function woerter(text) {
+  return (text || "")
+    .toLowerCase()
+    .replace(/[äöüß]/g, (c) => UMLAUT[c])
+    .split(/[^a-z]+/)
+    .filter((w) => w.length >= 4 && !FUELLWORTE.has(w) && !GENERIC_WORDS.includes(w));
+}
+
+/** Wortstämme (auf 5 Zeichen gekappt) — der strenge Vergleich. */
+const staemme = (text) => woerter(text).map((w) => w.slice(0, 5));
+
+const vokabular = new Map();
+/** Wortschatz eines Ziels: alle Anker-Varianten plus die Slug-Segmente. */
+function vokabularVon(slug) {
+  if (!vokabular.has(slug)) {
+    const set = ANCHORS[slug];
+    const texte = set ? [...set.exact, ...set.partial, ...set.brand, ...set.descriptive] : [];
+    texte.push(slug.replace(/[/-]+/g, " "));
+    vokabular.set(slug, new Set(texte.flatMap(staemme)));
+  }
+  return vokabular.get(slug);
+}
+
+const istGenerisch = (anchor) => {
+  const woerter = anchor.toLowerCase().split(/[^a-zäöüß]+/).filter(Boolean);
+  return woerter.length > 0 && woerter.every((w) => GENERIC_WORDS.includes(w));
+};
+
+const THEMEN_TYPEN = ["pillar-hub", "cluster-pillar", "product", "ratgeber-pillar", "cluster-article"];
+
+function isDescendant(desc, anc) {
+  return isAncestor(anc, desc);
+}
+
+function checkAnchorRelevance(node, outgoing) {
+  const gemeldet = new Set();
+  for (const l of outgoing) {
+    if (!isInternal(l.href) || !l.anchor || l.crumb) continue;
+    const t = nodeBySlug.get(normSlug(l.href));
+    if (!t || t.slug === node.slug) continue;
+    const key = `${t.slug}|${l.anchor}`;
+    if (gemeldet.has(key)) continue;
+    gemeldet.add(key);
+    if (istGenerisch(l.anchor)) {
+      add("Warnung", "anker-generisch", `${node.slug}: Linktext „${l.anchor}" → \`${t.slug}\` sagt nichts über das Ziel. Vorschlag: ${suggestAnchors(t.slug, node).options.slice(0, 2).map((o) => `„${o}"`).join(" oder ") || "Seitentitel"}.`, loc(l));
+      continue;
+    }
+    if (!THEMEN_TYPEN.includes(t.type)) continue;
+    const anker = staemme(l.anchor);
+    if (!anker.length) continue;
+    const vok = vokabularVon(t.slug);
+    const passt = anker.some((w) => vok.has(w));
+    // Locker: Komposita enthalten den Stamm mitten im Wort („Wohnküche" → Küchen).
+    // Reicht für »sagt etwas über das Ziel«, aber nicht, um ein genaueres Ziel
+    // auszuschließen — „Badmöbel" enthält auch „möbel".
+    const passtLocker = passt || woerter(l.anchor).some((w) => [...vok].some((v) => w.includes(v)));
+    // Genaueres Ziel: ein gebauter Nachfahre des Ziels, zu dem der Anker passt,
+    // während er zum verlinkten Ziel selbst nicht passt. Fall 02.10.: Kachel
+    // „Badmöbel nach Maß" → /moebel-nach-mass/ statt /badmoebel-nach-mass/.
+    if (!passt) {
+      const besser = BUILT.filter((p) => isDescendant(p, t) && anker.some((w) => vokabularVon(p.slug).has(w)));
+      if (besser.length) {
+        add("Warnung", "ziel-zu-allgemein", `${node.slug}: „${l.anchor}" → \`${t.slug}\`, passt aber zu ${besser.slice(0, 2).map((b) => `\`${b.slug}\``).join(" / ")} — auf das genauere Ziel verlinken.`, loc(l));
+      } else if (!passtLocker) {
+        add("Hinweis", "anker-relevanz", `${node.slug}: Linktext „${l.anchor}" → \`${t.slug}\` enthält keinen Begriff des Ziels.`, loc(l));
+      }
+    }
   }
 }
 

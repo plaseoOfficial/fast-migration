@@ -55,6 +55,9 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
   extrahierten ausgehenden Links) — der `hasModule`-Gate im Audit. Eine neue Seite
   ohne registriertes Content-Modul rutscht am Gate vorbei; darum wird jede Seite in
   `linking-rules.ts` mit ihrem `contentModule` registriert (siehe Page Recipe).
+- **Brücken (seit 2026-10-04).** Manche Themen gehören echt zu zwei Silos: Theke (Ladenbau ↔ Gastronomie), Empfang (Praxis ↔ Büro), Hotel/Objekt (Serienmöbel ↔ Gastronomie), Dachschräge (Dachschrägen-Schrank ↔ Küche mit Dachschräge), Küche/Vorrat (Küchen ↔ Hauswirtschaftsraum). Diese Paare stehen als `BRIDGES` in `linking-rules.ts` und dürfen sich in beide Richtungen verlinken, höchstens `MAX_BRIDGES_PER_PAGE` (2) je Seite. Jede andere Cross-Silo-Verbindung warnt weiter; eine neue Brücke braucht ein gemeinsames Thema, nicht nur Nachbarschaft.
+- **Eingehende Links (seit 2026-10-04).** Jede Cluster-, Produkt- und Ratgeberseite wird von mindestens `MIN_INBOUND` (3) verschiedenen Seiten im Inhalt verlinkt; Menü, Footer und Breadcrumb zählen nicht. Neue Seite ⇒ 2–3 bestehende, thematisch passende Seiten verlinken sie (nicht nur Hub und Batch-Geschwister).
+- **Linktext und Ziel (seit 2026-10-04).** Der Linktext nennt das Ziel. „Mehr Infos hier“ und andere Anker nur aus Füllwörtern warnen (`GENERIC_WORDS`). Ein Anker, der zu einer gebauten Unterseite passt, aber auf deren Hub zeigt („Badmöbel nach Maß“ → `/moebel-nach-mass/`), warnt als `ziel-zu-allgemein`.
 - **Anchor diversity.** Vary anchors: exact ("Küchen nach Maß"), partial ("maßgefertigte Küche"), brand+keyword, descriptive, max ~10% generic. Exact-match anchor to one URL: max 2–3× per page.
 - **Conversion targets.** Every strong page links to `/moebelplaner/` and `/kontakt/`. Dofollow internal links only.
 - **Max body links:** Hub 10–12 · Cluster-Pillar 8–10 · Product 5–7 · Conversion 3–5.
