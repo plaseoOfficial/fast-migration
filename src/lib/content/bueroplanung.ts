@@ -161,30 +161,30 @@ export const bpProcess = {
   ],
 };
 
-/** SpecTable (shared): Flächenbedarf & Normen. Öffentliche ASR/ArbStättV-Richtwerte, KEINE Fast-Zusage. */
+/** SpecTable (shared): Flächenbedarf & Normen. DGUV-/ASR-Richtwerte, KEINE Fast-Zusage. */
 export const bpFlaechen = {
   heading: "Wie viel Fläche ein Arbeitsplatz braucht",
   intro:
-    "Die folgenden Quadratmeter sind Richtwerte aus der Arbeitsstättenverordnung und den Technischen Regeln für Arbeitsstätten (ASR A1.2), ergänzt um die DGUV Information 215-441. Sie gelten als Orientierung, nicht als Zusage. Verbindlich planen wir Ihre Bürofläche nach dem kostenlosen Aufmaß.",
+    "Die folgenden Quadratmeter sind Richtwerte aus der [DGUV Information 215-441 Büroraumplanung](https://publikationen.dguv.de/regelwerk/dguv-informationen/224/bueroraumplanung-hilfen-fuer-das-systematische-planen-und-gestalten-von-bueros). Die Mindestmaße zu Bewegungsfläche und Raumhöhe stammen aus den Technischen Regeln für Arbeitsstätten (ASR A1.2) zur [Arbeitsstättenverordnung](https://www.gesetze-im-internet.de/arbst_ttv_2004/anhang.html). Sie gelten als Orientierung, nicht als Zusage. Verbindlich planen wir Ihre Bürofläche nach dem kostenlosen Aufmaß.",
   firstColLabel: "Planungsgröße",
-  columns: ["Richtwert nach ASR / ArbStättV"],
+  columns: ["Richtwert / Mindestmaß"],
   highlightColumn: 0,
   rows: [
     {
       label: "Einzel- und Mehrpersonenbüro",
-      values: ["Rund 8 bis 10 m² je Arbeitsplatz, inklusive Möblierung und Verkehrsfläche."],
+      values: ["8 bis 10 m² je Arbeitsplatz nach DGUV Information 215-441. Als Mindestgrundfläche nennt die ASR A1.2 8 m² für den ersten und 6 m² für jeden weiteren Arbeitsplatz im Raum."],
     },
     {
       label: "Großraumbüro",
-      values: ["Im Großraum werden eher 12 bis 15 m² je Arbeitsplatz angesetzt, weil der Anteil an Verkehrsflächen steigt."],
+      values: ["Für Großraumbüros nennt die DGUV Information 215-441 wegen des höheren Verkehrsflächenbedarfs 12 bis 15 m² je Arbeitsplatz."],
     },
     {
       label: "Bewegungsfläche am Arbeitsplatz",
-      values: ["Die freie Bewegungsfläche am Arbeitsplatz sollte mindestens rund 1,5 m² betragen."],
+      values: ["Nach ASR A1.2 braucht jeder Arbeitsplatz eine freie Bewegungsfläche von mindestens 1,5 m²."],
     },
     {
       label: "Raumhöhe",
-      values: ["Je nach Grundfläche gelten gestaffelte Mindestraumhöhen von etwa 2,50 bis 3,00 m."],
+      values: ["Je nach Grundfläche gelten gestaffelte lichte Mindestraumhöhen: 2,50 m bis 50 m², 2,75 m über 50 m², 3,00 m über 100 m² und 3,25 m über 2.000 m²."],
     },
   ],
 };
@@ -292,12 +292,12 @@ export const bpFaq = {
     {
       question: "Wie viele Quadratmeter braucht ein Arbeitsplatz?",
       answer:
-        "Als Orientierung gelten nach ASR und Arbeitsstättenverordnung rund 8 bis 10 m² je Arbeitsplatz im Einzelbüro und 12 bis 15 m² im Großraumbüro. Das sind Richtwerte, keine festen Vorgaben. Verbindlich planen wir Ihre Fläche nach dem kostenlosen Aufmaß.",
+        "Als Orientierung nennt die DGUV Information 215-441 rund 8 bis 10 m² je Arbeitsplatz im Büro und 12 bis 15 m² im Großraumbüro. Verbindlich ist nach ASR A1.2 die Mindestgrundfläche von 8 m² für den ersten und 6 m² für jeden weiteren Arbeitsplatz im Raum. Die Planung Ihrer Fläche legen wir nach dem kostenlosen Aufmaß fest.",
     },
     {
       question: "Welche Normen muss ich bei der Büroplanung beachten?",
       answer:
-        "Maßgeblich sind die Arbeitsstättenverordnung und die Technischen Regeln für Arbeitsstätten (ASR A1.2), etwa zu Bewegungsflächen und Raumhöhe, ergänzt um die DGUV Information 215-441. Wir kennen diese Vorgaben und planen sie in Ihr Büro ein, ohne dass Sie sich durch Paragrafen arbeiten müssen.",
+        "Maßgeblich sind die Arbeitsstättenverordnung und die zugehörigen Technischen Regeln für Arbeitsstätten (ASR A1.2), etwa zu Bewegungsflächen und Raumhöhe. Die DGUV Information 215-441 ergänzt sie mit Planungshilfen für Büros. Wir kennen diese Vorgaben und planen sie in Ihr Büro ein, ohne dass Sie sich durch Paragrafen arbeiten müssen.",
     },
     {
       question: "Was kostet eine Büroplanung?",

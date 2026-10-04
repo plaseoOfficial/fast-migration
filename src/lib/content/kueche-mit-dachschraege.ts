@@ -144,8 +144,8 @@ export const dsMasse = {
     {
       label: "Arbeitshöhe",
       values: [
-        "Arbeitshöhe rund 90 cm, abhängig von Ihrer Körpergröße.",
-        "Die Arbeitsplatte richten wir auf Ihre Größe aus, für rückenschonendes Arbeiten.",
+        "Arbeitshöhe nach Ellenbogenhöhe, rund 10 bis 15 cm darunter.",
+        "Die Arbeitsplatte richten wir auf Ihre Ellenbogenhöhe aus, für rückenschonendes Arbeiten.",
       ],
     },
     {
@@ -284,7 +284,7 @@ export const dsFaq = {
     {
       question: "Wie viel Abstand muss zwischen Kopf und Dachschräge bleiben?",
       answer:
-        "Als Faustregel sollten an Arbeitszonen rund 60 cm zwischen Kopf und Dachschräge frei bleiben, damit Sie aufrecht stehen. Das ist allgemeines Ergonomiewissen. Den genauen Verlauf messen wir beim Aufmaß und legen die Arbeitszonen dorthin, wo genug Kopffreiheit bleibt.",
+        "Als Faustregel sollten an Arbeitszonen rund 60 cm zwischen Kopf und Dachschräge frei bleiben, damit Sie aufrecht stehen. Das ist ein grober Richtwert. Den genauen Verlauf messen wir beim Aufmaß und legen die Arbeitszonen dorthin, wo genug Kopffreiheit bleibt.",
     },
     {
       question: "Was ist der Unterschied zwischen Kniestock und Drempel?",

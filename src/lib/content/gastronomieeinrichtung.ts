@@ -164,7 +164,7 @@ export const gastroTypische = {
     {
       title: "Kantine und Ausgabe",
       description:
-        "Ausgabetheken und Bestuhlung für Kantinen und Betriebsrestaurants aus Massivholz und pflegeleichten Materialien, hygienisch verarbeitet und leicht zu reinigen, gebaut für hohe Frequenz zur Mittagszeit.",
+        "Ausgabetheken und Bestuhlung für Kantinen und Betriebsrestaurants aus Massivholz und pflegeleichten Materialien mit glatten, gut zu reinigenden Oberflächen, gebaut für hohe Frequenz zur Mittagszeit.",
     },
     {
       title: "Außenbereich und Sonderbau",

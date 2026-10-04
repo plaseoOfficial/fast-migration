@@ -62,7 +62,7 @@ export const planenProcess = {
     {
       title: "Arbeitsdreieck und Ergonomie festlegen",
       description:
-        "Kühlschrank, Spüle und Herd ordnen Sie mit kurzen, freien Wegen zueinander an, das ist das Arbeitsdreieck. Die Arbeitshöhe richtet sich nach Ihrer Körpergröße. Davon hängt ab, wie rückenschonend sich die Küche später bedienen lässt.",
+        "Kühlschrank, Spüle und Herd ordnen Sie mit kurzen, freien Wegen zueinander an, das ist das Arbeitsdreieck. Die Arbeitshöhe richtet sich nach Ihrer Ellenbogenhöhe. Davon hängt ab, wie rückenschonend sich die Küche später bedienen lässt.",
     },
     {
       title: "Geräte und Zonen platzieren",
@@ -158,7 +158,7 @@ export const planenErgonomie = {
     {
       label: "Arbeitshöhe",
       values: [
-        "Nach Körpergröße, als Faustwert rund 10 bis 15 Zentimeter unter dem Ellenbogen.",
+        "Nach Ellenbogenhöhe, als Faustwert rund 10 bis 15 Zentimeter darunter, so empfiehlt es die AMK.",
         "Die passende Höhe schont den Rücken beim Schneiden und Arbeiten.",
       ],
     },
@@ -172,7 +172,7 @@ export const planenErgonomie = {
     {
       label: "Bewegungsfreiheit",
       values: [
-        "Vor Arbeitszeilen als grobe Orientierung rund 120 Zentimeter Gang.",
+        "Zwischen gegenüberliegenden Zeilen oder um eine Insel mindestens rund 120 Zentimeter Gang, so steht es in den AMK-Küchenstandards.",
         "So bleiben Auszüge und Geräte auch bei geöffneter Tür nutzbar.",
       ],
     },
@@ -224,7 +224,7 @@ export const planenFehler = {
     },
     {
       title: "Arbeitshöhe von der Stange",
-      body: "Eine Standardhöhe passt selten zu jedem. An Ihrer Körpergröße ausgerichtet, arbeitet es sich deutlich rückenschonender.",
+      body: "Eine Standardhöhe passt selten zu jedem. An Ihrer Ellenbogenhöhe ausgerichtet, arbeitet es sich deutlich rückenschonender.",
     },
     {
       title: "Passleisten und tote Zentimeter",
@@ -299,12 +299,12 @@ export const planenFaq = {
     {
       question: "Wie finde ich die richtige Arbeitshöhe?",
       answer:
-        "Die Arbeitshöhe richtet sich nach Ihrer Körpergröße und liegt als Orientierung rund 10 bis 15 Zentimeter unter dem Ellenbogen. So arbeiten Sie aufrecht und rückenschonend. Beim Aufmaß legen wir die Höhe genau für Sie fest.",
+        "Die Arbeitshöhe richtet sich nach Ihrer Ellenbogenhöhe und liegt als Orientierung rund 10 bis 15 Zentimeter unter dem Ellenbogen, so empfiehlt es die [AMK, der Fachverband der Küchenbranche](https://www.amk-ratgeber-kueche.de/kuechen/planen-gestalten/rueckenprobleme). So arbeiten Sie aufrecht und rückenschonend. Beim Aufmaß legen wir die Höhe genau für Sie fest.",
     },
     {
       question: "Welche Abstände und Bewegungsfreiheit sollte ich einplanen?",
       answer:
-        "Vor Arbeitszeilen sind rund 120 Zentimeter Gang eine gute Orientierung, damit Auszüge und Geräte auch bei geöffneter Tür nutzbar bleiben. Stehen sich zwei Zeilen gegenüber, sollte der Abstand groß genug sein, um sich beim Kochen nicht in die Quere zu kommen.",
+        "Zwischen gegenüberliegenden Zeilen oder um eine Insel sollten es mindestens rund 120 Zentimeter Gang sein, so steht es in den [AMK-Küchenstandards](https://www.amk.de/wp-content/uploads/2018/04/AMK-Kuechenstandards.pdf). Damit bleiben Auszüge und Geräte auch bei geöffneter Tür nutzbar und Sie kommen sich beim Kochen nicht in die Quere.",
     },
     {
       question: "Welche Fehler sollte ich bei der Küchenplanung vermeiden?",

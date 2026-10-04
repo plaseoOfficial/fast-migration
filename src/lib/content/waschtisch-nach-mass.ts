@@ -143,7 +143,7 @@ export const wtMasse = {
     {
       label: "Höhe (Komforthöhe)",
       values: [
-        "Beckenoberkante rund 85 bis 95 cm, als Faustregel die halbe Körpergröße (Orientierung nach DIN 68935).",
+        "Beckenoberkante rund 85 bis 95 cm (Orientierung an DIN 68935). Als Faustregel gilt die halbe Körpergröße.",
         "Auf Ihre Körpergröße abgestimmt, höher oder niedriger für Kinder und Senioren.",
       ],
     },
@@ -331,7 +331,7 @@ export const wtFaq = {
     {
       question: "Wie hoch sollte ein Waschtisch sein?",
       answer:
-        "Als Orientierung liegt die Beckenoberkante bei etwa 85 bis 95 cm (nach DIN 68935), eine gängige Faustregel ist die halbe Körpergröße. Feste Vorgaben machen wir nicht, wir stimmen die Höhe auf Sie ab, auf Wunsch höher oder niedriger für Kinder und Senioren.",
+        "Die Beckenoberkante liegt meist bei etwa 85 bis 95 cm (Orientierung an DIN 68935), eine gängige Faustregel ist die halbe Körpergröße. Feste Vorgaben machen wir nicht, wir stimmen die Höhe auf Sie ab, auf Wunsch höher oder niedriger für Kinder und Senioren.",
     },
     {
       question: "Aus welchem Material wird die Waschtischplatte gefertigt?",

@@ -212,7 +212,7 @@ export const ladenSegments = {
     },
     {
       title: "Lebensmittel & Markt",
-      body: "Robuste Theken, Regale und Kühlmöbel-Umbauten für den Lebensmitteleinzelhandel, gebaut für hohe Frequenz und tägliche Reinigung am Point of Sale.",
+      body: "Robuste Theken, Regale und Kühlmöbel-Umbauten für den Lebensmitteleinzelhandel, gebaut für hohe Frequenz und häufige Reinigung am Point of Sale.",
     },
     {
       title: "Gastronomie & Hotellerie",

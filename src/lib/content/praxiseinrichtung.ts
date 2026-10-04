@@ -129,7 +129,7 @@ export const praxisUsp = {
   eyebrow: "Gebaut für die Hygiene",
   heading: "Kanten ohne Fuge, in der sich Keime sammeln",
   body:
-    "In der Praxis wird täglich wischdesinfiziert. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos, sodass keine Spalten bleiben, in denen sich Schmutz und Keime absetzen. Zusammen mit abwischbaren, robusten Oberflächen halten die Möbel der täglichen Reinigung über Jahre stand, ohne aufgequollene Ränder. Das ist kein Aufpreis-Extra, sondern unser Standard.",
+    "In der Praxis wird regelmäßig desinfiziert. Unsere PU-Kantenverleimung verschließt die Kanten fugenlos, sodass keine Spalten bleiben, in denen sich Schmutz und Keime absetzen. Zusammen mit abwischbaren, robusten Oberflächen halten die Möbel der häufigen Reinigung über Jahre stand, ohne aufgequollene Ränder. Das ist kein Aufpreis-Extra, sondern unser Standard.",
   image: "/images/praxiseinrichtung/praxiseinrichtung-anmeldung-wartebereich.jpg",
   imageAlt:
     "Anmeldung mit Tresen nach Maß, dahinter der verglaste Wartebereich",
@@ -322,7 +322,7 @@ export const praxisFaq = {
     {
       question: "Wie hygienisch sind die Möbel, und welche Materialien verwenden Sie?",
       answer:
-        "Praxismöbel werden täglich wischdesinfiziert. Wir bauen deshalb fugenarm und verschließen die Kanten mit fugenloser PU-Verleimung, sodass keine Spalten bleiben, in denen sich Schmutz und Keime sammeln. Dazu kommen robuste, abwischbare Oberflächen wie HPL.",
+        "Praxismöbel werden regelmäßig gereinigt und desinfiziert, wie oft, legt der Hygieneplan der Praxis fest. Die [Empfehlung der KRINKO beim Robert Koch-Institut](https://www.rki.de/DE/Themen/Infektionskrankheiten/Krankenhaushygiene/KRINKO/Empfehlungen-der-KRINKO/Basishygiene/Tabelle_Basishyg_Anforderungen.html) nennt für solche Flächen unter anderem „möglichst eben, abwischbar und fugendicht“. Wir bauen deshalb fugenarm und verschließen die Kanten mit fugenloser PU-Verleimung, sodass keine Spalten bleiben, in denen sich Schmutz und Keime sammeln. Dazu kommen robuste, abwischbare Oberflächen wie HPL.",
     },
     {
       question: "Bauen Sie auch Geräte und Sanitärtechnik ein?",
