@@ -8,35 +8,11 @@
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 6,
-      "Hinweis": 20
+      "Warnung": 3,
+      "Hinweis": 19
     }
   },
   "findings": [
-    {
-      "severity": "Warnung",
-      "check": "ziel-zu-allgemein",
-      "message": "/: „Einbauschränke & Ankleiden\" → `/moebel-nach-mass/`, passt aber zu `/einbauschraenke-nach-mass/` / `/einbauschraenke-nach-mass/einbauschrank-dachschraege/` — auf das genauere Ziel verlinken.",
-      "file": "src/lib/content/home.ts",
-      "line": 64,
-      "href": "/moebel-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "ziel-zu-allgemein",
-      "message": "/: „Badmöbel nach Maß\" → `/moebel-nach-mass/`, passt aber zu `/badmoebel-nach-mass/` / `/badmoebel-nach-mass/waschtisch-nach-mass/` — auf das genauere Ziel verlinken.",
-      "file": "src/lib/content/home.ts",
-      "line": 70,
-      "href": "/moebel-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "ziel-zu-allgemein",
-      "message": "/: „Wohnen & Sideboards\" → `/moebel-nach-mass/`, passt aber zu `/wohnmoebel-nach-mass/` — auf das genauere Ziel verlinken.",
-      "file": "src/lib/content/home.ts",
-      "line": 76,
-      "href": "/moebel-nach-mass/"
-    },
     {
       "severity": "Warnung",
       "check": "inbound",
@@ -114,13 +90,6 @@
       "check": "missing-soll",
       "message": "/kuechen-nach-mass/kueche-mit-dachschraege/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/kuechen-nach-mass/kueche-mit-dachschraege/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "anker-relevanz",
-      "message": "/gewerbe/: Linktext „Entdecken Sie das Gefühl von Qualität\" → `/ladenbau/` enthält keinen Begriff des Ziels.",
-      "file": "src/lib/content/gewerbe.ts",
-      "href": "/ladenbau/"
     },
     {
       "severity": "Hinweis",
