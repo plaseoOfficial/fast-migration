@@ -60,7 +60,7 @@ export const wtIntroStats = {
   col1CtaLabel: "Waschtisch anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jede Platte entsteht bei uns in Espelkamp, von der PU-verleimten Kante bis zur Oberfläche. Von der Beratung bis zur Montage bleibt ein Ansprechpartner für Sie zuständig. Ihr Waschtisch gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
+    "Jede Platte entsteht bei uns in Espelkamp, von der PU-verleimten Kante bis zur Oberfläche. Von der Beratung bis zur Montage bleibt ein Ansprechpartner für Sie zuständig. Stauraum abseits des Waschplatzes schafft ein [Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/). Ihr Waschtisch gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
   counterTarget: 200,
   counterDuration: 2000,
   counterSuffix: " km",

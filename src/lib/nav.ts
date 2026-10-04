@@ -30,11 +30,18 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Privat",
     kind: "mega",
     columns: [
+      // Produktseiten im Menü (Ben, 2026-10-04): je Cluster die ein bis zwei mit den
+      // meisten Impressionen (GSC 28 Tage bis 26.09.2026). Der Dachschrägen-Schrank
+      // stand als einzige Produktseite im Menü und war die einzige mit Sichtbarkeit.
+      // Bad und Büro haben noch keine Daten — dort reicht vorerst der Cluster.
+      // Die Auswahl wird monatlich anhand der GSC-Daten neu vorgeschlagen.
       {
         title: "Wohnräume",
         items: [
           { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
           { label: "Küchen nach Maß", href: "/kuechen-nach-mass/" },
+          { label: "Küche planen", href: "/kuechen-nach-mass/kueche-planen/" },
+          { label: "Küche mit Dachschräge", href: "/kuechen-nach-mass/kueche-mit-dachschraege/" },
           { label: "Badmöbel nach Maß", href: "/badmoebel-nach-mass/" },
           { label: "Wohnmöbel nach Maß", href: "/wohnmoebel-nach-mass/" },
         ],
@@ -44,6 +51,8 @@ export const NAV_ITEMS: NavItem[] = [
         items: [
           { label: "Einbauschränke nach Maß", href: "/einbauschraenke-nach-mass/" },
           { label: "Schrank für Dachschräge nach Maß", href: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/" },
+          { label: "Schrank unter der Treppe", href: "/einbauschraenke-nach-mass/schrank-unter-treppe/" },
+          { label: "Regal nach Maß", href: "/wohnmoebel-nach-mass/regal-nach-mass/" },
           { label: "Hauswirtschaftsraum nach Maß", href: "/hauswirtschaftsraum/" },
         ],
       },

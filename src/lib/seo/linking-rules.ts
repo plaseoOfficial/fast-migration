@@ -359,7 +359,7 @@ export const ANCHORS: Record<string, AnchorSet> = {
   },
   "/einbauschraenke-nach-mass/einbauschrank-dachschraege/": {
     exact: ["Schrank für Dachschräge nach Maß"],
-    partial: ["Dachschrägenschrank nach Maß", "Schrank unter der Dachschräge", "Drempelschrank nach Maß"],
+    partial: ["Dachschrägenschrank nach Maß", "Schrank unter der Dachschräge", "Drempelschrank nach Maß", "Kniestockschrank nach Maß"],
     brand: ["Fast Systemmöbel Dachschrägenschrank"],
     descriptive: ["Dachschrägenschrank ansehen", "Schrank für die Dachschräge planen"],
   },

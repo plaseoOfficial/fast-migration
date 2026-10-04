@@ -132,7 +132,7 @@ export const suTypische = {
     {
       title: "Garderobe unter der Treppe",
       description:
-        "Steht die Treppe im Eingang, wird der Raum darunter zur kompletten Garderobe. Haken, Sitzfläche, Schuhauszüge und geschlossener Stauraum fassen wir in einem Möbel zusammen, das auch im schmalen Flur alles aufnimmt.",
+        "Steht die Treppe im Eingang, wird der Raum darunter zur kompletten [Garderobe](/einbauschraenke-nach-mass/garderobe-nach-mass/). Haken, Sitzfläche, Schuhauszüge und geschlossener Stauraum fassen wir in einem Möbel zusammen, das auch im schmalen Flur alles aufnimmt.",
     },
     {
       title: "Sitzbank mit Stauraum",

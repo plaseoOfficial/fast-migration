@@ -276,7 +276,7 @@ export const praxisWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-08.svg",
     title: "Gewerbeeinrichtung",
     description:
-      "Praxiseinrichtung ist Teil unserer [Gewerbeeinrichtung](/gewerbe/): Vom Anmeldetresen bis zur kompletten Einrichtung für Praxen, Kanzleien und Büros.",
+      "Praxiseinrichtung ist Teil unserer [Gewerbeeinrichtung](/gewerbe/): Vom Anmeldetresen bis zur kompletten Einrichtung für Praxen, Kanzleien und [Büros](/bueroeinrichtung/).",
     href: "/gewerbe/",
   },
   {

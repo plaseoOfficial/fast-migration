@@ -294,7 +294,7 @@ export const dsFaq = {
     {
       question: "Welche Küchenform eignet sich bei Dachschräge am besten?",
       answer:
-        "Das hängt vom Grundriss ab. Eine Zeile an der hohen Traufwand ist am einfachsten, L- oder U-Form holen die Arbeitszone unter den First in die Raummitte, eine Insel passt unter den höchsten Punkt, wenn Platz und Anschlüsse stimmen.",
+        "Das hängt vom Grundriss ab. Eine [Küchenzeile](/kuechen-nach-mass/kuechenzeile-nach-mass/) an der hohen Traufwand ist am einfachsten, L- oder U-Form holen die Arbeitszone unter den First in die Raummitte, eine Insel passt unter den höchsten Punkt, wenn Platz und Anschlüsse stimmen.",
     },
     {
       question: "Wie nutze ich den niedrigen Bereich unter der Schräge als Stauraum?",
