@@ -66,7 +66,7 @@ Belege ausschließlich aus FACTS.md (✅/🟢). **Verboten:** Festpreis-Versprec
 - **Sekundär:** **Kontakt** (`/kontakt/`) — „Anfrage für dieses Möbel" / Beratung.
 - **Tertiär:** **Telefon** 05771 9138312 (sichtbar, klickbar).
 - **Platzierung:** 1 CTA nach dem Maß-/Kosten-Block (Peak der Kaufabsicht) + 1 Abschluss-CTA. **2 starke CTA-Zonen**, nicht in jedem Block (kein Banner-Spam).
-- **Body-Link-Budget (internal-linking.md): max 7** (`RULES.product.maxBodyLinks`, externe Beleg-Links zählen mit) — knapp halten, Conversion-Links + Geschwister-Pflichtlink priorisieren.
+- **Body-Link-Budget (internal-linking.md): max 7** (`RULES.product.maxBodyLinks`, nur interne Ziele; Beleg-Links haben ihre eigene Grenze) — knapp halten, Conversion-Links + Geschwister-Pflichtlink priorisieren.
 
 ## 7 · Ton-Nuance (Abweichung vom BRAND_VOICE-Grundton)
 Grundton bleibt: handwerklich-stolz, ruhig, „Sie", Beweis statt Behauptung. **Produkt-Abweichung:**
@@ -113,7 +113,7 @@ Grundton bleibt: handwerklich-stolz, ruhig, „Sie", Beweis statt Behauptung. **
 Externe Links sind **Belege**, keine Deko. Sie gelten nur für Angaben, die eine Quelle brauchen.
 - **Wann:** Norm-, Vorschrift- oder Messwert-Angaben (z. B. Arbeitsstättenregel, DGUV-Information, Barrierefreiheitsmaß, Hygienevorgabe).
 - **Wohin:** nur Hosts aus `EXTERNAL_SOURCE_ALLOWLIST` in `src/lib/seo/linking-rules.ts` (gesetze-im-internet.de, baua.de, publikationen.dguv.de/dguv.de, eur-lex.europa.eu, rki.de, bundesgesundheitsministerium.de, amk.de, amk-ratgeber-kueche.de, verbraucherzentrale.de, nullbarriere.de; Subdomains eingeschlossen). Anderer Host = Audit-**Fehler** (`extern`).
-- **Wie viele:** **max. 2 je Seite** (`MAX_EXTERNAL_PER_PAGE`); mehr = Audit-Warnung. Externe Links zählen ins Body-Link-Budget.
+- **Wie viele:** **max. 2 je Seite** (`MAX_EXTERNAL_PER_PAGE`); mehr = Audit-Warnung. Sie zählen nicht ins interne Body-Link-Budget, haben aber diese eigene Grenze.
 - **Ankertext = Name der Quelle** (z. B. „ASR A1.2", „DGUV Information 215-410", „DIN 18040-2 (nullbarriere.de)"), nie „hier"/„mehr infos".
 - **Nie** auf Hersteller, Händler, Wettbewerber oder Verzeichnisse verlinken.
 - **Nichts erfinden:** keine Quelle nennen, die nicht geprüft die Aussage trägt; keine geratenen Paragraphen/Nummern.

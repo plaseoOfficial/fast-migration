@@ -143,7 +143,7 @@ Alle 13 Gates gelten; für „Leistung" sind diese **besonders hart**:
 Externe Links sind **Belege**, keine Deko. Sie gelten nur für Angaben, die eine Quelle brauchen.
 - **Wann:** Norm-, Vorschrift- oder Messwert-Angaben (z. B. Arbeitsstättenverordnung/ASR bei Büro, DGUV bei Ladenbau/Gastro, Hygiene bei Praxis, DIN 18040 bei Barrierefreiheit).
 - **Wohin:** nur Hosts aus `EXTERNAL_SOURCE_ALLOWLIST` in `src/lib/seo/linking-rules.ts` (gesetze-im-internet.de, baua.de, publikationen.dguv.de/dguv.de, eur-lex.europa.eu, rki.de, bundesgesundheitsministerium.de, amk.de, amk-ratgeber-kueche.de, verbraucherzentrale.de, nullbarriere.de; Subdomains eingeschlossen). Anderer Host = Audit-**Fehler** (`extern`).
-- **Wie viele:** **max. 2 je Seite** (`MAX_EXTERNAL_PER_PAGE`); mehr = Audit-Warnung. Externe Links zählen ins Body-Link-Budget.
+- **Wie viele:** **max. 2 je Seite** (`MAX_EXTERNAL_PER_PAGE`); mehr = Audit-Warnung. Sie zählen nicht ins interne Body-Link-Budget, haben aber diese eigene Grenze.
 - **Ankertext = Name der Quelle** (z. B. „ASR A1.2", „DGUV Information 215-410"), nie „hier"/„mehr infos".
 - **Nie** auf Hersteller, Händler, Wettbewerber oder Verzeichnisse verlinken.
 - **Nichts erfinden:** keine Quelle nennen, die nicht geprüft die Aussage trägt; keine geratenen Paragraphen/Nummern.

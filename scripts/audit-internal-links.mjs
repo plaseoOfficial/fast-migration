@@ -426,8 +426,10 @@ async function main() {
     const bodyTargets = new Set(
       outgoing.filter((l) => isInternal(l.href) && !l.crumb).map((l) => normSlug(l.href)),
     );
-    const bodyCount = bodyTargets.size + outgoing.filter((l) => isExternal(l.href)).length;
-    // (Externe Links zählen bewusst mit — ein Beleg-Link kostet einen Budget-Platz.)
+    // Nur interne Ziele zählen: Beleg-Links nach außen haben ihre eigene Obergrenze
+    // (MAX_EXTERNAL_PER_PAGE, CHECK 12) und sollen nicht mit Querlinks zu Schwesterseiten
+    // um denselben Platz konkurrieren.
+    const bodyCount = bodyTargets.size;
     if (node.contentModule && bodyCount > rule.maxBodyLinks) {
       add("Warnung", "budget", `${node.slug}: ${bodyCount} Body-Links > Budget ${rule.maxBodyLinks} (PageRank-Verdünnung).`, { page: node.slug });
     }
