@@ -55,7 +55,7 @@ export const gewerbeIntroStats = {
   col3Title: "gefertigte Einzelteile",
   col3Body:
     "Unsere Fertigung kombiniert neueste CNC-Technik mit handwerklicher Perfektion. So entstehen Systemmöbel, die langlebig, funktional und ästhetisch überzeugen – in jedem Projekt, jedem Detail.",
-  col3CtaLabel: "Entdecken Sie das Gefühl von Qualität",
+  col3CtaLabel: "Individueller Ladenbau",
   col3CtaHref: "/ladenbau/",
 };
 
@@ -198,6 +198,7 @@ export const gewerbeClusterCards: ServiceCard[] = [
     description:
       "Arbeitsplätze, Stauraum, Konferenz- und Empfangsbereiche für Büros und Kanzleien. Büromöbel nach Maß, geplant und montiert für Ihre Abläufe.",
     href: "/bueroeinrichtung/",
+    moreLabel: "Büroeinrichtung",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -205,6 +206,7 @@ export const gewerbeClusterCards: ServiceCard[] = [
     description:
       "Empfangstresen, Behandlungs- und Wartebereiche für Ärzte, Therapeuten und Praxen. Hygienisch, repräsentativ und zentimetergenau gebaut.",
     href: "/praxiseinrichtung/",
+    moreLabel: "Praxismöbel nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
@@ -212,6 +214,7 @@ export const gewerbeClusterCards: ServiceCard[] = [
     description:
       "Theken, Tresen und Mobiliar für Restaurant, Café, Bar und Hotel. Strapazierfähig für den Dauereinsatz, bundesweit geliefert.",
     href: "/gastronomieeinrichtung/",
+    moreLabel: "Gastro-Möbel nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
@@ -219,6 +222,7 @@ export const gewerbeClusterCards: ServiceCard[] = [
     description:
       "Verkaufstheken, Warenträger und komplette Shopkonzepte. Vom einzelnen Tresen bis zur fertigen Verkaufsfläche aus einer Hand.",
     href: "/ladenbau/",
+    moreLabel: "Ladenbau nach Maß",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",
@@ -226,6 +230,7 @@ export const gewerbeClusterCards: ServiceCard[] = [
     description:
       "Identische Möbel in Serie, zentimetergenau nach Zeichnung. Serienfertigung für Filialisten, Hotellerie und Pflegeeinrichtungen.",
     href: "/serienmoebel/",
+    moreLabel: "Serienmöbel",
   },
 ];
 

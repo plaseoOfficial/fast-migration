@@ -91,7 +91,7 @@ export function GewerbeWarum({
                     lineHeight: "1.2",
                   }}
                 >
-                  {item.caption}
+                  {renderInlineLinks(item.caption)}
                 </p>
               </figcaption>
             </figure>
@@ -130,7 +130,7 @@ export function GewerbeWarum({
                 color: "rgb(255,255,255)",
               }}
             >
-              {factBox}
+              {renderInlineLinks(factBox)}
             </h3>
           </Reveal>
         </div>

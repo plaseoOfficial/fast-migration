@@ -6,6 +6,7 @@ import type { FaqItem } from "@/types";
 import { PlusIcon, MinusIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
+import { renderInlineLinks } from "@/lib/inline-links";
 
 interface FaqSectionProps {
   eyebrow: string;
@@ -90,7 +91,7 @@ export function FaqSection({ eyebrow, heading, items, ctaLabel, ctaHref }: FaqSe
                       className="px-6 pb-6 pt-0 fast-body"
                       style={{ fontSize: 14, lineHeight: "23.8px" }}
                     >
-                      {item.a}
+                      {renderInlineLinks(item.a)}
                     </div>
                   </div>
                 </div>
