@@ -30,3 +30,43 @@
 | `/ladenbau/gastronomieeinrichtung/` | `/gastronomieeinrichtung/` | 301 | Kannibalisierung aufloesen: Gastronomieeinrichtung nach Maß |
 | `/gastronomieeinrichtung/hoteleinrichtung/` | `/serienmoebel/hotelmoebel-serie/` | 301 | Kannibalisierung aufloesen: Hotelmöbel / Hoteleinrichtung |
 | `/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/` | `/einbauschraenke-nach-mass/nischenschrank-nach-mass/` | 301 | Kannibalisierung aufloesen: Nischenschrank / Nische Stauraum |
+
+## Altsite-Adressen aus dem Webarchiv (10/2026)
+
+Gefunden über den Wayback-CDX-Index (Link-Analyse 02.10.2026): 33 Adressen der Joomla-Altsite, die live auf 404 endeten. Ziel ist jeweils das nächste Thema der neuen Site.
+
+| Alte URL | Neue URL | Typ | Anmerkung |
+|---|---|---|---|
+| `/privatkunden/kuechen.html` | `/kuechen-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden/badezimmer.html` | `/badmoebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden/wohnbereich.html` | `/wohnmoebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden/auf-wunsch.html` | `/moebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden1.html` | `/moebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden1/kuechen1.html` | `/kuechen-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden1/bad1.html` | `/badmoebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden1/wohnbereich1.html` | `/wohnmoebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/privatkunden1/2013-06-08-20-54-06.html` | `/moebel-nach-mass/` | 301 | Privatkunden → passender Cluster |
+| `/geschaeftskunden.html` | `/gewerbe/` | 301 | Geschäfts- und Industriekunden |
+| `/geschaeftskunden1.html` | `/gewerbe/` | 301 | Geschäfts- und Industriekunden |
+| `/geschaeftskunden/geschaeftseinrichtung.html` | `/gewerbe/` | 301 | Geschäfts- und Industriekunden |
+| `/geschaeftskunden1/geschaeftseinrichtung.html` | `/gewerbe/` | 301 | Geschäfts- und Industriekunden |
+| `/geschaeftskunden/ladenbau.html` | `/ladenbau/` | 301 | Geschäfts- und Industriekunden |
+| `/geschaeftskunden1/ladenbau.html` | `/ladenbau/` | 301 | Geschäfts- und Industriekunden |
+| `/industriekunden.html` | `/serienmoebel/` | 301 | Geschäfts- und Industriekunden |
+| `/industriekunden1.html` | `/serienmoebel/` | 301 | Geschäfts- und Industriekunden |
+| `/unternehmen/unser-unternehmen.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/unternehmen/unser-qualitaetsversprechen.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/unternehmen/unser-service.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/1ueber-uns.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/1ueber-uns/2013-06-08-20-48-42.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/1ueber-uns/2013-06-08-20-52-53.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/1ueber-uns/2013-06-08-20-53-06.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/aktuelles.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/aktuelles1.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/aktuelles.feed` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/aktuelles1.feed` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/aktuelles/39-neuer-unternehmensautritt.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/jobs/kuechenmonteure.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/jobs/auszubildenden-kaufmann-fuer-bueromanagement.html` | `/ueber-uns/` | 301 | Unternehmen, Aktuelles, Jobs → Über uns |
+| `/kontakt1.html` | `/kontakt/` | 301 | Doppelte Pflicht- und Kontaktseiten |
+| `/impressum2.html` | `/impressum/` | 301 | Doppelte Pflicht- und Kontaktseiten |

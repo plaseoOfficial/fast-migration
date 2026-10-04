@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/content";
+import { lastModified } from "@/lib/seo/lastmod";
 
 /**
  * Indexable routes (flat-IA, trailing slash to match `trailingSlash: true` and
@@ -44,9 +45,16 @@ const ROUTES: Array<{ path: string; priority: number }> = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ROUTES.map(({ path, priority }) => ({
-    url: `${SITE_URL}${path}`,
-    changeFrequency: "monthly",
-    priority,
-  }));
+  return ROUTES.map(({ path, priority }) => {
+    // lastmod nur, wenn das Git-Datum belegt ist (siehe lastmod.ts). Ohne
+    // lastmod erfuhr Google bis 10/2026 nicht, welche Seiten neu oder geändert
+    // sind — neue Seiten blieben wochenlang unentdeckt.
+    const lastmod = lastModified(path);
+    return {
+      url: `${SITE_URL}${path}`,
+      ...(lastmod ? { lastModified: lastmod } : {}),
+      changeFrequency: "monthly",
+      priority,
+    };
+  });
 }
