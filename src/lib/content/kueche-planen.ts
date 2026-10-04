@@ -242,7 +242,7 @@ export const planenTischler = {
   eyebrow: "Aus der Werkstatt",
   heading: "Was ein Tischler bei der Planung anders macht",
   body:
-    "Ein Online-Konfigurator rechnet mit festen Rastermaßen, eine Serienküche ebenso. Als Meisterbetrieb in Espelkamp planen wir Ihre Küche um den echten Raum herum: schiefe Wände, Nischen und Dachschrägen sind für uns Alltag, kein Sonderfall. Wir nehmen ein kostenloses Aufmaß, planen in 3D, fertigen in Eigenregie und bauen Wand zu Wand ohne Passleisten, montiert vom eigenen Team. Wie eine solche [Küche nach Maß](/kuechen-nach-mass/) entsteht, zeigt unsere Übersicht.",
+    "Ein Online-Konfigurator rechnet mit festen Rastermaßen, eine Serienküche ebenso. Als Meisterbetrieb in Espelkamp planen wir Ihre Küche um den echten Raum herum: schiefe Wände, Nischen und [Dachschrägen](/kuechen-nach-mass/kueche-mit-dachschraege/) sind für uns Alltag, kein Sonderfall. Wir nehmen ein kostenloses Aufmaß, planen in 3D, fertigen in Eigenregie und bauen Wand zu Wand ohne Passleisten, montiert vom eigenen Team. Wie eine solche [Küche nach Maß](/kuechen-nach-mass/) entsteht, zeigt unsere Übersicht.",
   image: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg",
   imageAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte vom Meisterbetrieb Fast Systemmöbel",
   stat: { value: "kostenlos", label: "Aufmaß vor Ort" },
@@ -284,7 +284,7 @@ export const planenFaq = {
     {
       question: "Welche Küchenform passt zu meinem Grundriss?",
       answer:
-        "Für schmale Räume eignet sich die Küchenzeile, für rechteckige die L-Form, für mittlere bis große Räume die U- oder G-Form und für große, offene Räume die Inselküche. Entscheidend sind Raumgröße, Fensterlage und die Wege, die Sie täglich gehen.",
+        "Für schmale Räume eignet sich die [Küchenzeile](/kuechen-nach-mass/kuechenzeile-nach-mass/), für rechteckige die L-Form, für mittlere bis große Räume die U- oder G-Form und für große, offene Räume die Inselküche. Entscheidend sind Raumgröße, Fensterlage und die Wege, die Sie täglich gehen.",
     },
     {
       question: "Wie messe ich meine Küche richtig aus?",

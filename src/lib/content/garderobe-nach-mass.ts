@@ -171,7 +171,7 @@ export const garRaeume = {
     },
     {
       title: "Dachschräge im Flur",
-      body: "Läuft der Flur unter eine Schräge, folgen Fronten und Klappen exakt dem Winkel und nutzen den Raum bis in die Spitze. Tiefer gehen wir beim [Dachschrägenschrank nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/).",
+      body: "Läuft der Flur unter eine Schräge, folgen Fronten und Klappen exakt dem Winkel und nutzen den Raum bis in die Spitze. Tiefer gehen wir beim [Drempelschrank nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/).",
     },
     {
       title: "Unter der Treppe",

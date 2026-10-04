@@ -49,7 +49,7 @@ const FAQ_ITEMS = [
   {
     question: "Welche Möbel kann ich im Planer konfigurieren?",
     answer:
-      "Schränke, Kleiderschränke, Regale, Küchenzeilen, Badschränke und viele weitere Möbelstücke. Alle maßgefertigt nach Ihren Vorstellungen.",
+      "Schränke, Kleiderschränke, Regale, Küchenzeilen, Badschränke und viele weitere Möbelstücke. Alle maßgefertigt nach Ihren Vorstellungen. Für eine ganze Küche hilft vorab unser Ratgeber [Küche Schritt für Schritt planen](/kuechen-nach-mass/kueche-planen/).",
   },
   {
     question: "Wie genau ist der Online-Möbelplaner?",

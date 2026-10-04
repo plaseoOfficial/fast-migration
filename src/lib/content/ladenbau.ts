@@ -98,7 +98,7 @@ export const ladenIntroStats = {
     "Wandregal der Obst- und Gemüseabteilung nach Maß, mit Holzlamellen-Blende, Schriftzug und Strahlerschiene",
   col1Title: "Shop planen",
   col1Body:
-    "Wir planen Ihre Ladeneinrichtung exakt nach Grundriss, Customer Journey und Markenauftritt. Verkaufstheken, Wandregale und Kassenzonen entstehen millimetergenau und sind auf den täglichen Betrieb ausgelegt. Was genau Ihre Fläche braucht, klären wir beim kostenlosen Aufmaß vor Ort.",
+    "Wir planen Ihre Ladeneinrichtung exakt nach Grundriss, Customer Journey und Markenauftritt. Verkaufstheken, Wandregale und Kassenzonen entstehen millimetergenau und sind auf den täglichen Betrieb ausgelegt. Bar- und Restauranttheken bauen wir in derselben Werkstatt, mehr dazu beim [Thekenbau für die Gastronomie](/gastronomieeinrichtung/). Was genau Ihre Fläche braucht, klären wir beim kostenlosen Aufmaß vor Ort.",
   col1CtaLabel: "Ladenbau-Projekt anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:

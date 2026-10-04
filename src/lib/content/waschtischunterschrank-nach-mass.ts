@@ -61,7 +61,7 @@ export const wuIntroStats = {
   col1CtaLabel: "Unterschrank anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
-    "Jedes Bauteil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Die passende [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) planen wir auf Wunsch gleich mit, Ihr Unterschrank gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
+    "Jedes Bauteil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Die passende [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) planen wir auf Wunsch gleich mit, Ihr Unterschrank gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/). Für Handtücher und Vorräte abseits des Beckens bauen wir den [Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/).",
   counterTarget: 200,
   counterDuration: 2000,
   counterSuffix: " km",

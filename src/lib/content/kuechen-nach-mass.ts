@@ -117,7 +117,7 @@ export const kuechenTypische = {
     {
       title: "Stauraum nach Maß",
       description:
-        "Apothekerauszüge, Eckschränke und Vorratsschränke bis unter die Decke. Auch unter Dachschrägen und in Nischen wird jeder Zentimeter nutzbar.",
+        "Apothekerauszüge, Eckschränke und Vorratsschränke bis unter die Decke. Auch unter Dachschrägen und in Nischen wird jeder Zentimeter nutzbar. Was in der Küche keinen Platz findet, ordnet ein [Hauswirtschaftsraum nach Maß](/hauswirtschaftsraum/) gleich nebenan.",
     },
   ],
 };
