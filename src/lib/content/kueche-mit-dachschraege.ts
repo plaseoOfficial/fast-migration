@@ -205,7 +205,7 @@ export const dsProcess = {
     {
       title: "3D-Planung",
       description:
-        "In der 3D-Planung sehen Sie Ihre Küche vorab, mit Zonen, Fronten und dem Verlauf entlang der Schräge. Änderungen sind hier jederzeit möglich, bevor wir fertigen.",
+        "In der 3D-Planung sehen Sie Ihre Küche vorab, mit Zonen, Fronten und dem Verlauf entlang der Schräge. Änderungen sind hier jederzeit möglich, bevor wir fertigen. Wie sich eine Küche insgesamt planen lässt, zeigt der Ratgeber [Küche Schritt für Schritt planen](/kuechen-nach-mass/kueche-planen/).",
     },
     {
       title: "Fertigung in Espelkamp",

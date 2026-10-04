@@ -189,7 +189,7 @@ export const FAQS: FaqItem[] = [
 export const FOOTER_LINKS = {
   links: [
     { label: "Home", href: "/" },
-    { label: "Leistungen", href: "/moebel-nach-mass/" },
+    { label: "Leistungen", href: "/alle-leistungen/" },
     { label: "Über uns", href: "/ueber-uns/" },
     { label: "Referenzen", href: "/referenzen/" },
     // "Ratgeber" kehrt zurück, sobald /ratgeber/ gebaut ist (Launch-Regel: keine Dead-Links).

@@ -57,7 +57,7 @@ export const planenProcess = {
     {
       title: "Küchenform zum Grundriss wählen",
       description:
-        "Küchenzeile, L-Form, U-Form, G-Form oder Insel: Welche Form passt, hängt von Raumgröße, Fensterlage und Ihren Laufwegen ab. Die Übersicht weiter unten ordnet jede Küchenform ihrer typischen Raumsituation zu.",
+        "[Küchenzeile nach Maß](/kuechen-nach-mass/kuechenzeile-nach-mass/), L-Form, U-Form, G-Form oder Insel: Welche Form passt, hängt von Raumgröße, Fensterlage und Ihren Laufwegen ab. Die Übersicht weiter unten ordnet jede Küchenform ihrer typischen Raumsituation zu.",
     },
     {
       title: "Arbeitsdreieck und Ergonomie festlegen",
@@ -329,7 +329,7 @@ export const planenFaq = {
     {
       question: "Wann lohnt sich ein Tischler statt eines Online-Konfigurators?",
       answer:
-        "Sobald der Raum vom Standard abweicht: Nischen, Sondermaße, schiefe Wände, Dachschrägen oder der Wunsch nach Wand-zu-Wand ohne Passleisten. Ein Konfigurator arbeitet mit festen Rastern. Wir planen und fertigen jede Küche zentimetergenau in unserer eigenen Werkstatt und montieren sie mit eigenem Team.",
+        "Sobald der Raum vom Standard abweicht: Nischen, Sondermaße, schiefe Wände, Dachschrägen oder der Wunsch nach Wand-zu-Wand ohne Passleisten. Ein Konfigurator arbeitet mit festen Rastern. Wie eine [Küche unter der Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/) trotzdem passt, zeigen wir auf einer eigenen Seite. Wir planen und fertigen jede Küche zentimetergenau in unserer eigenen Werkstatt und montieren sie mit eigenem Team.",
     },
     {
       question: "Sind Beratung und Aufmaß bei Fast kostenlos?",

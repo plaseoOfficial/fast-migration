@@ -107,6 +107,7 @@ export const PAGES: PageNode[] = [
 
   // Planned neutral trust/info pages (backlog targets)
   { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "referenzen" },
+  { slug: "/alle-leistungen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "leistungen" }, // Übersicht aller Leistungen; Liste wird aus PAGES generiert (leistungen-data.ts)
   { slug: "/ablauf-massanfertigung/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/liefergebiet-montage/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/faq/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
@@ -331,6 +332,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     brand: ["Fast Systemmöbel Küchenplanung"],
     descriptive: ["so planen Sie Ihre Küche", "unser Ratgeber zur Küchenplanung", "Küchenplanungs-Ratgeber"],
   },
+  "/kuechen-nach-mass/kuechenzeile-nach-mass/": {
+    exact: ["Küchenzeile nach Maß"],
+    partial: ["maßgefertigte Küchenzeile", "Küchenzeile vom Tischler", "einzeilige Küche nach Maß"],
+    brand: ["Fast Systemmöbel Küchenzeile"],
+    descriptive: ["Küchenzeile auf Ihre Wand planen", "Küchenzeile ansehen"],
+  },
   "/kuechen-nach-mass/kueche-mit-dachschraege/": {
     exact: ["Küche mit Dachschräge"],
     partial: ["Dachschrägen-Küche nach Maß", "Küche unterm Dach", "Küche mit Dachschräge nach Maß", "Küche unter der Dachschräge"],
@@ -384,6 +391,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["So funktioniert die Maßanfertigung", "Herstellungsprozess"],
     brand: [],
     descriptive: ["Wie läuft eine Maßanfertigung ab?", "So entsteht Ihr Möbel"],
+  },
+  "/alle-leistungen/": {
+    exact: ["Alle Leistungen"],
+    partial: ["Leistungen im Überblick", "unsere Leistungen"],
+    brand: ["Leistungen von Fast Systemmöbel"],
+    descriptive: ["Alle Leistungen ansehen"],
   },
   "/ueber-uns/": {
     exact: ["Über uns"],

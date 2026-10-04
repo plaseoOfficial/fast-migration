@@ -281,7 +281,7 @@ export const kzFaq = {
     {
       question: "Wie läuft die Planung einer Küchenzeile nach Maß ab?",
       answer:
-        "In vier Schritten: Beratung und kostenloses Aufmaß vor Ort, dann 3D-Planung zum Ansehen und Ändern, danach Fertigung in unserer Werkstatt in Espelkamp und zuletzt Montage durch unser eigenes Team. Ein Ansprechpartner von Anfang bis Abnahme.",
+        "In vier Schritten: Beratung und kostenloses Aufmaß vor Ort, dann 3D-Planung zum Ansehen und Ändern, danach Fertigung in unserer Werkstatt in Espelkamp und zuletzt Montage durch unser eigenes Team. Ein Ansprechpartner von Anfang bis Abnahme. Wie sich Grundriss, Wege und Geräte vorab durchdenken lassen, erklärt unsere [Küchenplanung](/kuechen-nach-mass/kueche-planen/).",
     },
     {
       question: "Wie lange dauert die Fertigung?",
