@@ -16,6 +16,15 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "storage.googleapis.com", pathname: "/fast_wp_bucket/**" },
     ],
   },
+  // Selbst ausgelieferter Matomo-Kern-Tracker: versionierter Dateiname → dauerhaft cachebar.
+  async headers() {
+    return [
+      {
+        source: "/matomo/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+    ];
+  },
   // Flat-IA relaunch: the old /leistungen/* URLs are retired (308 permanent).
   // Altsite-Mappings: docs/seo/redirects.md (Sheet Tab 13). Einträge mit
   // "INTERIM" zeigen auf den nächsten gebauten Hub, bis die finale Zielseite

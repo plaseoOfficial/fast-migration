@@ -6,18 +6,12 @@ import { useEffect, useRef } from "react";
 const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
 const SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
 
-/** matomo.js-Quelle: bei Matomo Cloud das schnelle CDN, sonst die Instanz selbst. */
-function scriptQuelle(basis: string): string {
-  try {
-    const host = new URL(basis).host;
-    if (host.endsWith(".matomo.cloud")) {
-      return `https://cdn.matomo.cloud/${host}/matomo.js`;
-    }
-  } catch {
-    /* ungültige URL → Fallback unten */
-  }
-  return `${basis}matomo.js`;
-}
+/**
+ * Open-Source-Kern-Tracker (Matomo 5.14.0, BSD-3), selbst ausgeliefert. Die Cloud-matomo.js
+ * brächte Premium-Plugins mit (A/B-Testing, Form-/Crash-/Media-Analytics) und schriebe
+ * auf Safari/iOS Testwerte in localStorage. Die Daten gehen weiter an die Cloud (setTrackerUrl).
+ */
+const MATOMO_SKRIPT = "/matomo/matomo-5.14.0.js";
 
 /**
  * Lädt Matomo cookieless (kein Consent-Banner nötig, IP wird anonymisiert) und
@@ -37,7 +31,8 @@ export function MatomoAnalytics() {
     geladen.current = true;
 
     const _paq = (window._paq = window._paq ?? []);
-    _paq.push(["disableCookies"]); // cookieless → DSGVO ohne Einwilligung
+    _paq.push(["disableCookies"]); // cookieless → DSGVO ohne Einwilligung (immer der ERSTE Befehl)
+    _paq.push(["disableBrowserFeatureDetection"]);
     _paq.push(["enableLinkTracking"]);
     _paq.push(["setTrackerUrl", `${MATOMO_URL}matomo.php`]);
     _paq.push(["setSiteId", SITE_ID]);
@@ -45,7 +40,7 @@ export function MatomoAnalytics() {
 
     const s = document.createElement("script");
     s.async = true;
-    s.src = scriptQuelle(MATOMO_URL);
+    s.src = MATOMO_SKRIPT;
     document.head.appendChild(s);
   }, []);
 
