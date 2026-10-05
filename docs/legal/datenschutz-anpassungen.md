@@ -37,7 +37,7 @@ anders. Dieses Dokument listet auf, was angepasst werden muss, damit die Erklär
 
 ### 2. Hosting → „Externes Hosting"
 - **ÄNDERN (größter Punkt):** Mittwald + echtagentur ersetzen durch **Vercel**.
-  - Anbieter: **Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.**
+  - Anbieter: **Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA.**
   - US-Transfer benennen; Grundlage: Vercel **DPA/AVV** + **EU-U.S. Data Privacy Framework**
     bzw. **Standardvertragsklauseln** (aktuellen Status bei Vercel verifizieren und verlinken).
   - „Auftragsverarbeitung (AVV)"-Unterabschnitt behalten, aber auf Vercel-DPA beziehen.
