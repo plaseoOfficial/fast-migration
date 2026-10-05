@@ -119,7 +119,7 @@ export const garElemente = {
 export const garMasse = {
   heading: "Maße einer Garderobe nach Maß: allgemeine Orientierung",
   intro:
-    "Feste Fast-Maße gibt es nicht. Jede Garderobe entsteht nach dem Aufmaß bei Ihnen, auf den Millimeter. Die Werte unten sind reine Planungsorientierung, inklusive der Bewegungsfläche nach DIN 18040-2. Gebaut wird am Ende Wand zu Wand, ohne sichtbare Passleisten.",
+    "Feste Fast-Maße gibt es nicht. Jede Garderobe entsteht nach dem Aufmaß bei Ihnen, auf den Millimeter. Die Werte unten sind reine Planungsorientierung, inklusive der Bewegungsfläche davor. Bei barrierefreier Planung nach DIN 18040-2 sind das mindestens 90 cm vor Möbeln, bei rollstuhlgerechter Planung 150 cm. Gebaut wird am Ende Wand zu Wand, ohne sichtbare Passleisten.",
   firstColLabel: "Maß",
   columns: ["Übliche Orientierung", "Bei Fast nach Maß"],
   highlightColumn: 1,
@@ -148,7 +148,7 @@ export const garMasse = {
     {
       label: "Bewegungsfläche davor",
       values: [
-        "Orientierung DIN 18040-2, genug Platz zum Türöffnen und Anziehen.",
+        "Bei barrierefreier Planung nach DIN 18040-2 mindestens 90 cm vor Möbeln, 150 cm bei Rollstuhlnutzung.",
         "Sitzbank und Türschwenk beim Aufmaß mit eingeplant.",
       ],
     },
@@ -288,7 +288,7 @@ export const garFaq = {
     {
       question: "Wie viel Bewegungsfläche sollte vor der Garderobe frei bleiben?",
       answer:
-        "Als Orientierung dient die DIN 18040-2: genug Platz, um Türen zu öffnen und sich anzuziehen. Steht eine Sitzbank davor, kalkulieren wir deren Tiefe und den Türschwenk beim Aufmaß mit ein.",
+        "Bei barrierefreier Planung gelten nach [DIN 18040-2](https://nullbarriere.de/din18040-2-wohnraum-schlafraum.htm) mindestens 90 cm Bewegungsfläche vor Möbeln, bei rollstuhlgerechter Planung 150 cm. Auch ohne Barrierefreiheit lohnt sich dieser Platz, damit Türen und Sitzbank nicht kollidieren. Steht eine Sitzbank davor, kalkulieren wir deren Tiefe und den Türschwenk beim Aufmaß mit ein.",
     },
     {
       question: "Was kostet eine Garderobe nach Maß?",

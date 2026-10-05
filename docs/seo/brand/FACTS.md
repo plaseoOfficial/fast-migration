@@ -24,6 +24,7 @@
 - **Eigenes Montageteam: JA, bestätigt (2026-06-06)** → darf als feste Zusage formuliert werden.
 - **Aufmaß: kostenlos, bestätigt (2026-06-06)** → „kostenloses Aufmaß vor Ort" nutzbar.
 - **Preise: IMMER individuell (2026-06-06)** — Fast veröffentlicht keine Preise/Preisspannen. Preisfrage über Kostenfaktoren + individuelles Angebot beantworten, NIE mit erfundenen Zahlen.
+  - **Ausnahme freigegeben (Vorschlag 17.09., Freigabe Fast über Max 2026-10-04):** Der öffentliche Online-Möbelplaner zeigt selbst Preise („Preis Möbel inkl. MwSt., zzgl. Lieferung u. Montage"). **Gerundete Schätzungen daraus** dürfen als Orientierung stehen — immer als Schätzung und Möbelpreis gekennzeichnet, mit „zzgl. Lieferung und Montage", nie als Festpreis oder „ab"-Preis. Belegt (Planer 17.09.2026, Korpus + Front Platinweiss, Türen ohne Griff): **Schrank unter der Dachschräge 1,80 m breit ≈ 1.400–2.000 € je nach Höhe der Schräge; 2,80 m breit ≈ 3.000 €.** Erster Einsatz: `einbauschrank-dachschraege`. Andere Zahlen weiterhin nur mit eigenem Planer-Beleg.
 - **„Meisterbetrieb seit <Jahr>": Jahr ungeklärt** (evtl. 2011, Kunde unsicher 2026-06-06) → **KEIN Jahr nennen**, nur „Meisterbetrieb". Noch abzuklären.
 - **Küche-Service (2026-06-06):** Fast montiert Küchen **immer selbst** (eigenes Team) — **kein** Selbstmontage-Bausatz, **keine** reine Geräte-Lieferung bei Küchen. Differenzierung: alles individuell machbar („die verrücktesten Vorstellungen"), echte Sondermaße, **Wand-zu-Wand ohne Passleisten**, ungewöhnliche Materialkombinationen. **Finanzierung: ja im Privatbereich (z. B. Küche); NICHT für Gewerbe/Büro (2026-06-06).** Einzugsgebiet (Beispielorte): Espelkamp, Minden, Lübbecke, Osnabrück, Bielefeld, ganz OWL.
 - **Geo-Reichweite je Leistung (WICHTIG — immer pro Seite klären):** **Lieferung bundesweit** in ganz Deutschland; **montagepflichtige Leistungen** (z.B. Küche) sind ans **Montagegebiet ~200 km um Espelkamp** gebunden. Bei JEDER Leistungsseite explizit auflösen (montage-gebunden vs. Lieferung) — Standardantwort des Kunden: Montage/Einbau/Aufmaß nur im ~200-km-Radius, Lieferung deutschlandweit, gilt für alle Produktbereiche.
@@ -78,6 +79,8 @@
 | Mitarbeiterzahl | ca. **5–10** (nicht „12+") | 🟢 | wlw, LinkedIn, kuechen-atlas |
 
 ## Status / Qualifikation
+- **Ausstellung rund 100 m²** in Espelkamp (ueber-uns.ts) ✅ bestätigt Max 2026-10-04.
+- **„40 % mehr Stauraum“** im Referenzfall Einbauschrank Espelkamp-Mittwald (ueber-uns.ts) ✅ bestätigt Max 2026-10-04 — nur für dieses Projekt, nicht als allgemeine Zusage.
 - **Meisterbetrieb** „mit langjähriger Erfahrung im Holzbau" (Selbstaussage). ✅ Startseite
 - **„seit 2013"** ❌ (nicht belegt; Tischlermeister lt. Chronik 2011, kein „Meisterbetrieb seit"-Jahr) → ❓ Kunde.
 
@@ -87,6 +90,7 @@
 - **3D-Planung** im Prozess. ✅ /service-beratung.html
 - Eigenfertigung „alle Teile in Eigenregie". 🟢 wlw
 - **Geräte-Marken:** kundenseitig **frei wählbar** — alle gängigen Hersteller werden eingeplant (2026-06-06, Max). *(Bosch accent line / NEFF Collection nur als Verzeichnis-Beispiele, NICHT als ausschließliche/eigene Marken behaupten.)* 🟢 kuechen-atlas
+- **Beschläge / Plattenwerkstoffe:** wechseln **je Projekt** („kommt immer drauf an“, Max 2026-10-04) → keine Herstellernamen als feste Ausstattung behaupten, **keine Hersteller-Links** als Beleg. ✅
 - **Nicht belegt:** Fertigungsfläche m², Homag/Maschinenhersteller, konkrete Holzarten (Eiche/Nussbaum/Linoleum/Stahl/Glas). ❌
 
 ## Nachhaltigkeit (✅ /unser-standard/qualitaet-nachhaltigkeit.html)

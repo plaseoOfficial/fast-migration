@@ -1,18 +1,126 @@
 {
   "summary": {
-    "pagesBuilt": 34,
+    "pagesBuilt": 35,
     "pagesPlanned": 5,
-    "linksFound": 494,
+    "linksFound": 510,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 3,
-      "Hinweis": 19
+      "Warnung": 4,
+      "Hinweis": 20
+    }
+  },
+  "external": {
+    "allowlist": [
+      "gesetze-im-internet.de",
+      "baua.de",
+      "publikationen.dguv.de",
+      "dguv.de",
+      "eur-lex.europa.eu",
+      "rki.de",
+      "bundesgesundheitsministerium.de",
+      "amk.de",
+      "amk-ratgeber-kueche.de",
+      "verbraucherzentrale.de",
+      "nullbarriere.de"
+    ],
+    "maxPerPage": 2,
+    "pages": {
+      "/einbauschraenke-nach-mass/garderobe-nach-mass/": [
+        {
+          "href": "https://nullbarriere.de/din18040-2-wohnraum-schlafraum.htm",
+          "host": "nullbarriere.de",
+          "anchor": "DIN 18040-2",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/garderobe-nach-mass.ts"
+        }
+      ],
+      "/kuechen-nach-mass/kueche-planen/": [
+        {
+          "href": "https://www.amk-ratgeber-kueche.de/kuechen/planen-gestalten/rueckenprobleme",
+          "host": "amk-ratgeber-kueche.de",
+          "anchor": "AMK, der Fachverband der Küchenbranche",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/kueche-planen.ts"
+        },
+        {
+          "href": "https://www.amk.de/wp-content/uploads/2018/04/AMK-Kuechenstandards.pdf",
+          "host": "amk.de",
+          "anchor": "AMK-Küchenstandards",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/kueche-planen.ts"
+        }
+      ],
+      "/kuechen-nach-mass/kuechenzeile-nach-mass/": [
+        {
+          "href": "https://www.amk-ratgeber-kueche.de/kuechen/planen-gestalten/rueckenprobleme",
+          "host": "amk-ratgeber-kueche.de",
+          "anchor": "AMK, des Fachverbands der Küchenbranche",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/kuechenzeile-nach-mass.ts"
+        }
+      ],
+      "/bueroeinrichtung/": [
+        {
+          "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/409/bildschirm-und-bueroarbeitsplaetze-leitfaden-fuer-die-gestaltung",
+          "host": "publikationen.dguv.de",
+          "anchor": "DGUV Information 215-410 zu Bildschirm- und Büroarbeitsplätzen",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/bueroeinrichtung.ts"
+        },
+        {
+          "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/2950/akustik-im-buero-hilfen-fuer-die-akustische-gestaltung-von-bueros",
+          "host": "publikationen.dguv.de",
+          "anchor": "DGUV Information 215-443 Akustik im Büro",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/bueroeinrichtung.ts"
+        }
+      ],
+      "/praxiseinrichtung/": [
+        {
+          "href": "https://www.rki.de/DE/Themen/Infektionskrankheiten/Krankenhaushygiene/KRINKO/Empfehlungen-der-KRINKO/Basishygiene/Tabelle_Basishyg_Anforderungen.html",
+          "host": "rki.de",
+          "anchor": "Empfehlung der KRINKO beim Robert Koch-Institut",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/praxiseinrichtung.ts"
+        }
+      ],
+      "/bueroeinrichtung/bueroplanung/": [
+        {
+          "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/224/bueroraumplanung-hilfen-fuer-das-systematische-planen-und-gestalten-von-bueros",
+          "host": "publikationen.dguv.de",
+          "anchor": "DGUV Information 215-441 Büroraumplanung",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/bueroplanung.ts"
+        },
+        {
+          "href": "https://www.gesetze-im-internet.de/arbst_ttv_2004/anhang.html",
+          "host": "gesetze-im-internet.de",
+          "anchor": "Arbeitsstättenverordnung",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/bueroplanung.ts"
+        }
+      ]
     }
   },
   "findings": [
+    {
+      "severity": "Warnung",
+      "check": "budget",
+      "message": "/kuechen-nach-mass/kueche-planen/: 7 Body-Links > Budget 6 (PageRank-Verdünnung).",
+      "page": "/kuechen-nach-mass/kueche-planen/"
+    },
     {
       "severity": "Warnung",
       "check": "inbound",
@@ -30,6 +138,22 @@
       "check": "inbound",
       "message": "/hauswirtschaftsraum/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/moebel-nach-mass/`, `/kuechen-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
       "page": "/hauswirtschaftsraum/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/leistungen/#privat` → kanonisch `/leistungen/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 57,
+      "href": "/leistungen/#privat"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "canonical",
+      "message": "`/leistungen/#gewerbe` → kanonisch `/leistungen/` (Trailing-Slash, vermeidet Redirect-Hop).",
+      "file": "src/lib/nav.ts",
+      "line": 87,
+      "href": "/leistungen/#gewerbe"
     },
     {
       "severity": "Hinweis",
@@ -142,11 +266,6 @@
       "message": "/referenzen/: Linktext „Umkleidekabinen für Arminia Bielefeld\" → `/serienmoebel/` enthält keinen Begriff des Ziels.",
       "file": "src/lib/content/referenzen.ts",
       "href": "/serienmoebel/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "backlog",
-      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/kuechen-nach-mass/kueche-planen/`, `/badmoebel-nach-mass/waschtisch-nach-mass/`."
     }
   ]
 }

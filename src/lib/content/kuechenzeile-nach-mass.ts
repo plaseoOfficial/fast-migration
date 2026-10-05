@@ -115,7 +115,7 @@ export const kzZielgruppen = {
 export const kzMasse = {
   heading: "Maße einer Küchenzeile: allgemeine Orientierung",
   intro:
-    "Wie lang und wie tief eine Küchenzeile sein sollte, hängt vom Raum ab. Die folgenden Werte sind allgemeines Planungswissen, gedacht als Orientierung. Verbindlich wird es bei Ihnen erst nach dem kostenlosen Aufmaß. Dann planen wir millimetergenau, Wand zu Wand ohne Passleisten.",
+    "Wie lang und wie tief eine Küchenzeile sein sollte, hängt vom Raum ab. Die folgenden Werte sind allgemeines Planungswissen, gedacht als Orientierung. Die Angabe zur Arbeitshöhe folgt der Empfehlung der [AMK, des Fachverbands der Küchenbranche](https://www.amk-ratgeber-kueche.de/kuechen/planen-gestalten/rueckenprobleme). Verbindlich wird es bei Ihnen erst nach dem kostenlosen Aufmaß. Dann planen wir millimetergenau, Wand zu Wand ohne Passleisten.",
   firstColLabel: "Maß",
   columns: ["Übliche Orientierung", "Bei Fast nach Maß"],
   highlightColumn: 1,
@@ -137,8 +137,8 @@ export const kzMasse = {
     {
       label: "Arbeitshöhe",
       values: [
-        "Die ergonomische Arbeitshöhe richtet sich nach Ihrer Körpergröße, häufig zwischen 90 und 95 cm Oberkante Arbeitsplatte.",
-        "Auf Ihre Körpergröße abgestimmt geplant, nicht aufs Raster.",
+        "Die ergonomische Arbeitshöhe richtet sich nach Ihrer Ellenbogenhöhe: Die Arbeitsplatte liegt 10 bis 15 cm darunter.",
+        "Auf Ihre Ellenbogenhöhe abgestimmt geplant, nicht aufs Raster.",
       ],
     },
     {

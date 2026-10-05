@@ -56,8 +56,8 @@ const BEIGE = "rgba(203, 191, 181, 0.59)";
 /**
  * Silo-konforme Karten für MnmWeitereLeistungen: kein Cross-Silo in den Gewerbe-
  * Bereich (internal-linking.md Silo-Integrität). Der keyword-reiche Up-Link zeigt
- * auf den Cluster-Pillar /einbauschraenke-nach-mass/ (parent), dazu der Hub
- * /moebel-nach-mass/ und der Trust-Link /referenzen/. /kontakt/ und /moebelplaner/
+ * auf den Cluster-Pillar /einbauschraenke-nach-mass/ (parent), dazu die Schwester
+ * /einbauschraenke-nach-mass/garderobe-nach-mass/ und der Trust-Link /referenzen/. /kontakt/ und /moebelplaner/
  * werden über IntroStats, die beiden ExpandingImageCtas, MnmMoebelplaner und die
  * FaqSection verlinkt (Conversion-MUSS, wie bei der Dachschräge-Schwester).
  */
@@ -72,11 +72,11 @@ const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
-    title: "Möbel nach Maß",
+    title: "Flurgarderobe nach Maß",
     description:
-      "Jedes Stück ein Unikat. Ob Küche, Schrank oder Wohnraum: Wir fertigen passgenaue Möbel, die sich exakt nach Ihrem Stil, Ihrem Alltag und Ihrem Raum richten.",
-    href: "/moebel-nach-mass/",
-    moreLabel: "Alle Möbel nach Maß",
+      "Der Flur neben der Treppe braucht Platz für Jacken, Schuhe und Taschen. Wir planen die Garderobe im selben Stil wie den Schrank unter der Treppe.",
+    href: "/einbauschraenke-nach-mass/garderobe-nach-mass/",
+    moreLabel: "Garderobe nach Maß ansehen",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-07.svg",

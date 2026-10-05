@@ -25,7 +25,8 @@ const nextConfig: NextConfig = {
       { source: "/leistungen/moebel-nach-mass", destination: "/moebel-nach-mass/", permanent: true },
       { source: "/leistungen/gewerbeeinrichtung", destination: "/gewerbe/", permanent: true },
       { source: "/leistungen/moebelplaner", destination: "/moebelplaner/", permanent: true },
-      { source: "/leistungen", destination: "/", permanent: true },
+      // /leistungen/ selbst ist seit 04.10.2026 wieder eine echte Seite (Übersicht aller
+      // Leistungen, Entscheidung Max). Nur die alten Unterpfade bleiben umgeleitet.
       // URL-Umzug: Ladenbau ist ein flacher Gewerbe-Cluster (wie /bueroeinrichtung/).
       { source: "/gewerbe/ladenbau/", destination: "/ladenbau/", permanent: true },
       // --- Altsite: Produktkategorien ---

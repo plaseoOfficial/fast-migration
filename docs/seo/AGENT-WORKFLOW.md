@@ -8,11 +8,18 @@
 
 ## Phase 1 — RESEARCH-KIT (Ebene 1 · Engine: `content-engine.workflow.mjs` = SERP-Intelligence)
 Läuft **1× pro Keyword**, Ergebnis wird **gecacht** (`docs/seo/research/<slug>.kit.md`) und wiederverwendet. **3 Agents, read-only/text-only:**
-1. **SERP + Konkurrenz-Tiefe** — Top-8 fetchen, Wortzahl MESSEN → Median; Tiefe-Blaupause der Sieger; Formate; Snippet/PAA.
+1. **SERP + Konkurrenz-Tiefe** — Top-8 fetchen, Inhalte und Formate prüfen; gemessene Wortzahlen
+   bleiben Recherchebeleg; Tiefe-Blaupause der Sieger; Snippet/PAA.
 2. **WDF\*IDF + Intent + Gap** — Pflicht-Terme (mit Gewicht), Entitäten, Intent/Job-to-be-done/Micro-Intents, intent-abgeleitete Pflicht-Module, Gaps, unser Winkel, FAQ-Kandidaten.
-→ **Korridor** deterministisch in Code: `max(SERP-Median, Archetyp-Min) … Median×Bonus`
-3. **Synthese → Research-Kit** — dicht & entscheidungsfertig (Korridor · Pflicht-Module · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel) **inkl. §9 offene Punkte/Wissenslücken**.
+→ **SERP-Tiefe** dient als Recherche- und Strukturhinweis; sie setzt keine Mindest- oder
+Höchstwortzahl für den veröffentlichten Text.
+3. **Synthese → Research-Kit** — dicht & entscheidungsfertig (Pflicht-Module · WDF-Checkliste ·
+   FAQ-Liste · Do-NOT-claim · Winkel) **inkl. §9 offene Punkte/Wissenslücken**.
 **Gate:** Kit liegt vor.
+
+**Leser-Nutzen-Regel:** Research und Keywords sind Arbeitsgrundlage. Der veröffentlichte Text
+beantwortet die Leserfrage; interne Konkurrenz-, Volumen- oder Toolzählungen erscheinen nur
+bei unmittelbarem Nutzwert.
 
 ## Phase 1.5 — WISSENSSTAND AUFLÖSEN (NACH der SERP-Suche, VOR dem Schreiben)
 > **Geändert am 2026-07-28 (Ben):** Es wird **nicht mehr beim Kunden nachgefragt** — die Fragen waren gut, aber praktisch nicht beantwortbar und banden Zeit, die es nicht gibt. Der frühere Hard-Stop »ohne beantwortete Discovery kein Authoring« ist **aufgehoben**; die Texte werden ohne Rückfrage geschrieben.
@@ -30,7 +37,8 @@ Die im Kit (§9) erzeugten seitenspezifischen Fragen werden **selbst aufgelöst*
 Eingabe: das **aufgelöste** Kit (§9 gegen FACTS + Kundenwissen geklärt, Leerstellen markiert). **4 Agents, alle TEXT-ONLY (editieren NIE Dateien, fahren KEIN Bash/Build):**
 1. **Writer** — Kit → prop-gemappte Copy in einem Aufruf.
 2. **Humanizer** — KI-Muster brechen, O-Ton Fast (voice-only; ändert KEINE Fakten/Keywords/Links/Struktur).
-→ **Code-Gates** (0 Token, deterministisch, 100 %): Wortzahl-Korridor · **Verbotene-Claims** (FACTS ❌) · FAQ-Zahl · Title/Description-Länge.
+→ **Code-Gates** (0 Token, deterministisch, 100 %): **Verbotene-Claims** (FACTS ❌) ·
+FAQ-Struktur · Title/Description-Länge.
 3. **QC&Fix** — EIN Reviewer prüft alle Dimensionen (Fakten · WDF · E-E-A-T · Links/Dedup · AEO · Human) + die Code-Befunde und gibt die **korrigierte Copy** zurück.
 4. **Chefredakteur** — holistisches Verdikt (dient & konvertiert?).
 **Gate:** Code-Gates grün + Chefredakteur pass. → finale Copy (prop-gemappt, **als Text an den Menschen** — kein Selbst-Einsetzen).
@@ -39,16 +47,18 @@ Eingabe: das **aufgelöste** Kit (§9 gegen FACTS + Kundenwissen geklärt, Leers
 11. **Mensch-Review / Freigabe** (du)
 12. Copy in `src/lib/content/<slug>.ts` einsetzen — **nur Werte, pixel-perfect**
 13. **Schema + Metadata** setzen (seitentyp-spezifisch, s. u.)
-14. **Interne Links beidseitig** verdrahten (`internal-linking.md`)
-15. **`npm run check`** (lint+typecheck+build) + **Visual-Diff** vs. `docs/design-references/`
-16. **`design-qc`-Agent** (bei UI-Änderungen)
-17. **`STATUS.md`** aktualisieren (Seite = live-ready)
+14. **Interne Links beidseitig** verdrahten (`internal-linking.md`) — Pflicht bei Produkt/Ratgeber/Artikel: ≥ 1 Geschwister im Fließtext verlinken **und** in ≥ 1 indexierter Geschwister-Seite den Rücklink eintragen (Budget der Quelle prüfen, bei vollem Budget tauschen). Externe Links nur als Beleg auf `EXTERNAL_SOURCE_ALLOWLIST`, max. 2 je Seite.
+15. **`pnpm run audit:links`** — **Pflicht-Gate vor jedem PR** (0 Fehler; läuft auch in CI und in `check`). Prüft MUSS-Links inkl. Geschwister, eingehende Inhaltslinks, generische Anker, externe Belege.
+16. **`npm run check`** (lint+typecheck+audit:links+build) + **Visual-Diff** vs. `docs/design-references/`
+17. **`design-qc`-Agent** (bei UI-Änderungen)
+18. **`STATUS.md`** aktualisieren (Seite = live-ready)
 
 ## Kategorie-spezifische Abzweige (das Ebene-2-Playbook entscheidet)
 - **Hub:** CollectionPage-Schema · Cluster-Karten · breite Einordnung · **keine** Tiefe-Konkurrenz zu den Kind-Seiten.
 - **Leistung (conversion):** **starker** CTA (Möbelplaner + Kontakt) · Service+FAQPage-Schema · Vergleichstabelle · Prozess · USP.
 - **Produkt:** Product+FAQPage-Schema · Varianten/Maße · Kosten-Orientierung · technische Specs.
-- **Ratgeber:** HowTo/FAQPage-Schema · **AEO-Direktantworten** + Tabellen · schwacher CTA · maximale Tiefe.
+- **Ratgeber:** HowTo/FAQPage-Schema · **AEO-Direktantworten** + Tabellen · schwacher CTA ·
+  vollständige Beantwortung der relevanten Nutzerfragen.
 - **Referenz/Über-uns:** Organization/AboutPage-Schema · echte Projekte/Team/Zahlen · **Experience-Fokus** · weicher CTA.
 - **Conversion (Kontakt/Planer):** Formular zuerst · Minimal-Copy · LocalBusiness/ContactPoint · **kein** SEO-Fülltext.
 
@@ -56,7 +66,7 @@ Eingabe: das **aufgelöste** Kit (§9 gegen FACTS + Kundenwissen geklärt, Leers
 - **Fakt nicht in FACTS.md / Kundenwissen belegt** → nicht behaupten (Leerstelle umschiffen, Phase 1.5). *(Der frühere Discovery-Hard-Stop ist seit 2026-07-28 aufgehoben — nicht mehr fragen, nicht mehr warten.)*
 - **Verbotene-Claims-Gate rot** (ein ❌-Claim aus FACTS.md, in Code erkannt) → **sofortiger Stopp, nie live.**
 - **Agents editieren Dateien / fahren Bash/Build** → Verstoß. Agents geben nur Text zurück; **der Mensch** setzt ein.
-- **`npm run check` rot** → **nicht mergen.**
+- **`npm run check` oder `pnpm run audit:links` rot** → **nicht mergen.**
 
 ## Skalierungs-Modus (Batch)
 **Recherche (Ebene 1) 1× pro Keyword/Cluster** — Kits gecacht, von allen Cluster-Unterseiten wiederverwendet. **Authoring (Ebene 2) pro Seite, lean** (3 text-only Agents). Sammel-Review (Phase 3) → ein Merge. Cluster-Seiten **erst nach** ihrer Differenzierungs-Map (Phase 0). Richtwert: ~4 Agents/Seite (Writer · Humanizer · QC&Fix · Chefredakteur), ~140k Token/Seite (statt 32 Agents / 2,2 Mio); Recherche (Ebene 1) zusätzlich 1× pro Keyword, gecacht.

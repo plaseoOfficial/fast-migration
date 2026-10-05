@@ -1,6 +1,7 @@
 # Content-System — Fast Systemmöbel (Operating Manual)
 
-> Wie wir nachhaltig **1A-SEO-Content über alle Seiten** erzeugen — **ohne Drift, ohne Spam/Duplikate**, skalierbar von 14 auf 111 Seiten. Verbindliche Arbeitsgrundlage.
+> Wie wir nachhaltigen SEO-Content über alle Seiten erzeugen — ohne Drift und ohne Spam/Duplikate.
+> Verbindliche Arbeitsgrundlage.
 
 ## Prinzip — 3 Garantien, strukturell erzwungen (nicht der Modell-„Erinnerung" überlassen)
 1. **Kein Drift** — jeder Lauf lädt denselben Kanon + den Seiten-Brief frisch ein.
@@ -36,7 +37,10 @@ docs/seo/
 ```
 
 ## Seitentyp-Playbooks (warum Referenz ≠ Leistung)
-Jedes Playbook fixiert für seinen Archetyp: **Ziel · Such-Intent · Pflicht-Bausteine · Schema · E-E-A-T-Fokus · CTA-Stärke · Ton-Nuance · Wortzahl-Korridor · interne-Link-Rolle · AEO-Elemente.**
+Jedes Playbook fixiert für seinen Archetyp: **Ziel · Such-Intent · Pflicht-Bausteine · Schema · E-E-A-T-Fokus · CTA-Stärke · Ton-Nuance · interne-Link-Rolle · AEO-Elemente.**
+Research und Keywords liefern die Arbeitsgrundlage. Der veröffentlichte Text beantwortet die
+konkrete Leserfrage und enthält interne Konkurrenz-, Volumen- oder Tooldaten nur bei direktem
+Nutzwert für den Leser.
 
 | Archetyp | Ziel/Intent | Pflicht-Bausteine | Schema | CTA |
 |---|---|---|---|---|
@@ -55,7 +59,7 @@ Jedes Playbook fixiert für seinen Archetyp: **Ziel · Such-Intent · Pflicht-Ba
 3. **Korpus-Dedup-Gate (QC):** Ein Agent vergleicht jeden Draft **semantisch gegen ALLE** Schwester-/Bestandsseiten, misst die Überlappung und **blockt** bei zu hoher Ähnlichkeit → erzwingt echte Differenzierung. *(Ergänzt die Kannibalisierungs-Logik aus dem Sheet-Tab 11.)*
 
 ## QC — wie wir prüfen (lean, NICHT 13 einzelne LLM-Gates)
-- **Deterministisch in Code (0 Token, 100 %):** Wortzahl-Korridor · **Verbotene-Claims** (FACTS ❌) · FAQ-Zahl · Title/Description-Länge.
+- **Deterministisch in Code (0 Token, 100 %):** **Verbotene-Claims** (FACTS ❌) · FAQ-Struktur · Title/Description-Länge.
 - **Ein QC&Fix-Reviewer (1 Agent)** deckt in EINEM Durchgang ab: Fakten · Keywords/WDF*IDF · E-E-A-T · interne Links/CTA + Korpus-Dedup · AEO/Zitierbarkeit · Human-Score — und gibt die **korrigierte Copy** zurück.
 - **Chefredakteur (1 Agent):** holistisches Verdikt (dient die Seite dem Nutzer & konvertiert sie?).
 
@@ -66,7 +70,7 @@ Jedes Playbook fixiert für seinen Archetyp: **Ziel · Such-Intent · Pflicht-Ba
 
 ## Der Lauf pro Seite (immer identisch)
 1. **(einmal je Cluster)** Differenzierungs-Map anlegen.
-2. **SERP-Intelligence-Engine** (Ebene 1, **1× pro Keyword, gecacht**) → `research/<slug>.kit.md`: Korridor · Pflicht-Module + Tiefe-Blaupause · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel · **§9 offene Punkte/Wissenslücken**.
+2. **SERP-Intelligence-Engine** (Ebene 1, **1× pro Keyword, gecacht**) → `research/<slug>.kit.md`: SERP-Tiefe als Orientierung · Pflicht-Module + Tiefe-Blaupause · WDF-Checkliste · FAQ-Liste · Do-NOT-claim · Winkel · **§9 offene Punkte/Wissenslücken**.
 3. **Wissensstand auflösen** — §9-Fragen des Kits gegen `brand/FACTS.md` + den Antwort-Fundus des Mandanten (`kundenwissen.md`) beantworten; Unbelegtes bleibt Leerstelle und wird **nicht behauptet**. *(Seit 2026-07-28 keine Rückfrage beim Kunden und kein Hard-Stop mehr — siehe AGENT-WORKFLOW.md Phase 1.5.)*
 4. **Authoring-Engine** (Ebene 2, **lean, text-only**) → Writer → Code-Gates → QC&Fix → Chefredakteur → Copy als **Text**.
 5. **Mensch** setzt Copy in `src/lib/content/<slug>.ts` ein → interne Links → **einmal** `npm run check` → Visual-Diff vs. `docs/design-references/`.
