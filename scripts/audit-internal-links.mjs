@@ -33,6 +33,8 @@ import {
   MAX_BRIDGES_PER_PAGE,
   MIN_INBOUND,
   bridgeBetween,
+  EXTERNAL_SOURCE_ALLOWLIST,
+  MAX_EXTERNAL_PER_PAGE,
 } from "../src/lib/seo/linking-rules.ts";
 import { INLINE_LINK_RE } from "../src/lib/inline-links/parse.ts";
 
@@ -65,6 +67,24 @@ function normSlug(href) {
 const isExternal = (h) => /^(https?:)?\/\//.test(h) || /^(mailto|tel):/.test(h);
 const isInternal = (h) => typeof h === "string" && h.startsWith("/") && !h.startsWith("//");
 const isFragment = (h) => h === "#" || (typeof h === "string" && h.startsWith("#"));
+/** Externer Web-Link (http/https/protokoll-relativ) — ohne mailto:/tel:. */
+const isWebExternal = (h) => typeof h === "string" && /^(https?:)?\/\//.test(h);
+
+/** Hostname eines externen Links (lowercase, ohne `www.`), oder null. */
+function hostOf(href) {
+  try {
+    return new URL(href.startsWith("//") ? `https:${href}` : href).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+}
+
+/** Host auf der Beleg-Allowlist? Ein Eintrag deckt auch alle Subdomains ab. */
+function hostAllowed(host) {
+  return !!host && EXTERNAL_SOURCE_ALLOWLIST.some((d) => host === d || host.endsWith(`.${d}`));
+}
+
+const PRODUCTISH = ["product", "cluster-article", "ratgeber-pillar"];
 
 // ---------------------------------------------------------------------------
 // Link extraction
@@ -179,9 +199,16 @@ async function extractModule(node) {
   try {
     const mod = await import(pathToFileURL(abs).href);
     const out = [];
-    for (const v of Object.values(mod)) walkValue(v, out);
+    // JSON-LD-Exporte (…JsonLd) überspringen: stripJsonLdLinks entfernt dort alle Marker, sie
+    // werden nie als Link gerendert und würden FAQ-Links sonst doppelt zählen. Ein gemeinsames
+    // `seen` verhindert Doppelzählung, wenn mehrere Exporte dasselbe Objekt referenzieren.
+    const seen = new Set();
+    for (const [name, v] of Object.entries(mod)) {
+      if (/jsonld$/i.test(name)) continue;
+      walkValue(v, out, seen);
+    }
     for (const l of out) {
-      const link = { ...l, source: node.slug, scope: "page", file };
+      const link = { ...l, source: node.slug, scope: "page", file, fromModule: true };
       links.push(link);
       addPageLink(node.slug, link);
     }
@@ -189,7 +216,7 @@ async function extractModule(node) {
   } catch {
     // Fallback: regex sweep (e.g. home.ts has an unresolvable value import).
     for (const l of regexLinks(abs)) {
-      const link = { ...l, source: node.slug, scope: "page", file };
+      const link = { ...l, source: node.slug, scope: "page", file, fromModule: true };
       links.push(link);
       addPageLink(node.slug, link);
     }
@@ -247,6 +274,8 @@ function resolveTargets(target, node) {
       return BUILT.filter((p) => p.parent === node.slug && ["product", "cluster-article", "ratgeber-pillar"].includes(p.type)).map((p) => p.slug);
     case "own-ratgeber":
       return BUILT.filter((p) => p.parent === node.slug && p.type === "ratgeber-pillar").map((p) => p.slug);
+    case "sibling-spokes":
+      return siblingSpokes(node).map((p) => p.slug);
     default:
       return [];
   }
@@ -269,9 +298,17 @@ function targetIsBacklog(target, node) {
       return PAGES.some((p) => p.parent === node.slug && !p.built && p.type === "ratgeber-pillar");
     case "parent":
       return !!node.parent && !builtSlugs.has(node.parent);
+    case "sibling-spokes":
+      return !!node.parent && PAGES.some((p) => p.parent === node.parent && p.slug !== node.slug && !p.built && PRODUCTISH.includes(p.type));
     default:
       return false;
   }
+}
+
+/** Gebaute Geschwister-Spokes (gleicher parent, Produkt/Ratgeber/Artikel, ohne sich selbst). */
+function siblingSpokes(node) {
+  if (!node.parent) return [];
+  return BUILT.filter((p) => p.parent === node.parent && p.slug !== node.slug && PRODUCTISH.includes(p.type));
 }
 
 // ---------------------------------------------------------------------------
@@ -279,6 +316,7 @@ function targetIsBacklog(target, node) {
 // ---------------------------------------------------------------------------
 
 const partialPages = new Set(); // pages extracted via regex (no anchors)
+const externalByPage = {}; // slug → [{ href, host, anchor, inline, allowed, file }] (nur Content-Module)
 
 async function main() {
   // --- Extraction: content modules (page-scoped) ---
@@ -358,7 +396,17 @@ async function main() {
         }
         continue;
       }
-      const missing = resolved.filter((r) => !targetSet.has(r) && r !== node.slug);
+      const candidates = resolved.filter((r) => r !== node.slug);
+      const missing = candidates.filter((r) => !targetSet.has(r));
+      if (typeof t.min === "number") {
+        // „mind. N von den aufgelösten Zielen“ (z. B. 1 Geschwister), nicht „alle“.
+        const need = Math.min(t.min, candidates.length);
+        const have = candidates.length - missing.length;
+        if (have < need && hasModule) {
+          add("Fehler", "missing-muss", `${node.slug}: MUSS-Link \`${label(t.target)}\` — nur ${have}/${need} verlinkt, Kandidaten: ${missing.map((m) => `\`${m}\``).join(", ")}. ${t.why ?? ""}`.trim(), { page: node.slug, suggestAnchors: missing.map((m) => suggestAnchors(m, node)) });
+        }
+        continue;
+      }
       if (missing.length && hasModule) {
         add("Fehler", "missing-muss", `${node.slug}: fehlender MUSS-Link → ${missing.map((m) => `\`${m}\``).join(", ")}. ${t.why ?? ""}`.trim(), { page: node.slug, suggestAnchors: missing.map((m) => suggestAnchors(m, node)) });
       }
@@ -431,6 +479,26 @@ async function main() {
     if (hasModule && rule.minInlineLinks > 0 && inlineCount < rule.minInlineLinks) {
       add(MIN_INLINE_SEVERITY, "min-inline", `${node.slug}: nur ${inlineCount}/${rule.minInlineLinks} kontextuelle In-Content-Links ([Anker](/ziel/)-Marker im Fließtext).`, { page: node.slug });
     }
+
+    // CHECK 14: externe Links aus Content-Modulen (Belege, Outbound).
+    // Chrome (Social, Maps, externer Möbelplaner in Header/Footer/Komponenten) und
+    // page.tsx-Links (z. B. Datenschutz) sind ausgenommen: nur `fromModule`-Links.
+    const ext = outgoing.filter((l) => l.fromModule && isWebExternal(l.href));
+    if (ext.length) {
+      const entries = ext.map((l) => {
+        const host = hostOf(l.href);
+        return { href: l.href, host, anchor: l.anchor ?? null, inline: !!l.inline, allowed: hostAllowed(host), file: l.file };
+      });
+      externalByPage[node.slug] = entries;
+      for (const e of entries) {
+        if (!e.allowed) {
+          add("Fehler", "extern", `${node.slug}: externer Link auf \`${e.host ?? e.href}\` — Host nicht auf EXTERNAL_SOURCE_ALLOWLIST (nur Beleg-Quellen; nie Hersteller/Wettbewerber).`, { page: node.slug, file: e.file, href: e.href });
+        }
+      }
+      if (entries.length > MAX_EXTERNAL_PER_PAGE) {
+        add("Warnung", "extern", `${node.slug}: ${entries.length} externe Links > ${MAX_EXTERNAL_PER_PAGE} je Seite.`, { page: node.slug });
+      }
+    }
   }
 
   // === CHECK 12: eingehende Links im Inhalt (ohne Menü, Footer, Breadcrumb) ===
@@ -453,6 +521,14 @@ async function main() {
     const quellen = inbound.get(node.slug) ?? new Set();
     if (quellen.size < min) {
       add("Warnung", "inbound", `${node.slug}: nur ${quellen.size} Seite(n) verlinken im Inhalt (Minimum ${min})${quellen.size ? ` — ${[...quellen].map((q) => `\`${q}\``).join(", ")}` : ""}. Nachverlinken aus thematisch passenden Seiten.`, { page: node.slug });
+    }
+    // Produktseiten: mind. ein Geschwister im selben Cluster muss zurückverlinken
+    // (Gegenstück zum MUSS `sibling-spokes`). Ohne gebaute Geschwister keine Pflicht.
+    if (node.type === "product") {
+      const sibs = siblingSpokes(node).map((p) => p.slug);
+      if (sibs.length && ![...quellen].some((q) => sibs.includes(q))) {
+        add("Fehler", "inbound", `${node.slug}: kein Rücklink von einem Geschwister (${sibs.map((x) => `\`${x}\``).join(", ")}). Mind. 1 Geschwister muss diese Seite im Inhalt verlinken.`, { page: node.slug });
+      }
     }
   }
 
@@ -692,6 +768,12 @@ function report() {
       linksFound: links.length,
       partialExtraction: [...partialPages],
       counts,
+    },
+    // Eigene Kategorie: alle externen Links aus Content-Modulen je Seite, mit Allowlist-Urteil.
+    external: {
+      allowlist: EXTERNAL_SOURCE_ALLOWLIST,
+      maxPerPage: MAX_EXTERNAL_PER_PAGE,
+      pages: externalByPage,
     },
     findings,
   };

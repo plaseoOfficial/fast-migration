@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Leistung
 
-> Die kommerzielle Cluster-Pillar-Seite einer Möbelkategorie: baut Vertrauen auf und führt zur **Anfrage**. Das ist der **häufigste Archetyp** (Mehrzahl der 111 Seiten). | Korridor: **2.400–3.200 Wörter** (intent-verankert, s. §3) | Schema: **Service + FAQPage + BreadcrumbList** (+ optional AggregateOffer-Hinweis im Kosten-Modul, nur belegte Werte)
+> Die kommerzielle Cluster-Pillar-Seite einer Möbelkategorie: baut Vertrauen auf und führt zur
+> **Anfrage**. Schema: **Service + FAQPage + BreadcrumbList** (+ optional AggregateOffer-Hinweis
+> im Kosten-Modul, nur belegte Werte).
 
 ## 0 · Wann dieser Typ greift (Auswahl über Spalte „Seitentyp" der URL-Master)
 
@@ -44,20 +46,16 @@ Konkrete Micro-Intents (jeder muss auf der Seite eine Antwort finden):
 
 **Pflicht-FAQ-Anzahl: 10–15** (E-E-A-T-Checkliste verlangt ≥5; dieser Typ liegt deutlich höher, weil FAQ hier Haupt-Tiefenträger **und** Conversion-Vorbereiter ist). **Mindestens eine Tabelle** ist Pflicht (Vergleich); das Kostenmodul liefert idealerweise die zweite. Snippet-Strategie: Baustein 1, 3, 4, 5, 8 sind die zitierbaren Kerne (s. §9).
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
+## 3 · Recherche-Tiefe und Struktur
 
-**Korridor: 2.400–3.200 Wörter.**
+Die SERP-Recherche dient als Strukturhinweis. Der veröffentlichte Text beantwortet die
+Leistungsfrage vollständig und endet, wenn die relevanten Nutzerfragen, Belege und nächsten
+Schritte abgedeckt sind.
 
-Herleitung über die Regel *Korridor = max(SERP-Median bei gleichem Intent, Seitentyp-Untergrenze) … SERP-Median × Tiefe-Bonus*:
+- Gemessene SERP-Formate und Wortzahlen bleiben im Research-Kit als Beleg für Themenabdeckung
+  und Struktur erhalten.
 
-- **Gemessener SERP-Median** für „küche/küchen nach maß" (Leistung/commercial, Google.de, 2026-06-06): **~2.000 Wörter**, Spitze 2.950.
-- DEPTH.md nennt für „Cluster-Pillar (commercial)" den Richtwert **1.800–2.800**.
-- Untergrenze des Korridors = `max(2.000, 1.800) = ~2.000`; wir setzen sie bewusst auf **2.400**, weil **alle** Top-Treffer Preis-, Prozess- und FAQ-Block tragen und die Sieger zusätzlich Vergleichstabelle + Kostentabelle (3 Segmente) + Material-Ratgeber + Referenzprojekte mit Ort führen — diese Pflicht-Bausteine (§2) füllen real nicht unter 2.400.
-- Obergrenze = SERP-Spitze (2.950) × moderater Tiefe-Bonus ≈ **3.200**. Darüber droht Verwässerung (Anti-Fülltext, §10).
-
-**⚠️ Diskrepanz-Hinweis (explizit benennen):** DEPTH.md führt für **Hub** nur 800–1.200 Wörter. Das gilt **nur für dünne Orientierungs-Hubs**. Ein **kommerzieller Pillar-Hub mit eigenem Ratgeber-Langtext** — gemessen an „möbel nach maß" (Median 2.900, Spitze 4.500) — braucht real **3.200–4.000 Wörter**. Wenn ein Silo-Kopf wie `/moebel-nach-mass/` faktisch als kommerzieller Pillar mit Langtext gebaut wird (nicht als reine Karten-Verteilseite), liegt er **näher an diesem Leistung-Korridor bzw. darüber** — nicht beim Hub-Richtwert. Diese Entscheidung trifft der Per-Seite-Brief anhand der SERP, nicht das Hub-Playbook pauschal. **Nie unter den SERP-Median bei gleichem Intent.**
-
-Der konkrete Korridor jeder Einzelseite wird vom Brief (Phase 1, SERP-Analyse) gesetzt — dieser Korridor ist die **Default-Verankerung**, falls die SERP keinen höheren Median zeigt.
+Der Brief hält die Nutzerfragen, Pflichtmodule, Belege und offenen Fakten für die Einzelseite fest.
 
 ## 4 · Schema-Markup (konkrete JSON-LD-Typen)
 
@@ -101,11 +99,13 @@ Grundton bleibt: Meisterbetrieb mit ruhigem Handwerksstolz, „Sie", Beweis stat
 
 **Rolle: Cluster-Pillar — Verteilzentrum des Clusters (Ebene 1, unter dem Hub).**
 
-- **Eingehend (rein):** vom **Pillar-Hub** (`/moebel-nach-mass/` bzw. `/gewerbe/`), von der **Homepage** (SOLL), von **Geschwister-Produkt-/Ratgeber-Seiten** desselben Clusters (Kind → Pillar als Up-Link).
+- **Eingehend (rein, Audit-Warnung `inbound`):** mind. **3 verschiedene Seiten** verlinken die Leistungsseite aus dem Inhalt (`MIN_INBOUND["cluster-pillar"] = 3`) — typischerweise der **Pillar-Hub** (`/moebel-nach-mass/` bzw. `/gewerbe/`), die **Homepage** oder `/referenzen/` und die **eigenen Produkt-/Ratgeber-Kinder** (Kind → Pillar als Up-Link im Fließtext). Breadcrumb, Header-Nav und Footer zählen nicht.
 - **Ausgehend (raus):** **nach unten** zu allen **Produkt-Kindern** (Varianten) und **Ratgeber-Kindern** (Kosten-, planen-, vs.-Artikel) des eigenen Clusters; **nach oben** zum direkten Hub (Breadcrumb + 1 kontextueller In-Content-Link); **zu den Conversion-Zielen** Möbelplaner + Kontakt (Pflicht); SOLL zu `/referenzen/` und Ablauf-/Liefergebiet-Seiten, sobald gebaut.
 - **Silo-Integrität:** **niemals** in den anderen Silo querverlinken (Privat-Cluster ↔ Gewerbe-Cluster) — Ausnahme nur Hub↔Hub. Eine Leistungsseite verlinkt nicht zu Clustern eines fremden Silos.
 - **Link-Budget:** **8–10 Body-Links** (Cluster-Pillar-Limit), davon ≥3 kontextuell.
 - **Anker-Logik:** Anker variieren — Exact-Match („Küche nach Maß") max. 2–3× pro URL, dazu partial („maßgefertigte Küche"), brand+keyword, beschreibend; ≤10 % generisch. Zu Kindern beschreibende/partial Anker (z. B. „Was eine Maßküche kostet", „L-Küche nach Maß planen"), nicht stur Exact-Match.
+- **Geschwister-Pflicht der Kinder (PFLICHT, beidseitig):** Wird unter dieser Leistungsseite eine neue Produkt-/Ratgeber-Seite gebaut, verlinkt die neue Seite **≥ 1 gebautes Geschwister** im Fließtext **und** trägt in **≥ 1 indexierter Geschwister-Seite** einen **Rücklink** ein — im selben PR (Audit bei Produktseiten: `must: sibling-spokes` + Geschwister-Rücklink in `inbound`, beides Fehler). Zusätzlich nimmt die Leistungsseite das neue Kind in ihre Spoke-Liste auf (`must: own-cluster-spokes`).
+- **Budget der Quelle prüfen:** Ist das Body-Link-Budget der Quelle (Leistungsseite max 10, Produkt max 7) voll, wird nicht angehängt, sondern ein schwächerer Link/eine Karte **getauscht** — nie Pflichtlinks (Parent, Möbelplaner, Kontakt) entfernen.
 - **Backlog beachten:** noch nicht gebaute Kinder als pending im internal-linking-Backlog führen, beim Bau **beidseitig** nachverdrahten; **keine Dead-Links** (launch clean).
 
 ## 9 · AEO/Zitierbarkeit (Frage-zuerst, Direktantworten, Tabellen, Entitäten)
@@ -121,9 +121,10 @@ Grundton bleibt: Meisterbetrieb mit ruhigem Handwerksstolz, „Sie", Beweis stat
 
 Alle 13 Gates gelten; für „Leistung" sind diese **besonders hart**:
 
-- **Gate 5 (Umfang/Tiefe):** Korridor 2.400–3.200 **und** alle Pflicht-Depth-Module vorhanden (Prozess, Vergleichstabelle, Kostenmodul, 10–15 FAQ). Fehlt das **Kostenmodul** → Gate rot (intent-pflicht).
+- **Gate 5 (Umfang/Tiefe):** Pflicht-Depth-Module (Prozess, Vergleichstabelle, Kostenmodul,
+  10–15 passende FAQ) beantworten die Nutzerfrage; fehlende intent-pflichtige Module blockieren.
 - **Gate 6 (Faktentreue):** härtester Stopp. Ein einziger ❌-Claim (Garantie, „seit 2013", 200 km, exotische Hölzer, „eigenes Montageteam") → sofortiger Hard Stop, nie live.
-- **Gate 7 (interne Links/CTA):** starker CTA + Möbelplaner UND Kontakt + ≥3 kontextuelle Links + Up-Link zum Hub; kein Cross-Silo.
+- **Gate 7 (interne Links/CTA):** starker CTA + Möbelplaner UND Kontakt + ≥3 kontextuelle Links + Up-Link zum Hub; ≥ 3 eingehende Inhaltslinks (Warnung); alle gebauten Kinder verlinkt; kein Cross-Silo; externe Links nur nach §12. Maschinell: `pnpm run audit:links` muss **0 Fehler** zeigen.
 - **Gate 8/12 (Schema/Technical):** Service + FAQPage + Breadcrumb vorhanden; FAQ-Schema deckt sich exakt mit sichtbarem Text; Title/Desc-Länge, H-Hierarchie, alt-Texte.
 - **Gate 10 (AEO):** Frage-zuerst + Direktantworten + ≥1 Tabelle.
 - **Gate 11 (Korpus-Dedup):** Cluster-Pillars teilen viel Vokabular („nach Maß", „Meisterbetrieb", Prozess) → hohe Überlappungsgefahr mit Schwester-Clustern. Differenzierung über **kategoriespezifische** Inhalte (eigene Maße, Materialien, Anwendungsfälle, Kostenbeispiele, FAQ) — Cluster-Differenzierungs-Map (Ebene 2b) zwingend befolgt.
@@ -136,3 +137,13 @@ Alle 13 Gates gelten; für „Leistung" sind diese **besonders hart**:
 - **vs. Ratgeber (wichtigste Abgrenzung neben Referenz):** Die Leistungsseite **erklärt nicht erschöpfend „wie man plant"** und **verkauft** offen (starker CTA, commercial). Der Ratgeber ist informational, hat **schwachen** CTA, HowTo/FAQ-Schema und maximale Erklär-Tiefe. Die Leistungsseite **verlinkt** zu den Ratgeber-Kindern (Kosten, planen, vs.), statt deren Tiefe selbst zu duplizieren — sonst Kannibalisierung.
 - **vs. Referenz/Trust (besonders scharf trennen):** Die Leistungsseite **beweist nicht ausführlich mit Projektgalerie/Team/Story** — sie nutzt Trust nur als **kurzen Anriss** (ein Projektdetail mit Ort, Familie Fast) zur **Conversion-Vorbereitung**. Die Referenz-Seite ist **weicher** CTA, Experience-/Authority-Fokus, Organization/AboutPage-Schema, ausführliche echte Projekte und Team/Zahlen. **Leistung = „wir bauen Ihnen X, so läuft es, fragen Sie an"; Referenz = „seht, was wir schon gebaut haben und wer wir sind".** Trust-Tiefe wandert auf die Referenz-Seite, die Leistungsseite **verlinkt** dorthin.
 - **vs. Conversion:** Die Leistungsseite ist **kein** Formular-First-Minimaltext. Sie trägt vollen SEO-Langtext und führt **zum** Conversion-Ziel (Möbelplaner/Kontakt), ersetzt es aber nicht.
+
+## 12 · Belege (Outbound)
+Externe Links sind **Belege**, keine Deko. Sie gelten nur für Angaben, die eine Quelle brauchen.
+- **Wann:** Norm-, Vorschrift- oder Messwert-Angaben (z. B. Arbeitsstättenverordnung/ASR bei Büro, DGUV bei Ladenbau/Gastro, Hygiene bei Praxis, DIN 18040 bei Barrierefreiheit).
+- **Wohin:** nur Hosts aus `EXTERNAL_SOURCE_ALLOWLIST` in `src/lib/seo/linking-rules.ts` (gesetze-im-internet.de, baua.de, publikationen.dguv.de/dguv.de, eur-lex.europa.eu, rki.de, bundesgesundheitsministerium.de, amk.de, amk-ratgeber-kueche.de, verbraucherzentrale.de, nullbarriere.de; Subdomains eingeschlossen). Anderer Host = Audit-**Fehler** (`extern`).
+- **Wie viele:** **max. 2 je Seite** (`MAX_EXTERNAL_PER_PAGE`); mehr = Audit-Warnung. Sie zählen zusätzlich ins Body-Link-Budget (nur `tel:`/`mailto:` nicht).
+- **Ankertext = Name der Quelle** (z. B. „ASR A1.2", „DGUV Information 215-410"), nie „hier"/„mehr infos".
+- **Nie** auf Hersteller, Händler, Wettbewerber oder Verzeichnisse verlinken.
+- **Nichts erfinden:** keine Quelle nennen, die nicht geprüft die Aussage trägt; keine geratenen Paragraphen/Nummern.
+- **Kostenpflichtige Normen** (DIN/EN/ISO): als **Text ohne Link** nennen — außer eine Allowlist-Quelle gibt den Inhalt frei wieder.

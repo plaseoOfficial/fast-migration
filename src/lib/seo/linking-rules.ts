@@ -115,6 +115,7 @@ export const PAGES: PageNode[] = [
   // Portfolio: Jede Projektkarte verlinkt die genaueste Leistungsseite (Link-Analyse
   // 02.10.2026). Das sind mehr Ziele als die 10 einer Marken-Seite.
   { slug: "/referenzen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "referenzen", maxBodyLinks: 14 },
+  { slug: "/leistungen/", type: "brand", silo: "", audience: "neutral", parent: "/", built: true, contentModule: "leistungen" }, // Übersicht aller Leistungen; Liste wird aus PAGES generiert (leistungen-data.ts)
   { slug: "/ablauf-massanfertigung/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/liefergebiet-montage/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/faq/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
@@ -137,19 +138,29 @@ export const PAGES: PageNode[] = [
  *  - "sibling-clusters"  → other cluster-pillars sharing the same parent hub
  *  - "own-cluster-spokes"→ built product/ratgeber/article nodes under this cluster
  *  - "own-ratgeber"      → built ratgeber-pillar nodes under this cluster
+ *  - "sibling-spokes"    → built product/ratgeber/article nodes with the SAME
+ *                          parent as this node (Geschwister im eigenen Cluster)
  */
 export type SymbolicTarget =
   | "parent"
   | "own-children"
   | "sibling-clusters"
   | "own-cluster-spokes"
-  | "own-ratgeber";
+  | "own-ratgeber"
+  | "sibling-spokes";
 
 export interface TargetRule {
   /** Concrete slug (leading "/") or a SymbolicTarget keyword. */
   target: string | SymbolicTarget;
   /** Human note / rationale (shown in audit + agent output). */
   why?: string;
+  /**
+   * Mindestanzahl der aufgelösten Ziele, die verlinkt sein müssen. Fehlt das Feld,
+   * gilt „alle“. Beispiel: `sibling-spokes` mit `min: 1` = mindestens ein
+   * Geschwister, nicht jedes. Greift nur, wenn das Ziel überhaupt etwas auflöst
+   * (Seite ohne gebaute Geschwister → keine Pflicht).
+   */
+  min?: number;
 }
 
 /** Forbidden link patterns (DARF NICHT). */
@@ -225,6 +236,7 @@ export const RULES: Record<PageType, TypeRule> = {
     minInlineLinks: 2,
     must: [
       { target: "parent", why: "Aufwärtslink zum Cluster-Pillar (Breadcrumb)" },
+      { target: "sibling-spokes", min: 1, why: "Mind. 1 Geschwister im eigenen Cluster (Querverlinkung; Rücklink beim Geschwister nachtragen)" },
       { target: "/moebelplaner/", why: "Primärer CTA" },
       { target: "/kontakt/", why: "Conversion-Fallback" },
     ],
@@ -339,6 +351,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     brand: ["Fast Systemmöbel Küchenplanung"],
     descriptive: ["so planen Sie Ihre Küche", "unser Ratgeber zur Küchenplanung", "Küchenplanungs-Ratgeber"],
   },
+  "/kuechen-nach-mass/kuechenzeile-nach-mass/": {
+    exact: ["Küchenzeile nach Maß"],
+    partial: ["maßgefertigte Küchenzeile", "Küchenzeile vom Tischler", "einzeilige Küche nach Maß"],
+    brand: ["Fast Systemmöbel Küchenzeile"],
+    descriptive: ["Küchenzeile auf Ihre Wand planen", "Küchenzeile ansehen"],
+  },
   "/kuechen-nach-mass/kueche-mit-dachschraege/": {
     exact: ["Küche mit Dachschräge"],
     partial: ["Dachschrägen-Küche nach Maß", "Küche unterm Dach", "Küche mit Dachschräge nach Maß", "Küche unter der Dachschräge"],
@@ -392,6 +410,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["So funktioniert die Maßanfertigung", "Herstellungsprozess"],
     brand: [],
     descriptive: ["Wie läuft eine Maßanfertigung ab?", "So entsteht Ihr Möbel"],
+  },
+  "/leistungen/": {
+    exact: ["Alle Leistungen"],
+    partial: ["Leistungen im Überblick", "unsere Leistungen"],
+    brand: ["Leistungen von Fast Systemmöbel"],
+    descriptive: ["Alle Leistungen ansehen"],
   },
   "/ueber-uns/": {
     exact: ["Über uns"],
@@ -509,6 +533,34 @@ export const GENERIC_MAX_RATIO = 0.1;
 
 /** Anchors that count as "generic" (principle 5). */
 export const GENERIC_ANCHORS = ["hier", "mehr erfahren", "mehr", "weiterlesen", "klicken", "mehr dazu"];
+
+// ---------------------------------------------------------------------------
+// Outbound (externe Belege) — gilt NUR für Links aus Content-Modulen
+// ---------------------------------------------------------------------------
+
+/**
+ * Hosts, auf die Inhalts-Text extern verlinken darf (Belege für Norm-, Vorschrifts-
+ * und Messwert-Angaben). Ein Eintrag deckt auch alle Subdomains ab
+ * (`dguv.de` erlaubt `publikationen.dguv.de`). Hersteller, Wettbewerber, Shops,
+ * Verzeichnisse: nie. Social-Profile, Google Maps und der externe Möbelplaner sind
+ * Chrome (Header/Footer/Komponenten), kein Content — für sie gilt diese Liste nicht.
+ */
+export const EXTERNAL_SOURCE_ALLOWLIST = [
+  "gesetze-im-internet.de",
+  "baua.de",
+  "publikationen.dguv.de",
+  "dguv.de",
+  "eur-lex.europa.eu",
+  "rki.de",
+  "bundesgesundheitsministerium.de",
+  "amk.de",
+  "amk-ratgeber-kueche.de",
+  "verbraucherzentrale.de",
+  "nullbarriere.de",
+];
+
+/** Höchstzahl externer Beleg-Links je Seite (aus Content-Modulen). */
+export const MAX_EXTERNAL_PER_PAGE = 2;
 
 /**
  * Wörter ohne Aussage über das Ziel. Ein Anker, der NUR aus solchen Wörtern

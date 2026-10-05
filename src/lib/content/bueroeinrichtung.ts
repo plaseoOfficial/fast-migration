@@ -111,7 +111,7 @@ export const bueroTypische = {
     {
       title: "Schreibtische & Arbeitsplätze nach Maß",
       description:
-        "Schreibtische nach Maß, die Technik, Kabel und Stauraum sauber wegräumen. Wir planen ergonomische Arbeitsplätze und auf Wunsch höhenverstellbare Steharbeitsplätze, einzeln oder als ganze Bürozeile, abgestimmt auf Tisch- und Arbeitshöhe Ihres Teams. So lässt sich der Wechsel zwischen Sitzen und Stehen im Alltag wirklich nutzen.",
+        "Schreibtische nach Maß, die Technik, Kabel und Stauraum sauber wegräumen. Wir planen ergonomische Arbeitsplätze und auf Wunsch höhenverstellbare Steharbeitsplätze, einzeln oder als ganze Bürozeile, abgestimmt auf Tisch- und Arbeitshöhe Ihres Teams. So lässt sich der Wechsel zwischen Sitzen und Stehen im Alltag leicht nutzen. Höhenverstellbare Arbeitsflächen fördern diesen Wechsel, darauf verweist auch die [DGUV Information 215-410 zu Bildschirm- und Büroarbeitsplätzen](https://publikationen.dguv.de/regelwerk/dguv-informationen/409/bildschirm-und-bueroarbeitsplaetze-leitfaden-fuer-die-gestaltung).",
     },
     {
       title: "Aktenschränke & Stauraum nach Maß",
@@ -133,7 +133,7 @@ export const bueroTypische = {
     {
       title: "Teeküchen & Akustiklösungen",
       description:
-        "Teeküchen und Büroküchen nach Maß, robust gegen die tägliche Feuchtigkeit, dazu Akustikelemente und Raumteiler, die offene Büros gliedern und den Geräuschpegel senken. So entsteht mehr Ruhe am Arbeitsplatz, ohne dass der Raum seinen offenen Charakter verliert.",
+        "Teeküchen und Büroküchen nach Maß, robust gegen die tägliche Feuchtigkeit, dazu Akustikelemente und Raumteiler, die offene Büros gliedern und Nachhall sowie Störgeräusche mindern, wie es die [DGUV Information 215-443 Akustik im Büro](https://publikationen.dguv.de/regelwerk/dguv-informationen/2950/akustik-im-buero-hilfen-fuer-die-akustische-gestaltung-von-bueros) beschreibt. So entsteht mehr Ruhe am Arbeitsplatz, ohne dass der Raum seinen offenen Charakter verliert.",
     },
     {
       title: "Einbauschränke & Sonderbau Büro",

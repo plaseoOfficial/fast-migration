@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Hub
 
-> Wofür dieser Typ da ist: **Orientierung geben und Autorität auf die Cluster-Kinder verteilen** — der Einstieg ins Silo, der den Nutzer schnell zur richtigen Unterseite leitet und gleichzeitig selbst genug eigenen Mehrwert trägt, um zu ranken. | Korridor: **800–1.200 W (dünner Orientierungs-Hub) bzw. 3.200–4.000 W (kommerzieller Pillar-Hub) — siehe §3** | Schema: **CollectionPage · LocalBusiness · BreadcrumbList** (Pillar-Hub zusätzlich **FAQPage**, bei Ratgeber-Hub **ItemList**)
+> Wofür dieser Typ da ist: **Orientierung geben und Autorität an die Cluster-Kinder verteilen**. Der Hub
+> beantwortet die Kategoriefrage und führt zur passenden Unterseite. Schema: **CollectionPage ·
+> LocalBusiness · BreadcrumbList** (Pillar-Hub zusätzlich **FAQPage**, Ratgeber-Hub **ItemList**).
 
 ## 0 · Wann dieser Typ greift (Auswahl über Spalte „Seitentyp" der URL-Master)
 
@@ -11,8 +13,9 @@ Greift, wenn die URL-Master in Spalte „Seitentyp" **„Pillar-Hub"** (oder Rat
 - `/ratgeber/` — Ratgeber-Hub (bündelt alle Ratgeber-Artikel; informational statt commercial).
 
 **Zwei Spielarten, eine Logik:**
-- **Dünner Orientierungs-Hub** — wenn das Hauptkeyword keinen eigenen kommerziellen SERP-Wettbewerb hat (z. B. `/gewerbe/` mit Brand-/Navigations-Keyword „Möbel nach Maß Gewerbe", `/ratgeber/` als Index). Hier zählt schnelle Weiterleitung; Korridor unten.
-- **Kommerzieller Pillar-Hub** — wenn das Hauptkeyword ein hartes commercial SERP hat (z. B. `/moebel-nach-mass/` für „Möbel nach Maß", Median 2.900 W). Hier muss der Hub **selbst** ein vollwertiger Ratgeber-Langtext sein, der die Spitze schlägt. Korridor oben.
+- **Dünner Orientierungs-Hub** — wenn das Hauptkeyword keinen eigenen kommerziellen SERP-Wettbewerb hat.
+- **Kommerzieller Pillar-Hub** — wenn das Hauptkeyword ein kommerzielles SERP hat. Die eigene
+  Kategoriefrage, passende Belege und hilfreiche Verweise entscheiden über die nötige Tiefe.
 
 **Nicht** Hub: einzelne Cluster-Pillars wie `/kuechen-nach-mass/` (→ Leistung-Playbook), Produktseiten, Anwendungs-/Ratgeber-Artikel, Conversion- oder Referenz-Seiten.
 
@@ -44,23 +47,26 @@ Jeder Baustein folgt direkt aus einem Micro-Intent oben. **Pflicht für jeden Hu
 - **FAQ** — Pflicht beim **Pillar-Hub**, **mind. 5** (Ziel 6–8) auf **Kategorie-Ebene** („Was kostet Möbel nach Maß ungefähr?", „Wie lange dauert die Fertigung?", „Liefern Sie auch außerhalb OWL?", „Maß oder von der Stange?"). Beim dünnen Orientierungs-Hub optional (3–5). *AEO-Kern: FAQPage-Schema.*
 
 **Zusätzlich Pflicht beim kommerziellen Pillar-Hub (z. B. `/moebel-nach-mass/`):**
-- **Eigener Ratgeber-Langtext** — 2–4 substanzielle Erklär-Blöcke, die der Kategorie eigenen Mehrwert geben, **ohne** den Kindern die Tiefe wegzunehmen (z. B. „Wann lohnt sich Maßanfertigung wirklich?", „Materialien & Verarbeitung im Überblick", „Wie planen wir Ihr Projekt?", „Kostenrahmen pro Kategorie"). Hier kommt die Wortzahl her — nicht aus aufgeblähten Cluster-Beschreibungen.
+- **Eigene Erklär-Blöcke** — sie beantworten die Kategoriefrage substanziell, ohne den Kindern ihre
+  Detailfragen abzunehmen (z. B. Maßanfertigung, Materialien, Planung oder Kostenfaktoren).
 - **Kosten-Orientierungstabelle** — grobe Spannen je Kind-Kategorie (z. B. Küche / Schrank / Bad ab €), klar als Richtwert markiert, Detail-Link je Zeile.
 
 **Pflicht-FAQ-Anzahl:** Pillar-Hub ≥ 5 (FAQPage); Orientierungs-Hub ≥ 3 (FAQPage empfohlen, sobald ≥ 5 sinnvoll sind).
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
+## 3 · Recherche-Tiefe und Struktur
 
-Regel: **Korridor = max(SERP-Median bei gleichem Intent, Seitentyp-Untergrenze) … SERP-Median × Tiefe-Bonus — nie unter SERP-Median bei gleichem Intent.**
+Die SERP-Recherche zeigt Format und erwartete Themenabdeckung. Sie ist eine Orientierung für die
+Struktur, keine Mindest- oder Höchstwortzahl.
 
-| Hub-Spielart | Beispiel | Korridor | Begründung |
+| Hub-Spielart | Beispiel | Recherche-Hinweis | Begründung |
 |---|---|---|---|
-| **Dünner Orientierungs-Hub** | `/gewerbe/`, `/ratgeber/` (Index) | **800–1.200 W** | DEPTH.md-Richtwert. Greift nur, wenn das Keyword **kein** hartes commercial SERP hat (Navigations-/Brand-Intent). Aufgabe ist Verteilung, nicht Ranken auf ein Money-Keyword. |
-| **Kommerzieller Pillar-Hub** | `/moebel-nach-mass/` | **3.200–4.000 W** | SERP „moebel nach mass": Median **2.900**, Spitze **4.500**. Korridor = max(2.900, …) … 2.900 × Tiefe-Bonus. Die Top-Treffer sind selbst vollwertige Ratgeber-Pillar mit Kosten-/Prozess-/FAQ-Block. Unter dem Median = chancenlos. |
+| **Dünner Orientierungs-Hub** | `/gewerbe/`, `/ratgeber/` (Index) | schnelle Orientierung | Kategorie, Auswahl und nächste Schritte klar beantworten. |
+| **Kommerzieller Pillar-Hub** | `/moebel-nach-mass/` | eigene Kategorie-Tiefe | Relevante Fragen, Belege und passende Weiterleitungen vollständig abdecken. |
 
 **⚠️ Diskrepanz explizit benennen (Pflicht-Hinweis):** DEPTH.md nennt für „Hub" pauschal **800–1.200 W** und die `architecture.md` setzt `/moebel-nach-mass/` auf **1.400–2.000 W**. Beide Werte gelten **nur für den dünnen Orientierungs-Hub**. Ein **kommerzieller Pillar-Hub** mit eigenem Ratgeber-Langtext (wie `/moebel-nach-mass/` real ranken muss) braucht **3.200–4.000 W** — das ist die SERP-verankerte Realität, sie schlägt den generischen DEPTH-Richtwert und den (zu niedrigen) Architektur-Wert. Wenn die SERP-Analyse im Brief einen commercial Median > 2.000 misst, wird `/moebel-nach-mass/` **als Pillar-Hub behandelt**, nicht als Orientierungs-Hub. **Maßgeblich ist immer der frisch im Brief gemessene SERP-Median, nicht die Tabelle.**
 
-**Anti-Fülltext:** Beim Pillar-Hub kommt die Länge aus den **eigenen Ratgeber-Blöcken + Tabellen + FAQ**, nie aus aufgeblähten Cluster-Karten. Lieber 3.200 starke Wörter als 4.000 wässrige (DEPTH Regel 3 = QC-Gate 5).
+**Anti-Fülltext:** Tabellen, FAQ und Erklärblöcke erscheinen nur, wenn sie die Kategoriefrage
+beantworten. Cluster-Karten bleiben knapp und führen zur Detailseite.
 
 ## 4 · Schema-Markup (konkrete JSON-LD-Typen)
 
@@ -136,7 +142,8 @@ Der Hub ist für KI-Suche **die definierende Antwort** auf „Was umfasst Katego
 ## 10 · QC-Schwerpunkte für diesen Typ (welche Gates besonders hart)
 
 - **Gate 11 (Korpus-Dedup) — am härtesten.** Hub-Risiko #1: Der Hub klaut seinen Kindern die Tiefe und überschneidet sich mit der Cluster-Pillar. Streng prüfen: Beschreibt der Hub die Cluster nur **anreißend** (Was) und überlässt das Wie/Detail/Maße/Preise den Kindern? Überlappung mit `/kuechen-nach-mass/` & Co. muss niedrig sein.
-- **Gate 5 (Umfang/Tiefe).** Richtigen Korridor wählen (Orientierungs- vs. Pillar-Hub, §3). Beim Pillar-Hub: SERP-Median nicht unterschreiten **und** trotzdem kein Fülltext — der Mehrwert muss *eigen* sein (Maß-vs-Serie, Kostenrahmen, Prozess, FAQ), nicht aus Kind-Inhalten geliehen.
+- **Gate 5 (Umfang/Tiefe).** Sind die relevanten Kategoriefragen und Pflichtmodule beantwortet,
+  ohne Fülltext oder geliehene Kind-Inhalte?
 - **Gate 7 (interne Links/CTA).** Jede Kind-Cluster verlinkt? Beidseitig? Silo-Integrität gewahrt (keine Fremd-Silo-Cluster, Hub↔Hub ok)? Anker-Diversität?
 - **Gate 8 (Schema).** CollectionPage + ItemList + BreadcrumbList vorhanden und korrekt; FAQPage beim Pillar-Hub.
 - **Gate 6 (Faktentreue).** Breiten-Aussagen über das Leistungsspektrum müssen FACTS.md decken; keine verbotenen Claims (kein „1996 in Espelkamp", kein „5 Jahre Garantie", kein „12+ Mitarbeiter").

@@ -144,8 +144,8 @@ export const dsMasse = {
     {
       label: "Arbeitshöhe",
       values: [
-        "Arbeitshöhe rund 90 cm, abhängig von Ihrer Körpergröße.",
-        "Die Arbeitsplatte richten wir auf Ihre Größe aus, für rückenschonendes Arbeiten.",
+        "Arbeitshöhe nach Ellenbogenhöhe, rund 10 bis 15 cm darunter.",
+        "Die Arbeitsplatte richten wir auf Ihre Ellenbogenhöhe aus, für rückenschonendes Arbeiten.",
       ],
     },
     {
@@ -205,7 +205,7 @@ export const dsProcess = {
     {
       title: "3D-Planung",
       description:
-        "In der 3D-Planung sehen Sie Ihre Küche vorab, mit Zonen, Fronten und dem Verlauf entlang der Schräge. Änderungen sind hier jederzeit möglich, bevor wir fertigen.",
+        "In der 3D-Planung sehen Sie Ihre Küche vorab, mit Zonen, Fronten und dem Verlauf entlang der Schräge. Änderungen sind hier jederzeit möglich, bevor wir fertigen. Wie sich eine Küche insgesamt planen lässt, zeigt der Ratgeber [Küche Schritt für Schritt planen](/kuechen-nach-mass/kueche-planen/).",
     },
     {
       title: "Fertigung in Espelkamp",
@@ -284,7 +284,7 @@ export const dsFaq = {
     {
       question: "Wie viel Abstand muss zwischen Kopf und Dachschräge bleiben?",
       answer:
-        "Als Faustregel sollten an Arbeitszonen rund 60 cm zwischen Kopf und Dachschräge frei bleiben, damit Sie aufrecht stehen. Das ist allgemeines Ergonomiewissen. Den genauen Verlauf messen wir beim Aufmaß und legen die Arbeitszonen dorthin, wo genug Kopffreiheit bleibt.",
+        "Als Faustregel sollten an Arbeitszonen rund 60 cm zwischen Kopf und Dachschräge frei bleiben, damit Sie aufrecht stehen. Das ist ein grober Richtwert. Den genauen Verlauf messen wir beim Aufmaß und legen die Arbeitszonen dorthin, wo genug Kopffreiheit bleibt.",
     },
     {
       question: "Was ist der Unterschied zwischen Kniestock und Drempel?",

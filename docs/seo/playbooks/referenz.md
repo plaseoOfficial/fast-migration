@@ -1,6 +1,8 @@
 # Seitentyp-Playbook: Referenz / Trust / Über-uns
 
-> Der Beweis-Typ: zeigt, **wer** hinter den Möbeln steht (Familie Fast, Werkstatt, echte Projekte) und macht den Meisterbetrieb glaubwürdig — verkauft nicht, sondern belegt. | Korridor: **1.200–2.000 W** (Über-uns/Team), **600–1.000 W** (Referenzen-Portfolio) | Schema: **Organization · AboutPage · LocalBusiness** (Über-uns) · **CollectionPage · ImageObject** (Referenzen) · **Person** (Team) · **BreadcrumbList**
+> Der Beweis-Typ: zeigt, **wer** hinter den Möbeln steht (Familie Fast, Werkstatt, echte Projekte)
+> und macht den Meisterbetrieb glaubwürdig. Schema: **Organization · AboutPage · LocalBusiness**
+> (Über-uns) · **CollectionPage · ImageObject** (Referenzen) · **Person** (Team) · **BreadcrumbList**.
 
 ## 0 · Wann dieser Typ greift (Auswahl über Spalte „Seitentyp" der URL-Master)
 Die Engine wählt dieses Ebene-2-Playbook automatisch, wenn die URL-Master-Spalte „Seitentyp" einen der folgenden Werte trägt:
@@ -44,11 +46,9 @@ Jeder Baustein leitet sich direkt aus einem Micro-Intent oben ab. **(AEO)** = Sn
 
 **Team (`/team/`, `/team/meister/`):** Person(en) mit Rolle (Andreas Fast = Vertriebs-/Projektleitung; Peter Fast = Beratung vor Ort; Tischlermeister), Foto-alt-Texte, kurze O-Ton-Note. Bewusst knapp (400–700 W).
 
-## 3 · Wortzahl-Korridor (SERP-verankert, mit Begründung)
-- **Über-uns: 1.200–2.000 W.** Der DEPTH.md-Richtwert „Referenz/Über-uns 1.200–2.000" gilt hier **direkt**, weil der Such-Intent (`Tischlerei Meisterbetrieb Espelkamp`) **kein hochkompetitiver Geld-Term** ist — die SERP für lokale Über-uns-/Tischlerei-Queries zeigt mittellange Trust-Seiten, **keine** 3.000-Wort-Pillars. **Wichtig:** Die gemessenen SERP-Korridore von „kuechen/küche nach maß" (2.400–3.200) und „möbel nach maß" (3.200–4.000) sind **commercial Cluster-/Hub-Intents und gelten NICHT für diesen Typ** — eine Über-uns-Seite auf 3.000 Wörter aufzublähen wäre Anti-Fülltext (DEPTH Regel 3) und würde den Trust-Effekt verwässern. Regel „Korridor = max(SERP-Median bei gleichem Intent, Seitentyp-Untergrenze)": Da der echte SERP-Median für diesen Intent **unter** der Seitentyp-Untergrenze liegt, **greift die Untergrenze 1.200** als Boden, 2.000 als Decke. URL-Master-Eintrag (800–1.200) ist die absolute Notuntergrenze; wir zielen oben (1.200–2.000), um die Pflicht-Bausteine + FAQ substanzvoll zu füllen.
-- **Referenzen: 600–1.000 W** (bild-getrieben — Länge kommt aus Projektzahl, nicht Fließtext).
-- **Team: 400–700 W** je Seite.
-- **Anti-Fülltext-Regel zwingend:** Jeder zusätzliche Satz muss Substanz bringen (Jahr, Maß, Projekt, Person, Verfahren). Lieber 1.300 starke als 1.900 wässrige Wörter — der Trust-Effekt sinkt mit jeder Floskel.
+## 3 · Recherche-Tiefe und Struktur
+Die SERP-Recherche zeigt passende Trust-Formate. Der Umfang folgt der Geschichte, den belegbaren
+Projekten und den Fragen der Leser; jede Passage muss einen Beleg oder Kontext liefern.
 
 ## 4 · Schema-Markup (konkrete JSON-LD-Typen)
 - **`/ueber-uns/`:** `AboutPage` (mainEntity → die Organization) + **`Organization`** (name, foundingDate „1996", founder „Johann Fast", `member`/`employee` → Person Andreas & Peter Fast, `address`, `telephone`, `email`, `sameAs` → Instagram/Facebook/LinkedIn, `slogan`/`description`) + **`LocalBusiness`** (NAP, `openingHours` Mo–Fr 06:00–17:00, `areaServed`) + `BreadcrumbList`. Optional `FAQPage` für den FAQ-Block. **Keine** erfundenen `aggregateRating`/`award`-Werte (Gate 6).
@@ -97,7 +97,8 @@ KI-Antworten zu „Wer ist Fast Systemmöbel?" / „Tischlerei Espelkamp" sollen
 - **Gate 8 Schema/Technik:** Organization/AboutPage/LocalBusiness korrekt und NAP-konsistent — nicht nur vorhanden, sondern werte-deckungsgleich zu FACTS.
 - **Gate 12 Technical-SEO:** sprechender Title/Desc, saubere H-Hierarchie, **alle Realbilder mit beschreibenden alt-Texten** (Experience-Pflicht).
 - **Gate 10 AEO:** Definitions-Direktantwort + FAQ vorhanden und extrahierbar.
-- **Gate 5 Tiefe & Umfang:** im Korridor bleiben — hier besonders der **Anti-Fülltext-Check** (nicht zu lang aufblähen).
+- **Gate 5 Tiefe & Umfang:** Story, Projekte, Personen und FAQ liefern belegbaren Leser-Nutzen;
+  kein Abschnitt wird zur bloßen Längenerfüllung ergänzt.
 - **Gate 11 Korpus-Dedup:** Über-uns-Story darf nicht 1:1 in Homepage/Leistungsseiten dupliziert sein — die Marken-Story ist hier **Original**, anderswo nur angerissen + verlinkt.
 - **Gate 7 Links/CTA:** weicher CTA verifizieren (kein harter Sales eingeschlichen); ≥ 3 kontextuelle interne Links.
 

@@ -265,7 +265,7 @@ export const dachVergleich = {
 export const dachPreisFaktoren = {
   heading: "Was den Preis Ihres Schranks bestimmt",
   intro:
-    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank und jeder Schrank unter der Dachschräge ist ein Unikat. Der Preis richtet sich nach diesen Faktoren:",
+    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank ist ein Unikat. Als grobe Schätzung: Ein rund 1,80 Meter breiter Schrank mit weißen Türen liegt im [Möbelplaner](/moebelplaner/) bei etwa 1.400 bis 2.000 Euro, zuzüglich Lieferung und Montage. Wo Ihr Preis genau landet, bestimmen diese Faktoren:",
   segments: [
     {
       title: "Größe",
@@ -357,7 +357,7 @@ export const dachFaq = {
     {
       question: "Was kostet ein Schrank für die Dachschräge?",
       answer:
-        "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Der Preis richtet sich nach der Größe, den Fronten und dem Material, der Innenausstattung wie Auszügen und Beleuchtung und der Einbausituation. Ein steiler Winkel oder eine schiefe Wand ist aufwändiger als eine gerade, flache Schräge, und Beschläge wie Schiebetüren wirken sich aus. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot ohne versteckte Kosten.",
+        "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Als grobe Schätzung aus unserem Online-Möbelplaner (Stand September 2026): Ein etwa 1,80 Meter breiter Schrank mit Türen in schlichtem Weiß kostet je nach Höhe der Schräge rund 1.400 bis 2.000 Euro, ein 2,80 Meter breiter rund 3.000 Euro. Das ist der reine Möbelpreis inklusive Mehrwertsteuer, Lieferung und Montage kommen hinzu. Holzdekore, Innenausstattung wie Auszüge und Beleuchtung sowie Beschläge wie Schiebetüren erhöhen den Preis. Ein steiler Winkel oder eine schiefe Wand ist aufwändiger als eine gerade, flache Schräge. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot ohne versteckte Kosten.",
     },
     {
       question: "Schiebetür oder Drehtür an der Dachschräge?",
