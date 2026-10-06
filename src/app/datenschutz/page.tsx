@@ -98,7 +98,7 @@ export default function DatenschutzPage() {
 
       <h3>Vercel</h3>
       <p>
-        Anbieter ist die Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA (nachfolgend
+        Anbieter ist die Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA (nachfolgend
         „Vercel“). Wenn Sie unsere Website besuchen, erfasst Vercel verschiedene Logfiles inklusive
         Ihrer IP-Adresse. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden
         auf den Servern von Vercel verarbeitet. Details entnehmen Sie der Datenschutzerklärung von
