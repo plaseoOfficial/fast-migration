@@ -47,3 +47,16 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Recherche und Rohdaten bleiben lokal (Repo = Code + Bauplan, Repo ist öffentlich)
+# Klon-Recherche (Specs, JSON-Dumps); die Anleitung bleibt, AGENTS.md bindet sie ein
+docs/research/*
+!docs/research/INSPECTION_GUIDE.md
+# Arbeits-Screenshots aus dem Klon-Abgleich; Katalog-Bilder (CATALOG.md) bleiben getrackt
+docs/design-references/**/qa-*
+docs/design-references/**/cband-*
+docs/design-references/**/CLONE-*
+docs/design-references/**/clone-*
+docs/design-references/**/*fullpage*
+# Messdaten aus scripts/dataforseo.mjs (Suchvolumina)
+docs/seo/keyword-volume-audit.json
