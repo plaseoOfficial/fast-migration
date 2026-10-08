@@ -171,7 +171,7 @@ export const bmMaterial = {
     },
     {
       title: "Ein Stil über alle Stücke",
-      body: "Weil alles aus einer Werkstatt kommt, ziehen wir ein Material- und Farbkonzept über das ganze Programm, vom Schreibtisch bis zum Regal. Auf Wunsch nehmen wir Ihr Corporate Design auf.",
+      body: "Weil alles aus einer Werkstatt kommt, ziehen wir ein Material- und Farbkonzept über das ganze Programm, vom Schreibtisch bis zum Regal. Auf Wunsch nehmen wir Ihr Corporate Design auf. Wie das zusammen wirkt, zeigen unsere [Referenzprojekte](/referenzen/).",
     },
     {
       title: "Kante und Verarbeitung",

@@ -172,7 +172,7 @@ export const klMaterial = {
 export const klAusstattung = {
   heading: "Innenausstattung für jeden Zentimeter",
   intro:
-    "Das Innenleben planen wir Fach für Fach auf Ihre Garderobe. Genau das entscheidet, wie viel wirklich hineinpasst und wie leicht Sie morgens finden, was Sie suchen.",
+    "Das Innenleben planen wir Fach für Fach auf Ihre Garderobe. Genau das entscheidet, wie viel wirklich hineinpasst und wie leicht Sie morgens finden, was Sie suchen. Wie das fertig aussieht, zeigen unsere [Referenzprojekte](/referenzen/).",
   segments: [
     {
       title: "Kleiderstangen und Kleiderlift",
