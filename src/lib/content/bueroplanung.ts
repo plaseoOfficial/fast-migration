@@ -317,7 +317,7 @@ export const bpFaq = {
     {
       question: "Planen Sie auch bestehende Büros um, nicht nur Neubauten?",
       answer:
-        "Ja. Wir planen sowohl neue Flächen als auch den Umbau bestehender Räume, etwa bei Sanierung, Wachstum oder der Umstellung auf New Work. Den Bestand denken wir dabei neu, statt Möbel nur zu verschieben. Frühere Referenzprojekte zeigen wir Ihnen auf Anfrage gern.",
+        "Ja. Wir planen sowohl neue Flächen als auch den Umbau bestehender Räume, etwa bei Sanierung, Wachstum oder der Umstellung auf New Work. Den Bestand denken wir dabei neu, statt Möbel nur zu verschieben. Beispiele zeigen unsere [Referenzen](/referenzen/).",
     },
     {
       question: "In welchem Gebiet planen und montieren Sie?",
