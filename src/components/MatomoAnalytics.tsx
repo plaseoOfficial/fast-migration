@@ -13,22 +13,48 @@ const SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
  */
 const MATOMO_SKRIPT = "/matomo/matomo-5.14.0.js";
 
+/** Nur die Live-Domain zählt. localhost, Vercel-Vorschauen und Spiegel bleiben draußen. */
+const LIVE_HOSTS = ["www.fast-systemmoebel.de", "fast-systemmoebel.de"];
+
+/**
+ * Eigene Besuche abmelden: einmal `?notrack=1` aufrufen setzt den Merker auf diesem
+ * Gerät/Browser, `?notrack=0` hebt ihn wieder auf. Er liegt nur dort, wo ihn jemand
+ * selbst gesetzt hat; normale Besucher bekommen nichts gespeichert.
+ */
+const OPT_OUT_KEY = "fast-kein-tracking";
+
+function trackingErlaubt(): boolean {
+  if (!LIVE_HOSTS.includes(window.location.hostname)) return false;
+  try {
+    const notrack = new URLSearchParams(window.location.search).get("notrack");
+    if (notrack === "1") localStorage.setItem(OPT_OUT_KEY, "1");
+    if (notrack === "0") localStorage.removeItem(OPT_OUT_KEY);
+    return localStorage.getItem(OPT_OUT_KEY) !== "1";
+  } catch {
+    return true; // localStorage gesperrt (z. B. privater Modus) → normal zählen
+  }
+}
+
 /**
  * Lädt Matomo cookieless (kein Consent-Banner nötig, IP wird anonymisiert) und
  * meldet bei Next.js' client-seitiger Navigation jeden Routenwechsel als eigenen
  * Seitenaufruf — sonst zählte Matomo nur die erste Seite eines Besuchs.
  *
- * Ohne gesetzte NEXT_PUBLIC_MATOMO_*-Variablen passiert nichts (No-op).
+ * Ohne gesetzte NEXT_PUBLIC_MATOMO_*-Variablen, außerhalb der Live-Domain und auf
+ * abgemeldeten Geräten (`?notrack=1`) passiert nichts (No-op).
  */
 export function MatomoAnalytics() {
   const pathname = usePathname();
   const geladen = useRef(false);
   const ersterPfad = useRef(true);
+  const aktiv = useRef(false);
 
   // Einmalig: Tracker initialisieren + matomo.js laden.
   useEffect(() => {
     if (!MATOMO_URL || !SITE_ID || geladen.current) return;
     geladen.current = true;
+    if (!trackingErlaubt()) return;
+    aktiv.current = true;
 
     const _paq = (window._paq = window._paq ?? []);
     _paq.push(["disableCookies"]); // cookieless → DSGVO ohne Einwilligung (immer der ERSTE Befehl)
@@ -46,7 +72,7 @@ export function MatomoAnalytics() {
 
   // Folge-Navigationen als Seitenaufrufe melden (die erste Seite zählt oben schon).
   useEffect(() => {
-    if (!MATOMO_URL || !SITE_ID) return;
+    if (!aktiv.current) return;
     if (ersterPfad.current) {
       ersterPfad.current = false;
       return;
