@@ -15,6 +15,12 @@ Matomo-Signatur: `trackEvent(Kategorie, Aktion, Name)`.
 **Die Aktion ist der stabile String, auf den Ziele matchen** — Kategorie und Name
 dienen der Gruppierung bzw. dem Kontext.
 
+**Was Matomo nicht zählt** (`MatomoAnalytics.tsx`): alles außerhalb von
+`www.fast-systemmoebel.de` (localhost, Vercel-Vorschauen, Spiegel) und Geräte, die
+sich selbst abgemeldet haben. Abmelden: einmal `https://www.fast-systemmoebel.de/?notrack=1`
+aufrufen (Merker im localStorage dieses Browsers), wieder anmelden mit `?notrack=0`.
+Gilt je Browser, also am Handy und am Rechner getrennt setzen.
+
 ## 2. Event-Katalog
 
 | Aktion (Matomo) | Kategorie | Conversion? |
