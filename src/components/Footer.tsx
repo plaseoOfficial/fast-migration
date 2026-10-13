@@ -50,6 +50,16 @@ export function Footer() {
               }}
             >
               &copy; {year} Fast Systemmöbel. Möbel nach Maß seit 1996.
+              <br />
+              Website &amp; SEO:{" "}
+              <a
+                href="https://sideboost.de"
+                target="_blank"
+                rel="noopener"
+                className="underline underline-offset-2 hover:text-white"
+              >
+                Side Boost
+              </a>
             </p>
           </div>
 

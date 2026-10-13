@@ -63,6 +63,14 @@ export default function ImpressumPage() {
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
         Verbraucherschlichtungsstelle teilzunehmen.
       </p>
+
+      <p>
+        Konzept, Gestaltung und Umsetzung:{" "}
+        <a href="https://sideboost.de" target="_blank" rel="noopener">
+          Side Boost
+        </a>{" "}
+        (sideboost.de)
+      </p>
     </LegalPageLayout>
   );
 }
