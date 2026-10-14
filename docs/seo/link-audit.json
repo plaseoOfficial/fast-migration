@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 35,
+    "pagesBuilt": 36,
     "pagesPlanned": 5,
-    "linksFound": 510,
+    "linksFound": 531,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 4,
-      "Hinweis": 20
+      "Warnung": 2,
+      "Hinweis": 18
     }
   },
   "external": {
@@ -124,18 +124,6 @@
     {
       "severity": "Warnung",
       "check": "inbound",
-      "message": "/wohnmoebel-nach-mass/regal-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/wohnmoebel-nach-mass/`, `/wohnmoebel-nach-mass/buecherregal-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/wohnmoebel-nach-mass/regal-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/wohnmoebel-nach-mass/buecherregal-nach-mass/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/wohnmoebel-nach-mass/`, `/wohnmoebel-nach-mass/regal-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/wohnmoebel-nach-mass/buecherregal-nach-mass/"
-    },
-    {
-      "severity": "Warnung",
-      "check": "inbound",
       "message": "/hauswirtschaftsraum/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/moebel-nach-mass/`, `/kuechen-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
       "page": "/hauswirtschaftsraum/"
     },
@@ -160,12 +148,6 @@
       "check": "muss-backlog",
       "message": "/kuechen-nach-mass/: MUSS-Link `own-ratgeber` noch blockiert (Ziel ungebaut). Eigener Kosten-/Ratgeber-Pillar",
       "page": "/kuechen-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
-      "page": "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/"
     },
     {
       "severity": "Hinweis",
@@ -206,6 +188,12 @@
     {
       "severity": "Hinweis",
       "check": "missing-soll",
+      "message": "/wohnmoebel-nach-mass/wohnwand-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/wohnmoebel-nach-mass/wohnwand-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
       "message": "/kuechen-nach-mass/kuechenzeile-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/kuechen-nach-mass/kuechenzeile-nach-mass/"
     },
@@ -214,18 +202,6 @@
       "check": "missing-soll",
       "message": "/kuechen-nach-mass/kueche-mit-dachschraege/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/kuechen-nach-mass/kueche-mit-dachschraege/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/bueroeinrichtung/bueroplanung/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
-      "page": "/bueroeinrichtung/bueroplanung/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "missing-soll",
-      "message": "/bueroeinrichtung/bueromoebel-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
-      "page": "/bueroeinrichtung/bueromoebel-nach-mass/"
     },
     {
       "severity": "Hinweis",

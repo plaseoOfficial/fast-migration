@@ -108,7 +108,7 @@ export const buchVarianten = {
     },
     {
       title: "Offen oder mit Türen",
-      body: "Offene Präsentation, geschlossene Fächer oder Glastüren gegen Staub, auch mit Schiebetüren und im selben Regal gemischt.",
+      body: "Offene Präsentation, geschlossene Fächer oder Glastüren gegen Staub, im selben Regal gemischt. Kommen Fernseher und viel Stauraum dazu, wird daraus eine [Wohnwand nach Maß](/wohnmoebel-nach-mass/wohnwand-nach-mass/).",
     },
   ],
 };

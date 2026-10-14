@@ -107,7 +107,7 @@ export const regVarianten = {
     },
     {
       title: "Raumhoch, Wand zu Wand",
-      body: "Als Regalwand bis unter die Decke, Wand zu Wand und ohne Passleisten. Offene Fächer zum Zeigen, geschlossene Elemente für alles, was hinter die Front soll.",
+      body: "Als Regalwand bis unter die Decke, Wand zu Wand und ohne Passleisten. Soll das meiste hinter Türen verschwinden, planen wir daraus eine [Wohnwand nach Maß](/wohnmoebel-nach-mass/wohnwand-nach-mass/).",
     },
   ],
 };
