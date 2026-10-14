@@ -133,7 +133,7 @@ export const wohnTypische = {
     {
       title: "Wohnwand nach Maß",
       description:
-        "Geschlossener Stauraum und offene Flächen als eine Einheit, raumhoch von Wand zu Wand, auf Wunsch mit integrierter TV-Nische und Vitrine.",
+        "Geschlossener Stauraum und offene Flächen als eine Einheit, raumhoch von Wand zu Wand, auf Wunsch mit integrierter TV-Nische und Vitrine. Zur [Wohnwand nach Maß](/wohnmoebel-nach-mass/wohnwand-nach-mass/).",
     },
     {
       title: "Sideboard nach Maß",
