@@ -279,7 +279,7 @@ export const buchFaq = {
     {
       question: "Kann ein Bücherregal exakt in eine Nische oder unter eine Dachschräge eingepasst werden?",
       answer:
-        "Ja, genau dafür ist ein Bücherregal nach Maß da. Wir bauen es millimetergenau in die Nische, Wand zu Wand oder unter die Dachschräge, ohne Passleisten. Soll das Regal einen Raum zonieren statt an der Wand zu stehen, planen wir das besser als Raumteiler.",
+        "Ja, genau dafür ist ein Bücherregal nach Maß da. Wir bauen es millimetergenau in die Nische, Wand zu Wand oder unter die Dachschräge, ohne Passleisten. Soll das Regal einen Raum zonieren statt an der Wand zu stehen, planen wir das besser als [maßgefertigten Raumteiler](/wohnmoebel-nach-mass/raumteiler-nach-mass/).",
     },
     {
       question: "Kann ein Bücherregal bis zur Decke reichen und brauche ich dann eine Leiter?",
