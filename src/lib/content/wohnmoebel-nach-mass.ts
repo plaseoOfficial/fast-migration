@@ -155,7 +155,7 @@ export const wohnTypische = {
     {
       title: "Raumteiler nach Maß",
       description:
-        "Ein Möbel, das Wohn- und Essbereich zoniert, von beiden Seiten nutzbar ist und Stauraum bietet, ohne den Raum optisch zu verschließen.",
+        "Ein Möbel, das Wohn- und Essbereich zoniert, von beiden Seiten nutzbar ist und Stauraum bietet, ohne den Raum optisch zu verschließen. Zum [Raumteiler nach Maß](/wohnmoebel-nach-mass/raumteiler-nach-mass/).",
     },
     {
       title: "Einbauschrank im Wohnzimmer",
