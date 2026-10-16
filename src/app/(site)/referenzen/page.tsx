@@ -16,10 +16,10 @@ import {
 } from "@/lib/content/referenzen";
 
 const DESCRIPTION =
-  "Referenzen von Fast Systemmöbel: realisierte Küchen, Möbel nach Maß und Gewerbeeinrichtung aus Espelkamp – Maßanfertigung seit 1996.";
+  "Referenzen von Fast Systemmöbel: realisierte Küchen, Einbauschränke und Wohnmöbel, Büros und Läden aus unserer Werkstatt in Espelkamp.";
 
 export const metadata: Metadata = {
-  title: "Referenzen: Möbel nach Maß & Gewerbeeinrichtung | Fast",
+  title: "Referenzen: Möbel nach Maß aus unserer Werkstatt | Fast",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Referenzen: Möbel nach Maß & Gewerbeeinrichtung | Fast",
+    title: "Referenzen: Möbel nach Maß aus unserer Werkstatt | Fast",
     description: DESCRIPTION,
     url: PAGE_PATH,
     locale: "de_DE",

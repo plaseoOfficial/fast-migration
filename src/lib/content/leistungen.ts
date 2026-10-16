@@ -28,7 +28,7 @@ export const PAGE_PATH = "/leistungen/";
 export const MOEBELPLANER_URL = "https://moebelplaner.fast-systemmoebel.de/";
 
 export const leistungenMeta = {
-  title: "Unsere Leistungen: Möbel nach Maß und Gewerbe | Fast",
+  title: "Unsere Leistungen im Überblick | Fast Systemmöbel",
   description:
     "Alle Leistungen von Fast Systemmöbel im Überblick: Küchen, Bad, Einbauschränke und Wohnmöbel nach Maß sowie Einrichtung für Büro, Laden, Gastro und Praxis.",
 };
