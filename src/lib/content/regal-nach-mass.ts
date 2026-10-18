@@ -99,7 +99,7 @@ export const regVarianten = {
     },
     {
       title: "Standregal",
-      body: "Frei stehend vom Boden bis zur Höhe, die Sie wollen. An der Wand oder als offene Raumkante, die zwei Zonen locker trennt.",
+      body: "Frei stehend vom Boden bis zur Höhe, die Sie wollen. An der Wand oder als [offener Raumteiler nach Maß](/wohnmoebel-nach-mass/raumteiler-nach-mass/), der zwei Zonen locker trennt.",
     },
     {
       title: "Eckregal",

@@ -89,6 +89,8 @@ export const PAGES: PageNode[] = [
   { slug: "/wohnmoebel-nach-mass/buecherregal-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "buecherregal-nach-mass" },
   // Wohnmöbel spoke (cluster child): Wohnwand nach Maß (raumhohe Gesamtwand, geschlossen + offen, TV-Nische)
   { slug: "/wohnmoebel-nach-mass/wohnwand-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "wohnwand-nach-mass" },
+  // Wohnmöbel spoke (cluster child): Raumteiler nach Maß (zoniert den Raum, frei stehend, von beiden Seiten nutzbar)
+  { slug: "/wohnmoebel-nach-mass/raumteiler-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "raumteiler-nach-mass" },
   { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
@@ -472,6 +474,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["raumhohe Wohnwand nach Maß", "maßgefertigte Wohnwand", "Wohnwand vom Tischler"],
     brand: ["Fast Systemmöbel Wohnwand"],
     descriptive: ["Wohnwand nach Maß planen", "zur Wohnwand nach Maß"],
+  },
+  "/wohnmoebel-nach-mass/raumteiler-nach-mass/": {
+    exact: ["Raumteiler nach Maß"],
+    partial: ["maßgefertigter Raumteiler", "Raumteiler vom Tischler", "Regal als Raumteiler", "offener Raumteiler nach Maß"],
+    brand: ["Fast Systemmöbel Raumteiler"],
+    descriptive: ["Raumteiler nach Maß planen", "zum Raumteiler nach Maß"],
   },
   "/hauswirtschaftsraum/": {
     exact: ["Hauswirtschaftsraum einrichten"],

@@ -185,7 +185,7 @@ export const wwAbgrenzung = {
     },
     {
       title: "Raumteiler",
-      body: "Soll das Möbel frei im Raum stehen und Wohn- und Essbereich trennen, ist ein Raumteiler nach Maß gefragt. Den nutzen Sie von beiden Seiten.",
+      body: "Soll das Möbel frei im Raum stehen und Wohn- und Essbereich trennen, ist ein [Raumteiler nach Maß](/wohnmoebel-nach-mass/raumteiler-nach-mass/) gefragt. Den nutzen Sie von beiden Seiten.",
     },
     {
       title: "TV-Wand und Sideboard",

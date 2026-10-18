@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 36,
+    "pagesBuilt": 37,
     "pagesPlanned": 5,
-    "linksFound": 531,
+    "linksFound": 549,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 2,
-      "Hinweis": 18
+      "Hinweis": 19
     }
   },
   "external": {
@@ -190,6 +190,12 @@
       "check": "missing-soll",
       "message": "/wohnmoebel-nach-mass/wohnwand-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/wohnmoebel-nach-mass/wohnwand-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/wohnmoebel-nach-mass/raumteiler-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/wohnmoebel-nach-mass/raumteiler-nach-mass/"
     },
     {
       "severity": "Hinweis",
