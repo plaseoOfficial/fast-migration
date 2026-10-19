@@ -19,6 +19,7 @@
 - **Familien-Nachfolge (E-E-A-T-Gold):** Johann Fast = Inhaber/Gründer. **Andreas Fast & Peter Fast = seine Nachkommen**, seit **2010** im Betrieb (Kunde 2026-06-06; **NICHT 2011**), rücken schrittweise in die **Geschäftsführung**. → echte 2.-Generation-/Familienbetrieb-Story.
 - **Materialien: Massivholz** + branchenübliche hochwertige Materialien (Orientierung am Wettbewerb) — sauber, aber ohne Über-Behauptung exotischer Hölzer.
 - **Arminia-Bielefeld-Referenz: vom Kunden freigegeben** → darf verwendet werden. **ABER (2026-06-06, Max): Fast hat für Arminia die *Kabine* (Spieler-/Umkleidekabine) gebaut, NICHT eine Küche** → Referenz gehört auf Gewerbe/Ladenbau/Über-uns, **nicht** auf die Küchen-Seite.
+  - **Zweites Arminia-Projekt: Loge im Stadion (Kunde bestätigt 2026-10-19, Fotos von Johann Fast).** Fast-Arbeit = **Theke/Tresen mit Unterschränken, Wandborde, Sitzbank**. Nicht als Fast-Leistung nennen: Geräte (Weinkühlschrank, Zapfanlage), Hocker, Stühle, Tische, Bildschirm, Lamellenwand, Heizkörperverkleidung, Bodenbelag. Keine Materialien, Maße, Jahreszahlen, kein Stadionname, keine Sponsor-Logos aus den Fotos. → gehört auf `/gastronomieeinrichtung/` + `/referenzen/`, **nicht** auf Küchen-Seiten (Logen-Theke ≠ Privatküche).
 - **Recht (Impressum/AGB/Datenschutz): alte Texte 1:1 übernehmen.**
 - **Montagegebiet: ~200 km um Espelkamp — bestätigt (2026-06-06, Max)** → „200 km" ist jetzt **NUTZBAR** (war ❌). Lieferung darüber hinaus bundesweit.
 - **Eigenes Montageteam: JA, bestätigt (2026-06-06)** → darf als feste Zusage formuliert werden.

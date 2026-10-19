@@ -10,12 +10,14 @@
  *
  * IMAGES: every photo below was visually verified to actually depict the project
  * it is labelled as (people/team photos are deliberately excluded). Categories
- * are limited to the ones we can back with real photos — Gastronomie and Praxis
- * are intentionally omitted until genuine project photos exist (no faking).
+ * are limited to the ones we can back with real photos — Praxis is intentionally
+ * omitted until genuine project photos exist (no faking). Gastronomie is backed
+ * by the Arminia-Bielefeld-Loge (Fotos vom Kunden, 2026-10): nur Theke/Tresen mit
+ * Unterschränken, Wandborde und Sitzbank sind Fast-Arbeit, Geräte/Hocker nicht.
  *
  * Internal links (silo-neutral brand page, so it may link into both pillars):
  *   /moebel-nach-mass/, /kuechen-nach-mass/  (Privat)
- *   /bueroeinrichtung/, /ladenbau/, /serienmoebel/  (Gewerbe/Objekt)
+ *   /bueroeinrichtung/, /ladenbau/, /serienmoebel/, /gastronomieeinrichtung/  (Gewerbe/Objekt)
  *   /kontakt/ (conversion), /moebelplaner/ (conversion)
  */
 import type { ReferenzCategory, ReferenzProject } from "@/components/sections/shared/ReferenzenGrid";
@@ -53,6 +55,7 @@ export const referenzenGrid = {
     { key: "moebel", label: "Möbel nach Maß" },
     { key: "buero", label: "Büro" },
     { key: "ladenbau", label: "Ladenbau" },
+    { key: "gastro", label: "Gastronomie" },
     { key: "serie", label: "Serie" },
   ] satisfies ReferenzCategory[],
   projects: [
@@ -154,6 +157,18 @@ export const referenzenGrid = {
       description:
         "Komplette Ladeneinrichtung für den MixMarkt Espelkamp – von der Holzlamellenwand über die beleuchtete Obst- und Gemüseabteilung bis zu den Warenregalen, geplant und montiert aus einer Hand.",
       href: "/ladenbau/",
+    },
+    {
+      image: "/images/gastronomie/gastronomieeinrichtung-arminia-loge-theke-wandborde.jpg",
+      imageAlt:
+        "Theke in einer Stadionloge: weiße grifflose Unterschränke, zwei beleuchtete Wandborde und ein Tresen mit Weinkühlschrank und Barhockern",
+      category: "Gastronomieeinrichtung",
+      categoryKey: "gastro",
+      title: "Gastro-Theke und Sitzbank für eine Arminia-Loge",
+      meta: "Objekt · Arminia Bielefeld",
+      description:
+        "Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke und Sitzbank gebaut: weiße, grifflose Unterschränke, zwei beleuchtete Wandborde und ein Tresen, in dem der Weinkühlschrank Platz findet.",
+      href: "/gastronomieeinrichtung/",
     },
     {
       image: "/images/2026/01/csm_Kabine_6550b3ca43.jpg",

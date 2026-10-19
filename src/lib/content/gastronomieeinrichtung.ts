@@ -18,7 +18,7 @@
 export const gastroHero = {
   bgImage: "/images/gastronomie/gastronomieeinrichtung-gastraum-massivholztische.jpg",
   imageAlt:
-    "Gastronomieeinrichtung nach Maß: massive Holztheke für ein Restaurant von Fast Systemmöbel",
+    "Gastraum mit langen Holztischen, Polsterstühlen und gerahmter Bilderwand",
   title: "Gastronomieeinrichtung nach Maß aus Espelkamp",
   intro:
     "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß: Theken, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team in OWL und bundesweit geliefert.",
@@ -38,8 +38,9 @@ export const gastroIntroStats = {
   introBold: "Planung",
   introAfter:
     " bis zur fertigen Montage – alles aus einer Hand.",
-  bandImage: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
-  bandAlt: "Maßgefertigte Theke und Service-Station in einem Gastronomiebetrieb",
+  bandImage: "/images/gastronomie/gastronomieeinrichtung-arminia-loge-theke-wandborde.jpg",
+  bandAlt:
+    "L-förmige Theke mit weißen grifflosen Unterschränken, zwei beleuchteten Wandborden und Tresen in einer Loge von Arminia Bielefeld",
   col1Title: "Gastraum planen",
   col1Body:
     "Wir entwickeln Ihre Einrichtung nach Grundriss, Laufweg und Gästezahl: Theke, Rückbuffet, Sitzbank und Ausgabebereich, millimetergenau geplant und auf den Stoßbetrieb ausgelegt.",
@@ -60,9 +61,9 @@ export const gastroIntroStats = {
 export const gastroProcess = {
   eyebrow: "In fünf Schritten",
   heading: "Vom Aufmaß bis zur Montage",
-  image: "/images/gastronomie/gastronomieeinrichtung-tische-stuehle-gastraum.jpg",
+  image: "/images/gastronomie/gastronomieeinrichtung-arminia-loge-tresen.jpg",
   imageAlt:
-    "Maßgefertigte Bar mit Rückbuffet und vorbereiteten Technik-Aussparungen",
+    "Tresen mit Weinkühlschrank und Zapfsäule in der Arminia-Loge, durch die Glasfront der Blick auf die Tribüne",
   steps: [
     {
       title: "Beratung & kostenloses Aufmaß",
@@ -134,8 +135,8 @@ export const gastroUsp = {
 
 export const gastroTypische = {
   heading: "Was wir für die Gastronomie fertigen",
-  image1: "/images/gastronomie/gastronomieeinrichtung-gastraum-uebersicht.jpg",
-  image1Alt: "Gastraum mit Tischreihen, Bestuhlung und Wandbank nach Maß",
+  image1: "/images/gastronomie/gastronomieeinrichtung-arminia-loge-sitzbank.jpg",
+  image1Alt: "Gepolsterte Sitzbank mit zwei Hochtischen in der Lounge-Ecke einer Stadionloge",
   image2: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
   image2Alt: "Wandbank mit Tischen und Leuchten in einem Gastraum",
   row1: [
@@ -200,7 +201,7 @@ export const gastroGeschichte = {
   ],
   paragraphs: [
     "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation und fertigt auf über 1.000 m² mit moderner CNC-Technik.",
-    "In Ostwestfalen-Lippe haben wir bereits Gastronomiebetriebe eingerichtet, vom einzelnen Bartresen bis zur Hoteleinrichtung mit [Möbeln in Serie](/serienmoebel/). Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
+    "In Ostwestfalen-Lippe haben wir bereits Gastronomiebetriebe eingerichtet, vom einzelnen Bartresen bis zur Hoteleinrichtung mit [Möbeln in Serie](/serienmoebel/). Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke, Wandborde und Sitzbank gebaut. Weitere Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
   ],
 };
 
