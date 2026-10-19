@@ -97,8 +97,8 @@ export const homeBereiche = {
         },
         {
           title: "Gastronomie",
-          image: "/images/2025/11/DSC_9938.jpg",
-          alt: "Regaldetail nach Maß mit indirekter LED-Beleuchtung",
+          image: "/images/gastronomie/gastronomieeinrichtung-arminia-loge-tresen.jpg",
+          alt: "Weißer Tresen mit Zapfsäule in einer Loge von Arminia Bielefeld, dahinter Logenplätze und Tribüne",
           href: "/gastronomieeinrichtung/",
         },
         {
