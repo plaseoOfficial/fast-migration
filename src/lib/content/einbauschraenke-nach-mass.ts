@@ -18,7 +18,7 @@ export const einbauHero = {
   imageAlt: "Einbauschrank nach Maß, grifflos und Wand zu Wand eingebaut, mit beleuchtetem Eichenfach",
   title: "Einbauschränke nach Maß, zentimetergenau aus Espelkamp",
   intro:
-    "Wir planen und bauen Ihren Einbauschrank nach Maß, zentimetergenau auf Ihren Raum zugeschnitten. Vom Aufmaß bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird jede Wand, jede Nische und jede Dachschräge zu Stauraum, der wirklich passt.",
+    "Wir planen und bauen Ihren Einbauschrank nach Maß, zentimetergenau auf Ihren Raum zugeschnitten. Wir messen bei Ihnen kostenlos aus, fertigen in unserem Meisterbetrieb in Espelkamp und montieren mit dem eigenen Team im Umkreis von rund 200 km. So wird jede Wand, jede Nische und jede Dachschräge zu Stauraum, der wirklich passt.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -103,14 +103,14 @@ export const einbauTypische = {
         "Wo Standardschränke aufhören, fangen wir an. Unser [Drempelschrank nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) nutzt auch die niedrigen Zonen ganz unten aus, mit passgenauen Fronten, die der Schräge exakt folgen. Kein toter Winkel, kein verschenkter Stauraum.",
     },
     {
-      title: "Nischenschränke",
+      title: "Einbauschrank für Nischen",
       description:
         "Jede Nische ist anders, unser Schrank passt sich an. Wir bauen zentimetergenau zwischen die Wände, auch dort, wo nichts im rechten Winkel steht. So wird aus einer Restfläche voller Stauraum.",
     },
   ],
   row2: [
     {
-      title: "Flur und Garderobe nach Maß",
+      title: "Einbauschrank für den Flur: Garderobe nach Maß",
       description:
         "Schmale Flure sind unser Spezialgebiet. Die [Garderobe nach Maß](/einbauschraenke-nach-mass/garderobe-nach-mass/) fasst Schuhschrank, Sitzbank und Stauraum in einem ruhigen Möbel zusammen, das auch bei wenig Platz alles aufnimmt.",
     },
@@ -206,6 +206,21 @@ export const einbauFaq = {
       question: "Was unterscheidet euch von einem Online-Schrankkonfigurator?",
       answer:
         "Ein Konfigurator rechnet mit den Maßen, die Sie eintippen, und liefert einen Bausatz. Wir kommen zu Ihnen, messen selbst, planen mit Ihnen und bauen den Schrank in unserer eigenen Werkstatt in Espelkamp. Unser Team montiert ihn vor Ort, passt ihn an schräge Wände an und stimmt jedes Detail ab, bis er sitzt. Sie haben von der Beratung bis zur Abnahme einen Ansprechpartner.",
+    },
+    {
+      question: "Was brauche ich für eine erste Anfrage?",
+      answer:
+        "Für den Start genügt, in welchem Raum der Schrank stehen soll, grob wie breit und hoch die Wand oder Nische ist und was hinein soll. Die genauen Maße nehmen wir beim kostenlosen Aufmaß vor Ort selbst, Sie müssen nichts auf den Millimeter ausmessen. Wenn Sie vorab etwas ausprobieren möchten, können Sie im Möbelplaner Maße, Fronten und Einteilung durchspielen.",
+    },
+    {
+      question: "Welche Innenausstattung ist bei einem Einbauschrank möglich?",
+      answer:
+        "Fächer, Auszüge, Kleiderstangen und Beleuchtung teilen wir passgenau nach dem ein, was Sie unterbringen möchten. Dazu kommen je nach Raum Dreh-, Schiebe- oder Schwebetüren. Was in Ihren Schrank gehört, besprechen wir in der Beratung, danach planen wir es in 3D.",
+    },
+    {
+      question: "Aus welchen Materialien und Fronten wird ein Einbauschrank gebaut?",
+      answer:
+        "Wir fertigen in der eigenen Werkstatt aus Massivholz und hochwertigen Plattenwerkstoffen. Welche Fronten, Oberflächen und Beschläge zu Ihrem Schrank passen, wählen wir gemeinsam im Beratungsgespräch aus, denn das hängt vom Raum, der Nutzung und Ihrem Geschmack ab. Die Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig.",
     },
   ],
 };

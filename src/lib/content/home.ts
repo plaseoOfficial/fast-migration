@@ -58,7 +58,7 @@ export const homeBereiche = {
           href: "/kuechen-nach-mass/",
         },
         {
-          title: "Einbauschränke & Ankleiden",
+          title: "Einbauschränke nach Maß",
           image: "/images/2025/11/IMG_2772-scaled.jpg",
           alt: "Weißer Einbauschrank entlang eines Flurs",
           href: "/einbauschraenke-nach-mass/",
