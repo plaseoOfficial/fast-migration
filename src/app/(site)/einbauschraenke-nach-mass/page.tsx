@@ -31,7 +31,7 @@ import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 export const metadata: Metadata = {
   title: "Einbauschrank nach Maß vom Meisterbetrieb aus Espelkamp",
   description:
-    "Einbauschränke nach Maß, zentimetergenau geplant, in Espelkamp gefertigt und vom eigenen Team montiert. Für Dachschrägen und Nischen. Kostenloses Aufmaß.",
+    "Einbauschränke nach Maß vom Tischler: kostenloses Aufmaß bei Ihnen, Fertigung in Espelkamp, Montage durch das eigene Team im Umkreis von 200 km. Für Dachschrägen und Nischen.",
   alternates: { canonical: "/einbauschraenke-nach-mass/" },
   openGraph: {
     images: [
