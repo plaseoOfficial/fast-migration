@@ -47,7 +47,7 @@ export const dsIntroStats = {
   bandAlt: "Maßgefertigte Küche mit Kochinsel unter Dachschräge",
   col1Title: "Wand zu Wand ohne Passleisten",
   col1Body:
-    "Fronten und Korpus folgen dem Winkel, Wand zu Wand ohne Passleisten und ohne tote Ecke. Küchen unter Dachschrägen haben wir schon einige gebaut.",
+    "Fronten und Korpus folgen dem Winkel, Wand zu Wand ohne Passleisten und ohne tote Ecke. Den Winkel der Schräge nehmen wir beim Aufmaß vor Ort genau auf.",
   col1CtaLabel: "Dachschrägen-Küche anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:
