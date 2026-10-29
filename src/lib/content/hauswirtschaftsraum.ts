@@ -11,10 +11,11 @@
  * (Waschen, Vorrat, Reinigung, Technik) nach Maß. Preise immer individuell.
  * Geräte werden nicht verkauft — Möbel entstehen um kundeneigene Geräte.
  *
- * Cluster-Kinder (HWR-Schrank / Waschmaschinenschrank / Vorratsschrank /
- * Besenschrank / planen) sind noch nicht gebaut (built:false) → im Verteiler
- * nur beschreibend, ohne Links (launch clean). Beim Bau der Spokes hier
- * beidseitig nachverdrahten.
+ * Cluster-Kinder: Der Waschmaschinenschrank ist gebaut (2026-10-29) und aus der
+ * Verteiler-Karte „Waschmaschine und Trockner verbaut“ verlinkt. Die übrigen
+ * Kinder (HWR-Schrank / Vorratsschrank / Besenschrank / Ratgeber planen) sind
+ * noch nicht gebaut (built:false) → im Verteiler nur beschreibend, ohne Links
+ * (launch clean). Beim Bau der Spokes hier beidseitig nachverdrahten.
  *
  * Bilder: vorerst Platzhalter aus /images/einbauschraenke/ (Vorlage-Assets);
  * Alt-Texte beschreiben bereits die gewünschten HWR-Motive. Vor Launch gegen
@@ -127,8 +128,8 @@ export const hwrProcessSteps = {
 };
 
 /** Objekt-Taxonomie: drives the MnmTypische rows AND the JSON-LD OfferCatalog / ItemList.
- * HWR-Funktions-/Möbeltypen (Verteiler, Kit §3 Modul 11). Kinder noch built:false →
- * nur beschreibend, keine Links. */
+ * HWR-Funktions-/Möbeltypen (Verteiler, Kit §3 Modul 11). Gebaute Kinder verlinkt die
+ * Karte im Text (Waschmaschinenschrank), ungebaute bleiben beschreibend ohne Link. */
 export const hwrTypische = {
   heading: "Möbel und Zonen für jeden Hauswirtschaftsraum",
   image1: `${IMG}/begehbare-ankleide-nach-mass-eck.jpg`,
@@ -144,7 +145,7 @@ export const hwrTypische = {
     {
       title: "Waschmaschine und Trockner verbaut",
       description:
-        "Ein Verbau um Ihre Geräte, nebeneinander unter einer Arbeitsplatte oder als Waschturm übereinander, mit Platz fürs Waschmittel gleich daneben. Die vorhandenen Geräte bleiben, wir planen die Möbel passgenau darum.",
+        "Ein Verbau um Ihre Geräte, nebeneinander unter einer Arbeitsplatte oder als Waschturm übereinander, mit Platz fürs Waschmittel gleich daneben. Die vorhandenen Geräte bleiben, wir planen die Möbel passgenau darum. Zum [Waschmaschinenschrank nach Maß](/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/).",
     },
     {
       title: "Vorratsschrank nach Maß",

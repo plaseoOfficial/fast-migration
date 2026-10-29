@@ -49,7 +49,7 @@ const FAQ_ITEMS = [
   {
     question: "Welche Möbel kann ich im Planer konfigurieren?",
     answer:
-      "Schränke, Kleiderschränke, Regale, Küchenzeilen, Badschränke und viele weitere Möbelstücke. Alle maßgefertigt nach Ihren Vorstellungen. Für eine ganze Küche hilft vorab unser Ratgeber [Küche Schritt für Schritt planen](/kuechen-nach-mass/kueche-planen/).",
+      "Schränke, Kleiderschränke, Regale, Küchenzeilen, Badschränke und viele weitere Möbelstücke. Alle maßgefertigt nach Ihren Vorstellungen. Für eine ganze Küche hilft vorab unser Ratgeber [Küche Schritt für Schritt planen](/kuechen-nach-mass/kueche-planen/). Auch einen [Schrank für Waschmaschine und Trockner](/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/) können Sie hier vorskizzieren, den Geräteverbau selbst klären wir beim Aufmaß.",
   },
   {
     question: "Wie genau ist der Online-Möbelplaner?",

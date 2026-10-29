@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/`, `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal.
 
 ## Rules (condensed)
 
@@ -111,6 +111,17 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/` launch (2026-10-29)
+
+- **Produkt-Kind unter `/hauswirtschaftsraum/`** (erstes gebautes HWR-Kind), `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7).
+- **Eingehend (2 Inhaltsquellen):** `/hauswirtschaftsraum/` (Verteiler-Karte „Waschmaschine und Trockner verbaut“, MUSS
+  `own-cluster-spokes`) · `/kontakt/` (neue FAQ „Was sollte ich für das Gespräch vorbereiten?“). `MIN_INBOUND` (3) ist
+  damit noch nicht erreicht (Warnung, bewusst): Im Silo ist sonst nichts gebaut, eine Brücke (z. B. Bad) bräuchte Bens
+  Entscheidung. Die dritte Quelle kommt mit dem Ratgeber `/hauswirtschaftsraum/planen/` (FAQ „Darf der Trockner auf die
+  Waschmaschine?“), der dann auch den Geschwister-Link ↔ bekommt.
+- **Ausgehend (5 von 7):** ↑ `/hauswirtschaftsraum/` (Breadcrumb + IntroStats) · `/moebelplaner/` · `/kontakt/` · 2 Belege
+  Verbraucherzentrale. Kein Geschwister gebaut → Geschwister-Pflicht entfällt; kein `/referenzen/` (kein HWR-Projekt).
 
 ### `/badmoebel-nach-mass/` launch (2026-07)
 

@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 37,
+    "pagesBuilt": 38,
     "pagesPlanned": 5,
-    "linksFound": 550,
+    "linksFound": 568,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 2,
-      "Hinweis": 19
+      "Warnung": 1,
+      "Hinweis": 20
     }
   },
   "external": {
@@ -36,6 +36,24 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/garderobe-nach-mass.ts"
+        }
+      ],
+      "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/": [
+        {
+          "href": "https://www.verbraucherzentrale.de/wissen/energie/strom-sparen/beim-kauf-eines-waeschetrockners-an-den-stromverbrauch-denken-37984",
+          "host": "verbraucherzentrale.de",
+          "anchor": "Verbraucherzentrale",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/waschmaschinenschrank-nach-mass.ts"
+        },
+        {
+          "href": "https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/wenn-die-waschmaschine-mueffelt-tipps-gegen-ueble-gerueche-109784",
+          "host": "verbraucherzentrale.de",
+          "anchor": "Verbraucherzentrale",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/waschmaschinenschrank-nach-mass.ts"
         }
       ],
       "/kuechen-nach-mass/kueche-planen/": [
@@ -122,12 +140,6 @@
       "page": "/kuechen-nach-mass/kueche-planen/"
     },
     {
-      "severity": "Warnung",
-      "check": "inbound",
-      "message": "/hauswirtschaftsraum/: nur 2 Seite(n) verlinken im Inhalt (Minimum 3) — `/moebel-nach-mass/`, `/kuechen-nach-mass/`. Nachverlinken aus thematisch passenden Seiten.",
-      "page": "/hauswirtschaftsraum/"
-    },
-    {
       "severity": "Hinweis",
       "check": "canonical",
       "message": "`/leistungen/#privat` → kanonisch `/leistungen/` (Trailing-Slash, vermeidet Redirect-Hop).",
@@ -196,6 +208,12 @@
       "check": "missing-soll",
       "message": "/wohnmoebel-nach-mass/raumteiler-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/wohnmoebel-nach-mass/raumteiler-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/"
     },
     {
       "severity": "Hinweis",
