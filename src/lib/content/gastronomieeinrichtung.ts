@@ -201,7 +201,7 @@ export const gastroGeschichte = {
   ],
   paragraphs: [
     "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation und fertigt auf über 1.000 m² mit moderner CNC-Technik.",
-    "Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke, Wandborde und Sitzbank gebaut. Hotels stattet unsere Serienfertigung mit [Möbeln in Serie](/serienmoebel/) aus. Weitere Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
+    "Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke, Wandborde und Sitzbank gebaut. Für Hotels fertigen wir die Zimmerausstattung auch mit [Möbeln in Serie](/serienmoebel/). Weitere Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
   ],
 };
 

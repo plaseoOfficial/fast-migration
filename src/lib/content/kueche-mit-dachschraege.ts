@@ -26,7 +26,7 @@ export const dsHero = {
   imageAlt: "Küche nach Maß mit Kochinsel unter einer Dachschräge",
   title: "Küche mit Dachschräge nach Maß aus Espelkamp",
   intro:
-    "Ja, eine vollwertige Küche mit Dachschräge ist machbar, wenn wir sie aufs Grad genau planen. Als Meisterbetrieb aus Espelkamp bauen wir Ihre Küche millimetergenau bis unter die Schräge, Wand zu Wand ohne Passleisten. So wird aus dem Raum unter dem Dach eine Arbeitsküche mit Kopffreiheit und Stauraum.",
+    "Ja, eine vollwertige Küche mit Dachschräge ist machbar, wenn wir sie aufs Grad genau planen. Als Meisterbetrieb aus Espelkamp bauen wir Ihre Küche millimetergenau bis unter die Schräge, Wand zu Wand ohne Passleisten. So wird aus dem Dachgeschoss eine Arbeitsküche mit Kopffreiheit und Stauraum.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -312,6 +312,16 @@ export const dsFaq = {
         "Ja, das bringt Tageslicht und gute Lüftung an den Arbeitsplatz. Achten sollten Sie auf die Armaturhöhe, damit sich das Dachfenster noch öffnen lässt, und auf Kondenswasser. Beides berücksichtigen wir in der Planung.",
     },
     {
+      question: "Gehören Hängeschränke unter eine Dachschräge?",
+      answer:
+        "Nur dort, wo die Höhe reicht. Direkt unter der Schräge setzen wir lieber Schrägenschränke, die bündig zur Dachfläche abschließen, und tiefe Auszüge statt Hängeschränken. An der hohen Wand oder im First können Ober- und Hängeschränke weiter sinnvoll sein. Das legen wir beim Aufmaß anhand Ihrer Schräge fest.",
+    },
+    {
+      question: "Welche Fronten und Farben passen zu einer Küche mit Dachschräge?",
+      answer:
+        "Helle, ruhige Fronten reflektieren das Licht vom Dachfenster und lassen den Raum offener wirken, grifflose Fronten halten die Flächen an der Schräge klar. Welche Oberfläche und Farbe zu Ihrer Küche passt, wählen wir gemeinsam in der Beratung, denn Material und Fronten richten sich nach Ihrem Geschmack und Ihrem Raum.",
+    },
+    {
       question: "Was kostet eine Küche mit Dachschräge?",
       answer:
         "Einen pauschalen Aufschlag für die Schräge gibt es nicht. Was die Küche kostet, hängt an Material, Fronten, Geräten und Aufwand. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles Angebot statt einer Pauschale.",
@@ -319,7 +329,7 @@ export const dsFaq = {
     {
       question: "Lohnt sich eine Maßanfertigung oder reicht eine Standardküche?",
       answer:
-        "Standardküchen kommen im festen Raster, an der Schräge entstehen dann Passleisten und tote Ecken. Eine Maßanfertigung folgt dem Winkel und läuft Wand zu Wand ohne Passleisten. Genau dafür lohnt sich unter dem Dach der Tischler.",
+        "Standardküchen und Systemküchen kommen im festen Raster, an der Schräge entstehen dann Passleisten und tote Ecken. Eine Maßanfertigung folgt dem Winkel und läuft Wand zu Wand ohne Passleisten. Genau dafür lohnt sich unter dem Dach der Tischler.",
     },
   ],
 };

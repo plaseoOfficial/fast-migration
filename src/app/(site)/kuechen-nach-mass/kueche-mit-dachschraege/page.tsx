@@ -31,7 +31,7 @@ import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 export const metadata: Metadata = {
   title: "Küche mit Dachschräge nach Maß | Espelkamp",
   description:
-    "Küche mit Dachschräge nach Maß aus Espelkamp: grad-genau geplant, Stauraum bis zum Kniestock, Wand zu Wand ohne Passleisten. Kostenloses Aufmaß vor Ort.",
+    "Küche mit Dachschräge vom Tischler in Espelkamp: kostenloses Aufmaß der Schräge, Fertigung im eigenen Betrieb, Montage im Umkreis von rund 200 km.",
   alternates: { canonical: "/kuechen-nach-mass/kueche-mit-dachschraege/" },
   openGraph: {
     images: [
