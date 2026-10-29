@@ -92,6 +92,8 @@ export const PAGES: PageNode[] = [
   // Wohnmöbel spoke (cluster child): Raumteiler nach Maß (zoniert den Raum, frei stehend, von beiden Seiten nutzbar)
   { slug: "/wohnmoebel-nach-mass/raumteiler-nach-mass/", type: "product", silo: "wohnmoebel", audience: "privat", parent: "/wohnmoebel-nach-mass/", built: true, contentModule: "raumteiler-nach-mass" },
   { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
+  // HWR spoke (cluster child): Waschmaschinenschrank nach Maß (Waschmaschine + Trockner verbaut)
+  { slug: "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/", type: "product", silo: "hauswirtschaftsraum", audience: "privat", parent: "/hauswirtschaftsraum/", built: true, contentModule: "waschmaschinenschrank-nach-mass" },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-planen" },
@@ -486,6 +488,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Hauswirtschaftsraum nach Maß", "HWR nach Maß", "Waschküche nach Maß"],
     brand: ["Fast Systemmöbel Hauswirtschaftsraum"],
     descriptive: ["Hauswirtschaftsraum planen und einrichten", "zum Hauswirtschaftsraum-Bereich"],
+  },
+  "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/": {
+    exact: ["Waschmaschinenschrank nach Maß"],
+    partial: ["maßgefertigter Waschmaschinenschrank", "Waschmaschinenschrank vom Tischler", "Schrank für Waschmaschine und Trockner", "Waschturm-Schrank nach Maß"],
+    brand: ["Fast Systemmöbel Waschmaschinenschrank"],
+    descriptive: ["Waschmaschine und Trockner im Schrank verbauen", "Waschmaschinenschrank planen"],
   },
   "/einbauschraenke-nach-mass/": {
     exact: ["Einbauschränke nach Maß"],

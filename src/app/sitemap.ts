@@ -29,6 +29,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/wohnmoebel-nach-mass/wohnwand-nach-mass/", priority: 0.7 },
   { path: "/wohnmoebel-nach-mass/raumteiler-nach-mass/", priority: 0.7 },
   { path: "/hauswirtschaftsraum/", priority: 0.8 },
+  { path: "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/", priority: 0.7 },
   { path: "/gewerbe/", priority: 0.8 },
   { path: "/ladenbau/", priority: 0.8 },
   { path: "/bueroeinrichtung/", priority: 0.8 },

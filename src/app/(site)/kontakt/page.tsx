@@ -42,6 +42,11 @@ const KONTAKT_FAQ_ITEMS = [
       "Ja. Das Erstgespräch, die Bedarfsklärung und eine unverbindliche Einschätzung sind für Sie kostenfrei.",
   },
   {
+    question: "Was sollte ich für das Gespräch vorbereiten?",
+    answer:
+      "Ein paar Fotos des Raums, grobe Maße und eine Vorstellung davon, was hinein soll, reichen für den Anfang. Alles Weitere klären wir im Gespräch und beim Aufmaß. Für einen [maßgefertigten Waschmaschinenschrank](/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/) helfen zusätzlich das Gerätemodell und die Lage der Anschlüsse.",
+  },
+  {
     question: "Kann ich mir vorher fertige Projekte ansehen?",
     answer:
       "Ja. In unseren [Referenzprojekten](/referenzen/) finden Sie realisierte Küchen, Möbel nach Maß und Gewerbeeinrichtungen – hilfreich, um konkrete Vorstellungen mitzubringen.",
