@@ -13,7 +13,7 @@ export const kuechenHero = {
   imageAlt: "Moderne Küche nach Maß mit grifflosen Fronten und Kochinsel",
   title: "Küchen nach Maß, zentimetergenau aus Espelkamp",
   intro:
-    "Wir planen und bauen Ihre Küche nach Maß — zentimetergenau auf Ihren Raum zugeschnitten. Vom Aufmaß bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp.",
+    "Wir planen und bauen Ihre Küche nach Maß wie ein Tischler: zentimetergenau auf Ihren Raum zugeschnitten, vom Aufmaß bis zur Montage aus einer Hand. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert im Umkreis von rund 200 km.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -73,7 +73,7 @@ export const kuechenCtas = {
 export const kuechenProcess = {
   heading: "Ihre Küche, alles aus einer Hand",
   paragraph:
-    "Erst beraten wir und nehmen vor Ort kostenlos Maß. Dann planen wir in 3D, mit Geräten, Anschlüssen und Laufwegen, und Sie sehen Ihre Küche, bevor das erste Bauteil entsteht. Nach Ihrer Freigabe fertigen wir auf Homag-Technik in Espelkamp, montiert wird zum verbindlichen Termin von unserem eigenen Team. Ein Ansprechpartner von der Beratung bis zur Abnahme.",
+    "Erst beraten wir und nehmen vor Ort kostenlos Maß. Dann [planen wir Ihre Küche in 3D](/kuechen-nach-mass/kueche-planen/), mit Geräten, Anschlüssen und Laufwegen, und Sie sehen Ihre Küche, bevor das erste Bauteil entsteht. Nach Ihrer Freigabe fertigen wir auf Homag-Technik in Espelkamp, montiert wird zum verbindlichen Termin von unserem eigenen Team. Ein Ansprechpartner von der Beratung bis zur Abnahme.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
   imageAlt: "Maßgefertigte Küche in Grau mit Kochinsel",
@@ -117,7 +117,7 @@ export const kuechenTypische = {
     {
       title: "Stauraum nach Maß",
       description:
-        "Apothekerauszüge, Eckschränke und Vorratsschränke bis unter die Decke. Auch unter Dachschrägen und in Nischen wird jeder Zentimeter nutzbar. Was in der Küche keinen Platz findet, ordnet ein [Hauswirtschaftsraum nach Maß](/hauswirtschaftsraum/) gleich nebenan.",
+        "Apothekerauszüge, Eckschränke und Vorratsschränke bis unter die Decke. Auch in einer [Küche mit Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/) und in Nischen wird jeder Zentimeter nutzbar. Was in der Küche keinen Platz findet, ordnet ein [Hauswirtschaftsraum nach Maß](/hauswirtschaftsraum/) gleich nebenan.",
     },
   ],
 };
@@ -191,6 +191,11 @@ export const kuechenFaq = {
       question: "Wie lange dauert es von der Planung bis zur fertigen Küche?",
       answer:
         "Nach Beratung und kostenlosem Aufmaß planen wir Ihre Küche, Sie geben sie frei, dann fertigen wir in Espelkamp. Den verbindlichen Termin für Lieferung und Montage legen wir nach dem Aufmaß und Ihrer Freigabe gemeinsam fest, noch bevor die Produktion startet. So wissen Sie früh, wann Ihre Küche steht.",
+    },
+    {
+      question: "Montieren Sie Küchen auch bei mir in der Nähe?",
+      answer:
+        "Aufmaß und Montage übernehmen wir mit unserem eigenen Team im Umkreis von rund 200 km um Espelkamp, zum Beispiel in Minden, Lübbecke, Osnabrück, Bielefeld und ganz Ostwestfalen-Lippe. Liegt Ihr Ort weiter weg, fragen Sie uns einfach an. Wir sagen Ihnen ehrlich, was bei Ihnen möglich ist.",
     },
     {
       question: "Passt eine Küche nach Maß auch in einen schwierigen Grundriss oder unter eine Dachschräge?",
