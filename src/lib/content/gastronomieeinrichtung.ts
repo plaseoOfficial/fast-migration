@@ -21,7 +21,7 @@ export const gastroHero = {
     "Gastraum mit langen Holztischen, Polsterstühlen und gerahmter Bilderwand",
   title: "Gastronomieeinrichtung nach Maß aus Espelkamp",
   intro:
-    "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß: Theken, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team in OWL und bundesweit geliefert.",
+    "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß: Theken und Tresen, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team im Umkreis von rund 200 km und bundesweit geliefert.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
@@ -134,16 +134,16 @@ export const gastroUsp = {
 };
 
 export const gastroTypische = {
-  heading: "Was wir für die Gastronomie fertigen",
+  heading: "Thekenbau, Sitzbänke und mehr: Was wir für die Gastronomie fertigen",
   image1: "/images/gastronomie/gastronomieeinrichtung-arminia-loge-sitzbank.jpg",
   image1Alt: "Gepolsterte Sitzbank mit zwei Hochtischen in der Lounge-Ecke einer Stadionloge",
   image2: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
   image2Alt: "Wandbank mit Tischen und Leuchten in einem Gastraum",
   row1: [
     {
-      title: "Thekenbau und Bartresen nach Maß",
+      title: "Thekenbau für die Gastronomie: Theke und Bartresen nach Maß",
       description:
-        "Der Mittelpunkt im Service. Vom Empfangstresen bis zur Bar ist der Tresenbau unser Handwerk: Wir bauen die Theke als Möbelstück mit robusten Oberflächen und durchdachtem Stauraum und arbeiten Aussparungen für Ihre Technik millimetergenau ein. So hat jede Bewegung hinter der Theke ihren Platz, von der Kasse bis zum Gläserregal.",
+        "Die Theke ist der Mittelpunkt im Service, und sie muss genau in Ihren Raum passen. Vom Empfangstresen bis zur Bar ist der Thekenbau unser Handwerk: Wir bauen die Theke als Möbelstück mit robusten Oberflächen und durchdachtem Stauraum und arbeiten Aussparungen für Ihre Technik millimetergenau ein. Ob einzelner Bartresen oder Theke mit Rückbuffet, so hat jede Bewegung hinter der Theke ihren Platz, von der Kasse bis zum Gläserregal. Ein Beispiel aus unserer Werkstatt ist die Theke mit Wandborden und Sitzbank für eine Loge im Stadion von Arminia Bielefeld, mehr dazu in unseren [Referenzen](/referenzen/).",
     },
     {
       title: "Rückbuffet und Buffettheke",
@@ -201,7 +201,7 @@ export const gastroGeschichte = {
   ],
   paragraphs: [
     "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation und fertigt auf über 1.000 m² mit moderner CNC-Technik.",
-    "In Ostwestfalen-Lippe haben wir bereits Gastronomiebetriebe eingerichtet, vom einzelnen Bartresen bis zur Hoteleinrichtung mit [Möbeln in Serie](/serienmoebel/). Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke, Wandborde und Sitzbank gebaut. Weitere Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
+    "Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke, Wandborde und Sitzbank gebaut. Hotels stattet unsere Serienfertigung mit [Möbeln in Serie](/serienmoebel/) aus. Weitere Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
   ],
 };
 
@@ -279,6 +279,21 @@ export const gastroTestimonialsHeading = "Was unsere Gastronomiekunden sagen";
 export const gastroFaq = {
   heading: "Häufige Fragen zur Gastronomieeinrichtung nach Maß",
   items: [
+    {
+      question: "Wer fertigt Theken, Sitzbänke und Hotelmöbel nach Maß für Restaurants und Hotels?",
+      answer:
+        "Das machen wir bei Fast Systemmöbel: Wir sind ein Meisterbetrieb aus Espelkamp und bauen Theken, Tresen, Rückbuffets, Sitzbänke und Hotelmöbel nach Maß für Gastronomie und Hotellerie. Von Beratung und kostenlosem Aufmaß über die 3D-Planung bis zur Montage durch unser eigenes Team läuft alles aus einer Hand. Montiert wird im Umkreis von rund 200 km um Espelkamp, geliefert wird bundesweit.",
+    },
+    {
+      question: "Lohnt sich Maßanfertigung auch, wenn ich nur eine einzelne Theke brauche?",
+      answer:
+        "Ja. Wir bauen vom einzelnen Bartresen bis zur kompletten Einrichtung. Gerade bei der Theke zahlt sich Maß aus, weil Wand, Laufwege und Ihre Technik für Kühlung, Zapfanlage oder Spüle genau zusammenpassen müssen. Länge, Höhe und Aussparungen legen wir nach dem kostenlosen Aufmaß mit Ihnen fest, nicht nach einem Katalogmaß.",
+    },
+    {
+      question: "Haben Sie schon eine Gastro-Theke gebaut, die ich mir ansehen kann?",
+      answer:
+        "Ein Beispiel finden Sie in unseren [Referenzen](/referenzen/): Für eine Loge im Stadion von Arminia Bielefeld haben wir eine Theke mit Unterschränken, zwei beleuchtete Wandborde und eine Sitzbank gebaut. Weitere Fragen zu Ihrem Raum besprechen wir gern bei einem Gespräch oder beim Aufmaß.",
+    },
     {
       question: "Was kostet eine Gastronomieeinrichtung nach Maß?",
       answer:
