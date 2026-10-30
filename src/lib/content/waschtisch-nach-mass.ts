@@ -311,7 +311,7 @@ export const wtKosten = {
 export const wtMoebelplaner = {
   heading: "Ihren Waschtisch online vorplanen, den Rest übernehmen wir",
   body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Material und Becken vorab und bekommen ein Gefühl für Ihren Waschtisch. Er ersetzt kein Aufmaß und nennt keinen Sofortpreis. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
+    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Material und Becken vorab und bekommen ein Gefühl für Ihren Waschtisch. Einen ersten Möbelpreis sehen Sie dort gleich mit, Lieferung und Montage kommen dazu. Ein Aufmaß ersetzt der Planer nicht. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,

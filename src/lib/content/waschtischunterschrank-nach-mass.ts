@@ -259,7 +259,7 @@ export const wuKosten = {
 export const wuMoebelplaner = {
   heading: "Ihren Unterschrank online vorplanen, den Rest machen wir",
   body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Auszüge selbst und bekommen ein Gefühl für Ihren Unterschrank. Der Konfigurator ersetzt kein Aufmaß und nennt keinen Sofortpreis. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
+    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Auszüge selbst und bekommen ein Gefühl für Ihren Unterschrank. Der Konfigurator ersetzt kein Aufmaß, zeigt aber schon einen ersten Möbelpreis. Lieferung und Montage kommen dazu. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,
