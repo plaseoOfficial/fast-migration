@@ -259,7 +259,7 @@ export const bsKosten = {
 export const bsMoebelplaner = {
   heading: "Ihren Badschrank online vorplanen, den Rest übernehmen wir",
   body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Aufteilung vorab und bekommen ein erstes Gefühl für Ihren Badschrank. Ein Aufmaß ersetzt er nicht, einen Sofortpreis nennt er auch nicht. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
+    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Aufteilung vorab und bekommen ein erstes Gefühl für Ihren Badschrank. Ein Aufmaß ersetzt er nicht, einen ersten Möbelpreis zeigt er aber schon, zuzüglich Lieferung und Montage. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,

@@ -175,7 +175,7 @@ export const suGeschichte = {
   subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
   anchorImage: `${IMG}/team-meisterbetrieb-fast-espelkamp.jpg`,
   anchorImageAlt:
-    "Fast Systemmöbel: Meisterbetrieb für Möbel nach Maß aus Espelkamp, seit 1996",
+    "Drei Männer aus dem Team von Fast Systemmöbel vor einem hellen Rolltor",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },

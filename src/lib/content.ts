@@ -49,7 +49,7 @@ export const QUALITY_IMAGES = [
 export const PARALLAX_BG = "/images/2025/11/IMG_2673-scaled.jpg";
 
 export const HANDWERK_STATS: CounterStat[] = [
-  { value: "30", suffix: "+", label: "Jahre Maßanfertigung – im Meisterbetrieb seit 1996" },
+  { value: "30", suffix: "+", label: "Jahre Maßanfertigung – seit 1996" },
   { value: "4000", suffix: "+", label: "realisierte Wohn- und Geschäftsräume in OWL" },
   { value: "72.000", suffix: "+", label: "gefertigte Einzelteile aus eigener Werkstatt" },
 ];

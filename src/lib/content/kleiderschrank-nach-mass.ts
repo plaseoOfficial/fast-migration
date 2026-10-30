@@ -259,7 +259,7 @@ export const klKosten = {
 export const klMoebelplaner = {
   heading: "Ihren Kleiderschrank online vorplanen, den Rest übernehmen wir",
   body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Einteilung vorab und bekommen ein Gefühl für Ihren Schrank. Er ersetzt kein Aufmaß und nennt keinen Sofortpreis. Aufmaß, die technische 3D-Planung, Fertigung und Montage übernehmen wir.",
+    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Einteilung vorab und bekommen ein Gefühl für Ihren Schrank. Er zeigt Ihnen schon einen ersten Möbelpreis, Lieferung und Montage kommen dazu. Ein Aufmaß ersetzt er nicht. Aufmaß, die technische 3D-Planung, Fertigung und Montage übernehmen wir.",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,

@@ -95,7 +95,7 @@ export default function MoebelplanerPage() {
 
       <MpSchritte />
       <MpIntro />
-      <TestimonialsSection heading="Meisterbetrieb aus Espelkamp seit 1996" />
+      <TestimonialsSection heading="Meisterbetrieb aus Espelkamp" />
 
       {/* Final CTA (beige) */}
       <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
