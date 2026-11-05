@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 38,
-    "pagesPlanned": 5,
-    "linksFound": 568,
+    "pagesBuilt": 39,
+    "pagesPlanned": 6,
+    "linksFound": 586,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 1,
-      "Hinweis": 20
+      "Hinweis": 22
     }
   },
   "external": {
@@ -128,6 +128,16 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/bueroplanung.ts"
+        }
+      ],
+      "/ratgeber/holzarten-materialien-moebel/": [
+        {
+          "href": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R1464",
+          "host": "eur-lex.europa.eu",
+          "anchor": "Verordnung (EU) 2023/1464",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/holzarten-materialien-moebel.ts"
         }
       ]
     }
@@ -266,6 +276,17 @@
       "message": "/referenzen/: Linktext „Umkleidekabinen für Arminia Bielefeld\" → `/serienmoebel/` enthält keinen Begriff des Ziels.",
       "file": "src/lib/content/referenzen.ts",
       "href": "/serienmoebel/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "muss-backlog",
+      "message": "/ratgeber/holzarten-materialien-moebel/: MUSS-Link `parent` noch blockiert (Ziel ungebaut). Aufwärtslink zum Cluster-Pillar (Breadcrumb)",
+      "page": "/ratgeber/holzarten-materialien-moebel/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "backlog",
+      "message": "Im Backlog erwähnte, jetzt gebaute Ziele (Verlinkung prüfen): `/badmoebel-nach-mass/`."
     }
   ]
 }

@@ -341,7 +341,7 @@ export const badFaq = {
     {
       question: "Welches Material eignet sich für Badmöbel im Feuchtraum, Massivholz oder MDF?",
       answer:
-        "Beides, wenn es sauber verarbeitet ist. Wir fertigen aus Massivholz genauso wie aus lackiertem MDF und beschichteten Platten, je nach Optik und Budget. Entscheidend im Feuchtraum ist der Kantenschutz. Bei uns heißt das PU-Kantenverleimung, sie verschließt die Schnittkanten fugenlos. Wasserfest versprechen wir nicht, aber so gebaut halten die Möbel der alltäglichen Feuchte im Bad über Jahre stand. Welches Material zu Ihnen passt, klären wir in der Beratung.",
+        "Beides, wenn es sauber verarbeitet ist. Wir fertigen aus Massivholz genauso wie aus lackiertem MDF und beschichteten Platten, je nach Optik und Budget. Entscheidend im Feuchtraum ist der Kantenschutz. Bei uns heißt das PU-Kantenverleimung, sie verschließt die Schnittkanten fugenlos. Wasserfest versprechen wir nicht, aber so gebaut halten die Möbel der alltäglichen Feuchte im Bad über Jahre stand. Den [Vergleich von Massivholz, MDF und Spanplatte](/ratgeber/holzarten-materialien-moebel/) zeigt unser Ratgeber.",
     },
     {
       question: "Kann man Badmöbel für ein kleines Bad oder eine Nische maßanfertigen lassen?",
