@@ -38,6 +38,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/gastronomieeinrichtung/", priority: 0.8 },
   { path: "/serienmoebel/", priority: 0.8 },
   { path: "/praxiseinrichtung/", priority: 0.8 },
+  { path: "/ratgeber/holzarten-materialien-moebel/", priority: 0.6 },
   { path: "/leistungen/", priority: 0.7 },
   { path: "/ueber-uns/", priority: 0.6 },
   { path: "/referenzen/", priority: 0.7 },

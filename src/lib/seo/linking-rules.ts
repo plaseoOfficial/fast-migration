@@ -126,6 +126,13 @@ export const PAGES: PageNode[] = [
   { slug: "/liefergebiet-montage/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
   { slug: "/faq/", type: "brand", silo: "", audience: "neutral", parent: "/", built: false },
 
+  // Ratgeber-Artikel unter /ratgeber/<slug>/ (Strategie v2 §6). Der Index /ratgeber/
+  // ist geparkt, bis 5+ Artikel live sind; bis dahin ist der Parent-MUSS Backlog und
+  // die Breadcrumb nennt „Ratgeber" nur als Text. `neutral`, weil ein Material-Ratgeber
+  // in mehrere Privat-Cluster verlinkt und nicht als Leistung auf /leistungen/ erscheint.
+  { slug: "/ratgeber/", type: "pillar-hub", silo: "ratgeber", audience: "neutral", parent: "/", built: false },
+  { slug: "/ratgeber/holzarten-materialien-moebel/", type: "ratgeber-pillar", silo: "ratgeber", audience: "neutral", parent: "/ratgeber/", built: true, contentModule: "holzarten-materialien-moebel" },
+
   // Legal (outside content hierarchy)
   { slug: "/impressum/", type: "legal", silo: "", audience: "neutral", parent: "/", built: true },
   { slug: "/datenschutz/", type: "legal", silo: "", audience: "neutral", parent: "/", built: true },
@@ -542,6 +549,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["maßgefertigte Büromöbel", "individuelle Büromöbel"],
     brand: ["Büromöbel von Fast Systemmöbel"],
     descriptive: ["unser Büromöbel-Programm", "zu den Büromöbeln nach Maß"],
+  },
+  "/ratgeber/holzarten-materialien-moebel/": {
+    exact: ["Holzarten für Möbel"],
+    partial: ["Holzarten im Vergleich", "Massivholz, MDF und Spanplatte im Vergleich", "Möbelholz und Plattenwerkstoffe"],
+    brand: ["Fast Systemmöbel Holzarten-Ratgeber"],
+    descriptive: ["welches Holz zu welchem Möbel passt", "Ratgeber Holzarten und Materialien"],
   },
 };
 

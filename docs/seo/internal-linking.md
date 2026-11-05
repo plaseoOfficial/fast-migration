@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
 
 ## Rules (condensed)
 
@@ -98,6 +98,8 @@ Externe Links aus dem **Inhalt** (Content-Module) sind Belege, keine Deko. Socia
 | Gewerbe clusters (FaqSection "Zum FAQ", currently `#`) | `/faq/` | SOLL | `/faq/` built |
 | Gewerbe clusters | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | City pages (`/einsatzgebiete/*` or flat city×service) | relevant clusters | new silo | city pages migrated/built |
+| `/ratgeber/holzarten-materialien-moebel/` (Breadcrumb „Ratgeber", heute nur Text) | `/ratgeber/` | MUSS (parent, Breadcrumb + Up-Link) | Ratgeber-Index gebaut (geparkt bis 5+ Artikel live) |
+| `/ratgeber/holzarten-materialien-moebel/` (FAQ „Holz im Bad", Anker „Badmöbel vom Tischler") | `/badmoebel-nach-mass/badmoebel-massivholz/` statt `/badmoebel-nach-mass/`; Rücklink Anker „Badmöbel aus Massivholz" | SOLL (Material-Deep-Dive) | Badmöbel-Massivholz-Seite gebaut |
 
 ### ⚠️ Interim retargets — REVERT when the real target page ships
 
@@ -111,6 +113,19 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/ratgeber/holzarten-materialien-moebel/` launch (2026-11)
+
+- **Erster Ratgeber-Artikel unter `/ratgeber/<slug>/`** (Strategie v2 §6): `type: "ratgeber-pillar"`,
+  `silo: "ratgeber"`, `audience: "neutral"`, `parent: "/ratgeber/"` (Index als `built: false` im Graph,
+  Parent-MUSS läuft als Backlog). `ANCHORS`-Set + `sitemap.ts` (prio 0.6). Breadcrumb „Ratgeber" ohne Link.
+- **Ausgehend:** `/moebel-nach-mass/`, `/kuechen-nach-mass/`, `/einbauschraenke-nach-mass/kleiderschrank-nach-mass/`,
+  `/wohnmoebel-nach-mass/buecherregal-nach-mass/`, `/badmoebel-nach-mass/`, `/moebelplaner/`, `/kontakt/`
+  + 1 Beleg auf eur-lex (Verordnung (EU) 2023/1464). Kein Geschwister gebaut ⇒ keine Geschwister-Pflicht.
+- **Eingehend (MIN_INBOUND 3):** `/badmoebel-nach-mass/` (FAQ Feuchtraum-Material, „Vergleich von Massivholz,
+  MDF und Spanplatte") · `/wohnmoebel-nach-mass/buecherregal-nach-mass/` (UspHighlight Material, „Massivholz, MDF
+  oder beschichteten Platten") · `/einbauschraenke-nach-mass/kleiderschrank-nach-mass/` (FAQ Materialien,
+  „Ratgeber Holzarten und Materialien").
 
 ### `/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/` launch (2026-10-29)
 
