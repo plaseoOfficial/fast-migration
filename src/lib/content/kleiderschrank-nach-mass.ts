@@ -314,7 +314,7 @@ export const klFaq = {
     {
       question: "Welche Materialien und Fronten stehen zur Auswahl?",
       answer:
-        "Korpus und Fronten aus Massivholz oder aus furnierten und beschichteten Platten, die Kanten fugenlos PU-verleimt. Fronten wählen Sie als Dekor, Echtholzfurnier oder Lack in matt und hochglanz. Muster zeigen wir Ihnen in Ruhe in der Beratung.",
+        "Korpus und Fronten aus Massivholz oder aus furnierten und beschichteten Platten, die Kanten fugenlos PU-verleimt. Fronten wählen Sie als Dekor, Echtholzfurnier oder Lack in matt und hochglanz. Muster zeigen wir Ihnen in Ruhe in der Beratung. Was die Materialien unterscheidet, erklärt unser [Ratgeber Holzarten und Materialien](/ratgeber/holzarten-materialien-moebel/).",
     },
     {
       question: "Lohnt sich ein Kleiderschrank nach Maß gegenüber einem Schrank von der Stange?",

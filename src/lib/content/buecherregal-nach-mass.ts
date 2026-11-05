@@ -174,7 +174,7 @@ export const buchMaterial = {
   eyebrow: "Material und Ausstattung",
   heading: "Massives Holz, saubere Kanten, verstellbare Böden",
   body:
-    "Korpus und Böden fertigen wir aus Massivholz, MDF oder beschichteten Platten; was zu Optik, Budget und Statik passt, klären wir im Beratungsgespräch. Die Einlegeböden sitzen auf einer Lochreihe im 32-mm-Raster und lassen sich jederzeit versetzen. Alle Kanten verschließen wir fugenlos mit PU-Kantenverleimung, feuchtigkeitsbeständig. LED, Türen oder eine Regalleiter für deckenhohe Fächer planen wir auf Wunsch ein.",
+    "Korpus und Böden fertigen wir aus [Massivholz, MDF oder beschichteten Platten](/ratgeber/holzarten-materialien-moebel/); was zu Optik, Budget und Statik passt, klären wir im Beratungsgespräch. Die Einlegeböden sitzen auf einer Lochreihe im 32-mm-Raster und lassen sich jederzeit versetzen. Alle Kanten verschließen wir fugenlos mit PU-Kantenverleimung, feuchtigkeitsbeständig. LED, Türen oder eine Regalleiter für deckenhohe Fächer planen wir auf Wunsch ein.",
   image: "/images/einbauschraenke/einbauschrank-nach-mass-anthrazit-fenster.jpg",
   imageAlt: "Bücherregal nach Maß mit verstellbaren Böden und fugenlosen Kanten an einer Fensterwand",
 };
