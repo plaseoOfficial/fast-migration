@@ -373,10 +373,10 @@ export const ladenKosten = {
  * `<MnmMoebelplaner {...ladenMoebelplaner} />` (analog gastronomieeinrichtung).
  */
 export const ladenMoebelplaner = {
-  heading: "Ihre Ladeneinrichtung online vorab planen",
+  heading: "Ihr Gespräch zur Ladeneinrichtung vorbereiten",
   body:
-    "Im Möbelplaner stellen Sie einzelne Elemente Ihrer Ladeneinrichtung selbst zusammen, etwa Theke, Regale und Anordnung. Maße, Oberflächen, Fronten und Auszüge sehen Sie direkt im 3D-Konfigurator, so bekommen Sie schnell eine erste Orientierung für Ihre Fläche. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung zu Material und Corporate Design, Fertigung und Montage. Aus Ihrer Online-Planung wird eine Ladeneinrichtung nach Maß. Sie möchten lieber gleich sprechen? Dann [fordern Sie ein Angebot an](/kontakt/), oder Sie erreichen uns telefonisch unter 05771 9138312.",
-  ctaLabel: "Ladeneinrichtung selbst planen",
+    "Im Möbelplaner halten Sie erste Ideen fest, etwa für Schränke, und senden sie uns. Verkaufstheke, Wandregale und Anordnung auf Ihrer Fläche planen wir nach dem kostenlosen Aufmaß vor Ort persönlich mit Ihnen. Lieber gleich sprechen? [Fordern Sie ein Angebot an](/kontakt/) oder rufen Sie an: 05771 9138312.",
+  ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: "/images/ladenbau/ladenbau-obst-gemuese-abteilung-kunden.jpg",
   imageAlt:
@@ -502,7 +502,7 @@ export const ladenFaq = {
     {
       question: "Kann ich meine Ladeneinrichtung vorab selbst planen?",
       answer:
-        "Ja. Im Möbelplaner können Sie Ihre Ideen für Theke, Regale und Anordnung selbst anlegen und uns als Grundlage fürs Gespräch schicken. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
+        "Zum Teil. Unser Möbelplaner ist für Schränke, Küche, Bad und Wohnmöbel gedacht. Dort skizzieren Sie erste Ideen und senden uns daraus eine Anfrage. Verkaufstheke und Wandregale samt Anordnung im Laden planen wir mit Ihnen nach dem kostenlosen Aufmaß vor Ort. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
     },
   ],
 };

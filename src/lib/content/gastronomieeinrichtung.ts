@@ -269,7 +269,7 @@ export const gastroWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Möbelplaner",
     description:
-      "Einzelne Elemente wie Theken oder Schränke online konfigurieren: Maße, Oberflächen und Fronten direkt im 3D-Konfigurator sichtbar.",
+      "Schränke online konfigurieren und als Anfrage senden: Maße, Oberflächen und Fronten direkt im 3D-Konfigurator sichtbar.",
     href: "/moebelplaner/",
   },
 ];
