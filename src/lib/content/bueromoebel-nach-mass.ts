@@ -6,7 +6,7 @@
  * hero/intro/planner sections. Winkel laut Cluster-Map buero.md: das komplette
  * Büromöbel-PROGRAMM aus einer Werkstatt (Einzelstücke + ein Stil), NICHT die
  * Planungs-Dienstleistung (→ /bueroeinrichtung/bueroplanung/, verlinkt) und NICHT
- * die Schrank-Innenleben-Tiefe (→ bueroschraenke-nach-mass, noch nicht gebaut).
+ * die Schrank-Innenleben-Tiefe (→ /bueroeinrichtung/bueroschraenke-nach-mass/, verlinkt).
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, B2B, Sie-Form, keine
  * em-dashes). Fakten gegen docs/seo/brand/FACTS.md + kundenwissen.md geprüft:
@@ -104,7 +104,7 @@ export const bmMoebeltypen = {
     },
     {
       title: "Aktenschrank und Büroschrank",
-      body: "Aktenschrank und Büroschrank nach Maß, die jeden Meter Wand nutzen, vom niedrigen Ordnerschrank bis zur raumhohen Schrankwand, auf Wunsch mit abschließbaren Fächern.",
+      body: "Aktenschrank und Büroschrank nach Maß, die jeden Meter Wand nutzen, vom niedrigen Ordnerschrank bis zur raumhohen Schrankwand, auf Wunsch mit abschließbaren Fächern. Wie wir sie vom Aktenbestand aus planen, zeigen unsere [Büroschränke nach Maß](/bueroeinrichtung/bueroschraenke-nach-mass/).",
     },
     {
       title: "Sideboard und Lowboard",

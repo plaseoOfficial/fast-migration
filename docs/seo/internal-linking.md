@@ -114,6 +114,12 @@ When the proper target page is built, repoint them (and drop this row):
 
 ## Done (wired)
 
+### `/bueroeinrichtung/bueroschraenke-nach-mass/` launch (2026-11)
+
+- **Produkt-Kind unter `/bueroeinrichtung/`**, `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7). Nicht in Nav/Footer (wie die Geschwister).
+- **Eingehend (3 Inhaltsquellen):** `/bueroeinrichtung/` (Karte „Aktenschränke & Stauraum nach Maß", MUSS `own-cluster-spokes`, Pillar-Budget damit 10/10 voll) · `/bueroeinrichtung/bueromoebel-nach-mass/` (Karte „Aktenschrank und Büroschrank", Geschwister-Rücklink) · `/referenzen/` (Karte „Sideboard-Stauraum in Betonoptik", vorher → bueromoebel; Titel um „Stauraum" ergänzt, behebt den anker-relevanz-Hinweis).
+- **Ausgehend (6 von 7):** ↑ `/bueroeinrichtung/` (Breadcrumb + IntroStats) · Geschwister `/bueroeinrichtung/bueromoebel-nach-mass/` (Bauform-Karte) + `/bueroeinrichtung/bueroplanung/` (Prozessschritt 1) · `/moebelplaner/` · `/kontakt/` · Beleg EUR-Lex (Art. 32 DSGVO). Platz 7 ist für den Rücklink aus dem Ratgeber `/bueroeinrichtung/konferenzraum-einrichten/` reserviert; `/referenzen/` (SOLL) bleibt deshalb offen.
+
 ### `/ratgeber/holzarten-materialien-moebel/` launch (2026-11)
 
 - **Erster Ratgeber-Artikel unter `/ratgeber/<slug>/`** (Strategie v2 §6): `type: "ratgeber-pillar"`,

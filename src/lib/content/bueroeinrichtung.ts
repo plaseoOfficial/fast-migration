@@ -116,7 +116,7 @@ export const bueroTypische = {
     {
       title: "Aktenschränke & Stauraum nach Maß",
       description:
-        "Büro- und Aktenschränke nach Maß, die jeden Meter Wand nutzen. Vom Ordnerschrank über den Rollcontainer bis zur raumhohen Regalwand, passgenau auf Ihre Räume und Aktenmengen zugeschnitten, auf Wunsch mit abschließbaren Fächern für vertrauliche Unterlagen.",
+        "Büro- und Aktenschränke nach Maß, die jeden Meter Wand nutzen. Vom Ordnerschrank über den Rollcontainer bis zur raumhohen Regalwand, passgenau auf Ihre Räume und Aktenmengen zugeschnitten, als [Aktenschrank nach Maß](/bueroeinrichtung/bueroschraenke-nach-mass/) auf Wunsch mit abschließbaren Fächern für vertrauliche Unterlagen.",
     },
     {
       title: "Konferenz- & Besprechungstische nach Maß",

@@ -86,11 +86,11 @@ export const referenzenGrid = {
       imageAlt: "Schwebendes Sideboard nach Maß in Betonoptik in einem Büro",
       category: "Büroeinrichtung",
       categoryKey: "buero",
-      title: "Sideboard in Betonoptik",
+      title: "Sideboard-Stauraum in Betonoptik",
       meta: "Gewerbe · Büro",
       description:
         "Ein schwebendes Sideboard in Betonoptik mit dunkler Stirnseite – als ruhiger Stauraum im Büro, exakt auf die Wand und den Raum abgestimmt.",
-      href: "/bueroeinrichtung/bueromoebel-nach-mass/",
+      href: "/bueroeinrichtung/bueroschraenke-nach-mass/",
     },
     {
       image: "/images/2025/11/20161103_150622294_iOS-scaled.jpg",
