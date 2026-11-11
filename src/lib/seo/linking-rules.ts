@@ -111,6 +111,8 @@ export const PAGES: PageNode[] = [
   // Büro-Cluster: Produkt-Spokes unter dem Büroeinrichtung-Pillar (verschachtelte URLs)
   { slug: "/bueroeinrichtung/bueroplanung/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroplanung" },
   { slug: "/bueroeinrichtung/bueromoebel-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueromoebel-nach-mass" },
+  // Büro spoke (cluster child): Büroschränke nach Maß (Stauraum/Ablage, der Ordner als Maßgabe)
+  { slug: "/bueroeinrichtung/bueroschraenke-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroschraenke-nach-mass" },
 
   // Conversion + brand (neutral)
   { slug: "/moebelplaner/", type: "conversion", silo: "", audience: "neutral", parent: "/", built: true },
@@ -555,6 +557,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Holzarten im Vergleich", "Massivholz, MDF und Spanplatte im Vergleich", "Möbelholz und Plattenwerkstoffe"],
     brand: ["Fast Systemmöbel Holzarten-Ratgeber"],
     descriptive: ["welches Holz zu welchem Möbel passt", "Ratgeber Holzarten und Materialien"],
+  },
+  "/bueroeinrichtung/bueroschraenke-nach-mass/": {
+    exact: ["Büroschränke nach Maß"],
+    partial: ["Aktenschrank nach Maß", "Büroschrank nach Maß", "Ordnerschrank nach Maß", "maßgefertigte Büroschränke"],
+    brand: ["Büroschränke von Fast Systemmöbel"],
+    descriptive: ["Stauraum fürs Büro nach Maß", "zu den Büroschränken nach Maß"],
   },
 };
 
