@@ -5,7 +5,7 @@
  * Trockner VERBAUT, also der Schrank um die kundeneigenen Geräte: Bauform zur
  * Nische, Maße inkl. Anschlüsse, Technik (Wärme, Feuchte, Schwingung, Zugang),
  * Ausstattung, Kostenfaktoren. NICHT: HWR-Gesamtplanung (→ Ratgeber
- * `planen`, noch nicht gebaut), allgemeiner HWR-Schrank, Vorrat, Putzschrank.
+ * `planen`, verlinkt aus col1Body), allgemeiner HWR-Schrank, Vorrat, Putzschrank.
  *
  * Built from the Privat library sections plus shared sections (SpecTable ×3,
  * SegmentCards ×2, UspHighlight, ProcessSteps) so each section carries one topic
@@ -28,8 +28,8 @@
  * wortgleich übernommen, Chefredakteur pass=true. Danach nur zwei Eingriffe:
  * FAQ 6 „nennen wir nicht“ (optionaler Chef-Fix) und in col1Body der Satz mit
  * dem Link auf den Ratgeber `/hauswirtschaftsraum/planen/` entfernt, weil der
- * Ratgeber noch nicht gebaut ist. Mit dem Ratgeber-Paket beidseitig nachtragen
- * (Anker „Hauswirtschaftsraum planen“, Kit §7).
+ * Ratgeber noch nicht gebaut war. Mit dem Ratgeber-Paket (2026-11-12) wieder
+ * eingesetzt (Anker „Hauswirtschaftsraum planen“, Kit §7).
  */
 
 const SITE = "https://www.fast-systemmoebel.de";
@@ -62,7 +62,7 @@ export const wmsIntroStats = {
   bandAlt: "Garderobenschrank nach Maß in Anthrazit mit offener Kleidernische im Flur",
   col1Title: "Erst die Anschlüsse, dann der Schrank",
   col1Body:
-    "Wo Wasserhahn, Abfluss und Steckdose sitzen, bestimmt die Schranktiefe und die Aussparungen. Ist der Raum noch im Rohbau, legen Sie die Anschlüsse vor dem Innenausbau fest.",
+    "Wo Wasserhahn, Abfluss und Steckdose sitzen, bestimmt die Schranktiefe und die Aussparungen. Im Rohbau legen Sie die Anschlüsse vor dem Innenausbau fest, wie im Ratgeber [Hauswirtschaftsraum planen](/hauswirtschaftsraum/planen/) beschrieben.",
   col1CtaLabel: "Waschmaschinenschrank anfragen",
   col1CtaHref: "/kontakt/",
   col2Body:

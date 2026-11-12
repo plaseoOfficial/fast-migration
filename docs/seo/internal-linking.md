@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
 
 ## Rules (condensed)
 
@@ -126,6 +126,22 @@ When the proper target page is built, repoint them (and drop this row):
   MDF und Spanplatte") · `/wohnmoebel-nach-mass/buecherregal-nach-mass/` (UspHighlight Material, „Massivholz, MDF
   oder beschichteten Platten") · `/einbauschraenke-nach-mass/kleiderschrank-nach-mass/` (FAQ Materialien,
   „Ratgeber Holzarten und Materialien").
+
+### `/hauswirtschaftsraum/planen/` launch (2026-11-12)
+
+- **Ratgeber (cluster-article) unter `/hauswirtschaftsraum/`**, `built: true` + `contentModule: "planen"` +
+  `ANCHORS`-Set; `sitemap.ts` (0.7). Pillar-Anker „Hauswirtschaftsraum planen und einrichten“ in
+  „Hauswirtschaftsraum komplett einrichten“ umbenannt (passte zum Ratgeber, zeigte aber auf den Hub).
+- **Eingehend (4 Inhaltsquellen):** `/hauswirtschaftsraum/` (FAQ „Welche Anschlüsse …“, MUSS `own-cluster-spokes`) ·
+  `/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/` (IntroStats `col1Body`, Geschwister-Rücklink) ·
+  `/moebelplaner/` (FAQ „Welche Möbel kann ich im Planer konfigurieren?“) · `/kontakt/` (FAQ „Was sollte ich für das
+  Gespräch vorbereiten?“).
+- **Ausgehend (6 von 6):** ↑ `/hauswirtschaftsraum/` (Breadcrumb + Schritt 6 + Werkstatt-Block) · ↔
+  `/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/` (FAQ „Darf der Trockner auf die Waschmaschine?“) ·
+  `/moebelplaner/` · `/kontakt/` · Belege § 2 WoFlV (gesetze-im-internet.de) + Verbraucherzentrale.
+- **Backlog:** Vorratsschrank (Zone Vorrat), Besenschrank (Zone Reinigung), HWR-Schrank (Schritt 6) beim Bau
+  beidseitig mit dem Ratgeber verdrahten (Rücklink „Hauswirtschaftsraum planen“). Budget des Ratgebers ist voll
+  (6/6), also dann einen schwächeren Link tauschen.
 
 ### `/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/` launch (2026-10-29)
 
