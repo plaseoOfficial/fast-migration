@@ -64,9 +64,9 @@ const BEIGE = "rgba(203, 191, 181, 0.59)";
  * verlinkt nicht in den Gewerbe-Silo und nicht lateral zu Schwester-Clustern
  * (internal-linking.md Silo-Integrität). Der Up-Link zum Hub /moebel-nach-mass/
  * trägt einen keyword-reichen Anker. Die HWR-Kinder verlinkt das Content-Modul
- * im Fließtext (Waschmaschinenschrank: Verteiler-Karte in hwrTypische); die
- * übrigen Kinder sind noch nicht gebaut → keine Links (launch clean); beim Bau
- * im Content-Modul beidseitig nachverdrahten.
+ * im Fließtext (Waschmaschinenschrank: Verteiler-Karte in hwrTypische; Ratgeber
+ * planen: FAQ „Welche Anschlüsse …“); die übrigen Kinder sind noch nicht gebaut
+ * → keine Links (launch clean); beim Bau im Content-Modul beidseitig nachverdrahten.
  */
 const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
   {

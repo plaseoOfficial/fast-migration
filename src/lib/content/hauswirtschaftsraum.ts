@@ -12,9 +12,10 @@
  * Geräte werden nicht verkauft — Möbel entstehen um kundeneigene Geräte.
  *
  * Cluster-Kinder: Der Waschmaschinenschrank ist gebaut (2026-10-29) und aus der
- * Verteiler-Karte „Waschmaschine und Trockner verbaut“ verlinkt. Die übrigen
- * Kinder (HWR-Schrank / Vorratsschrank / Besenschrank / Ratgeber planen) sind
- * noch nicht gebaut (built:false) → im Verteiler nur beschreibend, ohne Links
+ * Verteiler-Karte „Waschmaschine und Trockner verbaut“ verlinkt, der Ratgeber
+ * `/hauswirtschaftsraum/planen/` (2026-11-12) aus der FAQ „Welche Anschlüsse …“.
+ * Die übrigen Kinder (HWR-Schrank / Vorratsschrank / Besenschrank) sind noch
+ * nicht gebaut (built:false) → im Verteiler nur beschreibend, ohne Links
  * (launch clean). Beim Bau der Spokes hier beidseitig nachverdrahten.
  *
  * Bilder: vorerst Platzhalter aus /images/einbauschraenke/ (Vorlage-Assets);
@@ -363,7 +364,7 @@ export const hwrFaq = {
     {
       question: "Welche Anschlüsse braucht ein Hauswirtschaftsraum?",
       answer:
-        "Für Waschmaschine und Trockner brauchen Sie Wasser, einen Abfluss und Strom, dazu eine Möglichkeit zur Belüftung gegen Feuchtigkeit. Wo diese Anschlüsse liegen, berücksichtigen wir beim Aufmaß und in der Planung. Die eigentlichen Elektro- und Sanitärarbeiten stimmen wir mit Ihnen und Ihrem Handwerker ab.",
+        "Für Waschmaschine und Trockner brauchen Sie Wasser, einen Abfluss und Strom, dazu eine Möglichkeit zur Belüftung gegen Feuchtigkeit. Wo diese Anschlüsse liegen, berücksichtigen wir beim Aufmaß und in der Planung. Die eigentlichen Elektro- und Sanitärarbeiten stimmen wir mit Ihnen und Ihrem Handwerker ab. Was wann feststehen muss, zeigt der Ratgeber [Hauswirtschaftsraum planen](/hauswirtschaftsraum/planen/).",
     },
     {
       question: "Wo sollte der Hauswirtschaftsraum idealerweise liegen?",

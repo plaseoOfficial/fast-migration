@@ -44,7 +44,7 @@ const KONTAKT_FAQ_ITEMS = [
   {
     question: "Was sollte ich für das Gespräch vorbereiten?",
     answer:
-      "Ein paar Fotos des Raums, grobe Maße und eine Vorstellung davon, was hinein soll, reichen für den Anfang. Alles Weitere klären wir im Gespräch und beim Aufmaß. Für einen [maßgefertigten Waschmaschinenschrank](/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/) helfen zusätzlich das Gerätemodell und die Lage der Anschlüsse.",
+      "Ein paar Fotos des Raums, grobe Maße und eine Vorstellung davon, was hinein soll, reichen für den Anfang. Für einen [maßgefertigten Waschmaschinenschrank](/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/) helfen Gerätemodell und Lage der Anschlüsse, für den ganzen HWR unsere [Checkliste für die HWR-Planung](/hauswirtschaftsraum/planen/). Alles Weitere klären wir beim Aufmaß.",
   },
   {
     question: "Kann ich mir vorher fertige Projekte ansehen?",

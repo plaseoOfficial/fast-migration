@@ -56,6 +56,24 @@
           "file": "src/lib/content/waschmaschinenschrank-nach-mass.ts"
         }
       ],
+      "/hauswirtschaftsraum/planen/": [
+        {
+          "href": "https://www.gesetze-im-internet.de/woflv/__2.html",
+          "host": "gesetze-im-internet.de",
+          "anchor": "§ 2 Wohnflächenverordnung",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/planen.ts"
+        },
+        {
+          "href": "https://www.verbraucherzentrale.de/wissen/energie/heizen-und-warmwasser/heizen-und-lueften-so-gehts-richtig-10426",
+          "host": "verbraucherzentrale.de",
+          "anchor": "Verbraucherzentrale",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/planen.ts"
+        }
+      ],
       "/kuechen-nach-mass/kueche-planen/": [
         {
           "href": "https://www.amk-ratgeber-kueche.de/kuechen/planen-gestalten/rueckenprobleme",

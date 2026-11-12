@@ -94,6 +94,8 @@ export const PAGES: PageNode[] = [
   { slug: "/hauswirtschaftsraum/", type: "cluster-pillar", silo: "hauswirtschaftsraum", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "hauswirtschaftsraum" },
   // HWR spoke (cluster child): Waschmaschinenschrank nach Maß (Waschmaschine + Trockner verbaut)
   { slug: "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/", type: "product", silo: "hauswirtschaftsraum", audience: "privat", parent: "/hauswirtschaftsraum/", built: true, contentModule: "waschmaschinenschrank-nach-mass" },
+  // HWR-Ratgeber (cluster-article): Hauswirtschaftsraum planen (Reihenfolge, Anschlüsse, Zonen, Fehler)
+  { slug: "/hauswirtschaftsraum/planen/", type: "cluster-article", silo: "hauswirtschaftsraum", audience: "privat", parent: "/hauswirtschaftsraum/", built: true, contentModule: "planen" },
   // Planned kuechen spokes (cluster→product/ratgeber MUSS, blocked until built)
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-planen" },
@@ -496,7 +498,13 @@ export const ANCHORS: Record<string, AnchorSet> = {
     exact: ["Hauswirtschaftsraum einrichten"],
     partial: ["Hauswirtschaftsraum nach Maß", "HWR nach Maß", "Waschküche nach Maß"],
     brand: ["Fast Systemmöbel Hauswirtschaftsraum"],
-    descriptive: ["Hauswirtschaftsraum planen und einrichten", "zum Hauswirtschaftsraum-Bereich"],
+    descriptive: ["Hauswirtschaftsraum komplett einrichten", "zum Hauswirtschaftsraum-Bereich"],
+  },
+  "/hauswirtschaftsraum/planen/": {
+    exact: ["Hauswirtschaftsraum planen"],
+    partial: ["HWR planen", "Hauswirtschaftsraum-Planung", "Waschküche planen"],
+    brand: ["Fast Systemmöbel HWR-Ratgeber"],
+    descriptive: ["so planen Sie Ihren Hauswirtschaftsraum", "Checkliste für die HWR-Planung"],
   },
   "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/": {
     exact: ["Waschmaschinenschrank nach Maß"],
