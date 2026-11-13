@@ -32,7 +32,7 @@ const DESCRIPTION =
   "Büroeinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Schreibtische, Aktenschränke und Konferenztische – alles aus einer Hand gefertigt und montiert.";
 
 export const metadata: Metadata = {
-  title: "Büroeinrichtung nach Maß aus Espelkamp: Büromöbel vom Meisterbetrieb",
+  title: "Büroeinrichtung nach Maß: Arbeitsplatz, Empfang & Konferenz",
   description: DESCRIPTION,
   alternates: { canonical: "/bueroeinrichtung/" },
   openGraph: {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Büroeinrichtung nach Maß aus Espelkamp: Büromöbel vom Meisterbetrieb",
+    title: "Büroeinrichtung nach Maß: Arbeitsplatz, Empfang & Konferenz",
     description: DESCRIPTION,
     url: "/bueroeinrichtung/",
     locale: "de_DE",

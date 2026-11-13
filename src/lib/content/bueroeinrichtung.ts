@@ -192,7 +192,7 @@ export const bueroGeschichte = {
 };
 
 export const bueroMoebelplaner = {
-  heading: "Ihre Büromöbel online planen und konfigurieren",
+  heading: "Ihr Büro online vorplanen und konfigurieren",
   body:
     "Stellen Sie Schränke und Büromöbel im 3D-Konfigurator online zusammen — Maße, Oberflächen und Einlegeböden direkt sichtbar. Den Rest übernehmen wir: Aufmaß, Fertigung, Montage. [Beratung anfragen](/kontakt/) oder direkt anrufen: 05771 9138312.",
   ctaLabel: "Zum Möbelplaner",
