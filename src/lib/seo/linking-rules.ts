@@ -526,7 +526,7 @@ export const ANCHORS: Record<string, AnchorSet> = {
   },
   "/bueroeinrichtung/": {
     exact: ["Büroeinrichtung"],
-    partial: ["Büromöbel nach Maß", "maßgefertigte Büroeinrichtung"],
+    partial: ["Büroeinrichtung nach Maß", "maßgefertigte Büroeinrichtung"],
     brand: ["Fast Systemmöbel Büroeinrichtung"],
     descriptive: ["Büros einrichten lassen", "zur Büroeinrichtung"],
   },
