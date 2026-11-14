@@ -1,8 +1,8 @@
 {
   "summary": {
-    "pagesBuilt": 40,
+    "pagesBuilt": 41,
     "pagesPlanned": 6,
-    "linksFound": 603,
+    "linksFound": 615,
     "partialExtraction": [
       "/"
     ],
@@ -110,14 +110,6 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/bueroeinrichtung.ts"
-        },
-        {
-          "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/2950/akustik-im-buero-hilfen-fuer-die-akustische-gestaltung-von-bueros",
-          "host": "publikationen.dguv.de",
-          "anchor": "DGUV Information 215-443 Akustik im Büro",
-          "inline": true,
-          "allowed": true,
-          "file": "src/lib/content/bueroeinrichtung.ts"
         }
       ],
       "/praxiseinrichtung/": [
@@ -156,6 +148,24 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/bueroschraenke-nach-mass.ts"
+        }
+      ],
+      "/bueroeinrichtung/konferenzraum-einrichten/": [
+        {
+          "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/2950/akustik-im-buero-hilfen-fuer-die-akustische-gestaltung-von-bueros",
+          "host": "publikationen.dguv.de",
+          "anchor": "DGUV Information 215-443 Akustik im Büro",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/konferenzraum-einrichten.ts"
+        },
+        {
+          "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/224/bueroraumplanung-hilfen-fuer-das-systematische-planen-und-gestalten-von-bueros",
+          "host": "publikationen.dguv.de",
+          "anchor": "DGUV Information 215-441 Büroraumplanung",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/konferenzraum-einrichten.ts"
         }
       ],
       "/ratgeber/holzarten-materialien-moebel/": [
@@ -273,6 +283,12 @@
     },
     {
       "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/bueroeinrichtung/konferenzraum-einrichten/: empfohlener SOLL-Link fehlt → `/moebelplaner/`. CTA",
+      "page": "/bueroeinrichtung/konferenzraum-einrichten/"
+    },
+    {
+      "severity": "Hinweis",
       "check": "muss-backlog",
       "message": "/moebelplaner/: MUSS-Link `/ablauf-massanfertigung/` noch blockiert (Ziel ungebaut). Erwartungsmanagement",
       "page": "/moebelplaner/"
@@ -289,13 +305,6 @@
       "message": "/ueber-uns/: Linktext „Unsere Leistungen\" → `/moebel-nach-mass/` enthält keinen Begriff des Ziels.",
       "file": "src/lib/content/ueber-uns.ts",
       "href": "/moebel-nach-mass/"
-    },
-    {
-      "severity": "Hinweis",
-      "check": "anker-relevanz",
-      "message": "/referenzen/: Linktext „Konferenzraum mit Tisch nach Maß\" → `/bueroeinrichtung/bueroplanung/` enthält keinen Begriff des Ziels.",
-      "file": "src/lib/content/referenzen.ts",
-      "href": "/bueroeinrichtung/bueroplanung/"
     },
     {
       "severity": "Hinweis",

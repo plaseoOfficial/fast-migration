@@ -295,7 +295,7 @@ export const bmFaq = {
     {
       question: "Kann ich Kabel und Technik in die Möbel integrieren lassen?",
       answer:
-        "Ja. Strom, Daten und Kabelführung nehmen wir in der 3D-Planung gleich mit auf, damit später kein Kabel offen unter dem Tisch hängt. Wie genau das aussieht, klären wir gemeinsam.",
+        "Ja. Strom, Daten und Kabelführung nehmen wir in der 3D-Planung gleich mit auf, damit später kein Kabel offen unter dem Tisch hängt. Wie genau das aussieht, klären wir gemeinsam. Für den Konferenztisch steht es im Ratgeber [Besprechungsraum einrichten](/bueroeinrichtung/konferenzraum-einrichten/).",
     },
     {
       question: "Werden die Büromöbel geliefert und montiert, und in welchem Gebiet?",

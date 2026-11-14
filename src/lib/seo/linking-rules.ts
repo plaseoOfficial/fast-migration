@@ -115,6 +115,8 @@ export const PAGES: PageNode[] = [
   { slug: "/bueroeinrichtung/bueromoebel-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueromoebel-nach-mass" },
   // Büro spoke (cluster child): Büroschränke nach Maß (Stauraum/Ablage, der Ordner als Maßgabe)
   { slug: "/bueroeinrichtung/bueroschraenke-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroschraenke-nach-mass" },
+  // Büro spoke (cluster child): Ratgeber „Konferenzraum einrichten" (How-to, Route im Cluster laut keyword-map)
+  { slug: "/bueroeinrichtung/konferenzraum-einrichten/", type: "cluster-article", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "konferenzraum-einrichten" },
 
   // Conversion + brand (neutral)
   { slug: "/moebelplaner/", type: "conversion", silo: "", audience: "neutral", parent: "/", built: true },
@@ -571,6 +573,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Aktenschrank nach Maß", "Büroschrank nach Maß", "Ordnerschrank nach Maß", "maßgefertigte Büroschränke"],
     brand: ["Büroschränke von Fast Systemmöbel"],
     descriptive: ["Stauraum fürs Büro nach Maß", "zu den Büroschränken nach Maß"],
+  },
+  "/bueroeinrichtung/konferenzraum-einrichten/": {
+    exact: ["Konferenzraum einrichten"],
+    partial: ["Besprechungsraum einrichten", "Konferenzraum planen"],
+    brand: ["Konferenzraum-Ratgeber von Fast Systemmöbel"],
+    descriptive: ["so richten Sie Ihren Besprechungsraum ein", "zum Ratgeber Konferenzraum"],
   },
 };
 

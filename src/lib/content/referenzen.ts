@@ -134,7 +134,7 @@ export const referenzenGrid = {
       meta: "Gewerbe · Büro",
       description:
         "Ein großer Konferenztisch aus Holz, dazu Sideboard und Medienwand – ein repräsentativer Besprechungsraum, abgestimmt auf den Büroalltag.",
-      href: "/bueroeinrichtung/bueroplanung/",
+      href: "/bueroeinrichtung/konferenzraum-einrichten/",
     },
     {
       image: "/images/2025/11/DSC_0001.jpg",
