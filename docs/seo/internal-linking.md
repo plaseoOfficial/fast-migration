@@ -114,6 +114,12 @@ When the proper target page is built, repoint them (and drop this row):
 
 ## Done (wired)
 
+### `/bueroeinrichtung/konferenzraum-einrichten/` launch (2026-11)
+
+- **Ratgeber (cluster-article) unter `/bueroeinrichtung/`**, Route im Cluster laut keyword-map (wie `kueche-planen`); `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7).
+- **Eingehend (4 Inhaltsquellen):** `/bueroeinrichtung/` (Karte „Konferenz- & Besprechungstische nach Maß", MUSS `own-cluster-spokes`; Budget-Tausch: der Pillar-Link auf DGUV 215-443 ist jetzt reiner Text, der Beleg steht auf dem Ratgeber) · `/bueroeinrichtung/bueromoebel-nach-mass/` (FAQ „Kann ich Kabel und Technik …", Anker „Besprechungsraum einrichten", Budget 7/7) · `/bueroeinrichtung/bueroschraenke-nach-mass/` (Bauform-Karte „Halbhoher Aktenschrank", Budget 7/7) · `/referenzen/` (Karte „Konferenzraum mit Tisch nach Maß", vorher → bueroplanung; behebt den anker-relevanz-Hinweis). Sobald `/bueroeinrichtung/konferenztisch-nach-mass/` gebaut ist, die Referenzkarte dorthin umstellen (genaueres Ziel) und Ratgeber ↔ Produkt beidseitig verlinken.
+- **Ausgehend (6 von 6):** ↑ `/bueroeinrichtung/` (Breadcrumb + Karten-Intro „Wann lohnt sich …") · Geschwister `/bueroeinrichtung/bueroplanung/` (Schritt 1) + `/bueroeinrichtung/bueroschraenke-nach-mass/` (Schritt 7) · `/kontakt/` (weicher CTA) · Belege DGUV 215-441 + DGUV 215-443. Kein `/moebelplaner/` (SOLL; der Planer deckt Büro/Konferenztisch nicht ab, Kit §7).
+
 ### `/bueroeinrichtung/bueroschraenke-nach-mass/` launch (2026-11)
 
 - **Produkt-Kind unter `/bueroeinrichtung/`**, `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7). Nicht in Nav/Footer (wie die Geschwister).

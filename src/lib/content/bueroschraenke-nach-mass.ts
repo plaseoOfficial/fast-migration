@@ -134,7 +134,7 @@ export const bsBauformen = {
     },
     {
       title: "Halbhoher Aktenschrank unter dem Fenster",
-      body: "Unter der Fensterbrüstung nimmt der halbhohe Schrank kein Licht weg. Oben drauf haben Drucker und Post Platz. Wir bauen ihn so lang, wie die Wand es hergibt, gern auch über mehrere Fenster hinweg.",
+      body: "Unter der Fensterbrüstung nimmt der halbhohe Schrank kein Licht weg. Oben drauf haben Drucker und Post Platz. Wir bauen ihn so lang, wie die Wand es hergibt, gern auch über mehrere Fenster hinweg. Im Besprechungsraum dient er als Sideboard, mehr dazu unter [Konferenzraum einrichten](/bueroeinrichtung/konferenzraum-einrichten/).",
     },
     {
       title: "Freistehende Schrankzeile",
