@@ -121,7 +121,7 @@ export const bueroTypische = {
     {
       title: "Konferenz- & Besprechungstische nach Maß",
       description:
-        "Konferenztische nach Maß in der Größe Ihres Raums, mit integrierter Medientechnik und Anschlüssen für Strom und Daten. Stabil gebaut für den täglichen Einsatz im Besprechungsraum, vom kleinen Meetingpoint bis zur großen Tafel für die ganze Abteilung.",
+        "Konferenztische nach Maß in der Größe Ihres Raums, mit integrierter Medientechnik und Anschlüssen für Strom und Daten. Stabil gebaut für den täglichen Einsatz im Besprechungsraum, vom kleinen Meetingpoint bis zur großen Tafel für die ganze Abteilung. Wie Sie den ganzen Raum planen, zeigt unser Ratgeber [Konferenzraum einrichten](/bueroeinrichtung/konferenzraum-einrichten/).",
     },
   ],
   row2: [
@@ -133,7 +133,7 @@ export const bueroTypische = {
     {
       title: "Teeküchen & Akustiklösungen",
       description:
-        "Teeküchen und Büroküchen nach Maß, robust gegen die tägliche Feuchtigkeit, dazu Akustikelemente und Raumteiler, die offene Büros gliedern und Nachhall sowie Störgeräusche mindern, wie es die [DGUV Information 215-443 Akustik im Büro](https://publikationen.dguv.de/regelwerk/dguv-informationen/2950/akustik-im-buero-hilfen-fuer-die-akustische-gestaltung-von-bueros) beschreibt. So entsteht mehr Ruhe am Arbeitsplatz, ohne dass der Raum seinen offenen Charakter verliert.",
+        "Teeküchen und Büroküchen nach Maß, robust gegen die tägliche Feuchtigkeit, dazu Akustikelemente und Raumteiler, die offene Büros gliedern und Nachhall sowie Störgeräusche mindern, wie es die DGUV Information 215-443 Akustik im Büro beschreibt. So entsteht mehr Ruhe am Arbeitsplatz, ohne dass der Raum seinen offenen Charakter verliert.",
     },
     {
       title: "Einbauschränke & Sonderbau Büro",
