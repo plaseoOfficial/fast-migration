@@ -69,7 +69,11 @@ export default function ImpressumPage() {
         <a href="https://plaseo.de/" target="_blank" rel="noopener">
           plaseo
         </a>{" "}
-        (plaseo.de)
+        (plaseo.de) und{" "}
+        <a href="https://sideboost.de" target="_blank" rel="noopener">
+          Side Boost
+        </a>{" "}
+        (sideboost.de)
       </p>
     </LegalPageLayout>
   );
