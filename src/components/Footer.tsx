@@ -59,6 +59,15 @@ export function Footer() {
                 className="underline underline-offset-2 hover:text-white"
               >
                 plaseo
+              </a>{" "}
+              und{" "}
+              <a
+                href="https://sideboost.de"
+                target="_blank"
+                rel="noopener"
+                className="underline underline-offset-2 hover:text-white"
+              >
+                Side Boost
               </a>
             </p>
           </div>
