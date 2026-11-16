@@ -53,12 +53,12 @@ export function Footer() {
               <br />
               Website &amp; SEO:{" "}
               <a
-                href="https://sideboost.de"
+                href="https://plaseo.de/"
                 target="_blank"
                 rel="noopener"
                 className="underline underline-offset-2 hover:text-white"
               >
-                Side Boost
+                plaseo
               </a>
             </p>
           </div>
