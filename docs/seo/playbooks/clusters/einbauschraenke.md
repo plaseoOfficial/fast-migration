@@ -33,8 +33,15 @@
 ### `/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/` · „begehbarer Kleiderschrank nach Maß" · Produkt
 - **Winkel:** **Der Raum selbst wird zum Schrank** — Ankleidezimmer/Schrankraum, offene & geschlossene
   Systeme, U-/L-/Parallel-Layout, Insel, Beleuchtung, Spiegel. Kommerziell (Kaufabsicht).
-- **Deckt NICHT ab:** front-basierter Zimmerschrank (→ kleiderschrank), **Planungs-Ratgeber/Schritte/
-  Maße-Tutorial** (→ Ratgeber `begehbaren-kleiderschrank-planen`).
+- **Deckt NICHT ab:** front-basierter Zimmerschrank (→ kleiderschrank), Schiebetür-Mechanik als Fokus
+  (→ schiebetuer; die Tür der Ankleide darf als Modul vorkommen, Sekundär-Keyword „begehbarer
+  Kleiderschrank mit Schiebetür(en)", Chancen-Übernahme W41), Preise/Kostenrechnung (→ `einbauschrank-kosten`).
+- **Einziges Zuhause des Themas (geändert 2026-11-17, Research W47):** Die frühere Ratgeber-Schwester
+  `begehbaren-kleiderschrank-planen` ist in der pipeline.yml **gestrichen**; `redirects.md` Z. 27 leitet
+  `/ratgeber/begehbaren-kleiderschrank-planen/` per 301 hierher. Diese Seite trägt deshalb einen
+  **kompakten Planungs-Block** (Raumbedarf, Layout-Wahl, Gangbreite als Orientierung ohne erfundene
+  Fast-Maße) und übernimmt die Sekundär-Keywords (Ankleidezimmer planen, begehbarer Kleiderschrank
+  Maße, Walk-in-Closet einrichten). Kein ausgewachsenes Schritt-für-Schritt-Tutorial — Kaufabsicht führt.
 
 ### `/einbauschraenke-nach-mass/einbauschrank-dachschraege/` · „Einbauschrank Dachschräge" · Produkt
 - **Winkel:** **Kaufabsicht** — passgenauer Schrank in die Schräge/Kniestock: konstruktive Lösung,
@@ -62,17 +69,21 @@
 ### `/einbauschraenke-nach-mass/einbauschrank-kosten/` · „Einbauschrank Kosten" · Ratgeber (im Cluster)
 - **Winkel:** **Kostenorientierung ohne erfundene Preise** — Kostenfaktoren (Größe/Laufmeter, Material,
   Fronten, Ausstattung, Montage), „was treibt den Preis", Spar-Hebel, Weg zum individuellen Angebot.
-- **Deckt NICHT ab:** Produkt-Verkaufsseiten (Typen), Design/Innenleben. **Kannibalisierung mit dem
-  Ratgeber-Hub `massmoebel-kosten-schrank`:** Diese Seite = **Silo-nah** (Einbauschrank konkret,
-  Kaufnähe); der Hub = allgemeine Maßmöbel-Kosten-Perspektive/Vergleich. Beide verlinken, kein Copy-Twin.
+- **Deckt NICHT ab:** Produkt-Verkaufsseiten (Typen), Design/Innenleben, Kostenfaktor-Tabellen der
+  Produkt-Kinder (`klKosten`, `garKosten`, `dachPreisFaktoren`) nicht nachbauen.
+- **Einziges Zuhause des Keywords (geändert 2026-10-27, Research W44):** Die frühere Schwester
+  `massmoebel-kosten-schrank` (Ratgeber-Hub, gleiches Keyword „Einbauschrank Kosten") ist in der
+  pipeline.yml **gestrichen**; `redirects.md` Z. 25 leitet `/ratgeber/massmoebel-kosten-schrank/` per 301
+  hierher. Deren Sekundär-Keywords (Schrank nach Maß Preis, Maßschrank Kosten, Preis pro Laufmeter,
+  Kleiderschrank nach Maß Preis) gehören jetzt dieser Seite.
 
 ## Paar-Abgrenzung (Kannibalisierungs-Schutz für identische/nahe Keywords)
 | Thema | Produkt-Seite (kommerziell) | Ratgeber-Seite (informational) | Trenn-Regel |
 |---|---|---|---|
 | Dachschräge | `einbauschrank-dachschraege` (Kaufargument, Sondermaß) | `/ratgeber/einbauschrank-dachschraege/` (Kniestock, planen, Stauraum-How-to) | Produkt = „bei Fast bauen lassen"; Ratgeber = „so plant/löst man" |
-| Kosten | `einbauschrank-kosten` (Silo, Kaufnähe) | `massmoebel-kosten-schrank` (Ratgeber-Hub, Vergleich) | Produkt-nah vs. neutraler Ratgeber; gegenseitig verlinken |
+| Kosten | Produkt-Kinder nur mit kurzem Kostenfaktor-Block | `einbauschrank-kosten` (einziger Kosten-Ratgeber; `massmoebel-kosten-schrank` gestrichen 2026-10-27, 301) | Kinder verlinken für die Preisfrage auf den Ratgeber, der Ratgeber verlinkt je Einbausituation zurück |
 | Nische | `nischenschrank-nach-mass` (Produkt) | `nischen-stauraum-einbauschrank` (How-to Nische ausbauen) | Kaufabsicht vs. Ideen/Anleitung |
-| Begehbar | `begehbarer-kleiderschrank-nach-mass` (Produkt) | `begehbaren-kleiderschrank-planen` (Planungs-Guide, Maße) | Kaufabsicht vs. Planungs-Tutorial |
+| Begehbar | `begehbarer-kleiderschrank-nach-mass` (Produkt, mit kompaktem Planungs-Block) | — (`begehbaren-kleiderschrank-planen` gestrichen 2026-11-17, 301 hierher) | ein Zuhause; Planungsfragen als Modul der Produktseite, nicht als zweite Seite |
 
 ## Gemeinsame Substanz-Pflicht
 Jede Seite braucht **eigenes Material**: eigener Raumkontext, eigene Beispielmaße, eigene FAQ, eigener

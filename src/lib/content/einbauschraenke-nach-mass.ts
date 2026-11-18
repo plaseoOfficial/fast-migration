@@ -142,7 +142,7 @@ export const einbauWarum = {
 export const einbauWarum2 = {
   heading: "Was ein Einbauschrank nach Maß kostet",
   paragraph:
-    "Einen Pauschalpreis gibt es bei einer Maßanfertigung nicht, denn jeder Schrank ist ein Unikat. Der Preis richtet sich nach der Größe, den Fronten, dem Material, der Innenausstattung mit Auszügen und Beleuchtung und der Einbausituation. Eine gerade Wand ist einfacher zu bauen als eine Dachschräge oder eine schiefe Nische. Auch Beschläge wie Schiebe- oder Schwebetüren wirken sich aus. Wir sagen Ihnen offen, was den Preis bestimmt, und nach dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot, ohne versteckte Kosten.",
+    "Einen Pauschalpreis gibt es bei einer Maßanfertigung nicht, denn jeder Schrank ist ein Unikat. Der Preis richtet sich nach der Größe, den Fronten, dem Material, der Innenausstattung mit Auszügen und Beleuchtung und der Einbausituation. Eine gerade Wand ist einfacher zu bauen als eine Dachschräge oder eine schiefe Nische. Auch Beschläge wie Schiebe- oder Schwebetüren wirken sich aus. Wir sagen Ihnen offen, was den Preis bestimmt, und nach dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot, ohne versteckte Kosten. Wie sich der Preis zusammensetzt, erklärt unser [Ratgeber zu den Einbauschrank-Kosten](/einbauschraenke-nach-mass/einbauschrank-kosten/).",
   images: [
     { src: `${IMG}/sonderanfertigung-nach-mass-weinwand.jpg`, alt: "Sonderanfertigung nach Maß: beleuchtete Weinwand als Beispiel für individuelle Lösungen", width: 1280, height: 715 },
     { src: `${IMG}/einbauschrank-dachschraege-nach-mass.jpg`, alt: "Einbauschrank nach Maß, passgenau an eine Dachschräge angepasst", width: 1280, height: 715 },

@@ -265,7 +265,7 @@ export const dachVergleich = {
 export const dachPreisFaktoren = {
   heading: "Was den Preis Ihres Schranks bestimmt",
   intro:
-    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank ist ein Unikat. Als grobe Schätzung: Ein rund 1,80 Meter breiter Schrank mit weißen Türen liegt im [Möbelplaner](/moebelplaner/) bei etwa 1.400 bis 2.000 Euro, zuzüglich Lieferung und Montage. Wo Ihr Preis genau landet, bestimmen diese Faktoren:",
+    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank ist ein Unikat. Als grobe Schätzung: Ein rund 1,80 Meter breiter Schrank mit weißen Türen liegt im [Möbelplaner](/moebelplaner/) bei etwa 1.400 bis 2.000 Euro, zuzüglich Lieferung und Montage. Was die [Kosten für einen Einbauschrank](/einbauschraenke-nach-mass/einbauschrank-kosten/) allgemein treibt, erklärt unser Ratgeber. Wo Ihr Preis genau landet, bestimmen diese Faktoren:",
   segments: [
     {
       title: "Größe",

@@ -58,7 +58,7 @@ const nextConfig: NextConfig = {
       { source: "/ratgeber/kueche-planen-schritt-fuer-schritt/", destination: "/kuechen-nach-mass/kueche-planen/", permanent: true },
       { source: "/ratgeber/kueche-nach-mass-kosten/", destination: "/kuechen-nach-mass/", permanent: true }, // INTERIM → /kuechen-nach-mass/kueche-nach-mass-kosten/
       { source: "/ratgeber/kueche-beim-neubau-planen/", destination: "/kuechen-nach-mass/", permanent: true }, // INTERIM → /kuechen-nach-mass/kueche-im-neubau/
-      { source: "/ratgeber/massmoebel-kosten-schrank/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/einbauschrank-kosten/
+      { source: "/ratgeber/massmoebel-kosten-schrank/", destination: "/einbauschraenke-nach-mass/einbauschrank-kosten/", permanent: true },
       { source: "/ratgeber/einbauschrank-dachschraege/", destination: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", permanent: true },
       { source: "/ratgeber/begehbaren-kleiderschrank-planen/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/
       // --- Kannibalisierungs-Auflösung: nicht gebaute Architektur-Varianten ---
