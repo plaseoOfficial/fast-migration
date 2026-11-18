@@ -75,6 +75,8 @@ export const PAGES: PageNode[] = [
   { slug: "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "kleiderschrank-nach-mass" },
   // Einbauschränke spoke (cluster child): Garderobe nach Maß (Flur/Eingangsbereich)
   { slug: "/einbauschraenke-nach-mass/garderobe-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "garderobe-nach-mass" },
+  // Einbauschränke Ratgeber (Kosten-Pillar im Cluster, Route laut keyword-map): Einbauschrank Kosten
+  { slug: "/einbauschraenke-nach-mass/einbauschrank-kosten/", type: "ratgeber-pillar", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "einbauschrank-kosten" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   // Badmöbel spoke (cluster child): Waschtisch nach Maß (Platte + Becken)
   { slug: "/badmoebel-nach-mass/waschtisch-nach-mass/", type: "product", silo: "badmoebel", audience: "privat", parent: "/badmoebel-nach-mass/", built: true, contentModule: "waschtisch-nach-mass" },
@@ -417,6 +419,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Garderobenschrank nach Maß", "Flurgarderobe nach Maß", "Garderobe für den Flur"],
     brand: ["Fast Systemmöbel Garderobe"],
     descriptive: ["Garderobe im Flur planen", "Garderobe nach Maß ansehen"],
+  },
+  "/einbauschraenke-nach-mass/einbauschrank-kosten/": {
+    exact: ["Einbauschrank Kosten"],
+    partial: ["Kosten für einen Einbauschrank", "was ein Einbauschrank nach Maß kostet", "Einbauschrank-Preis"],
+    brand: ["Fast Systemmöbel Kostenratgeber Einbauschrank"],
+    descriptive: ["Ratgeber zu den Einbauschrank-Kosten", "wovon der Preis eines Einbauschranks abhängt"],
   },
   "/referenzen/": {
     exact: ["Referenzen"],

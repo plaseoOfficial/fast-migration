@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`, Kosten-Ratgeber `einbauschrank-kosten/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
 
 ## Rules (condensed)
 
@@ -113,6 +113,13 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/einbauschraenke-nach-mass/einbauschrank-kosten/` launch (2026-11)
+
+- **Kosten-Ratgeber (`ratgeber-pillar`) unter `/einbauschraenke-nach-mass/`**, Route laut keyword-map (nicht `/ratgeber/<slug>/`); `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7). Einziges Zuhause des Keywords „Einbauschrank Kosten": `/ratgeber/massmoebel-kosten-schrank/` leitet jetzt per 301 hierher (`next.config.ts`, INTERIM aufgelöst).
+- **Eingehend (3 Inhaltsquellen):** `/einbauschraenke-nach-mass/` (`einbauWarum2`, „Ratgeber zu den Einbauschrank-Kosten", MUSS `own-ratgeber`) · `/einbauschraenke-nach-mass/einbauschrank-dachschraege/` (`dachPreisFaktoren.intro`, „Kosten für einen Einbauschrank", Budget 6/7) · `/einbauschraenke-nach-mass/schrank-unter-treppe/` (FAQ „Was kostet ein Schrank unter der Treppe?", „was ein Einbauschrank nach Maß kostet", Budget 7/7).
+- **Ausgehend (8 von 8):** ↑ `/einbauschraenke-nach-mass/` (Breadcrumb + Tabelle D) · Geschwister je Einbausituation: `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`, `einbauschrank-dachschraege/` (auch im Laufmeter-Block), `schrank-unter-treppe/` · `/moebelplaner/` (Spar-Hebel) · `/kontakt/` (Planer-Block + FAQ-CTA) · Beleg § 35a EStG (gesetze-im-internet.de).
+- **Backlog:** Nischenschrank (FAQ „Nische") und begehbarer Kleiderschrank (FAQ „begehbare Ankleide") beim Bau beidseitig verdrahten; das Budget ist dann voll, `maxBodyLinks` mit Begründung anheben (Cluster-Map: der Ratgeber verlinkt je Einbausituation zurück).
 
 ### `/bueroeinrichtung/konferenzraum-einrichten/` launch (2026-11)
 

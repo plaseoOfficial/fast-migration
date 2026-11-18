@@ -213,7 +213,7 @@ export const suFaq = {
     {
       question: "Was kostet ein Schrank unter der Treppe?",
       answer:
-        "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Treppe ist ein Unikat. Der Preis richtet sich nach der Größe, den Fronten und dem Material, der Innenausstattung wie Auszügen und Beleuchtung und der Einbausituation. Eine gewendelte Treppe oder eine schiefe Wand ist aufwändiger als eine gerade Treppe, und Beschläge wie Schiebetüren oder Apothekerauszüge wirken sich aus. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot ohne versteckte Kosten.",
+        "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Treppe ist ein Unikat. Der Preis richtet sich nach der Größe, den Fronten und dem Material, der Innenausstattung wie Auszügen und Beleuchtung und der Einbausituation. Eine gewendelte Treppe oder eine schiefe Wand ist aufwändiger als eine gerade Treppe, und Beschläge wie Schiebetüren oder Apothekerauszüge wirken sich aus. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot ohne versteckte Kosten. Im Ratgeber lesen Sie, [was ein Einbauschrank nach Maß kostet](/einbauschraenke-nach-mass/einbauschrank-kosten/) und wovon das abhängt.",
     },
     {
       question: "Wie heißt der Raum unter der Treppe?",
