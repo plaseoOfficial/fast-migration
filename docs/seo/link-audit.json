@@ -1,8 +1,8 @@
 {
   "summary": {
-    "pagesBuilt": 41,
+    "pagesBuilt": 43,
     "pagesPlanned": 6,
-    "linksFound": 615,
+    "linksFound": 652,
     "partialExtraction": [
       "/"
     ],
@@ -36,6 +36,16 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/garderobe-nach-mass.ts"
+        }
+      ],
+      "/einbauschraenke-nach-mass/einbauschrank-kosten/": [
+        {
+          "href": "https://www.gesetze-im-internet.de/estg/__35a.html",
+          "host": "gesetze-im-internet.de",
+          "anchor": "§ 35a EStG",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/einbauschrank-kosten.ts"
         }
       ],
       "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/": [
