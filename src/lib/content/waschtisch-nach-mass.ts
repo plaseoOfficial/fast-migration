@@ -137,7 +137,7 @@ export const wtMasse = {
       label: "Tiefe",
       values: [
         "Oft etwa 45 bis 50 cm, in schmalen Bädern flacher, damit man gut vorbeikommt.",
-        "Frei nach Aufmaß, auch besonders flach für enge Bäder geplant.",
+        "Frei nach Aufmaß, für enge Bäder auch als Flachwaschtisch mit geringer Tiefe.",
       ],
     },
     {
@@ -361,7 +361,7 @@ export const wtFaq = {
     {
       question: "Passt ein Waschtisch nach Maß in eine Nische oder ein schmales Bad?",
       answer:
-        "Ja, genau dafür ist Maßarbeit da. Die Platte sitzt Wand zu Wand ohne Passleisten, in schmalen Bädern bauen wir sie flacher, damit davor genug Raum bleibt. Schiefe Wände und Dachschrägen nehmen wir beim Aufmaß gleich mit auf.",
+        "Ja, genau dafür ist Maßarbeit da. Die Platte sitzt Wand zu Wand ohne Passleisten, in schmalen Bädern bauen wir sie als Flachwaschtisch mit geringer Tiefe, damit davor genug Raum bleibt. Schiefe Wände und Dachschrägen nehmen wir beim Aufmaß gleich mit auf.",
     },
     {
       question: "Was unterscheidet die PU-Kante von einer normalen Kante?",
