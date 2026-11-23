@@ -105,7 +105,7 @@ export const einbauTypische = {
     {
       title: "Einbauschrank für Nischen",
       description:
-        "Jede Nische ist anders, unser Schrank passt sich an. Wir bauen zentimetergenau zwischen die Wände, auch dort, wo nichts im rechten Winkel steht. So wird aus einer Restfläche voller Stauraum.",
+        "Jede Nische ist anders, unser Schrank passt sich an. Wir bauen zentimetergenau zwischen die Wände, auch dort, wo nichts im rechten Winkel steht. So wird aus einer Restfläche voller Stauraum. Mehr zum [Nischenschrank nach Maß](/einbauschraenke-nach-mass/nischenschrank-nach-mass/).",
     },
   ],
   row2: [

@@ -20,6 +20,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/einbauschraenke-nach-mass/kleiderschrank-nach-mass/", priority: 0.7 },
   { path: "/einbauschraenke-nach-mass/garderobe-nach-mass/", priority: 0.7 },
   { path: "/einbauschraenke-nach-mass/einbauschrank-kosten/", priority: 0.7 },
+  { path: "/einbauschraenke-nach-mass/nischenschrank-nach-mass/", priority: 0.7 },
   { path: "/badmoebel-nach-mass/", priority: 0.8 },
   { path: "/badmoebel-nach-mass/waschtisch-nach-mass/", priority: 0.7 },
   { path: "/badmoebel-nach-mass/waschtischunterschrank-nach-mass/", priority: 0.7 },
