@@ -167,11 +167,11 @@ export const garRaeume = {
     },
     {
       title: "Nische im Eingang",
-      body: "Eine Nische oder einen Mauervorsprung im Eingang füllen wir wandbündig aus, ohne Fugen an den Seiten. Aus der toten Ecke wird nutzbarer Stauraum für Jacken und Schuhe.",
+      body: "Eine Nische oder einen Mauervorsprung im Eingang füllen wir wandbündig aus, ohne Fugen an den Seiten. Aus der toten Ecke wird nutzbarer Stauraum für Jacken und Schuhe. Für Nischen in anderen Räumen bauen wir den [Schrank für die Nische nach Maß](/einbauschraenke-nach-mass/nischenschrank-nach-mass/).",
     },
     {
       title: "Dachschräge im Flur",
-      body: "Läuft der Flur unter eine Schräge, folgen Fronten und Klappen exakt dem Winkel und nutzen den Raum bis in die Spitze. Tiefer gehen wir beim [Drempelschrank nach Maß](/einbauschraenke-nach-mass/einbauschrank-dachschraege/).",
+      body: "Läuft der Flur unter eine Schräge, folgen Fronten und Klappen exakt dem Winkel und nutzen den Raum bis in die Spitze. Tiefer gehen wir beim Drempelschrank nach Maß.",
     },
     {
       title: "Unter der Treppe",

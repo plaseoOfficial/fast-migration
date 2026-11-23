@@ -66,7 +66,7 @@ const nextConfig: NextConfig = {
       { source: "/bueroeinrichtung/praxiseinrichtung-nach-mass/", destination: "/praxiseinrichtung/", permanent: true },
       { source: "/ladenbau/gastronomieeinrichtung/", destination: "/gastronomieeinrichtung/", permanent: true },
       { source: "/gastronomieeinrichtung/hoteleinrichtung/", destination: "/serienmoebel/", permanent: true }, // INTERIM → /serienmoebel/hotelmoebel-serie/
-      { source: "/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/nischenschrank-nach-mass/
+      { source: "/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/", destination: "/einbauschraenke-nach-mass/nischenschrank-nach-mass/", permanent: true },
       // --- Altsite (Joomla, 2013–2020): 33 Adressen aus dem Webarchiv, die bis
       // 10/2026 auf 404 endeten. Google kannte einige davon noch (z. B.
       // /geschaeftskunden/geschaeftseinrichtung.html). Ziel = nächstes Thema.

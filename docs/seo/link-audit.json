@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 43,
+    "pagesBuilt": 44,
     "pagesPlanned": 6,
-    "linksFound": 652,
+    "linksFound": 669,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 1,
-      "Hinweis": 22
+      "Hinweis": 23
     }
   },
   "external": {
@@ -46,6 +46,16 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/einbauschrank-kosten.ts"
+        }
+      ],
+      "/einbauschraenke-nach-mass/nischenschrank-nach-mass/": [
+        {
+          "href": "https://verbraucherzentrale.de/wissen/energie/heizen-und-warmwasser/heizung-10-tipps-zum-heizkosten-sparen-13892",
+          "host": "verbraucherzentrale.de",
+          "anchor": "Verbraucherzentrale (Heizkosten-Tipps)",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/nischenschrank-nach-mass.ts"
         }
       ],
       "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/": [
@@ -224,6 +234,12 @@
       "check": "missing-soll",
       "message": "/einbauschraenke-nach-mass/garderobe-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/einbauschraenke-nach-mass/garderobe-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/einbauschraenke-nach-mass/nischenschrank-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/einbauschraenke-nach-mass/nischenschrank-nach-mass/"
     },
     {
       "severity": "Hinweis",

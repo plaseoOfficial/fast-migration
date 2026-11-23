@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`, Kosten-Ratgeber `einbauschrank-kosten/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`, `nischenschrank-nach-mass/`, Kosten-Ratgeber `einbauschrank-kosten/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
 
 ## Rules (condensed)
 
@@ -113,6 +113,12 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/einbauschraenke-nach-mass/nischenschrank-nach-mass/` launch (2026-11)
+
+- **Produkt-Kind unter `/einbauschraenke-nach-mass/`**, `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7). `/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/` leitet jetzt per 301 hierher (`next.config.ts`, INTERIM aufgelöst).
+- **Eingehend (3 Inhaltsquellen):** `/einbauschraenke-nach-mass/` (Kachel „Einbauschrank für Nischen", exact „Nischenschrank nach Maß", MUSS `own-cluster-spokes`) · `/einbauschraenke-nach-mass/einbauschrank-kosten/` (FAQ „Nische", „Einbauschrank für die Nische", Geschwister-Rücklink; Budget des Ratgebers per `maxBodyLinks: 10` begründet angehoben) · `/einbauschraenke-nach-mass/garderobe-nach-mass/` (Karte „Nische im Eingang", „Schrank für die Nische nach Maß"; Budget-Tausch: der Dachschrägen-Link in der Karte „Dachschräge im Flur" ist jetzt reiner Text).
+- **Ausgehend (7 von 7):** ↑ `/einbauschraenke-nach-mass/` (Breadcrumb + IntroStats) · Geschwister `kleiderschrank-nach-mass/` (Varianten-Intro), `einbauschrank-dachschraege/` (Karte „Nische unter der Schräge"), Kosten-Ratgeber (Kostentabelle) · `/moebelplaner/` · `/kontakt/` · Beleg Verbraucherzentrale (Heizkosten-Tipps). `/referenzen/` (SOLL) bleibt offen, kein Nischen-Projekt und Budget voll.
 
 ### `/einbauschraenke-nach-mass/einbauschrank-kosten/` launch (2026-11)
 
