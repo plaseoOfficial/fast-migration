@@ -51,7 +51,7 @@ export const bkIntroStats = {
   col1Title: "Ecken und Höhe voll genutzt",
   col1Body: "Die Ecken einer L- oder U-Form bleiben bei uns kein toter Winkel, sie werden zu Stauraum. Ganz oben unter der Decke liegen Fächer für alles, was Sie nur ein paarmal im Jahr brauchen.",
   col1CtaLabel: "Ankleide anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Planung, Fertigung und Montage bleiben in einer Hand: bei Familie Fast, als Meisterbetrieb in Espelkamp. Jedes Teil Ihrer Ankleide entsteht in unserer Werkstatt. Was wir sonst bauen, zeigt die Übersicht über [alle Einbauschränke nach Maß](/einbauschraenke-nach-mass/).",
   counterTarget: 200,
@@ -61,26 +61,6 @@ export const bkIntroStats = {
   col3Body: "Zum Aufmaß und zur Montage kommen wir im Umkreis von rund 200 km um Espelkamp zu Ihnen: in ganz OWL, nach Minden, Lübbecke und Bielefeld, auch nach Osnabrück. Eingebaut wird immer von unserem eigenen Montageteam.",
   col3CtaLabel: "Ankleide im Möbelplaner skizzieren",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const bkCtas = {
-  intro: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-eck.jpg`,
-    heading: "Zeigen Sie uns den Raum, wir planen die Ankleide",
-    linkText: "Sprechen Sie mit uns über Ihre Ankleide",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
-    heading: "Ihre Ankleide beginnt mit dem Aufmaß vor Ort",
-    linkText: "Kostenloses Aufmaß für Ihre Ankleide anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards: Formen der Ankleide (Kit §3 „Welche Form passt?"). Eine Karte trägt den Dachschrägen-Link. */
@@ -192,15 +172,6 @@ export const bkKosten = {
     { label: "Sondermaß", values: ["Schräge, Nische oder schiefe Wände brauchen mehr Anpassung als ein rechtwinkliger Raum."] },
     { label: "Material und Oberfläche", values: ["Dekor auf beschichteter Platte ist die schlichteste Wahl. Echtholzfurnier, Lack und Massivholz brauchen mehr Material und Arbeit."] },
   ],
-};
-
-export const bkMoebelplaner = {
-  heading: "Erste Ideen im Möbelplaner festhalten",
-  body: "Im Möbelplaner finden Sie unter „Ankleideraum“ Vorlagen für begehbare Schränke. Nehmen Sie eine davon als Ausgangspunkt, notieren Sie, was Ihnen wichtig ist, und senden Sie uns die Anfrage. Den ganzen Raum plant der Möbelplaner nicht. Er hilft Ihnen, Ihre Wünsche zu sortieren. Aufmaß, 3D-Planung und Angebot übernehmen danach wir.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/schrank-unter-treppe/aufmass-planung-nach-mass.jpg",
-  imageAlt: "Zwei Personen blättern an einem Holztisch gemeinsam durch eine Broschüre mit Produktfotos",
 };
 
 export const bkTestimonialsHeading = "Was unsere Kunden über ihre Möbel nach Maß sagen";

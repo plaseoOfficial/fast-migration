@@ -424,6 +424,17 @@
   color: rgb(237, 168, 33);
 }
 
+/*
+ * Kopfzeilen-Button „Kontakt“: Der Server liefert beide Links, die CSS-Regel
+ * wählt. Hat die Seite einen Anfrageblock (id="anfrage"), springt der Button zum
+ * Block, sonst geht er nach /kontakt/. Kein Flackern (keine Client-Weiche), jede
+ * neue Seite mit LeistungAnfrage bekommt es ohne Zusatzarbeit. Browser ohne
+ * :has() behalten den Link nach /kontakt/.
+ */
+.cta-anfrage { display: none; }
+body:has(#anfrage) .cta-anfrage { display: inline-flex; }
+body:has(#anfrage) .cta-kontakt { display: none; }
+
 .fast-btn-outline {
   display: inline-flex;
   align-items: center;

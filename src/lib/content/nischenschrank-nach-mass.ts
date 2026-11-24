@@ -50,7 +50,7 @@ export const nsIntroStats = {
   col1Title: "Kostenloses Aufmaß vor Ort",
   col1Body: "Wir messen Breite, Höhe und Tiefe an mehreren Stellen, dazu Winkel, Sockelleiste, Steckdosen und Heizkörper. Ihre eigene Messung reicht für die Vorplanung. Verbindlich ist unser Aufmaß.",
   col1CtaLabel: "Kostenloses Aufmaß anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Als Meisterbetrieb in Familienhand fertigen wir in Espelkamp jedes Teil in der eigenen Werkstatt. Planung, Fertigung und Montage bleiben bei uns. Die Übersicht über [alle Einbauschränke nach Maß](/einbauschraenke-nach-mass/) zeigt weitere Bauformen.",
   counterTarget: 200,
@@ -60,26 +60,6 @@ export const nsIntroStats = {
   col3Body: "Zum Aufmaß und zum Einbau kommen wir im Umkreis von rund 200 km um Espelkamp zu Ihnen. Dazu gehört ganz OWL mit Minden, Lübbecke und Bielefeld, ebenso Osnabrück.",
   col3CtaLabel: "Nischenschrank im Möbelplaner skizzieren",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const nsCtas = {
-  intro: {
-    image: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`,
-    heading: "Zeigen Sie uns Ihre Nische",
-    linkText: "Beratung zu Ihrer Nische anfragen",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
-    heading: "Machen Sie aus Ihrer Nische Stauraum",
-    linkText: "Kostenloses Aufmaß für Ihren Nischenschrank anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards: Nischentypen (Kit §3 Aufgabe 1). Intro trägt die Abgrenzung zum Kleiderschrank, eine Karte den Dachschrägen-Link. */
@@ -173,15 +153,6 @@ export const nsKosten = {
     { label: "Innenausstattung", values: ["Mit Auszügen, einer ausziehbaren Kleiderstange oder LED-Beleuchtung kommen mehr Teile und mehr Montage dazu."] },
     { label: "Material und Front", values: ["Massivholz, Furnier oder beschichtete Platte, mit Griff oder grifflos: Das bestimmt Materialkosten und Aufwand."] },
   ],
-};
-
-export const nsMoebelplaner = {
-  heading: "Nischenschrank im Möbelplaner vorplanen",
-  body: "Im Möbelplaner tragen Sie Ihre grob gemessenen Maße ein, skizzieren den Schrank und sehen eine Schätzung des Möbelpreises, zuzüglich Lieferung und Montage. So sortieren Sie Ihre Vorstellung schon vor dem Gespräch. Verbindlich werden Maß und Preis erst nach unserem kostenlosen Aufmaß, wenn wir Ihre Nische selbst gesehen haben.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/schrank-unter-treppe/aufmass-planung-nach-mass.jpg",
-  imageAlt: "Zwei Personen blättern an einem Holztisch gemeinsam durch eine Broschüre mit Produktfotos",
 };
 
 export const nsTestimonialsHeading = "Das sagen Kunden über unsere Arbeit";

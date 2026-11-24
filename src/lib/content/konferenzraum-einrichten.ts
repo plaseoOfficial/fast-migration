@@ -233,17 +233,6 @@ export const krMass = {
   ],
 };
 
-/** MnmMoebelplaner (planner-cta, shared) als weicher CTA zu /kontakt/ (Kit §7: kein Möbelplaner auf dieser Seite). */
-export const krCta = {
-  heading: "Wir sehen uns Ihren Konferenzraum an",
-  body:
-    "Legen Sie Ihre Skizze aus Schritt 2 bereit, dann wird schon das erste Gespräch konkret. Liegt Ihr Büro im Umkreis von rund 200 km um Espelkamp, kommen wir zum kostenlosen Aufmaß vorbei und montieren selbst. Weiter weg liefern wir. Am Telefon erreichen Sie uns unter 05771 9138312.",
-  ctaLabel: "Beratung anfragen",
-  ctaHref: "/kontakt/",
-  image: "/images/2025/11/DSC07156-scaled.jpg",
-  imageAlt: "Beratungsgespräch an einem Holztisch mit aufgeschlagenem Katalog",
-};
-
 export const krFaq = {
   heading: "Häufige Fragen zum Konferenzraum",
   items: [

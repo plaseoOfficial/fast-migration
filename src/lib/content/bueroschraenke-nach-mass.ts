@@ -56,7 +56,7 @@ export const bsIntroStats = {
   col1Body:
     "Bevor wir zeichnen, zählen wir Ihre Ordner. Daraus folgt die Fächerzahl, und wir prüfen, ob Wand und Decke dafür reichen.",
   col1CtaLabel: "Büroschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Ihr Schrank entsteht in Espelkamp, in unserer eigenen Werkstatt. Soll gleich das ganze Büro neu werden? Dann kommt die [maßgefertigte Büroeinrichtung](/bueroeinrichtung/) aus derselben Hand.",
   counterTarget: 200,
@@ -65,28 +65,8 @@ export const bsIntroStats = {
   col3Title: "Aufmaß und Einbau mit eigenem Team",
   col3Body:
     "Bis rund 200 km um Espelkamp messen wir selbst auf und bauen selbst ein, ob in Minden, Lübbecke, Bielefeld oder Osnabrück. Weiter weg liefern wir deutschlandweit.",
-  col3CtaLabel: "Schrank online vorplanen",
-  col3CtaHref: "/moebelplaner/",
-};
-
-export const bsCtas = {
-  intro: {
-    image: `${IMG}/buero-galerie-schrankwand.jpg`,
-    heading: "Sie haben die Ordner, wir bauen den Schrank dazu.",
-    linkText: "Beratung zum Büroschrank anfragen",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/schreibtisch-nach-mass-betonoptik-buero.jpg`,
-    heading: "Ihr Büroschrank nach Maß beginnt mit einem Termin vor Ort.",
-    linkText: "Kostenloses Aufmaß anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Fragen zu Ordnern, Maßen oder Fronten? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
+  col3CtaLabel: "Projekt anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 /** SpecTable (shared): Tabelle 1 „Der Ordner als Maßgabe" (Kit §3). Allgemeine Formatwerte, keine Fast-Spezifikation. */
@@ -267,16 +247,6 @@ export const bsKosten = {
     { label: "Oberfläche", values: ["Material der Fronten und Korpusse, bei einer freistehenden Zeile auch die Rückseite als Sichtseite."] },
     { label: "Aufwand vor Ort", values: ["Wie aufwendig Anlieferung und Einbau sind, etwa bei engem Treppenhaus oder Schränken in mehreren Räumen."] },
   ],
-};
-
-export const bsMoebelplaner = {
-  heading: "Ihren Büroschrank vorab online skizzieren",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) planen Sie Maße, Fronten und Fächer Ihres Schranks vor, soweit Sie sie schon kennen. Bestellt ist damit noch nichts. Ihr Entwurf ist die Grundlage für unsere Beratung. Danach messen wir auf, fertigen und montieren.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/bueroeinrichtung-empfang-kuechenzeile.jpg`,
-  imageAlt: "Empfangsbereich mit Küchenzeile und Holzlamellen-Wand nach Maß",
 };
 
 export const bsTestimonialsHeading = "Was Kunden über die Zusammenarbeit mit uns sagen";

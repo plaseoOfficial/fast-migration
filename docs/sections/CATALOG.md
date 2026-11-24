@@ -3,11 +3,11 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**48 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**49 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
-- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Leistung Anfrage (Formular + Kontakt)](#shared-leistung-anfrage), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight), [Shared — Spec / Comparison Table](#shared-spec-table), [Shared — Contrast Cols](#shared-contrast-cols)
+- **Shared (cross-page, reusable)** — [Privat — Weitere Leistungen (Services Grid)](#privat-weitere-leistungen), [Privat — Planner CTA](#privat-planner-cta), [Shared — Service Hero](#shared-service-hero), [Shared — FAQ](#shared-faq), [Shared — Testimonials (3-up)](#shared-testimonials), [Shared — Partner Carousel](#shared-partner-carousel), [Shared — Expanding Image CTA](#shared-image-cta), [Shared — Leistung Anfrage (Anfrageblock mit Formular)](#shared-leistung-anfrage), [Shared — Anfrage-Streifen (Sprung zum Block)](#shared-anfrage-streifen), [Shared — Referenzen Hero (Collage)](#shared-referenzen-hero), [Shared — Referenzen Grid (Aggregator)](#shared-referenzen-grid), [Shared — Process Steps](#shared-process-steps), [Shared — Segment Cards](#shared-segment-cards), [Shared — USP Highlight](#shared-usp-highlight), [Shared — Spec / Comparison Table](#shared-spec-table), [Shared — Contrast Cols](#shared-contrast-cols)
 - **Home** — [Home — Hero](#home-hero), [Home — Discover](#home-discover), [Home — Bereiche (Zwei Welten)](#home-bereiche), [Home — Quality](#home-quality), [Home — Parallax Quote](#home-parallax), [Home — Handwerk Tabs](#home-handwerk), [Home — Planner Embed](#home-planner), [Home — Räume Showcase](#home-raeume), [Home — Testimonials + Logos](#home-testimonials), [Home — FAQ](#home-faq)
 - **Privat — möbel-nach-mass template** — [Privat — Hero](#privat-hero), [Privat — Intro + Stats](#privat-intro-stats), [Privat — Process](#privat-process), [Privat — Categories (Typische)](#privat-typische), [Privat — Warum (Masonry + Text)](#privat-warum), [Privat — Story (Geschichte)](#privat-geschichte)
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
@@ -130,22 +130,38 @@ _Prop-less (page-specific content)._
 
 ![Shared — Expanding Image CTA](../design-references/moebel-nach-mass/02b-massmoebel.jpg)
 
-#### Shared — Leistung Anfrage (Formular + Kontakt)
+#### Shared — Leistung Anfrage (Anfrageblock mit Formular)
 
-`#shared-leistung-anfrage` — Anfrage-Block für Leistungsseiten: Kontaktdaten (Telefon, Zeiten, Adresse) links, echtes Kontaktformular rechts. Nutzt dieselbe Server-Action wie die Kontaktseite (inkl. Honeypot) und kennzeichnet die Herkunftsseite in der Mail. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln, das nichts versendet.
+`#shared-leistung-anfrage` — Anfrageblock für Leistungsseiten in fünf Fassungen (kueche, privat, gewerbe, serie, neutral), Anker #anfrage. Links Andreas Fast (Foto, Funktion), Kernsatz, Telefon; rechts kurzes Formular (Name, Telefon, E-Mail, drei Wege mit vorgewähltem Rückruf, freiwillige Nachricht); Projektangaben und bis zu drei Dateien (Bilder werden im Browser verkleinert) liegen im aufklappbaren, freiwilligen Bereich. Alle Texte in src/lib/content/anfrage.ts. Nutzt die Server-Action des Kontaktformulars (Honeypot `firma`, Firmenname heißt `unternehmen`). Der Header-Button springt auf Seiten mit diesem Block per CSS (:has) zum Anker. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln.
 
 | Use case | Category | Client | Used on |
 | --- | --- | --- | --- |
-| `contact-form` | `shared` | no | `/ladenbau` |
+| `contact-form` | `shared` | no | `/` · `/kuechen-nach-mass` · `/einbauschraenke-nach-mass/einbauschrank-dachschraege` · `/praxiseinrichtung` · `/ladenbau` · `/serienmoebel` |
 
 | Prop | Type | Required |
 | --- | --- | --- |
-| `eyebrow` | `string` | no |
-| `heading` | `string` | yes |
-| `intro` | `string` | yes |
+| `variante` | `"kueche" | "privat" | "gewerbe" | "serie" | "neutral"` | yes |
 | `seite` | `string` | yes |
+| `ueberschrift` | `string` | no |
+| `objektart` | `string` | no |
+| `preisZeile` | `string` | no |
+| `leitstelle` | `boolean` | no |
 
-![Shared — Leistung Anfrage (Formular + Kontakt)](../design-references/kontakt/band-0.jpg)
+![Shared — Leistung Anfrage (Anfrageblock mit Formular)](../design-references/kontakt/band-0.jpg)
+
+#### Shared — Anfrage-Streifen (Sprung zum Block)
+
+`#shared-anfrage-streifen` — Kurzer Streifen am Seitenende vor den Fragen: eine Zeile Text und ein Link zum Anfrageblock (#anfrage). Ersetzt den zweiten Bild-Aufruf, enthält kein Formular. Texte je Fassung in src/lib/content/anfrage.ts.
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `image-cta` | `shared` | no | `/` · `/kuechen-nach-mass` · `/einbauschraenke-nach-mass/einbauschrank-dachschraege` · `/praxiseinrichtung` · `/ladenbau` · `/serienmoebel` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `variante` | `"kueche" | "privat" | "gewerbe" | "serie" | "neutral"` | yes |
+
+![Shared — Anfrage-Streifen (Sprung zum Block)](../design-references/moebel-nach-mass/02b-massmoebel.jpg)
 
 #### Shared — Referenzen Hero (Collage)
 

@@ -10,8 +10,8 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -25,8 +25,6 @@ import {
   hwrVergleich,
   hwrKosten,
   hwrGeschichte,
-  hwrMoebelplaner,
-  hwrCtas,
   hwrTestimonialsHeading,
   hwrFaq,
   hwrJsonLd,
@@ -34,7 +32,7 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Hauswirtschaftsraum einrichten nach Maß aus Espelkamp",
+  title: "Hauswirtschaftsraum einrichten nach Maß vom Tischler",
   description:
     "Hauswirtschaftsraum einrichten nach Maß vom Meisterbetrieb in Espelkamp: Stauraum, Waschmaschinen-Verbau, Vorrat und Reinigung. Kostenloses Aufmaß vor Ort.",
   alternates: { canonical: "/hauswirtschaftsraum/" },
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Hauswirtschaftsraum einrichten nach Maß aus Espelkamp",
+    title: "Hauswirtschaftsraum einrichten nach Maß vom Tischler",
     description:
       "Hauswirtschaftsraum nach Maß vom Meisterbetrieb in Espelkamp. Millimetergenau geplant, gefertigt und montiert.",
     url: "/hauswirtschaftsraum/",
@@ -56,8 +54,6 @@ export const metadata: Metadata = {
     siteName: "Fast Systemmöbel",
   },
 };
-
-const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 /**
  * Silo-konforme Karten für MnmWeitereLeistungen: ein Privat-Cluster-Pillar
@@ -116,12 +112,12 @@ export default function HauswirtschaftsraumPage() {
       <MnmHero {...hwrHero} />
       <MnmIntroStats {...hwrIntroStats} />
 
-      {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...hwrCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage
+        variante="privat"
+        seite="Hauswirtschaftsraum"
+        ueberschrift="Ihren Hauswirtschaftsraum planen wir bei Ihnen vor Ort"
+      />
 
       <ProcessSteps {...hwrProcessSteps} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
@@ -131,28 +127,10 @@ export default function HauswirtschaftsraumPage() {
       <SpecTable {...hwrVergleich} />
       <SegmentCards {...hwrKosten} />
       <MnmGeschichte {...hwrGeschichte} />
-      <MnmMoebelplaner {...hwrMoebelplaner} />
       <TestimonialsSection heading={hwrTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...hwrCtas.final} />
-          {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
-          <p
-            className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
-            style={{ color: "rgb(61,61,61)" }}
-          >
-            {hwrCtas.phone.label}{" "}
-            <a
-              href={hwrCtas.phone.href}
-              className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
-            >
-              {hwrCtas.phone.number}
-            </a>
-          </p>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="privat" />
 
       <FaqSection
         heading={hwrFaq.heading}

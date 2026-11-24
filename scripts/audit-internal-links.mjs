@@ -363,6 +363,8 @@ async function main() {
   for (const link of links) {
     const { href } = link;
     if (isExternal(href)) continue;
+    // Seiteninterner Sprung zum Anfrageblock (LeistungAnfrage, id="anfrage") ist ein echtes Ziel.
+    if (href === "#anfrage") continue;
     if (isFragment(href)) {
       add("Fehler", "dead-link", `Platzhalter-Link \`${href}\` (kein Ziel).`, loc(link));
     } else if (isInternal(href)) {

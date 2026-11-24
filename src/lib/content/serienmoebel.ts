@@ -52,7 +52,7 @@ export const serienIntroStats = {
   col1Body:
     "Sie senden uns Ihre Zeichnung oder CAD-Daten. Wir prüfen die Fertigbarkeit, bauen ein Mustermöbel zur Freigabe und produzieren danach die volle Stückzahl. Korpusse, Schränke, Fronten, Theken und Module entstehen seriengleich auf Homag- und CNC-Technik.",
   col1CtaLabel: "Jetzt Serienanfrage stellen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Von der Musterfreigabe bis zur Auslieferung kommt alles aus einer Hand: Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung. Sie haben einen festen Ansprechpartner und beschaffen identische Möbel in kleinen wie großen Stückzahlen, ohne mehrere Lieferanten zu koordinieren.",
   counterTarget: 200,
@@ -62,7 +62,7 @@ export const serienIntroStats = {
   col3Body:
     "Geliefert wird bundesweit in ganz Deutschland. Im Umkreis von rund 200 km um Espelkamp montieren wir auf Wunsch mit eigenem Team, etwa in Ostwestfalen-Lippe, Minden, Bielefeld, Hannover und Osnabrück. Was Sie genau brauchen, besprechen wir vorab in Ruhe mit Ihnen.",
   col3CtaLabel: "Serie persönlich besprechen",
-  col3CtaHref: "/kontakt/",
+  col3CtaHref: "#anfrage",
 };
 
 export const serienProcess = {
@@ -145,21 +145,6 @@ export const serienGeschichte = {
     "Heute steht mit Andreas und Peter Fast die zweite Generation im Betrieb. Über 4.000 Projekte und mehr als 72.000 gefertigte Einzelteile stecken in unserer Erfahrung mit Maß und Stückzahl.",
     "Was im Möbelbau nach Maß für einzelne Stücke entstand, zahlt sich in der Serie aus. Wir denken in Stückzahlen, Liefertreue und konstanter Qualität, ohne den handwerklichen Anspruch aufzugeben. Von der ersten Mustermöbel-Freigabe bis zur vollen Stückzahl fertigen wir in Espelkamp und liefern bundesweit. Einige [Beispielprojekte](/referenzen/) aus dieser Arbeit haben wir für Sie zusammengestellt.",
   ],
-};
-
-export const serienCtas = {
-  intro: {
-    image: "/images/serienmoebel/serienfertigung-werkhalle-absaugung.jpg",
-    heading: "Viele gleiche Möbel. Eine konstante Qualität.",
-    linkText: "Sprechen Sie mit uns über Ihre Serienanfrage",
-    href: "/kontakt/",
-  },
-  final: {
-    image: "/images/serienmoebel/serienfertigung-cnc-anlage-werkhalle.jpg",
-    heading: "Ihre Serie nach Zeichnung, seriengleich gefertigt.",
-    linkText: "Sprechen Sie mit uns über Ihr Serienprojekt.",
-    href: "/kontakt/",
-  },
 };
 
 /**

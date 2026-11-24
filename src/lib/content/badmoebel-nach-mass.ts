@@ -20,7 +20,7 @@ export const badHero = {
   bgImage: `${IMG}/waschtisch-nach-mass-eiche-aufsatzbecken.jpg`,
   imageAlt:
     "Waschtisch nach Maß mit Front in Eiche, weißem Aufsatzbecken und Wandarmatur in einem hellen Bad",
-  title: "Badmöbel nach Maß aus Espelkamp",
+  title: "Badmöbel nach Maß",
   intro:
     "Wir planen und fertigen Ihre Badmöbel nach Maß, auf den Millimeter genau für Ihr Bad. Beratung, 3D-Planung, Fertigung und Montage aus unserem Meisterbetrieb in Espelkamp, das Aufmaß vor Ort kostet nichts. Die Kanten? Mit PU-Technik verschlossen, fugenlos und feuchtigkeitsbeständig.",
   breadcrumb: [
@@ -45,7 +45,7 @@ export const badIntroStats = {
   col1Body:
     "Wir planen Ihr Bad um Sie herum: Raumhöhe, Nische, Dachschräge, Becken, Armatur und Anschlüsse fließen in die Planung ein. Danach teilen wir Fächer, Auszüge und Beleuchtung ein. Bei den Fronten haben Sie freie Wahl: lackiertes MDF im RAL-Farbton, Dekor oder Massivholz.",
   col1CtaLabel: "Jetzt Badmöbel anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jede Front, jeder Korpus, jeder Auszug entsteht in unserer eigenen Werkstatt in Espelkamp, wo alle unsere [Möbel nach Maß](/moebel-nach-mass/) gebaut werden. Kein Zwischenhändler, kein festes Rastermaß. Die Schnittkanten verleimen wir mit PU-Technik, fugenlos und feuchtigkeitsbeständig. Im Bad zählt genau das: Spritzwasser und Wasserdampf arbeiten dort jeden Tag an den Möbeln.",
   counterTarget: 72,
@@ -56,27 +56,6 @@ export const badIntroStats = {
     "Mehr als 72.000 gefertigte Einzelteile haben unsere Fertigung schon verlassen. Die Homag-Technik arbeitet jedes Bauteil millimetergenau aus, danach prüft die Hand des Tischlers, ob alles sitzt. Deshalb schließt Ihr Badmöbel sauber mit Wand und Becken ab.",
   col3CtaLabel: "Badmöbel online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const badCtas = {
-  intro: {
-    image: `${IMG}/badmoebel-spiegelschrank-doppelwaschtisch.jpg`,
-    heading: "Ihre Badmöbel nach Maß beginnen mit einem Gespräch",
-    linkText: "Sprechen Sie mit uns über Ihr Bad",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/badezimmer-nach-mass-freistehende-badewanne.jpg`,
-    heading: "Ihr Bad verdient Möbel, die genau passen.",
-    linkText: "Jetzt kostenloses Aufmaß anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /**
@@ -311,16 +290,6 @@ export const badGeschichte = {
     "Inzwischen ist die zweite Generation an Bord: Andreas und Peter Fast, seit 2010 mit im Unternehmen. Hinter jedem Auftrag stehen mehr als 4.000 Projekte, über 1.000 m² eigene Fertigung und ein festes Team. Auch hinter Ihrem Bad, wo die Feuchte der Verarbeitung mehr abverlangt als im Wohnraum.",
     "Jedes Möbel entsteht bei uns im Haus, gefertigt in Espelkamp und montiert im Umkreis von rund 200 km, in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende Badmöbel liefern wir deutschlandweit.",
   ],
-};
-
-export const badMoebelplaner = {
-  heading: "Ihre Badmöbel online planen und konfigurieren",
-  body:
-    "Mit unserem Möbelplaner stellen Sie Ihre Badmöbel online zusammen. Maße, Fronten, Einteilung, Auszüge: alles sehen Sie direkt im 3D-Konfigurator und spielen Varianten durch, bevor Sie sich festlegen. Den Rest übernehmen wir, vom Aufmaß bei Ihnen bis zur Montage. So wird aus Ihrer Online-Planung ein fertig montiertes Badmöbel.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/badmoebel-nach-mass-sitzbank-holzplatte.jpg`,
-  imageAlt: "Badmöbel nach Maß mit durchgehender Holzplatte, Sitzbank und indirekter Beleuchtung",
 };
 
 export const badTestimonialsHeading = "Was unsere Kunden über ihre Möbel sagen";

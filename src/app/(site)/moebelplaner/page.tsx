@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { ServiceHero } from "@/components/sections/shared/ServiceHero";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { MpSchritte } from "@/components/sections/moebelplaner/MpSchritte";
 import { MpIntro } from "@/components/sections/moebelplaner/MpIntro";
 import { MpProzess } from "@/components/sections/moebelplaner/MpProzess";
@@ -32,8 +33,6 @@ export const metadata: Metadata = {
     siteName: "Fast Systemmöbel",
   },
 };
-
-const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 const FAQ_ITEMS = [
   {
@@ -94,20 +93,17 @@ export default function MoebelplanerPage() {
       />
 
       <MpSchritte />
+      {/* Anfrageblock: über dem Planer-Einstieg */}
+      <LeistungAnfrage
+        variante="neutral"
+        seite="Möbelplaner"
+        ueberschrift="Lieber persönlich planen?"
+      />
       <MpIntro />
       <TestimonialsSection heading="Meisterbetrieb aus Espelkamp" />
 
-      {/* Final CTA (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta
-            image="/images/2025/11/DSC_9938.jpg"
-            heading="Ihr Raum verdient mehr als Standard."
-            linkText="Sprechen Sie mit uns über Ihr Projekt."
-            href="/kontakt/"
-          />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="neutral" />
 
       <MpProzess />
       <FaqSection

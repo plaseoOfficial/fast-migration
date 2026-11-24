@@ -8,8 +8,8 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -20,8 +20,6 @@ import {
   kuechenWarum,
   kuechenWarum2,
   kuechenGeschichte,
-  kuechenMoebelplaner,
-  kuechenCtas,
   kuechenTestimonialsHeading,
   kuechenFaq,
   kuechenJsonLd,
@@ -29,7 +27,7 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Küchen nach Maß vom Tischler aus Espelkamp",
+  title: "Küchen nach Maß vom Tischler | Fast Systemmöbel",
   description:
     "Küchen nach Maß vom Tischler in Espelkamp: kostenloses Aufmaß, Fertigung im eigenen Betrieb, Montage durch unser Team im Umkreis von rund 200 km.",
   alternates: { canonical: "/kuechen-nach-mass/" },
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Küchen nach Maß vom Tischler aus Espelkamp",
+    title: "Küchen nach Maß vom Tischler | Fast Systemmöbel",
     description:
       "Küchen nach Maß vom Meisterbetrieb in Espelkamp. Zentimetergenau geplant, gebaut und montiert.",
     url: "/kuechen-nach-mass/",
@@ -51,8 +49,6 @@ export const metadata: Metadata = {
     siteName: "Fast Systemmöbel",
   },
 };
-
-const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 /**
  * Silo-konforme Karten für MnmWeitereLeistungen: die Default-Gewerbe-Karte
@@ -108,12 +104,8 @@ export default function KuechenNachMassPage() {
       <MnmHero {...kuechenHero} />
       <MnmIntroStats {...kuechenIntroStats} />
 
-      {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...kuechenCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="kueche" seite="Küchen nach Maß" />
 
       <MnmProcess {...kuechenProcess} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
@@ -121,28 +113,10 @@ export default function KuechenNachMassPage() {
       <MnmWarum {...kuechenWarum} imageColumns={2} />
       <MnmWarum {...kuechenWarum2} reverse imageColumns={1} />
       <MnmGeschichte {...kuechenGeschichte} />
-      <MnmMoebelplaner {...kuechenMoebelplaner} />
       <TestimonialsSection heading={kuechenTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...kuechenCtas.final} />
-          {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
-          <p
-            className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
-            style={{ color: "rgb(61,61,61)" }}
-          >
-            {kuechenCtas.phone.label}{" "}
-            <a
-              href={kuechenCtas.phone.href}
-              className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
-            >
-              {kuechenCtas.phone.number}
-            </a>
-          </p>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="kueche" />
 
       <FaqSection
         heading={kuechenFaq.heading}

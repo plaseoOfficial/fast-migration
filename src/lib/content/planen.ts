@@ -378,22 +378,6 @@ export const hwrPlanenWerkstatt = {
 };
 
 /**
- * MnmMoebelplaner (planner-cta, shared): weicher CTA am Textende. Möbelplaner nur
- * als Vorbereitung der persönlichen Planung (kundenwissen.md), nie „HWR komplett
- * selbst planen“. Trägt die Conversion-Links Möbelplaner + Kontakt.
- */
-export const hwrPlanenMoebelplaner = {
-  heading: "HWR-Schränke vorab skizzieren",
-  body:
-    "In unserem [Möbelplaner](/moebelplaner/) stellen Sie Hochschränke und Einteilung online zusammen und sehen, wie Ihre Wand aussehen kann. Für den Einstieg reicht das. Für die Planung nicht: Anschlüsse und Türaufschläge erfassen wir selbst, beim Aufmaß vor Ort im Umkreis von rund 200 km um Espelkamp. Die Skizze ist ein guter Gesprächsanfang, wenn Sie [Beratung anfragen](/kontakt/).",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/einbauschraenke/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg",
-  imageAlt:
-    "Weiße, grifflose Schrankwand nach Maß mit beleuchteter Holznische, passgenau zwischen zwei Wänden eingebaut",
-};
-
-/**
  * FaqSection (shared): nur Restfragen, die Schritte und Tabellen NICHT schon
  * beantworten (Lehre Ratgeber-FAQ 10/2026: Wiederholung der Tabellen → Chef rot).
  */

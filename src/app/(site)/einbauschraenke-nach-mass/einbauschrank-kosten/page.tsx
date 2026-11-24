@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
   ekMeta,
@@ -19,7 +20,6 @@ import {
   ekSparen,
   ekWerkstatt,
   ekAblauf,
-  ekMoebelplaner,
   ekFaq,
   ekJsonLd,
 } from "@/lib/content/einbauschrank-kosten";
@@ -57,6 +57,13 @@ export default function EinbauschrankKostenPage() {
 
       <MnmHero {...ekHero} />
       <SpecTable {...ekKostenbloecke} />
+
+      {/* Anfrageblock: nach dem ersten inhaltlichen Abschnitt */}
+      <LeistungAnfrage
+        variante="privat"
+        seite="Einbauschrank Kosten"
+        ueberschrift="Ihren Einbauschrank planen wir bei Ihnen vor Ort"
+      />
       <SegmentCards {...ekLaufmeter} />
       <SegmentCards {...ekSituationen} />
       <SpecTable {...ekPlanerAngebot} />
@@ -65,7 +72,8 @@ export default function EinbauschrankKostenPage() {
       <SegmentCards {...ekSparen} />
       <UspHighlight {...ekWerkstatt} />
       <ProcessSteps {...ekAblauf} />
-      <MnmMoebelplaner {...ekMoebelplaner} />
+      {/* Streifen: springt zum Anfrageblock */}
+      <AnfrageStreifen variante="privat" />
 
       <FaqSection
         heading={ekFaq.heading}

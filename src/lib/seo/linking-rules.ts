@@ -64,7 +64,9 @@ export const PAGES: PageNode[] = [
 
   // Privat silo
   { slug: "/moebel-nach-mass/", type: "pillar-hub", silo: "moebel", audience: "privat", parent: "/", built: true, contentModule: "moebel-nach-mass" },
-  { slug: "/kuechen-nach-mass/", type: "cluster-pillar", silo: "kuechen", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "kuechen-nach-mass" },
+  // mustExempt /moebelplaner/ (Küchen-Pillar und Küchen-Produktseiten, Büro-Produktseiten): Die Anfrage läuft dort
+  // über den Anfrageblock und das persönliche Gespräch, der Verweis in den Möbelplaner ist bewusst entfallen.
+  { slug: "/kuechen-nach-mass/", type: "cluster-pillar", silo: "kuechen", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "kuechen-nach-mass", mustExempt: ["/moebelplaner/"] },
   // Planned privat sibling clusters (hub→cluster MUSS, blocked until built)
   // maxBodyLinks 11 statt 10: MUSS own-cluster-spokes verlangt jedes gebaute Kind (6 Produktseiten + Kosten-Ratgeber),
   // dazu Möbelplaner, Kontakt, Referenzen und die Karte zum Hub /moebel-nach-mass/.
@@ -110,21 +112,25 @@ export const PAGES: PageNode[] = [
   { slug: "/kuechen-nach-mass/kueche-nach-mass-kosten/", type: "ratgeber-pillar", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
   { slug: "/kuechen-nach-mass/kueche-planen/", type: "cluster-article", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-planen" },
   { slug: "/kuechen-nach-mass/l-kueche-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: false },
-  { slug: "/kuechen-nach-mass/kuechenzeile-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kuechenzeile-nach-mass" },
-  { slug: "/kuechen-nach-mass/kueche-mit-dachschraege/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-mit-dachschraege" },
+  { slug: "/kuechen-nach-mass/kuechenzeile-nach-mass/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kuechenzeile-nach-mass", mustExempt: ["/moebelplaner/"] },
+  { slug: "/kuechen-nach-mass/kueche-mit-dachschraege/", type: "product", silo: "kuechen", audience: "privat", parent: "/kuechen-nach-mass/", built: true, contentModule: "kueche-mit-dachschraege", mustExempt: ["/moebelplaner/"] },
 
   // Gewerbe silo (flat URLs; clusters of the Gewerbe hub by topic, not by nesting)
-  { slug: "/gewerbe/", type: "pillar-hub", silo: "gewerbe", audience: "gewerbe", parent: "/", built: true, contentModule: "gewerbe" },
-  { slug: "/ladenbau/", type: "cluster-pillar", silo: "ladenbau", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "ladenbau" },
+  // mustExempt /moebelplaner/: Der Möbelplaner-Abschnitt ist entfallen. Die Anfrage läuft hier über den Anfrageblock
+  // und persönlichen Kontakt.
+  { slug: "/gewerbe/", type: "pillar-hub", silo: "gewerbe", audience: "gewerbe", parent: "/", built: true, contentModule: "gewerbe", mustExempt: ["/moebelplaner/"] },
+  // mustExempt /moebelplaner/: Der Möbelplaner-Abschnitt ist entfallen. Die Anfrage läuft hier über den Anfrageblock
+  // und persönlichen Kontakt, Verkaufstheken und Regale plant Fast nach dem Aufmaß vor Ort (nicht im Planer).
+  { slug: "/ladenbau/", type: "cluster-pillar", silo: "ladenbau", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "ladenbau", mustExempt: ["/moebelplaner/"] },
   { slug: "/bueroeinrichtung/", type: "cluster-pillar", silo: "buero", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "bueroeinrichtung" },
   { slug: "/gastronomieeinrichtung/", type: "cluster-pillar", silo: "gastronomie", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "gastronomieeinrichtung" },
   { slug: "/serienmoebel/", type: "cluster-pillar", silo: "serienmoebel", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "serienmoebel", mustExempt: ["/moebelplaner/"] },
   { slug: "/praxiseinrichtung/", type: "cluster-pillar", silo: "praxis", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "praxiseinrichtung" },
   // Büro-Cluster: Produkt-Spokes unter dem Büroeinrichtung-Pillar (verschachtelte URLs)
-  { slug: "/bueroeinrichtung/bueroplanung/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroplanung" },
-  { slug: "/bueroeinrichtung/bueromoebel-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueromoebel-nach-mass" },
+  { slug: "/bueroeinrichtung/bueroplanung/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroplanung", mustExempt: ["/moebelplaner/"] },
+  { slug: "/bueroeinrichtung/bueromoebel-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueromoebel-nach-mass", mustExempt: ["/moebelplaner/"] },
   // Büro spoke (cluster child): Büroschränke nach Maß (Stauraum/Ablage, der Ordner als Maßgabe)
-  { slug: "/bueroeinrichtung/bueroschraenke-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroschraenke-nach-mass" },
+  { slug: "/bueroeinrichtung/bueroschraenke-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroschraenke-nach-mass", mustExempt: ["/moebelplaner/"] },
   // Büro spoke (cluster child): Ratgeber „Konferenzraum einrichten" (How-to, Route im Cluster laut keyword-map)
   { slug: "/bueroeinrichtung/konferenzraum-einrichten/", type: "cluster-article", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "konferenzraum-einrichten" },
 

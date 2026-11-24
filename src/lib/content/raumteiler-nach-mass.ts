@@ -25,7 +25,7 @@ const PATH = "/wohnmoebel-nach-mass/raumteiler-nach-mass/";
 const IMG = "/images/wohnmoebel";
 
 export const rtMeta = {
-  metaTitle: "Raumteiler nach Maß aus Espelkamp | Fast Systemmöbel",
+  metaTitle: "Raumteiler nach Maß | Fast Systemmöbel",
   metaDescription:
     "Raumteiler nach Maß vom Meisterbetrieb in Espelkamp: frei stehend oder raumhoch eingepasst, von beiden Seiten nutzbar. Kostenloses Aufmaß, eigene Montage.",
   ogDescription:
@@ -36,7 +36,7 @@ export const rtHero = {
   bgImage: "/images/einbauschraenke/raumteiler-eichenlamellen-nach-mass.jpg",
   imageAlt:
     "Raumhoher Raumteiler aus Holzlamellen mit indirekter Beleuchtung und bepflanztem Trog vor einer offenen Treppe",
-  title: "Raumteiler nach Maß aus Espelkamp",
+  title: "Raumteiler nach Maß",
   intro:
     "Ein Raumteiler nach Maß gliedert Ihren offenen Wohnraum in Zonen. Eine neue Wand brauchen Sie dafür nicht. Er ist von beiden Seiten nutzbar, bietet Stauraum und so viel Durchblick, wie Sie möchten. Wir bauen ihn als Meisterbetrieb in Espelkamp selbst, frei stehend oder raumhoch eingepasst, millimetergenau nach dem kostenlosen Aufmaß.",
   breadcrumb: [
@@ -62,7 +62,7 @@ export const rtIntroStats = {
   col1Body:
     "Wo Sie Ruhe brauchen, schließen Fronten den Blick ab. Soll Licht durchkommen, bleiben die Fächer offen. Das legen wir für jede Seite einzeln fest.",
   col1CtaLabel: "Raumteiler nach Maß anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jeden Raumteiler fertigen wir in unserer Werkstatt in Espelkamp, wie alle unsere [Wohnmöbel nach Maß](/wohnmoebel-nach-mass/). Seit 2010 packt bei Familie Fast die zweite Generation mit an.",
   counterTarget: 200,
@@ -73,26 +73,6 @@ export const rtIntroStats = {
     "Im Umkreis von rund 200 km messen wir kostenlos auf und montieren mit eigenem Team, etwa in Lübbecke, Minden oder Bielefeld. Einen frei stehenden Raumteiler liefern wir darüber hinaus deutschlandweit.",
   col3CtaLabel: "Raumteiler online vorplanen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const rtCtas = {
-  intro: {
-    image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-    heading: "Erzählen Sie uns, was Sie trennen möchten",
-    linkText: "Beratung zum Raumteiler anfragen",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/tv-wand-nach-mass-wandpolsterung.jpg`,
-    heading: "Planen wir Ihren Raumteiler gemeinsam",
-    linkText: "Kostenloses Aufmaß für Ihren Raumteiler anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Bauweisen des Raumteilers (Kit §3 Modul 4, MI 1/2/4). */
@@ -264,17 +244,6 @@ export const rtKosten = {
       values: ["Frei stehend ist am einfachsten. Dachschräge, Balken oder raumhohes Einspannen verlangen mehr Anpassung und Montagezeit."],
     },
   ],
-};
-
-export const rtMoebelplaner = {
-  heading: "Im Möbelplaner beginnen, vor Ort zu Ende planen",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) probieren Sie aus, wie breit Ihr Raumteiler werden soll und welche Fächer eine Front bekommen. Fertig geplant ist er damit noch nicht. Beim Termin vor Ort prüfen wir, ob die Idee in Ihrem Raum aufgeht, auch vom Esstisch oder Schreibtisch aus gesehen.",
-  ctaLabel: "Raumteiler im Möbelplaner starten",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/arbeitszimmer-nach-mass-schreibtisch-sideboard.jpg`,
-  imageAlt:
-    "Arbeitszimmer mit Schreibtisch, hellem Sideboard, Besprechungstisch und Wandverkleidung aus Holzlamellen",
 };
 
 export const rtTestimonialsHeading = "Was Kunden über unsere Arbeit sagen";

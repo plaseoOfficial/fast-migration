@@ -27,7 +27,7 @@ export const wwHero = {
   bgImage: "/images/einbauschraenke/einbauschrank-nach-mass-anthrazit-regalnische.jpg",
   imageAlt:
     "Raumhohe Schrankwand in Anthrazit, Wand zu Wand, mit grifflosen Türen, offenen Mittelfächern und Schubladen",
-  title: "Wohnwand nach Maß aus Espelkamp",
+  title: "Wohnwand nach Maß",
   intro:
     "Eine Wohnwand nach Maß ist ein raumhohes Möbel fürs Wohnzimmer, das geschlossene Schränke und offene Fächer verbindet, auf Wunsch mit TV-Nische und Vitrine. Wir passen sie millimetergenau von Wand zu Wand ein, ohne Passleisten. Unser Meisterbetrieb in Espelkamp misst kostenlos bei Ihnen auf, fertigt und montiert sie selbst.",
   breadcrumb: [
@@ -53,7 +53,7 @@ export const wwIntroStats = {
   col1Body:
     "Seitlich und zur Decke schließt die Wohnwand bündig ab, ohne Blende und ohne Spalt. Die Aufteilung in Schränke und offene Fächer folgt Ihrem Alltag, nicht einem Katalog.",
   col1CtaLabel: "Wohnwand nach Maß anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Wer bei uns [maßgefertigte Wohnmöbel](/wohnmoebel-nach-mass/) bestellt, bekommt Korpusse und Fronten aus unserer Werkstatt in Espelkamp. Familie Fast führt den Meisterbetrieb, die zweite Generation arbeitet seit 2010 mit.",
   counterTarget: 200,
@@ -64,26 +64,6 @@ export const wwIntroStats = {
     "Zum Aufmaß und zur Montage kommt unser eigenes Team, im Umkreis von rund 200 km um Espelkamp, etwa nach Minden, Bielefeld oder Osnabrück. Geliefert wird deutschlandweit, eingebaut nur im Montagegebiet.",
   col3CtaLabel: "Wohnwand online vorplanen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const wwCtas = {
-  intro: {
-    image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-    heading: "Welche Wohnwand passt an Ihre Wand? Das klären wir vor Ort.",
-    linkText: "Beratungstermin für Ihre Wohnwand vereinbaren",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/tv-wand-nach-mass-wandpolsterung.jpg`,
-    heading: "Ihre Wand steht schon. Planen wir die Wohnwand dazu.",
-    linkText: "Wohnwand anfragen und kostenlos aufmessen lassen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Bauformen der Wohnwand (Kit §3 Modul 2, MI 1). */
@@ -255,17 +235,6 @@ export const wwKosten = {
       values: ["Schwebende Montage braucht die passende Wandbefestigung, Schräge, Ecke oder schiefe Wände zusätzliche Anpassung."],
     },
   ],
-};
-
-export const wwMoebelplaner = {
-  heading: "Erst skizzieren, dann gemeinsam planen",
-  body:
-    "Wie breit, wie hoch, wie viel hinter Türen? Das probieren Sie im [Möbelplaner](/moebelplaner/) in Ruhe aus, mit grob gemessener Wandbreite und Raumhöhe. Ihren Entwurf nehmen wir als Ausgangspunkt für die Beratung. Das Feinmaß kommt beim Aufmaß, Bau und Montage bleiben bei uns.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/wohnmoebel-nach-mass-tv-wand-kamin.jpg`,
-  imageAlt:
-    "Wohnzimmer mit holzverkleideter TV-Wand, eingelassenem Kamin und offenem Regal im Hintergrund",
 };
 
 export const wwTestimonialsHeading = "Was Kunden über die Arbeit mit uns sagen";

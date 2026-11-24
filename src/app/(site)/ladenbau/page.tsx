@@ -6,12 +6,11 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -28,12 +27,9 @@ import {
   ladenUsp,
   ladenVergleich,
   ladenKosten,
-  ladenMoebelplaner,
   ladenGeschichte,
-  ladenCtas,
   ladenTestimonialsHeading,
   ladenFaq,
-  ladenAnfrage,
 } from "@/lib/content/ladenbau";
 
 const PAGE_PATH = "/ladenbau";
@@ -41,7 +37,7 @@ const DESCRIPTION =
   "Ladenbau nach Maß aus Espelkamp: Verkaufstheken, Shopkonzepte und maßgefertigte Ladeneinrichtung, geplant, gefertigt und montiert aus einer Hand.";
 
 export const metadata: Metadata = {
-  title: "Ladenbau nach Maß aus Espelkamp: Theke bis Shopkonzept",
+  title: "Ladenbau nach Maß: Theke bis Shopkonzept",
   description: DESCRIPTION,
   alternates: { canonical: `${PAGE_PATH}/` },
   openGraph: {
@@ -53,7 +49,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Ladenbau nach Maß aus Espelkamp: Theke bis Shopkonzept",
+    title: "Ladenbau nach Maß: Theke bis Shopkonzept",
     description: DESCRIPTION,
     url: `${PAGE_PATH}/`,
     locale: "de_DE",
@@ -61,8 +57,6 @@ export const metadata: Metadata = {
     siteName: "Fast Systemmöbel",
   },
 };
-
-const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 const jsonLd = buildLadenbauJsonLd({
   pageUrl: `${SITE_URL}${PAGE_PATH}`,
@@ -84,12 +78,8 @@ export default function LadenbauPage() {
       <MnmHero {...ladenHero} />
       <MnmIntroStats {...ladenIntroStats} />
 
-      {/* Intro CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...ladenCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="gewerbe" seite="Ladenbau" objektart="Laden" />
 
       <ProcessSteps {...ladenSteps} />
       <MnmWeitereLeistungen cards={ladenWeitereLeistungen.cards} />
@@ -100,20 +90,12 @@ export default function LadenbauPage() {
       <SpecTable {...ladenVergleich} />
       <MnmGeschichte {...ladenGeschichte} />
       <SpecTable {...ladenKosten} />
-      <MnmMoebelplaner {...ladenMoebelplaner} />
       <TestimonialsSection heading={ladenTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...ladenCtas.final} />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
       <FaqSection heading={ladenFaq.heading} items={ladenFaq.items} />
-
-      {/* Anfrage direkt auf der Seite statt nur CTA-Link auf /kontakt/ */}
-      <LeistungAnfrage {...ladenAnfrage} />
     </PrivatPageLayout>
   );
 }

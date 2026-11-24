@@ -44,7 +44,7 @@ export const gewerbeIntroStats = {
   col1Body:
     "In Gewerberäumen entscheidet Qualität über Effizienz. Standardlösungen funktionieren selten. Wir entwickeln Möbel, die exakt zu Ihrem Ablauf, Ihrem Raum und Ihrem Design passen – millimetergenau gefertigt und für den täglichen Einsatz optimiert.",
   col1CtaLabel: "Jetzt individuelle Anfrage stellen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Title: "Planung bis Montage",
   col2Body:
     "Wir begleiten Sie vollständig: Analyse vor Ort, technische Planung, Fertigung auf modernsten Homag-Systemen und saubere Montage. Für Sie bedeutet das: Ein Ansprechpartner, klare Prozesse, verlässliche Termine.",
@@ -233,29 +233,6 @@ export const gewerbeClusterCards: ServiceCard[] = [
     moreLabel: "Serienmöbel",
   },
 ];
-
-export const gewerbeIntroCta = {
-  image: "/images/2025/11/DSC_9965.jpg",
-  heading: "Individuelle Einrichtung für Ihr Gewerbe",
-  linkText: "Sprechen Sie mit uns über Ihr Projekt",
-  href: "/kontakt/",
-};
-
-export const gewerbeFinalCta = {
-  image: "/images/2025/11/DSC_9938.jpg",
-  heading: "Ihr Raum verdient mehr als Standard.",
-  linkText: "Sprechen Sie mit uns über Ihr Projekt.",
-  href: "/kontakt/",
-};
-
-// Planner-CTA (geteilte MnmMoebelplaner-Section) — kürzerer Body für den
-// Gewerbe-Hub; Heading/CTA-Label/Bild nutzen die Komponenten-Defaults. Der
-// ctaHref steht explizit hier (identisch zum Komponenten-Default), damit das
-// Link-Audit den MUSS-Link /moebelplaner/ im Content-Modul sieht.
-export const gewerbeMoebelplaner = {
-  body: "Mit unserem 3D-Konfigurator planen Sie Ihre Möbel nach Maß online – millimetergenau und sofort sichtbar. Den Feinschliff übernehmen wir: Aufmaß, Beratung, Materialien und fachgerechte Montage vor Ort.",
-  ctaHref: "/moebelplaner/",
-};
 
 export const gewerbeTestimonialsHeading = "Was unsere Kunden dazu sagen";
 

@@ -16,7 +16,7 @@ const IMG = "/images/einbauschraenke";
 export const einbauHero = {
   bgImage: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
   imageAlt: "Einbauschrank nach Maß, grifflos und Wand zu Wand eingebaut, mit beleuchtetem Eichenfach",
-  title: "Einbauschränke nach Maß, zentimetergenau aus Espelkamp",
+  title: "Einbauschränke nach Maß, zentimetergenau eingepasst",
   intro:
     "Wir planen und bauen Ihren Einbauschrank nach Maß, zentimetergenau auf Ihren Raum zugeschnitten. Wir messen bei Ihnen kostenlos aus, fertigen in unserem Meisterbetrieb in Espelkamp und montieren mit dem eigenen Team im Umkreis von rund 200 km. So wird jede Wand, jede Nische und jede Dachschräge zu Stauraum, der wirklich passt.",
   breadcrumb: [
@@ -41,7 +41,7 @@ export const einbauIntroStats = {
   col1Body:
     "Wir planen Ihren Schrank um Sie herum: Raumhöhe, Nischen, Dachschrägen, Einteilung und Stauraum. Sie erzählen uns, was hinein soll, danach richten wir den Schrank aus. Fächer, Auszüge, Kleiderstangen und Beleuchtung teilen wir passgenau ein, vom Deckenanschluss bis zum Sockel. Die Fronten wählen Sie frei.",
   col1CtaLabel: "Jetzt Einbauschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jede Front, jeder Korpus und jeder Auszug entsteht in unserer eigenen Fertigung in Espelkamp, wo auch alle unsere [individuellen Möbel](/moebel-nach-mass/) gefertigt werden. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
@@ -52,27 +52,6 @@ export const einbauIntroStats = {
     "Über 72.000 gefertigte Einzelteile aus unserer Werkstatt. Unsere Homag-Technik fertigt jedes Bauteil millimetergenau, und die handwerkliche Kontrolle sorgt dafür, dass am Ende alles sitzt. So schließt Ihr Einbauschrank sauber mit Wand und Decke ab, auch nach Jahren noch.",
   col3CtaLabel: "Einbauschrank online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const einbauCtas = {
-  intro: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-weiss.jpg`,
-    heading: "Ihr Einbauschrank nach Maß beginnt mit einem Gespräch",
-    linkText: "Sprechen Sie mit uns über Ihren Schrank",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/einbauschrank-dachschraege-nach-mass.jpg`,
-    heading: "Ihr Stauraum verdient mehr als Standardmaße.",
-    linkText: "Jetzt kostenlose Schrankberatung anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 export const einbauProcess = {
@@ -165,16 +144,6 @@ export const einbauGeschichte = {
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Wir planen, fertigen und montieren Einbauschränke nach Maß, die auf den Millimeter sitzen.",
     "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, freistehende Schränke liefern wir deutschlandweit.",
   ],
-};
-
-export const einbauMoebelplaner = {
-  heading: "Ihren Einbauschrank online planen und konfigurieren",
-  body:
-    "Mit unserem Möbelplaner stellen Sie Ihren Schrank online zusammen. Maße, Fronten, Einteilung und Auszüge sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrem Einbauschrank vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird ein Einbauschrank nach Maß.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
-  imageAlt: "Einbauschrank nach Maß, grifflos und Wand zu Wand eingebaut",
 };
 
 export const einbauTestimonialsHeading = "Was unsere Kunden über ihre Schränke sagen";

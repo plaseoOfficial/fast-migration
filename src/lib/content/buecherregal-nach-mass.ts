@@ -30,7 +30,7 @@ export const buchHero = {
   bgImage: "/images/einbauschraenke/einbauschrank-nach-mass-anthrazit-regalnische.jpg",
   imageAlt:
     "Raumhohes Bücherregal nach Maß, in eine Wohnzimmer-Nische bis unter die Decke eingebaut",
-  title: "Bücherregal nach Maß aus Espelkamp",
+  title: "Bücherregal nach Maß",
   intro:
     "Ein Bücherregal nach Maß ist die Bücherwand, deren Fächer wir auf Ihre Bücher abstimmen: Fachtiefen und Fachhöhen nach Ihren Titeln. Tragfähig geplant, millimetergenau in die Nische oder bis unter die Decke gebaut. Als Meisterbetrieb aus Espelkamp planen, fertigen und montieren wir es selbst, nach einem kostenlosen Aufmaß vor Ort.",
   breadcrumb: [
@@ -55,7 +55,7 @@ export const buchIntroStats = {
   col1Body:
     "Bücher gehören zu den schwersten Dingen im Regal. Wir begrenzen die freie Feldbreite und wählen die Materialstärke so, dass die Böden bei voller Buchlast tragen und nicht durchhängen.",
   col1CtaLabel: "Jetzt Bücherregal anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "In Espelkamp fertigen wir jede Bücherwand selbst, mit fugenloser PU-Kantenverleimung, sauber und feuchtigkeitsbeständig verschlossen. Von der Beratung bis zur Montage bleibt es ein [maßgefertigtes Wohnmöbel](/wohnmoebel-nach-mass/) aus einer Hand.",
   counterTarget: 200,
@@ -66,26 +66,6 @@ export const buchIntroStats = {
     "Aufmaß und Montage übernimmt unser eigenes Montageteam, rund 200 km um Espelkamp: in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Steht das Regal frei, liefern wir es deutschlandweit.",
   col3CtaLabel: "Bücherregal online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const buchCtas = {
-  intro: {
-    image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-    heading: "Ihr Bücherregal beginnt mit einem Blick auf Ihre Sammlung",
-    linkText: "Sprechen Sie mit uns über Ihr Bücherregal",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/tv-wand-nach-mass-wandpolsterung.jpg`,
-    heading: "Machen Sie aus Ihrer Wand die Bücherwand, die wirklich passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihr Bücherregal anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Formen/Varianten des Bücherregals (Kit §3 Modul 2). Sibling-Link -> Regal (Regal-Familie). */
@@ -239,16 +219,6 @@ export const buchKosten = {
       values: ["Deckenhohe Wände mit Regalleiter und Kippsicherung bedeuten mehr Montageaufwand."],
     },
   ],
-};
-
-export const buchMoebelplaner = {
-  heading: "Ihr Bücherregal online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Ihre Bücherwand im 3D-Konfigurator zusammen, mit Maßen, Fächern und Material. Was Sie dort planen, nehmen wir auf. Alles Weitere liegt bei uns: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-  imageAlt: "Bücherregal nach Maß als offene Bücherwand im Wohnraum",
 };
 
 export const buchTestimonialsHeading = "Was unsere Kunden über ihr Bücherregal nach Maß sagen";

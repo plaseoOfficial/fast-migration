@@ -31,7 +31,7 @@ export const garHero = {
   bgImage: `${IMG}/garderobe-nach-mass-flur-anthrazit.jpg`,
   imageAlt:
     "Garderobe nach Maß im Flur mit anthrazitfarbener Wandnische, großem Standspiegel, offenen Wandborden und weißer Schubladenkommode",
-  title: "Garderobe nach Maß aus Espelkamp",
+  title: "Garderobe nach Maß",
   intro:
     "Eine Garderobe nach Maß ist Ihr Flurmöbel aus einer Hand: Garderobenschrank, offenes Paneel, Sitzbank und Spiegel, auf den Millimeter in Ihren Eingangsbereich eingepasst. Bei Fast Systemmöbel planen, fertigen und montieren wir sie in der eigenen Tischlerei in Espelkamp. Passend zu jeder Flurwand, auch wenn der Flur schmal ist.",
   breadcrumb: [
@@ -57,7 +57,7 @@ export const garIntroStats = {
   col1Body:
     "Garderobenschrank, Schuhstauraum und Sitzbank stecken in einem durchgeplanten Möbel, nicht in zusammengewürfelten Einzelteilen. So bleibt der Flur aufgeräumt. Und selbst im schmalen Flur geht kein Zentimeter Stauraum verloren.",
   col1CtaLabel: "Garderobe anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Gefertigt wird in Espelkamp, mit PU-verleimten Kanten, die dem täglichen Flur-Alltag standhalten. Von der Beratung bis zur Montage haben Sie einen Ansprechpartner, nicht fünf. Mehr zum Prinzip lesen Sie bei unseren [maßgefertigten Einbauschränken](/einbauschraenke-nach-mass/).",
   counterTarget: 200,
@@ -68,26 +68,6 @@ export const garIntroStats = {
     "Aufmaß und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Geliefert wird bundesweit.",
   col3CtaLabel: "Garderobe online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const garCtas = {
-  intro: {
-    image: `${IMG}/garderobe-nach-mass-sitzbank-eiche.jpg`,
-    heading: "Ihre Garderobe beginnt an Ihrer Flurwand",
-    linkText: "Sprechen Sie mit uns über Ihre Garderobe",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/garderobe-nach-mass-nische-spiegel.jpg`,
-    heading: "Holen Sie aus Ihrem Flur die Garderobe, die wirklich passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihre Garderobe anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Elemente einer Garderobe nach Maß (Kit §3 Modul 2). Feeds JSON-LD OfferCatalog/ItemList. */
@@ -248,16 +228,6 @@ export const garKosten = {
       values: ["Nische, Dachschräge oder der Zuschnitt unter der Treppe verlangen zusätzliche Anpassung."],
     },
   ],
-};
-
-export const garMoebelplaner = {
-  heading: "Ihre Garderobe online vorplanen, den Rest übernehmen wir",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Elemente und Materialideen für Ihre Garderobe schon vorab und bereiten so Ihre persönliche Planung vor. Ein fertiges Angebot spuckt das Tool nicht aus, das ist Absicht: Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/garderobe-nach-mass-flur-anthrazit.jpg`,
-  imageAlt: "Garderobe nach Maß im Flur in Anthrazit mit Spiegel, Wandborden und Kommode",
 };
 
 export const garTestimonialsHeading = "Was unsere Kunden über ihre Garderobe sagen";

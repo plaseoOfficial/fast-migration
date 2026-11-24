@@ -16,8 +16,6 @@
  * Schaufenster, Serien-/Filialfähigkeit, CI + eigene Gestaltungsvorschläge).
  *
  * HANDOFF (Dev/Design, NICHT Teil des Content-Scopes):
- *  - `ladenMoebelplaner` (neu) muss in page.tsx verdrahtet werden:
- *    `<MnmMoebelplaner {...ladenMoebelplaner} />` (analog gastronomieeinrichtung).
  *  - Interne Pflichtlinks brauchen Render-Slots: /serienmoebel/ ("Ladeneinrichtung
  *    in Serie"), /gastronomieeinrichtung/, /praxiseinrichtung/, /bueroeinrichtung/,
  *    /referenzen/, /moebelplaner/, /kontakt/ — Anker stehen im Copytext bereit.
@@ -100,7 +98,7 @@ export const ladenIntroStats = {
   col1Body:
     "Wir planen Ihre Ladeneinrichtung exakt nach Grundriss, Customer Journey und Markenauftritt. Verkaufstheken, Wandregale und Kassenzonen entstehen millimetergenau und sind auf den täglichen Betrieb ausgelegt. Bar- und Restauranttheken bauen wir in derselben Werkstatt, mehr dazu beim [Thekenbau für die Gastronomie](/gastronomieeinrichtung/). Was genau Ihre Fläche braucht, klären wir beim kostenlosen Aufmaß vor Ort.",
   col1CtaLabel: "Ladenbau-Projekt anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Vom einzelnen Empfangstresen bis zur schlüsselfertigen Shopkonzeption bekommen Sie alles aus einer Hand: Beratung, 3D-Planung, Fertigung, baulichen Innenausbau, Beleuchtung und Montage. Sie sprechen dabei mit den Leuten, die Ihre Theke später auch bauen, und vermitteln nicht zwischen Händler, Hersteller und Monteur.",
   counterTarget: 200,
@@ -110,7 +108,7 @@ export const ladenIntroStats = {
   col3Body:
     "Wir fertigen in Espelkamp und montieren im Umkreis von rund 200 km, mit eigenem Montageteam und ohne Subunternehmer. Geliefert wird deutschlandweit. Auf Wunsch bauen wir außerhalb Ihrer Öffnungszeiten auf, dann bleibt Ihr Geschäft so kurz wie möglich zu.",
   col3CtaLabel: "Einsatzgebiet prüfen",
-  col3CtaHref: "/kontakt/",
+  col3CtaHref: "#anfrage",
 };
 
 /**
@@ -367,22 +365,6 @@ export const ladenKosten = {
   ],
 };
 
-/**
- * Möbelplaner block (shared MnmMoebelplaner section). NEW export — trägt den
- * Pflicht-Link auf /moebelplaner/. Muss in page.tsx verdrahtet werden:
- * `<MnmMoebelplaner {...ladenMoebelplaner} />` (analog gastronomieeinrichtung).
- */
-export const ladenMoebelplaner = {
-  heading: "Ihr Gespräch zur Ladeneinrichtung vorbereiten",
-  body:
-    "Im Möbelplaner halten Sie erste Ideen fest, etwa für Schränke, und senden sie uns. Verkaufstheke, Wandregale und Anordnung auf Ihrer Fläche planen wir nach dem kostenlosen Aufmaß vor Ort persönlich mit Ihnen. Lieber gleich sprechen? [Fordern Sie ein Angebot an](/kontakt/) oder rufen Sie an: 05771 9138312.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/ladenbau/ladenbau-obst-gemuese-abteilung-kunden.jpg",
-  imageAlt:
-    "Obst- und Gemüseabteilung nach Maß mit Kunden am Warenträger im Verkaufsraum",
-};
-
 export const ladenGeschichte = {
   heading: "Ein Meisterbetrieb aus OWL, der Geschäftsräume versteht",
   subheading: "Vom Garagenbetrieb zum Partner für Ladenbau",
@@ -400,22 +382,6 @@ export const ladenGeschichte = {
     "Was im Möbelbau für Privatkunden entstand, zahlt sich im Gewerbe doppelt aus: Wir kennen die Anforderungen an Belastbarkeit, Termintreue und Funktion, die ein Ladenbau-Projekt mitbringt, und planen entsprechend praxisnah. Für die Umkleide- und Spielerkabine von Arminia Bielefeld haben wir den kompletten Innenausbau übernommen, ein Beleg dafür, dass unsere Einbauten auch hoher Beanspruchung standhalten.",
     "Vom einzelnen Tresen über die Boutique bis zur Filialausstattung in Serie fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit. Sie möchten sich vorab unsere [Arbeiten ansehen](/referenzen/)? Dort finden Sie Projekte aus Einzelhandel und Gewerbe.",
   ],
-};
-
-/** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */
-export const ladenCtas = {
-  intro: {
-    image: "/images/ladenbau/ladenbau-zapfanlage-theke-integrierte-technik.jpg",
-    heading: "Ihr Geschäft verdient mehr als Standardmöbel.",
-    linkText: "Sprechen Sie mit uns über Ihr Ladenbau-Projekt",
-    href: "/kontakt/",
-  },
-  final: {
-    image: "/images/ladenbau/ladenbau-frischebereich-holzkisten-praesentation.jpg",
-    heading: "Vom Tresen bis zur Shopfläche.",
-    linkText: "Ladenbau-Projekt unverbindlich anfragen.",
-    href: "/kontakt/",
-  },
 };
 
 /** Testimonials + FAQ render via the shared service sections. */
@@ -505,18 +471,4 @@ export const ladenFaq = {
         "Zum Teil. Unser Möbelplaner ist für Schränke, Küche, Bad und Wohnmöbel gedacht. Dort skizzieren Sie erste Ideen und senden uns daraus eine Anfrage. Verkaufstheke und Wandregale samt Anordnung im Laden planen wir mit Ihnen nach dem kostenlosen Aufmaß vor Ort. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
     },
   ],
-};
-
-/**
- * Anfrage-Block am Seitenende (LeistungAnfrage). Ergänzt die beiden
- * ExpandingImageCtas um einen echten Kontaktweg auf der Seite selbst: im
- * Ladenbau-Wettbewerbsfeld führt jede Top-10-Seite die Kontaktaufnahme direkt
- * auf der Leistungsseite (Formular und/oder NAP-Block), gemessen 2026-07-31.
- */
-export const ladenAnfrage = {
-  eyebrow: "ANFRAGE",
-  heading: "Sprechen wir über Ihren Laden",
-  intro:
-    "Schreiben Sie kurz, was Sie einrichten möchten, ob Theke, Regalsystem oder komplette Fläche. Wir melden uns mit einem Terminvorschlag für das kostenlose Aufmaß vor Ort.",
-  seite: "Ladenbau",
 };

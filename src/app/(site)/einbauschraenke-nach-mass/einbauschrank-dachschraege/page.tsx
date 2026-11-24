@@ -7,12 +7,12 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -26,8 +26,6 @@ import {
   dachPreisFaktoren,
   dachAngebot,
   dachGeschichte,
-  dachMoebelplaner,
-  dachCtas,
   dachTestimonialsHeading,
   dachFaq,
   dachJsonLd,
@@ -48,7 +46,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Dachschrägenschrank & Drempelschrank nach Maß | Espelkamp",
+    title: "Dachschrägenschrank & Drempelschrank nach Maß | Fast Systemmöbel",
     description:
       "Drempelschrank und Dachschrägenschrank nach Maß vom Meisterbetrieb in Espelkamp. Passgenau an Kniestock und Schräge geplant, gebaut und montiert.",
     url: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/",
@@ -58,14 +56,12 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 /**
  * Silo-konforme Karten für MnmWeitereLeistungen: kein Cross-Silo in den Gewerbe-
  * Bereich (internal-linking.md Silo-Integrität). Der keyword-reiche Up-Link zeigt
  * auf den Cluster-Pillar /einbauschraenke-nach-mass/ (parent), dazu die Schwester
  * /einbauschraenke-nach-mass/garderobe-nach-mass/ und der Trust-Link /referenzen/. /kontakt/ und /moebelplaner/
- * werden über IntroStats, die beiden ExpandingImageCtas, MnmMoebelplaner und die
+ * werden über IntroStats, den Anfrageblock (Möbelplaner-Zeile) und die
  * FaqSection verlinkt (Conversion-MUSS, wie beim Pillar).
  */
 const WEITERE_LEISTUNGEN_CARDS: ServiceCard[] = [
@@ -118,12 +114,12 @@ export default function EinbauschrankDachschraegePage() {
       <MnmHero {...dachHero} />
       <MnmIntroStats {...dachIntroStats} />
 
-      {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...dachCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage
+        variante="privat"
+        seite="Schrank für Dachschräge"
+        ueberschrift="Ihren Schrank unter der Dachschräge planen wir bei Ihnen vor Ort"
+      />
 
       {/* Begriffs-Glossar — nimmt die Definitionen auf, die IntroStats überfrachtet haben */}
       <SegmentCards {...dachBegriffe} />
@@ -136,28 +132,10 @@ export default function EinbauschrankDachschraegePage() {
       <SegmentCards {...dachPreisFaktoren} />
       <UspHighlight {...dachAngebot} />
       <MnmGeschichte {...dachGeschichte} />
-      <MnmMoebelplaner {...dachMoebelplaner} />
       <TestimonialsSection heading={dachTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...dachCtas.final} />
-          {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
-          <p
-            className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
-            style={{ color: "rgb(61,61,61)" }}
-          >
-            {dachCtas.phone.label}{" "}
-            <a
-              href={dachCtas.phone.href}
-              className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
-            >
-              {dachCtas.phone.number}
-            </a>
-          </p>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="privat" />
 
       <FaqSection
         heading={dachFaq.heading}

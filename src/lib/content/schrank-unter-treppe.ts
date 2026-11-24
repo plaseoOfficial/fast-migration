@@ -26,7 +26,7 @@ export const suHero = {
   bgImage: `${IMG}/schrank-unter-treppe-nach-mass-stufen-schubladen.jpg`,
   imageAlt:
     "Schrank unter der Treppe nach Maß mit Schubladen in den Treppenstufen, Spiegel und Einbauschrank",
-  title: "Einbauschrank unter der Treppe nach Maß, passgenau vom Tischler aus Espelkamp",
+  title: "Einbauschrank unter der Treppe nach Maß, passgenau vom Tischler",
   intro:
     "Wir planen und bauen Ihren Einbauschrank unter der Treppe nach Maß, der jeden Zentimeter unter den Stufen nutzt. Vom Aufmaß der Treppe bis zur Montage alles aus einer Hand, aus dem eigenen Meisterbetrieb in Espelkamp. So wird aus dem dreieckigen Totraum unter der Treppe echter Stauraum, der wirklich passt.",
   breadcrumb: [
@@ -53,7 +53,7 @@ export const suIntroStats = {
   col1Body:
     "Diese Begriffe meinen dasselbe Möbel, nur mit anderem Schwerpunkt. Als Stufenschrank bezeichnet man die Lösung, bei der jede Stufe ein eigenes Schubfach wird. Ein Treppenschrank fasst den ganzen Raum unter der Treppe als geschlossenen Korpus. Genau diesen keilförmigen Raum holen wir mit einem Einbauschrank unter der Treppe zurück, statt ihn zu verschenken.",
   col1CtaLabel: "Treppenschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Ein Schrank unter der Treppe lebt vom Verlauf der Stufen. Wir messen die Treppe an mehreren Punkten, erfassen jede Stufenhöhe und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Aus diesen Werten fertigen wir Fronten und Korpus so, dass der Treppenschrank fugenlos an der Unterseite der Treppe anschließt. Kein toter Winkel, keine Passleiste, kein verschenkter Zentimeter.",
   counterTarget: 200,
@@ -64,27 +64,6 @@ export const suIntroStats = {
     "Wir kommen zu Ihnen und nehmen die Treppe vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, zum Beispiel in Minden, Lübbecke, Osnabrück und Bielefeld. Treppen sind für uns Alltag, ob gerade oder gewendelt, im Neubau, im Altbau oder im offenen Wohnraum.",
   col3CtaLabel: "Treppenschrank online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const suCtas = {
-  intro: {
-    image: `${IMG}/beratung-planung-nach-mass.jpg`,
-    heading: "Ihr Schrank unter der Treppe beginnt mit einem Blick auf Ihre Treppe",
-    linkText: "Sprechen Sie mit uns über Ihren Raum unter der Treppe",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/schrank-unter-treppe-nach-mass-stufen-schubladen.jpg`,
-    heading: "Machen Sie aus dem toten Raum unter der Treppe echten Stauraum.",
-    linkText: "Jetzt kostenloses Treppen-Aufmaß anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 export const suProcess = {
@@ -187,17 +166,6 @@ export const suGeschichte = {
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Darunter unzählige Treppen, Stufen und verwinkelte Ecken, die wir zu passgenauem Stauraum gemacht haben.",
     "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, freistehende Schränke liefern wir deutschlandweit.",
   ],
-};
-
-export const suMoebelplaner = {
-  heading: "Ihren Raum unter der Treppe online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem Möbelplaner stellen Sie Ihren Schrank unter der Treppe online zusammen. Maße, Fronten, Einteilung und Auszüge sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrem Treppenschrank vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß der Treppe vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird ein Schrank unter der Treppe nach Maß.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/aufmass-planung-nach-mass.jpg`,
-  imageAlt:
-    "Planung eines Möbels nach Maß bei Fast Systemmöbel, Beratung am Musterplan",
 };
 
 export const suTestimonialsHeading = "Was unsere Kunden über ihre Schränke unter der Treppe sagen";

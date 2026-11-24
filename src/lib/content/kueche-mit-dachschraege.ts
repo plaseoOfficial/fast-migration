@@ -24,7 +24,7 @@ const IMG = "/images";
 export const dsHero = {
   bgImage: `${IMG}/2026/05/variante_1778229163946_1-scaled.jpg`,
   imageAlt: "Küche nach Maß mit Kochinsel unter einer Dachschräge",
-  title: "Küche mit Dachschräge nach Maß aus Espelkamp",
+  title: "Küche mit Dachschräge nach Maß",
   intro:
     "Ja, eine vollwertige Küche mit Dachschräge ist machbar, wenn wir sie aufs Grad genau planen. Als Meisterbetrieb aus Espelkamp bauen wir Ihre Küche millimetergenau bis unter die Schräge, Wand zu Wand ohne Passleisten. So wird aus dem Dachgeschoss eine Arbeitsküche mit Kopffreiheit und Stauraum.",
   breadcrumb: [
@@ -49,7 +49,7 @@ export const dsIntroStats = {
   col1Body:
     "Fronten und Korpus folgen dem Winkel, Wand zu Wand ohne Passleisten und ohne tote Ecke. Den Winkel der Schräge nehmen wir beim Aufmaß vor Ort genau auf.",
   col1CtaLabel: "Dachschrägen-Küche anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "In unserer Werkstatt in Espelkamp verschließen wir die Kanten mit PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig, auch an spitzen Winkeln. Vom Aufmaß bis zur Montage bleibt es eine [maßgefertigte Küche vom Tischler](/kuechen-nach-mass/).",
   counterTarget: 200,
@@ -58,29 +58,8 @@ export const dsIntroStats = {
   col3Title: "Montage-Radius um Espelkamp",
   col3Body:
     "Aufmaß der Schräge und Montage übernimmt unser eigenes Team im Umkreis von rund 200 km um Espelkamp, in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Kein Bausatz, wir bauen bei Ihnen auf.",
-  col3CtaLabel: "Dachschrägen-Küche online planen",
-  col3CtaHref: "/moebelplaner/",
-};
-
-export const dsCtas = {
-  intro: {
-    image: `${IMG}/2025/11/IMG_9387-scaled.jpg`,
-    heading: "Ihre Dachschrägen-Küche beginnt mit einem Blick auf die Schräge",
-    linkText: "Sprechen Sie mit uns über Ihre Dachschräge",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/2025/11/20231204_095459232_iOS-scaled.jpg`,
-    heading: "Machen Sie aus dem Raum unter dem Dach eine Küche, die passt",
-    linkText: "Jetzt kostenloses Aufmaß der Schräge anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
+  col3CtaLabel: "Küchenberatung anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 /** SegmentCards (shared): Begriffs-Glossar Kniestock/Drempel/Abseite (Kit Modul 2, AEO). */
@@ -264,16 +243,6 @@ export const dsKombi = {
     "Dieselbe Dachschräge trägt oft mehr als die Küche. Kommt der Stauraum daneben von uns, planen wir Küche und [Schrank unter der Dachschräge](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) in einem Aufmaß und montieren beides in einem Zug. Ein Ansprechpartner, ein durchgehendes Bild bis in die Abseite.",
   image: `${IMG}/2025/11/ThabarSebastian_kueche2.jpeg`,
   imageAlt: "Küche und Einbauschrank unter einer Dachschräge nach Maß",
-};
-
-export const dsMoebelplaner = {
-  heading: "Ihre Dachschrägen-Küche online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) skizzieren Sie Ihre Küche unter der Schräge selbst, mit Maßen, Fronten und Einteilung im 3D-Konfigurator. Diese Skizze ist der ideale Start fürs Beratungsgespräch. Den Rest übernehmen wir: kostenloses Aufmaß der Schräge, Planung, Fertigung in Espelkamp und Montage durch unser Team.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/2025/11/IMG_9387-scaled.jpg`,
-  imageAlt: "Dachschrägen-Küche nach Maß mit grifflosen Fronten",
 };
 
 export const dsTestimonialsHeading = "Das sagen Kundinnen und Kunden über die Zusammenarbeit mit uns";

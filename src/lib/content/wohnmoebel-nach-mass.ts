@@ -20,7 +20,7 @@ export const wohnHero = {
   bgImage: `${IMG}/wohnmoebel-nach-mass-tv-wand-kamin.jpg`,
   imageAlt:
     "Wohnzimmer mit TV-Wand nach Maß, integriertem Kamin und offenem Übergang zur Küche",
-  title: "Wohnmöbel nach Maß aus dem Meisterbetrieb in Espelkamp",
+  title: "Wohnmöbel nach Maß aus dem Meisterbetrieb",
   intro:
     "Sie wollen Wohnmöbel, die in Ihr Wohnzimmer passen, statt ein Standardregal, um das herum Lücken bleiben. Als Tischler-Meisterbetrieb in Espelkamp planen, fertigen und montieren wir Wohnmöbel nach Maß selbst: von der TV-Wand über die Wohnwand bis zum Sideboard. Alles aus einer Hand.",
   breadcrumb: [
@@ -45,7 +45,7 @@ export const wohnIntroStats = {
   col1Body:
     "Wir planen Ihre Wohnmöbel um Sie und Ihren Alltag herum, nicht um ein fertiges Raster. Fronten und Materialien wählen Sie frei, von lackiertem MDF über Dekor bis Massivholz.",
   col1CtaLabel: "Jetzt Wohnmöbel anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jede Front und jeder Korpus entsteht in unserer eigenen Werkstatt in Espelkamp, wo alle [Möbel nach Maß](/moebel-nach-mass/) von Fast gebaut werden. Die Schnittkanten verschließen wir fugenlos mit PU-Kantenverleimung. Das bleibt feuchtigkeitsbeständig und hält, was der Alltag ihm zumutet.",
   counterTarget: 72,
@@ -56,27 +56,6 @@ export const wohnIntroStats = {
     "Mehr als 72.000 Einzelteile haben unsere Fertigung schon verlassen, jedes millimetergenau ausgearbeitet und für ein bestimmtes Möbel zugeschnitten.",
   col3CtaLabel: "Wohnmöbel online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const wohnCtas = {
-  intro: {
-    image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-    heading: "Ihre Wohnmöbel nach Maß beginnen mit einem Gespräch",
-    linkText: "Sprechen Sie mit uns über Ihren Wohnraum",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/tv-wand-nach-mass-wandpolsterung.jpg`,
-    heading: "Ihr Wohnraum verdient Möbel, die genau passen.",
-    linkText: "Jetzt kostenloses Aufmaß anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /**
@@ -315,16 +294,6 @@ export const wohnGeschichte = {
     "Heute ist die zweite Generation an Bord: Andreas und Peter Fast sind seit 2010 im Unternehmen und rücken Schritt für Schritt in die Geschäftsführung. Dahinter stehen über 4.000 Projekte und mehr als 1.000 m² eigene Fertigung, dazu ein Meisterbetrieb, der weiß, was er verspricht.",
     "Jedes Möbel entsteht bei uns im Haus, in Eigenregie in Espelkamp gefertigt und im Umkreis von rund 200 km montiert, in ganz OWL rund um Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende Wohnmöbel liefern wir darüber hinaus deutschlandweit.",
   ],
-};
-
-export const wohnMoebelplaner = {
-  heading: "Ihre Wohnmöbel online planen und konfigurieren",
-  body:
-    "Sie wollen sich erst einmal selbst ein Gefühl verschaffen? Mit unserem Möbelplaner stellen Sie Ihre Wohnmöbel online zusammen und sehen Maße, Fronten und Einteilung direkt im 3D-Konfigurator. Ihre Vorplanung schicken Sie uns, den Rest, vom Aufmaß bis zur Montage, übernehmen wir persönlich.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/arbeitszimmer-nach-mass-schreibtisch-sideboard.jpg`,
-  imageAlt: "Arbeitszimmer nach Maß mit Schreibtisch, Besprechungstisch und Sideboard",
 };
 
 export const wohnTestimonialsHeading = "Was unsere Kunden über ihre Möbel sagen";
