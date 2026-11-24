@@ -6,6 +6,7 @@ import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { KUECHEN_PREISZEILE } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -56,7 +57,7 @@ export default function KuechePlanenPage() {
       <ProcessSteps {...planenProcess} />
 
       {/* Anfrageblock: nach dem ersten inhaltlichen Abschnitt */}
-      <LeistungAnfrage variante="kueche" seite="Küche planen" />
+      <LeistungAnfrage variante="kueche" seite="Küche planen" preisZeile={KUECHEN_PREISZEILE} />
       <SpecTable {...planenFormen} />
       <SpecTable {...planenErgonomie} />
       <SegmentCards {...planenFehler} />

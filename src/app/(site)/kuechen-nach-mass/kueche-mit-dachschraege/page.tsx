@@ -7,6 +7,7 @@ import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { KUECHEN_PREISZEILE } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -62,7 +63,7 @@ export default function KuecheMitDachschraegePage() {
       <MnmIntroStats {...dsIntroStats} />
 
       {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
-      <LeistungAnfrage variante="kueche" seite="Küche mit Dachschräge" />
+      <LeistungAnfrage variante="kueche" seite="Küche mit Dachschräge" preisZeile={KUECHEN_PREISZEILE} />
 
       <SegmentCards {...dsBegriffe} />
       <SegmentCards {...dsFormen} />

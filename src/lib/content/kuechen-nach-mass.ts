@@ -149,7 +149,7 @@ export const kuechenFaq = {
     {
       question: "Was kostet eine Küche nach Maß vom Schreiner?",
       answer:
-        "Der Preis ist immer individuell. Er ergibt sich aus der Größe der Küche, den Fronten, der Arbeitsplatte, den gewählten Geräten und der Ausstattung wie Auszügen und Beschlägen. Einen Pauschalpreis gibt es bei einer Maßanfertigung nicht. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erstellen wir Ihnen ein klares, individuelles Angebot, ohne versteckte Kosten.",
+        "Eine Küchenzeile nach Maß liegt bei uns meist zwischen 8.000 und 15.000 Euro, eine Küche über Eck oder mit Insel zwischen 15.000 und 30.000 Euro. Darin sind Möbel, Arbeitsplatte und Montage enthalten, Geräte kommen dazu. Der genaue Preis ergibt sich aus der Größe der Küche, den Fronten, der Arbeitsplatte und der Ausstattung wie Auszügen und Beschlägen. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erstellen wir Ihnen ein klares, individuelles Angebot, ohne versteckte Kosten.",
     },
     {
       question: "Was ist der Unterschied zwischen einer Küche nach Maß und einer Serienküche?",
