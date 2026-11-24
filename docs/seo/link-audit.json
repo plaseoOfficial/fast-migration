@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 44,
+    "pagesBuilt": 45,
     "pagesPlanned": 6,
-    "linksFound": 669,
+    "linksFound": 685,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 1,
-      "Hinweis": 23
+      "Hinweis": 24
     }
   },
   "external": {
@@ -56,6 +56,16 @@
           "inline": true,
           "allowed": true,
           "file": "src/lib/content/nischenschrank-nach-mass.ts"
+        }
+      ],
+      "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/": [
+        {
+          "href": "https://nullbarriere.de/din18040-2-wohnraum-schlafraum.htm",
+          "host": "nullbarriere.de",
+          "anchor": "DIN 18040-2 (nullbarriere.de)",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/begehbarer-kleiderschrank-nach-mass.ts"
         }
       ],
       "/hauswirtschaftsraum/waschmaschinenschrank-nach-mass/": [
@@ -240,6 +250,12 @@
       "check": "missing-soll",
       "message": "/einbauschraenke-nach-mass/nischenschrank-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/einbauschraenke-nach-mass/nischenschrank-nach-mass/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
+      "page": "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/"
     },
     {
       "severity": "Hinweis",

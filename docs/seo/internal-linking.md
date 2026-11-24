@@ -37,7 +37,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 > Gewerbe clusters use **flat URLs** (`/bueroeinrichtung/`, not `/gewerbe/bueroeinrichtung/`),
 > matching the flat-IA relaunch. They are clusters of the Gewerbe hub by topic, not by URL nesting.
 
-**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`, `nischenschrank-nach-mass/`, Kosten-Ratgeber `einbauschrank-kosten/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
+**Built today (Stand 2026-10-04; Quelle der Wahrheit ist `PAGES` in `linking-rules.ts`, `built: true`):** `/`, `/moebel-nach-mass/`, `/kuechen-nach-mass/` (+ `kueche-planen/`, `kuechenzeile-nach-mass/`, `kueche-mit-dachschraege/`), `/einbauschraenke-nach-mass/` (+ `einbauschrank-dachschraege/`, `schrank-unter-treppe/`, `kleiderschrank-nach-mass/`, `garderobe-nach-mass/`, `nischenschrank-nach-mass/`, `begehbarer-kleiderschrank-nach-mass/`, Kosten-Ratgeber `einbauschrank-kosten/`), `/badmoebel-nach-mass/` (+ `waschtisch-nach-mass/`, `waschtischunterschrank-nach-mass/`, `badschrank-nach-mass/`), `/wohnmoebel-nach-mass/` (+ `regal-nach-mass/`, `buecherregal-nach-mass/`, `wohnwand-nach-mass/`, `raumteiler-nach-mass/`), `/hauswirtschaftsraum/` (+ `waschmaschinenschrank-nach-mass/`, Ratgeber `planen/`), `/gewerbe/`, `/ladenbau/`, `/bueroeinrichtung/` (+ `bueroplanung/`, `bueromoebel-nach-mass/`), `/gastronomieeinrichtung/`, `/serienmoebel/`, `/praxiseinrichtung/`, `/moebelplaner/`, `/kontakt/`, `/ueber-uns/`, `/referenzen/`, Legal. Ratgeber-Artikel unter `/ratgeber/<slug>/` (Index `/ratgeber/` geparkt): `/ratgeber/holzarten-materialien-moebel/`.
 
 ## Rules (condensed)
 
@@ -113,6 +113,12 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/` launch (2026-11)
+
+- **Produkt-Kind unter `/einbauschraenke-nach-mass/`**, `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7). Einziges Zuhause des Themas: `/ratgeber/begehbaren-kleiderschrank-planen/` leitet jetzt per 301 hierher (`next.config.ts`, INTERIM aufgelöst).
+- **Eingehend (3 Inhaltsquellen):** `/einbauschraenke-nach-mass/` (Kachel „Begehbare Ankleide", „begehbaren Ankleide nach Maß", MUSS `own-cluster-spokes`; Hub-Budget per `maxBodyLinks: 11` begründet angehoben, weil der MUSS jedes gebaute Kind verlangt) · `/einbauschraenke-nach-mass/kleiderschrank-nach-mass/` (`klVarianten.intro`, „begehbaren Kleiderschrank nach Maß", Geschwister-Rücklink; Budget-Tausch: „Kniestockschrank nach Maß" im selben Satz ist jetzt reiner Text) · `/einbauschraenke-nach-mass/einbauschrank-kosten/` (FAQ „begehbare Ankleide", „Schrankraum nach Maß").
+- **Ausgehend (7 von 7):** ↑ `/einbauschraenke-nach-mass/` (Breadcrumb + IntroStats) · Geschwister `einbauschrank-dachschraege/` (Form „Unter der Dachschräge"), `kleiderschrank-nach-mass/` (Zonen-Intro), Kosten-Ratgeber (Kostentabelle) · `/moebelplaner/` · `/kontakt/` · Beleg DIN 18040-2 (nullbarriere.de). Nischenschrank bewusst nicht verlinkt (Budget voll, kein Paar in der Cluster-Map). `/einbauschrank-dachschraege/` als weitere Quelle verworfen (Budget 7/7 voll).
 
 ### `/einbauschraenke-nach-mass/nischenschrank-nach-mass/` launch (2026-11)
 
