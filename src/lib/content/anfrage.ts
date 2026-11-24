@@ -26,17 +26,17 @@
  * Die drei Wege (Rückruf, Termin, Unterlagen) stehen in `src/lib/anfrage-mail.ts`
  * (`WEGE`), weil die Server-Action sie mitprüft.
  *
- * Nur Belegtes: Rückruf-Zeit, Lieferzeit, Preise und Garantien stehen hier
- * bewusst nicht. Das „kostenlose Aufmaß“ steht nur bei Küche und Privat.
+ * Nur Belegtes (FACTS.md): Lieferzeit, Preise und Garantien stehen hier bewusst
+ * nicht. Rückmelde-Zeit und kostenloses Aufmaß (auch Gewerbe) sind bestätigt.
  */
 
 export type AnfrageVariante = "kueche" | "privat" | "gewerbe" | "serie" | "neutral";
 
-/** Seiten-Funktion von Andreas Fast. Funktion vorerst „Tischlermeister“ (steht so live auf /ueber-uns/). */
+/** Ansprechpartner für Anfragen. Funktion vom Kunden bestätigt (FACTS.md, 2026-11-24). */
 export const ANSPRECHPARTNER = {
   vorname: "Andreas",
   name: "Andreas Fast",
-  funktion: "Tischlermeister",
+  funktion: "Tischlermeister, Vertrieb und Projektleitung",
   foto: "/images/2025/11/Freigestellt.png",
   /** Original-Maße des Fotos, für next/image. */
   fotoBreite: 393,
@@ -56,8 +56,14 @@ export const TELEFON = {
   zeiten: "Mo–Fr 6:00–17:00 Uhr",
 } as const;
 
-/** Text nach dem Absenden. Zeitangabe erst, wenn Fast sie nennt. */
-export const DANKE = `Danke. ${ANSPRECHPARTNER.name} meldet sich bei Ihnen.`;
+/** Zugesagte Rückmelde-Zeit (vom Kunden bestätigt, FACTS.md 2026-11-24). Nur hier ändern. */
+export const RUECKMELDUNG = "am selben oder nächsten Werktag";
+
+/** Text nach dem Absenden. */
+export const DANKE = `Danke. ${ANSPRECHPARTNER.name} meldet sich ${RUECKMELDUNG} bei Ihnen.`;
+
+/** Kurzer Hinweis unter dem Button: was nach dem Absenden passiert. */
+export const NACH_DEM_ABSENDEN = `${ANSPRECHPARTNER.name} meldet sich ${RUECKMELDUNG}.`;
 
 /** Eine Zeile unter dem Block, nur auf Privat-Seiten (Variante „privat“). */
 export const MOEBELPLANER_ZEILE =
@@ -139,7 +145,7 @@ export const VARIANTEN: Record<AnfrageVariante, VariantenInhalt> = {
     zeile: "Projektanfrage",
     ueberschrift: "Ihr Projekt, ein Ansprechpartner",
     einleitung:
-      "Schicken Sie uns Grundriss, Fotos oder eine kurze Beschreibung. Andreas Fast klärt mit Ihnen Umfang und Termine und bleibt bis zur Montage Ihr Ansprechpartner.",
+      "Schicken Sie uns Grundriss, Fotos oder eine kurze Beschreibung. Andreas Fast klärt mit Ihnen Umfang und Termine und bleibt bis zur Montage Ihr Ansprechpartner. Das Aufmaß vor Ort ist kostenlos.",
     button: "Projekt anfragen",
     umfang: {
       label: "Umfang",
