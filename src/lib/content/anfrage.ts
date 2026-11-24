@@ -65,6 +65,13 @@ export const DANKE = `Danke. ${ANSPRECHPARTNER.name} meldet sich ${RUECKMELDUNG}
 /** Kurzer Hinweis unter dem Button: was nach dem Absenden passiert. */
 export const NACH_DEM_ABSENDEN = `${ANSPRECHPARTNER.name} meldet sich ${RUECKMELDUNG}.`;
 
+/**
+ * Orientierung für Küchen, vom Kunden bestätigt (FACTS.md, 2026-11-24). Kein
+ * Festpreis und kein „ab“-Preis. Steht als `preisZeile` im Block der Küchen-Seiten.
+ */
+export const KUECHEN_PREISZEILE =
+  "Eine Küchenzeile nach Maß liegt bei uns meist zwischen 8.000 und 15.000 Euro, eine Küche über Eck oder mit Insel zwischen 15.000 und 30.000 Euro. Darin sind Möbel, Arbeitsplatte und Montage enthalten, Geräte kommen dazu. Den genauen Preis nennen wir nach dem Aufmaß.";
+
 /** Eine Zeile unter dem Block, nur auf Privat-Seiten (Variante „privat“). */
 export const MOEBELPLANER_ZEILE =
   "Lieber erst selbst probieren? Im [Möbelplaner](/moebelplaner/) sehen Sie Maße, Dekore und einen Richtpreis.";

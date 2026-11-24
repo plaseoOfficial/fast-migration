@@ -9,6 +9,7 @@ import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { KUECHEN_PREISZEILE } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -105,7 +106,7 @@ export default function KuechenNachMassPage() {
       <MnmIntroStats {...kuechenIntroStats} />
 
       {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
-      <LeistungAnfrage variante="kueche" seite="Küchen nach Maß" />
+      <LeistungAnfrage variante="kueche" seite="Küchen nach Maß" preisZeile={KUECHEN_PREISZEILE} />
 
       <MnmProcess {...kuechenProcess} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />

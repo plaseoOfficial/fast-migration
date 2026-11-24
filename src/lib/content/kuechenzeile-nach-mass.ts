@@ -191,11 +191,11 @@ export const kzProcess = {
   ],
 };
 
-/** SpecTable (shared): Kostenfaktoren. KEINE Preise/€-Zahlen (Kit §8). */
+/** SpecTable (shared): Kostenfaktoren. Einzige Zahl ist die vom Kunden bestätigte Orientierungsspanne (FACTS.md, 2026-11-24). */
 export const kzKostenFaktoren = {
   heading: "Was den Preis Ihrer Küchenzeile bestimmt",
   intro:
-    "Was eine Küchenzeile nach Maß kostet, lässt sich nicht pauschal sagen, weil jede Zeile anders geplant ist. Einen festen Laufmeterpreis nennen wir bewusst nicht. Der Preis setzt sich aus diesen Faktoren zusammen. Den genauen Wert bekommen Sie als individuelles Angebot nach dem kostenlosen Aufmaß.",
+    "Eine Küchenzeile nach Maß liegt bei uns meist zwischen 8.000 und 15.000 Euro, mit Arbeitsplatte und Montage, ohne Geräte. Einen festen Laufmeterpreis nennen wir bewusst nicht, weil jede Zeile anders geplant ist. Der Preis setzt sich aus diesen Faktoren zusammen. Den genauen Wert bekommen Sie als individuelles Angebot nach dem kostenlosen Aufmaß.",
   firstColLabel: "Kostenfaktor",
   columns: ["Was ihn beeinflusst"],
   highlightColumn: 0,
@@ -235,7 +235,7 @@ export const kzFaq = {
     {
       question: "Was kostet eine Küchenzeile nach Maß?",
       answer:
-        "Einen Pauschalpreis gibt es nicht, dafür ist jede Zeile zu individuell geplant. Der Preis hängt vor allem von Länge, Fronten, Arbeitsplatte, Geräteumfang und Innenausstattung ab. Nach dem kostenlosen Aufmaß bekommen Sie ein konkretes Angebot, ohne versteckte Posten.",
+        "Eine Küchenzeile nach Maß liegt bei uns meist zwischen 8.000 und 15.000 Euro. Darin sind Möbel, Arbeitsplatte und Montage enthalten, Geräte kommen dazu. Der genaue Preis hängt vor allem von Länge, Fronten, Arbeitsplatte und Innenausstattung ab. Nach dem kostenlosen Aufmaß bekommen Sie ein konkretes Angebot, ohne versteckte Posten.",
     },
     {
       question: "Wie lang und wie tief sollte eine Küchenzeile sein?",
