@@ -7,8 +7,8 @@ import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { BueroProcessSteps } from "@/components/sections/gewerbe/BueroProcessSteps";
 import { BueroVergleich } from "@/components/sections/gewerbe/BueroVergleich";
-import { BueroMoebelplanerCta } from "@/components/sections/gewerbe/BueroMoebelplanerCta";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { SITE_URL } from "@/lib/content";
@@ -20,8 +20,6 @@ import {
   bueroTypische,
   bueroVergleich,
   bueroGeschichte,
-  bueroMoebelplaner,
-  bueroCtas,
   bueroTestimonialsHeading,
   bueroFaq,
   bueroWeitereCards,
@@ -53,8 +51,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}${PAGE_PATH}`,
   name: "Büroeinrichtung nach Maß",
@@ -77,28 +73,17 @@ export default function BueroeinrichtungPage() {
       <MnmIntroStats {...bueroIntroStats} />
       <BueroProcessSteps {...bueroProcessSteps} />
 
-      {/* CTA after process steps */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...bueroCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="gewerbe" seite="Büroeinrichtung" objektart="Büro" />
 
       <MnmWeitereLeistungen cards={bueroWeitereCards} />
       <MnmTypische {...bueroTypische} />
       <BueroVergleich {...bueroVergleich} />
       <MnmGeschichte {...bueroGeschichte} />
-      <BueroMoebelplanerCta {...bueroMoebelplaner} />
       <TestimonialsSection heading={bueroTestimonialsHeading} />
 
-      {/* Final CTA — compact banner */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <div style={{ maxHeight: "260px", overflow: "hidden" }}>
-            <ExpandingImageCta {...bueroCtas.final} />
-          </div>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
       <FaqSection heading={bueroFaq.heading} items={bueroFaq.items} />
     </PrivatPageLayout>

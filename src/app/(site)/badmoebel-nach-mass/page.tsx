@@ -10,8 +10,8 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -25,8 +25,6 @@ import {
   badVergleich,
   badKosten,
   badGeschichte,
-  badMoebelplaner,
-  badCtas,
   badTestimonialsHeading,
   badFaq,
   badJsonLd,
@@ -34,7 +32,7 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Badmöbel nach Maß aus Espelkamp: Planung & Montage",
+  title: "Badmöbel nach Maß: Planung, Fertigung & Montage",
   description:
     "Badmöbel nach Maß vom Meisterbetrieb in Espelkamp: Waschtisch, Unterschrank und Spiegelschrank, feuchtigkeitsbeständig verarbeitet. Kostenloses Aufmaß vor Ort.",
   alternates: { canonical: "/badmoebel-nach-mass/" },
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Badmöbel nach Maß aus Espelkamp: Planung & Montage",
+    title: "Badmöbel nach Maß: Planung, Fertigung & Montage",
     description:
       "Badmöbel nach Maß vom Meisterbetrieb in Espelkamp. Millimetergenau geplant, gefertigt und montiert.",
     url: "/badmoebel-nach-mass/",
@@ -56,8 +54,6 @@ export const metadata: Metadata = {
     siteName: "Fast Systemmöbel",
   },
 };
-
-const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 /**
  * Silo-konforme Karten für MnmWeitereLeistungen: ein Privat-Cluster-Pillar
@@ -115,12 +111,12 @@ export default function BadmoebelNachMassPage() {
       <MnmHero {...badHero} />
       <MnmIntroStats {...badIntroStats} />
 
-      {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...badCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage
+        variante="privat"
+        seite="Badmöbel"
+        ueberschrift="Ihre Badmöbel planen wir bei Ihnen vor Ort"
+      />
 
       <ProcessSteps {...badProcessSteps} />
       <MnmWeitereLeistungen cards={WEITERE_LEISTUNGEN_CARDS} />
@@ -130,28 +126,10 @@ export default function BadmoebelNachMassPage() {
       <SpecTable {...badVergleich} />
       <SegmentCards {...badKosten} />
       <MnmGeschichte {...badGeschichte} />
-      <MnmMoebelplaner {...badMoebelplaner} />
       <TestimonialsSection heading={badTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...badCtas.final} />
-          {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
-          <p
-            className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
-            style={{ color: "rgb(61,61,61)" }}
-          >
-            {badCtas.phone.label}{" "}
-            <a
-              href={badCtas.phone.href}
-              className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
-            >
-              {badCtas.phone.number}
-            </a>
-          </p>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="privat" />
 
       <FaqSection
         heading={badFaq.heading}

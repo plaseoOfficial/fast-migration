@@ -42,7 +42,7 @@ export const bueroIntroStats = {
   col1Body:
     "Arbeitsplätze, Schränke, Konferenztische, millimetergenau geplant nach Ihrem Grundriss und Ihren Abläufen. Wie eine [Büroplanung](/bueroeinrichtung/bueroplanung/) abläuft, klären wir beim kostenlosen Aufmaß.",
   col1CtaLabel: "Büroprojekt unverbindlich anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Beratung, Planung, Fertigung und Montage aus einer Hand, kein Abstimmen zwischen drei Gewerken. Sie sprechen mit den Leuten, die Ihre [Büromöbel nach Maß](/bueroeinrichtung/bueromoebel-nach-mass/) bauen.",
   counterTarget: 200,
@@ -51,8 +51,8 @@ export const bueroIntroStats = {
   col3Title: "Montageradius rund um Espelkamp",
   col3Body:
     "Montage mit eigenem Team im Umkreis von rund 200 km — Minden, Bielefeld, Osnabrück, Hannover, ganz OWL. Lieferung bundesweit.",
-  col3CtaLabel: "Büro im Möbelplaner planen",
-  col3CtaHref: "/moebelplaner/",
+  col3CtaLabel: "Projekt anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 export const bueroProcess = {
@@ -189,32 +189,6 @@ export const bueroGeschichte = {
     "Fast Systemmöbel startete 1996 als Ein-Mann-Betrieb in Rahden-Tonnenheide. Heute arbeiten wir auf über 1.000 m² in Espelkamp mit moderner Homag- und CNC-Technologie. Geführt von Familie Fast: Gründer Johann und seine Söhne Andreas und Peter, seit 2010 mit an Bord.",
     "Inzwischen haben wir zahlreiche komplette Büros in Ostwestfalen-Lippe eingerichtet — von einzelnen Arbeitsplätzen bis zu Empfang, Schrankwand und Konferenzraum. Ein Betrieb, ein Ansprechpartner, ein Stil über alle Möbel hinweg. Einen Teil dieser Arbeiten zeigen wir in unseren [Referenzprojekten](/referenzen/).",
   ],
-};
-
-export const bueroMoebelplaner = {
-  heading: "Ihr Büro online vorplanen und konfigurieren",
-  body:
-    "Stellen Sie Schränke und Büromöbel im 3D-Konfigurator online zusammen — Maße, Oberflächen und Einlegeböden direkt sichtbar. Den Rest übernehmen wir: Aufmaß, Fertigung, Montage. [Beratung anfragen](/kontakt/) oder direkt anrufen: 05771 9138312.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/bueroeinrichtung/bueroeinrichtung-empfang-kuechenzeile.jpg",
-  imageAlt: "Empfangsbereich mit Küchenzeile und Holzlamellen-Wand nach Maß",
-};
-
-/** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */
-export const bueroCtas = {
-  intro: {
-    image: "/images/bueroeinrichtung/bueroeinrichtung-konferenzraum-glastisch.jpg",
-    heading: "Ihr Büro verdient mehr als Möbel von der Stange.",
-    linkText: "Sprechen Sie mit uns über Ihr Büroprojekt",
-    href: "/kontakt/",
-  },
-  final: {
-    image: "/images/bueroeinrichtung/schreibtisch-nach-mass-arbeitsplatz.jpg",
-    heading: "Ihr Büroprojekt — wir bauen es nach Maß.",
-    linkText: "Jetzt unverbindlich anfragen",
-    href: "/kontakt/",
-  },
 };
 
 /**

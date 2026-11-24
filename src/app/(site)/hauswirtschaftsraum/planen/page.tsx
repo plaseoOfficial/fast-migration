@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
   hwrPlanenHero,
@@ -16,7 +17,6 @@ import {
   hwrPlanenFeuchte,
   hwrPlanenFehler,
   hwrPlanenWerkstatt,
-  hwrPlanenMoebelplaner,
   hwrPlanenFaq,
   hwrPlanenJsonLd,
 } from "@/lib/content/planen";
@@ -58,13 +58,21 @@ export default function HauswirtschaftsraumPlanenPage() {
 
       <MnmHero {...hwrPlanenHero} />
       <ProcessSteps {...hwrPlanenSchritte} />
+
+      {/* Anfrageblock: nach dem ersten inhaltlichen Abschnitt */}
+      <LeistungAnfrage
+        variante="privat"
+        seite="Hauswirtschaftsraum planen"
+        ueberschrift="Ihren Hauswirtschaftsraum planen wir bei Ihnen vor Ort"
+      />
       <SpecTable {...hwrPlanenAnschluesse} />
       <SpecTable {...hwrPlanenRaumformen} />
       <SpecTable {...hwrPlanenZonen} />
       <SegmentCards {...hwrPlanenFeuchte} />
       <SegmentCards {...hwrPlanenFehler} />
       <UspHighlight {...hwrPlanenWerkstatt} />
-      <MnmMoebelplaner {...hwrPlanenMoebelplaner} />
+      {/* Streifen: springt zum Anfrageblock */}
+      <AnfrageStreifen variante="privat" />
 
       <FaqSection
         heading={hwrPlanenFaq.heading}

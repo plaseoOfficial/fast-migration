@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
   krHero,
@@ -17,7 +18,6 @@ import {
   krFehler,
   krWerkstatt,
   krMass,
-  krCta,
   krFaq,
   krJsonLd,
 } from "@/lib/content/konferenzraum-einrichten";
@@ -57,6 +57,9 @@ export default function KonferenzraumEinrichtenPage() {
 
       <MnmHero {...krHero} />
       <ProcessSteps {...krProcess} />
+
+      {/* Anfrageblock: nach dem ersten inhaltlichen Abschnitt */}
+      <LeistungAnfrage variante="gewerbe" seite="Konferenzraum" objektart="Büro" />
       <SpecTable {...krFormen} />
       <SpecTable {...krPlatz} />
       <SpecTable {...krTischlaenge} />
@@ -64,7 +67,8 @@ export default function KonferenzraumEinrichtenPage() {
       <SegmentCards {...krFehler} />
       <UspHighlight {...krWerkstatt} />
       <SegmentCards {...krMass} />
-      <MnmMoebelplaner {...krCta} />
+      {/* Streifen: springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
       <FaqSection
         heading={krFaq.heading}

@@ -29,7 +29,7 @@ export const regHero = {
   bgImage: "/images/einbauschraenke/einbauschrank-nach-mass-anthrazit-regalnische.jpg",
   imageAlt:
     "Offenes Regal nach Maß, bündig in eine Wohnzimmer-Nische bis unter die Decke eingebaut",
-  title: "Regal nach Maß aus Espelkamp",
+  title: "Regal nach Maß",
   intro:
     "Ein Regal nach Maß ist das offene Regal, das wir millimetergenau auf Ihre Wand, Nische oder Ecke zuschneiden. Bis unter die Decke, von Wand zu Wand, ohne eine einzige Passleiste. Als Meisterbetrieb aus Espelkamp planen wir es, fertigen es und montieren es selbst, nach kostenlosem Aufmaß bei Ihnen vor Ort.",
   breadcrumb: [
@@ -54,7 +54,7 @@ export const regIntroStats = {
   col1Body:
     "Die Fachaufteilung planen wir genau auf Ihren Raum. Kein toter Spalt, kein verschenkter Stauraum. Offen zum Zeigen, geschlossen mit Klappen oder Schubladen für alles hinter der Front.",
   col1CtaLabel: "Regal nach Maß anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Regal entsteht bei uns in Espelkamp, mit fugenlos verschlossener PU-Kantenverleimung, feuchtigkeitsbeständig und stabil. Von der Beratung bis zur Montage kommt Ihr [maßgefertigtes Wohnmöbel](/wohnmoebel-nach-mass/) aus einer Hand, mit einem festen Ansprechpartner.",
   counterTarget: 200,
@@ -65,26 +65,6 @@ export const regIntroStats = {
     "Aufmaß und Montage macht unser eigenes Montageteam, im Umkreis von rund 200 km um Espelkamp: in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Frei stehende Regale liefern wir bundesweit.",
   col3CtaLabel: "Regal online vorplanen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const regCtas = {
-  intro: {
-    image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-    heading: "Ihr Regal beginnt an Ihrer Wand",
-    linkText: "Sprechen Sie mit uns über Ihr Regal",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/tv-wand-nach-mass-wandpolsterung.jpg`,
-    heading: "Holen Sie aus Ihrer Wand das Regal, das wirklich passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihr Regal anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Varianten/Ausführungen des offenen Regals (Kit §3 Modul 2). */
@@ -243,16 +223,6 @@ export const regKosten = {
       values: ["Ecke, Dachschräge oder eine schiefe Altbauwand verlangen mehr Anpassung."],
     },
   ],
-};
-
-export const regMoebelplaner = {
-  heading: "Ihr Regal online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) skizzieren Sie Ihr Regal vorab und sammeln Maße, Fächer und Materialideen. Das bereitet Ihre persönliche Planung vor, den genauen Aufbau legen wir dann gemeinsam fest. Der Rest liegt bei uns: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp, Montage durch unser eigenes Team.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/wohnmoebel-nach-mass-wohn-essbereich.jpg`,
-  imageAlt: "Offenes Regal nach Maß in einem offenen Wohnraum",
 };
 
 export const regTestimonialsHeading = "Was unsere Kunden über ihr Regal sagen";

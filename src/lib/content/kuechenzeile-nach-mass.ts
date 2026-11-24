@@ -27,7 +27,7 @@ export const kzHero = {
   bgImage: `${IMG}/2025/11/IMG_4797-scaled.jpg`,
   imageAlt:
     "Küchenzeile nach Maß an einer Wand mit heller Holz-Arbeitsplatte und Oberschränken",
-  title: "Küchenzeile nach Maß aus Espelkamp",
+  title: "Küchenzeile nach Maß",
   intro:
     "Eine Küchenzeile nach Maß ist die einzeilige Küche, die wir genau auf Ihr Wandmaß bauen: Wand zu Wand, ohne Passleisten, kein Zentimeter verschenkt. Als Meisterbetrieb aus Espelkamp planen, fertigen und montieren wir sie selbst, millimetergenau nach kostenlosem Aufmaß bei Ihnen vor Ort.",
   breadcrumb: [
@@ -52,7 +52,7 @@ export const kzIntroStats = {
   col1Body:
     "Standardschränke enden im Raster, den Rest kaschieren Blenden. Ihre Zeile bauen wir Wand zu Wand, millimetergenau nach kostenlosem Aufmaß. Kein toter Spalt, kein verschenkter Stauraum.",
   col1CtaLabel: "Jetzt Küchenzeile anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "In Espelkamp fertigen wir jede Zeile selbst, mit PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig. Von der Beratung bis zur Montage bleibt es eine [maßgefertigte Küche vom Tischler](/kuechen-nach-mass/), mit einem Ansprechpartner.",
   counterTarget: 200,
@@ -61,29 +61,8 @@ export const kzIntroStats = {
   col3Title: "Montage-Radius um Espelkamp",
   col3Body:
     "Aufmaß und Montage übernimmt unser eigenes Montageteam, rund 200 km um Espelkamp: in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Immer von uns, nie als Bausatz.",
-  col3CtaLabel: "Küchenzeile online planen",
-  col3CtaHref: "/moebelplaner/",
-};
-
-export const kzCtas = {
-  intro: {
-    image: `${IMG}/2025/11/IMG_9387-scaled.jpg`,
-    heading: "Ihre Küchenzeile beginnt mit einem Blick auf Ihre Wand",
-    linkText: "Sprechen Sie mit uns über Ihre Küchenzeile",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/2025/11/20231204_095459232_iOS-scaled.jpg`,
-    heading: "Holen Sie aus einer Wand die Küche, die wirklich passt.",
-    linkText: "Jetzt kostenloses Aufmaß für Ihre Küchenzeile anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
+  col3CtaLabel: "Küchenberatung anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 /** SegmentCards (shared): Zielgruppen/Einsatz — der einzigartige Winkel dieser Seite. */
@@ -246,16 +225,6 @@ export const kzKostenFaktoren = {
       values: ["Eine gerade Wand ist einfacher als eine Nische, eine schräge Wand oder besondere Anschlüsse, die mehr Anpassung verlangen."],
     },
   ],
-};
-
-export const kzMoebelplaner = {
-  heading: "Ihre Küchenzeile online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Ihre Zeile online zusammen: Maße, Fronten, Auszüge und Geräte im 3D-Konfigurator, in Ruhe von zu Hause. Was Sie planen, nehmen wir auf. Alles Weitere liegt bei uns: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg`,
-  imageAlt: "Maßgefertigte Küche mit heller Zeile und Kochinsel im offenen Wohnraum",
 };
 
 export const kzTestimonialsHeading = "Was unsere Kunden über ihre Küchenzeile sagen";

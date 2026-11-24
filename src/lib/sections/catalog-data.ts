@@ -357,19 +357,33 @@ export const SECTION_META = [
 
   {
     id: "shared-leistung-anfrage",
-    displayName: "Shared — Leistung Anfrage (Formular + Kontakt)",
+    displayName: "Shared — Leistung Anfrage (Anfrageblock mit Formular)",
     useCase: "contact-form",
     category: "shared",
     description:
-      "Anfrage-Block für Leistungsseiten: Kontaktdaten (Telefon, Zeiten, Adresse) links, echtes Kontaktformular rechts. Nutzt dieselbe Server-Action wie die Kontaktseite (inkl. Honeypot) und kennzeichnet die Herkunftsseite in der Mail. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln, das nichts versendet.",
+      "Anfrageblock für Leistungsseiten in fünf Fassungen (kueche, privat, gewerbe, serie, neutral), Anker #anfrage. Links Andreas Fast (Foto, Funktion), Kernsatz, Telefon; rechts kurzes Formular (Name, Telefon, E-Mail, drei Wege mit vorgewähltem Rückruf, freiwillige Nachricht); Projektangaben und bis zu drei Dateien (Bilder werden im Browser verkleinert) liegen im aufklappbaren, freiwilligen Bereich. Alle Texte in src/lib/content/anfrage.ts. Nutzt die Server-Action des Kontaktformulars (Honeypot `firma`, Firmenname heißt `unternehmen`). Der Header-Button springt auf Seiten mit diesem Block per CSS (:has) zum Anker. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln.",
     propsSummary: [
-      { name: "eyebrow", type: "string", required: false },
-      { name: "heading", type: "string", required: true },
-      { name: "intro", type: "string", required: true },
+      { name: "variante", type: '"kueche" | "privat" | "gewerbe" | "serie" | "neutral"', required: true },
       { name: "seite", type: "string", required: true },
+      { name: "ueberschrift", type: "string", required: false },
+      { name: "objektart", type: "string", required: false },
+      { name: "preisZeile", type: "string", required: false },
+      { name: "leitstelle", type: "boolean", required: false },
     ],
-    usedOn: ["/ladenbau"],
+usedOn: ["/", "/kuechen-nach-mass", "/einbauschraenke-nach-mass/einbauschrank-dachschraege", "/praxiseinrichtung", "/ladenbau", "/serienmoebel"],
     screenshot: `${REF}/kontakt/band-0.jpg`,
+  },
+
+  {
+    id: "shared-anfrage-streifen",
+    displayName: "Shared — Anfrage-Streifen (Sprung zum Block)",
+    useCase: "image-cta",
+    category: "shared",
+    description:
+      "Kurzer Streifen am Seitenende vor den Fragen: eine Zeile Text und ein Link zum Anfrageblock (#anfrage). Ersetzt den zweiten Bild-Aufruf, enthält kein Formular. Texte je Fassung in src/lib/content/anfrage.ts.",
+    propsSummary: [{ name: "variante", type: '"kueche" | "privat" | "gewerbe" | "serie" | "neutral"', required: true }],
+usedOn: ["/", "/kuechen-nach-mass", "/einbauschraenke-nach-mass/einbauschrank-dachschraege", "/praxiseinrichtung", "/ladenbau", "/serienmoebel"],
+    screenshot: `${REF}/moebel-nach-mass/02b-massmoebel.jpg`,
   },
 
   {

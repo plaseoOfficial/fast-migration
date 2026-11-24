@@ -7,6 +7,8 @@ import { QualitySection } from "@/components/sections/home/QualitySection";
 import { ParallaxQuote } from "@/components/sections/home/ParallaxQuote";
 import { HandwerkSection } from "@/components/sections/home/HandwerkSection";
 import { MoebelplanerSection } from "@/components/sections/home/MoebelplanerSection";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { RaeumeSection } from "@/components/sections/home/RaeumeSection";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/home/FaqSection";
@@ -50,9 +52,12 @@ export default function Home() {
       <QualitySection {...homeQuality} />
       <ParallaxQuote {...homeParallax} />
       <HandwerkSection {...homeHandwerk} />
+      {/* Anfrageblock, neutrale Fassung: nach dem Handwerks-Beleg. Der große Möbelplaner-Abschnitt darunter bleibt. */}
+      <LeistungAnfrage variante="neutral" seite="Startseite" />
       <MoebelplanerSection {...homeMoebelplaner} />
       <RaeumeSection {...homeRaeume} />
       <TestimonialsSection heading={homeTestimonials.heading} />
+      <AnfrageStreifen variante="neutral" />
       <FaqSection {...homeFaq} />
     </main>
   );

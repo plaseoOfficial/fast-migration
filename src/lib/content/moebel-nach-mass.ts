@@ -9,7 +9,7 @@ import type { ServiceCard } from "@/types/mnm";
 export const mnmHero = {
   bgImage: "/images/2025/11/WhatsApp-Bild-2025-04-01-um-22.54.05_fab2d495.jpg",
   imageAlt: "Einbauschrank nach Maß – Fast Systemmöbel",
-  title: "Möbel nach Maß, millimetergenau aus Espelkamp",
+  title: "Möbel nach Maß, millimetergenau gefertigt",
   intro:
     "Standardlösungen finden Sie in jedem Möbelhaus. Wir bei Fast Systemmöbel gehen einen Schritt weiter: Wir planen und fertigen hochwertige Möbel nach Maß, die sich millimetergenau in Ihre Räume einfügen und Ihre Persönlichkeit perfekt unterstreichen.",
   breadcrumb: [
@@ -33,7 +33,7 @@ export const mnmIntroStats = {
   col1Body:
     "Wir fertigen Möbel nach Maß, die millimetergenau zu Ihrem Raum passen und jede Nische optimal nutzen. Jede Maßanfertigung entsteht individuell nach Ihren Anforderungen. Mit hochwertigen Dekoren, stabilen Konstruktionen und präzisem Aufmaß-Service.",
   col1CtaLabel: "Jetzt individuelle Anfrage stellen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Dabei planen wir jedes Möbelstück so, dass Funktionalität, Stauraum und Alltagstauglichkeit perfekt zusammenspielen. Ob Schrank, Regal, Sideboard oder Kommode: Sie erhalten maßgeschneiderte Möbel, die langlebig gebaut, modern gestaltet und sauber integriert werden – exakt nach Ihren Vorstellungen.",
   counterTarget: 72,

@@ -64,7 +64,7 @@ export const wmsIntroStats = {
   col1Body:
     "Wo Wasserhahn, Abfluss und Steckdose sitzen, bestimmt die Schranktiefe und die Aussparungen. Im Rohbau legen Sie die Anschlüsse vor dem Innenausbau fest, wie im Ratgeber [Hauswirtschaftsraum planen](/hauswirtschaftsraum/planen/) beschrieben.",
   col1CtaLabel: "Waschmaschinenschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Teil fertigen wir im Familienbetrieb selbst, für genau eine Nische: Ihre. Soll es mehr werden als der Geräteverbau? Dann planen wir gern weiter bis zum kompletten [Hauswirtschaftsraum nach Maß](/hauswirtschaftsraum/).",
   counterTarget: 200,
@@ -75,26 +75,6 @@ export const wmsIntroStats = {
     "Im Umkreis von rund 200 km um Espelkamp messen wir kostenlos auf und bauen den Schrank ein, etwa in Minden, Lübbecke, Bielefeld oder Osnabrück. Wohnen Sie weiter weg, liefern wir deutschlandweit.",
   col3CtaLabel: "Schrank online vorplanen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const wmsCtas = {
-  intro: {
-    image: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`,
-    heading: "Erzählen Sie uns von Ihrer Nische",
-    linkText: "Beratung zum Waschmaschinenschrank anfragen",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-eck.jpg`,
-    heading: "Ein fester Platz für Waschmaschine und Trockner",
-    linkText: "Kostenloses Aufmaß für Ihre Nische anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /**
@@ -334,16 +314,6 @@ export const wmsKosten = {
       values: ["Ein enger Kellerabgang oder viel Einpassarbeit vor Ort verlängern die Montage."],
     },
   ],
-};
-
-export const wmsMoebelplaner = {
-  heading: "Online vorskizzieren, den Verbau planen wir mit Ihnen",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) planen Sie Schrank und Nischenmaße vor, samt Fächern und Fronten. Den eigentlichen Geräteverbau mit Luftwegen, Aussparungen und vielleicht einem Waschturm klären wir persönlich beim Aufmaß. Ihren Entwurf nehmen wir dabei gern als Ausgangspunkt.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`,
-  imageAlt: "Ankleide nach Maß mit ausgezogenen Schubladen und Standspiegel",
 };
 
 export const wmsTestimonialsHeading = "Das sagen unsere Kunden über ihre Möbel nach Maß";

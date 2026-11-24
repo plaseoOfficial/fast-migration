@@ -248,21 +248,6 @@ export const planenTischler = {
   stat: { value: "kostenlos", label: "Aufmaß vor Ort" },
 };
 
-/**
- * MnmMoebelplaner (planner-cta, shared): weicher CTA am Textende (Ratgeber =
- * schwacher CTA). Möbelplaner als Vorbereitung der persönlichen Planung
- * (kundenwissen.md). Trägt die Conversion-Links Möbelplaner + Kontakt.
- */
-export const planenMoebelplaner = {
-  heading: "Küche vorab selbst skizzieren",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) ordnen Sie Fronten, Maße und Auszüge online und bekommen ein erstes Bild Ihrer Küche. Verstehen Sie das als Vorbereitung: Das genaue Aufmaß, die Beratung und die Feinplanung übernehmen wir danach gemeinsam mit Ihnen. Am einfachsten schicken Sie uns Ihre Skizze und lassen sich [unverbindlich beraten](/kontakt/). So gehen Sie mit einer klaren Vorstellung ins Gespräch.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
-  imageAlt: "Grifflose Inselküche nach Maß mit Holzdecke als Anregung für die eigene Küchenplanung",
-};
-
 export const planenFaq = {
   heading: "Häufige Fragen zur Küchenplanung",
   items: [

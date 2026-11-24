@@ -33,7 +33,7 @@ export const wuHero = {
   bgImage: `${IMG}/waschtisch-nach-mass-anthrazit-auszug.jpg`,
   imageAlt:
     "Anthrazitfarbener Waschtischunterschrank nach Maß mit ausgezogener Schublade unter dem Waschbecken",
-  title: "Waschtischunterschrank nach Maß aus Espelkamp",
+  title: "Waschtischunterschrank nach Maß",
   intro:
     "Ein Waschtischunterschrank nach Maß ist der Korpus unter Ihrem Waschbecken, millimetergenau an Wand und Nische gebaut. Die Auszüge führen wir um den Siphon herum, so bleibt der Stauraum voll nutzbar. Wir planen, fertigen und montieren ihn selbst, aus einer Hand, in unserem Meisterbetrieb in Espelkamp.",
   breadcrumb: [
@@ -59,7 +59,7 @@ export const wuIntroStats = {
   col1Body:
     "Wandhängend bleibt der Boden frei und das Wischen leicht, stehend auf dem Sockel trägt der Schrank schwere Platten. Beides bauen wir nach Maß, mit Auszügen und Fächern genau dort, wo Sie Stauraum brauchen.",
   col1CtaLabel: "Unterschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Bauteil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Die passende [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) planen wir auf Wunsch gleich mit, Ihr Unterschrank gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/). Für Handtücher und Vorräte abseits des Beckens bauen wir den [Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/).",
   counterTarget: 200,
@@ -70,26 +70,6 @@ export const wuIntroStats = {
     "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Möbel liefern wir auch bundesweit.",
   col3CtaLabel: "Unterschrank online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const wuCtas = {
-  intro: {
-    image: `${IMG}/doppelwaschtisch-nach-mass-anthrazit.jpg`,
-    heading: "Ihr Unterschrank beginnt an Ihrem Waschplatz",
-    linkText: "Sprechen Sie mit uns über Ihren Waschtischunterschrank",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/badmoebel-nach-mass-sitzbank-holzplatte.jpg`,
-    heading: "Holen Sie sich den Stauraum, der um Ihre Anschlüsse passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihren Unterschrank anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Montageart hängend vs. stehend (Kit §3 Modul 2, MI1). */
@@ -254,16 +234,6 @@ export const wuKosten = {
       values: ["Wandmontage, Sockel, Nische oder schiefe Wand verlangen mehr Anpassung als eine gerade Wand."],
     },
   ],
-};
-
-export const wuMoebelplaner = {
-  heading: "Ihren Unterschrank online vorplanen, den Rest machen wir",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Auszüge selbst und bekommen ein Gefühl für Ihren Unterschrank. Der Konfigurator ersetzt kein Aufmaß, zeigt aber schon einen ersten Möbelpreis. Lieferung und Montage kommen dazu. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,
-  imageAlt: "Waschtischunterschrank nach Maß mit beleuchtetem Spiegel neben einer bodengleichen Dusche",
 };
 
 export const wuTestimonialsHeading = "Das sagen unsere Kunden über ihre Badmöbel";

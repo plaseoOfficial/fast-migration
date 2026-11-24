@@ -31,6 +31,7 @@ const MATOMO_KATEGORIE: Record<string, string> = {
   "Telefon geklickt": "Kontakt",
   "E-Mail geklickt": "Kontakt",
   "Kontakt-CTA geklickt": "Engagement",
+  "Anfrageblock angesteuert": "Engagement",
   "Möbelplaner geöffnet": "Möbelplaner",
   "FAQ geöffnet": "Engagement",
   "Social geklickt": "Outbound",

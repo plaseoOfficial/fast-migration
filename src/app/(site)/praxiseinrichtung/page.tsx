@@ -6,12 +6,12 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { ContrastCols } from "@/components/sections/shared/ContrastCols";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { SITE_URL } from "@/lib/content";
@@ -26,8 +26,6 @@ import {
   praxisVergleich,
   praxisWarum,
   praxisGeschichte,
-  praxisMoebelplaner,
-  praxisCtas,
   praxisTestimonialsHeading,
   praxisFaq,
   praxisWeitereCards,
@@ -59,8 +57,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}${PAGE_PATH}`,
   name: "Praxiseinrichtung nach Maß",
@@ -82,12 +78,8 @@ export default function PraxiseinrichtungPage() {
       <MnmHero {...praxisHero} />
       <MnmIntroStats {...praxisIntroStats} />
 
-      {/* Intro CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...praxisCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="gewerbe" seite="Praxiseinrichtung" objektart="Praxis" />
 
       <ProcessSteps {...praxisProcess} />
       <SegmentCards {...praxisSegments} />
@@ -97,15 +89,10 @@ export default function PraxiseinrichtungPage() {
       <ContrastCols {...praxisVergleich} />
       <MnmWarum {...praxisWarum} />
       <MnmGeschichte {...praxisGeschichte} />
-      <MnmMoebelplaner {...praxisMoebelplaner} />
       <TestimonialsSection heading={praxisTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...praxisCtas.final} />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
       <FaqSection heading={praxisFaq.heading} items={praxisFaq.items} />
     </PrivatPageLayout>

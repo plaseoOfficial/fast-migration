@@ -7,8 +7,8 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -18,7 +18,6 @@ import {
   mnmTypische,
   mnmWarum,
   mnmGeschichte,
-  mnmCtas,
   mnmTestimonialsHeading,
   mnmFaq,
   mnmWeitereCards,
@@ -30,7 +29,7 @@ const DESCRIPTION =
   "Individuelle Maßmöbel für Küche, Bad, Wohnraum und Homeoffice. Millimetergenau geplant und gefertigt im Meisterbetrieb. Beratung kostenlos.";
 
 export const metadata: Metadata = {
-  title: "Möbel nach Maß aus Espelkamp: Planung, Fertigung, Montage",
+  title: "Möbel nach Maß: Planung, Fertigung, Montage | Fast Systemmöbel",
   description: DESCRIPTION,
   alternates: { canonical: "/moebel-nach-mass/" },
   openGraph: {
@@ -42,7 +41,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Möbel nach Maß aus Espelkamp: Planung, Fertigung, Montage",
+    title: "Möbel nach Maß: Planung, Fertigung, Montage | Fast Systemmöbel",
     description: DESCRIPTION,
     url: "/moebel-nach-mass/",
     locale: "de_DE",
@@ -50,8 +49,6 @@ export const metadata: Metadata = {
     siteName: "Fast Systemmöbel",
   },
 };
-
-const BEIGE = "rgba(203, 191, 181, 0.59)";
 
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}/moebel-nach-mass/`,
@@ -73,27 +70,18 @@ export default function MoebelNachMassPage() {
       <MnmHero {...mnmHero} />
       <MnmIntroStats {...mnmIntroStats} />
 
-      {/* Maßmöbel expanding CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...mnmCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="neutral" seite="Möbel nach Maß" />
 
       <MnmProcess {...mnmProcess} />
       <MnmWeitereLeistungen cards={mnmWeitereCards} />
       <MnmTypische {...mnmTypische} />
       <MnmWarum {...mnmWarum} />
       <MnmGeschichte {...mnmGeschichte} />
-      <MnmMoebelplaner />
       <TestimonialsSection heading={mnmTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...mnmCtas.final} />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="neutral" />
 
       <FaqSection heading={mnmFaq.heading} items={mnmFaq.items} />
     </PrivatPageLayout>

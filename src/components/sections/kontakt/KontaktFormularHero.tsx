@@ -8,6 +8,14 @@ import { ChevronRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 import { sendeKontaktAnfrage } from "@/lib/actions/kontakt";
 import { cn } from "@/lib/utils";
+import {
+  FORM_CARD_BG,
+  FORM_ERROR_CLASS,
+  FORM_FIELD_CLASS,
+  FORM_INK,
+  FORM_LABEL_CLASS,
+  FehlerSymbol,
+} from "@/components/sections/_shared/FormularStil";
 
 const URBANIST: React.CSSProperties = {
   fontFamily: "var(--font-urbanist), Helvetica, Arial, sans-serif",
@@ -32,17 +40,10 @@ interface KontaktFormularHeroProps {
 const DEFAULT_HEADER_SCRIM =
   "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)";
 
-const INPUT_STYLE: React.CSSProperties = {
-  backgroundColor: "rgb(247,244,240)",
-  color: "rgb(61,61,61)",
-  padding: "14px 16px",
-  borderRadius: 0,
-  ...URBANIST,
-};
-
-const LABEL_CLASS = "block text-[13px] font-medium mb-1.5";
-const INPUT_CLASS =
-  "w-full border-0 outline-none text-[16px] font-normal focus:ring-0 focus:outline-none";
+// Helle Karte, gemeinsame Stile mit dem Anfrageblock (_shared/FormularStil).
+const INPUT_STYLE: React.CSSProperties = URBANIST;
+const LABEL_CLASS = FORM_LABEL_CLASS;
+const INPUT_CLASS = FORM_FIELD_CLASS;
 
 export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }: KontaktFormularHeroProps) {
   const [submitted, setSubmitted] = useState(false);
@@ -174,13 +175,13 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
           <Reveal
             y={0}
             className="px-6 py-8 lg:px-10 lg:py-10"
-            style={{ backgroundColor: "rgb(61,61,61)" }}
+            style={{ backgroundColor: FORM_CARD_BG }}
           >
             {submitted ? (
               <div className="flex items-center justify-center py-20">
                 <p
                   className="text-center text-[20px] font-medium"
-                  style={{ color: "rgb(255,255,255)", ...URBANIST }}
+                  style={{ color: FORM_INK, ...URBANIST }}
                 >
                   Danke! Wir melden uns.
                 </p>
@@ -199,7 +200,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                 {/* Vorname + Nachname row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label htmlFor="vorname" className={LABEL_CLASS} style={{ color: "rgb(255,255,255)", ...URBANIST }}>
+                    <label htmlFor="vorname" className={LABEL_CLASS} style={URBANIST}>
                       Vorname
                     </label>
                     <input
@@ -212,7 +213,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     />
                   </div>
                   <div>
-                    <label htmlFor="nachname" className={LABEL_CLASS} style={{ color: "rgb(255,255,255)", ...URBANIST }}>
+                    <label htmlFor="nachname" className={LABEL_CLASS} style={URBANIST}>
                       Nachname
                     </label>
                     <input
@@ -229,7 +230,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                 {/* Email + Telefon row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label htmlFor="email" className={LABEL_CLASS} style={{ color: "rgb(255,255,255)", ...URBANIST }}>
+                    <label htmlFor="email" className={LABEL_CLASS} style={URBANIST}>
                       Email Adresse
                     </label>
                     <input
@@ -242,7 +243,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                     />
                   </div>
                   <div>
-                    <label htmlFor="telefon" className={LABEL_CLASS} style={{ color: "rgb(255,255,255)", ...URBANIST }}>
+                    <label htmlFor="telefon" className={LABEL_CLASS} style={URBANIST}>
                       Telefonnummer
                     </label>
                     <input
@@ -258,7 +259,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
 
                 {/* Nachricht */}
                 <div className="mb-0">
-                  <label htmlFor="nachricht" className={LABEL_CLASS} style={{ color: "rgb(255,255,255)", ...URBANIST }}>
+                  <label htmlFor="nachricht" className={LABEL_CLASS} style={URBANIST}>
                     Nachricht
                   </label>
                   <textarea
@@ -273,12 +274,9 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
 
                 {/* Fehlermeldung */}
                 {error && (
-                  <p
-                    role="alert"
-                    className="mt-4 text-[15px] font-medium"
-                    style={{ color: "rgb(249,178,51)", ...URBANIST }}
-                  >
-                    {error}
+                  <p role="alert" className={`mt-4 ${FORM_ERROR_CLASS}`} style={URBANIST}>
+                    <FehlerSymbol />
+                    <span>{error}</span>
                   </p>
                 )}
 
@@ -286,7 +284,7 @@ export function KontaktFormularHero({ title, breadcrumb, bgImage, headerScrim }:
                 <button
                   type="submit"
                   disabled={isPending}
-                  className="w-full mt-6 text-[20px] font-medium transition-colors duration-200 disabled:opacity-70"
+                  className="w-full mt-6 text-[20px] font-medium transition-colors duration-200 disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(61,61,61)]"
                   style={{
                     backgroundColor: "rgb(249,178,51)",
                     color: "rgb(61,61,61)",

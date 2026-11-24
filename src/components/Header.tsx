@@ -198,9 +198,15 @@ export function Header() {
           </div>
 
           {cta && cta.kind === "cta" && (
-            <Link href={cta.href} className="fast-btn-pill" onClick={closeAll}>
-              {cta.label}
-            </Link>
+            <>
+              <Link href={cta.href} className="fast-btn-pill cta-kontakt" onClick={closeAll}>
+                {cta.label}
+              </Link>
+              {/* Auf Seiten mit Anfrageblock (#anfrage) springt der Button dorthin, siehe globals.css */}
+              <a href="#anfrage" className="fast-btn-pill cta-anfrage" onClick={closeAll}>
+                {cta.label}
+              </a>
+            </>
           )}
         </div>
 
@@ -260,14 +266,22 @@ function MobileNav({ onClose }: { onClose: () => void }) {
         {NAV_ITEMS.map((item) => {
           if (item.kind === "cta") {
             return (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={onClose}
-                className="fast-btn-pill mt-4 justify-center"
-              >
-                {item.label}
-              </Link>
+              <div key={item.label} className="flex flex-col">
+                <Link
+                  href={item.href}
+                  onClick={onClose}
+                  className="fast-btn-pill cta-kontakt mt-4 justify-center"
+                >
+                  {item.label}
+                </Link>
+                <a
+                  href="#anfrage"
+                  onClick={onClose}
+                  className="fast-btn-pill cta-anfrage mt-4 justify-center"
+                >
+                  {item.label}
+                </a>
+              </div>
             );
           }
           if (item.kind === "link") {

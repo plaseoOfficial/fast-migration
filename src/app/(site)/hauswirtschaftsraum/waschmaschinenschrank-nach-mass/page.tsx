@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
   wmsHero,
   wmsIntroStats,
-  wmsCtas,
   wmsBauformen,
   wmsMasse,
   wmsTechnik,
@@ -21,7 +20,6 @@ import {
   wmsAusstattung,
   wmsProcess,
   wmsKosten,
-  wmsMoebelplaner,
   wmsTestimonialsHeading,
   wmsFaq,
   wmsJsonLd,
@@ -54,8 +52,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 export default function WaschmaschinenschrankNachMassPage() {
   return (
     <PrivatPageLayout>
@@ -67,12 +63,12 @@ export default function WaschmaschinenschrankNachMassPage() {
       <MnmHero {...wmsHero} />
       <MnmIntroStats {...wmsIntroStats} />
 
-      {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...wmsCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage
+        variante="privat"
+        seite="Waschmaschinenschrank"
+        ueberschrift="Ihren Waschmaschinenschrank planen wir bei Ihnen vor Ort"
+      />
 
       <SpecTable {...wmsBauformen} />
       <SpecTable {...wmsMasse} />
@@ -81,28 +77,10 @@ export default function WaschmaschinenschrankNachMassPage() {
       <SegmentCards {...wmsAusstattung} />
       <ProcessSteps {...wmsProcess} />
       <SpecTable {...wmsKosten} />
-      <MnmMoebelplaner {...wmsMoebelplaner} />
       <TestimonialsSection heading={wmsTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...wmsCtas.final} />
-          {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
-          <p
-            className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
-            style={{ color: "rgb(61,61,61)" }}
-          >
-            {wmsCtas.phone.label}{" "}
-            <a
-              href={wmsCtas.phone.href}
-              className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
-            >
-              {wmsCtas.phone.number}
-            </a>
-          </p>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="privat" />
 
       <FaqSection
         heading={wmsFaq.heading}

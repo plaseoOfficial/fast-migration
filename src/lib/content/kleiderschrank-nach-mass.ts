@@ -32,7 +32,7 @@ export const klHero = {
   bgImage: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
   imageAlt:
     "Kleiderschrank nach Maß in Weiß, raumhoch bis zur Decke, mit offenem Garderobenbereich und geschlossenen Fronten",
-  title: "Kleiderschrank nach Maß aus Espelkamp",
+  title: "Kleiderschrank nach Maß",
   intro:
     "Ein Kleiderschrank nach Maß ist ein Schrank, den wir millimetergenau auf Ihren Raum bauen: Wand zu Wand, bis unter die Decke, ohne Passleisten und toten Winkel. Planung, Bau und Montage kommen aus einer Hand, aus unserem Meisterbetrieb in Espelkamp. Die Innenaufteilung richtet sich nach Ihrer Garderobe, nach nichts sonst.",
   breadcrumb: [
@@ -58,7 +58,7 @@ export const klIntroStats = {
   col1Body:
     "Die Innenaufteilung planen wir genau auf Ihren Grundriss und Ihre Garderobe. Kleiderstangen, Auszüge und Fächer sitzen, wo Sie sie brauchen, ohne Standardraster und ohne tote Ecke an Wand oder Decke.",
   col1CtaLabel: "Kleiderschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Teil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Ein Ansprechpartner bleibt von der Beratung bis zur Montage Ihr Kontakt. Ihr Kleiderschrank gehört zu unseren [Einbauschränken nach Maß](/einbauschraenke-nach-mass/).",
   counterTarget: 200,
@@ -69,26 +69,6 @@ export const klIntroStats = {
     "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL und Umgebung, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Möbel schicken wir auch bundesweit.",
   col3CtaLabel: "Kleiderschrank online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const klCtas = {
-  intro: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-weiss.jpg`,
-    heading: "Ihr Kleiderschrank beginnt an Ihrer Wand",
-    linkText: "Sprechen Sie mit uns über Ihren Kleiderschrank",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
-    heading: "Holen Sie aus Ihrer Wand den Kleiderschrank, der wirklich passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihren Kleiderschrank anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Bauformen/Türsysteme (Kit §3 Modul 2). Feeds JSON-LD OfferCatalog/ItemList.
@@ -254,16 +234,6 @@ export const klKosten = {
       values: ["Nische, Schräge oder eine schiefe Altbauwand verlangen mehr Anpassung als eine gerade Wand."],
     },
   ],
-};
-
-export const klMoebelplaner = {
-  heading: "Ihren Kleiderschrank online vorplanen, den Rest übernehmen wir",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Einteilung vorab und bekommen ein Gefühl für Ihren Schrank. Er zeigt Ihnen schon einen ersten Möbelpreis, Lieferung und Montage kommen dazu. Ein Aufmaß ersetzt er nicht. Aufmaß, die technische 3D-Planung, Fertigung und Montage übernehmen wir.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
-  imageAlt: "Kleiderschrank nach Maß in Weiß, raumhoch bis zur Decke geplant",
 };
 
 export const klTestimonialsHeading = "Was unsere Kunden über ihre Kleiderschränke sagen";

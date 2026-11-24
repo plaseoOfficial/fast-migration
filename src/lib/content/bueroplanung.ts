@@ -29,7 +29,7 @@ export const bpHero = {
   bgImage: `${IMG}/bueroeinrichtung-arbeitsplaetze-grossraumbuero.jpg`,
   imageAlt:
     "Großraumbüro mit Arbeitsplätzen, Rollcontainern und Stauraum nach Maß",
-  title: "Büroplanung vom Meisterbetrieb aus Espelkamp",
+  title: "Büroplanung vom Meisterbetrieb",
   intro:
     "Büroplanung macht aus Ihrem Grundriss ein Büro, in dem gut gearbeitet wird. Wir planen Flächen, Zonen und Arbeitsplätze, fertigen die Büromöbel im eigenen Werk in Espelkamp und montieren sie mit unserem Team. So bekommen Sie Planung und Umsetzung aus einer Hand.",
   breadcrumb: [
@@ -54,7 +54,7 @@ export const bpIntroStats = {
   col1Body:
     "Wir planen Ihr Büro und bauen es auch: Zonierung, Arbeitsplätze und Stauraum, millimetergenau nach Grundriss. Was Sie brauchen, klären wir beim kostenlosen Aufmaß vor Ort.",
   col1CtaLabel: "Büroplanung anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Beratung, Planung, Fertigung und Montage laufen bei uns zusammen. Sie sprechen mit den Leuten, die Ihr Büro planen und bauen, im Rahmen der [Büroeinrichtung](/bueroeinrichtung/) nach Maß.",
   counterTarget: 200,
@@ -63,28 +63,8 @@ export const bpIntroStats = {
   col3Title: "Planungsradius rund um Espelkamp",
   col3Body:
     "Beratung, Aufmaß und Montage übernimmt unser eigenes Team im Umkreis von rund 200 km: Minden, Bielefeld, Osnabrück, ganz OWL. Die reine Lieferung geht darüber hinaus bundesweit.",
-  col3CtaLabel: "Büro im Möbelplaner planen",
-  col3CtaHref: "/moebelplaner/",
-};
-
-export const bpCtas = {
-  intro: {
-    image: `${IMG}/schreibtisch-nach-mass-betonoptik-buero.jpg`,
-    heading: "Gute Büroplanung beginnt mit einem Blick auf Ihre Räume",
-    linkText: "Sprechen Sie mit uns über Ihr Büroprojekt",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/schreibtisch-nach-mass-arbeitsplatz.jpg`,
-    heading: "Ihr Büro planen wir, bevor das erste Brett geschnitten wird.",
-    linkText: "Jetzt Büroplanung unverbindlich anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
+  col3CtaLabel: "Projekt anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 /** UspHighlight (shared): Direktantwort auf "Was ist Büroplanung?" [AEO]. */
@@ -151,7 +131,7 @@ export const bpProcess = {
     {
       title: "Fertigung in Espelkamp",
       description:
-        "Nach Ihrer Freigabe fertigen wir die Büromöbel im eigenen Werk in Espelkamp, in Eigenregie und ohne Subunternehmer.",
+        "Nach Ihrer Freigabe fertigen wir die [Büromöbel nach Maß](/bueroeinrichtung/bueromoebel-nach-mass/) im eigenen Werk in Espelkamp, in Eigenregie und ohne Subunternehmer.",
     },
     {
       title: "Montage durch eigenes Team",
@@ -262,16 +242,6 @@ export const bpKosten = {
       values: ["Montage in Etappen oder außerhalb der Geschäftszeiten kostet mehr Zeit vor Ort."],
     },
   ],
-};
-
-export const bpMoebelplaner = {
-  heading: "Ihr Büro online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Schränke und [Büromöbel nach Maß](/bueroeinrichtung/bueromoebel-nach-mass/) online zusammen: Maße, Oberflächen und Einlegeböden im 3D-Konfigurator. Was Sie dort planen, nehmen wir auf. Alles Weitere liegt bei uns: kostenloses Aufmaß, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/bueroeinrichtung-empfang-kuechenzeile.jpg`,
-  imageAlt: "Empfangsbereich mit Küchenzeile und Holzlamellen-Wand nach Maß",
 };
 
 export const bpTestimonialsHeading = "Was unsere Gewerbekunden über ihre Büroplanung sagen";

@@ -31,6 +31,7 @@ Gilt je Browser, also am Handy und am Rechner getrennt setzen.
 | `Möbelplaner geöffnet` | Möbelplaner | **✅ Ja** — Micro-Conversion, eigenes Ziel |
 | `Kontaktformular Fehler` | Kontakt | ❌ nein — Fehler-Diagnose |
 | `Kontakt-CTA geklickt` | Engagement | ❌ **nein — siehe §4** |
+| `Anfrageblock angesteuert` | Engagement | ❌ nein — Klick auf `#anfrage` (Header-Button, Anfragestreifen), siehe §3a |
 | `FAQ geöffnet` | Engagement | ❌ nein |
 | `Social geklickt` | Outbound | ❌ nein |
 | `Google Maps geöffnet` | Outbound | ❌ nein |
@@ -44,7 +45,9 @@ ihn erreichen kann. Ein interner Klick, der nur eine weitere Seite lädt, ist es
 Jeder Link-Event trägt eine `zone`, sobald sich der Klick verorten lässt:
 
 1. **Explizit** — der nächste Vorfahre mit `data-track-zone="…"` gewinnt.
-   Aktuell vergeben: `Floating-Button` (`src/components/FloatingActionButtons.tsx`).
+   Aktuell vergeben: `Floating-Button` (`src/components/FloatingActionButtons.tsx`),
+   `Anfrageblock` (Telefonlink im Block, `LeistungAnfrage`) und `Anfragestreifen`
+   (Sprunglink des Streifens am Seitenende, `AnfrageStreifen`).
 2. **Semantisch** — sonst greifen `<header>` → `Header` und `<footer>` → `Footer`.
 3. **Ohne Zone** — Klicks im normalen Seiteninhalt; der Event bleibt unverändert.
 
@@ -63,6 +66,25 @@ und von welcher Seite aus — ohne die Seiteninfo zu verlieren.
 Auswertung in Matomo: *Verhalten → Ereignisse → Ereignis-Namen*, Suche nach
 `Floating-Button`. Für einen dauerhaften Bericht ein Segment anlegen:
 `Ereignis-Name enthält Floating-Button`.
+
+### 3a. Anfrageblock (`LeistungAnfrage`) und Anfragestreifen
+
+Der Block ersetzt auf Leistungsseiten den Bild-Aufruf nach `/kontakt/`. Gemessen wird,
+ohne neue Ziele in Matomo anzulegen. Die Aktionsnamen der Ziele bleiben unverändert:
+
+| Was | Aktion (Matomo) | Name / Props |
+|---|---|---|
+| Formular abgeschickt | `Kontaktformular gesendet` (Ziel 1) | Name `Anfrageblock · <variante> · <Weg> · <mit Angaben | ohne Angaben> · <Seite>`; Props `variante` (kueche, privat, gewerbe, serie, neutral), `position` = `Anfrageblock`, `weg` (Rückruf, Termin vor Ort mit Aufmaß, Pläne oder Fotos schicken), `angaben` (`ja`, wenn im aufklappbaren Bereich „Mehr zum Projekt angeben“ etwas ausgefüllt oder eine Datei angehängt wurde, sonst `nein`; die vorbelegte Objektart zählt nicht), `seite` |
+| Aufklappen „Mehr zum Projekt angeben“ | keines | natives `<details>`, bewusst kein Button mit `aria-expanded`, sonst würde es als `FAQ geöffnet` gezählt |
+| Formularfehler | `Kontaktformular Fehler` | Name `Anfrageblock · <variante>`, Prop `grund` |
+| Telefonlink im Block | `Telefon geklickt` (Ziel 2) | delegierter Listener, Zone `Anfrageblock`, Name `Anfrageblock · <Seite>`. Kein eigener Handler im Block, ein Klick zählt genau einmal |
+| Sprung zum Block | `Anfrageblock angesteuert` | Zone `Header` (Button oben rechts) oder `Anfragestreifen`; Name `<Zone> · <Seite>` |
+
+Der Header-Button „Kontakt“ springt auf Seiten mit Anfrageblock nach `#anfrage`
+statt nach `/kontakt/`. Er löst darum kein `Kontakt-CTA geklickt` mehr aus, sondern
+`Anfrageblock angesteuert` (Engagement, keine Conversion). Auswertung nach Formular,
+Telefon und Mail getrennt: Ereignis-Aktionen `Kontaktformular gesendet`,
+`Telefon geklickt`, `E-Mail geklickt`, Segment `Ereignis-Name enthält Anfrageblock`.
 
 ## 4. Warum „Kontakt-CTA geklickt" keine Conversion ist
 

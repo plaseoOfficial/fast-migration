@@ -7,7 +7,8 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { SITE_URL } from "@/lib/content";
@@ -19,7 +20,6 @@ import {
   serienTypische,
   serienWarum,
   serienGeschichte,
-  serienCtas,
   serienTestimonialsHeading,
   serienFaq,
   serienWeitereCards,
@@ -51,8 +51,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}${PAGE_PATH}`,
   name: "Möbel Serienfertigung",
@@ -74,12 +72,8 @@ export default function SerienmoebelPage() {
       <MnmHero {...serienHero} />
       <MnmIntroStats {...serienIntroStats} />
 
-      {/* Intro CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...serienCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="serie" seite="Serienmöbel" />
 
       <MnmProcess {...serienProcess} />
       <MnmWeitereLeistungen cards={serienWeitereCards} />
@@ -88,12 +82,8 @@ export default function SerienmoebelPage() {
       <MnmGeschichte {...serienGeschichte} />
       <TestimonialsSection heading={serienTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...serienCtas.final} />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="serie" />
 
       <FaqSection heading={serienFaq.heading} items={serienFaq.items} />
     </PrivatPageLayout>

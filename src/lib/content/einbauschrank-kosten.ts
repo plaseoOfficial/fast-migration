@@ -189,16 +189,6 @@ export const ekAblauf = {
   ],
 };
 
-/** MnmMoebelplaner: weicher Plus-CTA (Ratgeber). */
-export const ekMoebelplaner = {
-  heading: "Erst schätzen, dann gemeinsam planen",
-  body: "Der Möbelplaner gibt Ihnen eine erste Schätzung für Ihren Schrank, ohne Termin und von zu Hause aus. Verbindlich wird der Preis mit dem Angebot nach Aufmaß und 3D-Planung. Dann rechnen wir mit Ihrer Wand, Ihrer Schräge und Ihrem Inhalt. Lieber gleich sprechen? Rufen Sie uns an unter 05771 9138312 oder schreiben Sie uns über das [Kontaktformular](/kontakt/). Wir beraten Sie am Telefon oder vor Ort.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/schrank-unter-treppe/aufmass-planung-nach-mass.jpg",
-  imageAlt: "Zwei Personen blättern an einem Holztisch gemeinsam durch eine Broschüre mit Produktfotos",
-};
-
 export const ekFaq = {
   heading: "Häufige Fragen zu den Kosten eines Einbauschranks",
   items: [

@@ -6,6 +6,7 @@ import {
   LeistungenSection,
 } from "@/components/sections/leistungen/LeistungenIndex";
 import { HashLanding } from "@/components/sections/leistungen/HashLanding";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
 import { SITE_URL } from "@/lib/content";
 import {
   MOEBELPLANER_URL,
@@ -129,6 +130,9 @@ export default function LeistungenPage() {
           />
         );
       })}
+
+      {/* Anfrageblock, neutrale Fassung: nach der Übersicht, vor dem Abschluss */}
+      <LeistungAnfrage variante="neutral" seite="Leistungen" />
 
       <LeistungenAbschluss
         heading={leistungenAbschluss.heading}

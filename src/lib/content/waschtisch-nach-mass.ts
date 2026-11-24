@@ -32,7 +32,7 @@ export const wtHero = {
   bgImage: `${IMG}/waschtisch-nach-mass-weiss-holzplatte.jpg`,
   imageAlt:
     "Heller Waschtisch nach Maß aus Holz mit Aufsatzbecken, von Wand zu Wand im Bad eingebaut",
-  title: "Waschtisch nach Maß aus Espelkamp",
+  title: "Waschtisch nach Maß",
   intro:
     "Ein Waschtisch nach Maß ist die Waschtischplatte in genau Ihrer Breite, von Wand zu Wand, ohne Passleisten. Den Ausschnitt für Ihr Becken, die Hahnlochbohrung für die Armatur und die Aussparung für den Siphon arbeiten wir passgenau ein. Geplant, gefertigt und montiert aus einer Hand, in unserem Meisterbetrieb in Espelkamp.",
   breadcrumb: [
@@ -58,7 +58,7 @@ export const wtIntroStats = {
   col1Body:
     "Ob Aufsatz- oder Einbaubecken, einzeln oder als Doppelwaschtisch: Wir planen die Platte um Ihr Wunschbecken, setzen Ausschnitt und Hahnlochbohrung an die richtige Stelle und schließen die Platte sauber an die Wand an.",
   col1CtaLabel: "Waschtisch anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jede Platte entsteht bei uns in Espelkamp, von der PU-verleimten Kante bis zur Oberfläche. Von der Beratung bis zur Montage bleibt ein Ansprechpartner für Sie zuständig. Stauraum abseits des Waschplatzes schafft ein [Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/). Ihr Waschtisch gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
   counterTarget: 200,
@@ -69,26 +69,6 @@ export const wtIntroStats = {
     "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Platten liefern wir auch bundesweit.",
   col3CtaLabel: "Waschtisch online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const wtCtas = {
-  intro: {
-    image: `${IMG}/doppelwaschtisch-nach-mass-weiss-schwebend.jpg`,
-    heading: "Ihr Waschtisch beginnt an Ihrer Wand",
-    linkText: "Sprechen Sie mit uns über Ihren Waschtisch",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/waschtisch-nach-mass-holz-led-spiegel.jpg`,
-    heading: "Holen Sie aus Ihrer Nische den Waschtisch, der genau passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihren Waschtisch anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Beckenintegration (Kit §3 Modul 4, das Alleinstellungs-Thema).
@@ -306,16 +286,6 @@ export const wtKosten = {
       values: ["Nische, schiefe Wand oder vorgegebene Anschlüsse verlangen mehr Anpassung als eine gerade Wand."],
     },
   ],
-};
-
-export const wtMoebelplaner = {
-  heading: "Ihren Waschtisch online vorplanen, den Rest übernehmen wir",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Material und Becken vorab und bekommen ein Gefühl für Ihren Waschtisch. Einen ersten Möbelpreis sehen Sie dort gleich mit, Lieferung und Montage kommen dazu. Ein Aufmaß ersetzt der Planer nicht. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,
-  imageAlt: "Waschtisch nach Maß mit beleuchtetem Spiegel neben einer bodengleichen Dusche",
 };
 
 export const wtTestimonialsHeading = "Was unsere Kunden über ihre Badmöbel sagen";

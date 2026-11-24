@@ -71,6 +71,12 @@ function trackeKlick(target: EventTarget | null) {
     return;
   }
 
+  // Sprung zum Anfrageblock (Header-Button, Anfragestreifen): kein Kanal, nur Engagement.
+  if (href === "#anfrage") {
+    trackEvent("Anfrageblock angesteuert", { seite, ...woher });
+    return;
+  }
+
   let url: URL;
   try {
     url = new URL(href, window.location.origin);

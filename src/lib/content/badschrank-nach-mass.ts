@@ -33,7 +33,7 @@ export const bsHero = {
   bgImage: `${IMG}/badschrank-nach-mass-hochschrank-grau.jpg`,
   imageAlt:
     "Grauer dreitüriger Badschrank nach Maß neben der Badewanne, unter dem Fenster",
-  title: "Badschrank nach Maß aus Espelkamp",
+  title: "Badschrank nach Maß",
   intro:
     "Ein Badschrank nach Maß bringt Stauraum dorthin, wo Standardmöbel scheitern: neben die Dusche, in die Nische, unter die Schräge. Ob Hochschrank, Hängeschrank oder raumhoher Einbauschrank, wir planen ihn millimetergenau und bauen ihn in unserem Meisterbetrieb in Espelkamp. Planung, Fertigung und Montage bleiben in einer Hand.",
   breadcrumb: [
@@ -59,7 +59,7 @@ export const bsIntroStats = {
   col1Body:
     "Der Hochschrank bringt Stauraum auf wenig Grundfläche, der Hängeschrank lässt den Boden frei, der raumhohe Einbauschrank nimmt die ganze Wand. Was passt, zeigt sich vor Ort. Jeden bauen wir wandbündig ein.",
   col1CtaLabel: "Badschrank anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Teil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Den passenden [Waschtischunterschrank nach Maß](/badmoebel-nach-mass/waschtischunterschrank-nach-mass/) am Becken und die [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) planen wir auf Wunsch gleich mit. Ihr Badschrank gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
   counterTarget: 200,
@@ -70,26 +70,6 @@ export const bsIntroStats = {
     "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Möbel liefern wir auch bundesweit.",
   col3CtaLabel: "Badschrank online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const bsCtas = {
-  intro: {
-    image: `${IMG}/badmoebel-nach-mass-sitzbank-holzplatte.jpg`,
-    heading: "Ihr Badschrank beginnt an Ihrer Wand",
-    linkText: "Sprechen Sie mit uns über Ihren Badschrank",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/badmoebel-spiegelschrank-doppelwaschtisch.jpg`,
-    heading: "Holen Sie aus Ihrer Nische den Stauraum, der genau passt",
-    linkText: "Jetzt kostenloses Aufmaß für Ihren Badschrank anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /** SegmentCards (shared): Typen-Grid (Kit §3 Modul 2). Spiegelschrank/Waschtisch nur verweisen (Anti-Dedup). */
@@ -254,16 +234,6 @@ export const bsKosten = {
       values: ["Sichere Wandmontage und Einbau vor Ort gehören zur Leistung und fließen ins Angebot ein."],
     },
   ],
-};
-
-export const bsMoebelplaner = {
-  heading: "Ihren Badschrank online vorplanen, den Rest übernehmen wir",
-  body:
-    "Im [Möbelplaner](/moebelplaner/) skizzieren Sie Maße, Fronten und Aufteilung vorab und bekommen ein erstes Gefühl für Ihren Badschrank. Ein Aufmaß ersetzt er nicht, einen ersten Möbelpreis zeigt er aber schon, zuzüglich Lieferung und Montage. Aufmaß, 3D-Planung, Fertigung und Montage übernehmen wir.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/badmoebel-nach-mass-led-spiegel-dusche.jpg`,
-  imageAlt: "Badschrank nach Maß neben beleuchtetem Spiegel und bodengleicher Dusche",
 };
 
 export const bsTestimonialsHeading = "Was unsere Kunden über ihre Badmöbel sagen";

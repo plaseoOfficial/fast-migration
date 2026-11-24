@@ -58,7 +58,7 @@ export const dachIntroStats = {
   col1Body:
     "Kniestock, Abseite und die flache Zone unter der Schräge bleiben sonst ungenutzt. Genau diese Bereiche holen wir mit einem Schrank nach Maß zurück.",
   col1CtaLabel: "Dachschräge anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Ein Schrank für die Dachschräge lebt vom Winkel. Aus Kniestockhöhe und Schrägenwinkel fertigen wir Fronten und Korpus, die fugenlos an der Schräge anschließen. Keine Passleiste, kein verschenkter Zentimeter.",
   counterTarget: 200,
@@ -94,27 +94,6 @@ export const dachBegriffe = {
       body: "Die Abseite ist der flache Raum hinter der Schräge. Ohne Ausbau bleibt er ungenutzt. Ein Abseitenschrank macht ihn über Türen oder Auszüge zugänglich.",
     },
   ],
-};
-
-export const dachCtas = {
-  intro: {
-    image: `${IMG}/drempelschrank-kniestock-nach-mass-betonoptik.jpg`,
-    heading: "Ihr Drempelschrank beginnt mit einem Blick auf Ihre Schräge",
-    linkText: "Sprechen Sie mit uns über Ihre Dachschräge",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/dachschraegenschrank-nach-mass-trapezform-schlafzimmer.jpg`,
-    heading: "Machen Sie aus dem toten Winkel unter dem Dach echten Stauraum.",
-    linkText: "Jetzt kostenloses Dachschräge-Aufmaß anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /**
@@ -326,17 +305,6 @@ export const dachGeschichte = {
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Darunter unzählige Dachschrägen, Drempel und Altbau-Schrägen, die wir zu passgenauem Stauraum gemacht haben.",
     "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, freistehende Schränke liefern wir deutschlandweit.",
   ],
-};
-
-export const dachMoebelplaner = {
-  heading: "Ihre Dachschräge online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem Möbelplaner stellen Sie Ihren Schrank für die Dachschräge online zusammen. Maße, Fronten, Einteilung und Auszüge sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrem Dachschrägenschrank vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß der Schräge vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird ein Schrank unter der Dachschräge nach Maß.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/einbauschrank-dachschraege-anthrazit-hochglanz.jpg`,
-  imageAlt:
-    "Einbauschrank an der Dachschräge nach Maß in Anthrazit-Hochglanz mit offenem Regalfach in der Schräge",
 };
 
 export const dachTestimonialsHeading = "Was unsere Kunden über ihre Dachschrägenschränke sagen";

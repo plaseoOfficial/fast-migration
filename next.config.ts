@@ -4,6 +4,13 @@ const nextConfig: NextConfig = {
   output: "standalone",
   // Keep the WordPress/relaunch URL convention: every URL ends with a slash.
   trailingSlash: true,
+  // Server Actions nehmen standardmäßig nur 1 MB Anfrage-Körper an. Der
+  // Anfrageblock sendet bis zu 3,5 MB Anhänge (Bilder werden im Browser auf
+  // ~1600 px verkleinert). Vercel selbst begrenzt Funktionen auf 4,5 MB, deshalb
+  // 4 MB. Grenzen für Dateien: src/lib/anfrage-mail.ts (ANFRAGE_GRENZEN).
+  experimental: {
+    serverActions: { bodySizeLimit: "4mb" },
+  },
   images: {
     // All SVGs are local, trusted assets downloaded from the target site.
     dangerouslyAllowSVG: true,

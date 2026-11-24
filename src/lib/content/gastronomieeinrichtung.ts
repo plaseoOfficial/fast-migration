@@ -19,7 +19,7 @@ export const gastroHero = {
   bgImage: "/images/gastronomie/gastronomieeinrichtung-gastraum-massivholztische.jpg",
   imageAlt:
     "Gastraum mit langen Holztischen, Polsterstühlen und gerahmter Bilderwand",
-  title: "Gastronomieeinrichtung nach Maß aus Espelkamp",
+  title: "Gastronomieeinrichtung nach Maß",
   intro:
     "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß: Theken und Tresen, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team im Umkreis von rund 200 km und bundesweit geliefert.",
   breadcrumb: [
@@ -45,7 +45,7 @@ export const gastroIntroStats = {
   col1Body:
     "Wir entwickeln Ihre Einrichtung nach Grundriss, Laufweg und Gästezahl: Theke, Rückbuffet, Sitzbank und Ausgabebereich, millimetergenau geplant und auf den Stoßbetrieb ausgelegt.",
   col1CtaLabel: "Gastro-Projekt unverbindlich anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Vom einzelnen Bartresen bis zur kompletten Einrichtung bekommen Sie alles aus einer Hand: Beratung, Aufmaß, 3D-Planung, Fertigung und Montage. Als Meisterbetrieb arbeiten wir ohne Zwischenhändler.",
   counterTarget: 200,
@@ -54,8 +54,8 @@ export const gastroIntroStats = {
   col3Title: "Montageradius um Espelkamp",
   col3Body:
     "Wir montieren im Umkreis von rund 200 km, etwa in Minden, Lübbecke, Bielefeld, Hannover und Osnabrück. Größere Objekte und Hotels liefern wir bundesweit.",
-  col3CtaLabel: "Ihre Gastronomie selbst planen",
-  col3CtaHref: "/moebelplaner/",
+  col3CtaLabel: "Projekt anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 export const gastroProcess = {
@@ -203,32 +203,6 @@ export const gastroGeschichte = {
     "Angefangen hat Fast Systemmöbel 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp. Heute führt die Familie Fast den Betrieb in zweiter Generation und fertigt auf über 1.000 m² mit moderner CNC-Technik.",
     "Wir wissen, was eine Einrichtung im Gastraum aushalten muss: Belastbarkeit, Hygiene und Termintreue über Jahre. Für eine Loge im Stadion von Arminia Bielefeld haben wir Theke, Wandborde und Sitzbank gebaut. Für Hotels fertigen wir die Zimmerausstattung auch mit [Möbeln in Serie](/serienmoebel/). Weitere Beispielprojekte finden Sie in unseren [Referenzen](/referenzen/).",
   ],
-};
-
-export const gastroMoebelplaner = {
-  heading: "Ihre Gastro-Möbel online planen",
-  body:
-    "Mit unserem Möbelplaner stellen Sie einzelne Elemente online zusammen und sehen Maße, Oberflächen und Fronten direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? Stellen Sie [jetzt Ihre Anfrage](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
-  ctaLabel: "Möbelplaner ausprobieren",
-  ctaHref: "/moebelplaner/",
-  image: "/images/gastronomie/gastronomieeinrichtung-wandbank-sitzgruppe.jpg",
-  imageAlt:
-    "Sitzgruppe mit Wandbank und Tischen nach Maß im Gastraum",
-};
-
-export const gastroCtas = {
-  intro: {
-    image: "/images/gastronomie/gastronomieeinrichtung-gastraum-uebersicht.jpg",
-    heading: "Ihr Gastraum verdient mehr als Massenware.",
-    linkText: "Sprechen Sie mit uns über Ihr Gastro-Projekt",
-    href: "/kontakt/",
-  },
-  final: {
-    image: "/images/gastronomie/gastronomieeinrichtung-tische-stuehle-gastraum.jpg",
-    heading: "Von der Theke bis zur Lobby: nach Maß gebaut.",
-    linkText: "Gastronomie-Projekt jetzt unverbindlich anfragen",
-    href: "/kontakt/",
-  },
 };
 
 /**

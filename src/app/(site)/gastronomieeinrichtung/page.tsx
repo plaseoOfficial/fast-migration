@@ -6,11 +6,11 @@ import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLei
 import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { SITE_URL } from "@/lib/content";
@@ -24,8 +24,6 @@ import {
   gastroTypische,
   gastroWarum,
   gastroGeschichte,
-  gastroMoebelplaner,
-  gastroCtas,
   gastroTestimonialsHeading,
   gastroFaq,
   gastroWeitereCards,
@@ -57,8 +55,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}${PAGE_PATH}`,
   name: "Gastronomieeinrichtung nach Maß",
@@ -80,12 +76,8 @@ export default function GastronomieeinrichtungPage() {
       <MnmHero {...gastroHero} />
       <MnmIntroStats {...gastroIntroStats} />
 
-      {/* Intro CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...gastroCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="gewerbe" seite="Gastronomie" objektart="Gastronomie" />
 
       <ProcessSteps {...gastroProcess} />
       <SegmentCards {...gastroSegments} />
@@ -94,15 +86,10 @@ export default function GastronomieeinrichtungPage() {
       <UspHighlight {...gastroUsp} />
       <MnmWarum {...gastroWarum} />
       <MnmGeschichte {...gastroGeschichte} />
-      <MnmMoebelplaner {...gastroMoebelplaner} />
       <TestimonialsSection heading={gastroTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...gastroCtas.final} />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
       <FaqSection heading={gastroFaq.heading} items={gastroFaq.items} />
     </PrivatPageLayout>

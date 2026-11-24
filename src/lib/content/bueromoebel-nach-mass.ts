@@ -30,7 +30,7 @@ export const bmHero = {
   bgImage: `${IMG}/schreibtisch-nach-mass-arbeitsplatz.jpg`,
   imageAlt:
     "Schreibtisch nach Maß mit dunkler Platte und grauem Rollcontainer in einem Büro mit Sichtbetonwänden",
-  title: "Büromöbel nach Maß aus Espelkamp",
+  title: "Büromöbel nach Maß",
   intro:
     "Büromöbel nach Maß, das sind Schreibtisch, Aktenschrank, Sideboard und Regal, die millimetergenau in Ihren Raum passen und optisch zusammenspielen. Wir sind ein Meisterbetrieb aus Espelkamp und fertigen das ganze Programm in eigener Werkstatt. Ein Stil, ein Ansprechpartner.",
   breadcrumb: [
@@ -55,7 +55,7 @@ export const bmIntroStats = {
   col1Body:
     "Serienmöbel enden im Raster, den Rest verdecken Blenden. Wir bauen Ihre Büromöbel wand-zu-wand, millimetergenau nach kostenlosem Aufmaß, in Nischen wie unter Dachschrägen.",
   col1CtaLabel: "Büromöbel anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "In Espelkamp fertigen wir jedes Teil selbst, mit PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig. Von der Beratung bis zur Montage bleibt alles Teil Ihrer [Büroeinrichtung](/bueroeinrichtung/) aus einer Hand.",
   counterTarget: 200,
@@ -64,28 +64,8 @@ export const bmIntroStats = {
   col3Title: "Montageradius rund um Espelkamp",
   col3Body:
     "Aufmaß und Montage übernimmt unser eigenes Team, im Umkreis von rund 200 km, in ganz OWL, in Minden, Osnabrück und Bielefeld. Was weiter weg liegt, liefern wir bundesweit.",
-  col3CtaLabel: "Büromöbel online planen",
-  col3CtaHref: "/moebelplaner/",
-};
-
-export const bmCtas = {
-  intro: {
-    image: `${IMG}/buero-galerie-schrankwand.jpg`,
-    heading: "Ihre Büromöbel beginnen mit einem Blick auf Ihren Raum",
-    linkText: "Sprechen Sie mit uns über Ihre Büromöbel",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/aktenschrankwand-nach-mass-buero.jpg`,
-    heading: "Ihre Büromöbel nach Maß, vom ersten Aufmaß bis zur Montage aus einer Hand.",
-    linkText: "Jetzt kostenloses Aufmaß für Ihre Büromöbel anfragen",
-    href: "/kontakt/",
-  },
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
+  col3CtaLabel: "Projekt anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 /** SegmentCards (shared): Möbeltyp-Lexikon, der Haupttiefenträger der Seite. */
@@ -240,16 +220,6 @@ export const bmKosten = {
       values: ["Montage in Etappen oder außerhalb Ihrer Geschäftszeiten braucht mehr Zeit vor Ort."],
     },
   ],
-};
-
-export const bmMoebelplaner = {
-  heading: "Ihre Büromöbel online vorplanen, den Rest übernehmen wir",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) planen Sie Schränke und Büromöbel online vor: Maße, Oberflächen und Einlegeböden im 3D-Konfigurator, in Ruhe von zu Hause oder vom Schreibtisch aus. Was Sie planen, nehmen wir auf. Alles Weitere liegt bei uns: kostenloses Aufmaß, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/bueroeinrichtung-empfang-kuechenzeile.jpg`,
-  imageAlt: "Empfangsbereich mit Küchenzeile und Holzlamellen-Wand nach Maß",
 };
 
 export const bmTestimonialsHeading = "Was unsere Gewerbekunden über ihre Büromöbel sagen";

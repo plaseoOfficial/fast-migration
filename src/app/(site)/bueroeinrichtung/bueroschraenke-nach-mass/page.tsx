@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { PrivatPageLayout } from "@/components/layouts/PrivatPageLayout";
 import { MnmHero } from "@/components/sections/privat/MnmHero";
 import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -20,8 +20,6 @@ import {
   bsMaterial,
   bsProcess,
   bsKosten,
-  bsMoebelplaner,
-  bsCtas,
   bsTestimonialsHeading,
   bsFaq,
   bsJsonLd,
@@ -52,8 +50,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 export default function BueroschraenkeNachMassPage() {
   return (
     <PrivatPageLayout>
@@ -65,12 +61,8 @@ export default function BueroschraenkeNachMassPage() {
       <MnmHero {...bsHero} />
       <MnmIntroStats {...bsIntroStats} />
 
-      {/* Beratungs-CTA — bottom of the intro/stats section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...bsCtas.intro} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="gewerbe" seite="Büroschränke" objektart="Büro" />
 
       <SpecTable {...bsOrdner} />
       <SegmentCards {...bsBauformen} />
@@ -79,28 +71,10 @@ export default function BueroschraenkeNachMassPage() {
       <SegmentCards {...bsMaterial} />
       <ProcessSteps {...bsProcess} />
       <SpecTable {...bsKosten} />
-      <MnmMoebelplaner {...bsMoebelplaner} />
       <TestimonialsSection heading={bsTestimonialsHeading} />
 
-      {/* Final CTA — bottom of the testimonials section (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...bsCtas.final} />
-          {/* Tertiary CTA (Playbook §6): phone as a trust anchor, clickable on mobile. */}
-          <p
-            className="mt-6 text-center text-[18px] leading-[31.5px] font-medium"
-            style={{ color: "rgb(61,61,61)" }}
-          >
-            {bsCtas.phone.label}{" "}
-            <a
-              href={bsCtas.phone.href}
-              className="font-semibold underline transition-colors hover:text-[rgb(237,168,33)]"
-            >
-              {bsCtas.phone.number}
-            </a>
-          </p>
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
       <FaqSection
         heading={bsFaq.heading}

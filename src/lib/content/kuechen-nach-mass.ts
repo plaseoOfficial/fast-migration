@@ -11,7 +11,7 @@ const PATH = "/kuechen-nach-mass/";
 export const kuechenHero = {
   bgImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
   imageAlt: "Moderne Küche nach Maß mit grifflosen Fronten und Kochinsel",
-  title: "Küchen nach Maß, zentimetergenau aus Espelkamp",
+  title: "Küchen nach Maß, zentimetergenau gebaut",
   intro:
     "Wir planen und bauen Ihre Küche nach Maß wie ein Tischler: zentimetergenau auf Ihren Raum zugeschnitten, vom Aufmaß bis zur Montage aus einer Hand. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert im Umkreis von rund 200 km.",
   breadcrumb: [
@@ -36,7 +36,7 @@ export const kuechenIntroStats = {
   col1Body:
     "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, danach richten wir die Küche aus. Markengeräte aller gängigen Hersteller planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube. Die Geräte wählen Sie frei. Wie Sie sich vorbereiten, zeigt unser Ratgeber, [Ihre Küche Schritt für Schritt zu planen](/kuechen-nach-mass/kueche-planen/).",
   col1CtaLabel: "Jetzt Küche anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jede Front, jeder Korpus, jeder Auszug und jede Arbeitsplatte entsteht in unserer eigenen Fertigung in Espelkamp, wo auch alle unsere [Möbel nach Maß](/moebel-nach-mass/) gefertigt werden. Kein Zwischenhändler, kein festes Rastermaß. Unsere Kanten verleimen wir mit PU-Technik, das verschließt sie fugenlos und feuchtigkeitsbeständig. Und Sie haben einen Ansprechpartner, von der ersten Beratung bis zur Montage.",
   counterTarget: 72,
@@ -45,29 +45,8 @@ export const kuechenIntroStats = {
   col3Title: "gefertigte Einzelteile",
   col3Body:
     "Über 72.000 gefertigte Einzelteile aus unserer Werkstatt. Unsere Homag-Technik fertigt jedes Bauteil millimetergenau, und die handwerkliche Kontrolle sorgt dafür, dass am Ende alles sitzt. So sieht Ihre Küche auch nach Jahren noch aus wie am ersten Tag.",
-  col3CtaLabel: "Küche online planen",
-  col3CtaHref: "/moebelplaner/",
-};
-
-export const kuechenCtas = {
-  intro: {
-    image: "/images/2025/11/IMG_9387-scaled.jpg",
-    heading: "Ihre Küche nach Maß beginnt mit einem Gespräch",
-    linkText: "Sprechen Sie mit uns über Ihre Küche",
-    href: "/kontakt/",
-  },
-  final: {
-    image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
-    heading: "Ihre Küche verdient mehr als Standardmaße.",
-    linkText: "Jetzt kostenlose Küchenberatung anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
+  col3CtaLabel: "Küchenberatung anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 export const kuechenProcess = {
@@ -160,16 +139,6 @@ export const kuechenGeschichte = {
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Wir planen, fertigen und montieren Küchen nach Maß, die auf den Millimeter sitzen.",
     "Jede Küche entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, geliefert deutschlandweit.",
   ],
-};
-
-export const kuechenMoebelplaner = {
-  heading: "Ihre Küche online planen und konfigurieren",
-  body:
-    "Mit unserem [Möbelplaner](/moebelplaner/) stellen Sie Ihre Küche online zusammen. Maße, Fronten, Auszüge und Geräte sehen Sie direkt im 3D-Konfigurator, so haben Sie sofort ein Bild von Ihrer Küche vor Augen. Den Rest übernehmen wir: kostenloses Aufmaß vor Ort, Beratung, Fertigung in Espelkamp und Montage durch unser eigenes Team. Aus Ihrer Online-Planung wird eine Küche nach Maß.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: "/images/2025/11/IMG_9387-scaled.jpg",
-  imageAlt: "Küche nach Maß mit grifflosen Fronten",
 };
 
 export const kuechenTestimonialsHeading = "Was unsere Küchenkunden sagen";

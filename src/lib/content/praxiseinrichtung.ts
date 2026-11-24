@@ -19,7 +19,7 @@ export const praxisHero = {
   bgImage: "/images/praxiseinrichtung/anmeldetresen-nach-mass-praxis-weiss.jpg",
   imageAlt:
     "Anmeldetresen nach Maß in Weiß mit umlaufender LED-Sockelbeleuchtung in einer Praxis",
-  title: "Praxiseinrichtung nach Maß aus Espelkamp",
+  title: "Praxiseinrichtung nach Maß",
   intro:
     "Möbel, die exakt zu Ihren Räumen, Abläufen und Hygieneanforderungen passen, statt Katalogware in festen Rastermaßen. Geplant, gefertigt und montiert aus einer Hand, vom Meisterbetrieb in Espelkamp.",
   breadcrumb: [
@@ -42,7 +42,7 @@ export const praxisIntroStats = {
   col1Body:
     "Wir entwickeln Ihre Einrichtung nach Grundriss, Hygieneanforderung und Patientenfluss. Tresen, Behandlungszimmer und Wartebereich planen wir millimetergenau.",
   col1CtaLabel: "Praxisprojekt unverbindlich anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Vom einzelnen Anmeldetresen bis zur kompletten Praxis bekommen Sie alles aus einer Hand: Beratung, Aufmaß, 3D-Planung, Fertigung und Montage, ohne Subunternehmer.",
   counterTarget: 200,
@@ -51,8 +51,8 @@ export const praxisIntroStats = {
   col3Title: "Montageradius um Espelkamp",
   col3Body:
     "Komplette Praxen mit Möbeln und Montage realisieren wir im Umkreis von rund 200 km, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Einzelne Möbel liefern wir bundesweit.",
-  col3CtaLabel: "Ihre Praxis selbst planen",
-  col3CtaHref: "/moebelplaner/",
+  col3CtaLabel: "Projekt anfragen",
+  col3CtaHref: "#anfrage",
 };
 
 export const praxisProcess = {
@@ -236,33 +236,6 @@ export const praxisGeschichte = {
     "In Ostwestfalen-Lippe haben wir bereits Praxen und Kanzleien eingerichtet, vom einzelnen Anmeldetresen bis zur kompletten Praxis. Wir kennen die Anforderungen an Hygiene, Diskretion und Termintreue, die ein Praxisprojekt mitbringt.",
     "Zur Planung gehört für uns mehr als die Möbel: Wir denken Patienten- und Personalwege mit und legen Stauraum dorthin, wo er im Alltag gebraucht wird. Beispiele zeigen unsere [Referenzprojekte](/referenzen/).",
   ],
-};
-
-/** Online configurator block (shared MnmMoebelplaner), leads into /moebelplaner/. */
-export const praxisMoebelplaner = {
-  heading: "Ihre Praxiseinrichtung online planen",
-  body:
-    "Mit unserem Möbelplaner stellen Sie Tresen, Schränke und Wartebereich online zusammen und sehen Maße, Fronten und Oberflächen direkt im 3D-Konfigurator. Den Rest übernehmen wir: kostenloses Aufmaß, Beratung, Fertigung und Montage. Lieber gleich sprechen? [Vereinbaren Sie ein Beratungsgespräch](/kontakt/) oder rufen Sie uns an unter 05771 9138312.",
-  ctaLabel: "Möbelplaner ausprobieren",
-  ctaHref: "/moebelplaner/",
-  image: "/images/2025/11/20231220_131839984_iOS-scaled.jpg",
-  imageAlt: "Raumteiler aus Holzlamellen nach Maß als Sichtschutz im Objektbereich",
-};
-
-/** Final-CTA + intro-CTA expanding image blocks (shared ExpandingImageCta). */
-export const praxisCtas = {
-  intro: {
-    image: "/images/2025/11/DSC_9814.jpg",
-    heading: "Ihre Praxis verdient mehr als Standardmöbel.",
-    linkText: "Sprechen Sie mit uns über Ihr Praxisprojekt",
-    href: "/kontakt/",
-  },
-  final: {
-    image: "/images/2025/11/DSC_9965.jpg",
-    heading: "Vom Anmeldetresen bis zum Behandlungsraum.",
-    linkText: "Praxisprojekt jetzt unverbindlich anfragen",
-    href: "/kontakt/",
-  },
 };
 
 /**

@@ -31,7 +31,7 @@ export const hwrHero = {
   bgImage: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
   imageAlt:
     "Hauswirtschaftsraum nach Maß von Fast Systemmöbel mit raumhohen Hochschränken, verbauter Waschmaschine und Trockner, Arbeitsfläche und Stauraum für Wäsche und Vorrat",
-  title: "Hauswirtschaftsraum einrichten nach Maß vom Tischler in Espelkamp",
+  title: "Hauswirtschaftsraum einrichten nach Maß vom Tischler",
   intro:
     "Einen Hauswirtschaftsraum einrichten heißt, Waschen, Vorräte, Putzmittel und Geräte an einem Ort zu bündeln, statt sie über Küche und Bad zu verteilen. Als Tischler-Meisterbetrieb in Espelkamp planen, fertigen und montieren wir Ihren HWR nach Maß, damit jede Wand und Nische arbeitet, statt Platz zu verschenken.",
   breadcrumb: [
@@ -56,7 +56,7 @@ export const hwrIntroStats = {
   col1Body:
     "Wir planen Ihren HWR um Ihren Alltag herum, nicht um ein fertiges Raster. Welche Zonen Sie zum Waschen, für Vorrat und Reinigung brauchen, welche Fronten und Materialien dazu passen, entscheiden Sie.",
   col1CtaLabel: "Jetzt HWR anfragen",
-  col1CtaHref: "/kontakt/",
+  col1CtaHref: "#anfrage",
   col2Body:
     "Jede Front und jeder Korpus entsteht in unserer eigenen Werkstatt in Espelkamp, wo alle [Möbel nach Maß](/moebel-nach-mass/) von Fast gebaut werden. Die Schnittkanten verschließen wir fugenlos mit PU-Kantenverleimung. Das bleibt feuchtigkeitsbeständig, gerade dort, wo Wasseranschluss und Waschmaschine für Feuchtigkeit sorgen.",
   counterTarget: 72,
@@ -67,27 +67,6 @@ export const hwrIntroStats = {
     "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen, jedes millimetergenau für ein bestimmtes Möbel zugeschnitten, viele für den Feuchtraum HWR.",
   col3CtaLabel: "HWR online planen",
   col3CtaHref: "/moebelplaner/",
-};
-
-export const hwrCtas = {
-  intro: {
-    image: `${IMG}/begehbare-ankleide-nach-mass-weiss.jpg`,
-    heading: "Ihr Hauswirtschaftsraum nach Maß beginnt mit einem Gespräch",
-    linkText: "Sprechen Sie mit uns über Ihren HWR",
-    href: "/kontakt/",
-  },
-  final: {
-    image: `${IMG}/einbauschrank-dachschraege-nach-mass.jpg`,
-    heading: "Ihr Hauswirtschaftsraum verdient Möbel, die genau passen.",
-    linkText: "Jetzt kostenloses Aufmaß anfragen",
-    href: "/kontakt/",
-  },
-  /** Tertiary conversion path (Playbook §6): phone as a trust anchor, clickable on mobile. */
-  phone: {
-    label: "Lieber direkt sprechen? Rufen Sie uns an:",
-    number: "05771 9138312",
-    href: "tel:+4957719138312",
-  },
 };
 
 /**
@@ -329,16 +308,6 @@ export const hwrGeschichte = {
     "Heute trägt die zweite Generation mit: Andreas und Peter Fast sind seit 2010 im Unternehmen und übernehmen Schritt für Schritt die Geschäftsführung. Hinter jedem Auftrag stehen mehr als 4.000 Projekte und über 1.000 m² eigene Fertigung, auch hinter Ihrem Hauswirtschaftsraum, wo Wasser und Feuchte der Verarbeitung mehr abverlangen als ein trockener Wohnraum.",
     "Jedes Möbel entsteht bei uns im Haus, in Eigenregie in Espelkamp. Montiert wird im Umkreis von rund 200 km, in ganz OWL rund um Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende HWR-Möbel liefern wir darüber hinaus deutschlandweit.",
   ],
-};
-
-export const hwrMoebelplaner = {
-  heading: "Ihren Hauswirtschaftsraum online planen und konfigurieren",
-  body:
-    "Sie wollen sich zuerst selbst ein Bild machen? Mit unserem Möbelplaner stellen Sie Ihre HWR-Möbel online zusammen und sehen Fronten, Einteilung und Proportionen direkt im 3D-Konfigurator. Ihre Vorplanung schicken Sie uns, den Rest, vom Aufmaß über die Fertigung bis zur Montage, übernehmen wir persönlich.",
-  ctaLabel: "Zum Möbelplaner",
-  ctaHref: "/moebelplaner/",
-  image: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
-  imageAlt: "Hauswirtschaftsraum nach Maß, grifflos und von Wand zu Wand geplant",
 };
 
 export const hwrTestimonialsHeading = "Was unsere Kunden über ihre Möbel nach Maß sagen";

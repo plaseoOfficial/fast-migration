@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServiceHero } from "@/components/sections/shared/ServiceHero";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
-import { ExpandingImageCta } from "@/components/sections/shared/ExpandingImageCta";
+import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { MnmWeitereLeistungen } from "@/components/sections/privat/MnmWeitereLeistungen";
-import { MnmMoebelplaner } from "@/components/sections/privat/MnmMoebelplaner";
 import { GewerbeIntroStats } from "@/components/sections/gewerbe/GewerbeIntroStats";
 import { GewerbeLadenGastro } from "@/components/sections/gewerbe/GewerbeLadenGastro";
 import { GewerbeLeistungen } from "@/components/sections/gewerbe/GewerbeLeistungen";
@@ -16,9 +16,6 @@ import {
   gewerbeLeistungen,
   gewerbeWarum,
   gewerbeClusterCards,
-  gewerbeIntroCta,
-  gewerbeFinalCta,
-  gewerbeMoebelplaner,
   gewerbeTestimonialsHeading,
   gewerbeFaq,
 } from "@/lib/content/gewerbe";
@@ -51,8 +48,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BEIGE = "rgba(203, 191, 181, 0.59)";
-
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}/gewerbe/`,
   name: "Gewerbeeinrichtung nach Maß",
@@ -74,28 +69,19 @@ export default function GewerbeeinrichtungPage() {
 
       <GewerbeIntroStats {...gewerbeIntroStats} />
 
-      {/* Gewerbemöbel expanding CTA — bottom of intro/stats (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-12 lg:pb-16">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...gewerbeIntroCta} />
-        </div>
-      </section>
+      {/* Anfrageblock: ersetzt den ersten Bild-Aufruf */}
+      <LeistungAnfrage variante="gewerbe" seite="Gewerbe" />
 
       <GewerbeLadenGastro {...gewerbeLadenGastro} />
       <MnmWeitereLeistungen cards={gewerbeClusterCards} />
       <GewerbeLeistungen {...gewerbeLeistungen} />
       <GewerbeWarum {...gewerbeWarum} />
-      <MnmMoebelplaner {...gewerbeMoebelplaner} />
       <TestimonialsSection heading={gewerbeTestimonialsHeading} />
 
-      {/* Final CTA (beige) */}
-      <section style={{ backgroundColor: BEIGE }} className="pb-14 lg:pb-[64px]">
-        <div className="mx-auto w-full max-w-[1224px] px-6 lg:px-8">
-          <ExpandingImageCta {...gewerbeFinalCta} />
-        </div>
-      </section>
+      {/* Streifen: ersetzt den zweiten Bild-Aufruf, springt zum Anfrageblock */}
+      <AnfrageStreifen variante="gewerbe" />
 
-      <FaqSection heading={gewerbeFaq.heading} items={gewerbeFaq.items} />
+      <FaqSection heading={gewerbeFaq.heading} items={gewerbeFaq.items} ctaHref="/kontakt/" />
     </main>
   );
 }
