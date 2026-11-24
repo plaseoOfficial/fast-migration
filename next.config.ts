@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
       { source: "/ratgeber/kueche-beim-neubau-planen/", destination: "/kuechen-nach-mass/", permanent: true }, // INTERIM → /kuechen-nach-mass/kueche-im-neubau/
       { source: "/ratgeber/massmoebel-kosten-schrank/", destination: "/einbauschraenke-nach-mass/einbauschrank-kosten/", permanent: true },
       { source: "/ratgeber/einbauschrank-dachschraege/", destination: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", permanent: true },
-      { source: "/ratgeber/begehbaren-kleiderschrank-planen/", destination: "/moebel-nach-mass/", permanent: true }, // INTERIM → /einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/
+      { source: "/ratgeber/begehbaren-kleiderschrank-planen/", destination: "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/", permanent: true },
       // --- Kannibalisierungs-Auflösung: nicht gebaute Architektur-Varianten ---
       { source: "/bueroeinrichtung/empfangstresen-nach-mass/", destination: "/ladenbau/", permanent: true }, // INTERIM → /ladenbau/empfangstresen-nach-mass/
       { source: "/bueroeinrichtung/praxiseinrichtung-nach-mass/", destination: "/praxiseinrichtung/", permanent: true },

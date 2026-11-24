@@ -66,7 +66,9 @@ export const PAGES: PageNode[] = [
   { slug: "/moebel-nach-mass/", type: "pillar-hub", silo: "moebel", audience: "privat", parent: "/", built: true, contentModule: "moebel-nach-mass" },
   { slug: "/kuechen-nach-mass/", type: "cluster-pillar", silo: "kuechen", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "kuechen-nach-mass" },
   // Planned privat sibling clusters (hub→cluster MUSS, blocked until built)
-  { slug: "/einbauschraenke-nach-mass/", type: "cluster-pillar", silo: "einbauschraenke", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "einbauschraenke-nach-mass" },
+  // maxBodyLinks 11 statt 10: MUSS own-cluster-spokes verlangt jedes gebaute Kind (6 Produktseiten + Kosten-Ratgeber),
+  // dazu Möbelplaner, Kontakt, Referenzen und die Karte zum Hub /moebel-nach-mass/.
+  { slug: "/einbauschraenke-nach-mass/", type: "cluster-pillar", silo: "einbauschraenke", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "einbauschraenke-nach-mass", maxBodyLinks: 11 },
   // Einbauschränke spoke (cluster child): Schrank für Dachschräge nach Maß
   { slug: "/einbauschraenke-nach-mass/einbauschrank-dachschraege/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "einbauschrank-dachschraege" },
   // Einbauschränke spoke (cluster child): Schrank unter der Treppe nach Maß
@@ -81,6 +83,8 @@ export const PAGES: PageNode[] = [
   { slug: "/einbauschraenke-nach-mass/einbauschrank-kosten/", type: "ratgeber-pillar", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "einbauschrank-kosten", maxBodyLinks: 10 },
   // Einbauschränke spoke (cluster child): Nischenschrank nach Maß (vorhandene Nische/Ecke/Aussparung)
   { slug: "/einbauschraenke-nach-mass/nischenschrank-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "nischenschrank-nach-mass" },
+  // Einbauschränke spoke (cluster child): begehbarer Kleiderschrank nach Maß (der Raum wird zum Schrank; einziges Zuhause, 301 von /ratgeber/begehbaren-kleiderschrank-planen/)
+  { slug: "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/", type: "product", silo: "einbauschraenke", audience: "privat", parent: "/einbauschraenke-nach-mass/", built: true, contentModule: "begehbarer-kleiderschrank-nach-mass" },
   { slug: "/badmoebel-nach-mass/", type: "cluster-pillar", silo: "badmoebel", audience: "privat", parent: "/moebel-nach-mass/", built: true, contentModule: "badmoebel-nach-mass" },
   // Badmöbel spoke (cluster child): Waschtisch nach Maß (Platte + Becken)
   { slug: "/badmoebel-nach-mass/waschtisch-nach-mass/", type: "product", silo: "badmoebel", audience: "privat", parent: "/badmoebel-nach-mass/", built: true, contentModule: "waschtisch-nach-mass" },
@@ -435,6 +439,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["Einbauschrank für die Nische", "Schrank für die Nische nach Maß", "Nischenschrank vom Tischler"],
     brand: ["Fast Systemmöbel Nischenschrank"],
     descriptive: ["Schrank in die Nische planen", "Nischenschrank ansehen"],
+  },
+  "/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/": {
+    exact: ["begehbarer Kleiderschrank nach Maß"],
+    partial: ["begehbaren Kleiderschrank nach Maß", "begehbare Ankleide nach Maß", "begehbaren Ankleide nach Maß", "Ankleide nach Maß", "Ankleidezimmer nach Maß", "Schrankraum nach Maß"],
+    brand: ["Fast Systemmöbel Ankleide"],
+    descriptive: ["begehbaren Kleiderschrank planen", "Ankleide nach Maß ansehen"],
   },
   "/referenzen/": {
     exact: ["Referenzen"],

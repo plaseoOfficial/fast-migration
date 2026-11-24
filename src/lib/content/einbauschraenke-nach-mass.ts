@@ -117,7 +117,7 @@ export const einbauTypische = {
     {
       title: "Begehbare Ankleide",
       description:
-        "Ein eigener Ankleidebereich, geplant um Ihre Wege und Ihre Sachen. Offene Regale, Auszüge, Stangen und Beleuchtung, aufeinander abgestimmt in einem Raumkonzept aus einer Hand.",
+        "Ein eigener Ankleidebereich, geplant um Ihre Wege und Ihre Sachen. Offene Regale, Auszüge, Stangen und Beleuchtung, aufeinander abgestimmt in einem Raumkonzept aus einer Hand. Mehr zur [begehbaren Ankleide nach Maß](/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/).",
     },
     {
       title: "Schiebe- und Schwebetüren",
