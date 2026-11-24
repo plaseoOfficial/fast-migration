@@ -67,6 +67,7 @@ import {
   DANKE,
   KERNSATZ,
   MOEBELPLANER_ZEILE,
+  NACH_DEM_ABSENDEN,
   TELEFON,
   VARIANTEN,
   type AnfrageVariante,
@@ -647,6 +648,7 @@ export function LeistungAnfrage({
                 >
                   {isPending ? "Wird gesendet ..." : inhalt.button}
                 </button>
+                <p className={`mt-3 text-[14px] leading-[1.6] ${HINT_CLASS}`}>{NACH_DEM_ABSENDEN}</p>
               </form>
             )}
           </Reveal>
