@@ -5,7 +5,6 @@ import { MnmIntroStats } from "@/components/sections/privat/MnmIntroStats";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
-import { ContrastCols } from "@/components/sections/shared/ContrastCols";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -18,7 +17,7 @@ import {
   leitstellenPlanung,
   leitstellenFertigung,
   leitstellenSerie,
-  leitstellenUmfang,
+  leitstellenAlles,
   leitstellenAblauf,
   leitstellenFilm,
   leitstellenFaq,
@@ -78,7 +77,7 @@ export default function LeitstellenmoebelPage() {
       <SegmentCards {...leitstellenPlanung} />
       <UspHighlight {...leitstellenFertigung} />
       <UspHighlight {...leitstellenSerie} imageLeft />
-      <ContrastCols {...leitstellenUmfang} />
+      <SegmentCards {...leitstellenAlles} />
       <ProcessSteps {...leitstellenAblauf} />
       <UeberWerkstattFilm {...leitstellenFilm} />
 
