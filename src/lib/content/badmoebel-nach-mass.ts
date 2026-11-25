@@ -300,7 +300,7 @@ export const badFaq = {
     {
       question: "Was kostet ein Badmöbel oder Waschtisch nach Maß?",
       answer:
-        "Der Preis ist immer individuell. Er richtet sich nach dem Umfang, nach Material und Oberfläche, nach der Ausstattung mit Beschlägen und nach der Einbausituation. Statt einer Pauschale bekommen Sie nach dem Aufmaß ein Angebot, in dem jede Position nachvollziehbar ist.",
+        "Der Preis ist immer individuell. Er richtet sich nach dem Umfang, nach Material und Oberfläche, nach der Ausstattung mit Beschlägen und nach der Einbausituation. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Waschtischunterschrank mit 1,60 m Breite kostet in Weiß mit hellem Holz rund 800 Euro, in Kristallweiß mit Türen und Auszügen rund 1.700 Euro. Mit 1 m Breite in Weiß und Eiche mit Auszügen sind es rund 1.000 Euro, mit 2,10 m Breite in gebleichter Eiche mit Schubkästen rund 2.800 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Statt einer Pauschale bekommen Sie nach dem Aufmaß ein Angebot, in dem jede Position nachvollziehbar ist.",
     },
     {
       question: "Was ist der Unterschied zwischen Waschtisch, Waschtischunterschrank, Badschrank und Spiegelschrank?",

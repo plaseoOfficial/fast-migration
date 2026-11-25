@@ -12,6 +12,7 @@ import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { planerPreis } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -119,6 +120,7 @@ export default function EinbauschrankDachschraegePage() {
         variante="privat"
         seite="Schrank für Dachschräge"
         ueberschrift="Ihren Schrank unter der Dachschräge planen wir bei Ihnen vor Ort"
+        preisZeile={planerPreis("dachschraege")}
       />
 
       {/* Begriffs-Glossar — nimmt die Definitionen auf, die IntroStats überfrachtet haben */}

@@ -11,6 +11,7 @@ import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { planerPreis } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
@@ -117,6 +118,7 @@ export default function HauswirtschaftsraumPage() {
         variante="privat"
         seite="Hauswirtschaftsraum"
         ueberschrift="Ihren Hauswirtschaftsraum planen wir bei Ihnen vor Ort"
+        preisZeile={planerPreis("hauswirtschaftsraum")}
       />
 
       <ProcessSteps {...hwrProcessSteps} />

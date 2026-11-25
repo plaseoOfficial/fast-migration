@@ -244,7 +244,7 @@ export const buchFaq = {
     {
       question: "Was kostet ein Bücherregal nach Maß?",
       answer:
-        "Einen Festpreis gibt es nicht, weil kein Regal dem anderen gleicht. Der Preis hängt vor allem von der Größe in laufenden Metern ab, dazu von Material, Türen, Sonderform und Montageaufwand. Ihren genauen Preis bekommen Sie als individuelles Angebot nach dem kostenlosen Aufmaß.",
+        "Einen Festpreis gibt es nicht, weil kein Regal dem anderen gleicht. Der Preis hängt vor allem von der Größe in laufenden Metern ab, dazu von Material, Türen, Sonderform und Montageaufwand. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Eine offene Regalwand in Sandbeige, 3 m breit und 2,50 m hoch, kostet rund 2.200 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Ihren genauen Preis bekommen Sie als individuelles Angebot nach dem kostenlosen Aufmaß.",
     },
     {
       question: "Kann ein Bücherregal exakt in eine Nische oder unter eine Dachschräge eingepasst werden?",

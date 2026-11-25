@@ -264,7 +264,7 @@ export const klFaq = {
     {
       question: "Was kostet ein Kleiderschrank nach Maß und wovon hängt der Preis ab?",
       answer:
-        "Einen festen Preis nennen wir nicht, weil jeder Schrank anders ist. Den Ausschlag geben Breite und Laufmeter, das Türsystem, Front und Material, die Innenausstattung und die Einbausituation. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles Angebot.",
+        "Einen festen Preis nennen wir nicht, weil jeder Schrank anders ist. Den Ausschlag geben Breite und Laufmeter, das Türsystem, Front und Material, die Innenausstattung und die Einbausituation. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein frei stehender Kleiderschrank in Weiß mit Türen, 2,30 m hoch, kostet bei 1 m Breite rund 1.200 Euro, bei 2 m rund 1.800 Euro und bei 3 m rund 2.500 Euro. Mit 2 m Breite in Hellgrau sind es rund 1.900 Euro, in Eiche-Dekor rund 2.200 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles Angebot.",
     },
     {
       question: "Welche Innenausstattung gibt es?",
