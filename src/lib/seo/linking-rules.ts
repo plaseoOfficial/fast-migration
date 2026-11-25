@@ -122,6 +122,9 @@ export const PAGES: PageNode[] = [
   // mustExempt /moebelplaner/: Der Möbelplaner-Abschnitt ist entfallen. Die Anfrage läuft hier über den Anfrageblock
   // und persönlichen Kontakt, Verkaufstheken und Regale plant Fast nach dem Aufmaß vor Ort (nicht im Planer).
   { slug: "/ladenbau/", type: "cluster-pillar", silo: "ladenbau", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "ladenbau", mustExempt: ["/moebelplaner/"] },
+  // Ladenbau-Ratgeber (cluster-article): Ladeneinrichtung planen (Entscheidungsweg des Ladeninhabers, branchenneutral).
+  // Route im Cluster laut keyword-map (wie kueche-planen). Kein /moebelplaner/: Der Planer deckt keine Ladenmöbel ab.
+  { slug: "/ladenbau/ladeneinrichtung-planung/", type: "cluster-article", silo: "ladenbau", audience: "gewerbe", parent: "/ladenbau/", built: true, contentModule: "ladeneinrichtung-planung", mustExempt: ["/moebelplaner/"] },
   { slug: "/bueroeinrichtung/", type: "cluster-pillar", silo: "buero", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "bueroeinrichtung" },
   { slug: "/gastronomieeinrichtung/", type: "cluster-pillar", silo: "gastronomie", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "gastronomieeinrichtung" },
   { slug: "/serienmoebel/", type: "cluster-pillar", silo: "serienmoebel", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "serienmoebel", mustExempt: ["/moebelplaner/"] },
@@ -559,6 +562,12 @@ export const ANCHORS: Record<string, AnchorSet> = {
     partial: ["individueller Ladenbau", "Ladeneinrichtung vom Tischler"],
     brand: ["Fast Systemmöbel Ladenbau"],
     descriptive: ["unsere Ladenbau-Leistungen", "zum Ladenbau-Bereich"],
+  },
+  "/ladenbau/ladeneinrichtung-planung/": {
+    exact: ["Ladeneinrichtung planen"],
+    partial: ["Ladenplanung", "Ladeneinrichtung Schritt für Schritt planen", "Ratgeber zur Ladenplanung"],
+    brand: ["Ladenplanung mit Fast Systemmöbel"],
+    descriptive: ["in welcher Reihenfolge Sie Ihren Laden planen", "zum Ratgeber Ladenplanung"],
   },
   "/bueroeinrichtung/": {
     exact: ["Büroeinrichtung"],

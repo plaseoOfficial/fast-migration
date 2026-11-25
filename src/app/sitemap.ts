@@ -36,6 +36,7 @@ const ROUTES: Array<{ path: string; priority: number }> = [
   { path: "/hauswirtschaftsraum/planen/", priority: 0.7 },
   { path: "/gewerbe/", priority: 0.8 },
   { path: "/ladenbau/", priority: 0.8 },
+  { path: "/ladenbau/ladeneinrichtung-planung/", priority: 0.7 },
   { path: "/bueroeinrichtung/", priority: 0.8 },
   { path: "/bueroeinrichtung/bueroplanung/", priority: 0.7 },
   { path: "/bueroeinrichtung/bueromoebel-nach-mass/", priority: 0.7 },
