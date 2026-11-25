@@ -8,7 +8,7 @@
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", Sie-Form).
  * Fakten (FACTS.md): seit 1996 (Gründung Rahden-Tonnenheide, ab 2001 Espelkamp),
  * Meisterbetrieb (KEIN Jahr), Familie Fast in 2. Generation (Andreas & Peter seit
- * 2010), über 1.000 m² Fertigung, Homag-/CNC-Technologie, ~200 km Montageradius,
+ * 2010), über 1.000 m² Fertigung, Homag-/CNC-Technologie, Montage deutschlandweit auf Anfrage,
  * Lieferung bundesweit. WICHTIG (Kunden-Discovery 2026-06-06): Gastro-Leistung =
  * NUR Möbelbau + präzise Technik-Aussparungen; die Technik (Kühlung, Zapfanlage,
  * Spülen) installiert der Fachbetrieb des Kunden — KEIN Technik-Einbau durch Fast.
@@ -21,7 +21,7 @@ export const gastroHero = {
     "Gastraum mit langen Holztischen, Polsterstühlen und gerahmter Bilderwand",
   title: "Gastronomieeinrichtung nach Maß",
   intro:
-    "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß: Theken und Tresen, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem Team im Umkreis von rund 200 km und bundesweit geliefert.",
+    "Im Gastraum zählt jeder Quadratmeter. Wir planen und bauen Ihre Gastronomieeinrichtung nach Maß: Theken und Tresen, Rückbuffets, Sitzbänke und Hotelmöbel, ausgelegt auf den täglichen Dauereinsatz. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert von unserem eigenen Team, deutschlandweit auf Anfrage, und bundesweit geliefert.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
@@ -48,12 +48,12 @@ export const gastroIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Vom einzelnen Bartresen bis zur kompletten Einrichtung bekommen Sie alles aus einer Hand: Beratung, Aufmaß, 3D-Planung, Fertigung und Montage. Als Meisterbetrieb arbeiten wir ohne Zwischenhändler.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montageradius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Wir montieren im Umkreis von rund 200 km, etwa in Minden, Lübbecke, Bielefeld, Hannover und Osnabrück. Größere Objekte und Hotels liefern wir bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Wir montieren mit eigenem Team, deutschlandweit auf Anfrage. Größere Objekte und Hotels liefern wir bundesweit.",
   col3CtaLabel: "Projekt anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -196,7 +196,7 @@ export const gastroGeschichte = {
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
     { value: "4.000+", label: "Projekte gefertigt" },
   ],
   paragraphs: [
@@ -229,7 +229,7 @@ export const gastroWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
     title: "Fertigung & Montage",
     description:
-      "Alle Teile entstehen im eigenen Werk in Espelkamp. Montage durch unser eigenes Team im Umkreis von rund 200 km, auf Wunsch am Ruhetag oder nachts.",
+      "Alle Teile entstehen im eigenen Werk in Espelkamp. Montage durch unser eigenes Team, deutschlandweit auf Anfrage, auf Wunsch am Ruhetag oder nachts.",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -256,7 +256,7 @@ export const gastroFaq = {
     {
       question: "Wer fertigt Theken, Sitzbänke und Hotelmöbel nach Maß für Restaurants und Hotels?",
       answer:
-        "Das machen wir bei Fast Systemmöbel: Wir sind ein Meisterbetrieb aus Espelkamp und bauen Theken, Tresen, Rückbuffets, Sitzbänke und Hotelmöbel nach Maß für Gastronomie und Hotellerie. Von Beratung und kostenlosem Aufmaß über die 3D-Planung bis zur Montage durch unser eigenes Team läuft alles aus einer Hand. Montiert wird im Umkreis von rund 200 km um Espelkamp, geliefert wird bundesweit.",
+        "Das machen wir bei Fast Systemmöbel: Wir sind ein Meisterbetrieb aus Espelkamp und bauen Theken, Tresen, Rückbuffets, Sitzbänke und Hotelmöbel nach Maß für Gastronomie und Hotellerie. Von Beratung und kostenlosem Aufmaß über die 3D-Planung bis zur Montage durch unser eigenes Team läuft alles aus einer Hand. Montiert wird deutschlandweit auf Anfrage, geliefert wird bundesweit.",
     },
     {
       question: "Lohnt sich Maßanfertigung auch, wenn ich nur eine einzelne Theke brauche?",
@@ -286,7 +286,7 @@ export const gastroFaq = {
     {
       question: "In welchem Gebiet liefern und montieren Sie, auch außerhalb von OWL?",
       answer:
-        "Komplette Projekte mit Möbeln und Montage realisieren wir im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Größere Objekte und Hoteleinrichtungen liefern wir bundesweit; an die Montage durch unser Team ist der 200-km-Radius gebunden. Die Logistik klären wir im Angebot.",
+        "Komplette Projekte mit Möbeln und Montage realisieren wir mit unserem eigenen Team, deutschlandweit auf Anfrage. Größere Objekte und Hoteleinrichtungen liefern wir auch bundesweit. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Die Logistik klären wir im Angebot.",
     },
   ],
 };

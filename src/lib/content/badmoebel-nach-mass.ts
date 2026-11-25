@@ -214,7 +214,7 @@ export const badVergleich = {
     {
       label: "Montage",
       values: [
-        "eigenes Montageteam im Umkreis von 200 km",
+        "eigenes Montageteam, deutschlandweit auf Anfrage",
         "Selbstmontage nach Speditionslieferung",
         "externe Monteure gegen Aufpreis",
       ],
@@ -283,12 +283,12 @@ export const badGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Fast Systemmöbel hat 1996 klein angefangen, als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. Fünf Jahre später zog die Fertigung nach Espelkamp, und aus dem Gründungsbetrieb von Johann Fast wurde ein Familienunternehmen.",
     "Inzwischen ist die zweite Generation an Bord: Andreas und Peter Fast, seit 2010 mit im Unternehmen. Hinter jedem Auftrag stehen mehr als 4.000 Projekte, über 1.000 m² eigene Fertigung und ein festes Team. Auch hinter Ihrem Bad, wo die Feuchte der Verarbeitung mehr abverlangt als im Wohnraum.",
-    "Jedes Möbel entsteht bei uns im Haus, gefertigt in Espelkamp und montiert im Umkreis von rund 200 km, in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende Badmöbel liefern wir deutschlandweit.",
+    "Jedes Möbel entsteht bei uns im Haus, gefertigt in Espelkamp und von unserem eigenen Team eingebaut, deutschlandweit auf Anfrage. Freistehende Badmöbel liefern wir bundesweit.",
   ],
 };
 
@@ -335,7 +335,7 @@ export const badFaq = {
     {
       question: "Kostet das Aufmaß etwas, und montieren Sie die Möbel selbst?",
       answer:
-        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Montiert wird von unserem eigenen Team, im Umkreis von rund 200 km um Espelkamp, also in ganz OWL und darüber hinaus. Freistehende Badmöbel liefern wir auch deutschlandweit. Eine pauschale Lieferzeit nennen wir nicht, den verbindlichen Termin legen wir nach Aufmaß und Freigabe fest.",
+        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Montiert wird von unserem eigenen Team, deutschlandweit auf Anfrage. Freistehende Badmöbel liefern wir auch bundesweit. Eine pauschale Lieferzeit nennen wir nicht, den verbindlichen Termin legen wir nach Aufmaß und Freigabe fest.",
     },
     {
       question: "Kann ich online selbst planen oder brauche ich eine persönliche Beratung?",
@@ -380,14 +380,7 @@ export const badJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Badmöbel nach Maß",

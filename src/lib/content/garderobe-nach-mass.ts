@@ -13,7 +13,7 @@
  * Copy follows the Fast Systemmöbel brand voice (Sie-Anrede, handwerklich,
  * konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md und
  * docs/seo/brand/FACTS.md. Firmen-/Zahlenfakten (Telefon, Adresse, Geo,
- * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, 200 km Montage-Radius,
+ * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, Montage deutschlandweit auf Anfrage,
  * Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
  *
  * Copy: Authoring-Engine (Writer/Humanizer/QC/Chefredakteur) aus dem Research-Kit
@@ -60,12 +60,12 @@ export const garIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Gefertigt wird in Espelkamp, mit PU-verleimten Kanten, die dem täglichen Flur-Alltag standhalten. Von der Beratung bis zur Montage haben Sie einen Ansprechpartner, nicht fünf. Mehr zum Prinzip lesen Sie bei unseren [maßgefertigten Einbauschränken](/einbauschraenke-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Geliefert wird bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß und Montage übernehmen wir mit unserem eigenen Team, deutschlandweit auf Anfrage. Geliefert wird bundesweit.",
   col3CtaLabel: "Garderobe online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -182,7 +182,7 @@ export const garProcess = {
     {
       title: "Beratung und kostenloses Aufmaß",
       description:
-        "Wir sprechen über Ihren Flur, die tägliche Nutzung und Ihre Wünsche. Danach nehmen wir kostenlos vor Ort Aufmaß, im Montagegebiet rund um Espelkamp.",
+        "Wir sprechen über Ihren Flur, die tägliche Nutzung und Ihre Wünsche. Danach nehmen wir kostenlos vor Ort Aufmaß, deutschlandweit auf Anfrage.",
     },
     {
       title: "Technische 3D-Planung",
@@ -283,12 +283,12 @@ export const garFaq = {
     {
       question: "Wie messe ich meinen Flur richtig aus, oder übernimmt das Fast?",
       answer:
-        "Grobe Vorabmaße helfen fürs erste Gespräch, verbindlich brauchen Sie sie aber nicht. Im Montagegebiet rund um Espelkamp nehmen wir kostenlos vor Ort Aufmaß, millimetergenau und inklusive Schrägen, Steckdosen und Vorsprüngen.",
+        "Grobe Vorabmaße helfen fürs erste Gespräch, verbindlich brauchen Sie sie aber nicht. Das Aufmaß vor Ort ist kostenlos, wir nehmen es deutschlandweit auf Anfrage, millimetergenau und inklusive Schrägen, Steckdosen und Vorsprüngen.",
     },
     {
       question: "Liefert und montiert Fast bundesweit?",
       answer:
-        "Geliefert wird bundesweit. Aufmaß und Montage durch unser eigenes Team bieten wir im Umkreis von rund 200 km um Espelkamp an, also in ganz OWL und zum Beispiel in Minden, Lübbecke, Osnabrück und Bielefeld.",
+        "Geliefert wird bundesweit. Aufmaß und Montage übernimmt immer unser eigenes Team, deutschlandweit auf Anfrage. Zu Hause sind wir rund um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
     },
   ],
 };
@@ -323,14 +323,7 @@ export const garJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Garderoben nach Maß",

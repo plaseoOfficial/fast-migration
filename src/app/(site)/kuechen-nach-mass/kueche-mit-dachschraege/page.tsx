@@ -30,7 +30,7 @@ import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 export const metadata: Metadata = {
   title: "Küche mit Dachschräge nach Maß | Fast Systemmöbel",
   description:
-    "Küche mit Dachschräge vom Tischler in Espelkamp: kostenloses Aufmaß der Schräge, Fertigung im eigenen Betrieb, Montage im Umkreis von rund 200 km.",
+    "Küche mit Dachschräge vom Tischler: kostenloses Aufmaß der Schräge, Fertigung im eigenen Meisterbetrieb in Espelkamp, Montage deutschlandweit auf Anfrage.",
   alternates: { canonical: "/kuechen-nach-mass/kueche-mit-dachschraege/" },
   openGraph: {
     images: [

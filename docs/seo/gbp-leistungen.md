@@ -73,4 +73,4 @@ Für Café, Restaurant oder Bistro fertigen wir Tresen, Möbel und Einbauten nac
 Bevor wir bauen, messen wir bei Ihnen vor Ort auf, kostenlos, und planen alles vorab in 3D. So sehen Sie Ihr Möbel, bevor das erste Brett zugeschnitten ist.
 
 **20. Möbelmontage durch eigenes Team**
-Was wir planen, montieren wir auch selbst. Unser Team baut Ihre Möbel im Umkreis von rund 200 km um Espelkamp auf, geliefert wird darüber hinaus bundesweit.
+Was wir planen, montieren wir auch selbst. Unser Team baut Ihre Möbel deutschlandweit auf Anfrage auf, geliefert wird bundesweit.

@@ -27,7 +27,7 @@ import {
 import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Küchenzeile nach Maß | Fast Systemmöbel",
+  title: "Küchenzeile nach Maß vom Tischler | Fast Systemmöbel",
   description:
     "Küchenzeile nach Maß vom Meisterbetrieb in Espelkamp: einzeilige Küche Wand zu Wand ohne Passleisten, für kleine und schmale Räume. Kostenloses Aufmaß.",
   alternates: { canonical: "/kuechen-nach-mass/kuechenzeile-nach-mass/" },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Küchenzeile nach Maß | Fast Systemmöbel",
+    title: "Küchenzeile nach Maß vom Tischler | Fast Systemmöbel",
     description:
       "Einzeilige Küche nach Maß vom Meisterbetrieb in Espelkamp. Wand zu Wand ohne Passleisten geplant, gebaut und montiert.",
     url: "/kuechen-nach-mass/kuechenzeile-nach-mass/",

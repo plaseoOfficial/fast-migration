@@ -144,6 +144,11 @@ export const homeHandwerk = {
   headingLines: ["Handwerk mit System,", "Design mit Seele"],
   stats: HANDWERK_STATS,
   tabs: HANDWERK_TABS,
+  video: {
+    src: "/videos/oberfraese-kanten.mp4",
+    poster: "/videos/oberfraese-kanten.webp",
+    label: "Ein Tischler von Fast Systemmöbel rundet mit der Oberfräse die Kanten eines Holzteils ab",
+  },
 };
 
 export const homeMoebelplaner = {
@@ -157,14 +162,14 @@ export const homeMoebelplaner = {
 export const homeRaeume = {
   heading: "Räume, die Geschichten erzählen",
   subheading: "Starten Sie Ihr Projekt",
-  body: "Wir gestalten Möbel, die sich einfügen, ohne sich zu verstecken. Die den Raum tragen, nicht überladen. Und die selbst in 10 Jahren noch wirken, als wären sie gerade eingebaut. Geliefert wird bundesweit – im Umkreis von rund 200 km um Espelkamp montiert unser eigenes Team, von Minden über Bielefeld bis Osnabrück und Hannover.",
+  body: "Wir gestalten Möbel, die sich einfügen, ohne sich zu verstecken. Die den Raum tragen, nicht überladen. Und die selbst in 10 Jahren noch wirken, als wären sie gerade eingebaut. Geliefert wird bundesweit, und unser eigenes Team baut die Möbel bei Ihnen ein, deutschlandweit auf Anfrage.",
   topCtaLabel: "Kontakt",
   topCtaHref: "/kontakt/",
   storyImage: "/images/2025/11/DSC06206-scaled.jpg",
   storyHref: "/ueber-uns/",
   storyTitle: "Unsere Geschichte",
   storyCtaLabel: "Über uns",
-  kitchenImage: "/images/2025/11/ThabarSebastian_kueche2.jpeg",
+  kitchenImage: "/images/kuechen/kueche-nach-mass-u-form-weiss-eichen-esstisch.jpg",
   kitchenCaption: "Rückzugsort",
   bathImage: "/images/2025/11/20230829_030744000_iOS.jpg",
   bathCaption: "Wohnumgebung die Wohlfühlen verspricht",

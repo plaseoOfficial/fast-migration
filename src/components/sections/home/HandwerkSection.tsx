@@ -4,11 +4,15 @@ import { Reveal } from "@/components/Reveal";
 import { StatCounter } from "./StatCounter";
 import { HandwerkTopics } from "./HandwerkTopics";
 
+import { LoopVideo, type LoopVideoSource } from "@/components/sections/_shared/LoopVideo";
+
 interface HandwerkSectionProps {
   eyebrow: string;
   headingLines: string[];
   stats: CounterStat[];
   tabs: TabPanel[];
+  /** Optional: stumme Werkstatt-Schleife zwischen Einleitung und Themen-Reitern. */
+  video?: LoopVideoSource;
 }
 
 /**
@@ -23,6 +27,7 @@ export function HandwerkSection({
   headingLines,
   stats,
   tabs,
+  video,
 }: HandwerkSectionProps) {
   return (
     <section
@@ -59,6 +64,11 @@ export function HandwerkSection({
             ))}
           </div>
         </Reveal>
+        {video && (
+          <Reveal delay={120} className="mx-auto mt-12 max-w-[960px] lg:mt-16">
+            <LoopVideo {...video} />
+          </Reveal>
+        )}
       </div>
 
       <HandwerkTopics tabs={tabs} />

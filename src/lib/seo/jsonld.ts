@@ -43,12 +43,8 @@ const SOCIAL_PROFILES = [
   "https://www.facebook.com/fastsystemmobel/",
 ];
 
-/** Espelkamp = midpoint of the delivery/assembly area (public, approximate). */
-const SERVICE_AREA = {
-  "@type": "GeoCircle",
-  geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3829, longitude: 8.6175 },
-  geoRadius: 200000,
-} as const;
+/** Montage deutschlandweit auf Anfrage (Fertigung in Espelkamp). */
+const SERVICE_AREA = { "@type": "Country", name: "DE" } as const;
 
 export interface BreadcrumbCrumb {
   label: string;

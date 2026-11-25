@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { UeberHero } from "@/components/sections/ueber/UeberHero";
 import { UeberTimeline } from "@/components/sections/ueber/UeberTimeline";
 import { UeberWofuer } from "@/components/sections/ueber/UeberWofuer";
+import { UeberWerkstattFilm } from "@/components/sections/ueber/UeberWerkstattFilm";
 import { UeberLogos } from "@/components/sections/ueber/UeberLogos";
 import { UeberValues } from "@/components/sections/ueber/UeberValues";
 import { UeberNavCards } from "@/components/sections/ueber/UeberNavCards";
@@ -9,6 +10,7 @@ import { UeberFallbeispiel } from "@/components/sections/ueber/UeberFallbeispiel
 import {
   ueberHero,
   ueberTimeline,
+  ueberWerkstattFilm,
   ueberWofuer,
   ueberLogos,
   ueberValues,
@@ -57,6 +59,7 @@ export default function UeberUnsPage() {
       />
       <UeberHero {...ueberHero} />
       <UeberTimeline {...ueberTimeline} />
+      <UeberWerkstattFilm {...ueberWerkstattFilm} />
       <UeberWofuer {...ueberWofuer} />
       <UeberLogos logos={ueberLogos} />
       <UeberValues {...ueberValues} />

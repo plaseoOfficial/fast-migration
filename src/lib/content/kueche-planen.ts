@@ -13,7 +13,7 @@
  * Faktentreue (FACTS.md + kundenwissen.md): keine Preise/€-Spannen, keine
  * Lieferzeit-Wochen, keine erfundenen Maß-Bandbreiten als Fast-Werte. Ergonomie-cm
  * sind allgemeines Planungswissen, nicht Fast-Fertigungsmaße. Küche ist
- * montage-gebunden (~200 km um Espelkamp, eigenes Team, kein Bausatz).
+ * montage-gebunden (deutschlandweit auf Anfrage, eigenes Team, kein Bausatz).
  * Brand voice: Sie-Anrede, konkret, belegt, keine em-dashes (BRAND_VOICE.md).
  *
  * Bilder: bestehende Fast-Küchenfotos aus dem Pillar-Bestand (Platzhalter, echte
@@ -24,9 +24,9 @@ const SITE = "https://www.fast-systemmoebel.de";
 const PATH = "/kuechen-nach-mass/kueche-planen/";
 
 export const planenHero = {
-  bgImage: "/images/2025/11/IMG_9387-scaled.jpg",
+  bgImage: "/images/schrank-unter-treppe/beratung-planung-nach-mass.jpg",
   imageAlt:
-    "Küche nach Maß mit grifflosen Fronten und Holzrückwand als Beispiel für eine durchdachte Küchenplanung",
+    "Zwei Personen im Beratungsgespräch an einem Holztisch, Blick auf Unterlagen",
   title: "Küche planen: Schritt für Schritt zur eigenen Küche",
   intro:
     "Eine Küche planen Sie am besten von innen nach außen. Erst Raum und Anschlüsse aufmessen, dann die Küchenform zum Grundriss wählen und das Arbeitsdreieck aus Kühlschrank, Spüle und Herd festlegen. Danach teilen Sie Geräte und Stauraum ein, zuletzt kommen Material, Arbeitsplatte und Beleuchtung. Wer sich an diese Reihenfolge hält, umgeht die typischen Fehler und sitzt vorbereitet im Beratungsgespräch.",
@@ -46,8 +46,8 @@ export const planenHero = {
 export const planenProcess = {
   eyebrow: "In sieben Schritten",
   heading: "So planen Sie Ihre Küche Schritt für Schritt",
-  image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
-  imageAlt: "Moderne Küche nach Maß in Grau mit Kochinsel als Ergebnis einer durchdachten Planung",
+  image: "/images/schrank-unter-treppe/aufmass-planung-nach-mass.jpg",
+  imageAlt: "Hände blättern in einem Katalog mit Möbelbeispielen auf einem Holztisch",
   steps: [
     {
       title: "Raum aufmessen und Anschlüsse prüfen",
@@ -243,8 +243,8 @@ export const planenTischler = {
   heading: "Was ein Tischler bei der Planung anders macht",
   body:
     "Ein Online-Konfigurator rechnet mit festen Rastermaßen, eine Serienküche ebenso. Als Meisterbetrieb in Espelkamp planen wir Ihre Küche um den echten Raum herum: schiefe Wände, Nischen und [Dachschrägen](/kuechen-nach-mass/kueche-mit-dachschraege/) sind für uns Alltag, kein Sonderfall. Wir nehmen ein kostenloses Aufmaß, planen in 3D, fertigen in Eigenregie und bauen Wand zu Wand ohne Passleisten, montiert vom eigenen Team. Wie eine solche [Küche nach Maß](/kuechen-nach-mass/) entsteht, zeigt unsere Übersicht.",
-  image: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg",
-  imageAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte vom Meisterbetrieb Fast Systemmöbel",
+  image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
+  imageAlt: "Küche in Anthrazit mit heller Halbinsel und schwarzer Dunstabzugshaube",
   stat: { value: "kostenlos", label: "Aufmaß vor Ort" },
 };
 
@@ -319,7 +319,7 @@ export const planenFaq = {
     {
       question: "Sind Beratung und Aufmaß bei Fast kostenlos?",
       answer:
-        "Ja. Wir beraten Sie und nehmen das Aufmaß kostenlos vor Ort auf, im Umkreis von rund 200 Kilometern um Espelkamp, also in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Ein konkreter Preis für die Küche ist immer individuell und ergibt sich erst nach dem Aufmaß.",
+        "Ja. Wir beraten Sie und nehmen das Aufmaß kostenlos vor Ort auf, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Ein konkreter Preis für die Küche ist immer individuell und ergibt sich erst nach dem Aufmaß.",
     },
   ],
 };

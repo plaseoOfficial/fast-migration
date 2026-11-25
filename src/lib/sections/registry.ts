@@ -59,6 +59,7 @@ import { KontaktStandort } from "@/components/sections/kontakt/KontaktStandort";
 import { UeberHero } from "@/components/sections/ueber/UeberHero";
 import { UeberTimeline } from "@/components/sections/ueber/UeberTimeline";
 import { UeberWofuer } from "@/components/sections/ueber/UeberWofuer";
+import { UeberWerkstattFilm } from "@/components/sections/ueber/UeberWerkstattFilm";
 import { UeberLogos } from "@/components/sections/ueber/UeberLogos";
 import { UeberValues } from "@/components/sections/ueber/UeberValues";
 import { UeberNavCards } from "@/components/sections/ueber/UeberNavCards";
@@ -98,6 +99,7 @@ import {
 import {
   ueberHero,
   ueberTimeline,
+  ueberWerkstattFilm,
   ueberWofuer,
   ueberLogos,
   ueberValues,
@@ -190,6 +192,7 @@ export const sectionRegistry: SectionEntry[] = [
   // Über uns
   defineSection(meta("ueber-hero"), UeberHero, ueberHero),
   defineSection(meta("ueber-timeline"), UeberTimeline, ueberTimeline),
+  defineSection(meta("ueber-werkstatt-film"), UeberWerkstattFilm, ueberWerkstattFilm),
   defineSection(meta("ueber-wofuer"), UeberWofuer, ueberWofuer),
   defineSection(meta("ueber-logos"), UeberLogos, { logos: ueberLogos }),
   defineSection(meta("ueber-values"), UeberValues, ueberValues),

@@ -42,7 +42,7 @@ export const HOTSPOTS = [
 
 export const QUALITY_IMAGES = [
   "/images/2025/11/DSC_9747.jpg",
-  "/images/2025/11/ThabarSebastian_kueche2.jpeg",
+  "/images/kuechen/kueche-nach-mass-u-form-weiss-eichen-esstisch.jpg",
   "/images/2025/11/90d42e7b-fa9d-4a8d-a60e-ca1c5bf55cb3.jpg",
 ];
 
@@ -178,7 +178,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "Liefert Fast Systemmöbel bundesweit – und wer übernimmt die Montage?",
-    a: "Geliefert wird bundesweit in ganz Deutschland. Im Umkreis von rund 200 km um Espelkamp montieren wir mit unserem eigenen Team – etwa in Minden, Bielefeld, Osnabrück und Hannover, in ganz Ostwestfalen-Lippe. Ohne Subunternehmer, von der ersten Schraube bis zur Abnahme. Außerhalb dieses Umkreises stimmen wir die Montage individuell mit Ihnen ab.",
+    a: "Geliefert wird bundesweit in ganz Deutschland. Die Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage, ohne Subunternehmer und von der ersten Schraube bis zur Abnahme. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
   },
   {
     q: "Fertigt Fast auch komplette Einrichtungen für Gewerbe und Praxen?",

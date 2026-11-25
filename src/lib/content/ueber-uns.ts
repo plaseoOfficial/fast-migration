@@ -81,7 +81,7 @@ export const ueberTimeline = {
       year: "2024",
       title: "Das Team wächst weiter",
       body: "Mit Marco (Tischler) und Madi (Monteur) wächst das Know-how. Mehr Hände, mehr Erfahrung, mehr Qualität – besonders bei großen Systemmöbel-Projekten.",
-      image: "/images/2025/11/ThabarSebastian_kueche2.jpeg",
+      image: "/images/kuechen/kueche-nach-mass-u-form-weiss-eichen-esstisch.jpg",
     },
     {
       year: "2025",
@@ -90,6 +90,21 @@ export const ueberTimeline = {
       image: "/images/2024/03/id-img-61.jpg",
     },
   ],
+};
+
+export const ueberWerkstattFilm = {
+  eyebrow: "Aus unserer Werkstatt",
+  heading: "So entsteht ein Möbel bei uns",
+  body:
+    "Ein kurzer Blick in unsere Fertigung in Espelkamp: Wir planen am Rechner, schneiden die Platten auf der CNC zu, setzen Beschläge und verleimen die Korpusse in der Presse. Alles unter einem Dach, mit unserem eigenen Team.",
+  chapters: ["Planung", "Konstruktion am Rechner", "Zuschnitt an der CNC", "Beschläge und Bohrungen", "Korpusse in der Presse"],
+  video: {
+    src: "/videos/werkstatt-fast-systemmoebel-espelkamp.mp4",
+    poster: "/videos/werkstatt-fast-systemmoebel-espelkamp.webp",
+    label: "Werkstattfilm ohne Ton: Mitarbeiter von Fast Systemmöbel planen am Rechner, schneiden Platten auf der CNC zu, montieren Beschläge und verleimen Korpusse in der Presse",
+    width: 1280,
+    height: 720,
+  },
 };
 
 export const ueberWofuer = {

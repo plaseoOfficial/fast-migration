@@ -10,13 +10,13 @@
  * Copy follows the Fast Systemmöbel brand voice (Sie-Anrede, handwerklich,
  * konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md and
  * docs/seo/brand/FACTS.md. Firmen-/Zahlenfakten (Telefon, Adresse, Geo, 1996,
- * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, 200 km Montage-Radius,
+ * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, Montage deutschlandweit auf Anfrage,
  * Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
  *
  * Copy: Authoring-Engine (Writer/Humanizer/QC/Chefredakteur) aus dem Research-Kit
  * (docs/seo/research/kuechenzeile-nach-mass.kit.md), Lauf 2026-08-13, Chefredakteur
- * pass. Bildpfade sind Platzhalter aus dem Küchen-Pool (echte Küchenfotos), bis
- * eigene Küchenzeilen-Motive vorliegen (siehe REVIEW.md Bild-Vorschläge).
+ * pass. Bilder: echte Küchen von Fast, Alt-Texte beschreiben das Motiv
+ * (docs/seo/bilder.md).
  */
 
 const SITE = "https://www.fast-systemmoebel.de";
@@ -27,7 +27,8 @@ export const kzHero = {
   bgImage: `${IMG}/2025/11/IMG_4797-scaled.jpg`,
   imageAlt:
     "Küchenzeile nach Maß an einer Wand mit heller Holz-Arbeitsplatte und Oberschränken",
-  title: "Küchenzeile nach Maß",
+  title: "Küchenzeile nach Maß vom Tischler",
+  introScrim: true,
   intro:
     "Eine Küchenzeile nach Maß ist die einzeilige Küche, die wir genau auf Ihr Wandmaß bauen: Wand zu Wand, ohne Passleisten, kein Zentimeter verschenkt. Als Meisterbetrieb aus Espelkamp planen, fertigen und montieren wir sie selbst, millimetergenau nach kostenlosem Aufmaß bei Ihnen vor Ort.",
   breadcrumb: [
@@ -46,8 +47,8 @@ export const kzIntroStats = {
     "Die einzeilige Küche reiht Spüle, Kochfeld und Stauraum an einer einzigen Wand auf. Wir planen sie auf Ihren Grundriss und ziehen die Zeile ohne Lücke durch, bis zum letzten",
   introBold: "Wandanschluss",
   introAfter: ".",
-  bandImage: `${IMG}/2025/11/ThabarSebastian_kueche2.jpeg`,
-  bandAlt: "Helle Küchenzeile nach Maß mit angrenzendem Essbereich",
+  bandImage: `${IMG}/2026/05/variante_1778229163946_1-scaled.jpg`,
+  bandAlt: "Graue Küchenzeile nach Maß unter einer beleuchteten Eichendecke, daneben eine anthrazitfarbene Tür",
   col1Title: "Wand zu Wand ohne Passleisten",
   col1Body:
     "Standardschränke enden im Raster, den Rest kaschieren Blenden. Ihre Zeile bauen wir Wand zu Wand, millimetergenau nach kostenlosem Aufmaß. Kein toter Spalt, kein verschenkter Stauraum.",
@@ -55,12 +56,12 @@ export const kzIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "In Espelkamp fertigen wir jede Zeile selbst, mit PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig. Von der Beratung bis zur Montage bleibt es eine [maßgefertigte Küche vom Tischler](/kuechen-nach-mass/), mit einem Ansprechpartner.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß und Montage übernimmt unser eigenes Montageteam, rund 200 km um Espelkamp: in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Immer von uns, nie als Bausatz.",
+    "Aufmaß und Montage übernimmt immer unser eigenes Montageteam, deutschlandweit auf Anfrage. Immer von uns, nie als Bausatz.",
   col3CtaLabel: "Küchenberatung anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -136,8 +137,8 @@ export const kzGeraete = {
   heading: "Wir planen die Zeile um Ihre Geräte herum",
   body:
     "Auf einer schmalen Zeile zählt jeder Gerätezentimeter. Wir bauen die Küchenzeile um Ihre Elektrogeräte herum, auch um die kompakten: Untertisch-Kühlschrank, schlanker 45-cm-Geschirrspüler, Kompaktbackofen oder ein Kochfeld mit zwei bis vier Zonen. Die Marken der Einbaugeräte wählen Sie frei. Wir sorgen dafür, dass alles bündig sitzt und die Zeile ihre klare Linie behält.",
-  image: `${IMG}/2025/11/20231204_095459232_iOS-scaled.jpg`,
-  imageAlt: "Fertige Küchenzeile nach Maß mit eingebautem Backofen und Kochfeld an einer Wand",
+  image: `${IMG}/2025/11/IMG_9387-scaled.jpg`,
+  imageAlt: "Grifflose weiße Küchenzeile mit Rückwand in Holzoptik, Spots und Unterbaubeleuchtung",
 };
 
 /** SegmentCards (shared): Fronten & Material — nur allgemeine Kategorien (Kit §9b), Massivholz + PU-Kante belegt. */
@@ -165,8 +166,8 @@ export const kzFronten = {
 export const kzProcess = {
   eyebrow: "Ablauf",
   heading: "So entsteht Ihre Küchenzeile",
-  image: `${IMG}/2026/05/variante_1778229163946_1-scaled.jpg`,
-  imageAlt: "Küchenzeile nach Maß in der Fertigung in der Werkstatt",
+  image: `${IMG}/werkstatt/werkstatt-cnc-zuschnitt-espelkamp.jpg`,
+  imageAlt: "CNC-Anlage und Plattenzuschnitt in der Werkhalle von Fast Systemmöbel in Espelkamp",
   steps: [
     {
       title: "Beratung und kostenloses Aufmaß",
@@ -270,7 +271,7 @@ export const kzFaq = {
     {
       question: "Montiert Fast die Küchenzeile selbst?",
       answer:
-        "Ja. Vermessen und montiert wird immer von unserem eigenen Montageteam, im Umkreis von rund 200 km um Espelkamp, in ganz OWL. Es gibt keinen Bausatz und keine reine Gerätelieferung, wir übernehmen den Aufbau und die Feinjustage vor Ort.",
+        "Ja. Vermessen und montiert wird immer von unserem eigenen Montageteam, deutschlandweit auf Anfrage. Es gibt keinen Bausatz und keine reine Gerätelieferung, wir übernehmen den Aufbau und die Feinjustage vor Ort.",
     },
   ],
 };
@@ -305,14 +306,7 @@ export const kzJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Küchenzeilen nach Maß",

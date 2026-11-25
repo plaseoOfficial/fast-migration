@@ -61,12 +61,12 @@ export const wtIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jede Platte entsteht bei uns in Espelkamp, von der PU-verleimten Kante bis zur Oberfläche. Von der Beratung bis zur Montage bleibt ein Ansprechpartner für Sie zuständig. Stauraum abseits des Waschplatzes schafft ein [Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/). Ihr Waschtisch gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Platten liefern wir auch bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß, Einbau und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Fertige Platten liefern wir auch bundesweit.",
   col3CtaLabel: "Waschtisch online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -346,7 +346,7 @@ export const wtFaq = {
     {
       question: "Wohin liefert und montiert ihr?",
       answer:
-        "Unser Montagegebiet reicht rund 200 km um Espelkamp, durch ganz OWL, etwa nach Minden, Lübbecke, Osnabrück und Bielefeld. In diesem Radius kommen wir zum Aufmaß und bauen Ihren Waschtisch vor Ort ein. Außerhalb dieses Gebiets liefern wir Ihnen die fertige Platte bundesweit.",
+        "Aufmaß und Einbau übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Die fertige Platte liefern wir Ihnen auch bundesweit.",
     },
   ],
 };
@@ -381,14 +381,7 @@ export const wtJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Waschtische nach Maß",

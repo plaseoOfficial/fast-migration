@@ -33,7 +33,7 @@ import {
 
 const PAGE_PATH = "/praxiseinrichtung";
 const DESCRIPTION =
-  "Praxiseinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Empfangstresen, Behandlungs- und Kanzleimöbel – im Umkreis von 200 km geplant und montiert.";
+  "Praxiseinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Empfangstresen, Behandlungs- und Kanzleimöbel – geplant und montiert, deutschlandweit auf Anfrage.";
 
 export const metadata: Metadata = {
   title: "Praxiseinrichtung nach Maß: Ärzte, Therapeuten & Kanzleien",

@@ -58,12 +58,12 @@ export const buchIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "In Espelkamp fertigen wir jede Bücherwand selbst, mit fugenloser PU-Kantenverleimung, sauber und feuchtigkeitsbeständig verschlossen. Von der Beratung bis zur Montage bleibt es ein [maßgefertigtes Wohnmöbel](/wohnmoebel-nach-mass/) aus einer Hand.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß und Montage übernimmt unser eigenes Montageteam, rund 200 km um Espelkamp: in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Steht das Regal frei, liefern wir es deutschlandweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß und Montage übernimmt unser eigenes Montageteam, deutschlandweit auf Anfrage. Steht das Regal frei, liefern wir es bundesweit.",
   col3CtaLabel: "Bücherregal online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -308,14 +308,7 @@ export const buchJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Bücherregale nach Maß",

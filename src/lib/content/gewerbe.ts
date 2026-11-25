@@ -7,7 +7,7 @@
  * Voice = Fast Systemmöbel (sachlich-handwerklich, B2B, Sie-Form, keine Em-Dashes
  * im Fließtext außer dem hier bewusst gesetzten Gedankenstrich „–").
  * Fakten geprüft gegen docs/seo/brand/FACTS.md: gegründet 1996, Meisterbetrieb,
- * Fertigung in Espelkamp, ~200 km Montageradius (eigenes Team), Lieferung
+ * Fertigung in Espelkamp, Montage deutschlandweit auf Anfrage (eigenes Team), Lieferung
  * bundesweit, kostenloses Aufmaß. KEINE Preise, keine Garantie-Zahl.
  *
  * Hub-FAQ bewusst auf 5 übergreifende Fragen begrenzt — branchenspezifische
@@ -264,7 +264,7 @@ export const gewerbeFaq = {
     {
       question: "Liefert und montiert Fast Systemmöbel auch außerhalb von OWL?",
       answer:
-        "Wir montieren im Umkreis von rund 200 Kilometern um Espelkamp mit unserem eigenen Team. Geliefert wird bundesweit. Wie weit wir für Ihr Projekt fahren, klären wir gern direkt im Beratungsgespräch.",
+        "Wir montieren mit unserem eigenen Team, deutschlandweit auf Anfrage. Geliefert wird bundesweit. Ob und wann wir bei Ihnen einbauen, klären wir gern direkt im Beratungsgespräch.",
     },
   ] satisfies MnmFaqItem[],
 };

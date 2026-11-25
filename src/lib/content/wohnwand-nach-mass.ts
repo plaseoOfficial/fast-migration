@@ -56,12 +56,12 @@ export const wwIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Wer bei uns [maßgefertigte Wohnmöbel](/wohnmoebel-nach-mass/) bestellt, bekommt Korpusse und Fronten aus unserer Werkstatt in Espelkamp. Familie Fast führt den Meisterbetrieb, die zweite Generation arbeitet seit 2010 mit.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Zum Aufmaß und zur Montage kommt unser eigenes Team, im Umkreis von rund 200 km um Espelkamp, etwa nach Minden, Bielefeld oder Osnabrück. Geliefert wird deutschlandweit, eingebaut nur im Montagegebiet.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Zum Aufmaß und zur Montage kommt unser eigenes Team, deutschlandweit auf Anfrage. Geliefert wird bundesweit.",
   col3CtaLabel: "Wohnwand online vorplanen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -310,14 +310,7 @@ export const wwJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Wohnwände nach Maß",

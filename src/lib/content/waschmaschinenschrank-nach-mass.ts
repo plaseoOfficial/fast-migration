@@ -67,12 +67,12 @@ export const wmsIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Teil fertigen wir im Familienbetrieb selbst, für genau eine Nische: Ihre. Soll es mehr werden als der Geräteverbau? Dann planen wir gern weiter bis zum kompletten [Hauswirtschaftsraum nach Maß](/hauswirtschaftsraum/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Im Umkreis von rund 200 km um Espelkamp messen wir kostenlos auf und bauen den Schrank ein, etwa in Minden, Lübbecke, Bielefeld oder Osnabrück. Wohnen Sie weiter weg, liefern wir deutschlandweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Wir messen kostenlos auf und bauen den Schrank mit unserem eigenen Team ein, deutschlandweit auf Anfrage. Freistehende Möbel liefern wir bundesweit.",
   col3CtaLabel: "Schrank online vorplanen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -383,14 +383,7 @@ export const wmsJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Waschmaschinenschränke nach Maß",

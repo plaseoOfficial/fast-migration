@@ -18,7 +18,7 @@ export const einbauHero = {
   imageAlt: "Einbauschrank nach Maß, grifflos und Wand zu Wand eingebaut, mit beleuchtetem Eichenfach",
   title: "Einbauschränke nach Maß, zentimetergenau eingepasst",
   intro:
-    "Wir planen und bauen Ihren Einbauschrank nach Maß, zentimetergenau auf Ihren Raum zugeschnitten. Wir messen bei Ihnen kostenlos aus, fertigen in unserem Meisterbetrieb in Espelkamp und montieren mit dem eigenen Team im Umkreis von rund 200 km. So wird jede Wand, jede Nische und jede Dachschräge zu Stauraum, der wirklich passt.",
+    "Wir planen und bauen Ihren Einbauschrank nach Maß, zentimetergenau auf Ihren Raum zugeschnitten. Wir messen bei Ihnen kostenlos aus, fertigen in unserem Meisterbetrieb in Espelkamp und montieren mit dem eigenen Team, deutschlandweit auf Anfrage. So wird jede Wand, jede Nische und jede Dachschräge zu Stauraum, der wirklich passt.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -137,12 +137,12 @@ export const einbauGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, und aus dem Gründungsbetrieb von Johann Fast wurde ein Familienunternehmen.",
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Wir planen, fertigen und montieren Einbauschränke nach Maß, die auf den Millimeter sitzen.",
-    "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, freistehende Schränke liefern wir deutschlandweit.",
+    "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, eingebaut von unserem eigenen Team, deutschlandweit auf Anfrage. Freistehende Schränke liefern wir bundesweit.",
   ],
 };
 
@@ -169,7 +169,7 @@ export const einbauFaq = {
     {
       question: "Wie läuft das Aufmaß ab und wo baut ihr Einbauschränke ein?",
       answer:
-        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Wir messen den Raum genau aus, erfassen Schrägen, Nischen und Anschlüsse und besprechen, was der Schrank aufnehmen soll. Unser eigenes Montageteam baut ihn anschließend vor Ort ein, im Umkreis von rund 200 km um Espelkamp, also in ganz OWL und darüber hinaus, zum Beispiel in Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende Schränke liefern wir auch deutschlandweit.",
+        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Wir messen den Raum genau aus, erfassen Schrägen, Nischen und Anschlüsse und besprechen, was der Schrank aufnehmen soll. Unser eigenes Montageteam baut ihn anschließend vor Ort ein, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Freistehende Schränke liefern wir auch bundesweit.",
     },
     {
       question: "Was unterscheidet euch von einem Online-Schrankkonfigurator?",
@@ -223,14 +223,7 @@ export const einbauJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Einbauschränke nach Maß",

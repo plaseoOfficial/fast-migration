@@ -219,7 +219,7 @@ export const wohnVergleich = {
     {
       label: "Montage",
       values: [
-        "eigenes Montageteam im Umkreis von rund 200 km",
+        "eigenes Montageteam, deutschlandweit auf Anfrage",
         "Selbstmontage nach Speditionslieferung",
         "externe Monteure gegen Aufpreis",
       ],
@@ -287,12 +287,12 @@ export const wohnGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Angefangen hat Fast Systemmöbel 1996 klein, als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. Fünf Jahre später zog die Fertigung nach Espelkamp, und aus dem Handwerker wurde ein Familienbetrieb.",
     "Heute ist die zweite Generation an Bord: Andreas und Peter Fast sind seit 2010 im Unternehmen und rücken Schritt für Schritt in die Geschäftsführung. Dahinter stehen über 4.000 Projekte und mehr als 1.000 m² eigene Fertigung, dazu ein Meisterbetrieb, der weiß, was er verspricht.",
-    "Jedes Möbel entsteht bei uns im Haus, in Eigenregie in Espelkamp gefertigt und im Umkreis von rund 200 km montiert, in ganz OWL rund um Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende Wohnmöbel liefern wir darüber hinaus deutschlandweit.",
+    "Jedes Möbel entsteht bei uns im Haus, in Eigenregie in Espelkamp gefertigt und von unserem eigenen Team eingebaut, deutschlandweit auf Anfrage. Freistehende Wohnmöbel liefern wir darüber hinaus bundesweit.",
   ],
 };
 
@@ -324,7 +324,7 @@ export const wohnFaq = {
     {
       question: "Ist die Montage inklusive und wie weit fahren Sie?",
       answer:
-        "Ihre Wohnmöbel baut unser eigenes Montageteam ein, im Umkreis von rund 200 km um Espelkamp, also in ganz OWL und den angrenzenden Regionen. Freistehende Möbel wie ein Sideboard liefern wir darüber hinaus deutschlandweit. Was montiert werden muss, ist an das Montagegebiet gebunden.",
+        "Ihre Wohnmöbel baut unser eigenes Montageteam ein, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Freistehende Möbel wie ein Sideboard liefern wir ohnehin bundesweit.",
     },
     {
       question: "Welche Materialien und Oberflächen gibt es?",
@@ -394,14 +394,7 @@ export const wohnJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Wohnmöbel nach Maß",

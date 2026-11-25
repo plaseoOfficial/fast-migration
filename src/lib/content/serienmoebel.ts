@@ -11,7 +11,7 @@
  * Positioning (Discovery 2026-06-08, Max): full quantity range "kleine bis
  * große Serien" (no rigid minimum, scales high); Mustermöbel/Erstmuster-Freigabe
  * is the STANDARD flow; fulfilment is delivery-first (bundesweit), Montage only a
- * regional ~200 km add-on; NO named reference projects (not released); no machine
+ * assembly nationwide on request as add-on; NO named reference projects (not released); no machine
  * models / daily output / ±mm figures (not confirmed).
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", B2B,
@@ -19,7 +19,7 @@
  * (Rahden-Tonnenheide; Espelkamp ab 2001), Meisterbetrieb (ohne Jahr), rund
  * 1.000 m² Fertigung, Homag-/CNC-Technik, 4.000+ Projekte, 72.000+ Teile,
  * Familie 2. Gen. (Andreas & Peter Fast), PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig),
- * eigenes Montageteam, ~200 km Montageradius, Lieferung bundesweit, Made in
+ * eigenes Montageteam, Montage deutschlandweit auf Anfrage, Lieferung bundesweit, Made in
  * Germany. No invented numbers, prices, lead times, awards or claims. Zero em-dashes.
  * Research-Kit: docs/seo/research/serienmoebel.kit.md (out of PR).
  */
@@ -55,12 +55,12 @@ export const serienIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Von der Musterfreigabe bis zur Auslieferung kommt alles aus einer Hand: Arbeitsvorbereitung, Fertigung, Qualitätskontrolle und Lieferung. Sie haben einen festen Ansprechpartner und beschaffen identische Möbel in kleinen wie großen Stückzahlen, ohne mehrere Lieferanten zu koordinieren.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Umkreis um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Geliefert wird bundesweit in ganz Deutschland. Im Umkreis von rund 200 km um Espelkamp montieren wir auf Wunsch mit eigenem Team, etwa in Ostwestfalen-Lippe, Minden, Bielefeld, Hannover und Osnabrück. Was Sie genau brauchen, besprechen wir vorab in Ruhe mit Ihnen.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Geliefert wird bundesweit in ganz Deutschland. Auf Wunsch montiert unser eigenes Team, deutschlandweit auf Anfrage. Was Sie genau brauchen, besprechen wir vorab in Ruhe mit Ihnen.",
   col3CtaLabel: "Serie persönlich besprechen",
   col3CtaHref: "#anfrage",
 };
@@ -72,6 +72,11 @@ export const serienProcess = {
   paragraphStrong: "Made in Germany.",
   image: "/images/serienmoebel/serienfertigung-homag-plattenaufteilung.jpg",
   imageAlt: "Plattenmaterial an der Homag-Anlage, vorbereitet für die Serienfertigung",
+  video: {
+    src: "/videos/cnc-plattenzuschnitt.mp4",
+    poster: "/videos/cnc-plattenzuschnitt.webp",
+    label: "CNC-Anlage in der Werkhalle von Fast Systemmöbel beim Plattenzuschnitt",
+  },
 };
 
 export const serienTypische = {
@@ -172,7 +177,7 @@ export const serienWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
     title: "Fertigung & Lieferung",
     description:
-      "Jedes Teil auf demselben CNC-Programm, seriengleiche Qualität, Lieferung bundesweit. Montage durch unser eigenes Team im Umkreis von rund 200 km.",
+      "Jedes Teil auf demselben CNC-Programm, seriengleiche Qualität, Lieferung bundesweit. Montage durch unser eigenes Team, deutschlandweit auf Anfrage.",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -229,7 +234,7 @@ export const serienFaq = {
     {
       question: "Liefern Sie bundesweit, und montieren Sie auch?",
       answer:
-        "Wir liefern deutschlandweit. Im Umkreis von rund 200 km um Espelkamp montieren wir auf Wunsch mit eigenem Team. Bei den meisten Serien geht es um die reine Lieferung, die Montage klären wir je nach Standort individuell.",
+        "Wir liefern bundesweit. Auf Wunsch montieren wir mit eigenem Team, deutschlandweit auf Anfrage. Bei den meisten Serien geht es um die reine Lieferung, die Montage klären wir je nach Standort individuell.",
     },
   ],
 };

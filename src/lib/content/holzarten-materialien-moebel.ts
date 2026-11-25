@@ -492,7 +492,7 @@ export const holzFehler = {
 export const holzMoebelplaner = {
   heading: "Erst das Möbel skizzieren, dann das Holz wählen",
   body:
-    "Holz wählt sich leichter, wenn das Möbel schon Form hat. Im [Möbelplaner](/moebelplaner/) bereiten Sie Maße, Einteilung und Fronten online vor. Holz und Oberfläche besprechen wir danach persönlich mit Ihnen: am Telefon unter 05771 9138312, bei uns in Espelkamp oder bei Ihnen vor Ort im Umkreis von rund 200 km. Sie wissen schon, was Ihr Möbel aushalten muss? Dann können Sie direkt ein [Beratungsgespräch vereinbaren](/kontakt/).",
+    "Holz wählt sich leichter, wenn das Möbel schon Form hat. Im [Möbelplaner](/moebelplaner/) bereiten Sie Maße, Einteilung und Fronten online vor. Holz und Oberfläche besprechen wir danach persönlich mit Ihnen: am Telefon unter 05771 9138312, bei uns in Espelkamp oder bei Ihnen vor Ort, deutschlandweit auf Anfrage. Sie wissen schon, was Ihr Möbel aushalten muss? Dann können Sie direkt ein [Beratungsgespräch vereinbaren](/kontakt/).",
   ctaLabel: "Zum Möbelplaner",
   ctaHref: "/moebelplaner/",
   image: "/images/schrank-unter-treppe/aufmass-planung-nach-mass.jpg",

@@ -12,7 +12,7 @@
  * Copy follows the Fast Systemmöbel brand voice (Sie-Anrede, handwerklich,
  * konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md und
  * docs/seo/brand/FACTS.md. Firmen-/Zahlenfakten (Telefon, Adresse, Geo,
- * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, 200 km Montage-Radius,
+ * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, Montage deutschlandweit auf Anfrage,
  * Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
  *
  * Copy: Authoring-Engine (Writer/Humanizer/QC/Chefredakteur) aus dem Research-Kit
@@ -57,12 +57,12 @@ export const regIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Regal entsteht bei uns in Espelkamp, mit fugenlos verschlossener PU-Kantenverleimung, feuchtigkeitsbeständig und stabil. Von der Beratung bis zur Montage kommt Ihr [maßgefertigtes Wohnmöbel](/wohnmoebel-nach-mass/) aus einer Hand, mit einem festen Ansprechpartner.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß und Montage macht unser eigenes Montageteam, im Umkreis von rund 200 km um Espelkamp: in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Frei stehende Regale liefern wir bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß und Montage macht unser eigenes Montageteam, deutschlandweit auf Anfrage. Frei stehende Regale liefern wir bundesweit.",
   col3CtaLabel: "Regal online vorplanen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -263,7 +263,7 @@ export const regFaq = {
     {
       question: "Übernehmen Sie Aufmaß und Montage?",
       answer:
-        "Das Aufmaß vor Ort ist kostenlos. Montiert wird von unserem eigenen Team, im Umkreis von rund 200 km um Espelkamp, etwa in OWL, Minden, Osnabrück und Bielefeld. Frei stehende Regale liefern wir auch bundesweit.",
+        "Das Aufmaß vor Ort ist kostenlos. Montiert wird von unserem eigenen Team, deutschlandweit auf Anfrage. Frei stehende Regale liefern wir auch bundesweit.",
     },
     {
       question: "Worin unterscheidet sich ein Regal vom Meisterbetrieb von einem Regal von der Stange?",
@@ -303,14 +303,7 @@ export const regJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Regale nach Maß",

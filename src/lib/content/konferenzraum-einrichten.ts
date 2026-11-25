@@ -13,8 +13,8 @@
  *
  * Faktentreue (FACTS.md + kundenwissen.md): Maße sind DGUV-Richtwerte (215-441,
  * Akustik-Beispielraum 215-443), keine Fast-Zusage; keine Tischtiefe, kein Lux-Wert,
- * keine Preise, keine Lieferzeit, keine Elektroinstallation durch Fast. Montage
- * ~200 km um Espelkamp mit eigenem Team, darüber hinaus Lieferung. Sie-Form, keine
+ * keine Preise, keine Lieferzeit, keine Elektroinstallation durch Fast.
+ * Montage mit eigenem Team deutschlandweit auf Anfrage, dazu Lieferung. Sie-Form, keine
  * em-dashes (BRAND_VOICE.md).
  *
  * Copy: Authoring-Engine aus dem Research-Kit
@@ -279,7 +279,7 @@ export const krFaq = {
     {
       question: "Wie läuft die Einrichtung mit Fast ab?",
       answer:
-        "Zuerst beraten wir Sie, vor Ort oder am Telefon. Dann messen wir kostenlos auf. Sobald Sie die 3D-Planung freigegeben haben, fertigen wir in Espelkamp. Aufmaß und Montage mit eigenem Team bieten wir im Umkreis von rund 200 km, sonst liefern wir.",
+        "Zuerst beraten wir Sie, vor Ort oder am Telefon. Dann messen wir kostenlos auf. Sobald Sie die 3D-Planung freigegeben haben, fertigen wir in Espelkamp. Aufmaß und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage, sonst liefern wir.",
     },
     {
       question: "Wann steht der Montagetermin fest?",

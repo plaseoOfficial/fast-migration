@@ -3,7 +3,7 @@
 > Auto-generated from `src/lib/sections/catalog-data.ts`. Do not edit by hand —
 > run `node --experimental-strip-types scripts/gen-section-catalog.mjs`.
 
-**49 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
+**50 sections** across 7 categories. Browse them rendered at `/library`. Each section is a props-driven component; `category` = audience/origin, `useCase` = the job it does.
 
 ## Index
 
@@ -13,7 +13,7 @@
 - **Gewerbe** — [Gewerbe — Intro + Stats](#gewerbe-intro-stats), [Gewerbe — Laden & Gastro](#gewerbe-laden-gastro), [Gewerbe — Leistungen](#gewerbe-leistungen), [Gewerbe — Warum](#gewerbe-warum)
 - **Möbelplaner** — [Möbelplaner — Schritte](#mp-schritte), [Möbelplaner — Intro](#mp-intro), [Möbelplaner — Prozess](#mp-prozess)
 - **Kontakt** — [Kontakt — Formular-Hero](#kontakt-formular-hero), [Kontakt — Panel](#kontakt-panel), [Kontakt — Standort](#kontakt-standort)
-- **Über uns** — [Über uns — Hero](#ueber-hero), [Über uns — Timeline](#ueber-timeline), [Über uns — Wofür wir stehen](#ueber-wofuer), [Über uns — Logo Strip](#ueber-logos), [Über uns — Werte](#ueber-values), [Über uns — Nav Cards](#ueber-nav-cards), [Über uns — Fallbeispiel](#ueber-fallbeispiel)
+- **Über uns** — [Über uns — Hero](#ueber-hero), [Über uns — Timeline](#ueber-timeline), [Über uns — Werkstattfilm](#ueber-werkstatt-film), [Über uns — Wofür wir stehen](#ueber-wofuer), [Über uns — Logo Strip](#ueber-logos), [Über uns — Werte](#ueber-values), [Über uns — Nav Cards](#ueber-nav-cards), [Über uns — Fallbeispiel](#ueber-fallbeispiel)
 
 ## Sections
 
@@ -742,6 +742,20 @@ _Prop-less (page-specific content)._
 | `years` | `TimelineYear[]` | yes |
 
 ![Über uns — Timeline](../design-references/ueber-uns/02-timeline.jpeg)
+
+#### Über uns — Werkstattfilm
+
+`#ueber-werkstatt-film` — Text column (eyebrow, heading, body, numbered chapter list) beside a short muted workshop film with native controls, poster and preload=none (no autoplay).
+
+| Use case | Category | Client | Used on |
+| --- | --- | --- | --- |
+| `video` | `ueber` | no | `/ueber-uns` |
+
+| Prop | Type | Required |
+| --- | --- | --- |
+| `eyebrow / heading / body` | `string` | yes |
+| `chapters` | `string[]` | yes |
+| `video` | `{ src, poster, label, width, height }` | yes |
 
 #### Über uns — Wofür wir stehen
 

@@ -30,7 +30,7 @@ import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 export const metadata: Metadata = {
   title: "Einbauschrank nach Maß vom Meisterbetrieb | Fast Systemmöbel",
   description:
-    "Einbauschränke nach Maß vom Tischler: kostenloses Aufmaß bei Ihnen, Fertigung in Espelkamp, Montage durch das eigene Team im Umkreis von 200 km. Für Dachschrägen und Nischen.",
+    "Einbauschränke nach Maß vom Tischler: kostenloses Aufmaß bei Ihnen, Fertigung in Espelkamp, Montage durch das eigene Team deutschlandweit auf Anfrage. Für Dachschrägen und Nischen.",
   alternates: { canonical: "/einbauschraenke-nach-mass/" },
   openGraph: {
     images: [

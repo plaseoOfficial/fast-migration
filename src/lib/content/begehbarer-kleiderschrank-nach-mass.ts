@@ -54,11 +54,11 @@ export const bkIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Planung, Fertigung und Montage bleiben in einer Hand: bei Familie Fast, als Meisterbetrieb in Espelkamp. Jedes Teil Ihrer Ankleide entsteht in unserer Werkstatt. Was wir sonst bauen, zeigt die Übersicht über [alle Einbauschränke nach Maß](/einbauschraenke-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
-  col3Body: "Zum Aufmaß und zur Montage kommen wir im Umkreis von rund 200 km um Espelkamp zu Ihnen: in ganz OWL, nach Minden, Lübbecke und Bielefeld, auch nach Osnabrück. Eingebaut wird immer von unserem eigenen Montageteam.",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
+  col3Body: "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Zum Aufmaß und zur Montage kommen wir zu Ihnen, deutschlandweit auf Anfrage. Eingebaut wird immer von unserem eigenen Montageteam.",
   col3CtaLabel: "Ankleide im Möbelplaner skizzieren",
   col3CtaHref: "/moebelplaner/",
 };
@@ -184,7 +184,7 @@ export const bkFaq = {
     { question: "Lohnt sich Maßanfertigung gegenüber einem Systemschrank wie Pax?", answer: "In einem glatten, rechtwinkligen Raum kann ein Systemschrank reichen. Er arbeitet mit festen Rastermaßen, Lücken zu Wand und Decke schließen Blenden. Nach Maß lohnt es sich, sobald Ecken, Schrägen, Nischen oder Türen die Planung bestimmen oder die Aufteilung genau zu Ihrer Garderobe passen soll." },
     { question: "Was kostet ein begehbarer Kleiderschrank nach Maß?", answer: "Einen festen Betrag nennen wir nicht, weil jede Ankleide nach Raum und Ausstattung anders ausfällt. Nach dem kostenlosen Aufmaß erhalten Sie ein individuelles Angebot für Möbel und Montage. Als Privatkunde können Sie die Ankleide auf Wunsch auch finanzieren." },
     { question: "Muss ich vor dem Aufmaß selbst messen?", answer: "Nein. Das genaue Maß nehmen wir beim kostenlosen Aufmaß vor Ort. Fürs erste Gespräch hilft eine grobe Raumskizze mit Tür und Fenster. Dazu ein paar Fotos und eine Vorstellung, wie viel Lang- und Kurzhang Sie brauchen. Damit können wir schon eine passende Form vorschlagen." },
-    { question: "Bis wohin kommen Sie zum Aufmaß und zur Montage?", answer: "Im Umkreis von rund 200 km um Espelkamp kommt unser eigenes Team zum Aufmaß und baut die Ankleide dort auch ein. Ob Ihr Ort dazugehört, sagen wir Ihnen gern am Telefon unter 05771 9138312." },
+    { question: "Bis wohin kommen Sie zum Aufmaß und zur Montage?", answer: "Aufmaß und Montage übernimmt immer unser eigenes Team, deutschlandweit auf Anfrage. Zu Hause sind wir rund um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch, gern am Telefon unter 05771 9138312." },
   ],
 };
 
@@ -216,11 +216,7 @@ export const bkJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-      geoRadius: "200000",
-    },
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Begehbare Kleiderschränke nach Maß",
