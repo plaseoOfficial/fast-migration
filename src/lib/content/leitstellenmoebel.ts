@@ -47,7 +47,7 @@ export const leitstellenIntroStats = {
   col1CtaLabel: "Jetzt Leitstelle anfragen",
   col1CtaHref: "#anfrage",
   col2Body:
-    "Planung, Fertigung und Montage kommen aus einem Haus. Unsere eigenen Planer planen Möbel und Technik gemeinsam, auf Wunsch liefern wir auch Technik, Stühle, Videowand und Akustik mit. Sie haben einen Ansprechpartner, vom ersten Gespräch bis zur Montage.",
+    "Planung, Fertigung und Montage kommen aus einem Haus. Unsere eigenen Planer stimmen Möbel und Technik aufeinander ab, auf Wunsch liefern wir auch Technik, Stühle, Videowand und Akustik mit. Sie haben einen Ansprechpartner, vom ersten Gespräch bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
@@ -118,7 +118,7 @@ export const leitstellenAlles = {
   segments: [
     {
       title: "Planung im eigenen Haus",
-      body: "Unsere Planer planen Möbel und Technik gemeinsam, in 3D und nach Ihrem Grundriss.",
+      body: "Unsere Planer stimmen Möbel und Technik aufeinander ab, in 3D und nach Ihrem Grundriss.",
     },
     {
       title: "Möbel aus eigener Fertigung",
@@ -126,7 +126,7 @@ export const leitstellenAlles = {
     },
     {
       title: "Auf Wunsch mit Technik",
-      body: "Auf Wunsch liefern wir auch Technik, Stühle, Videowand und Akustik mit.",
+      body: "Technik, Stühle, Videowand und Akustik liefern wir mit, wenn Sie es wünschen.",
     },
     {
       title: "Montage und Umbau",
