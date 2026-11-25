@@ -1,16 +1,18 @@
 /**
  * Content for the `/leitstellenmoebel/` page: Gewerbe-Cluster-Pillar for Möbel für
  * Leitstellen, Leitstände, Leitwarten und Kontrollräume. Silo „leitstellen“, Eltern
- * `/gewerbe/`. Fast ist hier Tischlerei und Fertiger: Möbel nach Zeichnung, auch
- * mehrere gleiche Arbeitsplätze. Technik, Stühle, Videowall, Akustik und Installation
- * liefert Fast nicht.
+ * `/gewerbe/`. Fast fertigt Leitstellentische, Pulte und Schränke nach Zeichnung, auch
+ * höhenverstellbar und in mehreren gleichen Arbeitsplätzen. Planung im eigenen Haus,
+ * auf Wunsch Technik, Stühle, Videowand und Akustik dazu (alles aus einer Hand, ein
+ * Ansprechpartner; Max für Fast, 2026-11-25). Keine Partnernamen.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, Sie-Form, Präsens). Fakten gegen
  * docs/seo/brand/FACTS.md (Abschnitt „Leitstellenmöbel“): rund 1.000 m² Fertigung,
  * Homag-/CNC-Technik, 72.000+ Teile, PU-Kantenverleimung (fugenlos, feuchtigkeitsbeständig),
  * 3D-Planung, kostenloses Aufmaß, eigenes Montageteam, Montage deutschlandweit auf
- * Anfrage, Lieferung bundesweit. Keine Normen, Zertifikate, Auftraggeber, Preise,
- * Lieferzeiten und keine Betriebsdauer als Möbeleigenschaft.
+ * Anfrage, Lieferung bundesweit. Keine Normen, Zertifikate, Prüfzeugnisse,
+ * Ausschreibungen, Auftraggeber, Zahlen, Preise, Lieferzeiten und keine Betriebsdauer
+ * als Möbeleigenschaft.
  *
  * Bilder: Werkstattmotive, die Alt-Texte beschreiben die Fertigung (docs/seo/bilder.md).
  * Inhaltsmodul: nur `import type` aus anderen Modulen (audit:links).
@@ -45,7 +47,7 @@ export const leitstellenIntroStats = {
   col1CtaLabel: "Jetzt Leitstelle anfragen",
   col1CtaHref: "#anfrage",
   col2Body:
-    "Planung, Fertigung und Montage kommen aus einem Haus. Sie haben einen festen Ansprechpartner und müssen für die Möbel keine zweite Firma koordinieren. Technik und Installation stimmen wir mit Ihrem Technik-Lieferanten ab.",
+    "Planung, Fertigung und Montage kommen aus einem Haus. Unsere eigenen Planer planen Möbel und Technik gemeinsam, auf Wunsch liefern wir auch Technik, Stühle, Videowand und Akustik mit. Sie haben einen Ansprechpartner, vom ersten Gespräch bis zur Montage.",
   counterTarget: 72,
   counterDuration: 2000,
   counterSuffix: "K+",
@@ -60,23 +62,23 @@ export const leitstellenPlanung = {
   eyebrow: "Worauf es bei der Planung ankommt",
   heading: "Was bei Leitstellenmöbeln zählt",
   intro:
-    "Diese Punkte legen Betreiber und Planer fest. Wir setzen sie in Möbel um und stimmen Maße und Aussparungen mit Ihnen ab.",
+    "Diese Punkte legen Betreiber und Planer fest. Wir setzen sie in Möbel um und planen sie mit Ihnen gemeinsam.",
   segments: [
     {
       title: "Ergonomie und Sehabstände",
-      body: "Sitz- und Arbeitshöhe, Monitorabstand und Blickwinkel stehen in Ihrer Planung. Wir fertigen den Leitstellentisch nach diesem Maß.",
+      body: "Sitz- und Arbeitshöhe, Monitorabstand und Blickwinkel stehen in Ihrer Planung. Wir fertigen den Leitstellentisch nach diesem Maß, auch höhenverstellbar für den Wechsel zwischen Sitzen und Stehen.",
     },
     {
       title: "Technik und Kabelwege",
-      body: "Rechner, Netzteile und Kabel brauchen Platz und Wege. Wir bauen Aussparungen und Kabelwege dort ein, wo Ihr Plan sie vorsieht.",
+      body: "Rechner, Netzteile und Kabel brauchen Platz und Wege. Kabelwege und Fächer für Rechner planen und bauen wir von Anfang an mit ein.",
     },
     {
       title: "Wärme und Belüftung",
-      body: "Wo Geräte im Möbel stehen, braucht es Luft. Öffnungen und Fächer setzen wir nach den Angaben Ihres Technik-Lieferanten.",
+      body: "Wo Geräte im Möbel stehen, braucht es Luft. Die Belüftung gehört bei uns immer zur Planung und wird mitgebaut.",
     },
     {
       title: "Zugang für die Wartung",
-      body: "Klappen, Revisionsöffnungen und Fächer machen die Technik erreichbar. Lage und Größe legen wir mit Ihnen vor der Fertigung fest.",
+      body: "Wartungsklappen machen die Technik erreichbar. Lage und Größe legen wir mit Ihnen vor der Fertigung fest.",
     },
     {
       title: "Nutzung durch mehrere Personen",
@@ -93,7 +95,7 @@ export const leitstellenFertigung = {
   eyebrow: "So fertigen wir",
   heading: "Nach Ihrer Zeichnung, Teil für Teil gleich",
   body:
-    "Wir arbeiten nach Ihrer Zeichnung oder Ihren CAD-Daten und prüfen vorab, ob sich alles fertigen lässt. Eine 3D-Planung zeigt Ihnen das Möbel, bevor das erste Teil geschnitten wird. Auf Wunsch bauen wir ein Mustermöbel, das Sie freigeben. Danach schneiden und bohren wir alle Teile auf Homag- und CNC-Technik, jedes nach dem freigegebenen Programm. Die PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig.",
+    "Wir arbeiten nach Ihrer Zeichnung oder Ihren CAD-Daten und prüfen vorab, ob sich alles fertigen lässt. Eine 3D-Planung zeigt Ihnen das Möbel samt Kabelwegen, Rechnerfächern, Wartungsklappen und Belüftung, bevor das erste Teil geschnitten wird. Auf Wunsch bauen wir ein Mustermöbel, das Sie freigeben. Danach schneiden und bohren wir alle Teile auf Homag- und CNC-Technik, jedes nach dem freigegebenen Programm. Die PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig.",
   image: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-bohranlage-detail.jpg",
   imageAlt: "Homag-Bohr- und Bearbeitungsanlage mit Plattenzuschnitten im Vordergrund in der Werkhalle",
 };
@@ -102,35 +104,35 @@ export const leitstellenSerie = {
   eyebrow: "Mehrere Arbeitsplätze",
   heading: "Ein Standard für alle Plätze",
   body:
-    "Eine Leitstelle besteht selten aus einem Tisch. Wir fertigen mehrere gleiche Arbeitsplätze und bauen auf Wunsch ein Mustermöbel zur Freigabe, damit jeder Platz dem anderen entspricht. Wird die Leitstelle später erweitert, lassen sich weitere Plätze nachfertigen, weil Programm und Muster bleiben. Wie wir gleiche Möbel in größerer Zahl fertigen, steht unter [Möbel in Serie](/serienmoebel/).",
+    "Eine Leitstelle besteht selten aus einem Tisch. Wir fertigen mehrere gleiche Arbeitsplätze und bauen auf Wunsch ein Mustermöbel zur Freigabe, damit jeder Platz dem anderen entspricht. Wird die Leitstelle später erweitert, fertigen wir weitere Plätze nach, weil Programm und Muster bleiben. Wie wir gleiche Möbel in größerer Zahl fertigen, steht unter [Möbel in Serie](/serienmoebel/).",
   stat: { value: "72.000+", label: "gefertigte Einzelteile" },
   image: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-cnc-absaugung-detail.jpg",
   imageAlt: "Homag-CNC-Bearbeitungszentrum mit Absaugschlauch und Bedienpult in der Werkhalle in Espelkamp",
 };
 
-export const leitstellenUmfang = {
-  eyebrow: "Klar abgegrenzt",
-  heading: "Was wir liefern und was nicht",
+export const leitstellenAlles = {
+  eyebrow: "Ein Ansprechpartner",
+  heading: "Alles aus einer Hand",
   intro:
-    "Leitstellenmöbel gehören zu unserer [Gewerbeeinrichtung](/gewerbe/). Wir sind Tischlerei und Fertiger, kein Anbieter für Leitstellentechnik.",
-  negative: {
-    title: "Nicht bei uns",
-    points: [
-      "Videowall und Großbildtechnik",
-      "Rechner, Umschaltsysteme und Installation",
-      "Stühle und Sitzmöbel",
-      "Akustikelemente und Beleuchtung",
-    ],
-  },
-  positive: {
-    title: "Von uns",
-    points: [
-      "Leitstellentische, Pulte und Schränke nach Ihrer Zeichnung",
-      "Aussparungen und Kabelwege nach Ihrem Plan",
-      "Mehrere gleiche Plätze, auf Wunsch mit Mustermöbel zur Freigabe",
-      "Lieferung bundesweit, Montage mit eigenem Team deutschlandweit auf Anfrage",
-    ],
-  },
+    "Leitstellenmöbel gehören zu unserer [Gewerbeeinrichtung](/gewerbe/). Andreas Fast begleitet Sie vom ersten Gespräch bis zur Montage.",
+  segments: [
+    {
+      title: "Planung im eigenen Haus",
+      body: "Unsere Planer planen Möbel und Technik gemeinsam, in 3D und nach Ihrem Grundriss.",
+    },
+    {
+      title: "Möbel aus eigener Fertigung",
+      body: "Leitstellentische, Pulte und Schränke fertigen wir in Espelkamp, auch höhenverstellbar.",
+    },
+    {
+      title: "Auf Wunsch mit Technik",
+      body: "Auf Wunsch liefern wir auch Technik, Stühle, Videowand und Akustik mit.",
+    },
+    {
+      title: "Montage und Umbau",
+      body: "Unser eigenes Team montiert, deutschlandweit auf Anfrage. Wenn nötig, auch außerhalb Ihrer Betriebszeiten, damit Ihre Leitstelle weiterläuft.",
+    },
+  ],
 };
 
 export const leitstellenAblauf = {
@@ -152,7 +154,7 @@ export const leitstellenAblauf = {
     {
       title: "Planung und Muster",
       description:
-        "Wir planen in 3D, klären Aussparungen mit Ihrem Technik-Lieferanten und bauen auf Wunsch ein Mustermöbel zur Freigabe.",
+        "Wir planen in 3D, legen Kabelwege, Rechnerfächer und Wartungszugang fest und bauen auf Wunsch ein Mustermöbel zur Freigabe.",
     },
     {
       title: "Fertigung in Espelkamp",
@@ -198,17 +200,22 @@ export const leitstellenFaq = {
     },
     {
       question: "Sind höhenverstellbare Leitstellentische möglich?",
-      answer: "Ob Ihre Tische höhenverstellbar sein sollen, klären wir in der Planung.",
+      answer: "Ja, wir fertigen auch höhenverstellbare Arbeitsplätze für den Wechsel zwischen Sitzen und Stehen.",
     },
     {
       question: "Wie werden Technik und Möbel zusammen geplant?",
       answer:
-        "Wir fertigen die Möbel mit Aussparungen und Kabelwegen nach Ihrem Plan. Maße und Lage stimmen wir mit Ihrem Technik-Lieferanten ab, bevor wir fertigen.",
+        "Wir planen Möbel und Technik gemeinsam. Kabelwege, Fächer für Rechner, Wartungsklappen und Belüftung gehören bei uns immer zur Planung. Auf Wunsch liefern wir auch Technik, Stühle, Videowand und Akustik mit, alles aus einer Hand und mit einem Ansprechpartner.",
     },
     {
-      question: "Können Sie weitere Arbeitsplätze später gleich nachfertigen?",
+      question: "Können Sie weitere Arbeitsplätze später nachfertigen?",
       answer:
-        "Ja, Nachbestellungen sind möglich, weil Programm und Muster bleiben. Weitere Plätze lassen sich nach demselben Programm fertigen.",
+        "Ja, auch später fertigen wir weitere Plätze oder Ersatzteile nach demselben Programm nach.",
+    },
+    {
+      question: "Können Sie im laufenden Betrieb umbauen?",
+      answer:
+        "Ja, wenn nötig montieren wir außerhalb Ihrer Betriebszeiten, damit Ihre Leitstelle weiterläuft.",
     },
     {
       question: "Liefern und montieren Sie bundesweit?",
