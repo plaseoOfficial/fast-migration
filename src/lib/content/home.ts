@@ -108,6 +108,10 @@ export const homeBereiche = {
           href: "/praxiseinrichtung/",
         },
       ],
+      more: {
+        text: "Auch für Leitstellen und Kontrollräume:",
+        links: [{ label: "Leitstellenmöbel", href: "/leitstellenmoebel/" }],
+      },
     },
   ],
   footnote: {
