@@ -99,6 +99,7 @@ Externe Links aus dem **Inhalt** (Content-Module) sind Belege, keine Deko. Socia
 | Gewerbe clusters | `/ablauf-massanfertigung/`, `/liefergebiet-montage/` | SOLL (trust) | pages built |
 | City pages (`/einsatzgebiete/*` or flat city×service) | relevant clusters | new silo | city pages migrated/built |
 | `/ratgeber/holzarten-materialien-moebel/` (Breadcrumb „Ratgeber", heute nur Text) | `/ratgeber/` | MUSS (parent, Breadcrumb + Up-Link) | Ratgeber-Index gebaut (geparkt bis 5+ Artikel live) |
+| `/ladenbau/ladeneinrichtung-planung/` (FAQ „Worauf kommt es je nach Branche an?“, Satz Mode) ↔ `/ladenbau/boutique-einrichten/` (Zonen-Block) + `/ladenbau/` (Kachel „Einzelhandel & Boutique“) | `/ladenbau/boutique-einrichten/`; Rücklink Anker „Ladeneinrichtung Schritt für Schritt planen“ | MUSS (Geschwister, Cluster-Map-Paar) + MUSS `own-cluster-spokes` | Boutique-Seite gebaut |
 | `/ratgeber/holzarten-materialien-moebel/` (FAQ „Holz im Bad", Anker „Badmöbel vom Tischler") | `/badmoebel-nach-mass/badmoebel-massivholz/` statt `/badmoebel-nach-mass/`; Rücklink Anker „Badmöbel aus Massivholz" | SOLL (Material-Deep-Dive) | Badmöbel-Massivholz-Seite gebaut |
 
 ### ⚠️ Interim retargets — REVERT when the real target page ships
@@ -113,6 +114,19 @@ When the proper target page is built, repoint them (and drop this row):
 | `moebel-nach-mass.ts` · `mnmWeitereCards` "Montage" | `/kontakt/` | `/liefergebiet-montage/` |
 
 ## Done (wired)
+
+### `/ladenbau/ladeneinrichtung-planung/` launch (2026-11-25)
+
+- **Erstes Kind unter `/ladenbau/`: Ratgeber (cluster-article)**, Route im Cluster laut keyword-map (wie `kueche-planen`);
+  `built: true` + `contentModule` + `ANCHORS`-Set; `sitemap.ts` (0.7). `mustExempt: ["/moebelplaner/"]` wie die übrigen
+  Gewerbe-Seiten (der Planer deckt keine Ladenmöbel ab, kundenwissen § Möbelplaner).
+- **Eingehend (3 Inhaltsquellen):** `/ladenbau/` (FAQ „Kann ich meine Ladeneinrichtung vorab selbst planen?“, exact
+  „Ladeneinrichtung planen“, MUSS `own-cluster-spokes`) · `/kontakt/` (FAQ „Was sollte ich für das Gespräch vorbereiten?“,
+  „Ratgeber zur Ladenplanung“, Budget 4/5) · `/moebelplaner/` (FAQ „Welche Möbel kann ich im Planer konfigurieren?“,
+  Satz zu Ladenmöbeln, Budget 5/5).
+- **Ausgehend (4 von 6):** ↑ `/ladenbau/` (Breadcrumb + Rollen-Tabelle + Werkstatt-Einschub) · `/kontakt/` (FAQ 1) ·
+  Belege Arbeitsstättenverordnung (gesetze-im-internet.de) + DIN 18040-1 (nullbarriere.de). Kein Geschwister gebaut ⇒
+  keine Geschwister-Pflicht. `/ladenbau/boutique-einrichten/` (Authoring 2026-11-25 rot) siehe Backlog.
 
 ### `/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/` launch (2026-11)
 

@@ -468,7 +468,7 @@ export const ladenFaq = {
     {
       question: "Kann ich meine Ladeneinrichtung vorab selbst planen?",
       answer:
-        "Zum Teil. Unser Möbelplaner ist für Schränke, Küche, Bad und Wohnmöbel gedacht. Dort skizzieren Sie erste Ideen und senden uns daraus eine Anfrage. Verkaufstheke und Wandregale samt Anordnung im Laden planen wir mit Ihnen nach dem kostenlosen Aufmaß vor Ort. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
+        "Zum Teil. In welcher Reihenfolge Sie die Entscheidungen für Ihren Laden treffen, zeigt der Ratgeber [Ladeneinrichtung planen](/ladenbau/ladeneinrichtung-planung/). Unser Möbelplaner ist für Schränke, Küche, Bad und Wohnmöbel gedacht. Dort skizzieren Sie erste Ideen und senden uns daraus eine Anfrage. Verkaufstheke und Wandregale samt Anordnung im Laden planen wir mit Ihnen nach dem kostenlosen Aufmaß vor Ort. Lieber direkt sprechen? Dann nehmen Sie unverbindlich Kontakt auf oder rufen Sie uns unter 05771 9138312 an.",
     },
   ],
 };

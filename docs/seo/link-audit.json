@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 45,
+    "pagesBuilt": 46,
     "pagesPlanned": 6,
-    "linksFound": 685,
+    "linksFound": 558,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
-      "Warnung": 1,
-      "Hinweis": 24
+      "Warnung": 0,
+      "Hinweis": 31
     }
   },
   "external": {
@@ -132,6 +132,24 @@
           "file": "src/lib/content/kuechenzeile-nach-mass.ts"
         }
       ],
+      "/ladenbau/ladeneinrichtung-planung/": [
+        {
+          "href": "https://nullbarriere.de/din18040-1-flaechen.htm",
+          "host": "nullbarriere.de",
+          "anchor": "DIN 18040-1",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/ladeneinrichtung-planung.ts"
+        },
+        {
+          "href": "https://www.gesetze-im-internet.de/arbst_ttv_2004/anhang.html",
+          "host": "gesetze-im-internet.de",
+          "anchor": "Arbeitsstättenverordnung",
+          "inline": true,
+          "allowed": true,
+          "file": "src/lib/content/ladeneinrichtung-planung.ts"
+        }
+      ],
       "/bueroeinrichtung/": [
         {
           "href": "https://publikationen.dguv.de/regelwerk/dguv-informationen/409/bildschirm-und-bueroarbeitsplaetze-leitfaden-fuer-die-gestaltung",
@@ -211,12 +229,6 @@
     }
   },
   "findings": [
-    {
-      "severity": "Warnung",
-      "check": "budget",
-      "message": "/kuechen-nach-mass/kueche-planen/: 7 Body-Links > Budget 6 (PageRank-Verdünnung).",
-      "page": "/kuechen-nach-mass/kueche-planen/"
-    },
     {
       "severity": "Hinweis",
       "check": "canonical",
@@ -308,6 +320,18 @@
     {
       "severity": "Hinweis",
       "check": "missing-soll",
+      "message": "/hauswirtschaftsraum/planen/: empfohlener SOLL-Link fehlt → `/moebelplaner/`. CTA",
+      "page": "/hauswirtschaftsraum/planen/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/kuechen-nach-mass/kueche-planen/: empfohlener SOLL-Link fehlt → `/moebelplaner/`. CTA",
+      "page": "/kuechen-nach-mass/kueche-planen/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
       "message": "/kuechen-nach-mass/kuechenzeile-nach-mass/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/kuechen-nach-mass/kuechenzeile-nach-mass/"
     },
@@ -316,6 +340,36 @@
       "check": "missing-soll",
       "message": "/kuechen-nach-mass/kueche-mit-dachschraege/: empfohlener SOLL-Link fehlt → `/referenzen/`. Social Proof",
       "page": "/kuechen-nach-mass/kueche-mit-dachschraege/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/ladenbau/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
+      "page": "/ladenbau/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/ladenbau/ladeneinrichtung-planung/: empfohlener SOLL-Link fehlt → `/moebelplaner/`. CTA",
+      "page": "/ladenbau/ladeneinrichtung-planung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/bueroeinrichtung/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
+      "page": "/bueroeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/gastronomieeinrichtung/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
+      "page": "/gastronomieeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/praxiseinrichtung/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
+      "page": "/praxiseinrichtung/"
     },
     {
       "severity": "Hinweis",
