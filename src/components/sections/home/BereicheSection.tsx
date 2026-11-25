@@ -22,6 +22,8 @@ export interface Bereich {
   body: string;
   cta: BereichLink;
   cards: BereichCard[];
+  /** Optionale Textzeile unter den Karten für weitere Leistungen ohne eigene Kachel. */
+  more?: { text: string; links: BereichLink[] };
 }
 
 export interface BereicheFootnote {
@@ -154,6 +156,22 @@ export function BereicheSection({
                   </Link>
                 ))}
               </div>
+              {group.more && (
+                <p className="fast-body mt-5" style={{ fontSize: 14, lineHeight: "1.7" }}>
+                  {group.more.text}{" "}
+                  {group.more.links.map((link, i) => (
+                    <span key={link.href}>
+                      {i > 0 && " · "}
+                      <Link
+                        href={link.href}
+                        className="font-medium text-[rgb(61,61,61)] underline underline-offset-4 transition-colors hover:text-[rgb(237,168,33)]"
+                      >
+                        {link.label}
+                      </Link>
+                    </span>
+                  ))}
+                </p>
+              )}
             </Reveal>
           ))}
         </div>
