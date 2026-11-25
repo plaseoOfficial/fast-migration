@@ -15,7 +15,7 @@
  * Informational/AEO mit weichem CTA, KEIN Pillar-Klon (keine Vergleichstabelle,
  * kein Kostenblock, kein Prozess Beratung→Montage) und keine Produkt-Tiefe.
  *
- * Faktentreue (FACTS.md + kundenwissen.md, Kit §8/§9b): keine Preise, keine
+ * Faktentreue (FACTS.md + kundenwissen.md, Kit §8/§9b): Preise nur als Planer-Beispiel (wie PLANER_BEISPIELE in anfrage.ts), keine
  * m²-Richtwerte, keine Fast-Maße, Normen nur als Name, Gewerke (Elektro,
  * Sanitär, Lüftung, Boden) nicht als Fast-Leistung, Geräte kundeneigen.
  * Brand voice: Sie-Anrede, konkret, keine em-dashes (BRAND_VOICE.md).
@@ -422,7 +422,7 @@ export const hwrPlanenFaq = {
     {
       question: "Welche Planungsentscheidungen treiben die Kosten?",
       answer:
-        "Die Kosten fallen in zwei Budgets an: die Gewerke am Bau und die Möbel. Am Bau zählt, ob die Leitungen im Rohbau richtig liegen. Dann muss später niemand aufstemmen. Bei den Möbeln entscheiden die Zahl der Wände, das Material und ob Geräte verbaut werden. Den Möbelpreis nennen wir nach dem kostenlosen Aufmaß, als individuelles Angebot.",
+        "Die Kosten fallen in zwei Budgets an: die Gewerke am Bau und die Möbel. Am Bau zählt, ob die Leitungen im Rohbau richtig liegen. Dann muss später niemand aufstemmen. Bei den Möbeln entscheiden die Zahl der Wände, das Material und ob Geräte verbaut werden. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Eine Schrankwand in Weiß, 2,80 m breit und 2 m hoch, großteils offen, kostet rund 2.800 Euro. Ein raumhoher Schrank, 3,50 m breit, mit Holzfronten und Innenausstattung liegt bei rund 4.100 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Den Möbelpreis nennen wir nach dem kostenlosen Aufmaß, als individuelles Angebot.",
     },
     {
       question: "Was sollte ich für Beratung und Aufmaß vorbereiten?",

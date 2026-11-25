@@ -9,9 +9,9 @@
  * each section carries one topic (ARCHITECTURE.md §1.1).
  *
  * Faktentreue (FACTS.md + kundenwissen.md, Kit §8/§9): Preise sind individuell.
- * Keine Euro-Zahl auf dieser Seite (Kit §9c Plan B, Code-Gate der Engine): das
- * freigegebene Rechenbeispiel aus dem Möbelplaner steht auf der Seite
- * „Einbauschrank Dachschräge" und wird nur verlinkt. Keine Wettbewerberzahlen,
+ * Euro-Zahlen nur als gerundete Beispiele aus dem eigenen Möbelplaner, freigegeben
+ * 2026-11-25 (FACTS.md, Ausnahme Planer; Werte wie PLANER_BEISPIELE in
+ * anfrage.ts). Keine Wettbewerberzahlen,
  * keine Preisrelationen, kein Stundensatz, keine Lieferzeit in Wochen.
  * § 35a EStG ohne Euro-Betrag, mit Beleg-Link (gesetze-im-internet.de).
  * Brand voice: Sie-Anrede, keine em-dashes (BRAND_VOICE.md).
@@ -38,7 +38,7 @@ export const ekHero = {
   imageAlt: "Weißer Einbauschrank nach Maß mit Holzdeckplatte, Doppeltür und Schubladenreihe unter einer Dachschräge",
   title: "Was kostet ein Einbauschrank nach Maß?",
   intro:
-    "Einen Pauschalpreis gibt es nicht. Jeder Einbauschrank nach Maß ist ein Unikat. Den Preis bestimmen Größe und Korpus, Fronten, Türsystem, Innenausstattung und die Einbausituation, dazu kommen Lieferung und Montage. Ein Rechenbeispiel aus unserem Möbelplaner steht auf der Seite zum Schrank unter der Dachschräge. Verbindlich wird Ihr Preis erst nach dem kostenlosen Aufmaß vor Ort.",
+    "Einen Pauschalpreis gibt es nicht. Jeder Einbauschrank nach Maß ist ein Unikat. Den Preis bestimmen Größe und Korpus, Fronten, Türsystem, Innenausstattung und die Einbausituation, dazu kommen Lieferung und Montage. Beispielpreise aus unserem Möbelplaner finden Sie weiter unten. Verbindlich wird Ihr Preis erst nach dem kostenlosen Aufmaß vor Ort.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -68,13 +68,45 @@ export const ekKostenbloecke = {
 export const ekLaufmeter = {
   heading: "Was kostet ein Einbauschrank pro Laufmeter?",
   intro:
-    "Einen seriösen Pauschalpreis pro Laufmeter gibt es nicht. Hinter einem Meter Einbauschrank steckt in jedem Angebot etwas anderes: andere Höhen, Tiefen, Türen, Innenleben und Fronten, mal mit, mal ohne Mehrwertsteuer, Lieferung, Montage und Aufmaß. Wie der Möbelplaner einen konkreten Schrank rechnet, zeigt das Beispiel auf der Seite [Schrank unter der Dachschräge](/einbauschraenke-nach-mass/einbauschrank-dachschraege/). Vergleichbar wird ein Laufmeterpreis erst, wenn diese fünf Punkte geklärt sind.",
+    "Einen seriösen Pauschalpreis pro Laufmeter gibt es nicht. Hinter einem Meter Einbauschrank steckt in jedem Angebot etwas anderes: andere Höhen, Tiefen, Türen, Innenleben und Fronten, mal mit, mal ohne Mehrwertsteuer, Lieferung, Montage und Aufmaß. Wie der Möbelplaner konkrete Schränke rechnet, zeigt die Tabelle darunter, Beispiele für die Schräge stehen auch beim [Schrank unter der Dachschräge](/einbauschraenke-nach-mass/einbauschrank-dachschraege/). Vergleichbar wird ein Laufmeterpreis erst, wenn diese fünf Punkte geklärt sind.",
   segments: [
     { title: "Höhe und Tiefe", body: "Ein Meter raumhoch ist ein anderer Schrank als ein Meter auf halber Höhe. Fragen Sie, für welche Höhe und Tiefe der Meterpreis gilt. Sonst vergleichen Sie unterschiedliche Plattenmengen." },
     { title: "Türsystem", body: "Drehtür, Schiebetür oder Schwebetür brauchen andere Beschläge und machen verschieden viel Arbeit. Ein Meterpreis ohne Angabe des Türsystems sagt kaum etwas darüber, was später vor Ihnen steht." },
     { title: "Innenleben und Front", body: "Ist der Meter leer gerechnet oder mit Kleiderstange, Fachböden und Auszügen? Und welche Front ist gemeint: Dekor, Lack oder Furnier? Beides gehört in die Angabe. Sonst hängt die Zahl in der Luft." },
     { title: "Mehrwertsteuer, Lieferung und Montage", body: "Steht der Preis brutto oder netto? Sind Lieferung und Montage enthalten oder kommen sie hinzu? Erst wenn beides geklärt ist, lassen sich zwei Meterpreise nebeneinanderlegen." },
     { title: "Aufmaß und Anpassung", body: "Gilt der Preis für Ihre Maße oder für ein Rastermaß? Ist das Einpassen an schiefe Wände, Schräge und Sockelleisten enthalten? Und wer misst? Wer selbst misst, trägt das Risiko für jeden Zentimeter." },
+  ],
+};
+
+/** SpecTable: Beispielpreise aus dem Möbelplaner (gerundet, nachgestellt 2026-11-25, wie PLANER_BEISPIELE in anfrage.ts). */
+export const ekPlanerBeispiele = {
+  heading: "Beispielpreise aus unserem Möbelplaner",
+  intro: "Zur Orientierung, gerechnet in unserem Möbelplaner (Stand November 2026): Schränke in Weiß mit Türen, ohne Griffe und ohne Innenausstattung. Beim Einbauschrank und unter der Schräge zählt die Breite der Nische. Die Werte sind gerundet und zeigen den Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Den genauen Preis nennen wir nach dem Aufmaß.",
+  firstColLabel: "Schrank",
+  columns: ["1 m breit", "2 m breit", "3 m breit"],
+  rows: [
+    { label: "Einbauschrank in der Nische, 2,50 m hoch", values: ["rund 1.100 €", "rund 1.500 €", "rund 2.400 €"] },
+    { label: "Frei stehender Schrank, 2,30 m hoch", values: ["rund 1.200 €", "rund 1.800 €", "rund 2.500 €"] },
+    { label: "Schrank unter der Dachschräge, Kniestock 86 cm, Raumhöhe 2,30 m", values: ["rund 1.200 €", "rund 1.600 €", "im Planer nicht mit Türen möglich"] },
+  ],
+};
+
+/** SpecTable: Dekor und Ausstattung am selben Schrank (Endpreis mit vier Türen, gerundet). */
+export const ekPlanerAusstattung = {
+  heading: "Was Dekor und Ausstattung ausmachen",
+  intro: "Am Beispiel eines frei stehenden Schranks, 2 m breit und 2,30 m hoch, mit vier Türen, gerechnet in unserem Möbelplaner (Stand November 2026). Gerundet, Möbelpreis inkl. MwSt.",
+  firstColLabel: "Ausführung",
+  columns: ["Preis oder Aufschlag"],
+  rows: [
+    { label: "Weiß", values: ["rund 1.800 €"] },
+    { label: "Hellgrau", values: ["rund 1.900 €"] },
+    { label: "Eiche-Dekor", values: ["rund 2.200 €"] },
+    { label: "Ohne Türen, offene Fächer", values: ["rund 1.350 €, die vier Türen machen rund 450 € aus"] },
+    { label: "Einlegeboden", values: ["rund 45 € je Stück"] },
+    { label: "Frontschubkasten", values: ["rund 60 € je Stück"] },
+    { label: "Kleiderstange", values: ["rund 15 € je Stück"] },
+    { label: "Innenschubkasten hinter einer Tür", values: ["rund 240 € je Stück"] },
+    { label: "Griffe für vier Türen", values: ["rund 20 bis 25 €, ohne Griff ist Standard"] },
   ],
 };
 
@@ -193,7 +225,7 @@ export const ekFaq = {
   heading: "Häufige Fragen zu den Kosten eines Einbauschranks",
   items: [
     { question: "Was kostet ein Einbauschrank mit Schiebetüren?", answer: "Auch für Schiebetüren gibt es keine Pauschale. Bei Schiebe- und Schwebetüren hängt der Aufwand am Laufsystem, an der Größe der Türflügel und an der Front, etwa Spiegel oder Glas. Die Breite bestimmt, wie viele Türen es werden. Vor dem Schrank brauchen Sie keinen Platz zum Aufschwenken. Im schmalen Zimmer ist genau das oft der Grund für die Schiebetür." },
-    { question: "Was kostet ein Einbauschrank in einer Nische?", answer: "In der Nische bestimmt vor allem das Einpassen den Aufwand. Bestandswände stehen selten im Lot, der Schrank soll aber von Wand zu Wand sauber anschließen. Dafür ist die Fläche oft kleiner als bei einem Schrank vor einer ganzen Wand. Einen Preis nennen wir nach dem Aufmaß. Wie wir in Nischen bauen, zeigt der [Einbauschrank für die Nische](/einbauschraenke-nach-mass/nischenschrank-nach-mass/)." },
+    { question: "Was kostet ein Einbauschrank in einer Nische?", answer: "In der Nische bestimmt vor allem das Einpassen den Aufwand. Bestandswände stehen selten im Lot, der Schrank soll aber von Wand zu Wand sauber anschließen. Dafür ist die Fläche oft kleiner als bei einem Schrank vor einer ganzen Wand. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Einbauschrank in Weiß mit Türen, 2,50 m hoch, kostet für eine 1 m breite Nische rund 1.100 Euro, für 2 m rund 1.500 Euro und für 3 m rund 2.400 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Den genauen Preis nennen wir nach dem Aufmaß. Wie wir in Nischen bauen, zeigt der [Einbauschrank für die Nische](/einbauschraenke-nach-mass/nischenschrank-nach-mass/)." },
     { question: "Was kostet eine begehbare Ankleide nach Maß?", answer: "Bei der Ankleide wird der Raum selbst zum Schrank. Die Kosten wachsen deshalb mit der Länge der bestückten Wände, mit dem Innenleben und mit Beleuchtung und Spiegel. Offene Regale haben weniger Frontfläche als geschlossene Schränke. Der Aufwand wandert damit von den Türen ins Innere. Eine Zahl gibt es erst, wenn der Raum vermessen ist. Formen und Raumbedarf zeigt der [Schrankraum nach Maß](/einbauschraenke-nach-mass/begehbarer-kleiderschrank-nach-mass/)." },
     { question: "Wann lohnt sich ein Einbauschrank nach Maß nicht?", answer: "Ein Schrank nach Maß lohnt sich nicht, wenn ein Standardmaß ohne Anpassung in den Raum passt oder eine Übergangslösung genügt, etwa für ein paar Jahre in einer Mietwohnung. Dann reicht ein Systemschrank. Maß lohnt sich bei Schräge, Nische, Treppe, raumhohen Schränken und schiefen Wänden, also überall dort, wo Standardmöbel Lücken lassen." },
     { question: "Lohnt es sich, einen Einbauschrank selbst zu bauen?", answer: "Selbst gebaut kostet ein Einbauschrank Material, Zuschnitt, Kantenbearbeitung, Beschläge, Werkzeug und viele Stunden eigene Zeit. Für einen schlichten Schrank an einer geraden Wand kann die Rechnung aufgehen, wenn Sie Werkstatt und Erfahrung mitbringen. Schwierig wird es bei Winkeln, Schrägen und schiefen Wänden. Jeder Fehlschnitt kostet eine neue Platte." },

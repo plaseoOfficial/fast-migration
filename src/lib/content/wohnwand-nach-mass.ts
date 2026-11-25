@@ -205,11 +205,11 @@ export const wwProcess = {
   ],
 };
 
-/** SpecTable (shared): Kostentreiber. KEINE Preise/€-Zahlen (Kit §8). */
+/** SpecTable (shared): Kostentreiber. Euro nur als Planer-Beispiel im Intro (wie anfrage.ts). */
 export const wwKosten = {
   heading: "Was kostet eine Wohnwand nach Maß?",
   intro:
-    "Was eine Wohnwand nach Maß kostet, ergibt sich aus fünf Faktoren: Größe, Anteil an Türen und Schubladen, Material, Ausstattung und Einbausituation. Einen Katalogpreis gibt es nicht, jede Planung rechnen wir einzeln. Ihr Angebot bekommen Sie nach dem kostenlosen Aufmaß, auf Wunsch auch mit Finanzierung.",
+    "Was eine Wohnwand nach Maß kostet, ergibt sich aus fünf Faktoren: Größe, Anteil an Türen und Schubladen, Material, Ausstattung und Einbausituation. Einen Katalogpreis gibt es nicht, jede Planung rechnen wir einzeln. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Eine offene Regalwand in Sandbeige, 3 m breit und 2,50 m hoch, kostet rund 2.200 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Ihr Angebot bekommen Sie nach dem kostenlosen Aufmaß, auf Wunsch auch mit Finanzierung.",
   firstColLabel: "Kostenfaktor",
   columns: ["Was ihn beeinflusst"],
   highlightColumn: 0,

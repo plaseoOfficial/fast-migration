@@ -9,6 +9,7 @@ import { MnmTypische } from "@/components/sections/privat/MnmTypische";
 import { MnmWarum } from "@/components/sections/privat/MnmWarum";
 import { MnmGeschichte } from "@/components/sections/privat/MnmGeschichte";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { planerPreis } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { TestimonialsSection } from "@/components/sections/shared/TestimonialsSection";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -123,6 +124,7 @@ export default function EinbauschraenkeNachMassPage() {
         variante="privat"
         seite="Einbauschrank"
         ueberschrift="Ihren Einbauschrank planen wir bei Ihnen vor Ort"
+        preisZeile={planerPreis("einbauschrank")}
       />
 
       <MnmProcess {...einbauProcess} />

@@ -10,7 +10,7 @@
  * `/wohnmoebel-nach-mass/einbauschrank-wohnzimmer-nach-mass/` leitet per 301
  * hierher (docs/seo/redirects.md Z. 32).
  *
- * Faktentreue (FACTS.md + kundenwissen.md, Kit §8/§9): keine Preise, keine
+ * Faktentreue (FACTS.md + kundenwissen.md, Kit §8/§9): Preise nur als Planer-Beispiel (wie PLANER_BEISPIELE in anfrage.ts), keine
  * Toleranzen oder Ausgleichsverfahren, keine Fast-Mindest- oder Maximalmaße,
  * keine Lieferzeit in Wochen, keine Heizkörperverkleidung, keine
  * Elektroarbeiten. Heizkörper- und Außenwand-Hinweise nur mit den
@@ -137,11 +137,11 @@ export const nsProcess = {
   ],
 };
 
-/** SpecTable: Kostenfaktoren ohne Euro (Kit §3 Aufgabe „Was kostet das?"). Intro trägt den Link zum Kosten-Ratgeber (Batch-Geschwister). */
+/** SpecTable: Kostenfaktoren, Euro nur als Planer-Beispiel im Intro (wie anfrage.ts). Intro trägt den Link zum Kosten-Ratgeber (Batch-Geschwister). */
 export const nsKosten = {
   heading: "Was kostet ein Nischenschrank?",
   intro:
-    "Jede Nische bekommt ihr eigenes Angebot. Der Preis entsteht aus Material und Aufwand, und die sechs Faktoren unten bestimmen, wie viel davon in Ihrem Schrank steckt. Verbindlich wird er nach dem kostenlosen Aufmaß. Wie sich die Kosten eines Einbauschranks grundsätzlich zusammensetzen, steht im [Ratgeber zu den Einbauschrank-Kosten](/einbauschraenke-nach-mass/einbauschrank-kosten/).",
+    "Jede Nische bekommt ihr eigenes Angebot. Der Preis entsteht aus Material und Aufwand, und die sechs Faktoren unten bestimmen, wie viel davon in Ihrem Schrank steckt. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Einbauschrank in Weiß mit Türen, 2,50 m hoch, kostet für eine 1 m breite Nische rund 1.100 Euro, für 2 m rund 1.500 Euro und für 3 m rund 2.400 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Verbindlich wird er nach dem kostenlosen Aufmaß. Wie sich die Kosten eines Einbauschranks grundsätzlich zusammensetzen, steht im [Ratgeber zu den Einbauschrank-Kosten](/einbauschraenke-nach-mass/einbauschrank-kosten/).",
   firstColLabel: "Kostenfaktor",
   columns: ["Was ihn beeinflusst"],
   highlightColumn: 0,

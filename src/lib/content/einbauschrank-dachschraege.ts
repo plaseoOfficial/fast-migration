@@ -244,7 +244,7 @@ export const dachVergleich = {
 export const dachPreisFaktoren = {
   heading: "Was den Preis Ihres Schranks bestimmt",
   intro:
-    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank ist ein Unikat. Als grobe Schätzung: Ein rund 1,80 Meter breiter Schrank mit weißen Türen liegt im [Möbelplaner](/moebelplaner/) bei etwa 1.400 bis 2.000 Euro, zuzüglich Lieferung und Montage. Was die [Kosten für einen Einbauschrank](/einbauschraenke-nach-mass/einbauschrank-kosten/) allgemein treibt, erklärt unser Ratgeber. Wo Ihr Preis genau landet, bestimmen diese Faktoren:",
+    "Einen Pauschalpreis gibt es nicht, denn jeder Drempelschrank ist ein Unikat. Was die [Kosten für einen Einbauschrank](/einbauschraenke-nach-mass/einbauschrank-kosten/) allgemein treibt, erklärt unser Ratgeber. Wo Ihr Preis genau landet, bestimmen diese Faktoren:",
   segments: [
     {
       title: "Größe",
@@ -325,7 +325,7 @@ export const dachFaq = {
     {
       question: "Was kostet ein Schrank für die Dachschräge?",
       answer:
-        "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Als grobe Schätzung aus unserem Online-Möbelplaner (Stand September 2026): Ein etwa 1,80 Meter breiter Schrank mit Türen in schlichtem Weiß kostet je nach Höhe der Schräge rund 1.400 bis 2.000 Euro, ein 2,80 Meter breiter rund 3.000 Euro. Das ist der reine Möbelpreis inklusive Mehrwertsteuer, Lieferung und Montage kommen hinzu. Holzdekore, Innenausstattung wie Auszüge und Beleuchtung sowie Beschläge wie Schiebetüren erhöhen den Preis. Ein steiler Winkel oder eine schiefe Wand ist aufwändiger als eine gerade, flache Schräge. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot ohne versteckte Kosten.",
+        "Einen Pauschalpreis gibt es nicht, denn jeder Schrank unter der Dachschräge ist ein Unikat. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Schrank unter der Dachschräge in Weiß mit Türen (Kniestock 86 cm, Raumhöhe 2,30 m) kostet für eine 1 m breite Nische rund 1.200 Euro und für 2 m rund 1.600 Euro. Unter einer flachen Schräge liegt ein 1,80 m breiter Schrank bei rund 1.400 Euro. Für eine 2,80 m breite Nische sind es je nach Höhe rund 2.600 bis 2.700 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Holzdekore, Innenausstattung wie Auszüge und Beleuchtung sowie Beschläge wie Schiebetüren erhöhen den Preis. Ein steiler Winkel oder eine schiefe Wand ist aufwändiger als eine gerade, flache Schräge. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erhalten Sie ein klares, individuelles Angebot ohne versteckte Kosten.",
     },
     {
       question: "Schiebetür oder Drehtür an der Dachschräge?",

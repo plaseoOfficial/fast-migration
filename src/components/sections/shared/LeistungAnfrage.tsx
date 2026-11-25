@@ -302,7 +302,7 @@ export function LeistungAnfrage({
             </p>
             {preisZeile ? (
               <p className="mt-3 text-[15px] leading-[1.7]" style={{ color: INK }}>
-                {preisZeile}
+                {renderInlineLinks(preisZeile)}
               </p>
             ) : null}
 

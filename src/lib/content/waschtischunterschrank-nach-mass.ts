@@ -284,7 +284,7 @@ export const wuFaq = {
     {
       question: "Was kostet ein Waschtischunterschrank nach Maß?",
       answer:
-        "Einen festen Preis nennen wir nicht, weil jeder Unterschrank anders ist. Den Ausschlag geben Breite und Korpusgröße, die Anzahl der Auszüge, Front und Oberfläche, das Griffsystem und die Montageart. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles Angebot.",
+        "Einen festen Preis nennen wir nicht, weil jeder Unterschrank anders ist. Den Ausschlag geben Breite und Korpusgröße, die Anzahl der Auszüge, Front und Oberfläche, das Griffsystem und die Montageart. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Waschtischunterschrank mit 1,60 m Breite kostet in Weiß mit hellem Holz rund 800 Euro, in Kristallweiß mit Türen und Auszügen rund 1.700 Euro. Mit 1 m Breite in Weiß und Eiche mit Auszügen sind es rund 1.000 Euro, mit 2,10 m Breite in gebleichter Eiche mit Schubkästen rund 2.800 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles Angebot.",
     },
     {
       question: "Wird der Unterschrank montiert geliefert und wer baut ihn ein?",

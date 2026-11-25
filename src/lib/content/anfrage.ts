@@ -26,8 +26,9 @@
  * Die drei Wege (Rückruf, Termin, Unterlagen) stehen in `src/lib/anfrage-mail.ts`
  * (`WEGE`), weil die Server-Action sie mitprüft.
  *
- * Nur Belegtes (FACTS.md): Lieferzeit, Preise und Garantien stehen hier bewusst
- * nicht. Rückmelde-Zeit und kostenloses Aufmaß (auch Gewerbe) sind bestätigt.
+ * Nur Belegtes (FACTS.md): Preise nur als Küchen-Orientierung und als Beispiele
+ * aus dem Möbelplaner, Lieferzeit nur für Planer-Möbel, keine Garantien.
+ * Rückmelde-Zeit und kostenloses Aufmaß (auch Gewerbe) sind bestätigt.
  */
 
 export type AnfrageVariante = "kueche" | "privat" | "gewerbe" | "serie" | "neutral";
@@ -72,9 +73,53 @@ export const NACH_DEM_ABSENDEN = `${ANSPRECHPARTNER.name} meldet sich ${RUECKMEL
 export const KUECHEN_PREISZEILE =
   "Eine Küchenzeile nach Maß liegt bei uns meist zwischen 8.000 und 15.000 Euro, eine Küche über Eck oder mit Insel zwischen 15.000 und 30.000 Euro. Darin sind Möbel, Arbeitsplatte und Montage enthalten, Geräte kommen dazu. Den genauen Preis nennen wir nach dem Aufmaß.";
 
-/** Eine Zeile unter dem Block, nur auf Privat-Seiten (Variante „privat“). */
+/**
+ * Beispielpreise aus dem öffentlichen Möbelplaner (FACTS.md, Ausnahme Planer).
+ * Gerundet, je Beispiel mit Maß und Ausführung, Möbelpreis inkl. MwSt., zzgl.
+ * Lieferung und Montage, kein Festpreis und kein „ab“. Jeder Wert ist im Planer
+ * von Hand nachgestellt. Der Planer ist live: Stand mitführen und halbjährlich
+ * prüfen. Die Preiszeile im Anfrageblock liest die Werte von hier. Die Kosten-Fragen
+ * und Kosten-Abschnitte der Inhaltsmodule tragen denselben Satz als festen Text
+ * (das Link-Audit importiert die Module ohne Auflösung von Geschwister-Importen).
+ * Bei einer Änderung alle Stellen mitziehen: `grep -rn "Stand November 2026" src/lib/content`.
+ * Für Küche gilt `KUECHEN_PREISZEILE`, für Gewerbe gibt es keine Zahl.
+ */
+export const PLANER_STAND = "November 2026";
+
+const PLANER_VORSPANN = `Zur Orientierung aus unserem Möbelplaner (Stand ${PLANER_STAND}): `;
+const PLANER_HINWEIS =
+  "Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Den genauen Preis nennen wir nach dem Aufmaß.";
+
+/** Nur die Beispielsätze, ohne Vorspann und Hinweis (für Fließtext und Tabellen). */
+export const PLANER_BEISPIELE = {
+  einbauschrank:
+    "Ein Einbauschrank in Weiß mit Türen, 2,50 m hoch, kostet für eine 1 m breite Nische rund 1.100 Euro, für 2 m rund 1.500 Euro und für 3 m rund 2.400 Euro.",
+  kleiderschrank:
+    "Ein frei stehender Kleiderschrank in Weiß mit Türen, 2,30 m hoch, kostet bei 1 m Breite rund 1.200 Euro, bei 2 m rund 1.800 Euro und bei 3 m rund 2.500 Euro. Mit 2 m Breite in Hellgrau sind es rund 1.900 Euro, in Eiche-Dekor rund 2.200 Euro.",
+  dachschraege:
+    "Ein Schrank unter der Dachschräge in Weiß mit Türen (Kniestock 86 cm, Raumhöhe 2,30 m) kostet für eine 1 m breite Nische rund 1.200 Euro und für 2 m rund 1.600 Euro. Unter einer flachen Schräge liegt ein 1,80 m breiter Schrank bei rund 1.400 Euro. Für eine 2,80 m breite Nische sind es je nach Höhe rund 2.600 bis 2.700 Euro.",
+  hauswirtschaftsraum:
+    "Eine Schrankwand in Weiß, 2,80 m breit und 2 m hoch, großteils offen, kostet rund 2.800 Euro. Ein raumhoher Schrank, 3,50 m breit, mit Holzfronten und Innenausstattung liegt bei rund 4.100 Euro.",
+  bad:
+    "Ein Waschtischunterschrank mit 1,60 m Breite kostet in Weiß mit hellem Holz rund 800 Euro, in Kristallweiß mit Türen und Auszügen rund 1.700 Euro. Mit 1 m Breite in Weiß und Eiche mit Auszügen sind es rund 1.000 Euro, mit 2,10 m Breite in gebleichter Eiche mit Schubkästen rund 2.800 Euro.",
+  wohnmoebel:
+    "Ein Lowboard, 1,60 m breit, mit Holzrahmen und weißen Fronten kostet rund 1.100 Euro, ein Sideboard, 2 m breit, in Eiche und Weiß rund 1.500 Euro und ein Lowboard, 2,45 m breit, in Eiche greige rund 2.400 Euro. Eine Regalwand mit 1,50 m Breite liegt bei rund 1.500 Euro, eine Regalwand in Eiche, 3 m breit und 2,40 m hoch, bei rund 3.600 Euro.",
+  regal:
+    "Eine offene Regalwand in Sandbeige, 3 m breit und 2,50 m hoch, kostet rund 2.200 Euro. Eine Regalwand mit 1,50 × 1,50 m und farbigen Türen liegt bei rund 1.500 Euro.",
+  regalwand:
+    "Eine offene Regalwand in Sandbeige, 3 m breit und 2,50 m hoch, kostet rund 2.200 Euro.",
+} as const;
+
+export type PlanerBeispiel = keyof typeof PLANER_BEISPIELE;
+
+/** Ganzer Satz mit Vorspann (Stand) und Hinweis: Preiszeile im Block und Kosten-Fragen. */
+export function planerPreis(art: PlanerBeispiel): string {
+  return `${PLANER_VORSPANN}${PLANER_BEISPIELE[art]} ${PLANER_HINWEIS}`;
+}
+
+/** Eine Zeile unter dem Block, nur auf Privat-Seiten (Variante „privat“). Lieferzeit gilt nur für Planer-Möbel. */
 export const MOEBELPLANER_ZEILE =
-  "Lieber erst selbst probieren? Im [Möbelplaner](/moebelplaner/) sehen Sie Maße, Dekore und einen Richtpreis.";
+  "Lieber erst selbst probieren? Im [Möbelplaner](/moebelplaner/) sehen Sie Maße, Dekore und einen Richtpreis. Möbel aus dem Planer liefern wir meist in 3 bis 5 Wochen.";
 
 /** Auswahlfeld: Beschriftung und Optionen (Optionstext = gesendeter Wert). */
 export interface AuswahlFeld {

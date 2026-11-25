@@ -6,6 +6,7 @@ import { SpecTable } from "@/components/sections/shared/SpecTable";
 import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { planerPreis } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -64,6 +65,7 @@ export default function HauswirtschaftsraumPlanenPage() {
         variante="privat"
         seite="Hauswirtschaftsraum planen"
         ueberschrift="Ihren Hauswirtschaftsraum planen wir bei Ihnen vor Ort"
+        preisZeile={planerPreis("hauswirtschaftsraum")}
       />
       <SpecTable {...hwrPlanenAnschluesse} />
       <SpecTable {...hwrPlanenRaumformen} />

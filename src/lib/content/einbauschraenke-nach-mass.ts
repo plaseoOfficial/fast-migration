@@ -154,7 +154,7 @@ export const einbauFaq = {
     {
       question: "Was kostet ein Einbauschrank nach Maß?",
       answer:
-        "Der Preis ist immer individuell. Er ergibt sich aus der Größe des Schranks, den Fronten, dem Material, der Innenausstattung wie Auszügen und Beleuchtung und der Einbausituation. Eine Dachschräge oder eine schiefe Nische ist aufwändiger als eine gerade Wand. Einen Pauschalpreis gibt es bei einer Maßanfertigung nicht. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erstellen wir Ihnen ein klares Angebot, ohne versteckte Kosten.",
+        "Der Preis ist immer individuell. Er ergibt sich aus der Größe des Schranks, den Fronten, dem Material, der Innenausstattung wie Auszügen und Beleuchtung und der Einbausituation. Eine Dachschräge oder eine schiefe Nische ist aufwändiger als eine gerade Wand. Einen Pauschalpreis gibt es bei einer Maßanfertigung nicht. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Einbauschrank in Weiß mit Türen, 2,50 m hoch, kostet für eine 1 m breite Nische rund 1.100 Euro, für 2 m rund 1.500 Euro und für 3 m rund 2.400 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Nach einem kurzen Gespräch und dem kostenlosen Aufmaß erstellen wir Ihnen ein klares Angebot, ohne versteckte Kosten.",
     },
     {
       question: "Lohnt sich ein Einbauschrank nach Maß gegenüber einem Standardschrank?",

@@ -6,6 +6,7 @@ import { SegmentCards } from "@/components/sections/shared/SegmentCards";
 import { UspHighlight } from "@/components/sections/shared/UspHighlight";
 import { ProcessSteps } from "@/components/sections/shared/ProcessSteps";
 import { LeistungAnfrage } from "@/components/sections/shared/LeistungAnfrage";
+import { planerPreis } from "@/lib/content/anfrage";
 import { AnfrageStreifen } from "@/components/sections/shared/AnfrageStreifen";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import {
@@ -13,6 +14,8 @@ import {
   ekHero,
   ekKostenbloecke,
   ekLaufmeter,
+  ekPlanerBeispiele,
+  ekPlanerAusstattung,
   ekSituationen,
   ekPlanerAngebot,
   ekVergleich,
@@ -63,8 +66,11 @@ export default function EinbauschrankKostenPage() {
         variante="privat"
         seite="Einbauschrank Kosten"
         ueberschrift="Ihren Einbauschrank planen wir bei Ihnen vor Ort"
+        preisZeile={planerPreis("einbauschrank")}
       />
       <SegmentCards {...ekLaufmeter} />
+      <SpecTable {...ekPlanerBeispiele} />
+      <SpecTable {...ekPlanerAusstattung} />
       <SegmentCards {...ekSituationen} />
       <SpecTable {...ekPlanerAngebot} />
       <SpecTable {...ekVergleich} />

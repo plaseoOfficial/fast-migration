@@ -233,7 +233,7 @@ export const regFaq = {
     {
       question: "Was kostet ein Regal nach Maß?",
       answer:
-        "Einen Pauschalpreis gibt es nicht, denn jedes Regal wird anders geplant. Es kommt vor allem auf Größe und Fläche, Material, Ausstattung, Oberfläche und die Einbausituation an. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles, unverbindliches Angebot.",
+        "Einen Pauschalpreis gibt es nicht, denn jedes Regal wird anders geplant. Es kommt vor allem auf Größe und Fläche, Material, Ausstattung, Oberfläche und die Einbausituation an. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Eine offene Regalwand in Sandbeige, 3 m breit und 2,50 m hoch, kostet rund 2.200 Euro. Eine Regalwand mit 1,50 × 1,50 m und farbigen Türen liegt bei rund 1.500 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Nach dem kostenlosen Aufmaß bekommen Sie ein individuelles, unverbindliches Angebot.",
     },
     {
       question: "Welche Maße sind bei einem Regal nach Maß möglich?",

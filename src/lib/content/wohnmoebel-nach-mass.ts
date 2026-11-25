@@ -304,7 +304,7 @@ export const wohnFaq = {
     {
       question: "Was kosten Wohnmöbel nach Maß (TV-Wand, Wohnwand, Sideboard, Regal)?",
       answer:
-        "Einen festen Preis oder eine Pauschale können wir seriös nicht nennen, weil jedes Möbel individuell geplant wird. Den Preis bestimmen vor allem der Umfang, das Material, die Ausstattung wie Auszüge oder Beleuchtung und die Einbausituation. Nach dem kostenlosen Aufmaß erhalten Sie ein verbindliches, individuelles Angebot.",
+        "Einen festen Preis oder eine Pauschale können wir seriös nicht nennen, weil jedes Möbel individuell geplant wird. Den Preis bestimmen vor allem der Umfang, das Material, die Ausstattung wie Auszüge oder Beleuchtung und die Einbausituation. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Ein Lowboard, 1,60 m breit, mit Holzrahmen und weißen Fronten kostet rund 1.100 Euro, ein Sideboard, 2 m breit, in Eiche und Weiß rund 1.500 Euro und ein Lowboard, 2,45 m breit, in Eiche greige rund 2.400 Euro. Eine Regalwand mit 1,50 m Breite liegt bei rund 1.500 Euro, eine Regalwand in Eiche, 3 m breit und 2,40 m hoch, bei rund 3.600 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Nach dem kostenlosen Aufmaß erhalten Sie ein verbindliches, individuelles Angebot.",
     },
     {
       question: "Lohnt sich Möbel nach Maß gegenüber Möbeln von der Stange?",

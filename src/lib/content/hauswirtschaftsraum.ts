@@ -368,7 +368,7 @@ export const hwrFaq = {
     {
       question: "Was kostet ein Hauswirtschaftsraum nach Maß?",
       answer:
-        "Einen festen Preis oder eine Pauschale können wir seriös nicht nennen, weil jeder Raum einzeln geplant wird. Den Preis bestimmen vor allem Raumgröße und Umfang, das Material, die Ausstattung wie Auszüge oder Trennsysteme und die Einbausituation. Nach dem kostenlosen Aufmaß erhalten Sie ein verbindliches, individuelles Angebot.",
+        "Einen festen Preis oder eine Pauschale können wir seriös nicht nennen, weil jeder Raum einzeln geplant wird. Den Preis bestimmen vor allem Raumgröße und Umfang, das Material, die Ausstattung wie Auszüge oder Trennsysteme und die Einbausituation. Zur Orientierung aus unserem Möbelplaner (Stand November 2026): Eine Schrankwand in Weiß, 2,80 m breit und 2 m hoch, großteils offen, kostet rund 2.800 Euro. Ein raumhoher Schrank, 3,50 m breit, mit Holzfronten und Innenausstattung liegt bei rund 4.100 Euro. Das ist der Möbelpreis inkl. MwSt., Lieferung und Montage kommen dazu. Nach dem kostenlosen Aufmaß erhalten Sie ein verbindliches, individuelles Angebot.",
     },
     {
       question: "Bauen Sie auch nur einzelne Schränke oder den kompletten Raum?",
