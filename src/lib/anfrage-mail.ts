@@ -124,6 +124,7 @@ const VARIANTEN_NAMEN: Record<string, string> = {
   privat: "Privat",
   gewerbe: "Gewerbe",
   serie: "Serie",
+  leitstelle: "Leitstelle",
   neutral: "Allgemein",
 };
 
@@ -131,6 +132,7 @@ const VARIANTEN_NAMEN: Record<string, string> = {
  * Betreff mit Größe vor dem Öffnen, z. B.
  * „Projektanfrage Praxis · Komplette Einrichtung · 33602“.
  * Privat-Seiten tragen statt der Objektart die Seite (z. B. das Möbel).
+ * Leitstelle: „Leitstellenanfrage · Leitstellenmöbel · 8 Arbeitsplätze“.
  */
 export function baueBetreff(e: AnfrageEingang): string {
   const kopf =
@@ -138,8 +140,15 @@ export function baueBetreff(e: AnfrageEingang): string {
       ? [e.zeile, e.objektart].filter(Boolean).join(" ")
       : e.variante === "privat"
         ? [e.zeile, e.seite].filter(Boolean).join(" · ")
-        : e.zeile || "Anfrage";
-  const teile = [kopf || "Anfrage", e.umfang || null, e.plz || null].filter(Boolean);
+        : e.variante === "leitstelle"
+          ? [e.zeile, e.seite].filter(Boolean).join(" · ")
+          : e.zeile || "Anfrage";
+  const teile = [
+    kopf || "Anfrage",
+    e.umfang || null,
+    e.variante === "leitstelle" && e.arbeitsplaetze ? `${e.arbeitsplaetze} Arbeitsplätze` : null,
+    e.plz || null,
+  ].filter(Boolean);
   return teile.join(" · ").slice(0, 180);
 }
 

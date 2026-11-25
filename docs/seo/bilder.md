@@ -56,6 +56,20 @@ und erzwingt genau die widersprüchlichen Alt-Texte aus Regel 1.
 Ausnahmen sind unkritisch und beabsichtigt: Team-, Beratungs- und Werkstattfotos auf
 `/ueber-uns/` plus einer Leistungsseite.
 
+**Werkstattmotive auf `/leitstellenmoebel/` (2026-11-25).** Die Leitstellen-Seite nutzt Werkstattmotive mit
+eigenem Zuschnitt, eigener Datei unter `public/images/leitstellenmoebel/` und eigenem Alt-Text, der den
+Ausschnitt benennt (Quelle jeweils ein Hallenfoto, das auch auf `/serienmoebel/` steht). Der Alt-Text
+beschreibt die Fertigung („Fertigungshalle“, „Werkhalle“, „Bearbeitungszentrum“). Der Werkstattfilm
+(`/videos/werkstatt-fast-systemmoebel-espelkamp.mp4`) läuft dort wie auf Über uns.
+
+| Datei | Ausschnitt aus | Alt-Text |
+|---|---|---|
+| `leitstellenmoebel-fertigung-bearbeitungszentrum-halle.jpg` | Hallenbild Bearbeitungszentrum, 2:1 zugeschnitten | Homag-Bearbeitungszentrum in der Fertigungshalle von Fast Systemmöbel in Espelkamp |
+| `leitstellenmoebel-fertigung-bearbeitungszentrum-detail.jpg` | dasselbe, Maschine im Detail | Bearbeitungszentrum von Homag mit Bedienmonitor und einliegender Platte in der Werkhalle |
+| `leitstellenmoebel-fertigung-bohranlage-detail.jpg` | Hochformat Bohr- und Bearbeitungsanlage | Homag-Bohr- und Bearbeitungsanlage mit Plattenzuschnitten im Vordergrund in der Werkhalle |
+| `leitstellenmoebel-fertigung-plattenzuschnitte-detail.jpg` | derselbe Bildunterteil | Zuschnitte in Holzdekor und Anthrazit auf Rollwagen und Tisch vor einer Homag-Anlage |
+| `leitstellenmoebel-fertigung-cnc-absaugung-detail.jpg` | CNC-Halle quer | Homag-CNC-Bearbeitungszentrum mit Absaugschlauch und Bedienpult in der Werkhalle in Espelkamp |
+
 ## 4. Sprechende Dateinamen
 
 ```

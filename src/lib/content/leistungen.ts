@@ -62,7 +62,7 @@ export const leistungenSections: Record<
     id: "gewerbe",
     heading: "Gewerbe",
     jumpLabel: "Gewerbe",
-    lead: "Für Büro, Laden, Gastronomie und Praxis sowie Möbel in Serie. Wie wir Projekte für Unternehmen planen und umsetzen, lesen Sie unter [Gewerbeeinrichtung](/gewerbe/).",
+    lead: "Für Büro, Laden, Gastronomie und Praxis, für Möbel in Serie und für [Leitstellenmöbel](/leitstellenmoebel/). Wie wir Projekte für Unternehmen planen und umsetzen, lesen Sie unter [Gewerbeeinrichtung](/gewerbe/).",
     hubCtaLabel: "Zur Übersicht Gewerbeeinrichtung",
   },
 };

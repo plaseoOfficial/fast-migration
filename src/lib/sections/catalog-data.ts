@@ -363,12 +363,11 @@ export const SECTION_META = [
     description:
       "Anfrageblock für Leistungsseiten in fünf Fassungen (kueche, privat, gewerbe, serie, neutral), Anker #anfrage. Links Andreas Fast (Foto, Funktion), Kernsatz, Telefon; rechts kurzes Formular (Name, Telefon, E-Mail, drei Wege mit vorgewähltem Rückruf, freiwillige Nachricht); Projektangaben und bis zu drei Dateien (Bilder werden im Browser verkleinert) liegen im aufklappbaren, freiwilligen Bereich. Alle Texte in src/lib/content/anfrage.ts. Nutzt die Server-Action des Kontaktformulars (Honeypot `firma`, Firmenname heißt `unternehmen`). Der Header-Button springt auf Seiten mit diesem Block per CSS (:has) zum Anker. Nicht mit dem Library-Demo-Formular KontaktPanel verwechseln.",
     propsSummary: [
-      { name: "variante", type: '"kueche" | "privat" | "gewerbe" | "serie" | "neutral"', required: true },
+      { name: "variante", type: '"kueche" | "privat" | "gewerbe" | "serie" | "leitstelle" | "neutral"', required: true },
       { name: "seite", type: "string", required: true },
       { name: "ueberschrift", type: "string", required: false },
       { name: "objektart", type: "string", required: false },
       { name: "preisZeile", type: "string", required: false },
-      { name: "leitstelle", type: "boolean", required: false },
     ],
 usedOn: ["/", "/kuechen-nach-mass", "/einbauschraenke-nach-mass/einbauschrank-dachschraege", "/praxiseinrichtung", "/ladenbau", "/serienmoebel"],
     screenshot: `${REF}/kontakt/band-0.jpg`,
@@ -381,7 +380,7 @@ usedOn: ["/", "/kuechen-nach-mass", "/einbauschraenke-nach-mass/einbauschrank-da
     category: "shared",
     description:
       "Kurzer Streifen am Seitenende vor den Fragen: eine Zeile Text und ein Link zum Anfrageblock (#anfrage). Ersetzt den zweiten Bild-Aufruf, enthält kein Formular. Texte je Fassung in src/lib/content/anfrage.ts.",
-    propsSummary: [{ name: "variante", type: '"kueche" | "privat" | "gewerbe" | "serie" | "neutral"', required: true }],
+    propsSummary: [{ name: "variante", type: '"kueche" | "privat" | "gewerbe" | "serie" | "leitstelle" | "neutral"', required: true }],
 usedOn: ["/", "/kuechen-nach-mass", "/einbauschraenke-nach-mass/einbauschrank-dachschraege", "/praxiseinrichtung", "/ladenbau", "/serienmoebel"],
     screenshot: `${REF}/moebel-nach-mass/02b-massmoebel.jpg`,
   },

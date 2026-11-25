@@ -27,6 +27,10 @@
   - **Zweites Arminia-Projekt: Loge im Stadion (Kunde bestätigt 2026-10-19, Fotos von Johann Fast).** Fast-Arbeit = **Theke/Tresen mit Unterschränken, Wandborde, Sitzbank**. Nicht als Fast-Leistung nennen: Geräte (Weinkühlschrank, Zapfanlage), Hocker, Stühle, Tische, Bildschirm, Lamellenwand, Heizkörperverkleidung, Bodenbelag. Keine Materialien, Maße, Jahreszahlen, kein Stadionname, keine Sponsor-Logos aus den Fotos. → gehört auf `/gastronomieeinrichtung/` + `/referenzen/`, **nicht** auf Küchen-Seiten (Logen-Theke ≠ Privatküche).
 - **Recht (Impressum/AGB/Datenschutz): alte Texte 1:1 übernehmen.**
 - ~~Montagegebiet: ~200 km um Espelkamp (2026-06-06)~~ → **überholt 2026-11-25: Montage deutschlandweit auf Anfrage** (siehe oben). Lieferung bundesweit.
+- **Leitstellenmöbel (2026-11-25):** Fast fertigt Leitstellenmöbel, nach Zeichnung, auch mehrere gleiche Arbeitsplätze.
+  - Bilder auf der Leitstellen-Seite sind Werkstattmotive.
+  - Keine Aussagen zu Normen, Zertifikaten, Garantie, Auftraggebern und Betriebsdauer ohne Beleg.
+  - Fremdleistungen (Technik, Stühle, Videowand, Akustik) liefert Fast nicht.
 - **Eigenes Montageteam: JA, bestätigt (2026-06-06)** → darf als feste Zusage formuliert werden.
 - **Aufmaß: kostenlos, bestätigt (2026-06-06)** → „kostenloses Aufmaß vor Ort" nutzbar.
 - **Preise: IMMER individuell (2026-06-06)** — Fast veröffentlicht keine Preise/Preisspannen. Preisfrage über Kostenfaktoren + individuelles Angebot beantworten, NIE mit erfundenen Zahlen.

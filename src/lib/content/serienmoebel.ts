@@ -116,7 +116,7 @@ export const serienTypische = {
     {
       title: "Sonderserien & Lohnfertigung",
       description:
-        "Sonderbauteile und Objektmöbel nach Ihrer Zeichnung oder CAD-Datei. Auch als Lohnfertigung für Tischlereien, denen für eine Serie Kapazität fehlt.",
+        "Sonderbauteile und Objektmöbel nach Ihrer Zeichnung oder CAD-Datei. Auch als Lohnfertigung für Tischlereien, denen für eine Serie Kapazität fehlt. Mehrere gleiche Arbeitsplätze für Leitstellen: [Leitstellenmöbel](/leitstellenmoebel/).",
     },
   ],
 };

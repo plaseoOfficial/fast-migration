@@ -84,6 +84,7 @@ export const NAV_ITEMS: NavItem[] = [
           { label: "Ladenbau nach Maß", href: "/ladenbau/" },
           { label: "Serienmöbel", href: "/serienmoebel/" },
           { label: "Praxiseinrichtung", href: "/praxiseinrichtung/" },
+          { label: "Leitstellenmöbel", href: "/leitstellenmoebel/" },
           { label: "Alle Leistungen ansehen →", href: "/leistungen/#gewerbe" },
         ],
       },

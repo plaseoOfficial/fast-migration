@@ -232,6 +232,14 @@ export const gewerbeClusterCards: ServiceCard[] = [
     href: "/serienmoebel/",
     moreLabel: "Serienmöbel",
   },
+  {
+    icon: "/images/2024/03/interior-design-white-icons-22.svg",
+    title: "Leitstellenmöbel nach Maß",
+    description:
+      "Möbel für Leitstellen, Leitstände und Kontrollräume nach Ihrer Zeichnung, auch mehrere gleiche Arbeitsplätze aus der eigenen Tischlerei.",
+    href: "/leitstellenmoebel/",
+    moreLabel: "Leitstellenmöbel",
+  },
 ];
 
 export const gewerbeTestimonialsHeading = "Was unsere Kunden dazu sagen";
