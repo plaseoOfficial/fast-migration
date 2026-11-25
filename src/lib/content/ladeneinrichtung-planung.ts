@@ -18,7 +18,7 @@
  * Brandschutz nur mit Wer/Wann, nie als Fast-Leistung; DIN-18040-1-Werte nur die
  * auf nullbarriere.de geprüften (Kit §7b); ArbStättV nur qualitativ; MixMarkt nur
  * im belegten Umfang; kein Musterversand, kein Showroom; Aufmaß kostenlos (auch
- * Gewerbe), Montage rund 200 km um Espelkamp, darüber nach Absprache.
+ * Gewerbe), Montage mit eigenem Team deutschlandweit auf Anfrage.
  * Brand voice: Sie-Anrede, konkret, keine em-dashes (BRAND_VOICE.md).
  *
  * Copy: Authoring-Engine 2026-11-25 (wf_4c6220ad-fb3), Chefredakteur pass=true,
@@ -363,7 +363,7 @@ export const ladenPlanungFaq = {
   items: [
     {
       question: "Brauche ich einen fertigen Grundriss, bevor ich einen Ladenbauer anfrage?",
-      answer: "Nein. Für das erste Gespräch reichen Fotos und grobe Maße. Was sonst noch hilft, steht in der Checkliste oben. Exakt gemessen wird beim Aufmaß vor Ort, danach planen wir in 3D. Dafür kommen wir im Umkreis von rund 200 km um Espelkamp zu Ihnen, weiter entfernte Projekte nach Absprache. Sie können direkt ein [kostenloses Aufmaß anfragen](/kontakt/).",
+      answer: "Nein. Für das erste Gespräch reichen Fotos und grobe Maße. Was sonst noch hilft, steht in der Checkliste oben. Exakt gemessen wird beim Aufmaß vor Ort, danach planen wir in 3D. Aufmaß und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen aufmessen, klären wir im ersten Gespräch. Sie können direkt ein [kostenloses Aufmaß anfragen](/kontakt/).",
     },
     {
       question: "Warum gibt es keinen verlässlichen Quadratmeterpreis für eine Ladeneinrichtung?",

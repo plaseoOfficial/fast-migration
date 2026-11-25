@@ -10,7 +10,8 @@
  *       <LeistungAnfrage variante="kueche" seite="Küchen nach Maß" />
  *       <LeistungAnfrage variante="privat" seite="Schrank für Dachschräge" ueberschrift="Ihren … planen wir bei Ihnen vor Ort" />
  *       <LeistungAnfrage variante="gewerbe" seite="Praxiseinrichtung" objektart="Praxis" />
- *       <LeistungAnfrage variante="serie" seite="Serienmöbel" /> (leitstelle für Leitstellenmöbel)
+ *       <LeistungAnfrage variante="serie" seite="Serienmöbel" />
+ *       <LeistungAnfrage variante="leitstelle" seite="Leitstellenmöbel" />
  *       <LeistungAnfrage variante="neutral" seite="Startseite" />
  *   - Streifen statt des zweiten Bild-Aufrufs, vor FaqSection:
  *       <AnfrageStreifen variante="…" />
@@ -31,7 +32,7 @@
  * Rückmelde-Zeit und kostenloses Aufmaß (auch Gewerbe) sind bestätigt.
  */
 
-export type AnfrageVariante = "kueche" | "privat" | "gewerbe" | "serie" | "neutral";
+export type AnfrageVariante = "kueche" | "privat" | "gewerbe" | "serie" | "leitstelle" | "neutral";
 
 /** Ansprechpartner für Anfragen. Funktion vom Kunden bestätigt (FACTS.md, 2026-11-24). */
 export const ANSPRECHPARTNER = {
@@ -133,8 +134,10 @@ export interface VariantenInhalt {
   ueberschrift: string;
   einleitung: string;
   button: string;
-  /** Feld zur Größe (im aufklappbaren Bereich, freiwillig). */
-  umfang: AuswahlFeld;
+  /** Feld zur Größe (im aufklappbaren Bereich, freiwillig). Fehlt bei „leitstelle“ (dort `arbeitsplaetze`). */
+  umfang?: AuswahlFeld;
+  /** Zahl der Arbeitsplätze statt Stückzahl (Leitstelle): Textfeld mit Hilfetext, freiwillig, kein Pflichtfeld. */
+  arbeitsplaetze?: { label: string; hinweis: string };
   /** Auswahl (Küche, Privat) oder Monat (Gewerbe, Serie); fehlt bei der neutralen Fassung. */
   zeitraum?: { typ: "auswahl"; label: string; optionen: readonly string[] } | { typ: "monat"; label: string };
   /** Weitere Felder je Variante. */
@@ -221,6 +224,20 @@ export const VARIANTEN: Record<AnfrageVariante, VariantenInhalt> = {
     laufzeit: { label: "Einmalig oder laufend", optionen: ["Einmalig", "Laufend"] },
     budgetStufen: [],
   },
+  leitstelle: {
+    zeile: "Leitstellenanfrage",
+    ueberschrift: "Zahl der Arbeitsplätze, Maße, Termin: mehr brauchen wir für den Anfang nicht",
+    einleitung:
+      "Senden Sie uns Grundriss oder Zeichnung und die Zahl der Arbeitsplätze. Wir prüfen Maße und Fertigbarkeit und melden uns mit einer Einschätzung.",
+    button: "Leitstelle anfragen",
+    arbeitsplaetze: {
+      label: "Zahl der Arbeitsplätze",
+      hinweis: "Wenn bekannt, nennen Sie in der Nachricht gern die Monitore je Platz und ob rund um die Uhr gearbeitet wird.",
+    },
+    zeitraum: { typ: "monat", label: "Wunschtermin (Monat)" },
+    unternehmen: true,
+    budgetStufen: [],
+  },
   neutral: {
     zeile: "Anfrage",
     ueberschrift: "Sprechen Sie mit uns über Ihr Vorhaben",
@@ -239,14 +256,12 @@ export const VARIANTEN: Record<AnfrageVariante, VariantenInhalt> = {
   },
 };
 
-/** Feld „Zahl der Arbeitsplätze“ (nur Serie, nur mit Schalter `leitstelle`). */
-export const ARBEITSPLAETZE_LABEL = "Zahl der Arbeitsplätze";
-
 /** Streifen am Seitenende: eine Zeile je Variante, Link zum Block. */
 export const STREIFEN: Record<AnfrageVariante, { text: string; linkText: string }> = {
   kueche: { text: "Sie möchten Ihre Küche persönlich besprechen?", linkText: "Zur Küchenberatung" },
   privat: { text: "Sie möchten Ihr Vorhaben persönlich besprechen?", linkText: "Zur Beratung" },
   gewerbe: { text: "Sie planen ein Projekt?", linkText: "Zur Projektanfrage" },
   serie: { text: "Sie planen eine Serie?", linkText: "Zur Serienanfrage" },
+  leitstelle: { text: "Sie planen eine Leitstelle?", linkText: "Zur Leitstellenanfrage" },
   neutral: { text: "Sie haben ein Vorhaben?", linkText: "Zur Anfrage" },
 };

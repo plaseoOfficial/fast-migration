@@ -1,15 +1,15 @@
 {
   "summary": {
-    "pagesBuilt": 46,
+    "pagesBuilt": 47,
     "pagesPlanned": 6,
-    "linksFound": 557,
+    "linksFound": 568,
     "partialExtraction": [
       "/"
     ],
     "counts": {
       "Fehler": 0,
       "Warnung": 0,
-      "Hinweis": 31
+      "Hinweis": 32
     }
   },
   "external": {
@@ -242,7 +242,7 @@
       "check": "canonical",
       "message": "`/leistungen/#gewerbe` → kanonisch `/leistungen/` (Trailing-Slash, vermeidet Redirect-Hop).",
       "file": "src/lib/nav.ts",
-      "line": 87,
+      "line": 88,
       "href": "/leistungen/#gewerbe"
     },
     {
@@ -364,6 +364,12 @@
       "check": "missing-soll",
       "message": "/gastronomieeinrichtung/: empfohlener SOLL-Link fehlt → `/kontakt/`. Conversion",
       "page": "/gastronomieeinrichtung/"
+    },
+    {
+      "severity": "Hinweis",
+      "check": "missing-soll",
+      "message": "/leitstellenmoebel/: empfohlener SOLL-Link fehlt → `/referenzen/`. Trust",
+      "page": "/leitstellenmoebel/"
     },
     {
       "severity": "Hinweis",

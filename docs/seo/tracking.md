@@ -74,11 +74,13 @@ ohne neue Ziele in Matomo anzulegen. Die Aktionsnamen der Ziele bleiben unverän
 
 | Was | Aktion (Matomo) | Name / Props |
 |---|---|---|
-| Formular abgeschickt | `Kontaktformular gesendet` (Ziel 1) | Name `Anfrageblock · <variante> · <Weg> · <mit Angaben | ohne Angaben> · <Seite>`; Props `variante` (kueche, privat, gewerbe, serie, neutral), `position` = `Anfrageblock`, `weg` (Rückruf, Termin vor Ort mit Aufmaß, Pläne oder Fotos schicken), `angaben` (`ja`, wenn im aufklappbaren Bereich „Mehr zum Projekt angeben“ etwas ausgefüllt oder eine Datei angehängt wurde, sonst `nein`; die vorbelegte Objektart zählt nicht), `seite` |
+| Formular abgeschickt | `Kontaktformular gesendet` (Ziel 1) | Name `Anfrageblock · <variante> · <Weg> · <mit Angaben | ohne Angaben> · <Seite>`; Props `variante` (kueche, privat, gewerbe, serie, leitstelle, neutral), `position` = `Anfrageblock`, `weg` (Rückruf, Termin vor Ort mit Aufmaß, Pläne oder Fotos schicken), `angaben` (`ja`, wenn im aufklappbaren Bereich „Mehr zum Projekt angeben“ etwas ausgefüllt oder eine Datei angehängt wurde, sonst `nein`; die vorbelegte Objektart zählt nicht), `seite` |
 | Aufklappen „Mehr zum Projekt angeben“ | keines | natives `<details>`, bewusst kein Button mit `aria-expanded`, sonst würde es als `FAQ geöffnet` gezählt |
 | Formularfehler | `Kontaktformular Fehler` | Name `Anfrageblock · <variante>`, Prop `grund` |
 | Telefonlink im Block | `Telefon geklickt` (Ziel 2) | delegierter Listener, Zone `Anfrageblock`, Name `Anfrageblock · <Seite>`. Kein eigener Handler im Block, ein Klick zählt genau einmal |
 | Sprung zum Block | `Anfrageblock angesteuert` | Zone `Header` (Button oben rechts) oder `Anfragestreifen`; Name `<Zone> · <Seite>` |
+
+**Variante `leitstelle`** (Seite `/leitstellenmoebel/`): eigene Zeile „Leitstellenanfrage“, Button „Leitstelle anfragen“, im aufklappbaren Bereich das Feld „Zahl der Arbeitsplätze“ statt „Stückzahl“ (Hilfetext zu Monitoren je Platz und Betrieb rund um die Uhr, kein Pflichtfeld, kein Budget). Matomo-Name `Anfrageblock · leitstelle · <Weg> · <mit Angaben | ohne Angaben> · /leitstellenmoebel/`, Fehler `Anfrageblock · leitstelle`, Prop `variante` = `leitstelle`. Der Mail-Betreff lautet „Leitstellenanfrage · Leitstellenmöbel · <Zahl> Arbeitsplätze“. Auswertung getrennt von der Serie über den Namensteil `Anfrageblock · leitstelle`. Die Serien-Seite bleibt bei `serie`.
 
 Der Header-Button „Kontakt“ springt auf Seiten mit Anfrageblock nach `#anfrage`
 statt nach `/kontakt/`. Er löst darum kein `Kontakt-CTA geklickt` mehr aus, sondern

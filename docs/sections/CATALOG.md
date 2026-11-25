@@ -140,12 +140,11 @@ _Prop-less (page-specific content)._
 
 | Prop | Type | Required |
 | --- | --- | --- |
-| `variante` | `"kueche" | "privat" | "gewerbe" | "serie" | "neutral"` | yes |
+| `variante` | `"kueche" | "privat" | "gewerbe" | "serie" | "leitstelle" | "neutral"` | yes |
 | `seite` | `string` | yes |
 | `ueberschrift` | `string` | no |
 | `objektart` | `string` | no |
 | `preisZeile` | `string` | no |
-| `leitstelle` | `boolean` | no |
 
 ![Shared — Leistung Anfrage (Anfrageblock mit Formular)](../design-references/kontakt/band-0.jpg)
 
@@ -159,7 +158,7 @@ _Prop-less (page-specific content)._
 
 | Prop | Type | Required |
 | --- | --- | --- |
-| `variante` | `"kueche" | "privat" | "gewerbe" | "serie" | "neutral"` | yes |
+| `variante` | `"kueche" | "privat" | "gewerbe" | "serie" | "leitstelle" | "neutral"` | yes |
 
 ![Shared — Anfrage-Streifen (Sprung zum Block)](../design-references/moebel-nach-mass/02b-massmoebel.jpg)
 

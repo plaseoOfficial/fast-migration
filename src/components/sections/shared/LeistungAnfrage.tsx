@@ -2,8 +2,8 @@
 
 /**
  * Anfrageblock für Leistungsseiten: links Ansprechpartner, Kernsatz und Telefon,
- * rechts das Formular. Fünf Fassungen über `variante` (Küche, Privat, Gewerbe,
- * Serie, neutral); alle Texte und Felder je Fassung stehen in
+ * rechts das Formular. Sechs Fassungen über `variante` (Küche, Privat, Gewerbe,
+ * Serie, Leitstelle, neutral); alle Texte und Felder je Fassung stehen in
  * `src/lib/content/anfrage.ts`, die Seite übergibt nur ihre Besonderheiten.
  * Anker `#anfrage`: Der Header-Button und der `AnfrageStreifen` springen hierher.
  *
@@ -63,7 +63,6 @@ import {
 } from "@/lib/anfrage-mail";
 import {
   ANSPRECHPARTNER,
-  ARBEITSPLAETZE_LABEL,
   DANKE,
   KERNSATZ,
   MOEBELPLANER_ZEILE,
@@ -99,8 +98,6 @@ export interface LeistungAnfrageProps {
   objektart?: string;
   /** Optionale Preiszeile unter der Einleitung. Bleibt leer, bis Fast einen Rahmen nennt. */
   preisZeile?: string;
-  /** Serie: zeigt zusätzlich das Feld „Zahl der Arbeitsplätze“ (Leitstellenmöbel). */
-  leitstelle?: boolean;
 }
 
 interface GewaehlteDatei {
@@ -139,7 +136,6 @@ export function LeistungAnfrage({
   ueberschrift,
   objektart,
   preisZeile,
-  leitstelle = false,
 }: LeistungAnfrageProps) {
   const inhalt = VARIANTEN[variante];
   const budgetSichtbar = inhalt.budgetStufen.length > 0;
@@ -488,6 +484,18 @@ export function LeistungAnfrage({
 
                     <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className={zeitraum ? "" : "sm:col-span-2"}>
+                        {inhalt.arbeitsplaetze ? (
+                          <>
+                            <label htmlFor="la-arbeitsplaetze" className={LABEL_CLASS} style={URBANIST}>
+                              {inhalt.arbeitsplaetze.label}
+                            </label>
+                            <input id="la-arbeitsplaetze" name="arbeitsplaetze" type="text" inputMode="numeric" maxLength={10} className={FIELD_CLASS} style={URBANIST} aria-describedby="la-arbeitsplaetze-hinweis" />
+                            <p id="la-arbeitsplaetze-hinweis" className={`mt-2 text-[14px] leading-[1.6] ${HINT_CLASS}`}>
+                              {inhalt.arbeitsplaetze.hinweis}
+                            </p>
+                          </>
+                        ) : inhalt.umfang ? (
+                          <>
                         <label htmlFor="la-umfang" className={LABEL_CLASS} style={URBANIST}>
                           {inhalt.umfang.label}
                         </label>
@@ -505,6 +513,8 @@ export function LeistungAnfrage({
                             </option>
                           ))}
                         </select>
+                          </>
+                        ) : null}
                       </div>
                       {zeitraum ? (
                         <div>
@@ -527,31 +537,21 @@ export function LeistungAnfrage({
                       ) : null}
                     </div>
 
-                    {inhalt.laufzeit || (variante === "serie" && leitstelle) ? (
+                    {inhalt.laufzeit ? (
                       <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        {inhalt.laufzeit ? (
-                          <div>
-                            <label htmlFor="la-laufzeit" className={LABEL_CLASS} style={URBANIST}>
-                              {inhalt.laufzeit.label}
-                            </label>
-                            <select id="la-laufzeit" name="laufzeit" defaultValue="" className={FIELD_CLASS} style={{ ...URBANIST, ...SELECT_STYLE }}>
-                              <option value="">Bitte wählen</option>
-                              {inhalt.laufzeit.optionen.map((o) => (
-                                <option key={o} value={o}>
-                                  {o}
-                                </option>
-                              ))}
-                            </select>
-                          </div>
-                        ) : null}
-                        {variante === "serie" && leitstelle ? (
-                          <div>
-                            <label htmlFor="la-arbeitsplaetze" className={LABEL_CLASS} style={URBANIST}>
-                              {ARBEITSPLAETZE_LABEL} <span className={HINT_CLASS}>(freiwillig)</span>
-                            </label>
-                            <input id="la-arbeitsplaetze" name="arbeitsplaetze" type="text" inputMode="numeric" className={FIELD_CLASS} style={URBANIST} />
-                          </div>
-                        ) : null}
+                        <div>
+                          <label htmlFor="la-laufzeit" className={LABEL_CLASS} style={URBANIST}>
+                            {inhalt.laufzeit.label}
+                          </label>
+                          <select id="la-laufzeit" name="laufzeit" defaultValue="" className={FIELD_CLASS} style={{ ...URBANIST, ...SELECT_STYLE }}>
+                            <option value="">Bitte wählen</option>
+                            {inhalt.laufzeit.optionen.map((o) => (
+                              <option key={o} value={o}>
+                                {o}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
                       </div>
                     ) : null}
 

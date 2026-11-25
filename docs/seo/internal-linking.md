@@ -28,6 +28,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
 │   ├─ /bueroeinrichtung/         Cluster-Pillar ✓ built (flat URL)
 │   ├─ /gastronomieeinrichtung/   Cluster-Pillar ✓ built (flat URL)
 │   ├─ /serienmoebel/             Cluster-Pillar ✓ built (flat URL)
+│   ├─ /leitstellenmoebel/        Cluster-Pillar ✓ built (flat URL, Silo „leitstellen“, ohne Möbelplaner)
 │   └─ /praxiseinrichtung/        Cluster-Pillar ✓ built (flat URL)
 ├─ /moebelplaner/         Conversion landing page
 ├─ /kontakt/              Conversion
@@ -55,7 +56,7 @@ Old `/leistungen/*` URLs are retired (308 redirects in `next.config.ts`).
   extrahierten ausgehenden Links) — der `hasModule`-Gate im Audit. Eine neue Seite
   ohne registriertes Content-Modul rutscht am Gate vorbei; darum wird jede Seite in
   `linking-rules.ts` mit ihrem `contentModule` registriert (siehe Page Recipe).
-- **Brücken (seit 2026-10-04).** Manche Themen gehören echt zu zwei Silos: Theke (Ladenbau ↔ Gastronomie), Empfang (Praxis ↔ Büro), Hotel/Objekt (Serienmöbel ↔ Gastronomie), Dachschräge (Dachschrägen-Schrank ↔ Küche mit Dachschräge), Küche/Vorrat (Küchen ↔ Hauswirtschaftsraum). Diese Paare stehen als `BRIDGES` in `linking-rules.ts` und dürfen sich in beide Richtungen verlinken, höchstens `MAX_BRIDGES_PER_PAGE` (2) je Seite. Jede andere Cross-Silo-Verbindung warnt weiter; eine neue Brücke braucht ein gemeinsames Thema, nicht nur Nachbarschaft.
+- **Brücken (seit 2026-10-04).** Manche Themen gehören echt zu zwei Silos: Theke (Ladenbau ↔ Gastronomie), Empfang (Praxis ↔ Büro), Hotel/Objekt (Serienmöbel ↔ Gastronomie), gleiche Arbeitsplätze in Serie (Serienmöbel ↔ Leitstellenmöbel), Dachschräge (Dachschrägen-Schrank ↔ Küche mit Dachschräge), Küche/Vorrat (Küchen ↔ Hauswirtschaftsraum). Diese Paare stehen als `BRIDGES` in `linking-rules.ts` und dürfen sich in beide Richtungen verlinken, höchstens `MAX_BRIDGES_PER_PAGE` (2) je Seite. Jede andere Cross-Silo-Verbindung warnt weiter; eine neue Brücke braucht ein gemeinsames Thema, nicht nur Nachbarschaft.
 - **Eingehende Links (seit 2026-10-04).** Jede Cluster-, Produkt- und Ratgeberseite wird von mindestens `MIN_INBOUND` (3) verschiedenen Seiten im Inhalt verlinkt; Menü, Footer und Breadcrumb zählen nicht. Neue Seite ⇒ 2–3 bestehende, thematisch passende Seiten verlinken sie (nicht nur Hub und Batch-Geschwister).
 - **Linktext und Ziel (seit 2026-10-04).** Der Linktext nennt das Ziel. „Mehr Infos hier“ und andere Anker nur aus Füllwörtern warnen (`GENERIC_WORDS`). Ein Anker, der zu einer gebauten Unterseite passt, aber auf deren Hub zeigt („Badmöbel nach Maß“ → `/moebel-nach-mass/`), warnt als `ziel-zu-allgemein`.
 - **Anchor diversity.** Vary anchors: exact ("Küchen nach Maß"), partial ("maßgefertigte Küche"), brand+keyword, descriptive, max ~10% generic. Exact-match anchor to one URL: max 2–3× per page.
@@ -212,7 +213,7 @@ When the proper target page is built, repoint them (and drop this row):
 - Bad-Kinder (Waschtisch, Unterschrank, Badschrank, Spiegelschrank, Massivholz, Kosten, kleine
   Bäder) sind **nicht gebaut** → keine Links (launch clean), siehe Backlog-Zeilen oben.
 
-- **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/ladenbau/`, `/serienmoebel/`. *(hub → clusters, silo distribution)*
+- **Gewerbe hub → clusters** (`/gewerbe/` MnmWeitereLeistungen cards): `/bueroeinrichtung/`, `/praxiseinrichtung/`, `/gastronomieeinrichtung/`, `/ladenbau/`, `/serienmoebel/`, `/leitstellenmoebel/`. *(hub → clusters, silo distribution)*
 - **Each Gewerbe cluster → `/gewerbe/`** (breadcrumb "Gewerbe" up-link, Ebene 1→0 within silo).
 - **Each Gewerbe cluster → `/moebelplaner/`** (IntroStats col3 CTA + MnmMoebelplaner CTA) **and `/kontakt/`** (IntroStats col1, both ExpandingImageCtas, FaqSection) — conversion targets.
 - `/kuechen-nach-mass/` → `/moebel-nach-mass/` (breadcrumb + MnmWeitereLeistungen card "Möbel nach Maß").
@@ -298,3 +299,11 @@ Gleichzeitig ersetzt die neue Karten-Array-Übergabe die Default-Cards (die fäl
 > Still open (need a render slot / target page, surfaced by `npm run audit:links`):
 > legal pages → `/`; the remaining `#` are genuinely backlog-blocked
 > (`/faq/`, `/ratgeber/`, city pages, cookie policy); broader canonical sweep of `nav.ts`.
+
+### `/leitstellenmoebel/` launch (2026-11-25)
+
+- **Knoten:** `cluster-pillar`, Silo `leitstellen`, Eltern `/gewerbe/`, `mustExempt: ["/moebelplaner/"]`. Anker in `ANCHORS` (exact „Leitstellenmöbel“).
+- **Eingehend:** `/gewerbe/` (Karte „Leitstellenmöbel nach Maß“ in `gewerbeWeitere`), `/serienmoebel/` (ein Satz in der Karte „Sonderserien & Lohnfertigung“, Brücke), `/leistungen/` (Liste aus `PAGES`, automatisch), Menü Gewerbe → Spalte „Speziallösungen“. Footer bleibt unverändert (nur Pillar-Hubs, Prinzip 4). Startseite: die vier Gewerbe-Kacheln bleiben, ein fünftes Feld würde das Vierer-Raster brechen, `/serienmoebel/` steht dort ebenfalls nicht.
+- **Brücke:** `/leitstellenmoebel/` ↔ `/serienmoebel/` (Thema „Gleiche Arbeitsplätze in Serie“). `/serienmoebel/` hat damit zwei Brücken (Grenze `MAX_BRIDGES_PER_PAGE`).
+- **Ausgehend:** `/gewerbe/` (Breadcrumb, Satz im Abschnitt „Was wir liefern und was nicht“), `/serienmoebel/` (Abschnitt „Ein Standard für alle Plätze“), `/kontakt/` (FAQ 1). Kein Link in die Büro-Seite (Fremd-Silo).
+- Auf `/serienmoebel/` kein Leitstellen-Wort außer diesem einen Satz; die Begriffe Leitstand, Leitwarte, Kontrollraum gehören der neuen Seite.
