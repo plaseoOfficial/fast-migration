@@ -2,6 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/Reveal";
 import { renderInlineLinks } from "@/lib/inline-links";
+import { LoopVideo, type LoopVideoSource } from "@/components/sections/_shared/LoopVideo";
 
 interface MnmProcessProps {
   heading: string;
@@ -9,9 +10,11 @@ interface MnmProcessProps {
   paragraphStrong: string;
   image: string;
   imageAlt: string;
+  /** Optional: stumme Schleife statt des Standbilds (Bild bleibt als Fallback ungenutzt). */
+  video?: LoopVideoSource;
 }
 
-export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAlt }: MnmProcessProps) {
+export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAlt, video }: MnmProcessProps) {
   return (
     <section
       className="py-12 lg:py-[84px]"
@@ -66,13 +69,17 @@ export function MnmProcess({ heading, paragraph, paragraphStrong, image, imageAl
 
           {/* Right column — image */}
           <Reveal className="w-full">
-            <Image
-              src={image}
-              alt={imageAlt}
-              width={560}
-              height={420}
-              className="w-full h-auto object-cover"
-            />
+            {video ? (
+              <LoopVideo {...video} />
+            ) : (
+              <Image
+                src={image}
+                alt={imageAlt}
+                width={560}
+                height={420}
+                className="w-full h-auto object-cover"
+              />
+            )}
           </Reveal>
         </div>
       </div>

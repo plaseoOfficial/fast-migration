@@ -3,12 +3,12 @@
  * for "Ladenbau nach Maß" (custom shop fitting). It reuses the same library
  * sections as the canonical Privat page (see docs/sections/CATALOG.md → the
  * "Privat Page Recipe"); only the copy is swapped for the commercial segment
- * (retail, gastronomy, services) within the ~200 km radius around Espelkamp.
+ * (retail, gastronomy, services) with assembly nationwide on request.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand"), not plaseo.
  * Facts are real: seit 1996 (Rahden-Tonnenheide; Fertigung Espelkamp ab 2001),
- * Meisterbetrieb (ohne Jahr), 1.000 m² Fertigung, Homag-Technologie, ~200 km
- * Montageradius, Lieferung deutschlandweit, PU-Kantenverleimung, Familie Fast
+ * Meisterbetrieb (ohne Jahr), 1.000 m² Fertigung, Homag-Technologie, Montage
+ * deutschlandweit auf Anfrage, Lieferung deutschlandweit, PU-Kantenverleimung, Familie Fast
  * (Johann Fast Gründer; Andreas & Peter Fast seit 2010, 2. Generation).
  *
  * SEO-Content-Lauf (leistung): Research-Kit docs/seo/research/ladenbau.kit.md,
@@ -50,7 +50,7 @@ export const ladenWeitereLeistungen: { cards: ServiceCard[] } = {
       icon: "/images/2024/03/interior-design-white-icons-09.svg",
       title: "Fertigung & Montage",
       description:
-        "Fertigung im eigenen Werk in Espelkamp auf Homag-Technologie, Montage durch unser eigenes Team im Umkreis von rund 200 km.",
+        "Fertigung im eigenen Werk in Espelkamp auf Homag-Technologie, Montage durch unser eigenes Team, deutschlandweit auf Anfrage.",
     },
     {
       icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -101,12 +101,12 @@ export const ladenIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Vom einzelnen Empfangstresen bis zur schlüsselfertigen Shopkonzeption bekommen Sie alles aus einer Hand: Beratung, 3D-Planung, Fertigung, baulichen Innenausbau, Beleuchtung und Montage. Sie sprechen dabei mit den Leuten, die Ihre Theke später auch bauen, und vermitteln nicht zwischen Händler, Hersteller und Monteur.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montageradius rund um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Wir fertigen in Espelkamp und montieren im Umkreis von rund 200 km, mit eigenem Montageteam und ohne Subunternehmer. Geliefert wird deutschlandweit. Auf Wunsch bauen wir außerhalb Ihrer Öffnungszeiten auf, dann bleibt Ihr Geschäft so kurz wie möglich zu.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Wir fertigen in Espelkamp und montieren mit eigenem Montageteam, deutschlandweit auf Anfrage und ohne Subunternehmer. Geliefert wird bundesweit. Auf Wunsch bauen wir außerhalb Ihrer Öffnungszeiten auf, dann bleibt Ihr Geschäft so kurz wie möglich zu.",
   col3CtaLabel: "Einsatzgebiet prüfen",
   col3CtaHref: "#anfrage",
 };
@@ -360,7 +360,7 @@ export const ladenKosten = {
     },
     {
       label: "Montageaufwand",
-      values: ["Anfahrt im rund 200-km-Radius, Montage im laufenden Betrieb"],
+      values: ["Eigenes Montageteam, deutschlandweit auf Anfrage, Montage im laufenden Betrieb"],
     },
   ],
 };
@@ -374,13 +374,13 @@ export const ladenGeschichte = {
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
     { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, wo wir heute auf über 1.000 m² mit Homag-Technologie und einem eingespielten Team arbeiten. Seit 2010 stehen mit Andreas und Peter Fast die Nachkommen des Gründers Johann Fast im Betrieb, ein echter Familienbetrieb in zweiter Generation. Über 72.000 gefertigte Einzelteile stehen für diese Erfahrung.",
     "Was im Möbelbau für Privatkunden entstand, zahlt sich im Gewerbe doppelt aus: Wir kennen die Anforderungen an Belastbarkeit, Termintreue und Funktion, die ein Ladenbau-Projekt mitbringt, und planen entsprechend praxisnah. Für die Umkleide- und Spielerkabine von Arminia Bielefeld haben wir den kompletten Innenausbau übernommen, ein Beleg dafür, dass unsere Einbauten auch hoher Beanspruchung standhalten.",
-    "Vom einzelnen Tresen über die Boutique bis zur Filialausstattung in Serie fertigen wir in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit. Sie möchten sich vorab unsere [Arbeiten ansehen](/referenzen/)? Dort finden Sie Projekte aus Einzelhandel und Gewerbe.",
+    "Vom einzelnen Tresen über die Boutique bis zur Filialausstattung in Serie fertigen wir in Espelkamp und liefern deutschlandweit. Auf Anfrage montiert unser eigenes Team überall in Deutschland. Sie möchten sich vorab unsere [Arbeiten ansehen](/referenzen/)? Dort finden Sie Projekte aus Einzelhandel und Gewerbe.",
   ],
 };
 
@@ -443,7 +443,7 @@ export const ladenFaq = {
     {
       question: "Wie weit liefern und montieren Sie?",
       answer:
-        "Geliefert wird deutschlandweit. Montiert wird im Umkreis von rund 200 km um Espelkamp, in Ostwestfalen-Lippe, Niedersachsen und der Region, mit eigenem Montageteam und ohne Subunternehmer. Ob Ihr Standort im Montagegebiet liegt, klären wir kurz im Erstgespräch.",
+        "Geliefert wird bundesweit. Montiert wird mit eigenem Montageteam und ohne Subunternehmer, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir kurz im Erstgespräch.",
     },
     {
       question: "Was unterscheidet Ladenbau nach Maß von Systemregalen aus dem Katalog?",

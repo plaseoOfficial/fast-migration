@@ -11,8 +11,8 @@
  * Voice = Fast Systemmöbel (sachlich-handwerklich, B2B, Sie-Form, keine
  * em-dashes). Fakten gegen docs/seo/brand/FACTS.md + kundenwissen.md geprüft:
  * Meisterbetrieb Espelkamp (ohne Jahr), >1.000 m² Fertigung, Homag/CNC,
- * kostenloses Aufmaß, eigenes Montageteam, 3D-Planung, Montage ~200 km um
- * Espelkamp, Lieferung bundesweit. KEINE Preise, keine Garantie-Zahl, keine
+ * kostenloses Aufmaß, eigenes Montageteam, 3D-Planung, Montage deutschlandweit auf Anfrage,
+ * Lieferung bundesweit. KEINE Preise, keine Garantie-Zahl, keine
  * Finanzierung (Gewerbe), keine ASR-Zertifizierung (Normen nur als Richtwert).
  *
  * Copy: Authoring-Engine (Writer/Humanizer/QC/Chefredakteur) aus dem Research-Kit
@@ -57,12 +57,12 @@ export const bpIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Beratung, Planung, Fertigung und Montage laufen bei uns zusammen. Sie sprechen mit den Leuten, die Ihr Büro planen und bauen, im Rahmen der [Büroeinrichtung](/bueroeinrichtung/) nach Maß.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Planungsradius rund um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Beratung, Aufmaß und Montage übernimmt unser eigenes Team im Umkreis von rund 200 km: Minden, Bielefeld, Osnabrück, ganz OWL. Die reine Lieferung geht darüber hinaus bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Beratung, Aufmaß und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Die reine Lieferung geht bundesweit.",
   col3CtaLabel: "Projekt anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -292,7 +292,7 @@ export const bpFaq = {
     {
       question: "In welchem Gebiet planen und montieren Sie?",
       answer:
-        "Beratung, Aufmaß und Montage übernehmen wir mit eigenem Team im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Bielefeld, Osnabrück und ganz OWL. Außerhalb dieses Radius liefern wir bundesweit.",
+        "Beratung, Aufmaß und Montage übernehmen wir mit eigenem Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Die reine Lieferung geht bundesweit.",
     },
   ],
 };
@@ -326,14 +326,7 @@ export const bpJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Büroplanung: Zonen und Bereiche",

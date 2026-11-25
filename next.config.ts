@@ -30,6 +30,11 @@ const nextConfig: NextConfig = {
         source: "/matomo/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
+      // Werkstatt-Videos: Dateinamen ohne Version, daher eine Woche statt immutable.
+      {
+        source: "/videos/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
     ];
   },
   // Flat-IA relaunch: the old /leistungen/* URLs are retired (308 permanent).

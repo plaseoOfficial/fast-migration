@@ -18,22 +18,24 @@
  * nicht gebaut (built:false) → im Verteiler nur beschreibend, ohne Links
  * (launch clean). Beim Bau der Spokes hier beidseitig nachverdrahten.
  *
- * Bilder: vorerst Platzhalter aus /images/einbauschraenke/ (Vorlage-Assets);
- * Alt-Texte beschreiben bereits die gewünschten HWR-Motive. Vor Launch gegen
- * echte HWR-/Waschküchen-Fotos tauschen (siehe REVIEW.md Bild-Vorschläge).
+ * Bilder: Hauswirtschaftsräume von Fast unter /images/hauswirtschaftsraum/,
+ * dazu Werkstatt, Montage, Beratung und Team.
+ * Jeder Alt-Text beschreibt, was auf dem Foto zu sehen ist (docs/seo/bilder.md).
  */
 
 const SITE = "https://www.fast-systemmoebel.de";
 const PATH = "/hauswirtschaftsraum/";
 const IMG = "/images/einbauschraenke";
+const HWR_IMG = "/images/hauswirtschaftsraum";
 
 export const hwrHero = {
-  bgImage: `${IMG}/einbauschrank-nach-mass-wand-zu-wand-grifflos.jpg`,
+  bgImage: `${HWR_IMG}/hauswirtschaftsraum-nach-mass-waschmaschine-trockner-fenster.jpg`,
   imageAlt:
-    "Hauswirtschaftsraum nach Maß von Fast Systemmöbel mit raumhohen Hochschränken, verbauter Waschmaschine und Trockner, Arbeitsfläche und Stauraum für Wäsche und Vorrat",
+    "Hauswirtschaftsraum nach Maß mit Waschmaschine und Trockner nebeneinander unter einer Arbeitsplatte, Ausgussbecken, Kleiderstange und großem Fenster",
   title: "Hauswirtschaftsraum einrichten nach Maß vom Tischler",
+  introScrim: true,
   intro:
-    "Einen Hauswirtschaftsraum einrichten heißt, Waschen, Vorräte, Putzmittel und Geräte an einem Ort zu bündeln, statt sie über Küche und Bad zu verteilen. Als Tischler-Meisterbetrieb in Espelkamp planen, fertigen und montieren wir Ihren HWR nach Maß, damit jede Wand und Nische arbeitet, statt Platz zu verschenken.",
+    "Einen Hauswirtschaftsraum einrichten heißt, Waschen, Vorräte, Putzmittel und Geräte an einem Ort zu bündeln, statt sie über Küche und Bad zu verteilen. Als Tischler-Meisterbetrieb in Espelkamp planen, fertigen und montieren wir Ihren HWR nach Maß, damit jede Wand und Nische arbeitet, statt Platz zu verschenken. Unser eigenes Team baut ihn bei Ihnen ein, deutschlandweit auf Anfrage.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -50,8 +52,8 @@ export const hwrIntroStats = {
   introBold: "Zentimeter",
   introAfter:
     " heraus, von Wand zu Wand und bis unter die Decke. So finden Waschmaschine, Vorrat, Putzmittel und Bügelwäsche ihren festen Platz, auch wenn der Raum klein oder schmal ist.",
-  bandImage: `${IMG}/kleiderschrank-nach-mass-weiss-offen.jpg`,
-  bandAlt: "Hauswirtschaftsraum nach Maß mit offenen und geschlossenen Fächern für Wäsche, Vorrat und Putzmittel",
+  bandImage: `${HWR_IMG}/hauswirtschaftsraum-unterschraenke-grifflos-led.jpg`,
+  bandAlt: "Grifflose weiße Unterschränke mit Holzarbeitsplatte und LED-Licht unter der Platte",
   col1Title: "Hauswirtschaftsraum planen",
   col1Body:
     "Wir planen Ihren HWR um Ihren Alltag herum, nicht um ein fertiges Raster. Welche Zonen Sie zum Waschen, für Vorrat und Reinigung brauchen, welche Fronten und Materialien dazu passen, entscheiden Sie.",
@@ -77,7 +79,7 @@ export const hwrProcessSteps = {
   eyebrow: "So läuft es ab",
   heading: "Ihr Hauswirtschaftsraum, alles aus einer Hand",
   image: `${IMG}/einbauschrank-montage-espelkamp.jpg`,
-  imageAlt: "Monteure von Fast Systemmöbel bauen die Hochschränke eines Hauswirtschaftsraums vor Ort ein",
+  imageAlt: "Zwei Monteure von Fast Systemmöbel bauen eine Lamellenwand aus Eiche neben einer Treppe ein",
   steps: [
     {
       title: "Beratung",
@@ -112,10 +114,10 @@ export const hwrProcessSteps = {
  * Karte im Text (Waschmaschinenschrank), ungebaute bleiben beschreibend ohne Link. */
 export const hwrTypische = {
   heading: "Möbel und Zonen für jeden Hauswirtschaftsraum",
-  image1: `${IMG}/begehbare-ankleide-nach-mass-eck.jpg`,
-  image1Alt: "Hauswirtschaftsraum nach Maß als raumhohe Hochschrankzeile mit offenen und geschlossenen Fächern",
-  image2: `${IMG}/einbauschrank-nach-mass-anthrazit-regalnische.jpg`,
-  image2Alt: "Regalsystem nach Maß, bündig in eine Nische im Hauswirtschaftsraum eingebaut",
+  image1: `${HWR_IMG}/hauswirtschaftsraum-waschturm-hochschrank-nach-mass.jpg`,
+  image1Alt: "Trockner über der Waschmaschine in einem offenen Hochschrank, daneben weiße Unter- und Hängeschränke mit Arbeitsplatte",
+  image2: `${HWR_IMG}/hauswirtschaftsraum-nach-mass-ausgussbecken-haengestangen.jpg`,
+  image2Alt: "Weißes Doppel-Ausgussbecken in Unterschränken mit Betonoptik-Platte, darüber Hängestangen, rechts raumhohe Hochschränke",
   row1: [
     {
       title: "HWR-Schrank nach Maß",
@@ -164,25 +166,13 @@ export const hwrWarum = {
   images: [
     {
       src: `${IMG}/einbauschrank-nach-mass-anthrazit-fenster.jpg`,
-      alt: "Hauswirtschaftsraum nach Maß mit Hochschränken, passgenau an eine Fensterwand angearbeitet",
+      alt: "Einbauschrank in Anthrazit mit beleuchteter Regalnische, passgenau neben einer Fenstertür eingebaut",
       width: 1280,
       height: 715,
     },
     {
-      src: `${IMG}/kleiderschrank-nach-mass-auszuege-spiegel.jpg`,
-      alt: "Vorratsschrank im Hauswirtschaftsraum mit ausgezogenen Schubladen und feiner Einteilung",
-      width: 1280,
-      height: 715,
-    },
-    {
-      src: `${IMG}/garderobe-flur-nach-mass-anthrazit.jpg`,
-      alt: "Raumhohe Hochschrankzeile im Hauswirtschaftsraum mit offenen und geschlossenen Fächern",
-      width: 1280,
-      height: 715,
-    },
-    {
-      src: `${IMG}/raumteiler-eichenlamellen-nach-mass.jpg`,
-      alt: "Arbeitsfläche mit Stauraum im Hauswirtschaftsraum nach Maß, kombiniert mit warmer Holzfront",
+      src: "/images/werkstatt/werkstatt-cnc-zuschnitt-espelkamp.jpg",
+      alt: "CNC-Anlage und Plattenzuschnitt in der Werkhalle von Fast Systemmöbel in Espelkamp",
       width: 1280,
       height: 715,
     },
@@ -241,7 +231,7 @@ export const hwrVergleich = {
     {
       label: "Montage",
       values: [
-        "eigenes Montageteam im Umkreis von rund 200 km um Espelkamp",
+        "eigenes Montageteam, deutschlandweit auf Anfrage",
         "externe Monteure, meist gegen Aufpreis",
         "Selbstaufbau nach Anleitung",
       ],
@@ -258,8 +248,8 @@ export const hwrUsp = {
   body:
     "Bei Fast Systemmöbel läuft alles unter einem Dach, deshalb geht an keiner Schnittstelle Verantwortung verloren. Wer Sie berät, plant auch Ihren Hauswirtschaftsraum, kennt das Aufmaß und weiß, wie die Möbel gefertigt und eingebaut werden. So entsteht Ihr HWR über einen festen Ansprechpartner, statt dass sich Händler, Werk und Monteur später den Schwarzen Peter zuschieben.",
   stat: { value: "1", label: "Ansprechpartner für Ihr Projekt" },
-  image: `${IMG}/sonderanfertigung-nach-mass-weinwand.jpg`,
-  imageAlt: "Individuell geplanter Hauswirtschaftsraum nach Maß als Beispiel für Lösungen aus einer Hand",
+  image: "/images/schrank-unter-treppe/beratung-planung-nach-mass.jpg",
+  imageAlt: "Zwei Personen im Beratungsgespräch an einem Holztisch, Blick auf Unterlagen",
 };
 
 /**
@@ -294,19 +284,18 @@ export const hwrKosten = {
 export const hwrGeschichte = {
   heading: "Möbelhandwerk aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
-  anchorImage: `${IMG}/einbauschrank-nach-mass-anthrazit-regalnische.jpg`,
-  anchorImageAlt:
-    "Hauswirtschaftsraum nach Maß mit Hochschränken und Regalnische, gefertigt von Fast Systemmöbel in Espelkamp",
+  anchorImage: "/images/schrank-unter-treppe/team-meisterbetrieb-fast-espelkamp.jpg",
+  anchorImageAlt: "Drei Männer aus dem Team von Fast Systemmöbel vor einem hellen Rolltor",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Klein angefangen hat Fast Systemmöbel 1996, in einer Garage in Rahden-Tonnenheide, als Ein-Mann-Betrieb. Der Umzug nach Espelkamp kam fünf Jahre später, und mit ihm wurde aus dem einzelnen Handwerker ein Familienbetrieb.",
     "Heute trägt die zweite Generation mit: Andreas und Peter Fast sind seit 2010 im Unternehmen und übernehmen Schritt für Schritt die Geschäftsführung. Hinter jedem Auftrag stehen mehr als 4.000 Projekte und über 1.000 m² eigene Fertigung, auch hinter Ihrem Hauswirtschaftsraum, wo Wasser und Feuchte der Verarbeitung mehr abverlangen als ein trockener Wohnraum.",
-    "Jedes Möbel entsteht bei uns im Haus, in Eigenregie in Espelkamp. Montiert wird im Umkreis von rund 200 km, in ganz OWL rund um Minden, Lübbecke, Osnabrück und Bielefeld. Freistehende HWR-Möbel liefern wir darüber hinaus deutschlandweit.",
+    "Jedes Möbel entsteht bei uns im Haus, in Eigenregie in Espelkamp. Eingebaut wird von unserem eigenen Team, deutschlandweit auf Anfrage. Freistehende HWR-Möbel liefern wir in ganz Deutschland.",
   ],
 };
 
@@ -378,7 +367,7 @@ export const hwrFaq = {
     {
       question: "Wie lange dauert es und wie weit fahren Sie zur Montage?",
       answer:
-        "Statt eine Wochenzahl zu versprechen, die dann nicht hält, nennen wir Ihnen nach Aufmaß und Freigabe einen verbindlichen Termin. Die Montage übernimmt unser eigenes Team im Umkreis von rund 200 km um Espelkamp, also in ganz OWL. Freistehende Möbel liefern wir zudem deutschlandweit.",
+        "Statt eine Wochenzahl zu versprechen, die dann nicht hält, nennen wir Ihnen nach Aufmaß und Freigabe einen verbindlichen Termin. Die Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Freistehende Möbel liefern wir in ganz Deutschland.",
     },
     {
       question: "Was bedeutet PU-Kantenverleimung und warum ist sie im HWR wichtig?",
@@ -418,14 +407,7 @@ export const hwrJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Hauswirtschaftsraum nach Maß",

@@ -20,13 +20,13 @@
 - **Ansprechpartner für Anfragen: Andreas Fast (Kunde über Max, 2026-11-24).** Er bearbeitet die Anfragen; sein Foto (`/images/2025/11/Freigestellt.png`) darf im Anfrageblock stehen. **Funktion: Tischlermeister sowie Vertrieb und Projektleitung** (beides zutreffend).
 - **Rückmeldung auf Anfragen: am selben oder nächsten Werktag** (2026-11-24) → darf zugesagt werden.
 - **Aufmaß kostenlos, auch bei Gewerbe-Projekten** und im ganzen Montagegebiet (2026-11-24).
-- **Montage bei Gewerbe-Projekten über 200 km hinaus: individuell nach Projekt** (2026-11-24) → nicht als feste Zusage formulieren, „nach Absprache“.
+- **Montage: deutschlandweit auf Anfrage, für Privat und Gewerbe (Kunde über Max, 2026-11-25).** Ersetzt den früheren „Montageradius ~200 km“. Wortlaut: „eigenes Montageteam, deutschlandweit auf Anfrage“; ob und wann eingebaut wird, klärt Fast im ersten Gespräch. Keine Kilometerzahl mehr nennen. Schema `areaServed` = Land DE.
 - **Lieferzeit „ca. 3–5 Wochen“** (Angabe aus dem Möbelplaner, 2026-11-24 bestätigt). Gilt für die Möbel des Planers. **Für Küchen und Gewerbe-Projekte nicht nennen**, dort weiter „Termin nach Aufmaß und Freigabe“.
 - **Materialien: Massivholz** + branchenübliche hochwertige Materialien (Orientierung am Wettbewerb) — sauber, aber ohne Über-Behauptung exotischer Hölzer.
 - **Arminia-Bielefeld-Referenz: vom Kunden freigegeben** → darf verwendet werden. **ABER (2026-06-06, Max): Fast hat für Arminia die *Kabine* (Spieler-/Umkleidekabine) gebaut, NICHT eine Küche** → Referenz gehört auf Gewerbe/Ladenbau/Über-uns, **nicht** auf die Küchen-Seite.
   - **Zweites Arminia-Projekt: Loge im Stadion (Kunde bestätigt 2026-10-19, Fotos von Johann Fast).** Fast-Arbeit = **Theke/Tresen mit Unterschränken, Wandborde, Sitzbank**. Nicht als Fast-Leistung nennen: Geräte (Weinkühlschrank, Zapfanlage), Hocker, Stühle, Tische, Bildschirm, Lamellenwand, Heizkörperverkleidung, Bodenbelag. Keine Materialien, Maße, Jahreszahlen, kein Stadionname, keine Sponsor-Logos aus den Fotos. → gehört auf `/gastronomieeinrichtung/` + `/referenzen/`, **nicht** auf Küchen-Seiten (Logen-Theke ≠ Privatküche).
 - **Recht (Impressum/AGB/Datenschutz): alte Texte 1:1 übernehmen.**
-- **Montagegebiet: ~200 km um Espelkamp — bestätigt (2026-06-06, Max)** → „200 km" ist jetzt **NUTZBAR** (war ❌). Lieferung darüber hinaus bundesweit.
+- ~~Montagegebiet: ~200 km um Espelkamp (2026-06-06)~~ → **überholt 2026-11-25: Montage deutschlandweit auf Anfrage** (siehe oben). Lieferung bundesweit.
 - **Eigenes Montageteam: JA, bestätigt (2026-06-06)** → darf als feste Zusage formuliert werden.
 - **Aufmaß: kostenlos, bestätigt (2026-06-06)** → „kostenloses Aufmaß vor Ort" nutzbar.
 - **Preise: IMMER individuell (2026-06-06)** — Fast veröffentlicht keine Preise/Preisspannen. Preisfrage über Kostenfaktoren + individuelles Angebot beantworten, NIE mit erfundenen Zahlen.
@@ -34,7 +34,7 @@
   - **Ausnahme Küche (Kunde bestätigt über Max, 2026-11-24):** Als Orientierung darf stehen: **Küchenzeile nach Maß meist 8.000 bis 15.000 €, Küche über Eck oder mit Insel meist 15.000 bis 30.000 €, jeweils mit Möbeln, Arbeitsplatte und Montage, Geräte kommen dazu.** Immer als „meist zwischen“, nie als Festpreis oder „ab“-Preis, immer mit dem Hinweis auf den genauen Preis nach dem Aufmaß. Wortlaut zentral in `src/lib/content/anfrage.ts` (`KUECHEN_PREISZEILE`). Für Gewerbe weiterhin keine Zahl.
 - **„Meisterbetrieb seit <Jahr>": Jahr ungeklärt** (evtl. 2011, Kunde unsicher 2026-06-06) → **KEIN Jahr nennen**, nur „Meisterbetrieb". Noch abzuklären.
 - **Küche-Service (2026-06-06):** Fast montiert Küchen **immer selbst** (eigenes Team) — **kein** Selbstmontage-Bausatz, **keine** reine Geräte-Lieferung bei Küchen. Differenzierung: alles individuell machbar („die verrücktesten Vorstellungen"), echte Sondermaße, **Wand-zu-Wand ohne Passleisten**, ungewöhnliche Materialkombinationen. **Finanzierung: ja im Privatbereich (z. B. Küche); NICHT für Gewerbe/Büro (2026-06-06).** Einzugsgebiet (Beispielorte): Espelkamp, Minden, Lübbecke, Osnabrück, Bielefeld, ganz OWL.
-- **Geo-Reichweite je Leistung (WICHTIG — immer pro Seite klären):** **Lieferung bundesweit** in ganz Deutschland; **montagepflichtige Leistungen** (z.B. Küche) sind ans **Montagegebiet ~200 km um Espelkamp** gebunden. Bei JEDER Leistungsseite explizit auflösen (montage-gebunden vs. Lieferung) — Standardantwort des Kunden: Montage/Einbau/Aufmaß nur im ~200-km-Radius, Lieferung deutschlandweit, gilt für alle Produktbereiche.
+- **Geo-Reichweite je Leistung (Stand 2026-11-25):** **Lieferung bundesweit**; Aufmaß, Einbau und Montage durch das eigene Team **deutschlandweit auf Anfrage**, für alle Produktbereiche. Kein Kilometer-Radius mehr nennen.
 - **Lieferzeit Küche: keine belegte Angabe** (Kunde gibt keine, 2026-06-06) → NICHT mit erfundener Wochenzahl behaupten; verbindlichen Termin „nach Aufmaß/Freigabe" formulieren.
 
 ### ⏳ Noch zu klären (Quelle prüfen, nicht raten)
@@ -46,7 +46,7 @@
 ## ⚠️ Wichtigste Korrekturen am bestehenden Klon-Content
 1. **Gründung: 1996 in einer Garage in RAHDEN-TONNENHEIDE — nicht Espelkamp.** Espelkamp kam erst 2001. Die Formulierung „1996, Garage in Espelkamp" ist **falsch**. *(Heutige Fertigung in Espelkamp = korrekt.)* ✅ /unternehmen.html
 2. **„Meisterbetrieb seit 2013" ist nicht belegt** — Chronik nennt Tischlermeister-Einstellung 2011, kein „seit"-Jahr. ❌
-3. **Noch verboten:** „bis zu 5 Jahre Garantie" (gibt es nicht) · „25+ Jahre" · „12+ Mitarbeiter" (real ~5–10) · erfundene Preise/Preisspannen → nicht belegt/falsch. ❌ *(Inzwischen vom Kunden bestätigt → nutzbar: „1.000 m² / Homag / 4.000 Projekte / 72K Einzelteile / ~200 km Montageradius / eigenes Montageteam / kostenloses Aufmaß".)*
+3. **Noch verboten:** „bis zu 5 Jahre Garantie" (gibt es nicht) · „25+ Jahre" · „12+ Mitarbeiter" (real ~5–10) · erfundene Preise/Preisspannen → nicht belegt/falsch. ❌ *(Inzwischen vom Kunden bestätigt → nutzbar: „1.000 m² / Homag / 4.000 Projekte / 72K Einzelteile / Montage deutschlandweit auf Anfrage / eigenes Montageteam / kostenloses Aufmaß".)*
 4. **Öffnungszeiten:** real **09:00–16:00 Uhr** (Termine nach Vereinbarung) — nicht „6–17 Uhr". ✅ /kontakt.html *(Wochentage ❓)*
 5. **Tonalität:** Die echte Site spricht **„Du"** (Klon wurde auf „Sie" umgeschrieben) → Stil-Entscheidung nötig, siehe [BRAND_VOICE](BRAND_VOICE.md). ✅
 
@@ -110,7 +110,7 @@ Beratung (vor Ort **oder** im Büro) → **kostenloses Aufmaß vor Ort** → tec
 
 ## Liefer-/Montagegebiet
 - Lieferung **bundesweit/national**. 🟢 wlw
-- **Montage im Umkreis von ~200 km um Espelkamp** ✅ (Kunde bestätigt 2026-06-06, Max); Lieferung darüber hinaus bundesweit.
+- **Montage deutschlandweit auf Anfrage** ✅ (Kunde über Max, 2026-11-25; vorher ~200 km). Lieferung bundesweit.
 
 ## Leistungsspektrum (✅ Startseite)
 Büroeinrichtungen · Ladenbau · **Küchen** · Badezimmer · **Einbauschränke** · Hauswirtschaftsraum · Wohnbereich.
@@ -134,7 +134,7 @@ Büroeinrichtungen · Ladenbau · **Küchen** · Badezimmer · **Einbauschränke
 - **Anrede im Original: „Du".**
 
 ## ❌ VERBOTENE CLAIMS (nicht schreiben, bis ✅/🟢 belegt)
-„1996 in Espelkamp" (war Rahden-Tonnenheide) · „Meisterbetrieb seit 2013"/„seit <Jahr>" · „bis zu 5 Jahre Garantie" (es gibt keine) · „25+ Jahre" · „12+ Mitarbeiter" (real ~5–10) · exotische Holzarten als Alleinstellung · FSC/PEFC namentlich · „regionale Holzherkunft" · **erfundene Preise/Preisspannen** (Preise immer individuell). *(NICHT mehr verboten — Kunde bestätigt 2026-06-06: „~200 km Montageradius", „eigenes Montageteam", „kostenloses Aufmaß".)*
+„1996 in Espelkamp" (war Rahden-Tonnenheide) · „Meisterbetrieb seit 2013"/„seit <Jahr>" · „bis zu 5 Jahre Garantie" (es gibt keine) · „25+ Jahre" · „12+ Mitarbeiter" (real ~5–10) · exotische Holzarten als Alleinstellung · FSC/PEFC namentlich · „regionale Holzherkunft" · **erfundene Preise/Preisspannen** (Preise immer individuell). *(NICHT mehr verboten — Kunde bestätigt 2026-06-06: „eigenes Montageteam" (Montage seit 2026-11-25 deutschlandweit auf Anfrage statt ~200 km), „kostenloses Aufmaß".)*
 
 ## ❓ Vom Kunden einzuholen (Intake)
 Hausnummer 32/32a · Öffnungszeiten-Wochentage · USt-IdNr/HRB · Garantiebedingungen · Fertigungsfläche & Maschinen · Projekt-/Kundenzahlen · „Meisterbetrieb seit"-Jahr · Andreas Fasts genauer Titel · Holzarten/Materialien · Arminia-Freigabe (Foto/Referenzschreiben) · Du vs. Sie für die neue Site.

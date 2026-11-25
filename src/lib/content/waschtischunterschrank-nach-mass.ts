@@ -62,12 +62,12 @@ export const wuIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Bauteil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Die passende [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) planen wir auf Wunsch gleich mit, Ihr Unterschrank gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/). Für Handtücher und Vorräte abseits des Beckens bauen wir den [Badschrank nach Maß](/badmoebel-nach-mass/badschrank-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL und darüber hinaus, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Möbel liefern wir auch bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß, Einbau und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Fertige Möbel liefern wir auch bundesweit.",
   col3CtaLabel: "Unterschrank online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -289,7 +289,7 @@ export const wuFaq = {
     {
       question: "Wird der Unterschrank montiert geliefert und wer baut ihn ein?",
       answer:
-        "Im Umkreis von rund 200 km um Espelkamp, durch ganz OWL und darüber hinaus etwa nach Minden, Lübbecke, Osnabrück und Bielefeld, baut unser eigenes Montageteam den Unterschrank vor Ort ein. Fertige, freistehende Möbel liefern wir zusätzlich bundesweit.",
+        "Unser eigenes Montageteam baut den Unterschrank vor Ort ein, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Fertige, freistehende Möbel liefern wir zusätzlich bundesweit.",
     },
   ],
 };
@@ -323,14 +323,7 @@ export const wuJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Waschtischunterschränke nach Maß",

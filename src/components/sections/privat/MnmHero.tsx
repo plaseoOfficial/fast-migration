@@ -22,12 +22,18 @@ interface MnmHeroProps {
    * the top. Pass a full CSS `background` value.
    */
   headerScrim?: string;
+  /**
+   * Zusätzliche Abdunklung unten rechts hinter dem Einstiegstext. Nur für helle
+   * Fotos setzen (z. B. weiße Fronten rechts im Bild). Ohne Angabe bleibt die
+   * Seite unverändert.
+   */
+  introScrim?: boolean;
 }
 
 const DEFAULT_HEADER_SCRIM =
   "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)";
 
-export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScrim }: MnmHeroProps) {
+export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScrim, introScrim }: MnmHeroProps) {
   return (
     <section
       className={cn(
@@ -56,6 +62,16 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
         }}
         aria-hidden="true"
       />
+      {introScrim && (
+        <div
+          className="absolute inset-0 z-[1]"
+          style={{
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 70%), linear-gradient(270deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 45%)",
+          }}
+          aria-hidden="true"
+        />
+      )}
 
       {/* Top scrim — keeps the transparent header (white logo + nav) readable
           over the photo. Tunable per page via the headerScrim prop. */}

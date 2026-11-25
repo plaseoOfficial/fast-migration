@@ -53,11 +53,11 @@ export const nsIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Als Meisterbetrieb in Familienhand fertigen wir in Espelkamp jedes Teil in der eigenen Werkstatt. Planung, Fertigung und Montage bleiben bei uns. Die Übersicht über [alle Einbauschränke nach Maß](/einbauschraenke-nach-mass/) zeigt weitere Bauformen.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
-  col3Body: "Zum Aufmaß und zum Einbau kommen wir im Umkreis von rund 200 km um Espelkamp zu Ihnen. Dazu gehört ganz OWL mit Minden, Lübbecke und Bielefeld, ebenso Osnabrück.",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
+  col3Body: "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Zum Aufmaß und zum Einbau kommen wir mit unserem eigenen Team zu Ihnen, deutschlandweit auf Anfrage.",
   col3CtaLabel: "Nischenschrank im Möbelplaner skizzieren",
   col3CtaHref: "/moebelplaner/",
 };
@@ -160,7 +160,7 @@ export const nsTestimonialsHeading = "Das sagen Kunden über unsere Arbeit";
 export const nsFaq = {
   heading: "Häufige Fragen zum Nischenschrank nach Maß",
   items: [
-    { question: "Muss ich meine Nische selbst ausmessen?", answer: "Nein. Für eine erste Skizze im Möbelplaner genügt Ihre grobe Messung. Verbindlich misst unser Team kostenlos bei Ihnen vor Ort, im Umkreis von rund 200 km um Espelkamp. In die Fertigung geht nur dieses Aufmaß, nicht Ihr Zollstock-Maß." },
+    { question: "Muss ich meine Nische selbst ausmessen?", answer: "Nein. Für eine erste Skizze im Möbelplaner genügt Ihre grobe Messung. Verbindlich misst unser Team kostenlos bei Ihnen vor Ort, deutschlandweit auf Anfrage. In die Fertigung geht nur dieses Aufmaß, nicht Ihr Zollstock-Maß." },
     {
       question: "Kann der Schrank in eine Nische mit Heizkörper?",
       answer:
@@ -204,11 +204,7 @@ export const nsJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-      geoRadius: "200000",
-    },
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Nischenschränke nach Maß",

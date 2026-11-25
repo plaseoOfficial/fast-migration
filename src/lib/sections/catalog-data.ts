@@ -669,6 +669,20 @@ usedOn: ["/", "/kuechen-nach-mass", "/einbauschraenke-nach-mass/einbauschrank-da
     screenshot: `${REF}/ueber-uns/02-timeline.jpeg`,
   },
   {
+    id: "ueber-werkstatt-film",
+    displayName: "Über uns — Werkstattfilm",
+    useCase: "video",
+    category: "ueber",
+    description: "Text column (eyebrow, heading, body, numbered chapter list) beside a short muted workshop film with native controls, poster and preload=none (no autoplay).",
+    isClient: false,
+    propsSummary: [
+      { name: "eyebrow / heading / body", type: "string", required: true },
+      { name: "chapters", type: "string[]", required: true },
+      { name: "video", type: "{ src, poster, label, width, height }", required: true },
+    ],
+    usedOn: ["/ueber-uns"],
+  },
+  {
     id: "ueber-wofuer",
     displayName: "Über uns — Wofür wir stehen",
     useCase: "feature-text",

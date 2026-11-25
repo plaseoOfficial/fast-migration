@@ -43,7 +43,8 @@ export type UseCase =
   | "nav-cards"
   | "case-study"
   | "contact-form"
-  | "location";
+  | "location"
+  | "video";
 
 export interface PropSummary {
   name: string;

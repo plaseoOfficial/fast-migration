@@ -35,7 +35,7 @@ export const referenzenHero = {
     "Maßanfertigung seit 1996, gebündelt an einem Ort: realisierte Küchen, Wohnmöbel, Büro- und Objekteinrichtungen aus unserer Werkstatt in Espelkamp. Jedes Projekt zeigt, wie aus Planung, Handwerk und Montage ein fertiger Raum wird.",
   // Collage of real, verified projects across both pillars (mobile 2×2, desktop strip).
   images: [
-    { src: "/images/2025/11/ThabarSebastian_kueche2.jpeg", alt: "Offene Küche nach Maß mit Kochinsel" },
+    { src: "/images/kuechen/kueche-nach-mass-u-form-weiss-eichen-esstisch.jpg", alt: "Weiße U-Küche nach Maß mit Esstisch aus Eiche und Glas-Pendelleuchten" },
     { src: "/images/2025/11/DSC_9814.jpg", alt: "Sideboard nach Maß in Betonoptik" },
     { src: "/images/2025/11/DSC_9747.jpg", alt: "Konferenzraum mit Tisch nach Maß" },
     { src: "/images/2025/11/DSC_0001.jpg", alt: "Büromöbel nach Maß am Fenster" },
@@ -60,7 +60,7 @@ export const referenzenGrid = {
   ] satisfies ReferenzCategory[],
   projects: [
     {
-      image: "/images/2025/11/ThabarSebastian_kueche2.jpeg",
+      image: "/images/kuechen/kueche-nach-mass-u-form-weiss-eichen-esstisch.jpg",
       imageAlt: "Offene Küche nach Maß mit Kochinsel und grifflosen Fronten",
       category: "Küchen nach Maß",
       categoryKey: "kuechen",
@@ -214,7 +214,7 @@ export const referenzenFaq = {
     {
       question: "Arbeiten Sie nur in Espelkamp?",
       answer:
-        "Wir fertigen in Espelkamp, montieren im Umkreis von rund 200 km und liefern deutschlandweit. Viele der gezeigten Projekte sind in Ostwestfalen und der weiteren Region entstanden.",
+        "Wir fertigen in Espelkamp und liefern deutschlandweit. Auf Anfrage montiert unser eigenes Team überall in Deutschland. Viele der gezeigten Projekte sind in Ostwestfalen und der weiteren Region entstanden.",
     },
     {
       question: "Wie komme ich von einer Referenz zu meinem eigenen Projekt?",

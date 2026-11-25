@@ -11,7 +11,7 @@
  * konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md and
  * docs/seo/brand/FACTS.md. Firmen-/Zahlenfakten (Telefon, Adresse, Geo, 1996,
  * 2. Generation Andreas & Peter Fast, 4.000+ Projekte, 1.000 m² Fertigung,
- * 200 km Montage-Radius, Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
+ * Montage deutschlandweit auf Anfrage, Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
  *
  * Bilder: echte Fast-Projektfotos unter /images/einbauschrank-dachschraege/
  * (1280×714, fürs Web komprimiert). Alt-Texte beschreiben das reale Motiv.
@@ -61,12 +61,12 @@ export const dachIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Ein Schrank für die Dachschräge lebt vom Winkel. Aus Kniestockhöhe und Schrägenwinkel fertigen wir Fronten und Korpus, die fugenlos an der Schräge anschließen. Keine Passleiste, kein verschenkter Zentimeter.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Wir nehmen die Schräge bei Ihnen vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Unter derselben Schräge planen wir auf Wunsch auch Ihre [Küche mit Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/).",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Die Schräge nehmen wir bei Ihnen vor Ort auf, die Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Unter derselben Schräge planen wir auf Wunsch auch Ihre [Küche mit Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/).",
   col3CtaLabel: "Dachschräge online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -298,12 +298,12 @@ export const dachGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, und aus dem Gründungsbetrieb von Johann Fast wurde ein Familienunternehmen.",
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Darunter unzählige Dachschrägen, Drempel und Altbau-Schrägen, die wir zu passgenauem Stauraum gemacht haben.",
-    "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, freistehende Schränke liefern wir deutschlandweit.",
+    "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, eingebaut von unserem eigenen Team, deutschlandweit auf Anfrage. Freistehende Schränke liefern wir bundesweit.",
   ],
 };
 
@@ -345,7 +345,7 @@ export const dachFaq = {
     {
       question: "Wie läuft das Aufmaß bei einer Schräge?",
       answer:
-        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Wir messen die Schräge an mehreren Punkten, erfassen die Kniestockhöhe und den Winkel und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Auch Anschlüsse an Fenster, Gauben und Balken nehmen wir auf. Aus diesen Werten planen wir Ihren Schrank so, dass er fugenlos an der Schräge anschließt. Eingebaut wird anschließend von unserem eigenen Team im Umkreis von rund 200 km um Espelkamp.",
+        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Wir messen die Schräge an mehreren Punkten, erfassen die Kniestockhöhe und den Winkel und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Auch Anschlüsse an Fenster, Gauben und Balken nehmen wir auf. Aus diesen Werten planen wir Ihren Schrank so, dass er fugenlos an der Schräge anschließt. Eingebaut wird anschließend von unserem eigenen Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
     },
   ],
 };
@@ -380,14 +380,7 @@ export const dachJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Schränke für Dachschrägen nach Maß",

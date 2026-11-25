@@ -8,7 +8,7 @@
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", Sie-Form).
  * Fakten (FACTS.md): Gründung 1996 in Rahden-Tonnenheide. Fertigung seit 2001 in
  * Espelkamp. Meisterbetrieb (KEIN Jahr), Familie Fast in 2. Generation (Andreas &
- * Peter seit 2010), über 1.000 m² Fertigung, CNC-Technik, ~200 km Montageradius,
+ * Peter seit 2010), über 1.000 m² Fertigung, CNC-Technik, Montage deutschlandweit auf Anfrage,
  * Lieferung darüber hinaus bundesweit. Discovery (2026-06-08): Segmente gleichgewichtig;
  * Hygiene NUR über Material/Verarbeitung (fugenarm, wischdesinfektionsbeständig,
  * PU-Kante), KEIN RKI-/Norm-Zertifikat; Leistung = NUR Möbel + präzise Aussparungen
@@ -45,12 +45,12 @@ export const praxisIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Vom einzelnen Anmeldetresen bis zur kompletten Praxis bekommen Sie alles aus einer Hand: Beratung, Aufmaß, 3D-Planung, Fertigung und Montage, ohne Subunternehmer.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montageradius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Komplette Praxen mit Möbeln und Montage realisieren wir im Umkreis von rund 200 km, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Einzelne Möbel liefern wir bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Komplette Praxen mit Möbeln und Montage realisieren wir deutschlandweit auf Anfrage. Einzelne Möbel liefern wir bundesweit.",
   col3CtaLabel: "Projekt anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -228,7 +228,7 @@ export const praxisGeschichte = {
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
     { value: "4.000+", label: "Projekte gefertigt" },
   ],
   paragraphs: [
@@ -315,7 +315,7 @@ export const praxisFaq = {
     {
       question: "In welchem Gebiet liefern und montieren Sie?",
       answer:
-        "Komplette Praxen mit Möbeln und Montage realisieren wir im Umkreis von rund 200 km um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Einzelne Möbel liefern wir darüber hinaus bundesweit; an die Montage durch unser Team ist der Radius gebunden.",
+        "Komplette Praxen mit Möbeln und Montage realisieren wir mit unserem eigenen Team, deutschlandweit auf Anfrage. Einzelne Möbel liefern wir auch bundesweit. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
     },
   ],
 };

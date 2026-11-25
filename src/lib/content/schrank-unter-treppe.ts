@@ -12,7 +12,7 @@
  * belegt, keine em-dashes). Siehe docs/seo/brand/BRAND_VOICE.md und
  * docs/seo/brand/FACTS.md. Firmen-/Zahlenfakten (Telefon, Adresse, Geo, 1996,
  * 2. Generation Andreas & Peter Fast, 4.000+ Projekte, 1.000 m² Fertigung,
- * 200 km Montage-Radius, Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
+ * Montage deutschlandweit auf Anfrage, Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
  *
  * Bilder: echte Fast-Projektfotos unter /images/schrank-unter-treppe/
  * (1600×893, fürs Web komprimiert). Alt-Texte beschreiben das reale Motiv.
@@ -56,12 +56,12 @@ export const suIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Ein Schrank unter der Treppe lebt vom Verlauf der Stufen. Wir messen die Treppe an mehreren Punkten, erfassen jede Stufenhöhe und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Aus diesen Werten fertigen wir Fronten und Korpus so, dass der Treppenschrank fugenlos an der Unterseite der Treppe anschließt. Kein toter Winkel, keine Passleiste, kein verschenkter Zentimeter.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Wir kommen zu Ihnen und nehmen die Treppe vor Ort auf, in ganz OWL und im Umkreis von rund 200 km um Espelkamp, zum Beispiel in Minden, Lübbecke, Osnabrück und Bielefeld. Treppen sind für uns Alltag, ob gerade oder gewendelt, im Neubau, im Altbau oder im offenen Wohnraum.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Wir kommen zu Ihnen und nehmen die Treppe vor Ort auf, deutschlandweit auf Anfrage. Treppen sind für uns Alltag, ob gerade oder gewendelt, im Neubau, im Altbau oder im offenen Wohnraum.",
   col3CtaLabel: "Treppenschrank online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -159,12 +159,12 @@ export const suGeschichte = {
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, und aus dem Gründungsbetrieb von Johann Fast wurde ein Familienunternehmen.",
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Darunter unzählige Treppen, Stufen und verwinkelte Ecken, die wir zu passgenauem Stauraum gemacht haben.",
-    "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, freistehende Schränke liefern wir deutschlandweit.",
+    "Jeder Schrank entsteht bei uns im Haus. Gefertigt in Espelkamp, eingebaut von unserem eigenen Team, deutschlandweit auf Anfrage. Freistehende Schränke liefern wir bundesweit.",
   ],
 };
 
@@ -206,7 +206,7 @@ export const suFaq = {
     {
       question: "Wie läuft das Aufmaß bei einer Treppe?",
       answer:
-        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Wir messen die Treppe an mehreren Punkten, erfassen jede Stufenhöhe und den Verlauf der Unterseite und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Auch Anschlüsse an Wand, Geländer und Boden nehmen wir auf. Aus diesen Werten planen wir Ihren Schrank so, dass er fugenlos unter der Treppe anschließt. Eingebaut wird anschließend von unserem eigenen Team im Umkreis von rund 200 km um Espelkamp.",
+        "Das Aufmaß ist kostenlos und findet bei Ihnen vor Ort statt. Wir messen die Treppe an mehreren Punkten, erfassen jede Stufenhöhe und den Verlauf der Unterseite und prüfen, ob die Ecken wirklich im rechten Winkel stehen. Auch Anschlüsse an Wand, Geländer und Boden nehmen wir auf. Aus diesen Werten planen wir Ihren Schrank so, dass er fugenlos unter der Treppe anschließt. Eingebaut wird anschließend von unserem eigenen Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
     },
   ],
 };
@@ -241,14 +241,7 @@ export const suJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Schränke unter der Treppe nach Maß",

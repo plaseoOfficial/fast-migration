@@ -30,7 +30,7 @@ import { stripJsonLdLinks } from "@/lib/seo/jsonld";
 export const metadata: Metadata = {
   title: "Küchen nach Maß vom Tischler | Fast Systemmöbel",
   description:
-    "Küchen nach Maß vom Tischler in Espelkamp: kostenloses Aufmaß, Fertigung im eigenen Betrieb, Montage durch unser Team im Umkreis von rund 200 km.",
+    "Küchen nach Maß vom Tischler: kostenloses Aufmaß, Fertigung im eigenen Meisterbetrieb in Espelkamp, Montage durch unser eigenes Team, deutschlandweit auf Anfrage.",
   alternates: { canonical: "/kuechen-nach-mass/" },
   openGraph: {
     images: [

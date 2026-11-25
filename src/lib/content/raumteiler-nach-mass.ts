@@ -65,12 +65,12 @@ export const rtIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jeden Raumteiler fertigen wir in unserer Werkstatt in Espelkamp, wie alle unsere [Wohnmöbel nach Maß](/wohnmoebel-nach-mass/). Seit 2010 packt bei Familie Fast die zweite Generation mit an.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Im Umkreis von rund 200 km messen wir kostenlos auf und montieren mit eigenem Team, etwa in Lübbecke, Minden oder Bielefeld. Einen frei stehenden Raumteiler liefern wir darüber hinaus deutschlandweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Wir messen kostenlos auf und montieren mit eigenem Team, deutschlandweit auf Anfrage. Einen frei stehenden Raumteiler liefern wir bundesweit.",
   col3CtaLabel: "Raumteiler online vorplanen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -294,7 +294,7 @@ export const rtFaq = {
     {
       question: "Liefern Sie einen Raumteiler auch deutschlandweit?",
       answer:
-        "Ja, frei stehende Raumteiler liefern wir deutschlandweit. Raumhoch eingepasste bauen wir nur im Umkreis von rund 200 km um Espelkamp ein, denn sie brauchen Aufmaß und Montage durch unser eigenes Team.",
+        "Ja, frei stehende Raumteiler liefern wir bundesweit. Raumhoch eingepasste bauen wir mit unserem eigenen Team ein, deutschlandweit auf Anfrage, denn sie brauchen Aufmaß und Montage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
     },
   ],
 };
@@ -329,14 +329,7 @@ export const rtJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Raumteiler nach Maß",

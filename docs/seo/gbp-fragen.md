@@ -38,7 +38,7 @@ Maßmöbel kosten mehr als Serienware, weil jedes Teil für Ihren Raum geplant u
 Eine feste Wochenzahl nennen wir bewusst nicht, weil sie von Umfang, Material und Auslastung abhängt. Den verbindlichen Termin bekommen Sie, sobald Aufmaß und Planung stehen und Sie freigegeben haben.
 
 **8. In welchem Gebiet bauen Sie vor Ort auf? [+FACTS]**
-Unser eigenes Team montiert im Umkreis von rund 200 km um Espelkamp, also in ganz OWL und darüber hinaus. Eine reine Lieferung ist bundesweit möglich. Bei montagepflichtigen Möbeln klären wir die Reichweite vorab mit Ihnen.
+Unser eigenes Team montiert deutschlandweit auf Anfrage. Eine reine Lieferung ist bundesweit möglich. Ob und wann wir bei Ihnen einbauen, klären wir vorab mit Ihnen.
 
 ---
 

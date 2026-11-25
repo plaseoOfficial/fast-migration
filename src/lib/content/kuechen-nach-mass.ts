@@ -9,11 +9,12 @@ const SITE = "https://www.fast-systemmoebel.de";
 const PATH = "/kuechen-nach-mass/";
 
 export const kuechenHero = {
-  bgImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
-  imageAlt: "Moderne Küche nach Maß mit grifflosen Fronten und Kochinsel",
-  title: "Küchen nach Maß, zentimetergenau gebaut",
+  bgImage: "/images/2026/05/variante_1778229165731_5-scaled.jpg",
+  imageAlt: "Weiße Küche nach Maß mit raumhoher Schrankwand, zwei Backöfen und Kochinsel mit Barhockern und Licht im Sockel",
+  title: "Küchen nach Maß vom Tischler",
+  introScrim: true,
   intro:
-    "Wir planen und bauen Ihre Küche nach Maß wie ein Tischler: zentimetergenau auf Ihren Raum zugeschnitten, vom Aufmaß bis zur Montage aus einer Hand. Gefertigt im eigenen Meisterbetrieb in Espelkamp, montiert im Umkreis von rund 200 km.",
+    "Wir sind Tischler und bauen Ihre Küche selbst: zentimetergenau auf Ihren Raum zugeschnitten, vom Aufmaß bis zur Montage aus einer Hand. Gefertigt in unserem Meisterbetrieb in Espelkamp, eingebaut von unserem eigenen Team, deutschlandweit auf Anfrage.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Möbel nach Maß", href: "/moebel-nach-mass/" },
@@ -31,7 +32,7 @@ export const kuechenIntroStats = {
   introAfter:
     ". So entsteht eine Küche, die genau in Ihren Raum passt, sich an Ihren Alltag anpasst und über Jahre hält.",
   bandImage: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg",
-  bandAlt: "Maßgefertigte U-Küche mit Kochinsel und Stein-Arbeitsplatte",
+  bandAlt: "Helle Küche nach Maß mit Kochinsel und Arbeitsplatte in Marmoroptik",
   col1Title: "Küche planen",
   col1Body:
     "Wir planen Ihre Küche um Sie herum: Grundriss, Laufwege, Stauraum, Arbeitshöhen. Sie erzählen uns, wie Sie kochen und leben, danach richten wir die Küche aus. Markengeräte aller gängigen Hersteller planen wir passgenau ein, vom Backofen bis zur Dunstabzugshaube. Die Geräte wählen Sie frei. Wie Sie sich vorbereiten, zeigt unser Ratgeber, [Ihre Küche Schritt für Schritt zu planen](/kuechen-nach-mass/kueche-planen/).",
@@ -55,16 +56,16 @@ export const kuechenProcess = {
     "Erst beraten wir und nehmen vor Ort kostenlos Maß. Dann [planen wir Ihre Küche in 3D](/kuechen-nach-mass/kueche-planen/), mit Geräten, Anschlüssen und Laufwegen, und Sie sehen Ihre Küche, bevor das erste Bauteil entsteht. Nach Ihrer Freigabe fertigen wir auf Homag-Technik in Espelkamp, montiert wird zum verbindlichen Termin von unserem eigenen Team. Ein Ansprechpartner von der Beratung bis zur Abnahme.",
   paragraphStrong: "Made in Germany.",
   image: "/images/2025/11/20231204_095459232_iOS-scaled.jpg",
-  imageAlt: "Maßgefertigte Küche in Grau mit Kochinsel",
+  imageAlt: "Küche in Anthrazit mit heller Halbinsel und schwarzer Dunstabzugshaube",
 };
 
 /** Kitchen types: drive the MnmTypische rows AND the JSON-LD ItemList / hasOfferCatalog. */
 export const kuechenTypische = {
   heading: "Küchen nach Maß für jeden Grundriss und Stil",
-  image1: "/images/2025/11/ThabarSebastian_kueche2.jpeg",
-  image1Alt: "Helle Küche nach Maß mit Essbereich",
-  image2: "/images/2025/11/IMG_4797-scaled.jpg",
-  image2Alt: "Weiße Küche nach Maß mit Holz-Arbeitsplatte",
+  image1: "/images/kuechen/kueche-nach-mass-u-form-weiss-eichen-esstisch.jpg",
+  image1Alt: "Weiße U-Küche nach Maß mit Esstisch aus Eiche und Glas-Pendelleuchten",
+  image2: "/images/kuechen/kueche-nach-mass-marmor-insel-anthrazit.jpg",
+  image2Alt: "Offene Küche nach Maß mit anthrazitfarbener Insel und Arbeitsplatten in Marmoroptik, hellen Hochschränken und Pendelleuchten",
   row1: [
     {
       title: "Küchenzeilen",
@@ -102,42 +103,39 @@ export const kuechenTypische = {
 };
 
 export const kuechenWarum = {
-  heading: "Warum die Küche vom Tischler mehr kann",
+  heading: "Tischler oder Küchenstudio?",
   paragraph:
-    "Im Küchenstudio kaufen Sie feste Rastermaße, im Möbelhaus Standard von der Stange. Ihre Einbauküche bauen wir in Espelkamp selbst — zentimetergenau auf Ihren Raum. Schräge Wände, niedrige Decken, verwinkelte Nischen sind für uns Alltag, kein Sonderfall. Fronten, Materialien und Geräte wählen Sie frei, auch ungewöhnliche Kombinationen aus Massivholz und anderen Werkstoffen. Wie das in der Praxis aussieht, zeigen unsere [realisierten Küchenprojekte](/referenzen/).",
+    "Im Küchenstudio wählen Sie meist aus dem Programm eines Herstellers, in dessen Rastermaßen. Für einen rechteckigen Raum mit freien Wänden passt das oft gut. Der Tischler lohnt sich, wenn der Raum nicht ins Raster passt: schräge Wände, Nischen, Pfeiler, niedrige Decken, oder wenn die Küche Wand zu Wand ohne Passleisten sitzen soll. Wir messen selbst auf, fertigen jedes Teil in Espelkamp und bauen es mit unserem eigenen Team ein. Fronten, Materialien und Geräte wählen Sie frei. Wie das aussieht, zeigen unsere [Referenzen](/referenzen/).",
   images: [
-    { src: "/images/2026/05/variante_1778229163946_1-scaled.jpg", alt: "Graue Küche nach Maß mit Holzdecke und Insel", width: 600, height: 400 },
-    { src: "/images/2025/11/IMG_9387-scaled.jpg", alt: "Küche nach Maß mit grifflosen Fronten und Holzrückwand", width: 600, height: 800 },
-    { src: "/images/2025/11/20231204_095459232_iOS-scaled.jpg", alt: "Moderne Küche in Grau mit Kochinsel", width: 600, height: 450 },
-    { src: "/images/2025/11/IMG_4797-scaled.jpg", alt: "Weiße Küche nach Maß mit Holz-Arbeitsplatte", width: 600, height: 800 },
+    { src: "/images/2025/11/IMG_4797-scaled.jpg", alt: "Weiße Küche mit schwarzen Griffen, Holz-Arbeitsplatte und Metrofliesen", width: 600, height: 800 },
+    { src: "/images/2025/11/IMG_6123-scaled.jpg", alt: "Kochfeld in einer Holz-Arbeitsplatte vor Sprossenfenstern", width: 600, height: 450 },
   ],
 };
 
 export const kuechenWarum2 = {
   heading: "Aus einer Hand, bis vor Ihre Tür",
   paragraph:
-    "Was andere Küchenstudios als unmöglich abtun, gehört zur Kernkompetenz einer Schreinerküche vom Meisterbetrieb: Wir planen es durch und setzen es um. Unser eigenes Montageteam kommt im Umkreis von rund 200 km um Espelkamp zu Ihnen. Ein Ansprechpartner von der Beratung bis zur Abnahme, ein individuelles Angebot — eine Küche, die Wand zu Wand passt.",
+    "Auch ungewöhnliche Wünsche planen wir durch und setzen sie um, das gehört zu einer Schreinerküche vom Meisterbetrieb. Unser eigenes Montageteam baut Ihre Küche ein, deutschlandweit auf Anfrage. Ein Ansprechpartner von der Beratung bis zur Abnahme, ein individuelles Angebot und eine Küche, die Wand zu Wand passt.",
   images: [
-    { src: "/images/2025/11/ThabarSebastian_kueche2.jpeg", alt: "Helle Küche nach Maß mit Esstisch", width: 600, height: 600 },
-    { src: "/images/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg", alt: "U-Küche nach Maß mit Stein-Insel", width: 600, height: 380 },
+    { src: "/images/2026/05/variante_1778229163946_1-scaled.jpg", alt: "Graue Küchenzeile nach Maß unter einer beleuchteten Eichendecke", width: 600, height: 335 },
   ],
 };
 
 export const kuechenGeschichte = {
   heading: "Küchenhandwerk aus fast drei Jahrzehnten",
   subheading: "Vom Garagenbetrieb zum Meisterbetrieb",
-  anchorImage: "/images/2026/05/variante_1778229163946_1-scaled.jpg",
-  anchorImageAlt: "Grifflose Inselküche nach Maß mit Holzdecke — Fast Systemmöbel Espelkamp",
+  anchorImage: "/images/schrank-unter-treppe/team-meisterbetrieb-fast-espelkamp.jpg",
+  anchorImageAlt: "Drei Männer aus dem Team von Fast Systemmöbel vor einem hellen Rolltor",
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "4.000+", label: "Projekte" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
   ],
   paragraphs: [
     "Fast Systemmöbel begann 1996 als Ein-Mann-Betrieb in einer Garage in Rahden-Tonnenheide. 2001 zog die Fertigung nach Espelkamp, und aus dem Gründungsbetrieb von Johann Fast wurde ein Familienunternehmen.",
     "Heute führen Andreas und Peter Fast den Betrieb mit, die zweite Generation, seit 2010 fest im Unternehmen. Mehr als 4.000 Projekte zeigen, was dabei entstanden ist: ein Meisterbetrieb mit über 1.000 m² Fertigung, moderner Homag-Technik und einem festen Team. Wir planen, fertigen und montieren Küchen nach Maß, die auf den Millimeter sitzen.",
-    "Jede Küche entsteht bei uns im Haus. Gefertigt in Espelkamp, montiert im Umkreis von rund 200 km, geliefert deutschlandweit.",
+    "Jede Küche entsteht bei uns im Haus. Gefertigt in Espelkamp, eingebaut von unserem eigenen Team, deutschlandweit auf Anfrage.",
   ],
 };
 
@@ -162,14 +160,29 @@ export const kuechenFaq = {
         "Nach Beratung und kostenlosem Aufmaß planen wir Ihre Küche, Sie geben sie frei, dann fertigen wir in Espelkamp. Den verbindlichen Termin für Lieferung und Montage legen wir nach dem Aufmaß und Ihrer Freigabe gemeinsam fest, noch bevor die Produktion startet. So wissen Sie früh, wann Ihre Küche steht.",
     },
     {
-      question: "Montieren Sie Küchen auch bei mir in der Nähe?",
+      question: "Montieren Sie Küchen auch bei mir?",
       answer:
-        "Aufmaß und Montage übernehmen wir mit unserem eigenen Team im Umkreis von rund 200 km um Espelkamp, zum Beispiel in Minden, Lübbecke, Osnabrück, Bielefeld und ganz Ostwestfalen-Lippe. Liegt Ihr Ort weiter weg, fragen Sie uns einfach an. Wir sagen Ihnen ehrlich, was bei Ihnen möglich ist.",
+        "Aufmaß und Montage übernimmt immer unser eigenes Team, deutschlandweit auf Anfrage. Zu Hause sind wir rund um Espelkamp, etwa in Minden, Lübbecke, Bielefeld und Osnabrück. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch.",
     },
     {
       question: "Passt eine Küche nach Maß auch in einen schwierigen Grundriss oder unter eine Dachschräge?",
       answer:
         "Genau dafür ist sie da. Schräge Wände, Dachschrägen, Nischen und niedrige Decken nutzen wir gezielt aus. Wir bauen Wand zu Wand dort, wo Standardküchen aufhören, und setzen auch ungewöhnliche Vorstellungen um. Wie das unterm Dach aussieht, zeigt unsere [Küche mit Dachschräge](/kuechen-nach-mass/kueche-mit-dachschraege/).",
+    },
+    {
+      question: "Was ist eine Tischlerküche?",
+      answer:
+        "Eine Küche, die ein Tischler oder Schreiner für Ihren Raum plant, selbst fertigt und einbaut. Die Schränke entstehen nach Ihrem Aufmaß statt aus einem Rastersystem. Bei uns kommen Planung, Fertigung und Montage aus einem Betrieb.",
+    },
+    {
+      question: "Kann ich die Geräte selbst kaufen?",
+      answer:
+        "Ja. Backofen, Kochfeld, Kühlschrank und Geschirrspüler wählen Sie frei, bei allen gängigen Herstellern. Wir planen die Möbel passend um Ihre Geräte und bauen sie bei der Montage mit ein.",
+    },
+    {
+      question: "Kann ich die Küche finanzieren?",
+      answer:
+        "Ja, für Privatkunden ist eine Finanzierung möglich. Die Einzelheiten besprechen wir mit Ihnen beim Angebot.",
     },
   ],
 };
@@ -203,14 +216,7 @@ export const kuechenJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Küchen nach Maß",

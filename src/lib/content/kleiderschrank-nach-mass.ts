@@ -13,7 +13,7 @@
  * Copy follows the Fast Systemmöbel brand voice (Sie-Anrede, handwerklich,
  * konkret, belegt, keine em-dashes). See docs/seo/brand/BRAND_VOICE.md und
  * docs/seo/brand/FACTS.md. Firmen-/Zahlenfakten (Telefon, Adresse, Geo,
- * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, 200 km Montage-Radius,
+ * 2. Generation, 4.000+ Projekte, 1.000 m² Fertigung, Montage deutschlandweit auf Anfrage,
  * Homag, PU-Kanten) stammen aus dem Pillar-Modul/FACTS.md.
  *
  * Copy: Authoring-Engine (Writer/Humanizer/QC/Chefredakteur) aus dem Research-Kit
@@ -61,12 +61,12 @@ export const klIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Teil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Ein Ansprechpartner bleibt von der Beratung bis zur Montage Ihr Kontakt. Ihr Kleiderschrank gehört zu unseren [Einbauschränken nach Maß](/einbauschraenke-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL und Umgebung, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Möbel schicken wir auch bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß, Einbau und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Fertige Möbel schicken wir auch bundesweit.",
   col3CtaLabel: "Kleiderschrank online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -274,7 +274,7 @@ export const klFaq = {
     {
       question: "Muss ich selbst Maß nehmen oder kommt jemand vorbei?",
       answer:
-        "Sie müssen nicht selbst messen. Wir kommen zum kostenlosen Aufmaß vor Ort, im Montagegebiet rund um Espelkamp, und nehmen auch schiefe Wände, Nischen und Schrägen genau auf. Auf dieser Grundlage entsteht Ihre Planung.",
+        "Sie müssen nicht selbst messen. Wir kommen zum kostenlosen Aufmaß vor Ort, deutschlandweit auf Anfrage, und nehmen auch schiefe Wände, Nischen und Schrägen genau auf. Auf dieser Grundlage entsteht Ihre Planung.",
     },
     {
       question: "Was ist der Unterschied zu einer begehbaren Ankleide?",
@@ -294,7 +294,7 @@ export const klFaq = {
     {
       question: "Wohin liefert und montiert ihr?",
       answer:
-        "Unser Montagegebiet reicht rund 200 km um Espelkamp, durch ganz OWL, etwa nach Minden, Lübbecke, Osnabrück und Bielefeld. In diesem Radius kommen wir zum Aufmaß und bauen Ihren Kleiderschrank vor Ort ein. Fertige, freistehende Möbel liefern wir darüber hinaus bundesweit.",
+        "Zum Aufmaß und zum Einbau kommt unser eigenes Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Fertige, freistehende Möbel liefern wir darüber hinaus bundesweit.",
     },
   ],
 };
@@ -329,14 +329,7 @@ export const klJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Kleiderschränke nach Maß",

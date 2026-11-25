@@ -22,9 +22,10 @@ const PATH = "/kuechen-nach-mass/kueche-mit-dachschraege/";
 const IMG = "/images";
 
 export const dsHero = {
-  bgImage: `${IMG}/2026/05/variante_1778229163946_1-scaled.jpg`,
-  imageAlt: "Küche nach Maß mit Kochinsel unter einer Dachschräge",
+  bgImage: `${IMG}/einbauschraenke/einbauschrank-dachschraege-nach-mass.jpg`,
+  imageAlt: "Weißer Schrank mit Eichen-Abdeckplatte und flacher Schubladenzeile unter einer Dachschräge",
   title: "Küche mit Dachschräge nach Maß",
+  introScrim: true,
   intro:
     "Ja, eine vollwertige Küche mit Dachschräge ist machbar, wenn wir sie aufs Grad genau planen. Als Meisterbetrieb aus Espelkamp bauen wir Ihre Küche millimetergenau bis unter die Schräge, Wand zu Wand ohne Passleisten. So wird aus dem Dachgeschoss eine Arbeitsküche mit Kopffreiheit und Stauraum.",
   breadcrumb: [
@@ -43,8 +44,8 @@ export const dsIntroStats = {
     "Serienküchen stoßen an jeder Dachschräge an ihre Grenzen, weil ihr festes Raster die Winkel nicht trifft. Wir fertigen die Küche millimetergenau bis unter die",
   introBold: "Schräge",
   introAfter: ".",
-  bandImage: `${IMG}/2025/11/20240126_145240570_iOS-scaled-e1767633226916.jpg`,
-  bandAlt: "Maßgefertigte Küche mit Kochinsel unter Dachschräge",
+  bandImage: `${IMG}/einbauschrank-dachschraege/drempelschrank-kniestock-nach-mass-betonoptik.jpg`,
+  bandAlt: "Niedrige Schrankzeile in Betonoptik und Eiche am Drempel unter einem Dachfenster",
   col1Title: "Wand zu Wand ohne Passleisten",
   col1Body:
     "Fronten und Korpus folgen dem Winkel, Wand zu Wand ohne Passleisten und ohne tote Ecke. Den Winkel der Schräge nehmen wir beim Aufmaß vor Ort genau auf.",
@@ -52,12 +53,12 @@ export const dsIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "In unserer Werkstatt in Espelkamp verschließen wir die Kanten mit PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig, auch an spitzen Winkeln. Vom Aufmaß bis zur Montage bleibt es eine [maßgefertigte Küche vom Tischler](/kuechen-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß der Schräge und Montage übernimmt unser eigenes Team im Umkreis von rund 200 km um Espelkamp, in ganz OWL, in Minden, Lübbecke, Osnabrück und Bielefeld. Kein Bausatz, wir bauen bei Ihnen auf.",
+    "Aufmaß der Schräge und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Kein Bausatz, wir bauen bei Ihnen auf.",
   col3CtaLabel: "Küchenberatung anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -173,8 +174,8 @@ export const dsLoesungen = {
 export const dsProcess = {
   eyebrow: "Ablauf",
   heading: "So planen wir Ihre Küche unter der Dachschräge",
-  image: `${IMG}/2025/11/IMG_4797-scaled.jpg`,
-  imageAlt: "Küche nach Maß unter Dachschräge in der Planung",
+  image: `${IMG}/werkstatt/werkstatt-cnc-zuschnitt-espelkamp.jpg`,
+  imageAlt: "CNC-Anlage und Plattenzuschnitt in der Werkhalle von Fast Systemmöbel in Espelkamp",
   steps: [
     {
       title: "Beratung und Aufmaß der Schräge",
@@ -241,8 +242,8 @@ export const dsKombi = {
   heading: "Küche und Schrank unter derselben Schräge",
   body:
     "Dieselbe Dachschräge trägt oft mehr als die Küche. Kommt der Stauraum daneben von uns, planen wir Küche und [Schrank unter der Dachschräge](/einbauschraenke-nach-mass/einbauschrank-dachschraege/) in einem Aufmaß und montieren beides in einem Zug. Ein Ansprechpartner, ein durchgehendes Bild bis in die Abseite.",
-  image: `${IMG}/2025/11/ThabarSebastian_kueche2.jpeg`,
-  imageAlt: "Küche und Einbauschrank unter einer Dachschräge nach Maß",
+  image: `${IMG}/einbauschrank-dachschraege/einbauschrank-dachschraege-nach-mass-weiss-kniestock.jpg`,
+  imageAlt: "Weiße grifflose Schrankfront am Kniestock unter einer Dachschräge, mit LED-Licht oben und Eichen-Seitenwand",
 };
 
 export const dsTestimonialsHeading = "Das sagen Kundinnen und Kunden über die Zusammenarbeit mit uns";
@@ -332,14 +333,7 @@ export const dsJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Küchen für Dachschrägen nach Maß",

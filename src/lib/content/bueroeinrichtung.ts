@@ -4,12 +4,12 @@
  * cluster, it reuses the same library sections as the canonical Privat page
  * (see docs/sections/CATALOG.md → the "Privat Page Recipe"); only the copy is
  * swapped for the commercial office segment (Geschäftsführer, Office-Manager,
- * Architekten) within the ~200 km radius around Espelkamp.
+ * Architekten) with assembly nationwide on request.
  *
  * Voice = Fast Systemmöbel (sachlich-handwerklich, "aus einer Hand", B2B,
  * Sie-Form). Fakten (gegen docs/seo/brand/FACTS.md geprüft): gegründet 1996 in
  * Rahden-Tonnenheide (Fertigung heute Espelkamp), Meisterbetrieb (ohne Jahr),
- * über 1.000 m² Fertigung, Homag-/CNC-Technologie, ~200 km Montageradius,
+ * über 1.000 m² Fertigung, Homag-/CNC-Technologie, Montage deutschlandweit auf Anfrage,
  * eigenes Montageteam, kostenloses Aufmaß, Lieferung bundesweit, Made in
  * Germany, Inhaber Johann Fast, Familie Fast (Andreas & Peter seit 2010).
  * KEINE Garantie-Zahl, keine Preise (immer individuell).
@@ -45,12 +45,12 @@ export const bueroIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Beratung, Planung, Fertigung und Montage aus einer Hand, kein Abstimmen zwischen drei Gewerken. Sie sprechen mit den Leuten, die Ihre [Büromöbel nach Maß](/bueroeinrichtung/bueromoebel-nach-mass/) bauen.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montageradius rund um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Montage mit eigenem Team im Umkreis von rund 200 km — Minden, Bielefeld, Osnabrück, Hannover, ganz OWL. Lieferung bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Die Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Lieferung bundesweit.",
   col3CtaLabel: "Projekt anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -182,7 +182,7 @@ export const bueroGeschichte = {
   stats: [
     { value: "1996", label: "Gegründet" },
     { value: "1.000 m²", label: "Eigene Fertigung" },
-    { value: "200 km", label: "Montage-Radius" },
+    { value: "72K+", label: "Gefertigte Einzelteile" },
     { value: "bundesweit", label: "Lieferung" },
   ],
   paragraphs: [
@@ -216,7 +216,7 @@ export const bueroWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-09.svg",
     title: "Fertigung & Montage",
     description:
-      "Alle Teile entstehen im eigenen Werk in Espelkamp auf Homag-Technologie, Montage durch unser eigenes Team im Umkreis von rund 200 km.",
+      "Alle Teile entstehen im eigenen Werk in Espelkamp auf Homag-Technologie, Montage durch unser eigenes Team, deutschlandweit auf Anfrage.",
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-15.svg",
@@ -259,7 +259,7 @@ export const bueroFaq = {
     {
       question: "In welchem Gebiet liefern und montieren Sie Büroeinrichtungen?",
       answer:
-        "Montage mit eigenem Team im Umkreis von rund 200 km — etwa Minden, Bielefeld, Osnabrück, Hannover und ganz OWL. Darüber hinaus liefern wir bundesweit.",
+        "Die Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Geliefert wird bundesweit.",
     },
   ],
 };

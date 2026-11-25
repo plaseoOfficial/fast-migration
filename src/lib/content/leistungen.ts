@@ -19,7 +19,7 @@
  * überschreiben. Leer lassen ist der Normalfall.
  *
  * Fakten nur aus docs/seo/brand/FACTS.md: Fertigung in Espelkamp, Lieferung
- * bundesweit, Montage durch das eigene Team im Umkreis von rund 200 km,
+ * bundesweit, Montage durch das eigene Team deutschlandweit auf Anfrage,
  * kostenloses Aufmaß. Sie-Anrede, keine Gedankenstriche (BRAND_VOICE.md).
  */
 
@@ -37,7 +37,7 @@ export const leistungenHero = {
   title: "Unsere Leistungen",
   bgImage: "/images/serienmoebel/serie-galerie-cnc-halle.jpg",
   intro:
-    "Wir planen und fertigen Möbel nach Maß in unserem Meisterbetrieb in Espelkamp, für Ihr Zuhause und für Ihr Unternehmen. Privatkunden beliefern wir bundesweit, im Umkreis von rund 200 km um Espelkamp montiert unser eigenes Team.",
+    "Wir planen und fertigen Möbel nach Maß in unserem Meisterbetrieb in Espelkamp, für Ihr Zuhause und für Ihr Unternehmen. Privatkunden beliefern wir bundesweit, die Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Leistungen" },

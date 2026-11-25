@@ -12,7 +12,7 @@
  * em-dashes). Fakten gegen docs/seo/brand/FACTS.md + kundenwissen.md geprüft:
  * Meisterbetrieb Espelkamp (ohne Jahr), Eigenfertigung >1.000 m², Homag/CNC,
  * PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig, NICHT wasserfest),
- * kostenloses Aufmaß, eigenes Montageteam, Montage ~200 km um Espelkamp,
+ * kostenloses Aufmaß, eigenes Montageteam, Montage deutschlandweit auf Anfrage,
  * Lieferung bundesweit. KEINE Preise, keine erfundenen Maße/mm, keine
  * Garantie-Zahl, keine Finanzierung (Gewerbe), kein "Made in Germany"-Siegel.
  *
@@ -58,12 +58,12 @@ export const bmIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "In Espelkamp fertigen wir jedes Teil selbst, mit PU-Kantenverleimung, fugenlos und feuchtigkeitsbeständig. Von der Beratung bis zur Montage bleibt alles Teil Ihrer [Büroeinrichtung](/bueroeinrichtung/) aus einer Hand.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montageradius rund um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß und Montage übernimmt unser eigenes Team, im Umkreis von rund 200 km, in ganz OWL, in Minden, Osnabrück und Bielefeld. Was weiter weg liegt, liefern wir bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Geliefert wird bundesweit.",
   col3CtaLabel: "Projekt anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -270,7 +270,7 @@ export const bmFaq = {
     {
       question: "Werden die Büromöbel geliefert und montiert, und in welchem Gebiet?",
       answer:
-        "Lieferung und Montage übernimmt unser eigenes Team, kein Bausatz zum Selbstaufbau. Aufmaß und Montage bieten wir im Umkreis von rund 200 km um Espelkamp und in ganz OWL an. Weiter entfernt liefern wir bundesweit.",
+        "Lieferung und Montage übernimmt unser eigenes Team, kein Bausatz zum Selbstaufbau. Aufmaß und Montage bieten wir deutschlandweit auf Anfrage an. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Geliefert wird bundesweit.",
     },
     {
       question: "Lassen sich Büromöbel nach Maß als Betriebsausgabe absetzen?",
@@ -309,14 +309,7 @@ export const bmJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Büromöbel nach Maß",

@@ -62,12 +62,12 @@ export const bsIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Jedes Teil fertigen wir selbst in Espelkamp, von der PU-verleimten Kante bis zur Front. Den passenden [Waschtischunterschrank nach Maß](/badmoebel-nach-mass/waschtischunterschrank-nach-mass/) am Becken und die [Waschtischplatte nach Maß](/badmoebel-nach-mass/waschtisch-nach-mass/) planen wir auf Wunsch gleich mit. Ihr Badschrank gehört zu unseren [maßgefertigten Badmöbeln](/badmoebel-nach-mass/).",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Montage-Radius um Espelkamp",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Aufmaß, Einbau und Montage übernehmen wir im Umkreis von rund 200 km um Espelkamp, in ganz OWL, etwa in Minden, Lübbecke, Osnabrück und Bielefeld. Fertige Möbel liefern wir auch bundesweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Aufmaß, Einbau und Montage übernimmt unser eigenes Team, deutschlandweit auf Anfrage. Fertige Möbel liefern wir auch bundesweit.",
   col3CtaLabel: "Badschrank online planen",
   col3CtaHref: "/moebelplaner/",
 };
@@ -284,7 +284,7 @@ export const bsFaq = {
     {
       question: "Montiert Fast den Badschrank selbst oder wird er nur geliefert?",
       answer:
-        "In unserem Montagegebiet, rund 200 km um Espelkamp und durch ganz OWL, etwa nach Minden, Lübbecke, Osnabrück und Bielefeld, baut unser eigenes Montageteam den Badschrank vor Ort ein. Fertige, freistehende Möbel liefern wir auch bundesweit.",
+        "Unser eigenes Montageteam baut den Badschrank vor Ort ein, deutschlandweit auf Anfrage. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Fertige, freistehende Möbel liefern wir auch bundesweit.",
     },
     {
       question: "Wie pflege ich die Oberflächen meines Badschranks im Bad?",
@@ -323,14 +323,7 @@ export const bsJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Badschränke nach Maß",

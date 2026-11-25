@@ -12,7 +12,7 @@
  * em-dashes). Fakten gegen docs/seo/brand/FACTS.md + kundenwissen.md geprüft:
  * Meisterbetrieb Espelkamp (ohne Jahr), Eigenfertigung, Homag-Maschinen,
  * PU-Kantenverleimung (fugenlos/feuchtigkeitsbeständig, NICHT wasserfest),
- * kostenloses Aufmaß, eigenes Montageteam, Montage ~200 km um Espelkamp,
+ * kostenloses Aufmaß, eigenes Montageteam, Montage deutschlandweit auf Anfrage,
  * Lieferung bundesweit. KEINE Preise, keine Traglasten, kein Schlosssystem,
  * kein "DSGVO-konform", keine Finanzierung (Gewerbe). Ordnerwerte = allgemeine
  * Formatmaße als Rechenhilfe, keine Fast-Spezifikation (Kit §9b-4).
@@ -59,12 +59,12 @@ export const bsIntroStats = {
   col1CtaHref: "#anfrage",
   col2Body:
     "Ihr Schrank entsteht in Espelkamp, in unserer eigenen Werkstatt. Soll gleich das ganze Büro neu werden? Dann kommt die [maßgefertigte Büroeinrichtung](/bueroeinrichtung/) aus derselben Hand.",
-  counterTarget: 200,
+  counterTarget: 72,
   counterDuration: 2000,
-  counterSuffix: " km",
-  col3Title: "Aufmaß und Einbau mit eigenem Team",
+  counterSuffix: "K+",
+  col3Title: "gefertigte Einzelteile",
   col3Body:
-    "Bis rund 200 km um Espelkamp messen wir selbst auf und bauen selbst ein, ob in Minden, Lübbecke, Bielefeld oder Osnabrück. Weiter weg liefern wir deutschlandweit.",
+    "Mehr als 72.000 Einzelteile hat unsere Fertigung verlassen. Wir messen selbst auf und bauen selbst ein, deutschlandweit auf Anfrage. Geliefert wird bundesweit.",
   col3CtaLabel: "Projekt anfragen",
   col3CtaHref: "#anfrage",
 };
@@ -223,7 +223,7 @@ export const bsProcess = {
     {
       title: "Montage durch unser Team",
       description:
-        "Wir bauen den Schrank ein und richten ihn aus, im Umkreis von rund 200 km um Espelkamp. Für weiter entfernte Orte liefern wir bundesweit.",
+        "Wir bauen den Schrank ein und richten ihn aus, deutschlandweit auf Anfrage. Geliefert wird bundesweit.",
     },
   ],
 };
@@ -315,14 +315,7 @@ export const bsJsonLd: Record<string, unknown>[] = [
         addressCountry: "DE",
       },
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        geoMidpoint: { "@type": "GeoCoordinates", latitude: 52.3833, longitude: 8.6167 },
-        geoRadius: "200000",
-      },
-      { "@type": "Country", name: "DE" },
-    ],
+    areaServed: { "@type": "Country", name: "DE" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Büroschränke nach Maß",

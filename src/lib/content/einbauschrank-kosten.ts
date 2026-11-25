@@ -145,8 +145,8 @@ export const ekPlanerAngebot = {
     { label: "Möbel", values: ["Möbelpreis für die Maße und Ausstattung, die Sie eingeben", "Gerechnet auf die Maße aus dem Aufmaß und Ihre Ausstattung"] },
     { label: "Mehrwertsteuer", values: ["Im angezeigten Möbelpreis enthalten", "Im Angebot angegeben"] },
     { label: "Lieferung", values: ["Nicht enthalten, kommt hinzu", "Welche Posten einzeln ausgewiesen sind, sehen Sie im Angebot"] },
-    { label: "Montage", values: ["Nicht enthalten, kommt hinzu", "Durch unser eigenes Montageteam im Montagegebiet"] },
-    { label: "Aufmaß", values: ["Entfällt, Sie geben eigene Maße ein", "Kostenlos vor Ort durch uns, im Montagegebiet"] },
+    { label: "Montage", values: ["Nicht enthalten, kommt hinzu", "Durch unser eigenes Montageteam, deutschlandweit auf Anfrage"] },
+    { label: "Aufmaß", values: ["Entfällt, Sie geben eigene Maße ein", "Kostenlos vor Ort durch uns, deutschlandweit auf Anfrage"] },
     { label: "Anpassung an Schräge und Wand", values: ["So genau wie Ihre eigenen Maße", "Schräge, schiefe Wände und Anschlüsse sind erfasst und eingeplant"] },
   ],
 };
@@ -236,7 +236,7 @@ export const ekFaq = {
     { question: "Kann ich einen Einbauschrank nach Maß finanzieren?", answer: "Ja, im Privatbereich ist eine Finanzierung möglich. Die Einzelheiten klären wir mit Ihnen, sobald feststeht, was Ihr Schrank umfasst." },
     { question: "Wie lange dauert es von der Anfrage bis zur Montage?", answer: "Eine pauschale Dauer nennen wir nicht. Den Montagetermin vereinbaren wir mit Ihnen, sobald das Aufmaß genommen ist und Sie die 3D-Planung freigegeben haben." },
     { question: "Was sollte ich zum ersten Gespräch vorbereiten?", answer: "Ein genaues Maß brauchen Sie nicht, das nehmen wir beim Aufmaß vor Ort. Hilfreich sind grobe Breite und Höhe, Fotos der Wand mit Steckdosen, Schräge und Fenster sowie eine Liste, was in den Schrank soll: lange Kleider, Schuhe, Wäsche. Dazu Ihr Wunsch beim Türsystem, ein Budgetrahmen und, falls vorhanden, Ihre Skizze aus dem Möbelplaner." },
-    { question: "Montiert Fast auch außerhalb von Ostwestfalen?", answer: "Ja. Aufmaß und Einbau durch unser eigenes Team bieten wir im Umkreis von rund 200 km um Espelkamp an, also deutlich über Ostwestfalen hinaus, zum Beispiel auch in Osnabrück. Liefern können wir bundesweit." },
+    { question: "Montiert Fast auch außerhalb von Ostwestfalen?", answer: "Ja. Aufmaß und Einbau übernimmt unser eigenes Team, deutschlandweit auf Anfrage, also auch weit über Ostwestfalen hinaus. Ob und wann wir bei Ihnen einbauen, klären wir im ersten Gespräch. Liefern können wir bundesweit." },
   ],
 };
 
