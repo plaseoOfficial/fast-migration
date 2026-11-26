@@ -3,7 +3,12 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
-const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
+/**
+ * Matomo-Server: seit 26.11.2026 selbst gehostet (analytics.sideboost.de, Hetzner Nürnberg, betrieben
+ * von Side Boost). Fest im Code wie bei KFZ Wolf, damit der Umzug nicht an der Vercel-Variable hängt;
+ * NEXT_PUBLIC_MATOMO_URL wird nicht mehr gelesen. Schrägstrich am Ende: unten wird `matomo.php` angehängt.
+ */
+const MATOMO_URL = "https://analytics.sideboost.de/";
 const SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
 
 /**
