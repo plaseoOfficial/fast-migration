@@ -276,7 +276,7 @@ export const praxisWeitereCards: ServiceCard[] = [
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
     title: "Möbelplaner",
     description:
-      "Tresen, Schränke und Wartezimmermöbel online konfigurieren: Maße, Fronten und Oberflächen direkt im 3D-Konfigurator sichtbar.",
+      "Schränke online konfigurieren und als Anfrage senden. Tresen und Wartezimmer planen wir nach dem kostenlosen Aufmaß persönlich mit Ihnen.",
     href: "/moebelplaner/",
   },
 ];
