@@ -94,8 +94,17 @@ Ablage nach Thema: `public/images/<seite-oder-thema>/`, z. B. `public/images/lad
 - **Hero-Motive brauchen rechts einen ruhigen, dunklen Bereich.** Der Verlauf in
   `MnmHero` deckt nur die linke Seite ab (`linear-gradient(90deg, …0.50 0%, …0 80%)`);
   auf hellem Bildinhalt wird der Intro-Text rechts unlesbar.
-- Nach einem Bildtausch cached der Next.js-Image-Optimizer die alte Variante.
-  Zum Prüfen `.next` löschen und den Dev-Server neu starten.
+- **Auslieferung ohne `/_next/image`** (seit 26.11.2026). Vercel beantwortete die
+  Bildoptimierung für jede noch nicht zwischengespeicherte Breite mit 402
+  (Kontingent erschöpft), je nach Gerät fehlten Bilder auf allen Seiten. Jetzt
+  erzeugt `next build` je Bild in `public/` sieben WebP-Breiten nach
+  `public/_bild/<breite>/` (`scripts/bild-varianten.mjs`, nicht im Git), und der
+  Loader `src/lib/bild-loader.ts` zeigt darauf. Für neue Bilder ist nichts zu tun:
+  Bild nach `public/images/` legen, `next/image` wie bisher nutzen. Kein
+  `unoptimized`-Prop nötig. `next dev` lädt die Originale direkt.
+- Nach einem Bildtausch unter **gleichem Dateinamen** rechnet der Build die Varianten
+  neu, Browser halten die alte Fassung aber bis zu einer Woche. Deshalb ein geändertes
+  Motiv unter neuem Namen ablegen.
 
 ## 6. Vor dem Commit
 
