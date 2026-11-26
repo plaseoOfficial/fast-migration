@@ -21,8 +21,6 @@ interface ProcessStepsProps {
    * rather than the eyebrow. Default false (keeps existing pages byte-identical).
    */
   offsetSteps?: boolean;
-  /** Bild direkt ausliefern, ohne Next-Bildoptimierung. Nur für bereits passend zugeschnittene Dateien. */
-  unoptimized?: boolean;
 }
 
 /**
@@ -39,7 +37,6 @@ export function ProcessSteps({
   steps,
   note,
   offsetSteps = false,
-  unoptimized,
 }: ProcessStepsProps) {
   return (
     <section
@@ -79,7 +76,6 @@ export function ProcessSteps({
             <Reveal className="relative mt-8 h-[240px] w-full sm:h-[280px] md:h-[340px] lg:h-[460px]">
               <Image
                 src={image}
-                unoptimized={unoptimized}
                 alt={imageAlt}
                 fill
                 className="object-cover"

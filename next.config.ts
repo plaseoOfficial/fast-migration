@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import { PHASE_PRODUCTION_BUILD } from "next/constants";
+import { BILD_BREITEN, BILD_ORDNER } from "./src/lib/bild-varianten.mjs";
 
 const nextConfig: NextConfig = {
   output: "standalone",
@@ -11,7 +13,24 @@ const nextConfig: NextConfig = {
   experimental: {
     serverActions: { bodySizeLimit: "4mb" },
   },
+  // Die Bildvarianten werden statisch ausgeliefert und nie von einer Funktion
+  // gelesen. Ohne diesen Ausschluss packt die Sitemap-Route (dynamischer
+  // Dateizugriff in lastmod.ts) sie mit in ihr Funktionspaket (+52 MB).
+  outputFileTracingExcludes: {
+    "*": [`public/${BILD_ORDNER}/**`],
+  },
   images: {
+    // Keine Vercel-Bildoptimierung (/_next/image): Sie antwortete im November 2026
+    // für jede nicht zwischengespeicherte Breite mit 402 (Kontingent erschöpft),
+    // dadurch fehlten je nach Gerät Bilder auf allen Seiten. Der Build erzeugt die
+    // Breiten selbst (scripts/bild-varianten.mjs), der Loader zeigt direkt darauf.
+    // Regel und Breiten: src/lib/bild-varianten.mjs.
+    loader: "custom",
+    loaderFile: "./src/lib/bild-loader.ts",
+    deviceSizes: BILD_BREITEN.filter((b) => b >= 640),
+    imageSizes: BILD_BREITEN.filter((b) => b < 640),
+    // Die folgenden Einstellungen gelten nur für den Standard-Loader. Sie bleiben
+    // stehen, falls er zurückkommt.
     // All SVGs are local, trusted assets downloaded from the target site.
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
@@ -33,6 +52,11 @@ const nextConfig: NextConfig = {
       // Werkstatt-Videos: Dateinamen ohne Version, daher eine Woche statt immutable.
       {
         source: "/videos/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
+      // Bildvarianten aus dem Build: Dateinamen ohne Version, daher wie die Videos eine Woche.
+      {
+        source: `/${BILD_ORDNER}/:path*`,
         headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
       },
     ];
@@ -123,4 +147,13 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default async function config(phase: string): Promise<NextConfig> {
+  // Bildvarianten bei jedem `next build` erzeugen, unabhängig vom Build-Befehl
+  // im Vercel-Projekt. Scheitert das, scheitert der Build und die Live-Seite
+  // bleibt auf dem letzten Stand, statt Bilder ins Leere zu verlinken.
+  if (phase === PHASE_PRODUCTION_BUILD) {
+    const { erzeugeBildVarianten } = await import("./scripts/bild-varianten.mjs");
+    await erzeugeBildVarianten();
+  }
+  return nextConfig;
+}

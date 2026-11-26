@@ -60,3 +60,6 @@ docs/design-references/**/clone-*
 docs/design-references/**/*fullpage*
 # Messdaten aus scripts/dataforseo.mjs (Suchvolumina)
 docs/seo/keyword-volume-audit.json
+
+# Bildvarianten aus dem Build (scripts/bild-varianten.mjs)
+/public/_bild/

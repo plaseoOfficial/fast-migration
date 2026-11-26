@@ -20,7 +20,6 @@
 
 export const leitstellenHero = {
   bgImage: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-bearbeitungszentrum-halle.jpg",
-  unoptimized: true,
   imageAlt: "Homag-Bearbeitungszentrum in der Fertigungshalle von Fast Systemmöbel in Espelkamp",
   title: "Leitstellenmöbel nach Maß vom Tischler",
   intro:
@@ -41,7 +40,6 @@ export const leitstellenIntroStats = {
   introBold: "Mehrere Arbeitsplätze",
   introAfter: " fertigen wir nach demselben Muster, auch bei einer späteren Erweiterung.",
   bandImage: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-plattenzuschnitte-detail.jpg",
-  unoptimized: true,
   bandAlt: "Zuschnitte in Holzdekor und Anthrazit auf Rollwagen und Tisch vor einer Homag-Anlage",
   col1Title: "Leitstelle anfragen",
   col1Body:
@@ -99,7 +97,6 @@ export const leitstellenFertigung = {
   body:
     "Wir arbeiten nach Ihrer Zeichnung oder Ihren CAD-Daten und prüfen vorab, ob sich alles fertigen lässt. Eine 3D-Planung zeigt Ihnen das Möbel samt Kabelwegen, Rechnerfächern, Wartungsklappen und Belüftung, bevor das erste Teil geschnitten wird. Auf Wunsch bauen wir ein Mustermöbel, das Sie freigeben. Danach schneiden und bohren wir alle Teile auf Homag- und CNC-Technik, jedes nach dem freigegebenen Programm. Die PU-Kantenverleimung verschließt die Kanten fugenlos und feuchtigkeitsbeständig.",
   image: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-bohranlage-detail.jpg",
-  unoptimized: true,
   imageAlt: "Homag-Bohr- und Bearbeitungsanlage mit Plattenzuschnitten im Vordergrund in der Werkhalle",
 };
 
@@ -110,7 +107,6 @@ export const leitstellenSerie = {
     "Eine Leitstelle besteht selten aus einem Tisch. Wir fertigen mehrere gleiche Arbeitsplätze und bauen auf Wunsch ein Mustermöbel zur Freigabe, damit jeder Platz dem anderen entspricht. Wird die Leitstelle später erweitert, fertigen wir weitere Plätze nach, weil Programm und Muster bleiben. Wie wir gleiche Möbel in größerer Zahl fertigen, steht unter [Möbel in Serie](/serienmoebel/).",
   stat: { value: "72.000+", label: "gefertigte Einzelteile" },
   image: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-cnc-absaugung-detail.jpg",
-  unoptimized: true,
   imageAlt: "Homag-CNC-Bearbeitungszentrum mit Absaugschlauch und Bedienpult in der Werkhalle in Espelkamp",
 };
 
@@ -143,7 +139,6 @@ export const leitstellenAblauf = {
   eyebrow: "In fünf Schritten",
   heading: "Von der Anfrage zur fertigen Leitstelle",
   image: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-bearbeitungszentrum-detail.jpg",
-  unoptimized: true,
   imageAlt: "Bearbeitungszentrum von Homag mit Bedienmonitor und einliegender Platte in der Werkhalle",
   steps: [
     {

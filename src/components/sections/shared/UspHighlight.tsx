@@ -13,8 +13,6 @@ interface UspHighlightProps {
   imageAlt: string;
   /** Place the image on the left instead of the right. */
   imageLeft?: boolean;
-  /** Bild direkt ausliefern, ohne Next-Bildoptimierung. Nur für bereits passend zugeschnittene Dateien. */
-  unoptimized?: boolean;
 }
 
 /**
@@ -30,7 +28,6 @@ export function UspHighlight({
   image,
   imageAlt,
   imageLeft = false,
-  unoptimized,
 }: UspHighlightProps) {
   return (
     <section
@@ -46,7 +43,6 @@ export function UspHighlight({
           <div className={cn("relative h-[280px] w-full md:h-[380px] lg:h-[480px]", imageLeft ? "lg:order-1" : "lg:order-2")}>
             <Image
               src={image}
-              unoptimized={unoptimized}
               alt={imageAlt}
               fill
               className="object-cover"
