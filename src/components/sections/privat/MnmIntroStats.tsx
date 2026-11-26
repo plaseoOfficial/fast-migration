@@ -17,6 +17,8 @@ interface MnmIntroStatsProps {
   introAfter: string;
   bandImage: string;
   bandAlt: string;
+  /** Bild direkt ausliefern, ohne Next-Bildoptimierung. Nur für bereits passend zugeschnittene Dateien. */
+  unoptimized?: boolean;
   col1Title: string;
   col1Body: string;
   col1CtaLabel: string;
@@ -73,6 +75,7 @@ export function MnmIntroStats({
   introAfter,
   bandImage,
   bandAlt,
+  unoptimized,
   col1Title,
   col1Body,
   col1CtaLabel,
@@ -194,6 +197,7 @@ export function MnmIntroStats({
         <Reveal className="mt-9 h-[260px] lg:h-[430px] w-full overflow-hidden">
           <Image
             src={bandImage}
+            unoptimized={unoptimized}
             alt={bandAlt}
             width={1224}
             height={430}

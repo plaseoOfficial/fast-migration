@@ -28,12 +28,14 @@ interface MnmHeroProps {
    * Seite unverändert.
    */
   introScrim?: boolean;
+  /** Bild direkt ausliefern, ohne Next-Bildoptimierung. Nur für bereits passend zugeschnittene Dateien. */
+  unoptimized?: boolean;
 }
 
 const DEFAULT_HEADER_SCRIM =
   "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)";
 
-export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScrim, introScrim }: MnmHeroProps) {
+export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScrim, introScrim, unoptimized }: MnmHeroProps) {
   return (
     <section
       className={cn(
@@ -47,6 +49,7 @@ export function MnmHero({ bgImage, imageAlt, title, intro, breadcrumb, headerScr
       {/* Background image */}
       <Image
         src={bgImage}
+        unoptimized={unoptimized}
         alt={imageAlt}
         fill
         priority
