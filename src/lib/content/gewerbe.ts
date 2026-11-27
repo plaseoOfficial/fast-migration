@@ -234,9 +234,9 @@ export const gewerbeClusterCards: ServiceCard[] = [
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
-    title: "Leitstellenmöbel nach Maß",
+    title: "Leitstellenmöbel",
     description:
-      "Möbel für Leitstellen, Leitstände und Kontrollräume nach Ihrer Zeichnung, auch mehrere gleiche Arbeitsplätze aus der eigenen Tischlerei.",
+      "Leitstellentische, Pulte und Schränke für Leitstand und Kontrollraum, ergonomisch geplant und auf Wunsch mit Technik aus einer Hand.",
     href: "/leitstellenmoebel/",
     moreLabel: "Leitstellenmöbel",
   },

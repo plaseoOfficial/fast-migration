@@ -24,9 +24,9 @@ import {
 } from "@/lib/content/leitstellenmoebel";
 
 const PAGE_PATH = "/leitstellenmoebel";
-const TITLE = "Leitstellenmöbel nach Maß: Leitstand und Kontrollraum";
+const TITLE = "Leitstellenmöbel für Leitstand, Leitwarte und Kontrollraum";
 const DESCRIPTION =
-  "Leitstellenmöbel und Leitstandmöbel aus der eigenen Tischlerei, nach Ihrer Zeichnung gefertigt. Mehrere gleiche Arbeitsplätze, Montage auf Anfrage.";
+  "Leitstellentische, Pulte und Schränke für Leitstand und Kontrollraum: ergonomisch geplant, mit Kabelwegen und Rechnerfächern, auf Wunsch mit Technik.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 
 const jsonLd = buildServicePageJsonLd({
   pageUrl: `${SITE_URL}${PAGE_PATH}`,
-  name: "Leitstellenmöbel nach Maß",
+  name: "Leitstellenmöbel",
   description: DESCRIPTION,
   breadcrumb: leitstellenHero.breadcrumb,
   faq: leitstellenFaq.items,

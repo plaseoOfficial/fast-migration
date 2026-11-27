@@ -592,7 +592,7 @@ export const ANCHORS: Record<string, AnchorSet> = {
   },
   "/leitstellenmoebel/": {
     exact: ["Leitstellenmöbel"],
-    partial: ["Leitstandmöbel nach Maß", "Leitstellenmöbel vom Tischler", "Möbel für Kontrollräume"],
+    partial: ["Leitstandmöbel", "Möbel für Leitstand und Kontrollraum", "Möbel für Kontrollräume"],
     brand: ["Fast Systemmöbel Leitstellenmöbel"],
     descriptive: ["Möbel für Leitstellen fertigen lassen", "zu den Leitstellenmöbeln"],
   },

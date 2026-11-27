@@ -21,9 +21,9 @@
 export const leitstellenHero = {
   bgImage: "/images/leitstellenmoebel/leitstellenmoebel-fertigung-bearbeitungszentrum-halle.jpg",
   imageAlt: "Homag-Bearbeitungszentrum in der Fertigungshalle von Fast Systemmöbel in Espelkamp",
-  title: "Leitstellenmöbel nach Maß vom Tischler",
+  title: "Leitstellenmöbel, individuell geplant und aus einer Hand",
   intro:
-    "Wir fertigen Möbel für Leitstellen, Leitstände und Kontrollräume in unserer Tischlerei in Espelkamp, nach Ihrer Zeichnung, auch mehrere gleiche Arbeitsplätze.",
+    "Leitstellentische, Pulte und Schränke für Leitstand, Leitwarte und Kontrollraum, geplant nach Ihren Abläufen: ergonomisch, auf Wunsch höhenverstellbar, mit Kabelwegen, Rechnerfächern und Zugang für die Wartung. Technik, Stühle, Videowand und Akustik liefern wir auf Wunsch mit.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
