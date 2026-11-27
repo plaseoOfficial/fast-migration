@@ -23,6 +23,7 @@ import {
   praxisSegments,
   praxisUsp,
   praxisTypische,
+  praxisTresen,
   praxisVergleich,
   praxisWarum,
   praxisGeschichte,
@@ -33,10 +34,10 @@ import {
 
 const PAGE_PATH = "/praxiseinrichtung";
 const DESCRIPTION =
-  "Praxiseinrichtung nach Maß vom Meisterbetrieb in Espelkamp: Empfangstresen, Behandlungs- und Kanzleimöbel – geplant und montiert, deutschlandweit auf Anfrage.";
+  "Praxiseinrichtung und Praxismöbel nach Maß vom Tischler: Empfangstresen, Behandlungszeilen und Praxisschränke, geplant und montiert. Aufmaß kostenlos.";
 
 export const metadata: Metadata = {
-  title: "Praxiseinrichtung nach Maß: Ärzte, Therapeuten & Kanzleien",
+  title: "Praxiseinrichtung nach Maß: Praxismöbel und Empfangstresen",
   description: DESCRIPTION,
   alternates: { canonical: `${PAGE_PATH}/` },
   openGraph: {
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
         alt: "Fast Systemmöbel – Möbel nach Maß aus dem Meisterbetrieb in Espelkamp",
       },
     ],
-    title: "Praxiseinrichtung nach Maß: Ärzte, Therapeuten & Kanzleien",
+    title: "Praxiseinrichtung nach Maß: Praxismöbel und Empfangstresen",
     description: DESCRIPTION,
     url: `${PAGE_PATH}/`,
     locale: "de_DE",
@@ -85,6 +86,7 @@ export default function PraxiseinrichtungPage() {
       <SegmentCards {...praxisSegments} />
       <MnmWeitereLeistungen cards={praxisWeitereCards} />
       <MnmTypische {...praxisTypische} />
+      <UspHighlight {...praxisTresen} />
       <UspHighlight {...praxisUsp} />
       <ContrastCols {...praxisVergleich} />
       <MnmWarum {...praxisWarum} />
