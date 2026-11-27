@@ -13,15 +13,20 @@
  * Hygiene NUR über Material/Verarbeitung (fugenarm, wischdesinfektionsbeständig,
  * PU-Kante), KEIN RKI-/Norm-Zertifikat; Leistung = NUR Möbel + präzise Aussparungen
  * für Geräte/Sanitär, Installation durch Fachbetrieb; Gewerbe -> keine Finanzierung.
+ *
+ * Überarbeitung 2026-11-27: Hauptbegriff „Praxiseinrichtung“ und „Praxismöbel“ vorn,
+ * eigener Abschnitt Empfangstresen, Fragen zu Dauer und Datenschutz am Empfang,
+ * Bilder ohne Privat-Motive, Kundenstimmen-Überschrift ohne Praxis-Zuschreibung.
+ * Keine Zahl zu Preis oder Dauer (Gewerbe: Termin nach Aufmaß und Freigabe, FACTS.md).
  */
 
 export const praxisHero = {
   bgImage: "/images/praxiseinrichtung/anmeldetresen-nach-mass-praxis-weiss.jpg",
   imageAlt:
     "Anmeldetresen nach Maß in Weiß mit umlaufender LED-Sockelbeleuchtung in einer Praxis",
-  title: "Praxiseinrichtung nach Maß",
+  title: "Praxiseinrichtung nach Maß vom Tischler",
   intro:
-    "Möbel, die exakt zu Ihren Räumen, Abläufen und Hygieneanforderungen passen, statt Katalogware in festen Rastermaßen. Geplant, gefertigt und montiert aus einer Hand, vom Meisterbetrieb in Espelkamp.",
+    "Empfangstresen, Behandlungszeilen und Praxisschränke, die exakt zu Ihren Räumen, Abläufen und Ihrem Hygieneplan passen, statt Katalogware in festen Rastermaßen. Geplant, gefertigt und montiert aus einer Hand, von unserem Meisterbetrieb.",
   breadcrumb: [
     { label: "Fast Systemmöbel", href: "/" },
     { label: "Gewerbe", href: "/gewerbe/" },
@@ -31,7 +36,7 @@ export const praxisHero = {
 
 export const praxisIntroStats = {
   since: "seit 1996",
-  sinceSub: "Richten wir Praxen und Kanzleien ein.",
+  sinceSub: "fertigen wir Möbel nach Maß.",
   heading: "Praxismöbel, die zu Ihrem Alltag passen",
   introBefore: "Von der ersten",
   introBold: "Planung",
@@ -57,10 +62,10 @@ export const praxisIntroStats = {
 
 export const praxisProcess = {
   eyebrow: "In fünf Schritten",
-  heading: "Vom Aufmaß bis zur Montage",
-  image: "/images/praxiseinrichtung/anmeldetresen-nach-mass-praxis-front.jpg",
+  heading: "Von der Praxisplanung bis zur Montage",
+  image: "/images/werkstatt/werkstatt-cnc-zuschnitt-espelkamp.jpg",
   imageAlt:
-    "Anmeldetresen nach Maß von vorn, mit Arbeitsplatz hinter der erhöhten Front",
+    "CNC-Anlage und Plattenzuschnitt in der Werkhalle von Fast Systemmöbel in Espelkamp",
   steps: [
     {
       title: "Beratung & kostenloses Aufmaß",
@@ -70,7 +75,7 @@ export const praxisProcess = {
     {
       title: "3D-Planung",
       description:
-        "Sie sehen Ihre Praxis digital, mit Maßen, Materialien und Aussparungen für Ihre Geräte, bevor das erste Brett geschnitten ist.",
+        "Sie sehen Ihre Praxis digital, mit Maßen, Materialien und Aussparungen für Ihre Geräte. Planen Sie mit einem Architekten oder Praxisplaner, setzen wir dessen Pläne um.",
     },
     {
       title: "Fertigung in Espelkamp",
@@ -94,7 +99,7 @@ export const praxisProcess = {
 
 export const praxisSegments = {
   eyebrow: "Für Ihre Fachrichtung",
-  heading: "Welche Praxen und Kanzleien wir einrichten",
+  heading: "Praxismöbel für Arzt, Zahnarzt und Therapie",
   intro:
     "Jede Fachrichtung stellt eigene Anforderungen an Hygiene, Diskretion und Abläufe. Diese nehmen wir in die Planung auf.",
   segments: [
@@ -111,8 +116,8 @@ export const praxisSegments = {
       body: "Empfang, Behandlungsräume und Materialschränke für Praxen mit hoher Frequenz und kurzen Wegen zwischen den Räumen.",
     },
     {
-      title: "Heilpraktiker & Naturheilkunde",
-      body: "Ruhige, wohnliche Einrichtung für Empfang und Behandlung, in einer Optik, die Vertrauen schafft und zu Ihrem Konzept passt.",
+      title: "Psychotherapie & Heilpraktiker",
+      body: "Ruhige, wohnliche Einrichtung für Empfang, Therapie- und Behandlungsraum, mit geschlossenem Stauraum für Unterlagen und in einer Optik, die Vertrauen schafft.",
     },
     {
       title: "Anwalts- & Steuerkanzlei",
@@ -123,6 +128,21 @@ export const praxisSegments = {
       body: "Einheitliche Einrichtung über mehrere Räume und Standorte, in Serie gefertigt und vom ersten bis zum letzten Zimmer im selben Stil.",
     },
   ],
+};
+
+/**
+ * Empfangstresen als eigener Abschnitt (UspHighlight, Bild links). Nur Planungspunkte,
+ * die Fast umsetzt (Aussparungen, abschließbare Fächer, unterfahrbarer Bereich),
+ * keine Norm- oder Datenschutz-Zusage.
+ */
+export const praxisTresen = {
+  heading: "Empfangstresen für die Praxis",
+  body:
+    "Am Empfang laufen Anmeldung, Telefon, Kartenlesegerät und Terminvergabe zusammen. Wir planen den Tresen nach diesen Abläufen: eine erhöhte Front, hinter der Bildschirm und Unterlagen aus dem Blick der Wartenden bleiben, Aussparungen und Kabelwege für Rechner, Drucker und Kartenleser, abschließbare Fächer für Akten. Auf Wunsch planen wir einen unterfahrbaren Bereich für Patientinnen und Patienten im Rollstuhl ein.",
+  image: "/images/praxiseinrichtung/anmeldetresen-nach-mass-praxis-front.jpg",
+  imageAlt:
+    "Anmeldetresen nach Maß von vorn, mit Arbeitsplatz hinter der erhöhten Front",
+  imageLeft: true,
 };
 
 export const praxisUsp = {
@@ -211,10 +231,10 @@ export const praxisWarum = {
     "Jeden Tresen, jeden Behandlungsschrank und jedes Aktenmöbel bauen wir selbst in Espelkamp, passgenau von Wand zu Wand und mit Materialien für Hygiene und Dauereinsatz. Planung, Fertigung und Montage bleiben in einer Hand.",
   images: [
     { src: "/images/2025/11/DSC_9747.jpg", alt: "Konferenztisch nach Maß mit Bestuhlung in einem Besprechungsraum", width: 600, height: 400 },
-    { src: "/images/2025/11/IMG_2249.jpg", alt: "Einbauschrank nach Maß mit offener Garderoben-Nische in Eiche", width: 600, height: 800 },
-    { src: "/images/2025/11/IMG_2772-scaled.jpg", alt: "Raumhohe Einbauschrankwand nach Maß in Weiß entlang eines Flurs", width: 600, height: 800 },
-    { src: "/images/2025/11/20230814_155316228_iOS-scaled.jpg", alt: "Einbauschrank nach Maß neben einer Wand in Steinoptik", width: 600, height: 440 },
-    { src: "/images/2025/11/90d42e7b-fa9d-4a8d-a60e-ca1c5bf55cb3.jpg", alt: "Garderobennische nach Maß mit Eiche-Lamellen und integrierter Sitzbank", width: 600, height: 800 },
+    { src: "/images/serienmoebel/serie-galerie-plattenaufteilung.jpg", alt: "Homag-Anlage mit aufgeteiltem Plattenmaterial in der Fertigung", width: 600, height: 800 },
+    { src: "/images/bueroeinrichtung/aktenschrankwand-nach-mass-buero.jpg", alt: "Aktenschrankwand nach Maß in Weiß mit Arbeitsplätzen davor", width: 600, height: 335 },
+    { src: "/images/serienmoebel/serie-galerie-maschinenpark.jpg", alt: "Maschinenpark mit Zuschnitt und Stapler in der Werkhalle", width: 600, height: 400 },
+    { src: "/images/serienmoebel/serienfertigung-produktionshalle-espelkamp.jpg", alt: "Produktionshalle von Fast Systemmöbel in Espelkamp mit Bearbeitungsplätzen", width: 600, height: 800 },
     { src: "/images/2025/11/DSC_9934.jpg", alt: "Offenes Regal nach Maß mit indirekter LED-Beleuchtung", width: 600, height: 400 },
   ],
 };
@@ -274,15 +294,15 @@ export const praxisWeitereCards: ServiceCard[] = [
   },
   {
     icon: "/images/2024/03/interior-design-white-icons-22.svg",
-    title: "Möbelplaner",
+    title: "Serienmöbel",
     description:
-      "Schränke online konfigurieren und als Anfrage senden. Tresen und Wartezimmer planen wir nach dem kostenlosen Aufmaß persönlich mit Ihnen.",
-    href: "/moebelplaner/",
+      "Für MVZ und Praxen mit mehreren Standorten fertigen wir Tresen und Schränke in [Serie](/serienmoebel/): gleiche Maße und Oberflächen, später nachbestellbar.",
+    href: "/serienmoebel/",
   },
 ];
 
 /** Testimonials + FAQ render via the shared service sections. */
-export const praxisTestimonialsHeading = "Was unsere Praxis- und Kanzleikunden sagen";
+export const praxisTestimonialsHeading = "Was Kunden über die Zusammenarbeit mit uns sagen";
 
 export const praxisFaq = {
   heading: "Häufige Fragen zur Praxiseinrichtung nach Maß",
@@ -298,6 +318,16 @@ export const praxisFaq = {
         "Praxismöbel werden regelmäßig gereinigt und desinfiziert, wie oft, legt der Hygieneplan der Praxis fest. Die [Empfehlung der KRINKO beim Robert Koch-Institut](https://www.rki.de/DE/Themen/Infektionskrankheiten/Krankenhaushygiene/KRINKO/Empfehlungen-der-KRINKO/Basishygiene/Tabelle_Basishyg_Anforderungen.html) nennt für solche Flächen unter anderem „möglichst eben, abwischbar und fugendicht“. Wir bauen deshalb fugenarm und verschließen die Kanten mit fugenloser PU-Verleimung, sodass keine Spalten bleiben, in denen sich Schmutz und Keime sammeln. Dazu kommen robuste, abwischbare Oberflächen wie HPL.",
     },
     {
+      question: "Wie lange dauert eine Praxiseinrichtung nach Maß?",
+      answer:
+        "Das hängt vom Umfang ab, vom einzelnen Anmeldetresen bis zur kompletten Praxis. Den Termin legen wir nach dem Aufmaß und Ihrer Freigabe der Planung fest. Wenn Sie eine Praxis gründen oder übernehmen, nennen Sie uns den Eröffnungstermin gleich bei der Anfrage, dann planen wir Fertigung und Montage darauf hin.",
+    },
+    {
+      question: "Wie schützt der Empfangstresen die Daten Ihrer Patienten?",
+      answer:
+        "Eine erhöhte Front und ein vom Wartebereich abgewandter Bildschirm halten Unterlagen und Monitor aus dem Blick. Den Abstand zwischen Tresen und Wartezone besprechen wir bei der Planung, Akten und Karten kommen in abschließbare Fächer. Welche Regeln für Ihre Praxis gelten, legt Ihr Datenschutzkonzept fest; der Tresen setzt die räumliche Seite davon um.",
+    },
+    {
       question: "Bauen Sie auch Geräte und Sanitärtechnik ein?",
       answer:
         "Wir bauen die Möbel und arbeiten Aussparungen und Maße für Behandlungseinheit, Sterilisator oder Waschtisch präzise ein. Die Installation der Geräte- und Sanitärtechnik übernimmt Ihr Fachbetrieb. So passen Möbel und Technik am Ende genau zusammen.",
@@ -310,7 +340,7 @@ export const praxisFaq = {
     {
       question: "Für welche Fachrichtungen fertigen Sie Praxismöbel?",
       answer:
-        "Für Arztpraxen aller Fachrichtungen, Zahnarztpraxen, Physiotherapie und Therapiezentren, Heilpraktiker sowie Anwalts- und Steuerkanzleien. Auch Gemeinschaftspraxen und medizinische Versorgungszentren richten wir ein, dort oft einheitlich über mehrere Räume.",
+        "Für Arztpraxen aller Fachrichtungen, Zahnarztpraxen, Physiotherapie und Therapiezentren, Psychotherapie, Heilpraktiker sowie Anwalts- und Steuerkanzleien. Auch Gemeinschaftspraxen und medizinische Versorgungszentren richten wir ein, dort oft einheitlich über mehrere Räume.",
     },
     {
       question: "In welchem Gebiet liefern und montieren Sie?",

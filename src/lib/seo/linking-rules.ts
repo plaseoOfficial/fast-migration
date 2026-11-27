@@ -130,7 +130,8 @@ export const PAGES: PageNode[] = [
   { slug: "/serienmoebel/", type: "cluster-pillar", silo: "serienmoebel", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "serienmoebel", mustExempt: ["/moebelplaner/"] },
   // Leitstellenmöbel: eigenes Silo, Fertigung nach Zeichnung. Kein /moebelplaner/ (Planer deckt keine Leitstellenmöbel ab).
   { slug: "/leitstellenmoebel/", type: "cluster-pillar", silo: "leitstellen", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "leitstellenmoebel", mustExempt: ["/moebelplaner/"] },
-  { slug: "/praxiseinrichtung/", type: "cluster-pillar", silo: "praxis", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "praxiseinrichtung" },
+  // Praxis: Tresen und Praxismöbel entstehen nach Aufmaß, Anfrageweg ist der Anfrageblock. Kein /moebelplaner/.
+  { slug: "/praxiseinrichtung/", type: "cluster-pillar", silo: "praxis", audience: "gewerbe", parent: "/gewerbe/", built: true, contentModule: "praxiseinrichtung", mustExempt: ["/moebelplaner/"] },
   // Büro-Cluster: Produkt-Spokes unter dem Büroeinrichtung-Pillar (verschachtelte URLs)
   { slug: "/bueroeinrichtung/bueroplanung/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueroplanung", mustExempt: ["/moebelplaner/"] },
   { slug: "/bueroeinrichtung/bueromoebel-nach-mass/", type: "product", silo: "buero", audience: "gewerbe", parent: "/bueroeinrichtung/", built: true, contentModule: "bueromoebel-nach-mass", mustExempt: ["/moebelplaner/"] },
@@ -591,7 +592,7 @@ export const ANCHORS: Record<string, AnchorSet> = {
   },
   "/leitstellenmoebel/": {
     exact: ["Leitstellenmöbel"],
-    partial: ["Leitstandmöbel nach Maß", "Leitstellenmöbel vom Tischler", "Möbel für Kontrollräume"],
+    partial: ["Leitstandmöbel", "Möbel für Leitstand und Kontrollraum", "Möbel für Kontrollräume"],
     brand: ["Fast Systemmöbel Leitstellenmöbel"],
     descriptive: ["Möbel für Leitstellen fertigen lassen", "zu den Leitstellenmöbeln"],
   },
@@ -720,6 +721,7 @@ export const BRIDGES: Bridge[] = [
   { a: "/serienmoebel/", b: "/gastronomieeinrichtung/", thema: "Hotel und Objekt" },
   { a: "/serienmoebel/", b: "/leitstellenmoebel/", thema: "Gleiche Arbeitsplätze in Serie" },
   { a: "/praxiseinrichtung/", b: "/bueroeinrichtung/", thema: "Empfang" },
+  { a: "/praxiseinrichtung/", b: "/serienmoebel/", thema: "MVZ und mehrere Standorte" },
   { a: "/kuechen-nach-mass/", b: "/hauswirtschaftsraum/", thema: "Küche und Vorrat" },
 ];
 
